@@ -1,0 +1,96 @@
+
+ MODEL EXPERIMENT:   10
+     3 22-LAYER TRANSPORT SECTION STATISTICS
+   360.0 DAY AVERAGE OF   12 SAMPLES BETWEEN MODEL DAYS  6840.0 AND  7170.0
+
+                                LONGITUDE            LATITUDE         LAYER      MEAN (SV)    STD DEV
+
+ Cross-Equator            :   49.00W   11.00E      0.00N    0.00N      01          0.94         0.64
+ Cross-Equator            :   49.00W   11.00E      0.00N    0.00N      02          0.59         0.66
+ Cross-Equator            :   49.00W   11.00E      0.00N    0.00N      03          0.20         0.73
+ Cross-Equator            :   49.00W   11.00E      0.00N    0.00N      04         -0.55         0.99
+ Cross-Equator            :   49.00W   11.00E      0.00N    0.00N      05         -1.23         1.90
+ Cross-Equator            :   49.00W   11.00E      0.00N    0.00N      06         -1.87         1.93
+ Cross-Equator            :   49.00W   11.00E      0.00N    0.00N      07         -1.64         6.25
+ Cross-Equator            :   49.00W   11.00E      0.00N    0.00N      08          5.01         7.72
+ Cross-Equator            :   49.00W   11.00E      0.00N    0.00N      09          5.10         7.42
+ Cross-Equator            :   49.00W   11.00E      0.00N    0.00N      10          0.38         3.76
+ Cross-Equator            :   49.00W   11.00E      0.00N    0.00N      11          1.33         1.79
+ Cross-Equator            :   49.00W   11.00E      0.00N    0.00N      12          3.02         1.98
+ Cross-Equator            :   49.00W   11.00E      0.00N    0.00N      13          1.80         1.32
+ Cross-Equator            :   49.00W   11.00E      0.00N    0.00N      14          2.75         1.82
+ Cross-Equator            :   49.00W   11.00E      0.00N    0.00N      15          2.45         1.85
+ Cross-Equator            :   49.00W   11.00E      0.00N    0.00N      16         -0.07         1.41
+ Cross-Equator            :   49.00W   11.00E      0.00N    0.00N      17         -0.69         1.41
+ Cross-Equator            :   49.00W   11.00E      0.00N    0.00N      18         -0.23         0.86
+ Cross-Equator            :   49.00W   11.00E      0.00N    0.00N      19         -1.68         1.75
+ Cross-Equator            :   49.00W   11.00E      0.00N    0.00N      20         -6.90         3.13
+ Cross-Equator            :   49.00W   11.00E      0.00N    0.00N      21         -8.67         5.52
+ Cross-Equator            :   49.00W   11.00E      0.00N    0.00N      22         -0.05         0.03
+                                                                      ------------------------------
+ Cross-Equator            :   49.00W   11.00E      0.00N    0.00N     01-21        0.04         0.04
+ Cross-Equator            :   49.00W   11.00E      0.00N    0.00N     01-22       -0.01         0.05
+ 
+ Along-Equator, 39W       :   39.00W   39.00W      4.00S    4.00N      01          1.29         0.25
+ Along-Equator, 39W       :   39.00W   39.00W      4.00S    4.00N      02          1.32         0.28
+ Along-Equator, 39W       :   39.00W   39.00W      4.00S    4.00N      03          1.36         0.31
+ Along-Equator, 39W       :   39.00W   39.00W      4.00S    4.00N      04          1.40         0.34
+ Along-Equator, 39W       :   39.00W   39.00W      4.00S    4.00N      05          0.85         1.49
+ Along-Equator, 39W       :   39.00W   39.00W      4.00S    4.00N      06          3.09         2.37
+ Along-Equator, 39W       :   39.00W   39.00W      4.00S    4.00N      07         -3.43         2.78
+ Along-Equator, 39W       :   39.00W   39.00W      4.00S    4.00N      08         -0.14         0.92
+ Along-Equator, 39W       :   39.00W   39.00W      4.00S    4.00N      09         -0.53         0.58
+ Along-Equator, 39W       :   39.00W   39.00W      4.00S    4.00N      10          0.09         0.66
+ Along-Equator, 39W       :   39.00W   39.00W      4.00S    4.00N      11          0.14         0.98
+ Along-Equator, 39W       :   39.00W   39.00W      4.00S    4.00N      12          0.57         0.81
+ Along-Equator, 39W       :   39.00W   39.00W      4.00S    4.00N      13          1.64         0.66
+ Along-Equator, 39W       :   39.00W   39.00W      4.00S    4.00N      14          2.89         1.79
+ Along-Equator, 39W       :   39.00W   39.00W      4.00S    4.00N      15          2.65         1.67
+ Along-Equator, 39W       :   39.00W   39.00W      4.00S    4.00N      16          1.97         1.90
+ Along-Equator, 39W       :   39.00W   39.00W      4.00S    4.00N      17          1.73         1.62
+ Along-Equator, 39W       :   39.00W   39.00W      4.00S    4.00N      18          0.15         1.20
+ Along-Equator, 39W       :   39.00W   39.00W      4.00S    4.00N      19         -3.14         1.28
+ Along-Equator, 39W       :   39.00W   39.00W      4.00S    4.00N      20         -6.66         3.47
+ Along-Equator, 39W       :   39.00W   39.00W      4.00S    4.00N      21         -7.11         3.31
+ Along-Equator, 39W       :   39.00W   39.00W      4.00S    4.00N      22          0.01         0.02
+                                                                      ------------------------------
+ Along-Equator, 39W       :   39.00W   39.00W      4.00S    4.00N     01-21        0.14         8.37
+ Along-Equator, 39W       :   39.00W   39.00W      4.00S    4.00N     01-22        0.16         8.36
+ 
+
+
+
+
+
+                                LONGITUDE            LATITUDE         LAYER      MEAN (SV)    STD DEV
+
+ Along-Equator, 19W       :   19.00W   19.00W      4.00S    4.00N      01          1.22         0.23
+ Along-Equator, 19W       :   19.00W   19.00W      4.00S    4.00N      02          1.29         0.25
+ Along-Equator, 19W       :   19.00W   19.00W      4.00S    4.00N      03          1.37         0.27
+ Along-Equator, 19W       :   19.00W   19.00W      4.00S    4.00N      04          1.38         0.31
+ Along-Equator, 19W       :   19.00W   19.00W      4.00S    4.00N      05          1.19         0.52
+ Along-Equator, 19W       :   19.00W   19.00W      4.00S    4.00N      06          3.41         1.11
+ Along-Equator, 19W       :   19.00W   19.00W      4.00S    4.00N      07          0.94         1.94
+ Along-Equator, 19W       :   19.00W   19.00W      4.00S    4.00N      08         -4.02         3.09
+ Along-Equator, 19W       :   19.00W   19.00W      4.00S    4.00N      09         -3.22         0.99
+ Along-Equator, 19W       :   19.00W   19.00W      4.00S    4.00N      10         -3.05         1.32
+ Along-Equator, 19W       :   19.00W   19.00W      4.00S    4.00N      11         -1.60         0.47
+ Along-Equator, 19W       :   19.00W   19.00W      4.00S    4.00N      12         -0.48         0.61
+ Along-Equator, 19W       :   19.00W   19.00W      4.00S    4.00N      13          0.00         0.95
+ Along-Equator, 19W       :   19.00W   19.00W      4.00S    4.00N      14         -0.88         2.29
+ Along-Equator, 19W       :   19.00W   19.00W      4.00S    4.00N      15         -1.04         3.35
+ Along-Equator, 19W       :   19.00W   19.00W      4.00S    4.00N      16          1.87         3.42
+ Along-Equator, 19W       :   19.00W   19.00W      4.00S    4.00N      17          1.57         2.45
+ Along-Equator, 19W       :   19.00W   19.00W      4.00S    4.00N      18         -0.04         1.84
+ Along-Equator, 19W       :   19.00W   19.00W      4.00S    4.00N      19         -1.57         1.72
+ Along-Equator, 19W       :   19.00W   19.00W      4.00S    4.00N      20         -0.28         3.54
+ Along-Equator, 19W       :   19.00W   19.00W      4.00S    4.00N      21         -1.61         6.20
+ Along-Equator, 19W       :   19.00W   19.00W      4.00S    4.00N      22          0.00         0.00
+                                                                      ------------------------------
+ Along-Equator, 19W       :   19.00W   19.00W      4.00S    4.00N     01-21       -3.54         3.29
+ Along-Equator, 19W       :   19.00W   19.00W      4.00S    4.00N     01-22       -3.54         3.29
+ 
+
+
+
+

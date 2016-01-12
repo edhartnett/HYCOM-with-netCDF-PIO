@@ -1,0 +1,26 @@
+plot/README.plot.micom:
+
+Plotting of MICOM archive files.
+
+src/mp (src/micomproc) will work on MICOM archv files just as src/hp does
+for HYCOM archk files.  The MP input file is identical to the HP input file,
+except that iexpt must be explicitly specified (since it isn't in the archv
+file).  See README.plot.
+
+Since MICOM is in CGS and uses a N-S then W-E grid orientation, the input is
+immediately rotated (to HYCOM's W-E then S-N grid) and converted to MKS.
+Note that the bottom topography and all the input parameters in [HM]P.* are
+always from HYCOM.
+
+The advantage of using essentially the same program to plot both models is
+that the display layout is identical and only one plot program need be
+maintained. 
+
+Note that HYCOM now has a MICOM-like iospycnal mode.  This produces HYCOM
+archive files which are plotted with src/hycomproc.  However, the existance
+of src/micomproc makes it very easy to compare isopycnal HYCOM simulations
+with any corresponding actual MICOM cases.
+
+Another option is to convert MICOM (and/or HYCOM 1.0) pakked archive files
+to HYCOM 2.0 ".[ab]" format using src/hycomarchv and then plot them with 
+src/hycomproc.  See README.plot.archv.

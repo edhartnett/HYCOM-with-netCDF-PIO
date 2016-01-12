@@ -1,0 +1,33 @@
+topo/partit/README.topo.partit:
+
+How to generate "equal-ocean" tile partitions for use with MPI 
+paralellization.  Note that all scripts will need renaming and/or
+editing for a different region or bathymetry.
+
+1) Edit depth_ATLb2.00_01_2d.com to contain the desired numbers of
+   processors.  
+
+2) Run with:  csh depth_ATLb2.00_01_2d.com >& depth_ATLb2.00_01_2d.log
+   This will create the partition text files: depth_ATLb2.00_01.???.
+
+3) To view the partitions, generate .ppm bitmaps with: csh ppm.com
+   and display them using xv (or your favorite bitmap viewer).
+   Note that xbathy.pal must be present for this to work.  
+
+4) Generate a list of partition statistics with:  csh size.com.
+   This produces size.lis, for example:
+
+     npes   npe   mpe   idm   jdm  ibig  jbig  nreg  minsea  maxsea
+        2     2     1    57    52    33    52     0     821     847
+        3     3     1    57    52    27    52     0     544     563
+        4     2     2    57    52    32    26     0     387     465
+        8     4     2    57    52    24    26     0     196     222
+        9     3     3    57    52    33    19     0     168     195
+       16     4     4    57    52    34    15     0      94     110
+
+5) The maximum values in the four columns npe,mpe,ibig,jbig should
+   be entered in src_*_mpi/dimensions.h as iqr,jqr,idm,jdm.  This
+   allows any of the partitions to be used with the same executable.
+   If there isn't enough memory for this choice of idm,jdm, then
+   discard the memory hog partitions and base iqr,jqr,idm,jdm on
+   the remaining partitions.  See dimensions_ATLb2.00_ompi.h.

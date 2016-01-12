@@ -1,0 +1,129 @@
+set time = 1
+C
+setenv OS `uname`
+uname
+switch ( SunOS )
+breaksw
+C
+C --- create a HYCOM precip_zero file.
+C
+switch ( SunOS )
+if ( -e /scr ) then
+setenv pget cp
+setenv pput cp
+endif
+breaksw
+C
+C --- P is primary path,
+C --- S is scratch directory,
+C --- D is permanent directory,
+C
+setenv P hycom/ATLb2.00/force/coads
+C
+switch ( SunOS )
+if ( -e /scr ) then
+if ( -e /net/hermes/scrb ) then
+setenv S /net/hermes/scrb/wallcraf/hycom/ATLb2.00/force/coads
+setenv D ~/hycom/ATLb2.00/force/coads
+else
+breaksw
+C
+mkdir -p /net/hermes/scrb/wallcraf/hycom/ATLb2.00/force/coads
+cd /net/hermes/scrb/wallcraf/hycom/ATLb2.00/force/coads
+echo /net/hermes/scrb/wallcraf/hycom/ATLb2.00/force/coads
+/net/hermes/scrb/wallcraf/hycom/ATLb2.00/force/coads
+C
+C --- Input.
+C
+touch regional.grid.a regional.grid.b
+if ( -z regional.grid.b ) then
+[1] 32
+endif
+cp /home/ajax/wallcraf/hycom/ATLb2.00/force/coads/../../topo/regional.grid.b regional.grid.b
+if ( -z regional.grid.a ) then
+cp /home/ajax/wallcraf/hycom/ATLb2.00/force/coads/../../topo/regional.grid.a regional.grid.a
+[2] 33
+endif
+C
+
+[1]    Done                 cp /home/ajax/wallcraf/hycom/ATLb2.00/force/coads/../../topo/regional.grid.b  ...
+[3] 35
+wait
+cp /home/ajax/wallcraf/hycom/ATLb2.00/force/coads/../../../ALL/force/src/pcip_zero .
+
+[2]    Done                 cp /home/ajax/wallcraf/hycom/ATLb2.00/force/coads/../../topo/regional.grid.a  ...
+
+[3]    Done                 cp  ...
+chmod a+rx pcip_zero
+C
+/bin/rm -f fort.13 fort.13A
+C
+setenv FOR013A fort.13A
+C
+switch ( SunOS )
+/bin/rm -f core pcip_zero.trace
+touch core
+default:
+/bin/rm -f core
+touch core
+endsw
+C
+./pcip_zero
+
+xcspmd: idm,jdm =   57   52
+
+ 
+Zero Precipitation                                                             
+                                                                               
+                                                                               
+                                                                               
+i/jdm =   57   52                                                              
+ 
+ PCIP: MIN=   0.00000000 MAX=   0.00000000 AVE=   0.00000000 RMS=   0.00000000
+          WRITING FLUX RECORD  1     FDAY =    30.50
+
+ PCIP: MIN=   0.00000000 MAX=   0.00000000 AVE=   0.00000000 RMS=   0.00000000
+          WRITING FLUX RECORD  2     FDAY =    30.50
+
+ PCIP: MIN=   0.00000000 MAX=   0.00000000 AVE=   0.00000000 RMS=   0.00000000
+          WRITING FLUX RECORD  3     FDAY =    30.50
+
+ PCIP: MIN=   0.00000000 MAX=   0.00000000 AVE=   0.00000000 RMS=   0.00000000
+          WRITING FLUX RECORD  4     FDAY =    30.50
+
+ PCIP: MIN=   0.00000000 MAX=   0.00000000 AVE=   0.00000000 RMS=   0.00000000
+          WRITING FLUX RECORD  5     FDAY =    30.50
+
+ PCIP: MIN=   0.00000000 MAX=   0.00000000 AVE=   0.00000000 RMS=   0.00000000
+          WRITING FLUX RECORD  6     FDAY =    30.50
+
+ PCIP: MIN=   0.00000000 MAX=   0.00000000 AVE=   0.00000000 RMS=   0.00000000
+          WRITING FLUX RECORD  7     FDAY =    30.50
+
+ PCIP: MIN=   0.00000000 MAX=   0.00000000 AVE=   0.00000000 RMS=   0.00000000
+          WRITING FLUX RECORD  8     FDAY =    30.50
+
+ PCIP: MIN=   0.00000000 MAX=   0.00000000 AVE=   0.00000000 RMS=   0.00000000
+          WRITING FLUX RECORD  9     FDAY =    30.50
+
+ PCIP: MIN=   0.00000000 MAX=   0.00000000 AVE=   0.00000000 RMS=   0.00000000
+          WRITING FLUX RECORD 10     FDAY =    30.50
+
+ PCIP: MIN=   0.00000000 MAX=   0.00000000 AVE=   0.00000000 RMS=   0.00000000
+          WRITING FLUX RECORD 11     FDAY =    30.50
+
+ PCIP: MIN=   0.00000000 MAX=   0.00000000 AVE=   0.00000000 RMS=   0.00000000
+          WRITING FLUX RECORD 12     FDAY =    30.50
+
+C
+switch ( SunOS )
+if ( -e pcip_zero.trace ) cat pcip_zero.trace
+breaksw
+C
+C --- Output.
+C
+cp fort.13 /home/ajax/wallcraf/hycom/ATLb2.00/force/coads/precip_zero.b
+cp fort.13A /home/ajax/wallcraf/hycom/ATLb2.00/force/coads/precip_zero.a
+C
+C --- Delete all files.
+C

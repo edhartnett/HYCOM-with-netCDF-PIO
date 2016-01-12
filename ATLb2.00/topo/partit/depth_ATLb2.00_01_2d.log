@@ -1,0 +1,141 @@
+cd ~/hycom/ATLb2.00/topo/partit
+echo /home/ajax/wallcraf/hycom/ATLb2.00/topo/partit
+/home/ajax/wallcraf/hycom/ATLb2.00/topo/partit
+ln -s ../regional.grid.a .
+ln: cannot create ./regional.grid.a: File exists
+ln -s ../regional.grid.b .
+ln: cannot create ./regional.grid.b: File exists
+setenv FOR051 ../depth_ATLb2.00_01.b
+setenv FOR051A ../depth_ATLb2.00_01.a
+setenv n 2
+setenv m 1
+setenv nm `echo $n $m | awk '{printf("%3.3d\n",$1*$2)}'`
+awk {printf("%3.3d\n",$1*$2)}
+echo 2 1
+../../../ALL/topo/src/partit
+echo 2 1 0.75
+
+xcspmd: idm,jdm =   57   52
+
+
+North Atlantic topography from ETOPO5 5-minute data set.                       
+56 x 51 depth values (idm,jdm = 57,52).                                        
+2.0000 deg. mercator resolution, with equat=11.000.                            
+lon: 97.000W to 13.000E.  lat: 19.606S to 62.195N.                             
+                                                                               
+min,max depth =    199.556  5837.000
+
+  npes   npe   mpe   idm   jdm  ibig  jbig  nreg  minsea  maxsea
+     2     2     1    57    52    33    52     0     821     847
+
+mv fort.21 depth_ATLb2.00_01.002
+setenv n 3
+setenv m 1
+setenv nm `echo $n $m | awk '{printf("%3.3d\n",$1*$2)}'`
+awk {printf("%3.3d\n",$1*$2)}
+echo 3 1
+../../../ALL/topo/src/partit
+echo 3 1 0.75
+
+xcspmd: idm,jdm =   57   52
+
+
+North Atlantic topography from ETOPO5 5-minute data set.                       
+56 x 51 depth values (idm,jdm = 57,52).                                        
+2.0000 deg. mercator resolution, with equat=11.000.                            
+lon: 97.000W to 13.000E.  lat: 19.606S to 62.195N.                             
+                                                                               
+min,max depth =    199.556  5837.000
+
+  npes   npe   mpe   idm   jdm  ibig  jbig  nreg  minsea  maxsea
+     3     3     1    57    52    27    52     0     544     563
+
+mv fort.21 depth_ATLb2.00_01.003
+setenv n 2
+setenv m 2
+setenv nm `echo $n $m | awk '{printf("%3.3d\n",$1*$2)}'`
+awk {printf("%3.3d\n",$1*$2)}
+echo 2 2
+../../../ALL/topo/src/partit
+echo 2 2 0.75
+
+xcspmd: idm,jdm =   57   52
+
+
+North Atlantic topography from ETOPO5 5-minute data set.                       
+56 x 51 depth values (idm,jdm = 57,52).                                        
+2.0000 deg. mercator resolution, with equat=11.000.                            
+lon: 97.000W to 13.000E.  lat: 19.606S to 62.195N.                             
+                                                                               
+min,max depth =    199.556  5837.000
+
+  npes   npe   mpe   idm   jdm  ibig  jbig  nreg  minsea  maxsea
+     4     2     2    57    52    32    26     0     387     465
+
+mv fort.21 depth_ATLb2.00_01.004
+setenv n 4
+setenv m 2
+setenv nm `echo $n $m | awk '{printf("%3.3d\n",$1*$2)}'`
+awk {printf("%3.3d\n",$1*$2)}
+echo 4 2
+../../../ALL/topo/src/partit
+echo 4 2 0.75
+
+xcspmd: idm,jdm =   57   52
+
+
+North Atlantic topography from ETOPO5 5-minute data set.                       
+56 x 51 depth values (idm,jdm = 57,52).                                        
+2.0000 deg. mercator resolution, with equat=11.000.                            
+lon: 97.000W to 13.000E.  lat: 19.606S to 62.195N.                             
+                                                                               
+min,max depth =    199.556  5837.000
+
+  npes   npe   mpe   idm   jdm  ibig  jbig  nreg  minsea  maxsea
+     8     4     2    57    52    24    26     0     196     222
+
+mv fort.21 depth_ATLb2.00_01.008
+setenv n 3
+setenv m 3
+setenv nm `echo $n $m | awk '{printf("%3.3d\n",$1*$2)}'`
+awk {printf("%3.3d\n",$1*$2)}
+echo 3 3
+../../../ALL/topo/src/partit
+echo 3 3 0.75
+
+xcspmd: idm,jdm =   57   52
+
+
+North Atlantic topography from ETOPO5 5-minute data set.                       
+56 x 51 depth values (idm,jdm = 57,52).                                        
+2.0000 deg. mercator resolution, with equat=11.000.                            
+lon: 97.000W to 13.000E.  lat: 19.606S to 62.195N.                             
+                                                                               
+min,max depth =    199.556  5837.000
+
+  npes   npe   mpe   idm   jdm  ibig  jbig  nreg  minsea  maxsea
+     9     3     3    57    52    33    19     0     168     195
+
+mv fort.21 depth_ATLb2.00_01.009
+setenv n 4
+setenv m 4
+setenv nm `echo $n $m | awk '{printf("%3.3d\n",$1*$2)}'`
+awk {printf("%3.3d\n",$1*$2)}
+echo 4 4
+../../../ALL/topo/src/partit
+echo 4 4 0.75
+
+xcspmd: idm,jdm =   57   52
+
+
+North Atlantic topography from ETOPO5 5-minute data set.                       
+56 x 51 depth values (idm,jdm = 57,52).                                        
+2.0000 deg. mercator resolution, with equat=11.000.                            
+lon: 97.000W to 13.000E.  lat: 19.606S to 62.195N.                             
+                                                                               
+min,max depth =    199.556  5837.000
+
+  npes   npe   mpe   idm   jdm  ibig  jbig  nreg  minsea  maxsea
+    16     4     4    57    52    34    15     0      94     110
+
+mv fort.21 depth_ATLb2.00_01.016

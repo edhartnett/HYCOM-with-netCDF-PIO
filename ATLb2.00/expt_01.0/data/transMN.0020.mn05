@@ -1,0 +1,38 @@
+
+ MODEL EXPERIMENT:   10
+     3 22-LAYER TRANSPORT SECTION STATISTICS
+   360.0 DAY AVERAGE OF   12 SAMPLES BETWEEN MODEL DAYS  6840.0 AND  7170.0
+
+                                LONGITUDE            LATITUDE         LAYER      MEAN (SV)    STD DEV
+
+ Cross-Equator            :   49.00W   11.00E      0.00N    0.00N     01-08        1.44         0.00
+ Cross-Equator            :   49.00W   11.00E      0.00N    0.00N     09-11        6.82         0.00
+ Cross-Equator            :   49.00W   11.00E      0.00N    0.00N     12-15       10.02         0.00
+ Cross-Equator            :   49.00W   11.00E      0.00N    0.00N     16-18       -0.99         0.00
+ Cross-Equator            :   49.00W   11.00E      0.00N    0.00N     19-22      -17.29         0.00
+                                                                      ------------------------------
+ Cross-Equator            :   49.00W   11.00E      0.00N    0.00N     01-18       17.29         0.00
+ Cross-Equator            :   49.00W   11.00E      0.00N    0.00N     01-22        0.00         0.00
+ 
+ Along-Equator, 39W       :   39.00W   39.00W      4.00S    4.00N     01-08        5.74         0.00
+ Along-Equator, 39W       :   39.00W   39.00W      4.00S    4.00N     09-11       -0.30         0.00
+ Along-Equator, 39W       :   39.00W   39.00W      4.00S    4.00N     12-15        7.75         0.00
+ Along-Equator, 39W       :   39.00W   39.00W      4.00S    4.00N     16-18        3.86         0.00
+ Along-Equator, 39W       :   39.00W   39.00W      4.00S    4.00N     19-22      -16.90         0.00
+                                                                      ------------------------------
+ Along-Equator, 39W       :   39.00W   39.00W      4.00S    4.00N     01-18       17.05         0.00
+ Along-Equator, 39W       :   39.00W   39.00W      4.00S    4.00N     01-22        0.16         0.00
+ 
+ Along-Equator, 19W       :   19.00W   19.00W      4.00S    4.00N     01-08        6.78         0.00
+ Along-Equator, 19W       :   19.00W   19.00W      4.00S    4.00N     09-11       -7.86         0.00
+ Along-Equator, 19W       :   19.00W   19.00W      4.00S    4.00N     12-15       -2.39         0.00
+ Along-Equator, 19W       :   19.00W   19.00W      4.00S    4.00N     16-18        3.40         0.00
+ Along-Equator, 19W       :   19.00W   19.00W      4.00S    4.00N     19-22       -3.47         0.00
+                                                                      ------------------------------
+ Along-Equator, 19W       :   19.00W   19.00W      4.00S    4.00N     01-18       -0.07         0.00
+ Along-Equator, 19W       :   19.00W   19.00W      4.00S    4.00N     01-22       -3.54         0.00
+ 
+
+
+
+

@@ -1,0 +1,35 @@
+src_2.1.02_22_one/README.src.changes
+
+1.0.08 (08/01/00) to 1.0.10 (01/08/01):
+---------------------------------------
+ 
+a) See README.src.changes_1p0 for HYCOM 1.0 history.
+
+
+2.0.01 (05/30/01) to 2.0.02 (07/19/01):
+---------------------------------------
+ 
+a) See README.src.changes_2p0 for HYCOM 2.0 history.
+
+
+2.1.00 (06/05/02):
+------------------
+ 
+a) Support for orthogonal curvilinear grids.
+
+b) Support for 1-D and 2-D domains.
+
+c) Improved support for Z and Sigma levels in shallow water.
+
+d) More flexible selection of Laplacian and biharminic diffusion.
+
+e) Rivers as (annual or monthly) bogused surface precipitation.
+
+f) Single passive tracer, always 1.0 at the surface.
+
+g) Added PWP and MY 2.5 mixed layers.
+
+h) Support for off-line one-way nesting.
+
+In all source directories, diff.log provides a detailed listing of the 
+differences against the last major release.

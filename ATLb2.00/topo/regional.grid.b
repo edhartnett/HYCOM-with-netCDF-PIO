@@ -1,0 +1,22 @@
+   57    'idm   ' = longitudinal array size
+   52    'jdm   ' = latitudinal  array size
+    0    'mapflg' = map flag (-1=unknown,0=mercator,2=uniform,4=f-plane)
+plon:  min,max =       263.00000      375.00000
+plat:  min,max =       -19.60579       63.11375
+qlon:  min,max =       262.00000      374.00000
+qlat:  min,max =       -20.54502       62.65800
+ulon:  min,max =       262.00000      374.00000
+ulat:  min,max =       -19.60579       63.11375
+vlon:  min,max =       263.00000      375.00000
+vlat:  min,max =       -20.54502       62.65800
+pang:  min,max =         0.00000        0.00000
+pscx:  min,max =    100565.21875   222389.87500
+pscy:  min,max =    100571.95312   222378.59375
+qscx:  min,max =    102139.75781   222356.01562
+qscy:  min,max =    102146.85938   222344.73438
+uscx:  min,max =    100565.21875   222389.87500
+uscy:  min,max =    100571.95312   222378.59375
+vscx:  min,max =    102139.75781   222356.01562
+vscy:  min,max =    102146.85938   222344.73438
+cori:  min,max =   -0.0000511824   0.0001295491
+pasp:  min,max =         0.99993        1.00005

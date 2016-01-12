@@ -1,0 +1,151 @@
+subregion/README.nesting:
+
+IASb0.50 is a sub-region of ATLb2.00 at 4x higher resolution, and illustrates 
+how to nest a subregion in a larger HYCOM model region with different
+horizontal resolution.  This is off-line one-way nesting, using boundary 
+conditions similar (but not identical) to those already used for this 
+purpose by MICOM.  
+
+See README.nesting_samegrid for nesting at the same resolution, e.g.
+IASd0.32 in ATLd0.32.  This is slightly simpler, but most of the process 
+is the same for any enclosing region.
+
+The IASb0.50 HYCOM model does not "know" about the ATLb2.00 domain.  
+It expects a sequence of IASb0.50 input archive files to supply the data 
+needed for the boundary conditions.  In fact there are two distinct 
+sets of boundary conditions: a) relaxation to T/S/p in a buffer zone,
+and b) application of depth averaged flow at the open boundary.  Both
+are input from archive files, however T/S/p is only available from full 
+3-D archive files and depth averaged flow is also available from surface
+archive files.  So archive input for depth averaged flow could be more 
+frequent than for T/S/p.
+
+Nesting in MICOM was similar, except that relaxation to velocity was also
+used in the buffer zone and the relaxation e-folding time on p/vel was
+much shorter than on T/S.
+
+The nested domain must be (the same resolution as or) finer than the 
+original by an integer multiplier (ijgrd).  In addition, subregion p(1,1) 
+and p(idm_out,jdm_out) must be on the original p-grid, i.e.  idm_out-1 
+and jdm_out-1 must be integer multiples of ijgrd.  The general case 
+(non-integer grid refinement and/or different grid orientation) is not 
+yet supported.  Don't forget to allow for the fact that the buffer zone
+(typically at least 10 fine grid points) should probably be outside the
+region of high interest (i.e. make jdm_out and jdm_out larger to allow
+for this).  
+
+Typically the subregion's topo/regional.grid.com script will be similar
+to that from the enclosing region.  The program ALL/bin/hycom_ij2lonlat 
+can be used to find co-located points on the two grids.  Since subregion 
+p(1,1) must be on the original grid, this is usually the point to 
+reference.  For example:
+    hycom_ij2lonlat 1 1 ~/hycom/IASb0.50/topo/regional.grid.a
+     97.000W   3.997N
+    hycom_ij2lonlat 1 13 ~/hycom/ATLb2.00/topo/regional.grid.a
+     97.000W   3.997N
+Obviously, hycom_ij2lonlat can't be used on the subregion until its
+regional.grid.[ab] has been produced.  But it can be used to identify
+the location on the enclosing grid that will become the subregion p(1,1),
+and this can then to used as a guide to configure regional.grid.com for
+the subregion.
+
+It is advisable to make the sub-region bathymetry and coastline exactly
+consistent with the coarser enclosing region, both on the open boundary
+and in the relaxation buffer zone.  Everywhere else the bathymetry and
+coastline can be optimized for the higher resolution.  For example, to 
+create the IASb0.50 bathymetry do the following:
+
+    a) Generate the best possible fine grid bathymetry and coastline
+       everywhere, in this case IASb0.50/topo/depth_IASb0.50_02.[ab].
+    b) Interpolate the coarse enclosing bathymetry to the nested
+       region using ALL/subregion/src/isub_topog.  The script
+       is ATLb2.00/subregion/depth_IASb0.50_99.com, and it produces
+       IASb0.50/topo/depth_IASb0.50_99.[ab].  Which is further
+       edited into IASb0.50/topo/depth_IASb0.50_98.[ab].
+    c) Merge the two bathymetries (02,98) using ALL/topo/src/topo_merge.
+       Which selects the coarse depths and coastline in the buffer zone,
+       a combination "near" the buffer zone, and the fine depths and 
+       coastline everywhere else.  The script is 
+       IASb0.50/topo/depth_IASb0.50_03_merge.com and it produces the
+       final bathymetery: IASb0.50/topo/depth_IASb0.50_03.[ab].
+
+To generate IASb0.50 archive files from ATLb2.00, do the following:
+
+    a) Use ALL/subregion/src/isubregion to do the sub-regioning.
+    b) It isn't necessary in this case, but for some sub-regions 
+       the deepest layers of the enclosing model are not present in 
+       the sub-region at all.  The unnecessary layers can be removed
+       from the sub-region archives by using ALL/archive/src/trim_archv.
+
+See ATLb2.00/subregion/010y020a_IASb0.50.com for both phases,
+followed by the generation of a .tar bundle for all nested archive
+files needed for a one year IASb0.50 model run.
+
+Once the IASb0.50 sub-region archive files are available, they can be used 
+as boundary conditions by using HYCOM 2.1.00 or later, by creating a 
+data/nest subdirectory on the scratch disk and setting two new blkdat 
+input variables, 'bnstfq' and 'nestfq', non-zero and lbflag to 2.  For 
+example (from IASb0.50/expt_01.0/blkdat.input):
+
+   1.0    'bnstfq' = number of days between baro nesting archive input
+   6.0    'nestfq' = number of days between 3-d  nesting archive input
+   2      'lbflag' = lateral barotropic bndy flag (0=none, 1=port, 2=input)
+   3      'iniflg' = initial state flag (0=levl, 1=zonl, 2=clim, 3=archv)
+
+Here, iniflg is also set to 3 since the "initial" restart will be from
+an archive file (see below).  The archive to restart conversion is done 
+off-line, so subroutine inicon is never called and iniflg is not used.
+The advantage of setting iniflg to 3 (vs the usual 2) is that this may
+remove the need for relaxation file input or limit this input to surface
+fields only.
+
+In addition, the location of barotropic boundaries must be specified in 
+the file ports.input.  For example (from IASb0.50/expt_01.0/ports.input):
+
+  2     'nports' = number of boundary port sections
+  1     'kdport' = port orientation (1=N, 2=S, 3=E, 4=W)
+ 39     'ifport' = first i-index
+ 92     'ilport' = last  i-index (=ifport for north/south port)
+ 65     'jfport' = first j-index
+ 65     'jlport' = last  j-index (=jfport for east/west port)
+  3     'kdport' = port orientation (1=N, 2=S, 3=E, 4=W)
+ 93     'ifport' = first i-index
+ 93     'ilport' = last  i-index (=ifport for north/south port)
+  3     'jfport' = first j-index
+ 64     'jlport' = last  j-index (=jfport for east/west port)
+
+This is for two open boundaries on the northern and eastern edges of
+the region rectangle.  Note that northern and southern boundaries are
+specified on the v-grid (since v-velocity is normal to these boundaries),
+and similarly eastern and western boundaries are specified on the u-grid.  
+Each boundary location is a grid point just outside the model region.  
+Correctly positioned open boundaries appear as *'s on the iu and iv
+maps printed in the model run .log file.  If the boundary locations 
+are mis-specified the model will stop and the iu and/or iv maps will 
+contain 9's instead of *'s at the locations that are in error.  Some
+errors (e.g. boundaries that are too short) can't be detected by HYCOM,
+so always check the iu and iv maps when initially configuring a nested
+domain.
+
+Note that the nesting buffer zone relaxation is completely independent of 
+climatology buffer zone relaxation.  Both could be active in the same 
+model run.  Nesting barotropic boundary conditions cannot be used in 
+combination with port (lbflag=1), specified inflow/outflow forcing. 
+
+The very first run with the nested boundaries needs a restart file 
+consistent with the enclosing region.  This is obtained from a sub-region
+archive file using ALL/restart/src/restart_archv.  An existing restart file 
+is required by this process.  If none is available, generate a climatology 
+over the sub-region (just as for a closed domain) and run for 1 day (say) 
+with closed boundaries and iniflg=2.  Outside the nested buffer zone, the 
+fine and coarse bathymetry and coastline may be significantly different.
+This might cause problems on restart.  One option to isubregion that
+might help in this case (but not needed normally) is to smooth the
+layer thicknesses (smooth=1).  Using a smaller time step for the very
+first run might also allow it to accept a sub-optimal interpolated
+restart file.  In general, it is a good idea to make the fine and
+coarse coastlines as compatible as possible - which is most easily done
+by always generating a fine reference coastline/bathymetry for the 
+enclosing region and then subsampling it to the desired resolution.
+This won't be possible when dealing with existing bathymetries, but is
+the recommended way to produce new bathymetries.

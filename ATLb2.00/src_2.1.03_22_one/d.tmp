@@ -1,0 +1,4 @@
+c
+c --- kkmy25= grid dimension in k direction for M-Y 2.5 arrays
+      integer    kkmy25
+      parameter (kkmy25=kdm)  ! must be -1 or kdm

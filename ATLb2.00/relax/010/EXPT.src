@@ -1,0 +1,7 @@
+#
+# --- environment variables defining the region and experiment number.
+#
+setenv R ATLb2.00
+setenv E 010
+setenv X 01.0
+setenv T 01

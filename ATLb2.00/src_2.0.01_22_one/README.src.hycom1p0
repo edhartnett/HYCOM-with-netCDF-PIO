@@ -1,0 +1,58 @@
+src_1.0.08_16/README.src.hycom1p0
+
+1. See README.src.MICOMvsHYCOM for the major features of HYCOM 1.0, from 
+the prespective of its difference to MICOM.  See README.src.changes for
+any updates since the first official release.  Here we concentrate on 
+specific features of HYCOM 1.0.
+
+2. All atmospheric forcing input must be in MKS, with biasrd and biaspc
+(if any) included in the input field.  An identically zero precip input
+field indicates that E-P forcing should be disabled.
+
+3. Boundary relaxation and surface salinity/temperature relaxation
+is based on full field (monthly or bi-monthly) climatology input of 
+temperature, salinity, and interface depth for all layers.  The
+location of boundary relaxation is controled by a single 2-D input
+field indicating the spacial relaxation coefficient (zero for no
+relaxation at a given grid point).
+
+4.  Many model parameters are set at run time via a short input text 
+file, blkdat.input.  This includes a 4-line description of the simulation
+and an experiment number (which are in turn included as a header to the 
+archive output files).
+
+5.  Grid options include mercator (dx.eq.dy), rotated mercator, uniform
+latitude (dx.ne.dy), and square uniform latitude (dx.eq.dy).  The
+rotated mercator option is not functional in HYCOM 1.0.
+
+6. The fixed vertical grid near the surface is specified via the
+number of sigma-levels (nsigma, zero for all Z-levels), the minimum
+sigma thickness (dp00s), the minimum Z-level thickness (dp00), and
+the Z-level stretching factor (dp00f, one for uniform Z-levels).
+The k-th layers minimum Z-thickness is dp00f**(k-1)*dp00, but if
+k is .le. nsigma the minimum thickness is the smaller of this value
+and the larger of dp00s and depth/nsigma.  This approach gives 
+Z-levels in deep water, optionally going to sigma-levels in coastal 
+regions water and back to Z-levels in very shallow water.
+
+7. The initial state for a simulation can be at any time of the year, 
+indicated by a negative or zero start day in the limits input file.
+It can be level surfaces (iniflg==0, at the layer minimum thicknesses),
+or based on a zonal climatology (iniflg==1, may require region-specific
+changes to poflat.f), or based on the boundary relaxation fields
+(iniflg==2), or on an archv file (iniflg==3, NOT YET IMPLEMENTED).
+An initial state is only required at the start of a simulation.  From
+then on each run is started from the end of the last one, based on
+restart files.
+
+8. Each model year can be 360 days (yrflag==0) or 366 days, with model 
+day zero for 366-day years either on Jan 16 (yrflag==1, for monthly 
+forcing) or Jan 1 (yrflag==2, for daily forcing, NOT YET IMPLEMENTED).
+
+9. Barotropic boundary conditions, if required, can be from the net 
+transport through one or more "ports", under control of input text file 
+named ports.input (lbflag==1), or from a HYCOM simulation over an 
+enclosing region (lbflag==2, NOT YET IMPLEMENTED).
+
+10. A selection of region-wide statistics are written to stdout, and
+to the file summary_out, every day and every six days.

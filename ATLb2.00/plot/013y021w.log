@@ -1,0 +1,637 @@
+
+xcspmd: idm,jdm =   57   52
+
+input file: ../expt_01.3/data/archv.0021_016_00.a
+    region: ATLb2.00
+blkini: iexpt  =     0
+blkini: yrflag =     0
+blkini: idm    =    57
+blkini: jdm    =    52
+blkini: kdm    =    22
+blkinr: thbase =    25.0000 sig
+blkini: nperfr =     1
+blkini: lalolb =    20
+blkini: lalogr =    10
+blkini: loclab =     4
+blkini: locbar =    11
+blkini: kpalet =     5
+blkinl: smooth =     F
+blkinl: mthin  =     T
+blkini: i_th   =     2
+blkini: iorign =     1
+blkini: jorign =     1
+blkini: idmp   =     0
+blkini: jdmp   =     0
+extracting i =    1 ...   57         j =    1 ...   52
+ chrsiz =  0.547826 104.04764 94.920654
+... plotting  1 maps per frame
+COADS forcing: precip_zero; srelax;                                             
+boundary relax; iniflg=2; KPP mixed layer; Jerlov IA;                           
+Z(22): dp00/f/x=3m/1.125/12m; ATLb2.00/src_2.1.02_22.                           
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+ iversn =  21
+ iexpt  =  13
+ yrflag =  0
+ idm    =  57
+ jdm    =  52
+field       time step  model day  k  dens        min              max
+artype = 1
+montg1   =     108000    7200.00  0  0.000  -5.0517211E+00   1.5363968E+01
+input  montg1   into montg   
+srfhgt   =     108000    7200.00  0  0.000  -8.2528410E+00   5.3002906E+00
+input  srfhgt   into srfht   
+surflx   =     108000    7200.00  0  0.000  -5.0361023E+02   1.2920764E+02
+input  surflx   into surflx  
+ time3 =  7200.0 7200.0 7200.0
+salflx   =     108000    7200.00  0  0.000  -5.4385893E-02   7.1206540E-03
+input  salflx   into salflx  
+bl_dpth  =     108000    7200.00  0  0.000   2.9146135E+04   4.2294165E+06
+input  bl_dpth  into dpbl    
+mix_dpth =     108000    7200.00  0  0.000   2.9126697E+04   4.6094525E+06
+input  mix_dpth into dpmixl  
+tmix     =     108000    7200.00  0  0.000  -2.0888321E+00   3.1309568E+01
+input  tmix     into tmix    
+smix     =     108000    7200.00  0  0.000   2.8602325E+01   3.7236103E+01
+input  smix     into smix    
+thmix    =     108000    7200.00  0  0.000  -7.8731389E+00   2.5511169E+00
+input  thmix    into thmix   
+umix     =     108000    7200.00  0  0.000  -8.6325228E-01   3.7027863E-01
+input  umix     into umix    
+vmix     =     108000    7200.00  0  0.000  -3.1582856E-01   7.2736067E-01
+input  vmix     into vmix    
+u_btrop  =     108000    7200.00  0  0.000  -2.8614792E-01   3.8201645E-01
+input  u_btrop  into ubaro   
+v_btrop  =     108000    7200.00  0  0.000  -1.0413032E-01   3.7837249E-01
+input  v_btrop  into vbaro   
+u-vel.   =     108000    7200.00  1 19.500  -9.3995315E-01   4.7672895E-01
+input  u-vel.   into u         1
+v-vel.   =     108000    7200.00  1 19.500  -4.0396932E-01   6.8882608E-01
+input  v-vel.   into v         1
+thknss   =     108000    7200.00  1 19.500   2.9418000E+04   2.9418000E+04
+input  thknss   into dp        1
+temp     =     108000    7200.00  1 19.500  -2.1002810E+00   3.1335854E+01
+input  temp     into temp      1
+salin    =     108000    7200.00  1 19.500   2.8602325E+01   3.7236320E+01
+input  salin    into saln      1
+density  =     108000    7200.00  1 19.500  -7.8731389E+00   2.5409393E+00
+input  density  into th3d      1
+finished reading data for layer 19.50000
+u-vel.   =     108000    7200.00  2 20.250  -8.6789078E-01   3.0070809E-01
+input  u-vel.   into u         2
+v-vel.   =     108000    7200.00  2 20.250  -4.0713888E-01   7.4287981E-01
+input  v-vel.   into v         2
+thknss   =     108000    7200.00  2 20.250   3.3095250E+04   1.5028677E+05
+input  thknss   into dp        2
+temp     =     108000    7200.00  2 20.250  -2.0733421E+00   3.1439533E+01
+input  temp     into temp      2
+salin    =     108000    7200.00  2 20.250   2.9684210E+01   3.7236263E+01
+input  salin    into saln      2
+density  =     108000    7200.00  2 20.250  -7.0694337E+00   2.5401680E+00
+input  density  into th3d      2
+finished reading data for layer 20.25000
+u-vel.   =     108000    7200.00  3 21.000  -7.8132194E-01   2.9262388E-01
+input  u-vel.   into u         3
+v-vel.   =     108000    7200.00  3 21.000  -4.0615401E-01   7.7230763E-01
+input  v-vel.   into v         3
+thknss   =     108000    7200.00  3 21.000   3.7232156E+04   1.3798914E+05
+input  thknss   into dp        3
+temp     =     108000    7200.00  3 21.000  -1.9482288E+00   3.0882294E+01
+input  temp     into temp      3
+salin    =     108000    7200.00  3 21.000   3.1515730E+01   3.7236248E+01
+input  salin    into saln      3
+density  =     108000    7200.00  3 21.000  -5.1307678E+00   2.5399330E+00
+input  density  into th3d      3
+finished reading data for layer 21.00000
+u-vel.   =     108000    7200.00  4 21.750  -7.1410173E-01   2.7160457E-01
+input  u-vel.   into u         4
+v-vel.   =     108000    7200.00  4 21.750  -4.0012953E-01   8.6137569E-01
+input  v-vel.   into v         4
+thknss   =     108000    7200.00  4 21.750   4.1886176E+04   1.8697722E+05
+input  thknss   into dp        4
+temp     =     108000    7200.00  4 21.750  -1.3065890E+00   3.0179081E+01
+input  temp     into temp      4
+salin    =     108000    7200.00  4 21.750   3.1969046E+01   3.7236221E+01
+input  salin    into saln      4
+density  =     108000    7200.00  4 21.750  -3.7943704E+00   2.5398436E+00
+input  density  into th3d      4
+finished reading data for layer 21.75000
+u-vel.   =     108000    7200.00  5 22.500  -6.4766294E-01   2.5161761E-01
+input  u-vel.   into u         5
+v-vel.   =     108000    7200.00  5 22.500  -3.8557294E-01   8.2116693E-01
+input  v-vel.   into v         5
+thknss   =     108000    7200.00  5 22.500   2.1189512E+03   6.1479094E+05
+input  thknss   into dp        5
+temp     =     108000    7200.00  5 22.500  -1.3055544E+00   2.8987497E+01
+input  temp     into temp      5
+salin    =     108000    7200.00  5 22.500   3.2326092E+01   3.7236195E+01
+input  salin    into saln      5
+density  =     108000    7200.00  5 22.500  -3.0459273E+00   2.5398154E+00
+input  density  into th3d      5
+finished reading data for layer 22.50000
+u-vel.   =     108000    7200.00  6 23.250  -5.0596744E-01   2.6471165E-01
+input  u-vel.   into u         6
+v-vel.   =     108000    7200.00  6 23.250  -3.3486542E-01   3.6804104E-01
+input  v-vel.   into v         6
+thknss   =     108000    7200.00  6 23.250   5.3012191E+04   1.3166110E+06
+input  thknss   into dp        6
+temp     =     108000    7200.00  6 23.250  -1.3023839E+00   2.8418358E+01
+input  temp     into temp      6
+salin    =     108000    7200.00  6 23.250   3.2550236E+01   3.7231270E+01
+input  salin    into saln      6
+density  =     108000    7200.00  6 23.250  -2.0444372E+00   2.5398297E+00
+input  density  into th3d      6
+finished reading data for layer 23.25000
+u-vel.   =     108000    7200.00  7 24.000  -5.6704420E-01   7.8899735E-01
+input  u-vel.   into u         7
+v-vel.   =     108000    7200.00  7 24.000  -4.0231407E-01   7.3206812E-01
+input  v-vel.   into v         7
+thknss   =     108000    7200.00  7 24.000   7.2396060E+03   1.2101018E+06
+input  thknss   into dp        7
+temp     =     108000    7200.00  7 24.000  -1.2898656E+00   2.7965105E+01
+input  temp     into temp      7
+salin    =     108000    7200.00  7 24.000   3.2723717E+01   3.7216808E+01
+input  salin    into saln      7
+density  =     108000    7200.00  7 24.000  -1.1359586E+00   2.5398798E+00
+input  density  into th3d      7
+finished reading data for layer 24.00000
+u-vel.   =     108000    7200.00  8 24.700  -4.6364608E-01   7.3147523E-01
+input  u-vel.   into u         8
+v-vel.   =     108000    7200.00  8 24.700  -4.2953882E-01   4.9527922E-01
+input  v-vel.   into v         8
+thknss   =     108000    7200.00  8 24.700   6.7093555E+04   1.2665979E+06
+input  thknss   into dp        8
+temp     =     108000    7200.00  8 24.700  -1.1934739E+00   2.5944618E+01
+input  temp     into temp      8
+salin    =     108000    7200.00  8 24.700   3.2776287E+01   3.7216854E+01
+input  salin    into saln      8
+density  =     108000    7200.00  8 24.700  -6.1119497E-01   2.5399616E+00
+input  density  into th3d      8
+finished reading data for layer 24.70000
+u-vel.   =     108000    7200.00  9 25.280  -3.5628638E-01   4.8564681E-01
+input  u-vel.   into u         9
+v-vel.   =     108000    7200.00  9 25.280  -2.5601295E-01   3.1207687E-01
+input  v-vel.   into v         9
+thknss   =     108000    7200.00  9 25.280   6.5642773E+04   1.5835585E+06
+input  thknss   into dp        9
+temp     =     108000    7200.00  9 25.280  -1.1355863E+00   2.3869516E+01
+input  temp     into temp      9
+salin    =     108000    7200.00  9 25.280   3.2965088E+01   3.7109131E+01
+input  salin    into saln      9
+density  =     108000    7200.00  9 25.280   1.3143440E-01   2.5400743E+00
+input  density  into th3d      9
+finished reading data for layer 25.28000
+u-vel.   =     108000    7200.00 10 25.770  -2.5613466E-01   4.1407520E-01
+input  u-vel.   into u        10
+v-vel.   =     108000    7200.00 10 25.770  -2.5923601E-01   3.6312380E-01
+input  v-vel.   into v        10
+thknss   =     108000    7200.00 10 25.770   8.4915281E+04   2.1285402E+06
+input  thknss   into dp       10
+temp     =     108000    7200.00 10 25.770  -1.0547700E+00   2.1082523E+01
+input  temp     into temp     10
+salin    =     108000    7200.00 10 25.770   3.3228790E+01   3.6705803E+01
+input  salin    into saln     10
+density  =     108000    7200.00 10 25.770   6.9629920E-01   2.5402141E+00
+input  density  into th3d     10
+finished reading data for layer 25.77000
+u-vel.   =     108000    7200.00 11 26.180  -4.5746791E-01   3.5046107E-01
+input  u-vel.   into u        11
+v-vel.   =     108000    7200.00 11 26.180  -1.7105940E-01   2.7429488E-01
+input  v-vel.   into v        11
+thknss   =     108000    7200.00 11 26.180   9.2220617E+04   2.8102545E+06
+input  thknss   into dp       11
+temp     =     108000    7200.00 11 26.180  -8.7442333E-01   1.9368366E+01
+input  temp     into temp     11
+salin    =     108000    7200.00 11 26.180   3.3301918E+01   3.6325237E+01
+input  salin    into saln     11
+density  =     108000    7200.00 11 26.180   8.2345605E-01   2.5403769E+00
+input  density  into th3d     11
+finished reading data for layer 26.18000
+u-vel.   =     108000    7200.00 12 26.520  -2.9392931E-01   3.2450777E-01
+input  u-vel.   into u        12
+v-vel.   =     108000    7200.00 12 26.520  -2.4587335E-01   1.6974440E-01
+input  v-vel.   into v        12
+thknss   =     108000    7200.00 12 26.520   1.0351747E+01   4.4983890E+06
+input  thknss   into dp       12
+temp     =     108000    7200.00 12 26.520  -8.3879334E-01   1.8999508E+01
+input  temp     into temp     12
+salin    =     108000    7200.00 12 26.520   3.3303867E+01   3.6138397E+01
+input  salin    into saln     12
+density  =     108000    7200.00 12 26.520   8.9525795E-01   2.5405576E+00
+input  density  into th3d     12
+finished reading data for layer 26.52000
+u-vel.   =     108000    7200.00 13 26.800  -3.8244063E-01   2.6350674E-01
+input  u-vel.   into u        13
+v-vel.   =     108000    7200.00 13 26.800  -2.5355217E-01   2.1017493E-01
+input  v-vel.   into v        13
+thknss   =     108000    7200.00 13 26.800   1.5898883E-01   4.9676635E+06
+input  thknss   into dp       13
+temp     =     108000    7200.00 13 26.800  -9.3631953E-02   1.5251037E+01
+input  temp     into temp     13
+salin    =     108000    7200.00 13 26.800   3.3466091E+01   3.6138397E+01
+input  salin    into saln     13
+density  =     108000    7200.00 13 26.800   1.5554503E+00   2.5407293E+00
+input  density  into th3d     13
+finished reading data for layer 26.80000
+u-vel.   =     108000    7200.00 14 27.030  -5.4175889E-01   2.7704310E-01
+input  u-vel.   into u        14
+v-vel.   =     108000    7200.00 14 27.030  -2.5361434E-01   1.9454403E-01
+input  v-vel.   into v        14
+thknss   =     108000    7200.00 14 27.030   9.2165079E-05   5.8182080E+06
+input  thknss   into dp       14
+temp     =     108000    7200.00 14 27.030   9.5054036E-01   1.4203891E+01
+input  temp     into temp     14
+salin    =     108000    7200.00 14 27.030   3.3764664E+01   3.6138397E+01
+input  salin    into saln     14
+density  =     108000    7200.00 14 27.030   1.8279210E+00   2.5408092E+00
+input  density  into th3d     14
+finished reading data for layer 27.03000
+u-vel.   =     108000    7200.00 15 27.220  -5.6297243E-01   6.0506296E-01
+input  u-vel.   into u        15
+v-vel.   =     108000    7200.00 15 27.220  -2.5361434E-01   3.0230969E-01
+input  v-vel.   into v        15
+thknss   =     108000    7200.00 15 27.220   1.4907913E-05   5.5464800E+06
+input  thknss   into dp       15
+temp     =     108000    7200.00 15 27.220   1.1149303E+00   1.3300984E+01
+input  temp     into temp     15
+salin    =     108000    7200.00 15 27.220   3.3983639E+01   3.6138397E+01
+input  salin    into saln     15
+density  =     108000    7200.00 15 27.220   1.9032410E+00   2.6257272E+00
+input  density  into th3d     15
+finished reading data for layer 27.22000
+u-vel.   =     108000    7200.00 16 27.380  -5.6297243E-01   3.1656292E-01
+input  u-vel.   into u        16
+v-vel.   =     108000    7200.00 16 27.380  -2.5361434E-01   2.3257290E-01
+input  v-vel.   into v        16
+thknss   =     108000    7200.00 16 27.380   0.0000000E+00   3.8694760E+06
+input  thknss   into dp       16
+temp     =     108000    7200.00 16 27.380   2.0384269E+00   1.2509957E+01
+input  temp     into temp     16
+salin    =     108000    7200.00 16 27.380   3.4263710E+01   3.6138397E+01
+input  salin    into saln     16
+density  =     108000    7200.00 16 27.380   2.1098006E+00   2.7251601E+00
+input  density  into th3d     16
+finished reading data for layer 27.38000
+u-vel.   =     108000    7200.00 17 27.520  -5.6297243E-01   4.8473069E-01
+input  u-vel.   into u        17
+v-vel.   =     108000    7200.00 17 27.520  -2.5775644E-01   1.5901420E-01
+input  v-vel.   into v        17
+thknss   =     108000    7200.00 17 27.520   0.0000000E+00   7.5361540E+06
+input  thknss   into dp       17
+temp     =     108000    7200.00 17 27.520   2.8710394E+00   1.1791531E+01
+input  temp     into temp     17
+salin    =     108000    7200.00 17 27.520   3.4527596E+01   3.6138397E+01
+input  salin    into saln     17
+density  =     108000    7200.00 17 27.520   2.2816658E+00   2.7351356E+00
+input  density  into th3d     17
+finished reading data for layer 27.52000
+u-vel.   =     108000    7200.00 18 27.640  -5.6297243E-01   2.6386413E-01
+input  u-vel.   into u        18
+v-vel.   =     108000    7200.00 18 27.640  -3.0546519E-01   4.6995261E-01
+input  v-vel.   into v        18
+thknss   =     108000    7200.00 18 27.640   0.0000000E+00   7.2530840E+06
+input  thknss   into dp       18
+temp     =     108000    7200.00 18 27.640   1.6594059E+00   1.1153646E+01
+input  temp     into temp     18
+salin    =     108000    7200.00 18 27.640   3.4553291E+01   3.6138397E+01
+input  salin    into saln     18
+density  =     108000    7200.00 18 27.640   2.4769552E+00   2.7721305E+00
+input  density  into th3d     18
+finished reading data for layer 27.64000
+u-vel.   =     108000    7200.00 19 27.740  -5.6297243E-01   5.4025441E-01
+input  u-vel.   into u        19
+v-vel.   =     108000    7200.00 19 27.740  -3.0546519E-01   2.4984269E-01
+input  v-vel.   into v        19
+thknss   =     108000    7200.00 19 27.740   0.0000000E+00   1.1166350E+07
+input  thknss   into dp       19
+temp     =     108000    7200.00 19 27.740   1.4639601E-01   1.0604614E+01
+input  temp     into temp     19
+salin    =     108000    7200.00 19 27.740   3.4553291E+01   3.6138397E+01
+input  salin    into saln     19
+density  =     108000    7200.00 19 27.740   2.5505621E+00   2.8199973E+00
+input  density  into th3d     19
+finished reading data for layer 27.74000
+u-vel.   =     108000    7200.00 20 27.820  -5.6297243E-01   2.7663615E-01
+input  u-vel.   into u        20
+v-vel.   =     108000    7200.00 20 27.820  -3.0546519E-01   1.7306805E-01
+input  v-vel.   into v        20
+thknss   =     108000    7200.00 20 27.820   0.0000000E+00   1.3827324E+07
+input  thknss   into dp       20
+temp     =     108000    7200.00 20 27.820  -1.6030024E+00   1.0152731E+01
+input  temp     into temp     20
+salin    =     108000    7200.00 20 27.820   3.4553291E+01   3.6138397E+01
+input  salin    into saln     20
+density  =     108000    7200.00 20 27.820   2.7527571E+00   2.8894958E+00
+input  density  into th3d     20
+finished reading data for layer 27.82000
+u-vel.   =     108000    7200.00 21 27.880  -5.6297243E-01   2.6386413E-01
+input  u-vel.   into u        21
+v-vel.   =     108000    7200.00 21 27.880  -3.0546519E-01   2.6660332E-01
+input  v-vel.   into v        21
+thknss   =     108000    7200.00 21 27.880   0.0000000E+00   2.6606408E+07
+input  thknss   into dp       21
+temp     =     108000    7200.00 21 27.880  -4.2452497E+00   9.8057661E+00
+input  temp     into temp     21
+salin    =     108000    7200.00 21 27.880   3.4570305E+01   3.6138397E+01
+input  salin    into saln     21
+density  =     108000    7200.00 21 27.880   2.8618093E+00   2.9400001E+00
+input  density  into th3d     21
+finished reading data for layer 27.88000
+u-vel.   =     108000    7200.00 22 27.940  -5.6297243E-01   2.6386413E-01
+input  u-vel.   into u        22
+v-vel.   =     108000    7200.00 22 27.940  -3.0546519E-01   3.9576057E-01
+input  v-vel.   into v        22
+thknss   =     108000    7200.00 22 27.940   0.0000000E+00   1.2006927E+07
+input  thknss   into dp       22
+temp     =     108000    7200.00 22 27.940  -4.2493720E+00   9.4513502E+00
+input  temp     into temp     22
+salin    =     108000    7200.00 22 27.940   3.4643463E+01   3.6138397E+01
+input  salin    into saln     22
+density  =     108000    7200.00 22 27.940   2.8793738E+00   3.0033181E+00
+input  density  into th3d     22
+finished reading data for layer 27.94000
+North Atlantic topography from ETOPO5 5-minute data set.                       
+56 x 51 depth values (idm,jdm = 57,52).                                        
+2.0000 deg. mercator resolution, with equat=11.000.                            
+lon: 97.000W to 13.000E.  lat: 19.606S to 62.195N.                             
+                                                                               
+min,max depth =    199.556  5837.000
+read North At into depths  
+mask North At into coast   
+plon:  min,max =       263.00000      375.00000
+plat:  min,max =       -19.60579       63.11375
+qlon:  min,max =       262.00000      374.00000
+qlat:  min,max =       -20.54502       62.65800
+ulon:  min,max =       262.00000      374.00000
+ulat:  min,max =       -19.60579       63.11375
+vlon:  min,max =       263.00000      375.00000
+vlat:  min,max =       -20.54502       62.65800
+pscx:  min,max =    100565.21875   222389.87500
+pscy:  min,max =    100571.95312   222378.59375
+uscx:  min,max =    100565.21875   222389.87500
+uscy:  min,max =    100571.95312   222378.59375
+vscx:  min,max =    102139.75781   222356.01562
+vscy:  min,max =    102146.85938   222344.73438
+
+sub-domain longitude range =   263.00  375.00
+sub-domain latitude  range =   -19.61   63.11
+
+sub-domain assumed to be non-periodic
+
+bigrid called with ii,jj,ii1,jj1 =    57    52    56    51
+indxi called with ii,jj,ii1,jj1 =    57    52    56    51
+indxj called with ii,jj,ii1,jj1 =    57    52    56    51
+indxi called with ii,jj,ii1,jj1 =    57    52    56    51
+indxj called with ii,jj,ii1,jj1 =    57    52    56    51
+indxi called with ii,jj,ii1,jj1 =    57    52    56    51
+indxj called with ii,jj,ii1,jj1 =    57    52    56    51
+indxi called with ii,jj,ii1,jj1 =    57    52    56    51
+indxj called with ii,jj,ii1,jj1 =    57    52    56    51
+      0 island points submerged
+ calling portrait PostScript version of opngks
+ filename: 013y021w.ps
+     defining earth color table: entries    1 --    3
+     defining fc100 color table: entries    5 --  104
+min -8.42E+01 at   33   50  max  5.41E+01 at   12   26  intvl.,lines  1.00E+01   13
+ srfht =  -84.16113 54.051502 10.0
+ now plotting:  year  20.00 (jan 16) [01.3H]
+blkinr: botqq  =    -1.0000 m
+blkinr: flxqq  =    -1.0000 cm
+blkinr: empqq  =    -1.0000 mm/day
+blkinr: ttrqq  =    -1.0000 deg/day
+blkinr: strqq  =    -1.0000 psu/day
+blkinr: icvqq  =    -1.0000 
+blkinr: ithqq  =    -1.0000 m
+blkinr: ictqq  =    -1.0000 deg
+blkinr: sshqq  =     2.0000 cm
+min -8.42E+01 at   33   50  max  5.41E+01 at   12   26  intvl.,lines  1.00E+01   13
+ srfht =  -84.16113 54.051502 2.0
+blkinr: center =     0.0000 cm
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =-100.000 100.000   2.000
+ horiz. map:  sea surf. height   year  20.00 (jan 16) [01.3H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+bordplt - qlatlo,qlathi,qlatlon =     -30.00     70.00     10.00
+bordplt - qlonlo,qlonhi,qlatlon =     250.00    390.00     10.00
+                      fflo,ffhi,qq =-100.000 100.000   2.000
+ frame advance no.   1
+blkinr: bsfqq  =    -1.0000 sv
+blkinr: mthrsh =     0.0000 cm
+blkinr: bltqq  =    -1.0000 m
+blkinr: mltqq  =     6.0000 m
+min  2.97E+00 at   44   14  max  4.70E+02 at   41   43  intvl.,lines  5.00E+01    9
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   1.200   1.200   1.200
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+blkinr: center =   300.0000 m
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000 600.000   6.000
+ horiz. map: mix.layr.thickness  year  20.00 (jan 16) [01.3H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+                      fflo,ffhi,qq =   0.000 600.000   6.000
+ frame advance no.   2
+blkinr: sstqq  =    -1.0000 deg
+blkinr: sssqq  =    -1.0000 psu
+blkinr: ssdqq  =    -1.0000 sig
+blkini: kf     =    -1
+blkini: kl     =     1
+blkinr: vthrsh =     0.0000 cm
+blkinr: infqq  =    -1.0000 m
+blkinr: thkqq  =    -1.0000 m
+blkinr: temqq  =     0.3000 deg
+min -2.10E+00 at   20   45  max  3.13E+01 at   43   14  intvl.,lines  2.00E+00   16
+blkinr: center =    15.0000 deg
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000  30.000   0.300
+ horiz. map: layer=01   temp     year  20.00 (jan 16) [01.3H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+                      fflo,ffhi,qq =   0.000  30.000   0.300
+ frame advance no.   3
+blkinr: salqq  =     0.0500 psu
+blkinr: center =    35.0000 psu
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =  32.500  37.500   0.050
+ horiz. map: layer=01  salinity  year  20.00 (jan 16) [01.3H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+                      fflo,ffhi,qq =  32.500  37.500   0.050
+min  2.86E+01 at   53   13  max  3.72E+01 at   34    1  intvl.,lines  5.00E-01   17
+ frame advance no.   4
+blkinr: tthqq  =    -1.0000 sig
+blkinr: sfnqq  =    -1.0000 sv
+blkini: kf     =   -21
+blkini: kl     =    22
+blkinr: vthrsh =     0.0000 cm
+blkinr: infqq  =    -1.0000 m
+blkinr: thkqq  =    -1.0000 m
+blkinr: temqq  =     0.1000 deg
+min  1.65E+00 at   50   51  max  4.66E+00 at   45   50  intvl.,lines  2.00E-01   15
+blkinr: center =     3.0000 deg
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =  -2.000   8.000   0.100
+ horiz. map: layer=21   temp     year  20.00 (jan 16) [01.3H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+                      fflo,ffhi,qq =  -2.000   8.000   0.100
+ frame advance no.   5
+blkinr: salqq  =    -1.0000 psu
+blkinr: tthqq  =    -1.0000 sig
+blkinr: sfnqq  =    -1.0000 sv
+min -1.45E-01 at   49   51  max  3.81E+00 at   48   49  intvl.,lines  2.00E-01   19
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =  -2.000   8.000   0.100
+ horiz. map: layer=22   temp     year  20.00 (jan 16) [01.3H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+                      fflo,ffhi,qq =  -2.000   8.000   0.100
+ frame advance no.   6
+blkini: kf     =     0
+blkinr: depth  =   900.0000 m
+blkinr: vstep  =     1.0000 
+blkinr: velqq  =    -1.0000 cm/s
+blkinr: center =     0.0000 cm/s
+blkinr: temqq  =     0.4000 deg
+blkinr: center =    15.2000 deg
+blkinr: salqq  =     0.0750 psu
+blkinr: center =    35.0000 psu
+blkinr: tthqq  =    -1.0000 sig
+blkinr: center =    26.0000 sig
+blkini: mxlflg =     2
+blkini: kpalet =     2
+       defining sst color table: entries  107 --  170
+blkini: noisec =     4
+blkini: isec   =    17
+ next section at  i,lon=   17    -65.00
+xsecij - ia,ilo,xlo =    17   16  -65.000
+ cross section: temperature merid.sec. 65.00w   year  20.00 (jan 16) [01.3H]
+min  4.00E+00 at   35    1  max  2.75E+01 at   20   74  intvl.,lines  2.00E+00   11
+xsecij - contour    =   2.0000E+00  4.0003E+00  2.7524E+01
+xsecij - qq,qlo,qhi =   4.0000E-01  2.4000E+00  2.8000E+01
+colors set to 0.750 0.625 0.500     (color index   3)   ierr =  0
+xsecij - ia,ilo,xlo =    17   16  -65.000
+ cross section: salinity merid.sec. 65.00w   year  20.00 (jan 16) [01.3H]
+min  3.42E+01 at   36   80  max  3.66E+01 at   19   68  intvl.,lines  2.00E-01   11
+xsecij - contour    =   2.0000E-01  3.4218E+01  3.6552E+01
+xsecij - qq,qlo,qhi =   7.5000E-02  3.2600E+01  3.7400E+01
+colors set to 0.750 0.625 0.500     (color index   3)   ierr =  0
+ frame advance no.   7
+blkini: isec   =    24
+ next section at  i,lon=   24    -51.00
+xsecij - ia,ilo,xlo =    24   23  -51.000
+ cross section: temperature merid.sec. 51.00w   year  20.00 (jan 16) [01.3H]
+min -1.13E-01 at   51   80  max  2.76E+01 at   15   75  intvl.,lines  2.00E+00   13
+xsecij - contour    =   2.0000E+00 -1.1329E-01  2.7643E+01
+xsecij - qq,qlo,qhi =   4.0000E-01  2.4000E+00  2.8000E+01
+colors set to 0.750 0.625 0.500     (color index   3)   ierr =  0
+xsecij - ia,ilo,xlo =    24   23  -51.000
+ cross section: salinity merid.sec. 51.00w   year  20.00 (jan 16) [01.3H]
+min  3.31E+01 at   13   80  max  3.68E+01 at   22   80  intvl.,lines  2.00E-01   18
+xsecij - contour    =   2.0000E-01  3.3133E+01  3.6837E+01
+xsecij - qq,qlo,qhi =   7.5000E-02  3.2600E+01  3.7400E+01
+colors set to 0.750 0.625 0.500     (color index   3)   ierr =  0
+ frame advance no.   8
+blkini: isec   =    32
+ next section at  i,lon=   32    -35.00
+xsecij - ia,ilo,xlo =    32   31  -35.000
+ cross section: temperature merid.sec. 35.00w   year  20.00 (jan 16) [01.3H]
+min  3.70E+00 at    1    1  max  2.84E+01 at    7   79  intvl.,lines  2.00E+00   12
+xsecij - contour    =   2.0000E+00  3.6956E+00  2.8427E+01
+xsecij - qq,qlo,qhi =   4.0000E-01  2.4000E+00  2.8000E+01
+colors set to 0.750 0.625 0.500     (color index   3)   ierr =  0
+xsecij - ia,ilo,xlo =    32   31  -35.000
+ cross section: salinity merid.sec. 35.00w   year  20.00 (jan 16) [01.3H]
+min  3.44E+01 at    1   20  max  3.72E+01 at    1   78  intvl.,lines  2.00E-01   13
+xsecij - contour    =   2.0000E-01  3.4384E+01  3.7167E+01
+xsecij - qq,qlo,qhi =   7.5000E-02  3.2600E+01  3.7400E+01
+colors set to 0.750 0.625 0.500     (color index   3)   ierr =  0
+ frame advance no.   9
+blkini: isec   =    40
+ next section at  i,lon=   40    -19.00
+xsecij - ia,ilo,xlo =    40   39  -19.000
+ cross section: temperature merid.sec. 19.00w   year  20.00 (jan 16) [01.3H]
+min  4.01E+00 at    3    1  max  2.93E+01 at   13   80  intvl.,lines  2.00E+00   12
+xsecij - contour    =   2.0000E+00  4.0118E+00  2.9268E+01
+xsecij - qq,qlo,qhi =   4.0000E-01  2.4000E+00  2.8000E+01
+colors set to 0.750 0.625 0.500     (color index   3)   ierr =  0
+xsecij - ia,ilo,xlo =    40   39  -19.000
+ cross section: salinity merid.sec. 19.00w   year  20.00 (jan 16) [01.3H]
+min  3.44E+01 at    1   12  max  3.70E+01 at    2   80  intvl.,lines  2.00E-01   12
+xsecij - contour    =   2.0000E-01  3.4441E+01  3.7008E+01
+xsecij - qq,qlo,qhi =   7.5000E-02  3.2600E+01  3.7400E+01
+colors set to 0.750 0.625 0.500     (color index   3)   ierr =  0
+ frame advance no.  10
+blkini: nojsec =     5
+blkini: jsec   =     4
+ next section at  j,lat =    4    -13.86
+xsecij - ja,jla,xla =     4    3  -13.863
+ cross section: temperature zonal sec. 13.86s   year  20.00 (jan 16) [01.3H]
+min  3.81E+00 at   32    1  max  2.84E+01 at   31   79  intvl.,lines  2.00E+00   12
+xsecij - contour    =   2.0000E+00  3.8063E+00  2.8439E+01
+xsecij - qq,qlo,qhi =   4.0000E-01  2.4000E+00  2.8000E+01
+colors set to 0.750 0.625 0.500     (color index   3)   ierr =  0
+ATLb2.00,x =     5.400
+xsecij - ja,jla,xla =     4    3  -13.863
+ cross section: salinity zonal sec. 13.86s   year  20.00 (jan 16) [01.3H]
+min  3.44E+01 at   32   23  max  3.70E+01 at   30   78  intvl.,lines  2.00E-01   12
+xsecij - contour    =   2.0000E-01  3.4435E+01  3.7030E+01
+xsecij - qq,qlo,qhi =   7.5000E-02  3.2600E+01  3.7400E+01
+colors set to 0.750 0.625 0.500     (color index   3)   ierr =  0
+ATLb2.00,x =     5.400
+ frame advance no.  11
+blkini: jsec   =    11
+ next section at  j,lat =   11      0.00
+xsecij - ja,jla,xla =    11   10    0.000
+ cross section: temperature zonal sec.  0.00s   year  20.00 (jan 16) [01.3H]
+min  4.55E+00 at   54   12  max  2.91E+01 at   54   80  intvl.,lines  2.00E+00   12
+xsecij - contour    =   2.0000E+00  4.5456E+00  2.9093E+01
+xsecij - qq,qlo,qhi =   4.0000E-01  2.4000E+00  2.8000E+01
+colors set to 0.750 0.625 0.500     (color index   3)   ierr =  0
+xsecij - ja,jla,xla =    11   10    0.000
+ cross section: salinity zonal sec.  0.00s   year  20.00 (jan 16) [01.3H]
+min  3.02E+01 at   54   80  max  3.64E+01 at   29   68  intvl.,lines  5.00E-01   12
+xsecij - contour    =   5.0000E-01  3.0162E+01  3.6362E+01
+xsecij - qq,qlo,qhi =   7.5000E-02  3.2600E+01  3.7400E+01
+colors set to 0.750 0.625 0.500     (color index   3)   ierr =  0
+ frame advance no.  12
+blkini: jsec   =    24
+ next section at  j,lat =   24     25.15
+xsecij - ja,jla,xla =    24   23   25.151
+ cross section: temperature zonal sec. 25.15n   year  20.00 (jan 16) [01.3H]
+min  5.24E+00 at    6    3  max  2.60E+01 at   10   79  intvl.,lines  1.00E+00   20
+xsecij - contour    =   1.0000E+00  5.2416E+00  2.6021E+01
+xsecij - qq,qlo,qhi =   4.0000E-01  2.4000E+00  2.8000E+01
+colors set to 0.750 0.625 0.500     (color index   3)   ierr =  0
+xsecij - ja,jla,xla =    24   23   25.151
+ cross section: salinity zonal sec. 25.15n   year  20.00 (jan 16) [01.3H]
+min  3.49E+01 at   23    1  max  3.72E+01 at   30   80  intvl.,lines  2.00E-01   11
+xsecij - contour    =   2.0000E-01  3.4910E+01  3.7212E+01
+xsecij - qq,qlo,qhi =   7.5000E-02  3.2600E+01  3.7400E+01
+colors set to 0.750 0.625 0.500     (color index   3)   ierr =  0
+ frame advance no.  13
+blkini: jsec   =    36
+ next section at  j,lat =   36     44.65
+xsecij - ja,jla,xla =    36   35   44.646
+ cross section: temperature zonal sec. 44.65n   year  20.00 (jan 16) [01.3H]
+min  3.83E+00 at   18   32  max  1.94E+01 at   26   61  intvl.,lines  1.00E+00   15
+xsecij - contour    =   1.0000E+00  3.8265E+00  1.9397E+01
+xsecij - qq,qlo,qhi =   4.0000E-01  2.4000E+00  2.8000E+01
+colors set to 0.750 0.625 0.500     (color index   3)   ierr =  0
+xsecij - ja,jla,xla =    36   35   44.646
+ cross section: salinity zonal sec. 44.65n   year  20.00 (jan 16) [01.3H]
+min  3.36E+01 at   18   80  max  3.61E+01 at   25   63  intvl.,lines  2.00E-01   12
+xsecij - contour    =   2.0000E-01  3.3600E+01  3.6109E+01
+xsecij - qq,qlo,qhi =   7.5000E-02  3.2600E+01  3.7400E+01
+colors set to 0.750 0.625 0.500     (color index   3)   ierr =  0
+ frame advance no.  14
+blkini: jsec   =    48
+ next section at  j,lat =   48     59.26
+xsecij - ja,jla,xla =    48   47   59.264
+ cross section: temperature zonal sec. 59.26n   year  20.00 (jan 16) [01.3H]
+min  9.32E-02 at   19   80  max  1.04E+01 at   42   64  intvl.,lines  5.00E-01   20
+xsecij - contour    =   5.0000E-01  9.3204E-02  1.0445E+01
+xsecij - qq,qlo,qhi =   4.0000E-01  2.4000E+00  2.8000E+01
+colors set to 0.750 0.625 0.500     (color index   3)   ierr =  0
+xsecij - ja,jla,xla =    48   47   59.264
+ cross section: salinity zonal sec. 59.26n   year  20.00 (jan 16) [01.3H]
+min  3.35E+01 at   19   73  max  3.55E+01 at   48   54  intvl.,lines  1.00E-01   19
+xsecij - contour    =   1.0000E-01  3.3546E+01  3.5486E+01
+xsecij - qq,qlo,qhi =   7.5000E-02  3.2600E+01  3.7400E+01
+colors set to 0.750 0.625 0.500     (color index   3)   ierr =  0
+ frame advance no.  15
+STOP: (normal)

@@ -1,0 +1,27 @@
+setenv FOR051 fort.51
+setenv FOR061 fort.61
+setenv FOR061A fort.61A
+/bin/rm -f fort.51 fort.61 fort.61A
+ln -s depth.51x56 fort.51
+../../ALL/topo/src/topo_m2h
+
+xcspmd: idm,jdm =   57   52
+
+ MICOM header:
+North Atlantic topography from ETOPO5 5-minute data set.                       
+51 x 56 depth values, resolution 2.0 deg.                                      
+lat,lon = ( 0.0-97.0) <==> x,y = (41.0 1.0)                                    
+                                                                               
+                                                                               
+ 
+ HYCOM header:
+North Atlantic topography from ETOPO5 5-minute data set.                       
+56 x 51 depth values (idm,jdm = 57,52).                                        
+2.0000 deg. mercator resolution, with equat=11.000.                            
+lon: 97.000W to 13.000E.  lat: 19.606S to 62.195N.                             
+                                                                               
+min,max depth =    199.556  5837.000
+ 
+mv fort.61 depth_ATLb2.00_01.b
+mv fort.61A depth_ATLb2.00_01.a
+/bin/rm -f fort.51

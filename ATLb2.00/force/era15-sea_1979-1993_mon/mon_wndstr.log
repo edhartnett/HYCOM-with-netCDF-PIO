@@ -1,0 +1,236 @@
+set time = 1
+C
+setenv OS `uname`
+uname
+switch ( Linux )
+breaksw
+C
+C --- Create a monthly climatology wind stress data file.
+C
+switch ( Linux )
+setenv pget cp
+setenv pput cp
+endsw
+C
+C --- R is region, e.g. GLBgx1v3
+C --- W is wind dataset name, e.g. era40-sea_1978-2002_mon
+C --- N is wind dataset, e.g. era40
+C
+setenv R `echo $cwd | sed -e "s?^.*hycom/??" | awk -F"/" '{print $1}'`
+echo /home/ajax/wallcraf/hycom/ATLb2.00/force/era15-sea_1979-1993_mon
+awk -F/ {print $1}
+sed -e s?^.*hycom/??
+setenv W `echo $cwd                          | awk -F"/" '{print $NF}'`
+echo /home/ajax/wallcraf/hycom/ATLb2.00/force/era15-sea_1979-1993_mon
+awk -F/ {print $NF}
+setenv N `echo $W                            | awk -F"-" '{print $1}'`
+echo era15-sea_1979-1993_mon
+awk -F- {print $1}
+C
+C --- P is primary path,
+C --- S is scratch directory,
+C --- D is permanent directory,
+C
+setenv P hycom/ATLb2.00/force/era15-sea_1979-1993_mon
+C
+switch ( Linux )
+if ( -e /external/fast ) then
+if ( -e /net/ajax/data ) then
+setenv S /net/ajax/data/wallcraf/hycom/ATLb2.00/force/era15-sea_1979-1993_mon
+setenv D ~/hycom/ATLb2.00/force/era15-sea_1979-1993_mon
+else
+breaksw
+C
+mkdir -p /net/ajax/data/wallcraf/hycom/ATLb2.00/force/era15-sea_1979-1993_mon
+cd /net/ajax/data/wallcraf/hycom/ATLb2.00/force/era15-sea_1979-1993_mon
+echo /net/ajax/data/wallcraf/hycom/ATLb2.00/force/era15-sea_1979-1993_mon
+/net/ajax/data/wallcraf/hycom/ATLb2.00/force/era15-sea_1979-1993_mon
+C
+C --- Input.
+C
+touch fort.44 fort.44A fort.45 fort.45A fort.71
+/bin/rm -f fort.44 fort.44A fort.45 fort.45A fort.71
+cp /home/ajax/wallcraf/hycom/ATLb2.00/force/era15-sea_1979-1993_mon/../offset/tauewd_zero.b fort.44
+[1] 15074
+cp /home/ajax/wallcraf/hycom/ATLb2.00/force/era15-sea_1979-1993_mon/../offset/tauewd_zero.a fort.44A
+[2] 15075
+cp /home/ajax/wallcraf/hycom/ATLb2.00/force/era15-sea_1979-1993_mon/../offset/taunwd_zero.b fort.45
+[3] 15076
+[4] 15077
+cp /home/ajax/wallcraf/hycom/ATLb2.00/force/era15-sea_1979-1993_mon/../offset/taunwd_zero.a fort.45A
+ln -s /net/hermes/data5/metzger/wind/era15/era15-sea_1979-1993_mon_strblk.D fort.71
+[5] 15078
+C
+touch regional.grid.a regional.grid.b
+
+[5]    Done                          ln -s /net/hermes/data5/metzger/wind/era15/era15-sea_1979-1993_mon_strblk.D  ...
+
+[1]    Done                          cp  ...
+if ( -z regional.grid.b ) then
+if ( -z regional.grid.a ) then
+C
+
+[2]    Done                          cp  ...
+
+[3]    Done                          cp  ...
+
+[4]    Done                          cp  ...
+cp /home/ajax/wallcraf/hycom/ATLb2.00/force/era15-sea_1979-1993_mon/../../../ALL/force/src/wi .
+[1] 15082
+wait
+
+[1]    Done                          cp  ...
+chmod a+rx wi
+C
+/bin/rm: No match.
+C
+setenv FOR010A fort.10A
+setenv FOR011A fort.11A
+setenv FOR012A fort.12A
+C
+setenv FOR044A fort.44A
+setenv FOR045A fort.45A
+C
+switch ( Linux )
+/bin/rm -f core
+touch core
+endsw
+/bin/rm -f fort.10 fort.11 fort.12 fort.46 fort.47 fort.48
+./wi
+
+xcspmd: idm,jdm =   57   52
+
+ READING /WWTITL/
+ &WWTITL
+ CTITLE = era15-sea_1979-1993_mon strblk                                                 
+ /
+ READING /WWTIME/
+ &WWTIME
+ FSTART =    0.000000000000000     ,
+ WSTART =    0.000000000000000     ,
+ TSTART =    0.000000000000000     ,
+ TMAX =    0.000000000000000     ,
+ WSCALE =    1.000000000000000     ,
+ WVSCAL =   1.7999999690800905E-003,
+ SPDMIN =    0.000000000000000     ,
+ SEAMSK =   0.5000000    
+ /
+ READING /WWFLAG/
+ &WWFLAG
+ IGRID =            2,
+ ISPEED =            0,
+ IUSTAR =            0,
+ INTMSK =            0,
+ IFILL =            0,
+ ISMTH =            0,
+ INTERP =            1,
+ IOFILE =            0,
+ MODREC =            0,
+ IWFILE =            1,
+ ARCTIC =            0,
+ JPR =            8
+ /
+
+ OUTPUT:  era15-sea_1979-1993_mon strblk
+
+
+ OFFSET:  Zero Stress
+
+
+
+ OFFSET STATISTICS.
+
+ TAU-X:  MIN =    0.0000   MAX =    0.0000    AVE =    0.0000   RMS =    0.0000
+ TAU-Y:  MIN =    0.0000   MAX =    0.0000    AVE =    0.0000   RMS =    0.0000
+
+
+
+ MIN,MAX I COORDS =    76.78,  176.33
+ MIN,MAX J COORDS =    65.02,  138.78
+
+ TAU-X:  MIN =   -0.1816   MAX =    0.2601    AVE =    0.0230   RMS =    0.0762
+ TAU-Y:  MIN =   -0.0976   MAX =    0.1170    AVE =    0.0030   RMS =    0.0368
+          WRITING WIND RECORD    1   WDAY =    31.00
+
+ TAU-X:  MIN =   -0.1775   MAX =    0.2352    AVE =    0.0180   RMS =    0.0665
+ TAU-Y:  MIN =   -0.1093   MAX =    0.1366    AVE =    0.0010   RMS =    0.0395
+          WRITING WIND RECORD    2   WDAY =    29.00
+
+ TAU-X:  MIN =   -0.1583   MAX =    0.2178    AVE =    0.0133   RMS =    0.0576
+ TAU-Y:  MIN =   -0.0985   MAX =    0.0848    AVE =   -0.0029   RMS =    0.0277
+          WRITING WIND RECORD    3   WDAY =    31.00
+
+ TAU-X:  MIN =   -0.1310   MAX =    0.1130    AVE =   -0.0014   RMS =    0.0345
+ TAU-Y:  MIN =   -0.1137   MAX =    0.0812    AVE =   -0.0045   RMS =    0.0228
+          WRITING WIND RECORD    4   WDAY =    30.00
+
+ TAU-X:  MIN =   -0.1156   MAX =    0.0554    AVE =   -0.0069   RMS =    0.0296
+ TAU-Y:  MIN =   -0.1244   MAX =    0.0918    AVE =   -0.0005   RMS =    0.0217
+          WRITING WIND RECORD    5   WDAY =    31.00
+
+ TAU-X:  MIN =   -0.1990   MAX =    0.0647    AVE =   -0.0076   RMS =    0.0336
+ TAU-Y:  MIN =   -0.1209   MAX =    0.1078    AVE =    0.0050   RMS =    0.0242
+          WRITING WIND RECORD    6   WDAY =    30.00
+
+ TAU-X:  MIN =   -0.2181   MAX =    0.0696    AVE =   -0.0066   RMS =    0.0354
+ TAU-Y:  MIN =   -0.1234   MAX =    0.1117    AVE =    0.0062   RMS =    0.0258
+          WRITING WIND RECORD    7   WDAY =    31.00
+
+ TAU-X:  MIN =   -0.1639   MAX =    0.0820    AVE =   -0.0036   RMS =    0.0348
+ TAU-Y:  MIN =   -0.1101   MAX =    0.1120    AVE =    0.0059   RMS =    0.0234
+          WRITING WIND RECORD    8   WDAY =    31.00
+
+ TAU-X:  MIN =   -0.1031   MAX =    0.1059    AVE =    0.0003   RMS =    0.0386
+ TAU-Y:  MIN =   -0.0937   MAX =    0.1187    AVE =    0.0039   RMS =    0.0229
+          WRITING WIND RECORD    9   WDAY =    30.00
+
+ TAU-X:  MIN =   -0.0966   MAX =    0.1552    AVE =    0.0050   RMS =    0.0462
+ TAU-Y:  MIN =   -0.0841   MAX =    0.0987    AVE =    0.0007   RMS =    0.0238
+          WRITING WIND RECORD   10   WDAY =    31.00
+
+ TAU-X:  MIN =   -0.1158   MAX =    0.1672    AVE =    0.0114   RMS =    0.0541
+ TAU-Y:  MIN =   -0.0949   MAX =    0.0859    AVE =   -0.0004   RMS =    0.0269
+          WRITING WIND RECORD   11   WDAY =    30.00
+
+ TAU-X:  MIN =   -0.1801   MAX =    0.2621    AVE =    0.0219   RMS =    0.0738
+ TAU-Y:  MIN =   -0.1262   MAX =    0.0971    AVE =    0.0006   RMS =    0.0330
+          WRITING WIND RECORD   12   WDAY =    31.00
+
+   12 RECORD CLIMATOLOGY STARTING ON  16.00/1904 COVERING   366.00 DAYS
+FORTRAN STOP
+switch ( Linux )
+endsw
+C
+C --- Output.
+C
+mv fort.10 tauewd.b
+mv fort.10A tauewd.a
+mv fort.11 taunwd.b
+mv fort.11A taunwd.a
+C
+foreach f ( tauewd.? taunwd.? )
+[1] 15105
+end
+cp tauewd.a /home/ajax/wallcraf/hycom/ATLb2.00/force/era15-sea_1979-1993_mon/tauewd.a
+cp tauewd.b /home/ajax/wallcraf/hycom/ATLb2.00/force/era15-sea_1979-1993_mon/tauewd.b
+[2] 15106
+end
+[3] 15107
+cp taunwd.a /home/ajax/wallcraf/hycom/ATLb2.00/force/era15-sea_1979-1993_mon/taunwd.a
+end
+cp taunwd.b /home/ajax/wallcraf/hycom/ATLb2.00/force/era15-sea_1979-1993_mon/taunwd.b
+[4] 15108
+end
+wait
+
+[1]    Done                          cp tauewd.a  ...
+
+[2]    Done                          cp tauewd.b  ...
+
+[3]    Done                          cp taunwd.a  ...
+
+[4]    Done                          cp taunwd.b  ...
+C
+C --- Delete all files.
+C
+/bin/rm -f fort.44 fort.44A fort.45 fort.45A fort.71 wi

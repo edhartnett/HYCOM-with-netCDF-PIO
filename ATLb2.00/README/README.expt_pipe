@@ -1,0 +1,60 @@
+expt_02.4/PIPE/README.expt_pipe:
+
+024y001T.limits		limits file for named pipe comparison
+024y001T01.com		named-pipe run script for 1 OpenMP thread
+024y001T01.log		named-pipe run output for 1 OpenMP thread
+024y001T03.com		named-pipe run script for 3 OpenMP threads
+024y001T03.log		named-pipe run output for 3 OpenMP threads
+024y001T_pipe.com	script comparing 1 and 3 threads via a named-pipe
+024y001T_pipe.log	from csh 024y001T_pipe.com >& 024y001T_pipe.log
+
+The source code in pipe.f controls the use of named pipes to compare two
+identical runs, the "master" vs the "slave".  These typically differ only
+in the number of processors used, i.e. in the values of NOMP and NMPI.  
+Often the master is on a single processor, i.e. NMPI=0 and NOMP=0 or 1.
+The comparison is made for every element of every array sent over the 
+named pipe from the slave to the master.  By default, most of the significant
+model arrays are compared after each major phase of each time step.  If
+an error (i.e. a difference between master and slave runs) is detected,
+additional calls to comparall or compare can be added in the subroutine
+that introduced the error to find out exactly which OpenMP loop needs
+modifying.  Named pipes can be difficult to use from Fortran.  The
+current open statement has worked on all machines tried so far, but
+it might require modification on a new machine.
+
+The first task of each run must be on the same node (i.e. the same O/S
+image), for the named pipe to work.  This will almost always be the
+case when comparing two OpenMP runs, but can be harder to arrange for
+MPI runs.  The easiest MPI-based named pipe comparisons to make are 
+with a single processor master without MPI, but because this involves 
+two different executables make sure they were created with identical 
+compiler options (typically TYPE=mpi with TYPE=one and TYPE=ompi with 
+TYPE=omp).
+
+The script 024y001T_pipe.com illustrates how to configure an OpenMP test 
+run.  It creates a named pipe and two separate data directories, dataT01 
+and dataT03.  The named pipe is linked to PIPE_MASTER in dataT01 and to
+PIPE_SLAVE in dataT03.  The existence of these filenames switches on
+the named pipe comparison.  Finally the two "twin"runs scripts,
+024y001T01.com and 024y001T03.com, are run in the background and the job
+waits for both to end.  If no errors are detected, 024y001T_pipe.com will
+end normally.  However, if the two runs do not produce exactly identical
+results the "master" will terminate but the slave will hang and must be
+killed manually.  The location of the difference will be at the end of
+filename PIPE_base.out in the master scratch dataT01 directory.
+
+The two runs scripts are identical except for the data directory used and
+the number of threads used.  They are almost identical to a standard runs
+script, 024.com, except that they use 024y001T.limits as their limits file 
+and do not copy their results back to the permanent directory.
+
+If the file PIPE_DEBUG exists in the scratch data directory, it switches 
+on single point (at itest,jtest) diagnostic printout to the .log file from 
+every call to comparall.  This can be used with or without the named pipe 
+comparison.  It is simply using the name-pipe subroutine interface for 
+diagnostic printout.  The standard run script includes the following lines 
+that can be uncommented to turn on this capability:
+#C
+#C --- turn on detailed debugging.
+#C
+#touch PIPE_DEBUG

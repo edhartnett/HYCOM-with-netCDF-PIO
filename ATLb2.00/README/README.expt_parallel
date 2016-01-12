@@ -1,0 +1,60 @@
+expt_01.5/README.expt_parallel:
+
+HYCOM can run on multiple processors in several ways:
+
+  a) Using OpenMP threads on a shared memory multi-processor,
+      e.g. Compaq ES40, Sun E10000.
+  b) Using SHMEM on machines with a global shared memory,
+      e.g. Cray T3E, SGI Origin 2800/3800.
+  c) Using MPI on any homogeneous set of "connected" processors,
+      e.g. IBM SP, clusters, all of the above machines.
+  d) Using MPI and OpenMP on a cluster of shared memory multi-processors,
+      e.g. IBM SP Power 3, Compaq AlphaServer SC.
+
+The first step is to compile HYCOM for the desired parallel mode, by
+setting up a source code directory name ending with _${TYPE}, where 
+${TYPE} is the parallelization type (one,omp,mpi,ompi,shmem).  The next
+step is to configure the batch script, 015???.com, (if required) for 
+the desired configuration.  Finally, the run script, 015.com, should be 
+configured for the number of processors and how they are shared between 
+MPI and OpenMP.  There are two environment variables:
+
+  NOMP = number of OpenMP threads, 0 for no OpenMP, 1 for inactive OpenMP
+  NMPI = number of MPI    tasks,   0 for no MPI
+
+These are explicitly set near the top of the script, but note that this
+explicit setting might be modified based on batch limits.  The script
+is currently configured to do this for LSF, Codine, and GRD batch
+systems.  Explicit 0 values are preserved, and when both NOMP and NMPI
+are non-zero the NOMP value is preserved (i.e. NMPI is modified to
+conform to the batch limit).
+
+  a) When running on a single processor (TYPE=one), set NOMP and NMPI to 0.
+  b) When using OpenMP alone (TYPE=omp), set NMPI to 0 and NOMP to the 
+     number of OpenMP threads (i.e. number of shared memory processors used).
+  c) When using SHMEM, set NOMP to 0 and NMPI to the number of SHMEM tasks.
+  d) When using MPI alone, set NOMP to 0 and NMPI to the number of MPI tasks.
+  e) When using MPI and OpenMP, set both NOMP and NMPI above 1, and the 
+     total number of processors is then $NOMP times $NMPI.  Also, be 
+     careful to ensure that if a node in the cluster runs (say) N MPI 
+     tasks it has at least N*$NOMP processors.  For example, an IBM SP 
+     WinterHawk II has 4 processors per node so it can run up 4 MPI tasks 
+     per node without OpenMP (NOMP=0 or 1), or up to 2 MPI tasks per node 
+     with NOMP=2, or 1 MPI task per node with NOMP=3 or 4.
+
+When using MPI or SHMEM, an additional file, patch.input, is required
+to contol the domain decomposition into tiles.  This is assumed to be
+located at ../topo/partit/depth_*_??? where "???" is $NMPI as a 3-digit
+number.  See ../README/README.topo.partit for more details about this
+file.
+
+The model run script assumes that all data files are on a globally 
+accessible shared file system.  Some low-cost MPI-based systems, e.g.
+Beowulf Clusters, do not have a shared file system that is accessible
+by all nodes.  In such cases the script must be modified to use a
+local file system on each node.  When doing this, note that ".a" and
+".b" files are both read and written on the very first MPI task only.
+The script will typically run on the same node as the first MPI task,
+which means that all ".a" and ".b" files are probably already handled 
+correctly for local disks.  However, the ".input" files may need to be 
+broadcast to all nodes (e.g. by rcp) as part of the script.

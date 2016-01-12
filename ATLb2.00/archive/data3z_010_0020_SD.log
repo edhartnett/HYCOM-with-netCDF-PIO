@@ -1,0 +1,148 @@
+touch regional.depth.a regional.depth.b
+if ( -z regional.depth.a ) then
+if ( -z regional.depth.b ) then
+touch regional.grid.a regional.grid.b
+if ( -z regional.grid.a ) then
+if ( -z regional.grid.b ) then
+setenv D ../expt_01.0/data
+foreach y ( 0020 )
+setenv FOR051A ../expt_01.0/data/archSD.0020_bot.a
+setenv FOR051 ../expt_01.0/data/archSD.0020_bot.b
+setenv FOR021A ../expt_01.0/data/archSD.0020_mlt.a
+setenv FOR021 ../expt_01.0/data/archSD.0020_mlt.b
+setenv FOR022A ../expt_01.0/data/archSD.0020_3di.a
+setenv FOR022 ../expt_01.0/data/archSD.0020_3di.b
+setenv FOR033A ../expt_01.0/data/archSD.0020_3zt.a
+setenv FOR033 ../expt_01.0/data/archSD.0020_3zt.b
+setenv FOR034A ../expt_01.0/data/archSD.0020_3zs.a
+setenv FOR034 ../expt_01.0/data/archSD.0020_3zs.b
+setenv FOR035A ../expt_01.0/data/archSD.0020_3zr.a
+setenv FOR035 ../expt_01.0/data/archSD.0020_3zr.b
+setenv FOR037A ../expt_01.0/data/archSD.0020_3zu.a
+setenv FOR037 ../expt_01.0/data/archSD.0020_3zu.b
+setenv FOR038A ../expt_01.0/data/archSD.0020_3zv.a
+setenv FOR038 ../expt_01.0/data/archSD.0020_3zv.b
+setenv FOR039A ../expt_01.0/data/archSD.0020_3zw.a
+setenv FOR039 ../expt_01.0/data/archSD.0020_3zw.b
+setenv FOR040A ../expt_01.0/data/archSD.0020_3zi.a
+setenv FOR040 ../expt_01.0/data/archSD.0020_3zi.b
+setenv FOR041A ../expt_01.0/data/archSD.0020_3zk.a
+setenv FOR041 ../expt_01.0/data/archSD.0020_3zk.b
+/bin/rm ../expt_01.0/data/archSD.0020_bot.b ../expt_01.0/data/archSD.0020_mlt.b ../expt_01.0/data/archSD.0020_3di.b
+../expt_01.0/data/archSD.0020_mlt.b: No such file or directory
+/bin/rm ../expt_01.0/data/archSD.0020_bot.a ../expt_01.0/data/archSD.0020_mlt.a ../expt_01.0/data/archSD.0020_3di.a
+../expt_01.0/data/archSD.0020_mlt.a: No such file or directory
+/bin/rm ../expt_01.0/data/archSD.0020_3zt.b ../expt_01.0/data/archSD.0020_3zs.b ../expt_01.0/data/archSD.0020_3zr.b ../expt_01.0/data/archSD.0020_3zu.b ../expt_01.0/data/archSD.0020_3zv.b ../expt_01.0/data/archSD.0020_3zw.b
+../expt_01.0/data/archSD.0020_3zt.b: No such file or directory
+../expt_01.0/data/archSD.0020_3zs.b: No such file or directory
+../expt_01.0/data/archSD.0020_3zr.b: No such file or directory
+../expt_01.0/data/archSD.0020_3zu.b: No such file or directory
+../expt_01.0/data/archSD.0020_3zv.b: No such file or directory
+../expt_01.0/data/archSD.0020_3zw.b: No such file or directory
+/bin/rm ../expt_01.0/data/archSD.0020_3zt.a ../expt_01.0/data/archSD.0020_3zs.a ../expt_01.0/data/archSD.0020_3zr.a ../expt_01.0/data/archSD.0020_3zu.a ../expt_01.0/data/archSD.0020_3zv.a ../expt_01.0/data/archSD.0020_3zw.a
+../expt_01.0/data/archSD.0020_3zt.a: No such file or directory
+../expt_01.0/data/archSD.0020_3zs.a: No such file or directory
+../expt_01.0/data/archSD.0020_3zr.a: No such file or directory
+../expt_01.0/data/archSD.0020_3zu.a: No such file or directory
+../expt_01.0/data/archSD.0020_3zv.a: No such file or directory
+../expt_01.0/data/archSD.0020_3zw.a: No such file or directory
+/bin/rm ../expt_01.0/data/archSD.0020_3zi.b ../expt_01.0/data/archSD.0020_3zk.b
+../expt_01.0/data/archSD.0020_3zi.b: No such file or directory
+../expt_01.0/data/archSD.0020_3zk.b: No such file or directory
+/bin/rm ../expt_01.0/data/archSD.0020_3zi.a ../expt_01.0/data/archSD.0020_3zk.a
+../expt_01.0/data/archSD.0020_3zi.a: No such file or directory
+../expt_01.0/data/archSD.0020_3zk.a: No such file or directory
+../../ALL/archive/src/archv2data3z
+
+xcspmd: idm,jdm =   57   52
+
+ input file: ../expt_01.0/data/archSD.0020.a
+output type: HYCOM
+blkini: iexpt  =     0
+blkini: yrflag =     0
+blkini: idm    =    57
+blkini: jdm    =    52
+blkini: kdm    =    22
+blkinr: thbase =    25.0000 sig
+blkinl: smooth =     F
+blkini: iorign =     1
+blkini: jorign =     1
+blkini: idmp   =     0
+blkini: jdmp   =     0
+
+extracting i =    1 ...   57         j =    1 ...   52
+
+blkini: itype  =     1
+blkini: kz     =    33
+blkinr: z      =     0.0000 m
+blkinr: z      =    10.0000 m
+blkinr: z      =    20.0000 m
+blkinr: z      =    30.0000 m
+blkinr: z      =    50.0000 m
+blkinr: z      =    75.0000 m
+blkinr: z      =   100.0000 m
+blkinr: z      =   125.0000 m
+blkinr: z      =   150.0000 m
+blkinr: z      =   200.0000 m
+blkinr: z      =   250.0000 m
+blkinr: z      =   300.0000 m
+blkinr: z      =   400.0000 m
+blkinr: z      =   500.0000 m
+blkinr: z      =   600.0000 m
+blkinr: z      =   700.0000 m
+blkinr: z      =   800.0000 m
+blkinr: z      =   900.0000 m
+blkinr: z      =  1000.0000 m
+blkinr: z      =  1100.0000 m
+blkinr: z      =  1200.0000 m
+blkinr: z      =  1300.0000 m
+blkinr: z      =  1400.0000 m
+blkinr: z      =  1500.0000 m
+blkinr: z      =  1750.0000 m
+blkinr: z      =  2000.0000 m
+blkinr: z      =  2500.0000 m
+blkinr: z      =  3000.0000 m
+blkinr: z      =  3500.0000 m
+blkinr: z      =  4000.0000 m
+blkinr: z      =  4500.0000 m
+blkinr: z      =  5000.0000 m
+blkinr: z      =  5500.0000 m
+ 
+blkini: botio  =    51
+blkini: mltio  =    21
+blkini: infio  =   -22
+blkini: wviio  =    40
+blkini: wvlio  =    39
+blkini: uvlio  =    37
+blkini: vvlio  =    38
+blkini: splio  =     0
+blkini: temio  =    33
+blkini: salio  =    34
+blkini: tthio  =    35
+ 
+ error - std.dev. archives are not supported
+ 
+foreach t ( bot mlt 3di 3zt 3zs 3zr 3zu 3zv 3zw 3zi 3zk )
+if ( -e ../expt_01.0/data/archSD.0020_bot.a ) then
+end
+if ( -e ../expt_01.0/data/archSD.0020_mlt.a ) then
+end
+if ( -e ../expt_01.0/data/archSD.0020_3di.a ) then
+end
+if ( -e ../expt_01.0/data/archSD.0020_3zt.a ) then
+end
+if ( -e ../expt_01.0/data/archSD.0020_3zs.a ) then
+end
+if ( -e ../expt_01.0/data/archSD.0020_3zr.a ) then
+end
+if ( -e ../expt_01.0/data/archSD.0020_3zu.a ) then
+end
+if ( -e ../expt_01.0/data/archSD.0020_3zv.a ) then
+end
+if ( -e ../expt_01.0/data/archSD.0020_3zw.a ) then
+end
+if ( -e ../expt_01.0/data/archSD.0020_3zi.a ) then
+end
+if ( -e ../expt_01.0/data/archSD.0020_3zk.a ) then
+end
+end

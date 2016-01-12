@@ -1,0 +1,74 @@
+force/coads/README.force.coads:
+
+Interpolation of Naval Research Laboratory (NRL) format COADS wind/flux 
+files on "native" grid to HYCOM model grid.  COADS in this format is 
+available from the HYCOM ftp site, see:
+ftp://obelix.rsmas.miami.edu/awall/hycom/coads_for_hycom.tar.gz
+
+README.force.coads	this file
+coads_mon_flux.com	COADS thermal forcing script
+coads_mon_flux.log	csh coads_mon_flux.com >& coads_mon_flux.log
+coads_mon_wind.com	COADS wind forcing script
+coads_mon_wind.log	csh coads_mon_wind.com >& coads_mon_wind.log
+precip_zero.com	  	zero precipitation script
+precip_zero.log	  	csh precip_zero.com >& precip_zero.log
+
+The interpolation program (in hycom/ALL/force/src) reads COADS wind/flux 
+files in NRL format (see ../README.force).  It currently ignores the header 
+record dates, since it is processing 12 monthly records.
+
+The wind_stat command (see hycom/ALL/bin) summarizes the native data set:
+
+ajax 90> wind_stat coads_mon_taqaqrqppc.d
+COADS monthly Ta,Ha,Qr,Qr+Qlw,Pc 366 day
+IWI,JWI = 360, 180    XFIN,YFIN =    0.50,  -89.50    DXIN,DYIN = 1.000, 1.000
+NREC =   12     WDAY =
+  1111.00  1142.00  1171.00  1202.00  1232.00  1263.00  1293.00  1324.00
+  1355.00  1385.00  1416.00  1446.00  1477.00
+   12 RECORD CLIMATOLOGY STARTING ON  16.00/1904 COVERING   366.00 DAYS
+
+ajax 91> wind_stat uwm_coads_monmn_unsm.d
+COADS mnth clim, 366 day, unsmooth, MKS 
+IWI,JWI = 360, 180    XFIN,YFIN =    0.50,  -89.50    DXIN,DYIN = 1.000, 1.000
+NREC =   12     WDAY =
+  1111.00  1142.00  1171.00  1202.00  1232.00  1263.00  1293.00  1324.00
+  1355.00  1385.00  1416.00  1446.00  1461.00
+   12 RECORD CLIMATOLOGY STARTING ON  16.00/1904 COVERING   350.00 DAYS
+
+The output consists of the COADS fields interpolated to the HYCOM grid,
+in HYCOM 2.0 array (.a) and header (.b) format.  For example:
+
+ajax 96> cat tauewd.b
+COADS monthly, MKS                                                             
+                                                                               
+                                                                               
+                                                                               
+i/jdm,iref,reflon,equat,gridsz/la =   57   52  1  -97.000    11.00 2.000 0.000 
+ tau_ewd: month,range = 01  -1.3818002E-01   2.1997201E-01
+ tau_ewd: month,range = 02  -1.3790721E-01   1.8771732E-01
+ tau_ewd: month,range = 03  -1.3121982E-01   1.4483750E-01
+ tau_ewd: month,range = 04  -1.1269118E-01   8.3349183E-02
+ tau_ewd: month,range = 05  -1.0441105E-01   7.3009044E-02
+ tau_ewd: month,range = 06  -1.3582233E-01   6.2626213E-02
+ tau_ewd: month,range = 07  -1.4753306E-01   5.9464872E-02
+ tau_ewd: month,range = 08  -1.0999266E-01   6.8312079E-02
+ tau_ewd: month,range = 09  -1.0449981E-01   1.0520227E-01
+ tau_ewd: month,range = 10  -9.0205058E-02   1.4911072E-01
+ tau_ewd: month,range = 11  -8.7021284E-02   1.7461090E-01
+ tau_ewd: month,range = 12  -1.2721729E-01   1.9768250E-01
+
+ajax 97> hycom_range tauewd.a 57 52
+ min, max =  -0.13818002 0.21997201
+ min, max =  -0.1379072 0.18771732
+ min, max =  -0.13121982 0.1448375
+ min, max =  -0.11269118 0.08334918
+ min, max =  -0.10441105 0.073009043
+ min, max =  -0.13582233 0.06262621
+ min, max =  -0.14753306 0.059464871
+ min, max =  -0.10999266 0.06831208
+ min, max =  -0.10449981 0.10520227
+ min, max =  -0.09020506 0.14911072
+ min, max =  -0.087021283 0.1746109
+ min, max =  -0.1272173 0.1976825
+ 
+ 12  FIELDS PROCESSED

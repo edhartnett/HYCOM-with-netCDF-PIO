@@ -1,0 +1,63 @@
+README.expt_new:
+
+To configure for a new simulation:
+
+a) Create a new experiment directory, for example ../expt_03.4.  If
+   model output will be copied to another (archive) machine, the experiment
+   data directory (e.g., expt_03.4/data) must also be created there.
+
+b) Copy new_expt.com into the expt_03.4 directory, and edit DO, DN, O, N 
+   to indicate the old and new directory and experiment number.  Also 
+   edit the mlist line, if necessary, to reflect the run sequence (see 
+   ../bin/mlist for further information).  
+
+c) Run by issuing: csh new_expt.com in the expt_03.4 directory.  The
+   .awk, .com, LIST, blkdat.input, and ports.input files, corresponding to 
+   those in the old expt directory, will be created.  The data subdirectory 
+   will also be created.  The files ???W.com and ???F.com are always 
+   present (for consistency), but are only used for "just in time" winds
+   and fluxes.
+   
+d) Edit the ???.com file to document the new experiment and to reflect any 
+   changes in input filenames (e.g., bathymetry number, forcing).  If the
+   bathymetry has changed then climatology and patch.input (for MPI only)
+   must also be updated, see README.expt_newtopo.  If 6-hrly or 12-hrly 
+   interannual winds/fluxes are being used then the forcing is generated 
+   "just in time" as part of the run script.  The files ???W.com and 
+   ???F.com are used to do this, and to turn on this option directories
+   data/wind and data/flux must exist on the scratch filesystem.
+   
+e) If the run segment size has changed, edit the .awk file for the new
+   experiment.  This can handle calendar years by setting nd=365.  Then
+   calendar year 1979 is model year 079, and each model year has 365 or 
+   366 days (the latter in leap years only).
+   
+f) Edit blkdat.input for the new experiment number and any other model 
+   parameter changes. 
+
+g) If lbflag=1, edit ports.input as necessary.  
+   (See ../README/README.src.hycom1p0 for further information.)
+
+h) In order to change the number of vertical coordinate surfaces (kdm),
+   create a new directory ../src_2.1.03_xx_$TYPE, with xx being the new 
+   number of vertical coordinate surfaces and $TYPE the desired type
+   (one,omp,mpi,...).  Edit dimensions.h and change the parameter kdm 
+   to its new value.  Recompile hycom in the src directory and edit the
+   .com file in the new experiment directory to point to the correct src
+   directory for the executable.
+
+i) The climatology files are always in ../relax/???.  If the bathymetry
+   and vertical structure have not changed, this can be a softlink to
+   the climatology directory from a previous simulation.  Otherwise
+   generate the climatology if needed.  Note that the z-level climatology 
+   (e.g. in ../relax/levitus) is independent of the  bathymetry and so 
+   does not need regenerating. See README.relax.
+
+j) In order to change to a new model region and/or domain size, see 
+      ../README/README.src.newregion
+      
+See also:            README.expt_demorun 
+                     README.expt_msub
+           ../README/README.force
+	   ../README/README.relax
+	   ../README/README.topo

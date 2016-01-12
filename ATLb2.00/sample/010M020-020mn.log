@@ -1,0 +1,36 @@
+setenv D ../expt_01.0/data
+setenv E 010
+setenv Y 0020
+touch ../expt_01.0/data/transMN.0020.mn
+/bin/rm ../expt_01.0/data/transMN.0020.mn
+./src/meantspt
+transport  input file: ../expt_01.0/data/transMN.0020.d
+transport output file: ../expt_01.0/data/transMN.0020.mn
+blkini: kout   =    22
+ 
+
+ MODEL EXPERIMENT:   10
+     3 22-LAYER TRANSPORT SECTION STATISTICS
+   360.0 DAY AVERAGE OF   12 SAMPLES BETWEEN MODEL DAYS  6840.0 AND  7170.0
+
+NORMAL EXIT FROM MEANTSPT
+
+touch ../expt_01.0/data/transMN.0020.mn05
+/bin/rm ../expt_01.0/data/transMN.0020.mn05
+./src/meantspt
+transport  input file: ../expt_01.0/data/transMN.0020.d
+transport output file: ../expt_01.0/data/transMN.0020.mn05
+blkini: kout   =     5
+ 
+
+ MODEL EXPERIMENT:   10
+     3 22-LAYER TRANSPORT SECTION STATISTICS
+blkini: laybot =     8
+blkini: laybot =    11
+blkini: laybot =    15
+blkini: laybot =    18
+blkini: laybot =    22
+   360.0 DAY AVERAGE OF   12 SAMPLES BETWEEN MODEL DAYS  6840.0 AND  7170.0
+
+NORMAL EXIT FROM MEANTSPT
+

@@ -1,0 +1,42 @@
+README.newregion:
+
+All pre and post processing programs are now region-independent, but
+scripts typically still need editing for each new region (e.g. to 
+include the region name and the bathymetry version).
+
+See README.nesting for how to setup a region nested inside an enclosing
+(coarser resolution) HYCOM domain.  
+
+To setup HYCOM for a new stand-alone region:
+
+     a) Pick a region name, XXXaN.NN, e.g. IASb0.50, ATLb2.00, ATLd0.32.
+        "XXX" is a 3 uppercase letter primary region name, "a" is a one 
+        lowercase letter secondary region name, and "N.NN" is a 3 digit 
+        grid resolution description.
+     b) Create XXXaN.NN/topo/regional.grid.[ab] files that describe 
+        the location of the region and grid.
+     c) In XXXaN.NN/topo, generate a bathymetry and a landsea mask.
+     d) In XXXaN.NN/force, interpolate atmospheric forcing fields 
+        to this region.
+     e) In XXXaN.NN/expt_01.0, choose a vertical structure and 
+        implement it in the blkdat.input file.
+     f) In XXXaN.NN/relax/levitus, interpolate Levitus climatology
+        to this region and bathymetry (still on the Levitus z-levels).
+     g) In XXXaN.NN/relax/010, interpolate Levitus onto the vertical 
+        structure chosen in the experiment's blkdat.input file.  Region
+        specific information is in EXPT.src.
+     h) In XXXaN.NN/src_2.1.03_MM_one (where MM is the number of layers), 
+        edit dimensions.h for this domain and number of layers and run 
+        Make.com.  For more details, see README.src.newregion.  For
+        multi-cpu runs, replace "_one" with the parallelization type.
+     i) In XXXaN.NN/expt_01.0, edit scripts as needed and run the
+        simulation.
+
+There are several scripts that aid in migrating region-specific scripts to 
+a new region, see:
+
+ajax 86> find . -name "new*.com" -print
+./force/new_force.com
+./topo/new_topo.com
+./topo/partit/new_topo.com
+./expt_01.5/new_expt.com

@@ -1,0 +1,32 @@
+setenv D ../topo
+setenv R ../../IASb0.50/topo
+touch regional.grid.a
+if ( -z regional.grid.a ) then
+No match
+No match
+../../ALL/subregion/src/isub_topog
+
+xcspmd: idm,jdm =   57   52
+
+../topo/depth_ATLb2.00_01.b                                                                                                     
+../../IASb0.50/topo/depth_IASb0.50_99.b                                                                                         
+depth_ATLb2.00_01 subregioned to IASb0.50 via isub_topog                        
+ 
+idm    =    93
+jdm    =    65
+irefi  =     1
+jrefi  =    13
+irefo  =     1
+jrefo  =     1
+ijgrd  =     4
+ 
+depth_ATLb2.00_01 subregioned to IASb0.50 via isub_topog                       
+56 x 51 depth values (idm,jdm = 57,52).                                        
+2.0000 deg. mercator resolution, with equat=11.000.                            
+lon: 97.000W to 13.000E.  lat: 19.606S to 62.195N.                             
+                                                                               
+ 
+   i,j,ss,a =    26    1  3.0     0.000
+landfill: pass   1 filled in   169 points
+ 
+min,max depth =    199.556  5837.000

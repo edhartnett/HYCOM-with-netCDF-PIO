@@ -1,0 +1,52 @@
+set time = 1
+set timestamp
+C
+C --- setup a master/slave pair of twin HYCOM simulations.
+C
+cd /scr/wallcraf/hycom/ATLb2.00/expt_01.6
+echo /scr/wallcraf/hycom/ATLb2.00/expt_01.6
+/scr/wallcraf/hycom/ATLb2.00/expt_01.6
+/bin/rm -f hycom_pipe
+mknod hycom_pipe p
+C
+C --- master
+C
+/bin/rm -f dataT01/PIPE_base.out
+echo ../hycom_pipe
+C
+C --- slave
+C
+/bin/rm -f dataT03/PIPE_test.out
+echo ../hycom_pipe
+C
+C --- start both simulations, master first.
+C
+cd ~/hycom/ATLb2.00/expt_01.6
+echo /u/home/wallcraf/hycom/ATLb2.00/expt_01.6
+/u/home/wallcraf/hycom/ATLb2.00/expt_01.6
+mkdir dataT01
+mkdir: 0653-358 Cannot create dataT01.
+dataT01: Do not specify an existing file.
+mkdir dataT03
+mkdir: 0653-358 Cannot create dataT03.
+dataT03: Do not specify an existing file.
+C
+[1] 422110
+C
+[2] 544944
+C
+C --- wait for them to end.
+C
+wait
+
+[1]    Done                 csh PIPE/016y001T01.com >& PIPE/016y001T01.log
+122.2u 11.7s 2:15 98% 891+45817k 0+0io 105pf+0w
+
+[2]    Done                 csh PIPE/016y001T03.com >& PIPE/016y001T03.log
+316.7u 13.2s 2:15 243% 936+48140k 0+0io 178pf+0w
+cd /scr/wallcraf/hycom/ATLb2.00/expt_01.6
+echo /scr/wallcraf/hycom/ATLb2.00/expt_01.6
+/scr/wallcraf/hycom/ATLb2.00/expt_01.6
+/bin/rm -f hycom_pipe
+/bin/rm -f dataT01/PIPE_MASTER
+/bin/rm -f dataT03/PIPE_SLAVE

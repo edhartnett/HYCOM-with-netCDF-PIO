@@ -1,0 +1,72 @@
+#
+# --- aliases for HYCOM/MICOM plotting.
+#
+# --- Usage:  xp2yy plot.IN   (creates plot.log and plot.ps)
+#
+# --- hp2ps  hycomproc to PostScript
+# --- hp2gv  hycomproc to PostScript to gv (on screen display)
+# --- mp2ps  micomproc to PostScript
+# --- mp2gv  micomproc to PostScript to gv (on screen display)
+# --- fp2ps  fieldproc to PostScript
+# --- fp2gv  fieldproc to PostScript to gv (on screen display)
+# --- fo2ps  fieldproc to PostScript with  field-overlay
+# --- fo2gv  fieldproc to PostScript to gv (on screen display)
+# --- fv2ps  fieldproc to PostScript with vector-overlay
+# --- fv2gv  fieldproc to PostScript to gv (on screen display)
+# --- fV2ps  fieldproc to PostScript with contour and vector overlay
+# --- fV2gv  fieldproc to PostScript to gv (on screen display)
+# --- fb2ps  fieldproc to PostScript with vector+bathymetry-overlay
+# --- fb2gv  fieldproc to PostScript to gv (on screen display)
+# --- fc2ps  fieldcell to PostScript
+# --- fc2gv  fieldcell to PostScript to gv (on screen display)
+#
+# --- Usage:  xp2x  plot.IN   (creates plot.log and X11 window)
+#
+# --- hp2x   hycomproc to X11
+# --- mp2x   micomproc to X11
+# --- fp2x   fieldproc to X11
+# --- fc2x   fieldcell to X11
+#
+alias hp2ps '(env NCARG_GKS_PS=\!^:r.ps ./src/hycomproc < \!^ >&! \!^:r.log)'
+alias hp2gv '(env NCARG_GKS_PS=\!^:r.ps ./src/hycomproc < \!^ >&! \!^:r.log; \\
+              gv -spartan -orientation=portrait \!^:r.ps)'
+#
+alias mp2ps '(env NCARG_GKS_PS=\!^:r.ps ./src/micomproc < \!^ >&! \!^:r.log)'
+alias mp2gv '(env NCARG_GKS_PS=\!^:r.ps ./src/micomproc < \!^ >&! \!^:r.log; \\
+              gv -spartan -orientation=portrait \!^:r.ps)'
+#
+alias fp2ps '(env NCARG_GKS_PS=\!^:r.ps ./src/fieldproc < \!^ >&! \!^:r.log)'
+alias fp2gv '(env NCARG_GKS_PS=\!^:r.ps ./src/fieldproc < \!^ >&! \!^:r.log; \\
+              gv -spartan -orientation=portrait \!^:r.ps)'
+#
+alias fo2ps '(env NCARG_GKS_PS=\!^:r.ps OVERLAY=CONTOUR ./src/fieldproc < \!^ >&! \!^:r.log)'
+alias fo2gv '(env NCARG_GKS_PS=\!^:r.ps OVERLAY=CONTOUR ./src/fieldproc < \!^ >&! \!^:r.log; \\
+              gv -spartan -orientation=portrait \!^:r.ps)'
+#
+alias fv2ps '(env NCARG_GKS_PS=\!^:r.ps OVERLAY=VECTOR  ./src/fieldproc < \!^ >&! \!^:r.log)'
+alias fv2gv '(env NCARG_GKS_PS=\!^:r.ps OVERLAY=VECTOR  ./src/fieldproc < \!^ >&! \!^:r.log; \\
+              gv -spartan -orientation=portrait \!^:r.ps)'
+#
+alias fV2ps '(env NCARG_GKS_PS=\!^:r.ps OVERLAY=VECCONT ./src/fieldproc < \!^ >&! \!^:r.log)'
+alias fV2gv '(env NCARG_GKS_PS=\!^:r.ps OVERLAY=VECCONT ./src/fieldproc < \!^ >&! \!^:r.log; \\
+              gv -spartan -orientation=portrait \!^:r.ps)'
+#
+alias fb2ps '(env NCARG_GKS_PS=\!^:r.ps OVERLAY=VECBATH ./src/fieldproc < \!^ >&! \!^:r.log)'
+alias fb2gv '(env NCARG_GKS_PS=\!^:r.ps OVERLAY=VECBATH ./src/fieldproc < \!^ >&! \!^:r.log; \\
+              gv -spartan -orientation=portrait \!^:r.ps)'
+#
+alias fc2ps '(env NCARG_GKS_PS=\!^:r.ps ./src/fieldcell < \!^ >&! \!^:r.log)'
+alias fc2gv '(env NCARG_GKS_PS=\!^:r.ps ./src/fieldcell < \!^ >&! \!^:r.log; \\
+              gv -spartan -orientation=portrait \!^:r.ps)'
+#
+alias hp2x  '(./src/hp_x11 < \!^ >&! \!^:r.log)'
+alias mp2x  '(./src/mp_x11 < \!^ >&! \!^:r.log)'
+alias fp2x  '(./src/fp_x11 < \!^ >&! \!^:r.log)'
+alias fc2x  '(./src/fc_x11 < \!^ >&! \!^:r.log)'
+#
+# --- tp2ps  hycomtest to PostScript
+# --- tp2gv  hycomtest to PostScript to gv (on screen display)
+#
+alias tp2ps '(env NCARG_GKS_PS=\!^:r.ps ./src/hycomtest < \!^ >&! \!^:r.log)'
+alias tp2gv '(env NCARG_GKS_PS=\!^:r.ps ./src/hycomtest < \!^ >&! \!^:r.log; \\
+              gv -spartan -orientation=portrait \!^:r.ps)'

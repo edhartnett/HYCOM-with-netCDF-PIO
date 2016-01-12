@@ -1,0 +1,76 @@
+\documentstyle[12pt]{article}
+
+\begin{document}
+
+\section*{MICOM Meshmaps}
+
+The following figures show the default relative position of the u, v and p 
+staggered grids in the C-grid scheme used by the MICOM ocean model.  
+They also show how grid points are numbered within two-dimensional arrays 
+in the model.  
+The size of the mesh array is chosen to just cover the model region, but 
+because the array is rectangular a large fraction of the array might 
+represent ``land'' for some regions.
+In this case the region is a simple rectangle  $11 \Delta x$ (latitude) 
+by $12 \Delta y$ (longitude) so all mesh array are dimensioned 11 by 12 
+(i.e. idm=11 and jdm=12) and none of the array is ``land''.   
+The figure has the standard map orientation (north at the top), but 
+note that the first array dimension, i, is North to South and the second, 
+j, is West to East.
+The (West and East) sides of the region are on the v grid, at j=1 and 
+j=12, and the top and bottom (north and south) are on the u grid at i=1 
+and i=11.  
+On the p grid all the nodes in row j=12 and in column i=11 are outside 
+the region.  They are never used by the model, but would be set to zero 
+in the topography array to indicate that they are over land.  
+All other nodes in the topography array would have positive values 
+representing the ocean depth at that point.
+On the v grid all nodes in column i=11 are outside the region and are 
+never used.  
+Similarly, on the u grid all nodes in row j=12 are outside the region and 
+are never used.
+The u velocity component is southward and the v component is eastward.
+
+\pagebreak
+{\tt
+\begin{verbatim}
+                     MICOM U-V-P STAGGERED GRID.
+
+                        IDM = 11 and JDM = 12
+
+                                NORTH
+
+       1     u---u---u---u---u---u---u---u---u---u---u   u
+   1       v P v P v P v P v P v P v P v P v P v P v P v P
+       2   | u   u   u   u   u   u   u   u   u   u   u | u
+   2       v P v P v P v P v P v P v P v P v P v P v P v P
+       3   | u   u   u   u   u   u   u   u   u   u   u | u
+   3       v P v P v P v P v P v P v P v P v P v P v P v P
+       4   | u   u   u   u   u   u   u   u   u   u   u | u
+   4       v P v P v P v P v P v P v P v P v P v P v P v P
+       5   | u   u   u   u   u   u   u   u   u   u   u | u
+W  5       v P v P v P v P v P v P v P v P v P v P v P v P  E
+E      6   | u   u   u   u   u   u   u   u   u   u   u | u  A
+S  6       v P v P v P v P v P v P v P v P v P v P v P v P  S
+T      7   | u   u   u   u   u   u   u   u   u   u   u | u  T
+   7       v P v P v P v P v P v P v P v P v P v P v P v P
+       8   | u   u   u   u   u   u   u   u   u   u   u | u
+   8       v P v P v P v P v P v P v P v P v P v P v P v P
+       9   | u   u   u   u   u   u   u   u   u   u   u | u
+   9       v P v P v P v P v P v P v P v P v P v P v P v P
+      10   | u   u   u   u   u   u   u   u   u   u   u | u
+  10       v P v P v P v P v P v P v P v P v P v P v P v P
+      11     u---u---u---u---u---u---u---u---u---u---u   u
+  11       v P v P v P v P v P v P v P v P v P v P v P v P
+ 
+           1   2   3   4   5   6   7   8   9   0   1   2
+             1   2   3   4   5   6   7   8   9   0   1   2
+
+                                SOUTH
+
+I=1 to 11 is North to South, and u is southward velocity
+J=1 to 12 is West  to East,  and v is  eastward velocity
+\end{verbatim}
+}
+
+\end{document}

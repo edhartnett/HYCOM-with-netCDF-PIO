@@ -1,0 +1,848 @@
+env NCARG_GKS_PS=010_jul_hor.ps ./src/hycomproc
+
+xcspmd: idm,jdm =   57   52
+
+input file: ../010/relax.0000_196_00.a
+    region: ATLb2.00
+blkini: iexpt  =     0
+blkini: yrflag =     0
+blkini: idm    =    57
+blkini: jdm    =    52
+blkini: kdm    =    22
+blkinr: thbase =    25.0000 sig
+blkini: nperfr =     1
+blkini: lalolb =    20
+blkini: lalogr =    10
+blkini: loclab =     4
+blkini: locbar =    11
+blkini: kpalet =     1
+blkinl: smooth =     F
+blkinl: mthin  =     T
+blkini: i_th   =     2
+blkini: iorign =     1
+blkini: jorign =     1
+blkini: idmp   =     0
+blkini: jdmp   =     0
+extracting i =    1 ...   57         j =    1 ...   52
+ chrsiz =  0.547826 104.04764 94.920654
+... plotting  1 maps per frame
+Dummy HYCOM archive from climatology for month 07.                              
+ Levitus (NOAA World Ocean Atlas 1994) Climatology                              
+ Expt 01.0  nhybrd=22 nsigma= 0 dp00s= 3.00 dp00= 3.00 dp00x=12.00 dp00f=1.125  
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+ iversn =  21
+ iexpt  =  10
+ yrflag =  0
+ idm    =  57
+ jdm    =  52
+field       time step  model day  k  dens        min              max
+artype = 1
+montg1   =          7     180.00  0  0.000   0.0000000E+00   0.0000000E+00
+input  montg1   into montg   
+srfhgt   =          7     180.00  0  0.000   0.0000000E+00   0.0000000E+00
+input  srfhgt   into srfht   
+surflx   =          7     180.00  0  0.000   0.0000000E+00   0.0000000E+00
+input  surflx   into surflx  
+ time3 =  180.0 180.0 180.0
+salflx   =          7     180.00  0  0.000   0.0000000E+00   0.0000000E+00
+input  salflx   into salflx  
+bl_dpth  =          7     180.00  0  0.000   1.8827520E+05   1.0377739E+06
+input  bl_dpth  into dpbl    
+mix_dpth =          7     180.00  0  0.000   1.8827520E+05   1.0377739E+06
+input  mix_dpth into dpmixl  
+tmix     =          7     180.00  0  0.000   2.6157143E+00   2.9119673E+01
+input  tmix     into tmix    
+smix     =          7     180.00  0  0.000   1.9146454E+01   3.7545372E+01
+input  smix     into smix    
+thmix    =          7     180.00  0  0.000  -1.4714362E+01   2.1187570E+00
+input  thmix    into thmix   
+umix     =          7     180.00  0  0.000   0.0000000E+00   0.0000000E+00
+input  umix     into umix    
+vmix     =          7     180.00  0  0.000   0.0000000E+00   0.0000000E+00
+input  vmix     into vmix    
+u_btrop  =          7     180.00  0  0.000   0.0000000E+00   0.0000000E+00
+input  u_btrop  into ubaro   
+v_btrop  =          7     180.00  0  0.000   0.0000000E+00   0.0000000E+00
+input  v_btrop  into vbaro   
+u-vel.   =          7     180.00  1 19.500   0.0000000E+00   0.0000000E+00
+input  u-vel.   into u         1
+v-vel.   =          7     180.00  1 19.500   0.0000000E+00   0.0000000E+00
+input  v-vel.   into v         1
+thknss   =          7     180.00  1 19.500   2.9418000E+04   9.4660008E+04
+input  thknss   into dp        1
+temp     =          7     180.00  1 19.500   2.8657143E+00   2.9369673E+01
+input  temp     into temp      1
+salin    =          7     180.00  1 19.500   1.8931963E+01   3.7545372E+01
+input  salin    into saln      1
+density  =          7     180.00  1 19.500  -1.4793007E+01   2.0765533E+00
+input  density  into th3d      1
+finished reading data for layer 19.50000
+u-vel.   =          7     180.00  2 20.250   0.0000000E+00   0.0000000E+00
+input  u-vel.   into u         2
+v-vel.   =          7     180.00  2 20.250   0.0000000E+00   0.0000000E+00
+input  v-vel.   into v         2
+thknss   =          7     180.00  2 20.250   3.3095250E+04   9.1524242E+04
+input  thknss   into dp        2
+temp     =          7     180.00  2 20.250   2.6445973E+00   2.9307211E+01
+input  temp     into temp      2
+salin    =          7     180.00  2 20.250   2.9640791E+01   3.7544033E+01
+input  salin    into saln      2
+density  =          7     180.00  2 20.250  -4.7500000E+00   2.0863171E+00
+input  density  into th3d      2
+finished reading data for layer 20.25000
+u-vel.   =          7     180.00  3 21.000   0.0000000E+00   0.0000000E+00
+input  u-vel.   into u         3
+v-vel.   =          7     180.00  3 21.000   0.0000000E+00   0.0000000E+00
+input  v-vel.   into v         3
+thknss   =          7     180.00  3 21.000   3.7232148E+04   1.0734958E+05
+input  thknss   into dp        3
+temp     =          7     180.00  3 21.000   2.3229728E+00   2.9216356E+01
+input  temp     into temp      3
+salin    =          7     180.00  3 21.000   2.9920567E+01   3.7542091E+01
+input  salin    into saln      3
+density  =          7     180.00  3 21.000  -4.0000000E+00   2.1278934E+00
+input  density  into th3d      3
+finished reading data for layer 21.00000
+u-vel.   =          7     180.00  4 21.750   0.0000000E+00   0.0000000E+00
+input  u-vel.   into u         4
+v-vel.   =          7     180.00  4 21.750   0.0000000E+00   0.0000000E+00
+input  v-vel.   into v         4
+thknss   =          7     180.00  4 21.750   4.1886176E+04   1.4612705E+05
+input  thknss   into dp        4
+temp     =          7     180.00  4 21.750   2.3229728E+00   2.9216356E+01
+input  temp     into temp      4
+salin    =          7     180.00  4 21.750   2.9920567E+01   3.7542091E+01
+input  salin    into saln      4
+density  =          7     180.00  4 21.750  -3.2843933E+00   2.1278934E+00
+input  density  into th3d      4
+finished reading data for layer 21.75000
+u-vel.   =          7     180.00  5 22.500   0.0000000E+00   0.0000000E+00
+input  u-vel.   into u         5
+v-vel.   =          7     180.00  5 22.500   0.0000000E+00   0.0000000E+00
+input  v-vel.   into v         5
+thknss   =          7     180.00  5 22.500   4.7121949E+04   2.5060842E+05
+input  thknss   into dp        5
+temp     =          7     180.00  5 22.500   1.6953859E+00   2.9069651E+01
+input  temp     into temp      5
+salin    =          7     180.00  5 22.500   3.0395950E+01   3.7537663E+01
+input  salin    into saln      5
+density  =          7     180.00  5 22.500  -2.5000000E+00   2.1955967E+00
+input  density  into th3d      5
+finished reading data for layer 22.50000
+u-vel.   =          7     180.00  6 23.250   0.0000000E+00   0.0000000E+00
+input  u-vel.   into u         6
+v-vel.   =          7     180.00  6 23.250   0.0000000E+00   0.0000000E+00
+input  v-vel.   into v         6
+thknss   =          7     180.00  6 23.250   5.3012191E+04   6.5833250E+05
+input  thknss   into dp        6
+temp     =          7     180.00  6 23.250   1.6096910E+00   2.8896427E+01
+input  temp     into temp      6
+salin    =          7     180.00  6 23.250   3.0477800E+01   3.7537872E+01
+input  salin    into saln      6
+density  =          7     180.00  6 23.250  -2.2123089E+00   2.2044659E+00
+input  density  into th3d      6
+finished reading data for layer 23.25000
+u-vel.   =          7     180.00  7 24.000   0.0000000E+00   0.0000000E+00
+input  u-vel.   into u         7
+v-vel.   =          7     180.00  7 24.000   0.0000000E+00   0.0000000E+00
+input  v-vel.   into v         7
+thknss   =          7     180.00  7 24.000   5.9638715E+04   9.1063469E+05
+input  thknss   into dp        7
+temp     =          7     180.00  7 24.000   4.9567693E-01   2.7469702E+01
+input  temp     into temp      7
+salin    =          7     180.00  7 24.000   3.0894552E+01   3.7539551E+01
+input  salin    into saln      7
+density  =          7     180.00  7 24.000  -1.4095974E+00   2.3014088E+00
+input  density  into th3d      7
+finished reading data for layer 24.00000
+u-vel.   =          7     180.00  8 24.700   0.0000000E+00   0.0000000E+00
+input  u-vel.   into u         8
+v-vel.   =          7     180.00  8 24.700   0.0000000E+00   0.0000000E+00
+input  v-vel.   into v         8
+thknss   =          7     180.00  8 24.700   6.7093539E+04   8.0177050E+05
+input  thknss   into dp        8
+temp     =          7     180.00  8 24.700   4.0038532E-01   2.6145636E+01
+input  temp     into temp      8
+salin    =          7     180.00  8 24.700   3.1012806E+01   3.7539650E+01
+input  salin    into saln      8
+density  =          7     180.00  8 24.700  -6.6867828E-01   2.3072395E+00
+input  density  into th3d      8
+finished reading data for layer 24.70000
+u-vel.   =          7     180.00  9 25.280   0.0000000E+00   0.0000000E+00
+input  u-vel.   into u         9
+v-vel.   =          7     180.00  9 25.280   0.0000000E+00   0.0000000E+00
+input  v-vel.   into v         9
+thknss   =          7     180.00  9 25.280   7.5480211E+04   1.3475520E+06
+input  thknss   into dp        9
+temp     =          7     180.00  9 25.280  -7.5851434E-01   2.4801685E+01
+input  temp     into temp      9
+salin    =          7     180.00  9 25.280   3.1557674E+01   3.7483273E+01
+input  salin    into saln      9
+density  =          7     180.00  9 25.280  -8.9269638E-02   2.4812241E+00
+input  density  into th3d      9
+finished reading data for layer 25.28000
+u-vel.   =          7     180.00 10 25.770   0.0000000E+00   0.0000000E+00
+input  u-vel.   into u        10
+v-vel.   =          7     180.00 10 25.770   0.0000000E+00   0.0000000E+00
+input  v-vel.   into v        10
+thknss   =          7     180.00 10 25.770   8.4915211E+04   1.3725664E+06
+input  thknss   into dp       10
+temp     =          7     180.00 10 25.770  -1.6646845E+00   2.3166870E+01
+input  temp     into temp     10
+salin    =          7     180.00 10 25.770   3.2055946E+01   3.7484688E+01
+input  salin    into saln     10
+density  =          7     180.00 10 25.770   4.7329521E-01   2.5624657E+00
+input  density  into th3d     10
+finished reading data for layer 25.77000
+u-vel.   =          7     180.00 11 26.180   0.0000000E+00   0.0000000E+00
+input  u-vel.   into u        11
+v-vel.   =          7     180.00 11 26.180   0.0000000E+00   0.0000000E+00
+input  v-vel.   into v        11
+thknss   =          7     180.00 11 26.180   9.5529648E+04   1.9699919E+06
+input  thknss   into dp       11
+temp     =          7     180.00 11 26.180  -1.9178749E+00   2.0732265E+01
+input  temp     into temp     11
+salin    =          7     180.00 11 26.180   3.2522896E+01   3.7115925E+01
+input  salin    into saln     11
+density  =          7     180.00 11 26.180   9.9562263E-01   2.5740108E+00
+input  density  into th3d     11
+finished reading data for layer 26.18000
+u-vel.   =          7     180.00 12 26.520   0.0000000E+00   0.0000000E+00
+input  u-vel.   into u        12
+v-vel.   =          7     180.00 12 26.520   0.0000000E+00   0.0000000E+00
+input  v-vel.   into v        12
+thknss   =          7     180.00 12 26.520   1.1818044E+04   3.2464272E+06
+input  thknss   into dp       12
+temp     =          7     180.00 12 26.520  -1.6677066E+00   1.8659582E+01
+input  temp     into temp     12
+salin    =          7     180.00 12 26.520   3.2949604E+01   3.6841908E+01
+input  salin    into saln     12
+density  =          7     180.00 12 26.520   1.5200005E+00   2.6579628E+00
+input  density  into th3d     12
+finished reading data for layer 26.52000
+u-vel.   =          7     180.00 13 26.800   0.0000000E+00   0.0000000E+00
+input  u-vel.   into u        13
+v-vel.   =          7     180.00 13 26.800   0.0000000E+00   0.0000000E+00
+input  v-vel.   into v        13
+thknss   =          7     180.00 13 26.800   0.0000000E+00   2.4158808E+06
+input  thknss   into dp       13
+temp     =          7     180.00 13 26.800  -1.5620947E+00   1.8647947E+01
+input  temp     into temp     13
+salin    =          7     180.00 13 26.800   3.3298409E+01   3.7132610E+01
+input  salin    into saln     13
+density  =          7     180.00 13 26.800   1.5200005E+00   2.6579647E+00
+input  density  into th3d     13
+finished reading data for layer 26.80000
+u-vel.   =          7     180.00 14 27.030   0.0000000E+00   0.0000000E+00
+input  u-vel.   into u        14
+v-vel.   =          7     180.00 14 27.030   0.0000000E+00   0.0000000E+00
+input  v-vel.   into v        14
+thknss   =          7     180.00 14 27.030   0.0000000E+00   3.2601478E+06
+input  thknss   into dp       14
+temp     =          7     180.00 14 27.030  -8.3663267E-01   1.8647947E+01
+input  temp     into temp     14
+salin    =          7     180.00 14 27.030   3.3484467E+01   3.7295044E+01
+input  salin    into saln     14
+density  =          7     180.00 14 27.030   1.5200005E+00   2.6929779E+00
+input  density  into th3d     14
+finished reading data for layer 27.03000
+u-vel.   =          7     180.00 15 27.220   0.0000000E+00   0.0000000E+00
+input  u-vel.   into u        15
+v-vel.   =          7     180.00 15 27.220   0.0000000E+00   0.0000000E+00
+input  v-vel.   into v        15
+thknss   =          7     180.00 15 27.220   0.0000000E+00   4.5371135E+06
+input  thknss   into dp       15
+temp     =          7     180.00 15 27.220  -8.0128932E-01   1.8647947E+01
+input  temp     into temp     15
+salin    =          7     180.00 15 27.220   3.3616600E+01   3.7295044E+01
+input  salin    into saln     15
+density  =          7     180.00 15 27.220   1.5200005E+00   2.6956882E+00
+input  density  into th3d     15
+finished reading data for layer 27.22000
+u-vel.   =          7     180.00 16 27.380   0.0000000E+00   0.0000000E+00
+input  u-vel.   into u        16
+v-vel.   =          7     180.00 16 27.380   0.0000000E+00   0.0000000E+00
+input  v-vel.   into v        16
+thknss   =          7     180.00 16 27.380   0.0000000E+00   6.5045590E+06
+input  thknss   into dp       16
+temp     =          7     180.00 16 27.380  -8.0128932E-01   1.8647947E+01
+input  temp     into temp     16
+salin    =          7     180.00 16 27.380   3.3616600E+01   3.7295044E+01
+input  salin    into saln     16
+density  =          7     180.00 16 27.380   1.5200005E+00   3.2646847E+00
+input  density  into th3d     16
+finished reading data for layer 27.38000
+u-vel.   =          7     180.00 17 27.520   0.0000000E+00   0.0000000E+00
+input  u-vel.   into u        17
+v-vel.   =          7     180.00 17 27.520   0.0000000E+00   0.0000000E+00
+input  v-vel.   into v        17
+thknss   =          7     180.00 17 27.520   0.0000000E+00   6.7246540E+06
+input  thknss   into dp       17
+temp     =          7     180.00 17 27.520  -8.0128932E-01   1.8647947E+01
+input  temp     into temp     17
+salin    =          7     180.00 17 27.520   3.3616600E+01   3.7295044E+01
+input  salin    into saln     17
+density  =          7     180.00 17 27.520   1.5200005E+00   3.2646847E+00
+input  density  into th3d     17
+finished reading data for layer 27.52000
+u-vel.   =          7     180.00 18 27.640   0.0000000E+00   0.0000000E+00
+input  u-vel.   into u        18
+v-vel.   =          7     180.00 18 27.640   0.0000000E+00   0.0000000E+00
+input  v-vel.   into v        18
+thknss   =          7     180.00 18 27.640   0.0000000E+00   7.7354605E+06
+input  thknss   into dp       18
+temp     =          7     180.00 18 27.640  -8.0128932E-01   1.8647947E+01
+input  temp     into temp     18
+salin    =          7     180.00 18 27.640   3.3616600E+01   3.7295044E+01
+input  salin    into saln     18
+density  =          7     180.00 18 27.640   1.5200005E+00   3.2646847E+00
+input  density  into th3d     18
+finished reading data for layer 27.64000
+u-vel.   =          7     180.00 19 27.740   0.0000000E+00   0.0000000E+00
+input  u-vel.   into u        19
+v-vel.   =          7     180.00 19 27.740   0.0000000E+00   0.0000000E+00
+input  v-vel.   into v        19
+thknss   =          7     180.00 19 27.740   0.0000000E+00   1.4055839E+07
+input  thknss   into dp       19
+temp     =          7     180.00 19 27.740  -8.0128932E-01   1.8647947E+01
+input  temp     into temp     19
+salin    =          7     180.00 19 27.740   3.3616600E+01   3.7295044E+01
+input  salin    into saln     19
+density  =          7     180.00 19 27.740   1.5200005E+00   3.2646847E+00
+input  density  into th3d     19
+finished reading data for layer 27.74000
+u-vel.   =          7     180.00 20 27.820   0.0000000E+00   0.0000000E+00
+input  u-vel.   into u        20
+v-vel.   =          7     180.00 20 27.820   0.0000000E+00   0.0000000E+00
+input  v-vel.   into v        20
+thknss   =          7     180.00 20 27.820   0.0000000E+00   1.8026304E+07
+input  thknss   into dp       20
+temp     =          7     180.00 20 27.820  -8.0128932E-01   1.8647947E+01
+input  temp     into temp     20
+salin    =          7     180.00 20 27.820   3.3616600E+01   3.7295044E+01
+input  salin    into saln     20
+density  =          7     180.00 20 27.820   1.5200005E+00   3.2646847E+00
+input  density  into th3d     20
+finished reading data for layer 27.82000
+u-vel.   =          7     180.00 21 27.880   0.0000000E+00   0.0000000E+00
+input  u-vel.   into u        21
+v-vel.   =          7     180.00 21 27.880   0.0000000E+00   0.0000000E+00
+input  v-vel.   into v        21
+thknss   =          7     180.00 21 27.880   0.0000000E+00   3.2398498E+07
+input  thknss   into dp       21
+temp     =          7     180.00 21 27.880  -8.0128932E-01   1.8647947E+01
+input  temp     into temp     21
+salin    =          7     180.00 21 27.880   3.3616600E+01   3.7295044E+01
+input  salin    into saln     21
+density  =          7     180.00 21 27.880   1.5200005E+00   3.2646847E+00
+input  density  into th3d     21
+finished reading data for layer 27.88000
+u-vel.   =          7     180.00 22 27.940   0.0000000E+00   0.0000000E+00
+input  u-vel.   into u        22
+v-vel.   =          7     180.00 22 27.940   0.0000000E+00   0.0000000E+00
+input  v-vel.   into v        22
+thknss   =          7     180.00 22 27.940   0.0000000E+00   1.0368614E+07
+input  thknss   into dp       22
+temp     =          7     180.00 22 27.940  -8.0128932E-01   1.8647947E+01
+input  temp     into temp     22
+salin    =          7     180.00 22 27.940   3.3616600E+01   3.7295044E+01
+input  salin    into saln     22
+density  =          7     180.00 22 27.940   1.5200005E+00   3.2646847E+00
+input  density  into th3d     22
+finished reading data for layer 27.94000
+North Atlantic topography from ETOPO5 5-minute data set.                       
+56 x 51 depth values (idm,jdm = 57,52).                                        
+2.0000 deg. mercator resolution, with equat=11.000.                            
+lon: 97.000W to 13.000E.  lat: 19.606S to 62.195N.                             
+                                                                               
+min,max depth =    199.556  5837.000
+read North At into depths  
+mask North At into coast   
+plon:  min,max =       263.00000      375.00000
+plat:  min,max =       -19.60579       63.11375
+qlon:  min,max =       262.00000      374.00000
+qlat:  min,max =       -20.54502       62.65800
+ulon:  min,max =       262.00000      374.00000
+ulat:  min,max =       -19.60579       63.11375
+vlon:  min,max =       263.00000      375.00000
+vlat:  min,max =       -20.54502       62.65800
+
+sub-domain assumed to be non-periodic
+
+bigrid called with ii,jj,ii1,jj1 =    57    52    56    51
+indxi called with ii,jj,ii1,jj1 =    57    52    56    51
+indxj called with ii,jj,ii1,jj1 =    57    52    56    51
+indxi called with ii,jj,ii1,jj1 =    57    52    56    51
+indxj called with ii,jj,ii1,jj1 =    57    52    56    51
+indxi called with ii,jj,ii1,jj1 =    57    52    56    51
+indxj called with ii,jj,ii1,jj1 =    57    52    56    51
+indxi called with ii,jj,ii1,jj1 =    57    52    56    51
+indxj called with ii,jj,ii1,jj1 =    57    52    56    51
+      0 island points submerged
+ calling portrait PostScript version of opngks
+ filename: 010_jul_hor.ps
+     defining earth color table: entries    1 --    3
+    defining pastel color table: entries    5 --    6
+
+
+ field to be contoured is constant ...  0.00000E+00
+ srfht =  0.0E+0 0.0E+0 0.0E+0
+ now plotting:  year   0.50 (jul 16) [01.0H]
+blkinr: botqq  =    -1.0000 m
+blkinr: flxqq  =    -1.0000 cm
+blkinr: empqq  =    -1.0000 mm/day
+blkinr: ttrqq  =    -1.0000 deg/day
+blkinr: strqq  =    -1.0000 psu/day
+blkinr: icvqq  =    -1.0000 
+blkinr: ithqq  =    -1.0000 m
+blkinr: ictqq  =    -1.0000 deg
+blkinr: sshqq  =    -1.0000 cm
+blkinr: bsfqq  =    -1.0000 sv
+blkinr: mthrsh =     0.0000 cm
+blkinr: bltqq  =    -1.0000 m
+blkinr: mltqq  =    25.0000 m
+min  1.92E+01 at   2  22  max  1.06E+02 at  43   3  intvl.,lines  5.00E+00  17
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   5.000   5.000   5.000
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000   0.000  25.000
+ horiz. map: mix.layr.thickness  year   0.50 (jul 16) [01.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+bordplt - qlatlo,qlathi,qlatlon =     -30.00     70.00     10.00
+bordplt - qlonlo,qlonhi,qlatlon =     250.00    390.00     10.00
+ frame advance no.   1
+blkinr: sstqq  =    -1.0000 deg
+blkinr: sssqq  =    -1.0000 psu
+blkinr: ssdqq  =    -1.0000 sig
+blkini: kf     =    -1
+blkini: kl     =     7
+blkinr: vthrsh =     0.0000 cm
+blkinr: infqq  =    -1.0000 m
+blkinr: thkqq  =    -1.0000 m
+blkinr: temqq  =     1.0000 deg
+min  2.87E+00 at  18  49  max  2.94E+01 at   8  23  intvl.,lines  2.00E+00  13
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000   0.000   1.000
+ horiz. map: layer=01   temp     year   0.50 (jul 16) [01.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+ frame advance no.   2
+blkinr: salqq  =     0.2000 psu
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000   0.000   0.200
+ horiz. map: layer=01  salinity  year   0.50 (jul 16) [01.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+min  1.89E+01 at  25  12  max  3.75E+01 at  29  24  intvl.,lines  1.00E+00  18
+ frame advance no.   3
+blkinr: tthqq  =     0.2000 sig
+min  1.02E+01 at  25  12  max  2.71E+01 at  34  50  intvl.,lines  1.00E+00  16
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000   0.000   0.200
+ horiz. map: layer=01  density   year   0.50 (jul 16) [01.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+ frame advance no.   4
+blkinr: sfnqq  =    -1.0000 sv
+min  2.64E+00 at  18  49  max  2.93E+01 at   8  23  intvl.,lines  2.00E+00  13
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000   0.000   1.000
+ horiz. map: layer=02   temp     year   0.50 (jul 16) [01.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+ frame advance no.   5
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000   0.000   0.200
+ horiz. map: layer=02  salinity  year   0.50 (jul 16) [01.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+min  2.96E+01 at  21  43  max  3.75E+01 at  29  24  intvl.,lines  5.00E-01  15
+ frame advance no.   6
+min  2.02E+01 at  24  13  max  2.71E+01 at  33  50  intvl.,lines  5.00E-01  13
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000   0.000   0.200
+ horiz. map: layer=02  density   year   0.50 (jul 16) [01.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+ frame advance no.   7
+min  2.32E+00 at  18  49  max  2.92E+01 at   8  23  intvl.,lines  2.00E+00  13
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000   0.000   1.000
+ horiz. map: layer=03   temp     year   0.50 (jul 16) [01.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+ frame advance no.   8
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000   0.000   0.200
+ horiz. map: layer=03  salinity  year   0.50 (jul 16) [01.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+min  2.99E+01 at  19  37  max  3.75E+01 at  29  24  intvl.,lines  5.00E-01  15
+ frame advance no.   9
+min  2.10E+01 at  24  13  max  2.71E+01 at  24  47  intvl.,lines  5.00E-01  12
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000   0.000   0.200
+ horiz. map: layer=03  density   year   0.50 (jul 16) [01.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+ frame advance no.  10
+min  2.32E+00 at  18  49  max  2.92E+01 at   8  23  intvl.,lines  2.00E+00  13
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000   0.000   1.000
+ horiz. map: layer=04   temp     year   0.50 (jul 16) [01.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+ frame advance no.  11
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000   0.000   0.200
+ horiz. map: layer=04  salinity  year   0.50 (jul 16) [01.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+min  2.99E+01 at  19  37  max  3.75E+01 at  29  24  intvl.,lines  5.00E-01  15
+ frame advance no.  12
+min  2.17E+01 at  23  15  max  2.71E+01 at  24  47  intvl.,lines  5.00E-01  10
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000   0.000   0.200
+ horiz. map: layer=04  density   year   0.50 (jul 16) [01.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+ frame advance no.  13
+min  1.70E+00 at  18  51  max  2.91E+01 at   8  22  intvl.,lines  2.00E+00  13
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000   0.000   1.000
+ horiz. map: layer=05   temp     year   0.50 (jul 16) [01.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+ frame advance no.  14
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000   0.000   0.200
+ horiz. map: layer=05  salinity  year   0.50 (jul 16) [01.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+min  3.04E+01 at  19  37  max  3.75E+01 at  29  23  intvl.,lines  5.00E-01  14
+ frame advance no.  15
+min  2.25E+01 at   2  25  max  2.72E+01 at  24  47  intvl.,lines  5.00E-01   9
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000   0.000   0.200
+ horiz. map: layer=05  density   year   0.50 (jul 16) [01.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+ frame advance no.  16
+min  1.61E+00 at  18  51  max  2.89E+01 at   1  24  intvl.,lines  2.00E+00  13
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000   0.000   1.000
+ horiz. map: layer=06   temp     year   0.50 (jul 16) [01.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+ frame advance no.  17
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000   0.000   0.200
+ horiz. map: layer=06  salinity  year   0.50 (jul 16) [01.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+min  3.05E+01 at  19  37  max  3.75E+01 at  29  23  intvl.,lines  5.00E-01  14
+ frame advance no.  18
+min  2.28E+01 at  43  14  max  2.72E+01 at  24  47  intvl.,lines  5.00E-01   8
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000   0.000   0.200
+ horiz. map: layer=06  density   year   0.50 (jul 16) [01.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+ frame advance no.  19
+min  4.96E-01 at  22  42  max  2.75E+01 at   1  23  intvl.,lines  2.00E+00  13
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000   0.000   1.000
+ horiz. map: layer=07   temp     year   0.50 (jul 16) [01.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+ frame advance no.  20
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000   0.000   0.200
+ horiz. map: layer=07  salinity  year   0.50 (jul 16) [01.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+min  3.09E+01 at  19  37  max  3.75E+01 at  29  23  intvl.,lines  5.00E-01  13
+ frame advance no.  21
+min  2.36E+01 at   3  25  max  2.73E+01 at  24  47  intvl.,lines  2.00E-01  18
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000   0.000   0.200
+ horiz. map: layer=07  density   year   0.50 (jul 16) [01.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+ frame advance no.  22
+blkini: kf     =     8
+blkini: kl     =    22
+blkinr: vthrsh =     0.0000 cm
+blkinr: infqq  =    -1.0000 m
+blkinr: thkqq  =    -1.0000 m
+blkinr: temqq  =     1.0000 deg
+min  4.00E-01 at  22  42  max  2.61E+01 at  32   6  intvl.,lines  2.00E+00  12
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000   0.000   1.000
+ horiz. map: sig=24.70  temp     year   0.50 (jul 16) [01.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+ frame advance no.  23
+blkinr: salqq  =     0.1000 psu
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000   0.000   0.100
+ horiz. map: sig=24.70 salinity  year   0.50 (jul 16) [01.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+min  3.10E+01 at  19  37  max  3.75E+01 at  29  23  intvl.,lines  5.00E-01  13
+ frame advance no.  24
+blkinr: tthqq  =     0.1000 sig
+min  2.43E+01 at  40  18  max  2.73E+01 at  24  47  intvl.,lines  2.00E-01  14
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000   0.000   0.100
+ horiz. map: sig=24.70 density   year   0.50 (jul 16) [01.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+ frame advance no.  25
+blkinr: sfnqq  =    -1.0000 sv
+min -7.59E-01 at  23  38  max  2.48E+01 at  28  22  intvl.,lines  2.00E+00  12
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000   0.000   1.000
+ horiz. map: sig=25.28  temp     year   0.50 (jul 16) [01.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+ frame advance no.  26
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000   0.000   0.100
+ horiz. map: sig=25.28 salinity  year   0.50 (jul 16) [01.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+min  3.16E+01 at  19  37  max  3.75E+01 at  28  22  intvl.,lines  5.00E-01  11
+ frame advance no.  27
+min  2.49E+01 at  34  17  max  2.75E+01 at  23  47  intvl.,lines  2.00E-01  12
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000   0.000   0.100
+ horiz. map: sig=25.28 density   year   0.50 (jul 16) [01.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+ frame advance no.  28
+min -1.66E+00 at  23  38  max  2.32E+01 at  30  22  intvl.,lines  2.00E+00  12
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000   0.000   1.000
+ horiz. map: sig=25.77  temp     year   0.50 (jul 16) [01.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+ frame advance no.  29
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000   0.000   0.100
+ horiz. map: sig=25.77 salinity  year   0.50 (jul 16) [01.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+min  3.21E+01 at  22  38  max  3.75E+01 at  30  22  intvl.,lines  5.00E-01  10
+ frame advance no.  30
+min  2.55E+01 at  48  12  max  2.76E+01 at  23  47  intvl.,lines  1.00E-01  20
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000   0.000   0.100
+ horiz. map: sig=25.77 density   year   0.50 (jul 16) [01.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+ frame advance no.  31
+min -1.92E+00 at  23  38  max  2.07E+01 at  33  23  intvl.,lines  2.00E+00  11
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000   0.000   1.000
+ horiz. map: sig=26.18  temp     year   0.50 (jul 16) [01.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+ frame advance no.  32
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000   0.000   0.100
+ horiz. map: sig=26.18 salinity  year   0.50 (jul 16) [01.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+min  3.25E+01 at  23  38  max  3.71E+01 at  33  23  intvl.,lines  5.00E-01   9
+ frame advance no.  33
+min  2.60E+01 at  33  16  max  2.76E+01 at  23  47  intvl.,lines  1.00E-01  15
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000   0.000   0.100
+ horiz. map: sig=26.18 density   year   0.50 (jul 16) [01.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+ frame advance no.  34
+min -1.67E+00 at  24  38  max  1.87E+01 at  42  23  intvl.,lines  1.00E+00  20
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000   0.000   1.000
+ horiz. map: sig=26.52  temp     year   0.50 (jul 16) [01.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+ frame advance no.  35
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000   0.000   0.100
+ horiz. map: sig=26.52 salinity  year   0.50 (jul 16) [01.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+min  3.29E+01 at  24  38  max  3.68E+01 at  42  23  intvl.,lines  2.00E-01  19
+ frame advance no.  36
+min  2.65E+01 at  12  31  max  2.77E+01 at  23  47  intvl.,lines  1.00E-01  11
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000   0.000   0.100
+ horiz. map: sig=26.52 density   year   0.50 (jul 16) [01.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+ frame advance no.  37
+min -1.56E+00 at  23  39  max  1.84E+01 at  42  23  intvl.,lines  1.00E+00  19
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000   0.000   1.000
+ horiz. map: sig=26.80  temp     year   0.50 (jul 16) [01.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+ frame advance no.  38
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000   0.000   0.100
+ horiz. map: sig=26.80 salinity  year   0.50 (jul 16) [01.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+min  3.33E+01 at  23  39  max  3.71E+01 at  42  23  intvl.,lines  2.00E-01  19
+ frame advance no.  39
+min  2.68E+01 at   1  24  max  2.77E+01 at  23  47  intvl.,lines  5.00E-02  17
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000   0.000   0.100
+ horiz. map: sig=26.80 density   year   0.50 (jul 16) [01.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+ frame advance no.  40
+min -8.37E-01 at  23  39  max  1.80E+01 at  42  23  intvl.,lines  1.00E+00  18
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000   0.000   1.000
+ horiz. map: sig=27.03  temp     year   0.50 (jul 16) [01.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+ frame advance no.  41
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000   0.000   0.100
+ horiz. map: sig=27.03 salinity  year   0.50 (jul 16) [01.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+min  3.35E+01 at  23  39  max  3.73E+01 at  42  23  intvl.,lines  2.00E-01  19
+ frame advance no.  42
+min  2.69E+01 at  30   3  max  2.77E+01 at  23  47  intvl.,lines  5.00E-02  16
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000   0.000   0.100
+ horiz. map: sig=27.03 density   year   0.50 (jul 16) [01.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+ frame advance no.  43
+min -2.48E-01 at  24  39  max  1.32E+01 at  42  24  intvl.,lines  1.00E+00  13
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000   0.000   1.000
+ horiz. map: sig=27.22  temp     year   0.50 (jul 16) [01.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+ frame advance no.  44
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000   0.000   0.100
+ horiz. map: sig=27.22 salinity  year   0.50 (jul 16) [01.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+min  3.39E+01 at  24  39  max  3.61E+01 at  42  24  intvl.,lines  2.00E-01  11
+ frame advance no.  45
+min  2.72E+01 at  46  45  max  2.77E+01 at  23  47  intvl.,lines  5.00E-02  10
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000   0.000   0.100
+ horiz. map: sig=27.22 density   year   0.50 (jul 16) [01.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+ frame advance no.  46
+min  8.17E-01 at  25  38  max  1.17E+01 at  46  35  intvl.,lines  5.00E-01  21
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000   0.000   1.000
+ horiz. map: sig=27.38  temp     year   0.50 (jul 16) [01.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+ frame advance no.  47
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000   0.000   0.100
+ horiz. map: sig=27.38 salinity  year   0.50 (jul 16) [01.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+min  3.42E+01 at  25  38  max  3.60E+01 at  50  13  intvl.,lines  1.00E-01  18
+ frame advance no.  48
+min  2.73E+01 at  45  42  max  2.83E+01 at  50  13  intvl.,lines  5.00E-02  19
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000   0.000   0.100
+ horiz. map: sig=27.38 density   year   0.50 (jul 16) [01.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+ frame advance no.  49
+min  1.35E+00 at  25  37  max  1.18E+01 at  46  35  intvl.,lines  5.00E-01  20
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000   0.000   1.000
+ horiz. map: sig=27.52  temp     year   0.50 (jul 16) [01.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+ frame advance no.  50
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000   0.000   0.100
+ horiz. map: sig=27.52 salinity  year   0.50 (jul 16) [01.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+min  3.44E+01 at  25  37  max  3.64E+01 at  46  35  intvl.,lines  1.00E-01  19
+ frame advance no.  51
+min  2.74E+01 at  47  47  max  2.83E+01 at  50  13  intvl.,lines  5.00E-02  16
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000   0.000   0.100
+ horiz. map: sig=27.52 density   year   0.50 (jul 16) [01.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+ frame advance no.  52
+min  2.13E+00 at  25  38  max  1.18E+01 at  46  35  intvl.,lines  5.00E-01  19
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000   0.000   1.000
+ horiz. map: sig=27.64  temp     year   0.50 (jul 16) [01.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+ frame advance no.  53
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000   0.000   0.100
+ horiz. map: sig=27.64 salinity  year   0.50 (jul 16) [01.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+min  3.46E+01 at  25  38  max  3.65E+01 at  45  33  intvl.,lines  1.00E-01  19
+ frame advance no.  54
+min  2.75E+01 at  49  48  max  2.83E+01 at  50  13  intvl.,lines  5.00E-02  14
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000   0.000   0.100
+ horiz. map: sig=27.64 density   year   0.50 (jul 16) [01.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+ frame advance no.  55
+min  3.15E+00 at  26  37  max  1.16E+01 at  45  33  intvl.,lines  5.00E-01  16
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000   0.000   1.000
+ horiz. map: sig=27.74  temp     year   0.50 (jul 16) [01.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+ frame advance no.  56
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000   0.000   0.100
+ horiz. map: sig=27.74 salinity  year   0.50 (jul 16) [01.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+min  3.48E+01 at  26  37  max  3.65E+01 at  45  33  intvl.,lines  1.00E-01  16
+ frame advance no.  57
+min  2.77E+01 at   2  22  max  2.83E+01 at  50  13  intvl.,lines  5.00E-02  10
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000   0.000   0.100
+ horiz. map: sig=27.74 density   year   0.50 (jul 16) [01.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+ frame advance no.  58
+min  2.34E+00 at  51  51  max  1.16E+01 at  45  33  intvl.,lines  5.00E-01  18
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000   0.000   1.000
+ horiz. map: sig=27.82  temp     year   0.50 (jul 16) [01.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+ frame advance no.  59
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000   0.000   0.100
+ horiz. map: sig=27.82 salinity  year   0.50 (jul 16) [01.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+min  3.48E+01 at  51  51  max  3.66E+01 at  45  32  intvl.,lines  1.00E-01  17
+ frame advance no.  60
+min  2.78E+01 at  47  50  max  2.83E+01 at  50  13  intvl.,lines  5.00E-02  10
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000   0.000   0.100
+ horiz. map: sig=27.82 density   year   0.50 (jul 16) [01.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+ frame advance no.  61
+min  1.43E+00 at  51  51  max  1.16E+01 at  45  33  intvl.,lines  5.00E-01  20
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000   0.000   1.000
+ horiz. map: sig=27.88  temp     year   0.50 (jul 16) [01.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+ frame advance no.  62
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000   0.000   0.100
+ horiz. map: sig=27.88 salinity  year   0.50 (jul 16) [01.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+min  3.48E+01 at  51  51  max  3.66E+01 at  45  32  intvl.,lines  1.00E-01  18
+ frame advance no.  63
+min  2.79E+01 at  49  14  max  2.83E+01 at  50  13  intvl.,lines  2.00E-02  19
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000   0.000   0.100
+ horiz. map: sig=27.88 density   year   0.50 (jul 16) [01.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+ frame advance no.  64
+min -6.29E-01 at  48  51  max  1.16E+01 at  45  33  intvl.,lines  1.00E+00  12
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000   0.000   1.000
+ horiz. map: sig=27.94  temp     year   0.50 (jul 16) [01.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+ frame advance no.  65
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000   0.000   0.100
+ horiz. map: sig=27.94 salinity  year   0.50 (jul 16) [01.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+min  3.48E+01 at  48  51  max  3.66E+01 at  45  33  intvl.,lines  1.00E-01  18
+ frame advance no.  66
+min  2.79E+01 at  12  24  max  2.83E+01 at  50  13  intvl.,lines  2.00E-02  16
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000   0.000   0.100
+ horiz. map: sig=27.94 density   year   0.50 (jul 16) [01.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+ frame advance no.  67
+blkini: kf     =     0
+blkinr: depth  =  5500.0000 m
+blkinr: vstep  =     1.0000 
+blkinr: velqq  =    -1.0000 cm/s
+blkinr: center =     0.0000 cm/s
+blkinr: temqq  =     0.5000 deg
+blkinr: center =    14.0000 deg
+blkinr: salqq  =     0.1000 psu
+blkinr: center =    35.0000 psu
+blkinr: tthqq  =    -1.0000 sig
+blkinr: center =    26.0000 sig
+blkini: mxlflg =     1
+blkini: kpalet =     2
+       defining sst color table: entries    9 --   72
+blkini: noisec =     0
+blkini: nojsec =     0
+STOP: (normal)

@@ -1,0 +1,444 @@
+env NCARG_GKS_PS=010_jan_hor.ps ./src/hycomproc
+
+xcspmd: idm,jdm =   57   52
+
+input file: ../010/relax.0000_016_00.a
+    region: ATLb2.00
+blkini: iexpt  =     0
+blkini: yrflag =     0
+blkini: idm    =    57
+blkini: jdm    =    52
+blkini: kdm    =    22
+blkinr: thbase =    25.0000 sig
+blkini: nperfr =     1
+blkini: lalolb =    20
+blkini: lalogr =    10
+blkini: loclab =     4
+blkini: locbar =    11
+blkini: kpalet =     1
+blkinl: smooth =     F
+blkinl: mthin  =     T
+blkini: i_th   =     2
+blkini: iorign =     1
+blkini: jorign =     1
+blkini: idmp   =     0
+blkini: jdmp   =     0
+extracting i =    1 ...   57         j =    1 ...   52
+ chrsiz =  0.547826 104.04764 94.920654
+... plotting  1 maps per frame
+Dummy HYCOM archive from climatology for month 01.                              
+ Levitus (NOAA World Ocean Atlas 1994) Climatology                              
+ Expt 01.0  nhybrd=22 nsigma= 0 dp00s= 3.00 dp00= 3.00 dp00x=12.00 dp00f=1.125  
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+ iversn =  21
+ iexpt  =  10
+ yrflag =  0
+ idm    =  57
+ jdm    =  52
+field       time step  model day  k  dens        min              max
+artype = 1
+montg1   =          1       0.00  0  0.000   0.0000000E+00   0.0000000E+00
+input  montg1   into montg   
+srfhgt   =          1       0.00  0  0.000   0.0000000E+00   0.0000000E+00
+input  srfhgt   into srfht   
+surflx   =          1       0.00  0  0.000   0.0000000E+00   0.0000000E+00
+input  surflx   into surflx  
+ time3 =  0.0E+0 0.0E+0 0.0E+0
+salflx   =          1       0.00  0  0.000   0.0000000E+00   0.0000000E+00
+input  salflx   into salflx  
+bl_dpth  =          1       0.00  0  0.000   1.8827520E+05   3.9224000E+06
+input  bl_dpth  into dpbl    
+mix_dpth =          1       0.00  0  0.000   1.8827520E+05   3.9224000E+06
+input  mix_dpth into dpmixl  
+tmix     =          1       0.00  0  0.000  -1.5565165E+00   2.8325489E+01
+input  tmix     into tmix    
+smix     =          1       0.00  0  0.000   2.3815800E+01   3.7464058E+01
+input  smix     into smix    
+thmix    =          1       0.00  0  0.000  -1.0773405E+01   2.8232858E+00
+input  thmix    into thmix   
+umix     =          1       0.00  0  0.000   0.0000000E+00   0.0000000E+00
+input  umix     into umix    
+vmix     =          1       0.00  0  0.000   0.0000000E+00   0.0000000E+00
+input  vmix     into vmix    
+u_btrop  =          1       0.00  0  0.000   0.0000000E+00   0.0000000E+00
+input  u_btrop  into ubaro   
+v_btrop  =          1       0.00  0  0.000   0.0000000E+00   0.0000000E+00
+input  v_btrop  into vbaro   
+u-vel.   =          1       0.00  1 19.500   0.0000000E+00   0.0000000E+00
+input  u-vel.   into u         1
+v-vel.   =          1       0.00  1 19.500   0.0000000E+00   0.0000000E+00
+input  v-vel.   into v         1
+thknss   =          1       0.00  1 19.500   2.9418000E+04   1.3640083E+05
+input  thknss   into dp        1
+temp     =          1       0.00  1 19.500  -1.3065165E+00   2.8575491E+01
+input  temp     into temp      1
+salin    =          1       0.00  1 19.500   2.3808268E+01   3.7464054E+01
+input  salin    into saln      1
+density  =          1       0.00  1 19.500  -1.0850566E+01   2.8008556E+00
+input  density  into th3d      1
+finished reading data for layer 19.50000
+u-vel.   =          1       0.00  2 20.250   0.0000000E+00   0.0000000E+00
+input  u-vel.   into u         2
+v-vel.   =          1       0.00  2 20.250   0.0000000E+00   0.0000000E+00
+input  v-vel.   into v         2
+thknss   =          1       0.00  2 20.250   3.3095250E+04   1.4132259E+05
+input  thknss   into dp        2
+temp     =          1       0.00  2 20.250  -1.2702538E+00   2.8504255E+01
+input  temp     into temp      2
+salin    =          1       0.00  2 20.250   3.0412745E+01   3.7465092E+01
+input  salin    into saln      2
+density  =          1       0.00  2 20.250  -4.7500000E+00   2.8008556E+00
+input  density  into th3d      2
+finished reading data for layer 20.25000
+u-vel.   =          1       0.00  3 21.000   0.0000000E+00   0.0000000E+00
+input  u-vel.   into u         3
+v-vel.   =          1       0.00  3 21.000   0.0000000E+00   0.0000000E+00
+input  v-vel.   into v         3
+thknss   =          1       0.00  3 21.000   3.7232156E+04   1.0540343E+05
+input  thknss   into dp        3
+temp     =          1       0.00  3 21.000  -1.2175080E+00   2.8400642E+01
+input  temp     into temp      3
+salin    =          1       0.00  3 21.000   3.0682959E+01   3.7466606E+01
+input  salin    into saln      3
+density  =          1       0.00  3 21.000  -4.0000000E+00   2.8008556E+00
+input  density  into th3d      3
+finished reading data for layer 21.00000
+u-vel.   =          1       0.00  4 21.750   0.0000000E+00   0.0000000E+00
+input  u-vel.   into u         4
+v-vel.   =          1       0.00  4 21.750   0.0000000E+00   0.0000000E+00
+input  v-vel.   into v         4
+thknss   =          1       0.00  4 21.750   4.1886176E+04   1.0738645E+05
+input  thknss   into dp        4
+temp     =          1       0.00  4 21.750  -1.2175080E+00   2.8245684E+01
+input  temp     into temp      4
+salin    =          1       0.00  4 21.750   3.0682961E+01   3.7466606E+01
+input  salin    into saln      4
+density  =          1       0.00  4 21.750  -3.2500000E+00   2.8008556E+00
+input  density  into th3d      4
+finished reading data for layer 21.75000
+u-vel.   =          1       0.00  5 22.500   0.0000000E+00   0.0000000E+00
+input  u-vel.   into u         5
+v-vel.   =          1       0.00  5 22.500   0.0000000E+00   0.0000000E+00
+input  v-vel.   into v         5
+thknss   =          1       0.00  5 22.500   4.7121949E+04   1.9838162E+05
+input  thknss   into dp        5
+temp     =          1       0.00  5 22.500  -1.3508630E+00   2.8064482E+01
+input  temp     into temp      5
+salin    =          1       0.00  5 22.500   3.0725220E+01   3.7464390E+01
+input  salin    into saln      5
+density  =          1       0.00  5 22.500  -2.5000000E+00   2.8008556E+00
+input  density  into th3d      5
+finished reading data for layer 22.50000
+u-vel.   =          1       0.00  6 23.250   0.0000000E+00   0.0000000E+00
+input  u-vel.   into u         6
+v-vel.   =          1       0.00  6 23.250   0.0000000E+00   0.0000000E+00
+input  v-vel.   into v         6
+thknss   =          1       0.00  6 23.250   5.3012191E+04   6.2521744E+05
+input  thknss   into dp        6
+temp     =          1       0.00  6 23.250  -1.3683341E+00   2.8049194E+01
+input  temp     into temp      6
+salin    =          1       0.00  6 23.250   3.0730766E+01   3.7464096E+01
+input  salin    into saln      6
+density  =          1       0.00  6 23.250  -2.2017937E+00   2.8008556E+00
+input  density  into th3d      6
+finished reading data for layer 23.25000
+u-vel.   =          1       0.00  7 24.000   0.0000000E+00   0.0000000E+00
+input  u-vel.   into u         7
+v-vel.   =          1       0.00  7 24.000   0.0000000E+00   0.0000000E+00
+input  v-vel.   into v         7
+thknss   =          1       0.00  7 24.000   5.9638715E+04   9.8366700E+05
+input  thknss   into dp        7
+temp     =          1       0.00  7 24.000  -1.5255549E+00   2.7653908E+01
+input  temp     into temp      7
+salin    =          1       0.00  7 24.000   3.0824089E+01   3.7463955E+01
+input  salin    into saln      7
+density  =          1       0.00  7 24.000  -1.3628654E+00   2.8008556E+00
+input  density  into th3d      7
+finished reading data for layer 24.00000
+u-vel.   =          1       0.00  8 24.700   0.0000000E+00   0.0000000E+00
+input  u-vel.   into u         8
+v-vel.   =          1       0.00  8 24.700   0.0000000E+00   0.0000000E+00
+input  v-vel.   into v         8
+thknss   =          1       0.00  8 24.700   6.7093539E+04   1.2267591E+06
+input  thknss   into dp        8
+temp     =          1       0.00  8 24.700  -1.5350133E+00   2.6238348E+01
+input  temp     into temp      8
+salin    =          1       0.00  8 24.700   3.0829725E+01   3.7463947E+01
+input  salin    into saln      8
+density  =          1       0.00  8 24.700  -7.6610184E-01   2.8008556E+00
+input  density  into th3d      8
+finished reading data for layer 24.70000
+u-vel.   =          1       0.00  9 25.280   0.0000000E+00   0.0000000E+00
+input  u-vel.   into u         9
+v-vel.   =          1       0.00  9 25.280   0.0000000E+00   0.0000000E+00
+input  v-vel.   into v         9
+thknss   =          1       0.00  9 25.280   7.5480211E+04   1.3475520E+06
+input  thknss   into dp        9
+temp     =          1       0.00  9 25.280  -1.6791806E+00   2.4550365E+01
+input  temp     into temp      9
+salin    =          1       0.00  9 25.280   3.1529802E+01   3.7464184E+01
+input  salin    into saln      9
+density  =          1       0.00  9 25.280  -8.4941864E-02   2.8008595E+00
+input  density  into th3d      9
+finished reading data for layer 25.28000
+u-vel.   =          1       0.00 10 25.770   0.0000000E+00   0.0000000E+00
+input  u-vel.   into u        10
+v-vel.   =          1       0.00 10 25.770   0.0000000E+00   0.0000000E+00
+input  v-vel.   into v        10
+thknss   =          1       0.00 10 25.770   8.4915211E+04   1.3616328E+06
+input  thknss   into dp       10
+temp     =          1       0.00 10 25.770  -1.7453371E+00   2.3229923E+01
+input  temp     into temp     10
+salin    =          1       0.00 10 25.770   3.2052444E+01   3.7509102E+01
+input  salin    into saln     10
+density  =          1       0.00 10 25.770   4.2958069E-01   2.8008614E+00
+input  density  into th3d     10
+finished reading data for layer 25.77000
+u-vel.   =          1       0.00 11 26.180   0.0000000E+00   0.0000000E+00
+input  u-vel.   into u        11
+v-vel.   =          1       0.00 11 26.180   0.0000000E+00   0.0000000E+00
+input  v-vel.   into v        11
+thknss   =          1       0.00 11 26.180   9.5529648E+04   2.8420188E+06
+input  thknss   into dp       11
+temp     =          1       0.00 11 26.180  -1.7585579E+00   2.1195923E+01
+input  temp     into temp     11
+salin    =          1       0.00 11 26.180   3.2527870E+01   3.7283886E+01
+input  salin    into saln     11
+density  =          1       0.00 11 26.180   1.0741673E+00   2.8008747E+00
+input  density  into th3d     11
+finished reading data for layer 26.18000
+u-vel.   =          1       0.00 12 26.520   0.0000000E+00   0.0000000E+00
+input  u-vel.   into u        12
+v-vel.   =          1       0.00 12 26.520   0.0000000E+00   0.0000000E+00
+input  v-vel.   into v        12
+thknss   =          1       0.00 12 26.520   0.0000000E+00   4.9984695E+06
+input  thknss   into dp       12
+temp     =          1       0.00 12 26.520  -1.4916008E+00   1.9421377E+01
+input  temp     into temp     12
+salin    =          1       0.00 12 26.520   3.2956120E+01   3.6728134E+01
+input  salin    into saln     12
+density  =          1       0.00 12 26.520   1.1800003E+00   2.8009682E+00
+input  density  into th3d     12
+finished reading data for layer 26.52000
+u-vel.   =          1       0.00 13 26.800   0.0000000E+00   0.0000000E+00
+input  u-vel.   into u        13
+v-vel.   =          1       0.00 13 26.800   0.0000000E+00   0.0000000E+00
+input  v-vel.   into v        13
+thknss   =          1       0.00 13 26.800   0.0000000E+00   3.5038890E+06
+input  thknss   into dp       13
+temp     =          1       0.00 13 26.800  -1.2591083E+00   1.9421377E+01
+input  temp     into temp     13
+salin    =          1       0.00 13 26.800   3.3310837E+01   3.7043221E+01
+input  salin    into saln     13
+density  =          1       0.00 13 26.800   1.1800003E+00   2.8009701E+00
+input  density  into th3d     13
+finished reading data for layer 26.80000
+u-vel.   =          1       0.00 14 27.030   0.0000000E+00   0.0000000E+00
+input  u-vel.   into u        14
+v-vel.   =          1       0.00 14 27.030   0.0000000E+00   0.0000000E+00
+input  v-vel.   into v        14
+thknss   =          1       0.00 14 27.030   0.0000000E+00   4.3281820E+06
+input  thknss   into dp       14
+temp     =          1       0.00 14 27.030  -2.8819230E-01   1.9421377E+01
+input  temp     into temp     14
+salin    =          1       0.00 14 27.030   3.3529041E+01   3.7168385E+01
+input  salin    into saln     14
+density  =          1       0.00 14 27.030   1.1800003E+00   2.8011112E+00
+input  density  into th3d     14
+finished reading data for layer 27.03000
+u-vel.   =          1       0.00 15 27.220   0.0000000E+00   0.0000000E+00
+input  u-vel.   into u        15
+v-vel.   =          1       0.00 15 27.220   0.0000000E+00   0.0000000E+00
+input  v-vel.   into v        15
+thknss   =          1       0.00 15 27.220   0.0000000E+00   5.9986040E+06
+input  thknss   into dp       15
+temp     =          1       0.00 15 27.220  -3.2242790E-01   1.9421377E+01
+input  temp     into temp     15
+salin    =          1       0.00 15 27.220   3.3529041E+01   3.7168385E+01
+input  salin    into saln     15
+density  =          1       0.00 15 27.220   1.1800003E+00   2.8011227E+00
+input  density  into th3d     15
+finished reading data for layer 27.22000
+u-vel.   =          1       0.00 16 27.380   0.0000000E+00   0.0000000E+00
+input  u-vel.   into u        16
+v-vel.   =          1       0.00 16 27.380   0.0000000E+00   0.0000000E+00
+input  v-vel.   into v        16
+thknss   =          1       0.00 16 27.380   0.0000000E+00   7.0461195E+06
+input  thknss   into dp       16
+temp     =          1       0.00 16 27.380   1.2967050E-01   1.9421377E+01
+input  temp     into temp     16
+salin    =          1       0.00 16 27.380   3.3529041E+01   3.7168385E+01
+input  salin    into saln     16
+density  =          1       0.00 16 27.380   1.1800003E+00   2.8021164E+00
+input  density  into th3d     16
+finished reading data for layer 27.38000
+u-vel.   =          1       0.00 17 27.520   0.0000000E+00   0.0000000E+00
+input  u-vel.   into u        17
+v-vel.   =          1       0.00 17 27.520   0.0000000E+00   0.0000000E+00
+input  v-vel.   into v        17
+thknss   =          1       0.00 17 27.520   0.0000000E+00   7.4369815E+06
+input  thknss   into dp       17
+temp     =          1       0.00 17 27.520   1.2967050E-01   1.9421377E+01
+input  temp     into temp     17
+salin    =          1       0.00 17 27.520   3.3529041E+01   3.7168385E+01
+input  salin    into saln     17
+density  =          1       0.00 17 27.520   1.1800003E+00   2.9334774E+00
+input  density  into th3d     17
+finished reading data for layer 27.52000
+u-vel.   =          1       0.00 18 27.640   0.0000000E+00   0.0000000E+00
+input  u-vel.   into u        18
+v-vel.   =          1       0.00 18 27.640   0.0000000E+00   0.0000000E+00
+input  v-vel.   into v        18
+thknss   =          1       0.00 18 27.640   0.0000000E+00   7.2212010E+06
+input  thknss   into dp       18
+temp     =          1       0.00 18 27.640   1.2967050E-01   1.9421377E+01
+input  temp     into temp     18
+salin    =          1       0.00 18 27.640   3.3529041E+01   3.7168385E+01
+input  salin    into saln     18
+density  =          1       0.00 18 27.640   1.1800003E+00   3.0273666E+00
+input  density  into th3d     18
+finished reading data for layer 27.64000
+u-vel.   =          1       0.00 19 27.740   0.0000000E+00   0.0000000E+00
+input  u-vel.   into u        19
+v-vel.   =          1       0.00 19 27.740   0.0000000E+00   0.0000000E+00
+input  v-vel.   into v        19
+thknss   =          1       0.00 19 27.740   0.0000000E+00   1.4561142E+07
+input  thknss   into dp       19
+temp     =          1       0.00 19 27.740   1.2967050E-01   1.9421377E+01
+input  temp     into temp     19
+salin    =          1       0.00 19 27.740   3.3529041E+01   3.7168385E+01
+input  salin    into saln     19
+density  =          1       0.00 19 27.740   1.1800003E+00   3.0273666E+00
+input  density  into th3d     19
+finished reading data for layer 27.74000
+u-vel.   =          1       0.00 20 27.820   0.0000000E+00   0.0000000E+00
+input  u-vel.   into u        20
+v-vel.   =          1       0.00 20 27.820   0.0000000E+00   0.0000000E+00
+input  v-vel.   into v        20
+thknss   =          1       0.00 20 27.820   0.0000000E+00   2.3892518E+07
+input  thknss   into dp       20
+temp     =          1       0.00 20 27.820   1.2967050E-01   1.9421377E+01
+input  temp     into temp     20
+salin    =          1       0.00 20 27.820   3.3529041E+01   3.7168385E+01
+input  salin    into saln     20
+density  =          1       0.00 20 27.820   1.1800003E+00   3.0273666E+00
+input  density  into th3d     20
+finished reading data for layer 27.82000
+u-vel.   =          1       0.00 21 27.880   0.0000000E+00   0.0000000E+00
+input  u-vel.   into u        21
+v-vel.   =          1       0.00 21 27.880   0.0000000E+00   0.0000000E+00
+input  v-vel.   into v        21
+thknss   =          1       0.00 21 27.880   0.0000000E+00   3.1989200E+07
+input  thknss   into dp       21
+temp     =          1       0.00 21 27.880   1.2967050E-01   1.9421377E+01
+input  temp     into temp     21
+salin    =          1       0.00 21 27.880   3.3529041E+01   3.7168385E+01
+input  salin    into saln     21
+density  =          1       0.00 21 27.880   1.1800003E+00   3.1456509E+00
+input  density  into th3d     21
+finished reading data for layer 27.88000
+u-vel.   =          1       0.00 22 27.940   0.0000000E+00   0.0000000E+00
+input  u-vel.   into u        22
+v-vel.   =          1       0.00 22 27.940   0.0000000E+00   0.0000000E+00
+input  v-vel.   into v        22
+thknss   =          1       0.00 22 27.940   0.0000000E+00   2.7686944E+07
+input  thknss   into dp       22
+temp     =          1       0.00 22 27.940  -5.2493894E-01   1.9421377E+01
+input  temp     into temp     22
+salin    =          1       0.00 22 27.940   3.3529041E+01   3.7168385E+01
+input  salin    into saln     22
+density  =          1       0.00 22 27.940   1.1800003E+00   3.1456509E+00
+input  density  into th3d     22
+finished reading data for layer 27.94000
+North Atlantic topography from ETOPO5 5-minute data set.                       
+56 x 51 depth values (idm,jdm = 57,52).                                        
+2.0000 deg. mercator resolution, with equat=11.000.                            
+lon: 97.000W to 13.000E.  lat: 19.606S to 62.195N.                             
+                                                                               
+min,max depth =    199.556  5837.000
+read North At into depths  
+mask North At into coast   
+plon:  min,max =       263.00000      375.00000
+plat:  min,max =       -19.60579       63.11375
+qlon:  min,max =       262.00000      374.00000
+qlat:  min,max =       -20.54502       62.65800
+ulon:  min,max =       262.00000      374.00000
+ulat:  min,max =       -19.60579       63.11375
+vlon:  min,max =       263.00000      375.00000
+vlat:  min,max =       -20.54502       62.65800
+
+sub-domain assumed to be non-periodic
+
+bigrid called with ii,jj,ii1,jj1 =    57    52    56    51
+indxi called with ii,jj,ii1,jj1 =    57    52    56    51
+indxj called with ii,jj,ii1,jj1 =    57    52    56    51
+indxi called with ii,jj,ii1,jj1 =    57    52    56    51
+indxj called with ii,jj,ii1,jj1 =    57    52    56    51
+indxi called with ii,jj,ii1,jj1 =    57    52    56    51
+indxj called with ii,jj,ii1,jj1 =    57    52    56    51
+indxi called with ii,jj,ii1,jj1 =    57    52    56    51
+indxj called with ii,jj,ii1,jj1 =    57    52    56    51
+      0 island points submerged
+ calling portrait PostScript version of opngks
+ filename: 010_jan_hor.ps
+     defining earth color table: entries    1 --    3
+    defining pastel color table: entries    5 --    6
+
+
+ field to be contoured is constant ...  0.00000E+00
+ srfht =  0.0E+0 0.0E+0 0.0E+0
+ now plotting:  year   0.00 (jan 16) [01.0H]
+blkinr: botqq  =    -1.0000 m
+blkinr: flxqq  =    -1.0000 cm
+blkinr: empqq  =    -1.0000 mm/day
+blkinr: ttrqq  =    -1.0000 deg/day
+blkinr: strqq  =    -1.0000 psu/day
+blkinr: icvqq  =    -1.0000 
+blkinr: ithqq  =    -1.0000 m
+blkinr: ictqq  =    -1.0000 deg
+blkinr: sshqq  =    -1.0000 cm
+blkinr: bsfqq  =    -1.0000 sv
+blkinr: mthrsh =     0.0000 cm
+blkinr: bltqq  =    -1.0000 m
+blkinr: mltqq  =    25.0000 m
+min  1.92E+01 at   2  25  max  4.00E+02 at  21  48  intvl.,lines  2.00E+01  19
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   5.000   5.000   5.000
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000   0.000  25.000
+ horiz. map: mix.layr.thickness  year   0.00 (jan 16) [01.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+bordplt - qlatlo,qlathi,qlatlon =     -30.00     70.00     10.00
+bordplt - qlonlo,qlonhi,qlatlon =     250.00    390.00     10.00
+ frame advance no.   1
+blkinr: sstqq  =    -1.0000 deg
+blkinr: sssqq  =    -1.0000 psu
+blkinr: ssdqq  =    -1.0000 sig
+blkini: kf     =    -1
+blkini: kl     =     7
+blkinr: vthrsh =     0.0000 cm
+blkinr: infqq  =    -1.0000 m
+blkinr: thkqq  =    -1.0000 m
+blkinr: temqq  =     1.0000 deg
+min -1.31E+00 at  23  38  max  2.86E+01 at  44  14  intvl.,lines  2.00E+00  14
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000   0.000   1.000
+ horiz. map: layer=01   temp     year   0.00 (jan 16) [01.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+ frame advance no.   2
+blkinr: salqq  =     0.2000 psu
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000   0.000   0.200
+ horiz. map: layer=01  salinity  year   0.00 (jan 16) [01.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+min  2.38E+01 at  25  12  max  3.75E+01 at  27  23  intvl.,lines  1.00E+00  13
+ frame advance no.   3
+blkinr: tthqq  =     0.2000 sig
+min  1.41E+01 at  25  12  max  2.78E+01 at  23  47  intvl.,lines  1.00E+00  13
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.000   0.000   0.200
+ horiz. map: layer=01  density   year   0.00 (jan 16) [01.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+ frame advance no.   4
+blkinr: sfnqq  =    -1.0000 sv

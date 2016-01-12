@@ -1,0 +1,32 @@
+
+ MODEL EXPERIMENT:   10
+     3 22-LAYER TRANSPORT SECTION STATISTICS
+   360.0 DAY AVERAGE OF   12 SAMPLES BETWEEN MODEL DAYS  6840.0 AND  7170.0
+
+                                LONGITUDE            LATITUDE         LAYER      MEAN (SV)    STD DEV
+
+ Cross-Equator            :   49.00W   11.00E      0.00N    0.00N      01          0.00         0.00
+ Cross-Equator            :   49.00W   11.00E      0.00N    0.00N      02          0.00         0.00
+ Cross-Equator            :   49.00W   11.00E      0.00N    0.00N     03-22       -0.01         0.00
+                                                                      ------------------------------
+ Cross-Equator            :   49.00W   11.00E      0.00N    0.00N     01-02        0.00         0.00
+ Cross-Equator            :   49.00W   11.00E      0.00N    0.00N     01-22       -0.01         0.00
+ 
+ Along-Equator, 39W       :   39.00W   39.00W      4.00S    4.00N      01          0.00         0.00
+ Along-Equator, 39W       :   39.00W   39.00W      4.00S    4.00N      02          0.00         0.00
+ Along-Equator, 39W       :   39.00W   39.00W      4.00S    4.00N     03-22        0.16         0.00
+                                                                      ------------------------------
+ Along-Equator, 39W       :   39.00W   39.00W      4.00S    4.00N     01-02        0.00         0.00
+ Along-Equator, 39W       :   39.00W   39.00W      4.00S    4.00N     01-22        0.16         0.00
+ 
+ Along-Equator, 19W       :   19.00W   19.00W      4.00S    4.00N      01          0.00         0.00
+ Along-Equator, 19W       :   19.00W   19.00W      4.00S    4.00N      02          0.00         0.00
+ Along-Equator, 19W       :   19.00W   19.00W      4.00S    4.00N     03-22       -3.54         0.00
+                                                                      ------------------------------
+ Along-Equator, 19W       :   19.00W   19.00W      4.00S    4.00N     01-02        0.00         0.00
+ Along-Equator, 19W       :   19.00W   19.00W      4.00S    4.00N     01-22       -3.54         0.00
+ 
+
+
+
+

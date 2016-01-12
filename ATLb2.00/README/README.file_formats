@@ -1,0 +1,47 @@
+README/README.file_formats:
+
+Almost all HYCOM model input and output uses the standard HYCOM .[ab] format.  
+The ".a" file contains raw (no control words) REAL*4 bigendian data padded 
+to a multiple of 4096 words with data voids as 2.0**100.  The associated
+small ".b" file is plain text, typically containing a 5-line header followed
+by one line for each 2-D field in the ".a" file.  This starts with a short 
+identifier for the field followed by "=" and then numeric data values which 
+always include the field's minimum and maximum.  It is good practice to 
+confirm that the minimum and maximum values from ".a" and ".b" files agree 
+on input.  The best way to read and write ".a" files is using the standard 
+set of "zaio" routines provided in mod_za.F, see README.src.mod_za.  The 
+ocean model has separate versions of these routines for distributed memory 
+and shared memory machines, but pre and post-processing programs use the 
+(shared memory) version from hycom/ALL/libsrc.  There are many utilities
+that act on ".a" files in hycom/ALL/bin, and almost any program in 
+hycom/ALL/*/src can act as an example of how to use the "zaio" routines.
+
+The only other HYCOM model input is via, *.input, plain text files.  The
+format of these varies, but a common format for a single line of text is 
+a data value followed by the six-character name of the variable in quotes 
+followed by a comment (which is ignored on input).  Such lines can be
+read by the "blkin[ilr]" routines (for integer,logical,real input).  
+These subroutine names come from, blkdat.input, which uses this format.
+
+The primary HYCOM model output is archive files, which are in ".[ab]"
+format and contain all prognostic variables for one time step (or just
+the surface, depth averaged and layer 1 fields).  These can be converted 
+to other file formats, including netCDF, as a post-processing step, see 
+README.archive.
+
+The atmospheric forcing interpolation programs, in hycom/ALL/force/src,
+read "NRL wind format" files.  This is a format used at NRL to avoid
+dealing with multiple wind file formats, all wind sets are converted
+to this format so that interpolation programs can use a single input
+routine for any wind set.  The files are big-endian unformatted Fortran
+sequential, with all atmospheric forcing fields for a given time in a 
+single record.  There can be up to 5,999 sample times in one file and 
+the very first record of the file contains the array size, the array 
+lat,lon, the array grid size, the number of samples, and a 6,000 element 
+array that lists the "wind day" of each sample time (and of the next 
+time in sequence beyond the last record).  Here "wind day" is days since 
+00Z December 31 1900.  To use the interpolation programs, either convert
+your atmospheric forcing data to this format (we have programs to do 
+this for many wind sets, send e-mail to metzger@hermes.nrlssc.navy.mil
+to see if yours is available) or modify the native grid reading 
+subroutines to input fields in their existing format.  

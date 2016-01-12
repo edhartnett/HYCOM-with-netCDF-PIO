@@ -1,0 +1,45 @@
+../coads/vapmix.a
+ATLb2.00
+ 57	'idm   ' = longitudinal array size
+ 52	'jdm   ' = latitudinal  array size
+  1	'nperfr' = number of horizontal plots per frame
+ 10	'lalolb' = spacing of latitude/longitude labels
+ 10	'lalogr' = spacing of latitude/longitude grid over land (<0 land+sea)
+  4	'loclab' = location of the contour label (1=upr,2=lowr,3=lowl,4=upl)
+ 11	'locbar' = location of the color bar     (1[0-4]=vert,2[0-4]=horiz)
+  5	'kpalet' = palete (0=none,1=pastel,2=sst,3=gaudy,4=2tone,5=fc,6=ifc)
+  1	'iorign' = i-origin of plotted subregion
+  1	'jorign' = j-origin of plotted subregion
+  0	'idmp  ' = i-extent of plotted subregion (<=idm; 0 implies idm)
+  0	'jdmp  ' = j-extent of plotted subregion (<=jdm; 0 implies jdm)
+  1	'nrec  ' = next record to plot (monotonicly increasing, <0 to end)
+COADS Vapour Mixing Ratio (kg/kg), Jan.
+  1.0	'qscale' = scale factor for plot
+0.0002	'qq    ' = contour interval (<0 no plot; 0 from field)
+  0.01	'center' = central contoured value
+  3	'nrec  ' = next record to plot (monotonicly increasing, <0 to end)
+COADS Vapour Mixing Ratio (kg/kg), Mar.
+  1.0	'qscale' = scale factor for plot
+0.0002	'qq    ' = contour interval (<0 no plot; 0 from field)
+  0.01	'center' = central contoured value
+  5	'nrec  ' = next record to plot (monotonicly increasing, <0 to end)
+COADS Vapour Mixing Ratio (kg/kg), May
+  1.0	'qscale' = scale factor for plot
+0.0002	'qq    ' = contour interval (<0 no plot; 0 from field)
+  0.01	'center' = central contoured value
+  7	'nrec  ' = next record to plot (monotonicly increasing, <0 to end)
+COADS Vapour Mixing Ratio (kg/kg), July
+  1.0	'qscale' = scale factor for plot
+0.0002	'qq    ' = contour interval (<0 no plot; 0 from field)
+  0.01	'center' = central contoured value
+  9	'nrec  ' = next record to plot (monotonicly increasing, <0 to end)
+COADS Vapour Mixing Ratio (kg/kg), Sep.
+  1.0	'qscale' = scale factor for plot
+0.0002	'qq    ' = contour interval (<0 no plot; 0 from field)
+  0.01	'center' = central contoured value
+ 11	'nrec  ' = next record to plot (monotonicly increasing, <0 to end)
+COADS Vapour Mixing Ratio (kg/kg), Nov.
+  1.0	'qscale' = scale factor for plot
+0.0002	'qq    ' = contour interval (<0 no plot; 0 from field)
+  0.01	'center' = central contoured value
+ -1	'nrec  ' = next record to plot (monotonicly increasing, <0 to end)

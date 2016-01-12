@@ -1,0 +1,63 @@
+topo/README.topo:
+
+Illustrates how to convert bathymetry from MICOM to HYCOM grid orientation.  
+
+An alternative is to initially generate the bathymetry on the HYCOM grid.
+This can be done using hycom/ALL/topo/src/bathy_05min and the 5-minute 
+TerrainBase dataset configured for bathy_05min available at:
+ftp://obelix.rsmas.miami.edu/awall/hycom/tbase_for_hycom.tar.gz
+See README/README.topo.new and hycom/ATLb2.00/topo_IASb0.50.
+
+README.topo		this file
+
+depth.51x56		MICOM bathymetry file (Atlantic, 2-deg.)
+depth_ATLb2.00_01.[ab]	HYCOM bathymetry file
+depth_ATLb2.00_01.com	script to create depth_ATLb2.00_01.[ab]
+depth_ATLb2.00_01.log	From csh depth_ATLb2.00_01.com >& depth_ATLb2.00_01.log
+
+depth_ATLb2.00_02.com	script to create depth_ATLb2.00_02.[ab] (smoothed 01)
+
+depth_ATLb2.00_03.com	script to create depth_ATLb2.00_03.[ab] (flat bottom)
+
+new_topo.com		script to customize scripts for a new region
+
+regional.grid.[ab]	HYCOM grid location file
+regional.grid.com	script to create regional.grid.[ab]
+regional.grid.log	From csh regional.grid.com >& regional.grid.log
+
+The source code is domain-independent (and therefore in ../../ALL/topo).
+All programs read regional.grid.b at run-time to get idm and jdm for the 
+particular region being processed.  So regional.grid.com must be run
+first to generate regional.grid.[ab].
+
+The depth file includes the region name (ATLb2.00) so that files from
+several regions can be collected in one directory.  The ending "_01"
+indicates version 01 of the bathymetry, and this convention allows for 
+up to 99 distinct bathymetries for the same region and resolution.
+In this case, depth_ATLb2.00_02 and depth_ATLb2.00_03 have the same 
+land/sea boundary as depth_ATLb2.00_01 but 02 applies a 9-point smoother
+to the 01 depths and 03 has a flat bottom at 5000m.  
+
+Since filenames include the region name, new_topo.com is provided to
+copy scripts from one region to another.
+
+Additional smoothing, as in depth_ATLb2.00_02, may not be necessary at
+2 degree resolution but one or two smoothing passes might be appropriate
+when using higher resolution.
+
+See ../doc/meshmap_hycom.* and ../doc/meshmap_micom.* for details of 
+the grid layouts.
+
+Since both files leave out the last row and column (which are always
+outside the region), the translation is simple (HYCOM idm,jdm):
+
+      do j= 1,jdm-1
+        do i= 1,idm-1
+          dh(i,j) = dm(jdm-j,i)
+        enddo
+      enddo
+
+Some MICOM bathymetry files use an alternative "pakk" encoding.  If the
+HYCOM bathymetery from topo_m2h does not look right, try topo_malt2h
+which links in pakk_micom.f instead of pakk_hycom.f.  The only differences 
+between these files are six lines in subroutine unpakk (lines 107-112).

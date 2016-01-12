@@ -1,0 +1,100 @@
+set time = 1
+C
+setenv OS `uname`
+uname
+switch ( SunOS )
+breaksw
+C
+C --- create HYCOM zero wind stress files.
+C
+switch ( SunOS )
+if ( -e /scr ) then
+setenv pget cp
+setenv pput cp
+endif
+breaksw
+C
+C --- P is primary path,
+C --- S is scratch directory,
+C --- D is permanent directory,
+C
+setenv P hycom/ATLb2.00/force/offset
+C
+switch ( SunOS )
+if ( -e /scr ) then
+if ( -e /net/hermes/scrb ) then
+setenv S /net/hermes/scrb/wallcraf/hycom/ATLb2.00/force/offset
+setenv D ~/hycom/ATLb2.00/force/offset
+else
+breaksw
+C
+mkdir -p /net/hermes/scrb/wallcraf/hycom/ATLb2.00/force/offset
+cd /net/hermes/scrb/wallcraf/hycom/ATLb2.00/force/offset
+echo /net/hermes/scrb/wallcraf/hycom/ATLb2.00/force/offset
+/net/hermes/scrb/wallcraf/hycom/ATLb2.00/force/offset
+C
+C --- Input.
+C
+touch regional.grid.a regional.grid.b
+if ( -z regional.grid.b ) then
+[1] 29952
+cp /home/ajax/wallcraf/hycom/ATLb2.00/force/offset/../../topo/regional.grid.b regional.grid.b
+endif
+if ( -z regional.grid.a ) then
+cp /home/ajax/wallcraf/hycom/ATLb2.00/force/offset/../../topo/regional.grid.a regional.grid.a
+[2] 29953
+endif
+C
+
+[1]    Done                 cp /home/ajax/wallcraf/hycom/ATLb2.00/force/offset/../../topo/regional.grid.b  ...
+[3] 29955
+wait
+cp /home/ajax/wallcraf/hycom/ATLb2.00/force/offset/../../../ALL/force/src/off_zero .
+
+[2]    Done                 cp /home/ajax/wallcraf/hycom/ATLb2.00/force/offset/../../topo/regional.grid.a  ...
+
+[3]    Done                 cp  ...
+chmod a+rx off_zero
+C
+/bin/rm -f fort.10 fort.10A
+/bin/rm -f fort.11 fort.11A
+C
+setenv FOR010A fort.10A
+setenv FOR011A fort.11A
+C
+switch ( SunOS )
+/bin/rm -f core off_zero.trace
+touch core
+default:
+/bin/rm -f core
+touch core
+endsw
+C
+./off_zero
+
+xcspmd: idm,jdm =   57   52
+
+ 
+Zero Stress                                                                    
+                                                                               
+                                                                               
+                                                                               
+i/jdm =   57   52                                                              
+ 
+ tau_ewd: month,range = 01   0.0000000E+00   0.0000000E+00
+ tau_nwd: month,range = 01   0.0000000E+00   0.0000000E+00
+ 
+C
+switch ( SunOS )
+if ( -e off_zero.trace ) cat off_zero.trace
+breaksw
+C
+C --- Output.
+C
+cp fort.10 /home/ajax/wallcraf/hycom/ATLb2.00/force/offset/tauewd_zero.b
+cp fort.10A /home/ajax/wallcraf/hycom/ATLb2.00/force/offset/tauewd_zero.a
+cp fort.11 /home/ajax/wallcraf/hycom/ATLb2.00/force/offset/taunwd_zero.b
+cp fort.11A /home/ajax/wallcraf/hycom/ATLb2.00/force/offset/taunwd_zero.a
+C
+C --- Delete all files.
+C

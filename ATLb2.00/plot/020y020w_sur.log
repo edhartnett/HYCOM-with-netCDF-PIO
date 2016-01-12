@@ -1,0 +1,192 @@
+
+xcspmd: idm,jdm =   57   52
+
+input    file: ../expt_02.0/data/020_archv.0020_016_00.a
+       region: ATLb2.00    
+blkini: iexpt  =     0
+blkini: yrflag =     0
+blkini: idm    =    57
+blkini: jdm    =    52
+blkini: kdm    =     1
+blkinr: thbase =    25.0000 sig
+blkini: nperfr =     1
+blkini: lalolb =    20
+blkini: lalogr =    10
+blkini: loclab =     4
+blkini: locbar =    11
+blkini: kpalet =     5
+blkinl: smooth =     F
+blkini: mthin  =     1
+blkini: i_th   =     2
+blkini: iorign =     1
+blkini: jorign =     1
+blkini: idmp   =     0
+blkini: jdmp   =     0
+extracting i =    1 ...   57         j =    1 ...   52
+ chrsiz =  0.5478259921 104.0476379 94.92065430
+... plotting  1 maps per frame
+ERA-15 climo. forcing: precip_zero; SSS relax;                                  
+7T Sigma0; Levitus July init; KPP mixed layer; Jerlov IA;                       
+ Z(22): dp00/f/x=3m/1.125/12m; ATLb2.00/src_2.2.18; flxflg=4;                   
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+ iversn =  22
+ iexpt  =  20
+ yrflag =  0
+ idm    =  57
+ jdm    =  52
+field       time step  model day  k  dens        min              max
+artype = 1
+montg1   =     109440   6840.000  1 25.000  -4.2690668E+00   1.4341786E+01
+input  montg1   into montg   
+srfhgt   =     109440   6840.000  0  0.000  -8.3369446E+00   5.2957287E+00
+input  srfhgt   into srfht   
+surflx   =     109440   6840.000  0  0.000  -6.3043201E+02   1.6018564E+02
+input  surflx   into surflx  
+ time3 =  6840.00000000000000 6840.00000000000000 6840.00000000000000
+salflx   =     109440   6840.000  0  0.000  -4.4350415E-02   4.1696606E-03
+input  salflx   into salflx  
+bl_dpth  =     109440   6840.000  0  0.000   2.8719508E+04   5.1186145E+06
+input  bl_dpth  into dpbl    
+mix_dpth =     109440   6840.000  0  0.000   4.8884516E+04   6.5780425E+06
+input  mix_dpth into dpmixl  
+u_btrop  =     109440   6840.000  0  0.000  -2.6859158E-01   3.7514350E-01
+input  u_btrop  into ubaro   
+v_btrop  =     109440   6840.000  0  0.000  -7.6542564E-02   3.7172180E-01
+input  v_btrop  into vbaro   
+u-vel.   =     109440   6840.000  1 19.500  -1.0044630E+00   5.5489838E-01
+input  u-vel.   into u         1
+v-vel.   =     109440   6840.000  1 19.500  -3.5194510E-01   6.0407472E-01
+input  v-vel.   into v         1
+thknss   =     109440   6840.000  1 19.500   2.9418000E+04   2.9418000E+04
+input  thknss   into dp        1
+temp     =     109440   6840.000  1 19.500  -7.5018749E+00   2.9101213E+01
+input  temp     into temp      1
+salin    =     109440   6840.000  1 19.500   2.8137978E+01   3.7241543E+01
+input  salin    into saln      1
+            calculate th3d      1
+copy   temp.1   into tmix    
+copy   saln.1   into smix    
+copy   th3d.1   into thmix   
+copy      u.1   into umix    
+copy      v.1   into vmix    
+u-vel.   =     109440   6840.000  2 20.250  -9.4507986E-01   5.8418465E-01
+finished reading data for layer 19.50000
+North Atlantic topography from ETOPO5 5-minute data set.                       
+56 x 51 depth values (idm,jdm = 57,52).                                        
+2.0000 deg. mercator resolution, with equat=11.000.                            
+lon: 97.000W to 13.000E.  lat: 19.606S to 62.195N.                             
+                                                                               
+min,max depth =    199.556  5837.000
+read North At into depths  
+mask North At into coast   
+plon:  min,max =       263.00000      375.00000
+plat:  min,max =       -19.60579       63.11375
+qlon:  min,max =       262.00000      374.00000
+qlat:  min,max =       -20.54502       62.65800
+ulon:  min,max =       262.00000      374.00000
+ulat:  min,max =       -19.60579       63.11375
+vlon:  min,max =       263.00000      375.00000
+vlat:  min,max =       -20.54502       62.65800
+pscx:  min,max =    100565.21875   222389.87500
+pscy:  min,max =    100571.95312   222378.59375
+uscx:  min,max =    100565.21875   222389.87500
+uscy:  min,max =    100571.95312   222378.59375
+vscx:  min,max =    102139.75781   222356.01562
+vscy:  min,max =    102146.85938   222344.73438
+
+sub-domain longitude range =   263.00  375.00
+sub-domain latitude  range =   -19.61   63.11
+bigrid called with ii,jj,ii1,jj1 =    57    52    56    51
+indxi called with ii,jj,ii1,jj1 =    57    52    56    51
+indxj called with ii,jj,ii1,jj1 =    57    52    56    51
+indxi called with ii,jj,ii1,jj1 =    57    52    56    51
+indxj called with ii,jj,ii1,jj1 =    57    52    56    51
+indxi called with ii,jj,ii1,jj1 =    57    52    56    51
+indxj called with ii,jj,ii1,jj1 =    57    52    56    51
+indxi called with ii,jj,ii1,jj1 =    57    52    56    51
+indxj called with ii,jj,ii1,jj1 =    57    52    56    51
+      0 island points submerged
+ calling portrait RGB PostScript version of opngks
+ filename: 020y020w_sur.ps
+     defining earth color table: entries    2 --    3
+     defining fc100 color table: entries    6 --  105
+min -8.50E+01 at   24   45  max  5.40E+01 at   11   26  intvl.,lines  1.00E+01   13
+ srfht =  -85.01880646 54.00498199 10.00000000
+ now plotting:   Jan 16, 0020 00Z    [02.0H]
+blkinr: botqq  =    -1.0000 m
+blkinr: flxqq  =    -1.0000 cm
+blkinr: empqq  =    -1.0000 mm/day
+blkinr: ttrqq  =    -1.0000 deg/day
+blkinr: strqq  =    -1.0000 psu/day
+blkinr: icvqq  =    -1.0000 
+blkinr: ithqq  =    -1.0000 m
+blkinr: ictqq  =    -1.0000 deg
+blkinr: sshqq  =     2.0000 cm
+min -8.50E+01 at   24   45  max  5.40E+01 at   11   26  intvl.,lines  1.00E+01   13
+ srfht =  -85.01880646 54.00498199 2.000000000
+blkinr: center =     0.0000 cm
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =-100.000 100.000   2.000
+ horiz. map:  sea surf. height    Jan 16, 0020 00Z    [02.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+bordplt - qlatlo,qlathi,qlatlon =     -30.00     70.00     10.00
+bordplt - qlonlo,qlonhi,qlatlon =     250.00    390.00     10.00
+                      fflo,ffhi,qq =-100.000 100.000   2.000
+cu    = " cm"
+textc = "ci 2.0 cm"
+textm = "-85 to 54"
+ frame advance no.   1
+blkinr: bsfqq  =    -1.0000 sv
+blkinr: mthrsh =     0.0000 cm
+blkinr: bltqq  =    -1.0000 m
+blkinr: mltqq  =     6.0000 m
+min  4.99E+00 at   56    7  max  6.71E+02 at   42   45  intvl.,lines  5.00E+01   13
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   1.200   1.200   1.200
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+blkinr: center =   300.0000 m
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =  -0.000 600.000   6.000
+ horiz. map: mix.layr.thickness   Jan 16, 0020 00Z    [02.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+                      fflo,ffhi,qq =   0.000 600.000   6.000
+cu    = " m"
+textc = "ci 6.0 m"
+textm = "5 to 670.8"
+ frame advance no.   2
+blkinr: sstqq  =    -1.0000 deg
+blkinr: sssqq  =    -1.0000 psu
+blkinr: ssdqq  =    -1.0000 sig
+blkini: kf     =    -1
+blkini: kl     =     1
+blkinr: vthrsh =     0.0000 cm/s
+blkinr: infqq  =    -1.0000 m
+blkinr: thkqq  =    -1.0000 m
+blkinr: temqq  =     0.3000 deg
+min -7.50E+00 at   21   43  max  2.91E+01 at   48   13  intvl.,lines  2.00E+00   18
+blkinr: center =    15.0000 deg
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =  -0.000  30.000   0.300
+ horiz. map: layer=01   temp      Jan 16, 0020 00Z    [02.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+                      fflo,ffhi,qq =   0.000  30.000   0.300
+cu    = " deg"
+textc = "ci 0.300 deg"
+textm = "-7.5 to 29.1"
+ frame advance no.   3
+blkinr: salqq  =     0.0500 psu
+min  2.81E+01 at   54   12  max  3.72E+01 at   34    1  intvl.,lines  5.00E-01   18
+blkinr: center =    35.0000 psu
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =  32.500  37.500   0.050
+ horiz. map: layer=01  salinity   Jan 16, 0020 00Z    [02.0H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+                      fflo,ffhi,qq =  32.500  37.500   0.050
+cu    = " psu"
+textc = "ci 0.050 psu"
+textm = "28.14 to 37.24"
+ frame advance no.   4
+blkinr: tthqq  =    -1.0000 sig
+blkinr: sfnqq  =    -1.0000 sv
+blkini: kf     =     0
+STOP (normal: no cross-sections)

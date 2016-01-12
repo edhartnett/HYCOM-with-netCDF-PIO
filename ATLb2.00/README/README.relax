@@ -1,0 +1,69 @@
+relax/README.relax:
+
+Interpolation of climatology to a HYCOM model grid for use in boundary
+relaxation zones or for model initialization.
+
+../ALL/bin/clim_stat	lists contents of "native" climatology
+../ALL/bin/clim_stat.1	man page for clim_stat
+relax/010/		"isopycnal" climatology for a HYCOM simulation
+relax/999/		zonal isopycnal depth climatology for HYCOM poflat
+relax/levitus/		Levitus climatology on HYCOM horizontal grid
+relax/plot/		plot climatology
+../ALL/relax/src/ 	softlink to latest source directory
+
+See also:
+
+relax/plot/README.relax.plot
+ALL/relax/src/README.relax.src
+999/README.relax.zonal
+
+The climatology data sets are input on their native grid, from standard
+Naval Research Laboratory (NRL) climatology files.  The ../bin/clim_stat
+command lists the contents of a native climatology file.  All fields must be
+defined at all grid points (including over land and below the ocean floor),
+and the potential density vertical profile must be stable at all locations.
+Levitus in the required format is available from the HYCOM ftp site, see:
+ftp://obelix.rsmas.miami.edu/awall/hycom/levitus_for_hycom.tar.gz
+
+First interpolate (Levitus) climatology to the HYCOM horizontal grid, but
+keeping the original z-grid in the vertical (see relax/levitus).  The
+interpolated climatology is defined at all grid points (including land and
+below the ocean floor), and its potential density vertical profile is stable
+at all locations.  Levitus is defined using Sigma0, but the interpolated
+climatology can be Sigma0, or Sigma2, or Sigma4.  
+
+Then convert to the "isopycnal" climatology required for a particular HYCOM
+simulation (see relax/010/relax.com).  The region and simulation specific 
+environment variables are in relax/010/EXPT.src.  The required input file,
+relax/010/blkdat.input, can be created from expt_01.0/blkdat.input using 
+the script relax/010/blkdat.com.  The output data sets are climatological
+interface depth, potential temperature and salinity fields for the specified
+set of isopycnal layers and the specified set of minimum near-surface layer
+thicknesses.  The result can be plotted using the standard HYCOM archive
+file plot program, see relax/plot.
+
+Splitting the process into two phases saves time, because the z-level
+climatology does not depend on the isopycnals chosen by a particular HYCOM
+simulation.  Also conversion to isopycnals does not depend on which
+climatology is being used (providing all the native climatologies use the
+same number of z-levels in the vertical).
+
+A 2-D relaxation mask is also required for any HYCOM simulation that uses
+lateral boundary nudging.  It is typically zero everywhere except the 
+boundary regions where relaxation is to be applied.  In the boundary 
+regions it is the relaxation scale factor (1/seconds).  The program 
+src/rmu.f can be used to specify the boundary relaxation zones, see 
+relax/010/relax_rmu.com.  Input is up to 99 individual patches and the 
+associated e-folding time in days (which is converted internally to 
+1/e-folding-time-in-seconds for assignment to rmu). 
+
+HYCOM 2.0 uses the array (.a) and header (.b) file format, and a 
+vertical mapping from z-levels to isopycnals that is based on Rainer
+Bleck's "restep" proceedure for converting one stairstep (i.e., 
+piecewise constant) set of profiles (in this case between z-levels) 
+into another with prescribed density steps.  This is augmented by a 
+simplifed hybgen proceedure to map the resulting isopycnals to hybrid 
+layers.
+
+HYCOM 1.0 used the pakk file format, and a different vertical mapping 
+from z-levels to hybrid layers.

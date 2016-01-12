@@ -1,0 +1,27 @@
+cd /u/home/wallcraf/hycom/GLBa0.08/src_2.1.27.2_26_mpi/TEST
+echo /u/home/wallcraf/hycom/GLBa0.08/src_2.1.27.2_26_mpi/TEST
+/u/home/wallcraf/hycom/GLBa0.08/src_2.1.27.2_26_mpi/TEST
+setenv ARCH Asp4
+cd ..
+echo /u/home/wallcraf/hycom/GLBa0.08/src_2.1.27.2_26_mpi
+/u/home/wallcraf/hycom/GLBa0.08/src_2.1.27.2_26_mpi
+setenv TYPE `echo $cwd | awk -F"_" '{print $NF}'`
+echo /u/home/wallcraf/hycom/GLBa0.08/src_2.1.27.2_26_mpi
+awk -F_ {print $NF}
+cd TEST
+echo /u/home/wallcraf/hycom/GLBa0.08/src_2.1.27.2_26_mpi/TEST
+/u/home/wallcraf/hycom/GLBa0.08/src_2.1.27.2_26_mpi/TEST
+if ( ! -e ../../config/Asp4_mpi ) then
+cp ../mod_advem.mod ../mod_pipe.mod ../mod_pipe.o ../mod_xc.mod ../mod_xc.o ../mod_za.mod ../mod_za.o .
+foreach t ( xct_arctic )
+make xct_arctic ARCH=Asp4 TYPE=mpi
+	mpxlf95             -g -qfixed -O3 -qstrict -qarch=pwr4 -qtune=pwr4 -qcache=auto -qspillsize=32000 -qrealsize=8 -qintsize=4 -c test_xct_arctic.f
+** testxc   === End of Compilation 1 ===
+** arctic_fix   === End of Compilation 2 ===
+** arctic_halo   === End of Compilation 3 ===
+** yytile   === End of Compilation 4 ===
+** zztile   === End of Compilation 5 ===
+1501-510  Compilation successful for file test_xct_arctic.f.
+	mpxlf95  -g -qfixed -O3 -qstrict -qarch=pwr4 -qtune=pwr4 -qcache=auto -qspillsize=32000 -qrealsize=8 -qintsize=4 -bmaxdata:2000000000 -bmaxstack:256000000 -o test_xct_arctic test_xct_arctic.o  ../machine.o ../machi_c.o ../wtime.o mod_xc.o mod_za.o
+end
+endif

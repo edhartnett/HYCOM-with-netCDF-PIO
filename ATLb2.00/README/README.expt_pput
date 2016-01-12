@@ -1,0 +1,11 @@
+expt_02.4/README.expt_pput:
+
+The model script is configured to allow data files (input and output)
+to be resident on a different machine (e.g., an archive system).  The
+actual run is from a scratch directory, and files are copied from 
+scratch to permenant storage (possibly on another machine) using
+whatever commands are associated with the pget and pput environmant
+variables.  If everything is on a single machine (or if the archive 
+directory is NFS mounted on the run machine), pget and pput can both
+be cp (e.g., setenv pget /usr/bin/cp).  Otherwise, the ../bin directory 
+contains several examples of appropriate pput and pget commands.

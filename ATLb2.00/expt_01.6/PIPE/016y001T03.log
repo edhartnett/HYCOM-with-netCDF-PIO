@@ -1,0 +1,1724 @@
+csh PIPE/016y001T03.com
+set time = 1
+set timestamp
+C
+C --- Experiment ATLb2.00 - 01.5
+C --- 22 layer HYCOM on 2.00 degree Atlantic region
+C
+C --- 01.2 - KPP: COADS forcing, Levitus bndry and sur. sal. relax.
+C --- 01.3 - twin of 1.2 with 10x thkdf4.
+C --- 01.5 - repeat 1.3 with src_2.1.03.
+C --- 01.6 - repeat 1.5 with src_2.1.34.
+C
+C --- Preamble, script keys on O/S name.
+C
+C --- Set parallel configuration, see ../README/README.expt_parallel.
+C --- NOMP = number of OpenMP threads, 0 for no OpenMP, 1 for inactive OpenMP
+C --- NMPI = number of MPI tasks, 0 for no MPI
+C
+setenv OS `uname`
+uname
+switch ( AIX )
+setenv NOMP 3
+setenv NMPI 0
+breaksw
+C
+C --- modify NOMP and NMPI based on batch limits
+C
+if ( 0 ) then
+if ( 0 ) then
+if ( 0 ) then
+echo NOMP is  3  and NMPI is  0
+NOMP is  3  and NMPI is  0
+C
+C --- R is region name.
+C --- V is source code version number.
+C --- T is topography number.
+C --- K is number of layers.
+C --- E is expt number.
+C --- P is primary path.
+C --- D is permanent directory.
+C --- S is scratch directory, must not be the permanent directory.
+C
+setenv R ATLb2.00
+setenv V 2.1.34
+setenv T 01
+setenv K 22
+setenv E 016
+setenv P hycom/ATLb2.00/expt_01.6/dataT03
+setenv D ~/hycom/ATLb2.00/expt_01.6/dataT03
+C
+switch ( AIX )
+if ( -e /gpfs/work ) then
+if ( -e /scr ) then
+mkdir /scr/wallcraf
+mkdir: 0653-358 Cannot create /scr/wallcraf.
+/scr/wallcraf: Do not specify an existing file.
+chmod a+rx /scr/wallcraf
+setenv S /scr/wallcraf/hycom/ATLb2.00/expt_01.6/dataT03
+setenv POE poe
+else
+breaksw
+C
+mkdir -p /scr/wallcraf/hycom/ATLb2.00/expt_01.6/dataT03
+cd /scr/wallcraf/hycom/ATLb2.00/expt_01.6/dataT03
+echo /scr/wallcraf/hycom/ATLb2.00/expt_01.6/dataT03
+/scr/wallcraf/hycom/ATLb2.00/expt_01.6/dataT03
+C
+C --- For whole year runs.
+C --- Y01 initial model year of this run.
+C --- YXX is the last model year of this run, and the first of the next run.
+C --- A and B are identical, typically blank.
+C --- For part year runs.
+C --- A is this part of the year, B is next part of the year.
+C --- Y01 is the start model year of this run.
+C --- YXX is the end model year of this run, usually Y01.
+C --- For a few hour/day run
+C --- A is the start day and hour, of form dDDDhHH.
+C --- B is the end day and hour, of form dXXXhYY.
+C --- Y01 is the start model year of this run.
+C --- YXX is the end model year of this run, usually Y01.
+C --- Note that these variables are set by the .awk generating script.
+C
+setenv A 
+setenv B 
+setenv Y01 001
+setenv YXX 002
+C
+echo Y01 = 001 YXX =  002 A = B =
+Y01 = 001 YXX =  002 A = B =
+C
+C --- local input files.
+C
+if ( -e /u/home/wallcraf/hycom/ATLb2.00/expt_01.6/dataT03/../016y001.limits ) then
+/bin/cp /u/home/wallcraf/hycom/ATLb2.00/expt_01.6/dataT03/../PIPE/016y001.limits limits
+else
+cat limits
+     -180.00      210.00    false    false
+C
+if ( -e /u/home/wallcraf/hycom/ATLb2.00/expt_01.6/dataT03/../ports.input_001 ) then
+/bin/cp /u/home/wallcraf/hycom/ATLb2.00/expt_01.6/dataT03/../ports.input ports.input
+endif
+C
+if ( -e /u/home/wallcraf/hycom/ATLb2.00/expt_01.6/dataT03/../tracer.input_001 ) then
+/bin/cp /u/home/wallcraf/hycom/ATLb2.00/expt_01.6/dataT03/../tracer.input tracer.input
+endif
+C
+if ( -e /u/home/wallcraf/hycom/ATLb2.00/expt_01.6/dataT03/../blkdat.input_001 ) then
+/bin/cp /u/home/wallcraf/hycom/ATLb2.00/expt_01.6/dataT03/../blkdat.input blkdat.input
+endif
+C
+if ( 0 != 0 ) then
+C
+C --- check that iexpt from blkdat.input agrees with E from this script.
+C
+setenv EB `grep "'iexpt ' =" blk* | awk '{printf("%03d", $1)}'`
+awk {printf("%03d", $1)}
+grep 'iexpt ' = blkdat.input
+if ( 016 != 016 ) then
+C
+C --- pget, pput copy files between scratch and permanent storage.
+C --- Can both be cp if the permanent filesystem is mounted locally.
+C
+switch ( AIX )
+case unicos:
+case unicosmk:
+if ( -e ~wallcraf/bin/pget_NAVO ) then
+if ( -e ~wallcraf/bin/pget ) then
+setenv pget ~wallcraf/bin/pget
+setenv pput ~wallcraf/bin/pput
+else
+breaksw
+C
+C --- input files from file server.
+C
+touch regional.depth.a regional.depth.b
+if ( -z regional.depth.a ) then
+if ( -z regional.depth.b ) then
+C
+touch regional.grid.a regional.grid.b
+if ( -z regional.grid.a ) then
+if ( -z regional.grid.b ) then
+C
+if ( ! -e ./wind ) then
+C
+C --- Climatological atmospheric forcing.
+C
+setenv FN coads
+touch forcing.tauewd.a forcing.taunwd.a forcing.wndspd.a
+touch forcing.radflx.a forcing.shwflx.a forcing.vapmix.a forcing.precip.a
+touch forcing.airtmp.a forcing.seatmp.a forcing.surtmp.a
+touch forcing.tauewd.b forcing.taunwd.b forcing.wndspd.b
+touch forcing.radflx.b forcing.shwflx.b forcing.vapmix.b forcing.precip.b
+touch forcing.airtmp.b forcing.seatmp.b forcing.surtmp.b
+if ( -z forcing.tauewd.a ) then
+if ( -z forcing.tauewd.b ) then
+if ( -z forcing.taunwd.a ) then
+if ( -z forcing.taunwd.b ) then
+if ( -z forcing.wndspd.a ) then
+if ( -z forcing.wndspd.b ) then
+if ( -z forcing.vapmix.a ) then
+if ( -z forcing.vapmix.b ) then
+setenv AO 
+if ( -z forcing.airtmp.a ) then
+if ( -z forcing.airtmp.b ) then
+setenv PO _zero
+if ( -z forcing.precip.a ) then
+if ( -z forcing.precip.b ) then
+setenv FO 
+if ( -z forcing.radflx.a ) then
+if ( -z forcing.radflx.b ) then
+if ( -z forcing.shwflx.a ) then
+if ( -z forcing.shwflx.b ) then
+if ( -z forcing.surtmp.a ) then
+[1] 368870
+endif
+if ( -z forcing.surtmp.b ) then
+[2] 442498
+endif
+/u/home/wallcraf/bin/pget /u/home/wallcraf/hycom/ATLb2.00/expt_01.6/dataT03/../../force/coads/surtmp.b forcing.surtmp.b
+setenv FS RS_SST-mn6hr
+if ( -z forcing.seatmp.a ) then
+[3] 479412
+endif
+/u/home/wallcraf/bin/pget /u/home/wallcraf/hycom/ATLb2.00/expt_01.6/dataT03/../../force/RS_SST-mn6hr/seatmp.a forcing.seatmp.a
+if ( -z forcing.seatmp.b ) then
+[4] 557216
+endif
+e/wallcraf/bin/pget /u/home/wallcraf/hycom/ATLb2.00/expt_01.6/dataT03/../../force/RS_SST-mn6hr/seatmp.b forcing.seatmp.b
+endif
+C
+C --- time-invarent heat flux offset
+C
+setenv OF _418i
+if ( _418i !=  ) then
+touch forcing.offlux.a
+touch forcing.offlux.b
+if ( -z forcing.offlux.a ) then
+[5] 327822
+endif
+/u/home/wallcraf/bin/pget /u/home/wallcraf/hycom/ATLb2.00/expt_01.6/dataT03/../../force/coads/offlux_418i.a forcing.offlux.a
+if ( -z forcing.offlux.b ) then
+[6] 467174
+endif
+endif
+C
+touch forcing.rivers.a
+touch forcing.rivers.b
+if ( -z forcing.rivers.a ) then
+[7] 565276
+endif
+if ( -z forcing.rivers.b ) then
+[8] 237790
+endif
+/u/home/wallcraf/bin/pget /u/home/wallcraf/hycom/ATLb2.00/expt_01.6/dataT03/../../force/rivers/rivers_01.b forcing.rivers.b
+C
+touch forcing.kpar.a
+rcp vincent:/u/home/wallcraf/hycom/ATLb2.00/expt_01.6/dataT03/../../force/RS_SST-mn6hr/seatmp.a forcing.seatmp.a
+rcp vincent:/u/home/wallcraf/hycom/ATLb2.00/expt_01.6/dataT03/../../force/RS_SST-mn6hr/seatmp.b forcing.seatmp.b
+touch forcing.kpar.b
+if ( -z forcing.kpar.a ) then
+[9] 339984
+/u/home/wallcraf/bin/pget /u/home/wallcraf/hycom/ATLb2.00/expt_01.6/dataT03/../../force/seawifs/kpar.a forcing.kpar.a
+if ( -z forcing.kpar.b ) then
+/u/home/wallcraf/bin/pget /u/home/wallcraf/hycom/ATLb2.00/expt_01.6/dataT03/../../force/seawifs/kpar.b forcing.kpar.b
+rcp vincent:/u/home/wallcraf/hycom/ATLb2.00/expt_01.6/dataT03/../../force/rivers/rivers_01.a forcing.rivers.a
+[10] 618732
+rcp vincent:/u/home/wallcraf/hycom/ATLb2.00/expt_01.6/dataT03/../../force/rivers/rivers_01.b forcing.rivers.b
+endif
+C
+rcp vincent:/u/home/wallcraf/hycom/ATLb2.00/force/coads/surtmp.b forcing.surtmp.b
+touch relax.rmu.a relax.saln.a relax.temp.a relax.intf.a
+rcp vincent:/u/home/wallcraf/hycom/ATLb2.00/force/coads/offlux_418i.b forcing.offlux.b
+rcp vincent:/u/home/wallcraf/hycom/ATLb2.00/force/coads/surtmp.a forcing.surtmp.a
+rcp vincent:/u/home/wallcraf/hycom/ATLb2.00/expt_01.6/dataT03/../../force/seawifs/kpar.a forcing.kpar.a
+rcp vincent:/u/home/wallcraf/hycom/ATLb2.00/force/coads/offlux_418i.a forcing.offlux.a
+touch relax.rmu.b relax.saln.b relax.temp.b relax.intf.b
+if ( -z relax.rmu.a ) then
+if ( -z relax.rmu.b ) then
+if ( -z relax.saln.a ) then
+if ( -z relax.saln.b ) then
+if ( -z relax.temp.a ) then
+if ( -z relax.temp.b ) then
+if ( -z relax.intf.a ) then
+rcp vincent:/u/home/wallcraf/hycom/ATLb2.00/expt_01.6/dataT03/../../force/seawifs/kpar.b forcing.kpar.b
+if ( -z relax.intf.b ) then
+C
+touch tbaric.a
+touch tbaric.b
+if ( -z tbaric.a ) then
+[11] 512120
+endif
+if ( -z tbaric.b ) then
+[12] 405538
+endif
+C
+touch iso.sigma.a
+touch iso.sigma.b
+if ( -z iso.sigma.a ) then
+[13] 393224
+endif
+if ( -z iso.sigma.b ) then
+[14] 667678
+endif
+/u/home/wallcraf/bin/pget /u/home/wallcraf/hycom/ATLb2.00/expt_01.6/dataT03/../../relax/016/iso_sigma.b iso.sigma.b
+C
+C --- restart input
+C
+touch restart_in.a restart_in.b restart_out.a restart_out.b restart_out1.a restart_out1.b
+if ( -z restart_in.b ) then
+setenv RI        0.00
+else
+if ( -z restart_out.b ) then
+setenv RO        0.00
+else
+if ( -z restart_out1.b ) then
+setenv R1        0.00
+else
+setenv LI `awk  '{printf("%11.2f\n", $1)}' limits`
+awk {printf("%11.2f\n", $1)} limits
+C
+if ( `echo $LI | awk '{if ($1 <= 0.0) print 1; else print 0}'` ) then
+echo -180.00
+awk {if ($1 <= 0.0) print 1; else print 0}
+C --- no restart needed
+/bin/rm restart_in.a restart_in.b
+rcp vincent:/u/home/wallcraf/hycom/ATLb2.00/relax/010/tbaric.a tbaric.a
+rcp vincent:/u/home/wallcraf/hycom/ATLb2.00/relax/010/iso_sigma.a iso.sigma.a
+rcp vincent:/u/home/wallcraf/hycom/ATLb2.00/relax/010/tbaric.b tbaric.b
+rcp vincent:/u/home/wallcraf/hycom/ATLb2.00/relax/010/iso_sigma.b iso.sigma.b
+/bin/rm restart_out.a restart_out.b
+/bin/rm restart_out1.a restart_out1.b
+else if ( `echo $LI $RI | awk '{if ($1-0.1 < $2 && $1+0.1 > $2) print 1; else print 0}'` ) then
+C
+C --- model executable
+C
+if ( 0 == 0 && 3 == 0 ) then
+if ( 0 == 0 ) then
+setenv TYPE omp
+else if ( 3 == 0 ) then
+[15] 307252
+/bin/cp /u/home/wallcraf/hycom/ATLb2.00/expt_01.6/dataT03/../../src_2.1.34_22_omp/hycom .
+C
+C --- summary printout
+C
+touch summary_out
+/bin/mv summary_out summary_old
+C
+C --- heat transport output
+C
+touch flxdp_out.a flxdp_out.b
+/bin/mv flxdp_out.a flxdp_old.a
+/bin/mv flxdp_out.b flxdp_old.b
+C
+touch ovrtn_out
+/bin/mv ovrtn_out ovrtn_old
+C
+C --- clean up old archive files, typically from batch system rerun.
+rcp: /u/home/wallcraf/hycom/ATLb2.00/expt_01.6/dataT03/../../force/RS_SST-mn6hr/seatmp.a: No such file or directory
+C
+mkdir KEEP
+mkdir: 0653-358 Cannot create KEEP.
+KEEP: Do not specify an existing file.
+touch archv.dummy.b
+FAILED: rcp vincent:/u/home/wallcraf/hycom/ATLb2.00/expt_01.6/dataT03/../../force/RS_SST-mn6hr/seatmp.a forcing.seatmp.a
+foreach f ( arch* )
+
+[3]    Done                 /u/home/wallcraf/bin/pget  ...
+/bin/mv archv.dummy.b KEEP/archv.dummy.b
+rcp: /u/home/wallcraf/hycom/ATLb2.00/expt_01.6/dataT03/../../force/rivers/rivers_01.a: No such file or directory
+end
+C
+FAILED: rcp vincent:/u/home/wallcraf/hycom/ATLb2.00/expt_01.6/dataT03/../../force/rivers/rivers_01.a forcing.rivers.a
+C --- Nesting input archive files.
+[7]    Done                 /u/home/wallcraf/bin/pget  ...
+C
+if ( -e ./nest ) then
+C
+[15]   Done                 /bin/cp  ...
+C --- let all file copies complete.
+C
+rcp: /u/home/wallcraf/hycom/ATLb2.00/expt_01.6/dataT03/../../force/RS_SST-mn6hr/seatmp.b: No such file or directory
+wait
+FAILED: rcp vincent:/u/home/wallcraf/hycom/ATLb2.00/expt_01.6/dataT03/../../force/RS_SST-mn6hr/seatmp.b forcing.seatmp.b
+
+[4]    Done                 /u/home/wallcraf/bin/pget  ...
+rcp: /u/home/wallcraf/hycom/ATLb2.00/expt_01.6/dataT03/../../force/rivers/rivers_01.b: No such file or directory
+rcp: /u/home/wallcraf/hycom/ATLb2.00/force/coads/offlux_418i.b: No such file or directory
+rcp: /u/home/wallcraf/hycom/ATLb2.00/expt_01.6/dataT03/../../force/seawifs/kpar.a: No such file or directory
+rcp: /u/home/wallcraf/hycom/ATLb2.00/force/coads/surtmp.b: No such file or directory
+FAILED: rcp vincent:/u/home/wallcraf/hycom/ATLb2.00/expt_01.6/dataT03/../../force/rivers/rivers_01.b forcing.rivers.b
+
+[8]    Done                 /u/home/wallcraf/bin/pget  ...
+rcp: /u/home/wallcraf/hycom/ATLb2.00/expt_01.6/dataT03/../../force/seawifs/kpar.b: No such file or directory
+FAILED: rcp vincent:/u/home/wallcraf/hycom/ATLb2.00/force/coads/offlux_418i.b forcing.offlux.b
+
+[6]    Done                 /u/home/wallcraf/bin/pget  ...
+rcp: /u/home/wallcraf/hycom/ATLb2.00/force/coads/surtmp.a: No such file or directory
+FAILED: rcp vincent:/u/home/wallcraf/hycom/ATLb2.00/force/coads/surtmp.b forcing.surtmp.b
+
+[2]    Done                 /u/home/wallcraf/bin/pget  ...
+FAILED: rcp vincent:/u/home/wallcraf/hycom/ATLb2.00/expt_01.6/dataT03/../../force/seawifs/kpar.a forcing.kpar.a
+FAILED: rcp vincent:/u/home/wallcraf/hycom/ATLb2.00/force/coads/surtmp.a forcing.surtmp.a
+
+[9]    Done                 /u/home/wallcraf/bin/pget  ...
+FAILED: rcp vincent:/u/home/wallcraf/hycom/ATLb2.00/expt_01.6/dataT03/../../force/seawifs/kpar.b forcing.kpar.b
+
+[1]    Done                 /u/home/wallcraf/bin/pget  ...
+
+[10]   Done                 /u/home/wallcraf/bin/pget  ...
+rcp: /u/home/wallcraf/hycom/ATLb2.00/force/coads/offlux_418i.a: No such file or directory
+FAILED: rcp vincent:/u/home/wallcraf/hycom/ATLb2.00/force/coads/offlux_418i.a forcing.offlux.a
+
+[5]    Done                 /u/home/wallcraf/bin/pget  ...
+rcp: /u/home/wallcraf/hycom/ATLb2.00/relax/010/iso_sigma.b: No such file or directory
+FAILED: rcp vincent:/u/home/wallcraf/hycom/ATLb2.00/relax/010/iso_sigma.b iso.sigma.b
+
+[14]   Done                 /u/home/wallcraf/bin/pget  ...
+rcp: /u/home/wallcraf/hycom/ATLb2.00/relax/010/tbaric.b: No such file or directory
+FAILED: rcp vincent:/u/home/wallcraf/hycom/ATLb2.00/relax/010/tbaric.b tbaric.b
+
+[12]   Done                 /u/home/wallcraf/bin/pget  ...
+rcp: /u/home/wallcraf/hycom/ATLb2.00/relax/010/iso_sigma.a: No such file or directory
+FAILED: rcp vincent:/u/home/wallcraf/hycom/ATLb2.00/relax/010/iso_sigma.a iso.sigma.a
+
+[13]   Done                 /u/home/wallcraf/bin/pget  ...
+rcp: /u/home/wallcraf/hycom/ATLb2.00/relax/010/tbaric.a: No such file or directory
+FAILED: rcp vincent:/u/home/wallcraf/hycom/ATLb2.00/relax/010/tbaric.a tbaric.a
+
+[11]   Done                 /u/home/wallcraf/bin/pget  ...
+C
+C --- zero file length means no rivers.
+C
+if ( -z forcing.rivers.a ) then
+/bin/rm forcing.rivers.a forcing.rivers.b
+endif
+C
+C --- Just in time atmospheric forcing.
+C
+if ( -e ./wind ) then
+C
+C --- Nesting input archive files for next segment.
+C
+if ( -e ./nest ) then
+C
+chmod ug+x hycom
+/bin/ls -laFq
+total 32320
+drwxr-x---   3 wallcraf NRLSS018      32768 Oct 11 11:35 ./
+drwxr-x---   5 wallcraf NRLSS018      32768 Oct 11 11:35 ../
+drwxr-x---   2 wallcraf NRLSS018      32768 Oct 11 11:35 KEEP/
+-rw-r-----   1 wallcraf NRLSS018         14 Oct 11 11:35 PIPE_SLAVE
+-rw-r-----   1 wallcraf NRLSS018       9896 Oct 11 11:35 blkdat.input
+-rw-r-----   1 wallcraf NRLSS018          0 Oct 10 17:09 core
+-rw-r-----   1 wallcraf NRLSS018          0 Oct 11 11:35 flxdp_old.a
+-rw-r-----   1 wallcraf NRLSS018          0 Oct 11 11:35 flxdp_old.b
+-rw-r-----   1 wallcraf NRLSS018     196608 Oct 11 11:35 forcing.airtmp.a
+-rw-r-----   1 wallcraf NRLSS018       1108 Oct 11 11:35 forcing.airtmp.b
+-rw-r-----   1 wallcraf NRLSS018          0 Oct 11 11:35 forcing.kpar.a
+-rw-r-----   1 wallcraf NRLSS018          0 Oct 11 11:35 forcing.kpar.b
+-rw-r-----   1 wallcraf NRLSS018          0 Oct 11 11:35 forcing.offlux.a
+-rw-r-----   1 wallcraf NRLSS018          0 Oct 11 11:35 forcing.offlux.b
+-rw-r-----   1 wallcraf NRLSS018     196608 Oct 11 11:35 forcing.precip.a
+-rw-r-----   1 wallcraf NRLSS018       1108 Oct 11 11:35 forcing.precip.b
+-rw-r-----   1 wallcraf NRLSS018     196608 Oct 11 11:35 forcing.radflx.a
+-rw-r-----   1 wallcraf NRLSS018       1108 Oct 11 11:35 forcing.radflx.b
+-rw-r-----   1 wallcraf NRLSS018          0 Oct 11 11:35 forcing.seatmp.a
+-rw-r-----   1 wallcraf NRLSS018          0 Oct 11 11:35 forcing.seatmp.b
+-rw-r-----   1 wallcraf NRLSS018     196608 Oct 11 11:35 forcing.shwflx.a
+-rw-r-----   1 wallcraf NRLSS018       1108 Oct 11 11:35 forcing.shwflx.b
+-rw-r-----   1 wallcraf NRLSS018          0 Oct 11 11:35 forcing.surtmp.a
+-rw-r-----   1 wallcraf NRLSS018          0 Oct 11 11:35 forcing.surtmp.b
+-rw-r-----   1 wallcraf NRLSS018     196608 Oct 11 11:35 forcing.tauewd.a
+-rw-r-----   1 wallcraf NRLSS018       1108 Oct 11 11:35 forcing.tauewd.b
+-rw-r-----   1 wallcraf NRLSS018     196608 Oct 11 11:35 forcing.taunwd.a
+-rw-r-----   1 wallcraf NRLSS018       1108 Oct 11 11:35 forcing.taunwd.b
+-rw-r-----   1 wallcraf NRLSS018     196608 Oct 11 11:35 forcing.vapmix.a
+-rw-r-----   1 wallcraf NRLSS018       1108 Oct 11 11:35 forcing.vapmix.b
+-rw-r-----   1 wallcraf NRLSS018     196608 Oct 11 11:35 forcing.wndspd.a
+-rw-r-----   1 wallcraf NRLSS018       1108 Oct 11 11:35 forcing.wndspd.b
+-rwxr-x---   1 wallcraf NRLSS018    1587469 Oct 11 11:35 hycom*
+-rw-r-----   1 wallcraf NRLSS018          0 Oct 11 11:35 iso.sigma.a
+-rw-r-----   1 wallcraf NRLSS018          0 Oct 11 11:35 iso.sigma.b
+-rw-r-----   1 wallcraf NRLSS018         43 Oct 11 11:35 limits
+-rw-r-----   1 wallcraf NRLSS018          0 Oct 11 11:35 ovrtn_old
+-rw-r-----   1 wallcraf NRLSS018        103 Oct 11 11:35 ports.input
+-rw-r-----   1 wallcraf NRLSS018      16384 Oct 11 11:35 regional.depth.a
+-rw-r-----   1 wallcraf NRLSS018        437 Oct 11 11:35 regional.depth.b
+-rw-r-----   1 wallcraf NRLSS018     311296 Oct 11 11:35 regional.grid.a
+-rw-r-----   1 wallcraf NRLSS018       1073 Oct 11 11:35 regional.grid.b
+-rw-r-----   1 wallcraf NRLSS018    4325376 Oct 11 11:35 relax.intf.a
+-rw-r-----   1 wallcraf NRLSS018      20728 Oct 11 11:35 relax.intf.b
+-rw-r-----   1 wallcraf NRLSS018      16384 Oct 11 11:35 relax.rmu.a
+-rw-r-----   1 wallcraf NRLSS018        451 Oct 11 11:35 relax.rmu.b
+-rw-r-----   1 wallcraf NRLSS018    4325376 Oct 11 11:35 relax.saln.a
+-rw-r-----   1 wallcraf NRLSS018      20728 Oct 11 11:35 relax.saln.b
+-rw-r-----   1 wallcraf NRLSS018    4325376 Oct 11 11:35 relax.temp.a
+-rw-r-----   1 wallcraf NRLSS018      20728 Oct 11 11:35 relax.temp.b
+-rw-r-----   1 wallcraf NRLSS018          0 Oct 11 11:35 summary_old
+-rw-r-----   1 wallcraf NRLSS018          0 Oct 11 11:35 tbaric.a
+-rw-r-----   1 wallcraf NRLSS018          0 Oct 11 11:35 tbaric.b
+-rw-r-----   1 wallcraf NRLSS018         42 Oct 11 11:35 tracer.input
+C
+if ( -e ./nest ) then
+C
+C --- Check to make sure restart file is there
+C
+if ( `echo $LI | awk '{print ($1 > 0.0)}'` && -z restart_in.a ) then
+echo -180.00
+awk {print ($1 > 0.0)}
+C
+if ( 0 == 0 ) then
+C
+C --- run the model, without MPI or SHMEM
+C
+if ( 3 == 0 ) then
+C
+switch ( AIX )
+C
+C --- 3 CPUs/THREADs, if compiled for IBM OpenMP.
+C
+/bin/rm -f core
+touch core
+setenv SPINLOOPTIME 500
+setenv YIELDLOOPTIME 500
+setenv XLSMPOPTS parthds=3:spins=0:yields=0
+./hycom
+slave opening pipe for writing: ../hycom_pipe
+ 
+COADS forcing: precip_zero; SSS relax;                                          
+boundary relax; iniflg=2; KPP mixed layer; Jerlov IA;                           
+Z(22): dp00/f/x=3m/1.125/12m; ATLb2.00/src_2.1.34_22.                           
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+ 
+iversn =    21
+iexpt  =    16
+ 
+idm    =    57
+jdm    =    52
+ 
+itest  =    38
+jtest  =    17
+ 
+kdm    =    22
+nhybrd =    22
+nsigma =     0
+dp00   =    3.0000 m
+dp00x  =   12.0000 m
+dp00f  =    1.1250 
+ds00   =    3.0000 m
+ds00x  =   12.0000 m
+ds00f  =    1.1250 
+dp00i  =    1.0000 m
+isotop =    6.0000 m
+ 
+saln0  =   35.0000 psu
+locsig =     F
+kapref =     0
+thflag =     0
+thbase =   25.0000 sigma-0
+ 
+vsigma =     F
+sigma  =   19.5000 sigma-0
+sigma  =   20.2500 sigma-0
+sigma  =   21.0000 sigma-0
+sigma  =   21.7500 sigma-0
+sigma  =   22.5000 sigma-0
+sigma  =   23.2500 sigma-0
+sigma  =   24.0000 sigma-0
+sigma  =   24.7000 sigma-0
+sigma  =   25.2800 sigma-0
+sigma  =   25.7700 sigma-0
+sigma  =   26.1800 sigma-0
+sigma  =   26.5200 sigma-0
+sigma  =   26.8000 sigma-0
+sigma  =   27.0300 sigma-0
+sigma  =   27.2200 sigma-0
+sigma  =   27.3800 sigma-0
+sigma  =   27.5200 sigma-0
+sigma  =   27.6400 sigma-0
+sigma  =   27.7400 sigma-0
+sigma  =   27.8200 sigma-0
+sigma  =   27.8800 sigma-0
+sigma  =   27.9400 sigma-0
+ 
+iniflg =     2
+jerlv0 =     2
+ 
+yrflag =     0
+dsurfq =   30.0000 days
+diagfq =   30.0000 days
+meanfq =    0.0000 days
+rstrfq =  180.0000 days
+bnstfq =    0.0000 days
+nestfq =    0.0000 days
+baclin = 5760.0000 sec
+batrop =  360.0000 sec
+ 
+hybrlx =    1.0000 time steps
+hybflg =     1
+advflg =     1
+advtyp =     2
+slip   =   -1.0000 (-1=no-slip, +1=free-slip)
+visco2 =    0.1000 
+visco4 =    0.0000 
+veldf2 =    0.0300 m/s
+veldf4 =    0.0100 m/s
+thkdf2 =    0.0000 m/s
+thkdf4 =    0.0500 m/s (-ve if variable)
+temdf2 =    0.0150 m/s
+temdfc =    1.0000 (0.0,1.0 conserve dens,temp resp.)
+vertmx =    0.0000 m/s
+cbar   =    0.1000 m/s
+cb     =    0.0030 
+ 
+thkbot =   10.0000 m
+sigjmp =    0.0200 kg/m**3
+tmljmp =    0.2000 degC
+thkmls =   19.2000 m
+thkmlt =    0.0000 m
+thkriv =    6.0000 m
+ 
+iceflg =     0
+tfrz_0 =   -1.8000 degC
+tfrz_s =   -0.0000 degC/psu
+ticegr =    2.0000 degC/m
+hicemn =    0.5000 m
+hicemx =   10.0000 m
+ 
+ntracr =     0
+trcflg =     0
+ 
+tsofrq =    10
+tofset =    0.0000 degC/century
+sofset =    0.0000  psu/century
+ 
+mlflag =     1
+pensol =     T
+dtrate =  999.0000 m/day
+thkmin =   19.2000 m
+dypflg =     1
+mixfrq =    64
+diapyc =    0.0000 m**2/s**2
+rigr   =    0.2500 
+ribc   =    0.6500 
+rinfty =    0.7000 
+ricr   =    0.4500 
+bldmin =    0.0000 m
+bldmax = 1200.0000 m
+cekman =    0.7000 
+cmonob =    1.0000 
+bblkpp =     F
+shinst =     T
+dbdiff =     T
+nonloc =     T
+latdiw =     F
+botdiw =     F
+difsmo =     F
+difout =     F
+difm0  =    0.0050 m**2/s
+difs0  =    0.0050 m**2/s
+difmiw =    0.0001 m**2/s
+difsiw =    0.0000 m**2/s
+dsfmax =    0.0010 m**2/s
+rrho0  =    1.9000 
+cs     =   98.9600 
+cstar  =   10.0000 
+cv     =    0.0000 
+c11    =    5.0000 
+hblflg =     2
+niter  =     2
+ 
+clmflg =    12
+lbflag =     0
+wndflg =     1
+ustflg =     1
+flxflg =     1
+empflg =     1
+sssflg =     1
+lwflag =     1
+sstflg =     0
+icmflg =     0
+flxoff =     F
+flxsmo =     F
+ 
+relax  =     T
+trcrlx =     F
+priver =     F
+epmass =     F
+ 
+ 
+ ddsurf =  30.0000000000000000 450
+ ddiagf =  30.0000000000000000 450
+ drstrf =  180.000000000000000 2700
+ 
+ turb. flux parameters:
+ thkdf2,temdf2 = 0.00E+00 1.50E-02
+ thkdf4        = 5.00E-02
+ veldf2,visco2 = 3.00E-02 1.00E-01
+ veldf4,visco4 = 1.00E-02 0.00E+00
+ diapyc,vertmx = 0.00E+00 0.00E+00
+
+  16 barotropic steps per baroclinic time step
+
+ reading grid file from regional.grid.[ab]
+    0    'mapflg' = map flag (-1=unknown,0=mercator,2=uniform,4=f-plane)
+plon:  min,max =       263.00000      375.00000
+plat:  min,max =       -19.60579       63.11375
+pscx:  min,max =    100565.21875   222389.87500
+pscy:  min,max =    100571.95312   222378.59375
+qscx:  min,max =    102139.75781   222356.01562
+qscy:  min,max =    102146.85938   222344.73438
+uscx:  min,max =    100565.21875   222389.87500
+uscy:  min,max =    100571.95312   222378.59375
+vscx:  min,max =    102139.75781   222356.01562
+vscy:  min,max =    102146.85938   222344.73438
+cori:  min,max =   -0.0000511824   0.0001295491
+
+ i,j=   38   17 plat=  11.913 corio,scux,vy= 0.000027661 217599.44 218343.14
+
+ reading bathymetry file from regional.depth.[ab]
+
+ North Atlantic topography from ETOPO5 5-minute data set.                       
+ 56 x 51 depth values (idm,jdm = 57,52).                                        
+ 2.0000 deg. mercator resolution, with equat=11.000.                            
+ lon: 97.000W to 13.000E.  lat: 19.606S to 62.195N.                             
+                                                                                
+ min,max depth =    199.556  5837.000                                            
+
+bigrid: nreg = 0
+bigrid: closed basin
+
+ip array, cols    1 --   57
+  52 000000000000000000000000000000000000000000000000000000000
+  51 00000000000000000*******00000**********************000000
+  50 00000000000000000********000***********************000000
+  49 00000000000000000*********0************************000000
+  48 000000000000000000*********************************000000
+  47 000000000000000000********************************0000000
+  46 0000000000000000000***************************00000000000
+  45 0000000000000000000***************************00000000000
+  44 00000000000000000000*************************000000000000
+  43 00000000000000000000*************************000000000000
+  42 000000000000000000000************************000000000000
+  41 000000000000000000000*************************00000000000
+  40 0000000000000000000000*************************0000000000
+  39 0000000000000000000000**************************000000000
+  38 0000000000000000000*****************************000000000
+  37 00000000000000000*******************************000000000
+  36 0000000000000000********************************000000000
+  35 000000000000000********************************0000000000
+  34 0000000000000********************************000000000000
+  33 000000000000*********************************000000000000
+  32 00000000000**********************************000000000000
+  31 00000000000**********************************000000000000
+  30 0000000000***********************************000000000000
+  29 0000000000***********************************000000000000
+  28 000000000***********************************0000000000000
+  27 000000000***********************************0000000000000
+  26 0******00**********************************00000000000000
+  25 0*******0**********************************00000000000000
+  24 ******************************************000000000000000
+  23 ******************************************000000000000000
+  22 0****************************************0000000000000000
+  21 00***************************************0000000000000000
+  20 00000************************************0000000000000000
+  19 000000***********************************0000000000000000
+  18 0000000**********************************0000000000000000
+  17 0000000***********************************000000000000000
+  16 00000000****000***************************000000000000000
+  15 0000000000000000000************************00000000000000
+  14 000000000000000000000*******************************00000
+  13 00000000000000000000000******************************0000
+  12 000000000000000000000000******************************000
+  11 0000000000000000000000000*****************************000
+  10 00000000000000000000000000****************************000
+   9 0000000000000000000000000000***************************00
+   8 000000000000000000000000000000*************************00
+   7 0000000000000000000000000000000*************************0
+   6 000000000000000000000000000000**************************0
+   5 000000000000000000000000000000**************************0
+   4 00000000000000000000000000000**************************00
+   3 00000000000000000000000000000**************************00
+   2 00000000000000000000000000000**************************00
+   1 00000000000000000000000000000**************************00
+ 
+
+ mean basin depth (m) and area (10^6 km^2):   3556.6     54.77
+ 
+dp0k( 1) =   3.00 m    thkns =   3.00 m    depth =    3.00 m
+dp0k( 2) =   3.38 m    thkns =   3.38 m    depth =    6.38 m
+dp0k( 3) =   3.80 m    thkns =   3.80 m    depth =   10.17 m
+dp0k( 4) =   4.27 m    thkns =   4.27 m    depth =   14.44 m
+dp0k( 5) =   4.81 m    thkns =   4.81 m    depth =   19.25 m
+dp0k( 6) =   5.41 m    thkns =   5.41 m    depth =   24.65 m
+dp0k( 7) =   6.08 m    thkns =   6.08 m    depth =   30.74 m
+dp0k( 8) =   6.84 m    thkns =   6.84 m    depth =   37.58 m
+dp0k( 9) =   7.70 m    thkns =   7.70 m    depth =   45.28 m
+dp0k(10) =   8.66 m    thkns =   8.66 m    depth =   53.94 m
+dp0k(11) =   9.74 m    thkns =   9.74 m    depth =   63.68 m
+dp0k(12) =  10.96 m    thkns =  10.96 m    depth =   74.64 m
+dp0k(13) =  12.00 m    thkns =  12.00 m    depth =   86.64 m
+dp0k(14) =  12.00 m    thkns =  12.00 m    depth =   98.64 m
+dp0k(15) =  12.00 m    thkns =  12.00 m    depth =  110.64 m
+dp0k(16) =  12.00 m    thkns =  12.00 m    depth =  122.64 m
+dp0k(17) =  12.00 m    thkns =  12.00 m    depth =  134.64 m
+dp0k(18) =  12.00 m    thkns =  12.00 m    depth =  146.64 m
+dp0k(19) =  12.00 m    thkns =  12.00 m    depth =  158.64 m
+dp0k(20) =  12.00 m    thkns =  12.00 m    depth =  170.64 m
+dp0k(21) =  12.00 m    thkns =  12.00 m    depth =  182.64 m
+dp0k(22) =  12.00 m    thkns =  12.00 m    depth =  194.64 m
+ 
+ds0k( 1) =   3.00 m    thkns =   3.00 m    depth =    3.00 m
+ 
+  now opening forcing fields ...
+ 
+COADS monthly, MKS
+Streses on u and v grids
+i/jdm =   57   52
+ tau_ewd: month,range = 01  -1.3334833E-01   2.1876583E-01                      
+ 
+COADS monthly, MKS
+Streses on u and v grids
+i/jdm =   57   52
+ tau_nwd: month,range = 01  -1.1931129E-01   6.8772867E-02                      
+ 
+COADS monthly, MKS
+Minimum wind speed is  0.00 m/s
+i/jdm =   57   52
+ wnd_spd: month,range = 01   5.9555173E-01   1.1121940E+01                      
+ 
+COADS monthly, MKS
+i/jdm =   57   52
+  airtmp: month,range = 01  -9.2744188E+00   2.7821655E+01                      
+ 
+COADS monthly, MKS
+i/jdm =   57   52
+  vapmix: month,range = 01   1.6396792E-03   1.9072073E-02                      
+ 
+Zero Precipitation
+i/jdm =   57   52
+  precip: month,range = 01   0.0000000E+00   0.0000000E+00                      
+ 
+ ***** no surface salinity flux *****
+ 
+ 
+COADS monthly, MKS
+No radiation flux correction
+i/jdm =   57   52
+  radflx: month,range = 01  -8.5586349E+01   1.9592235E+02                      
+ 
+COADS monthly, MKS
+No radiation flux correction
+i/jdm =   57   52
+  shwflx: month,range = 01  -2.1830188E-01   2.4893423E+02                      
+  ...finished opening forcing fields
+  now opening rivers  field  ...
+ 
+ ***** no river precipitation *****
+ 
+  ...finished opening river   field 
+  now opening relaxation fields ...
+ 
+Relaxation Mask
+N and S boundary: 5 grid points with 20 to 120 day e-folding time
+i/jdm =   57   52
+     rmu: range =    0.0000000E+00   5.7870369E-07                              
+ 
+Levitus (NOAA World Ocean Atlas 1994) Climatology
+Expt 01.0  nhybrd=22 nsigma= 0 dp00s= 3.00 dp00= 3.00 dp00x=12.00 dp00f=1.125
+Layered averages w.r.t. Sigma-0
+Potential Temperature
+i/jdm =   57   52
+ tem: month,layer,dens,range = 01  01 19.500  -1.3065165E+00   2.8575491E+01    
+ tem: month,layer,dens,range = 01  02 20.250  -1.2702538E+00   2.8504255E+01    
+ tem: month,layer,dens,range = 01  03 21.000  -1.2175080E+00   2.8400642E+01    
+ tem: month,layer,dens,range = 01  04 21.750  -1.2175080E+00   2.8245684E+01    
+ tem: month,layer,dens,range = 01  05 22.500  -1.3508630E+00   2.8064482E+01    
+ tem: month,layer,dens,range = 01  06 23.250  -1.3683341E+00   2.8049194E+01    
+ tem: month,layer,dens,range = 01  07 24.000  -1.5255549E+00   2.7653908E+01    
+ tem: month,layer,dens,range = 01  08 24.700  -1.5350133E+00   2.6238348E+01    
+ tem: month,layer,dens,range = 01  09 25.280  -1.6791806E+00   2.4550365E+01    
+ tem: month,layer,dens,range = 01  10 25.770  -1.7453371E+00   2.3229923E+01    
+ tem: month,layer,dens,range = 01  11 26.180  -1.7585579E+00   2.1195923E+01    
+ tem: month,layer,dens,range = 01  12 26.520  -1.4916008E+00   1.9421377E+01    
+ tem: month,layer,dens,range = 01  13 26.800  -1.2591083E+00   1.9421377E+01    
+ tem: month,layer,dens,range = 01  14 27.030  -2.8819230E-01   1.9421377E+01    
+ tem: month,layer,dens,range = 01  15 27.220  -3.2242790E-01   1.9421377E+01    
+ tem: month,layer,dens,range = 01  16 27.380   1.2967050E-01   1.9421377E+01    
+ tem: month,layer,dens,range = 01  17 27.520   1.2967050E-01   1.9421377E+01    
+ tem: month,layer,dens,range = 01  18 27.640   1.2967050E-01   1.9421377E+01    
+ tem: month,layer,dens,range = 01  19 27.740   1.2967050E-01   1.9421377E+01    
+ tem: month,layer,dens,range = 01  20 27.820   1.2967050E-01   1.9421377E+01    
+ tem: month,layer,dens,range = 01  21 27.880   1.2967050E-01   1.9421377E+01    
+ tem: month,layer,dens,range = 01  22 27.940  -5.2493894E-01   1.9421377E+01    
+ 
+Levitus (NOAA World Ocean Atlas 1994) Climatology
+Expt 01.0  nhybrd=22 nsigma= 0 dp00s= 3.00 dp00= 3.00 dp00x=12.00 dp00f=1.125
+Layered averages w.r.t. Sigma-0
+Salinity
+i/jdm =   57   52
+ sal: month,layer,dens,range = 01  01 19.500   2.3808268E+01   3.7464054E+01    
+ sal: month,layer,dens,range = 01  02 20.250   3.0412745E+01   3.7465092E+01    
+ sal: month,layer,dens,range = 01  03 21.000   3.0682959E+01   3.7466606E+01    
+ sal: month,layer,dens,range = 01  04 21.750   3.0682961E+01   3.7466606E+01    
+ sal: month,layer,dens,range = 01  05 22.500   3.0725220E+01   3.7464390E+01    
+ sal: month,layer,dens,range = 01  06 23.250   3.0730766E+01   3.7464096E+01    
+ sal: month,layer,dens,range = 01  07 24.000   3.0824089E+01   3.7463955E+01    
+ sal: month,layer,dens,range = 01  08 24.700   3.0829725E+01   3.7463947E+01    
+ sal: month,layer,dens,range = 01  09 25.280   3.1529802E+01   3.7464184E+01    
+ sal: month,layer,dens,range = 01  10 25.770   3.2052444E+01   3.7509102E+01    
+ sal: month,layer,dens,range = 01  11 26.180   3.2527870E+01   3.7283886E+01    
+ sal: month,layer,dens,range = 01  12 26.520   3.2956120E+01   3.6728134E+01    
+ sal: month,layer,dens,range = 01  13 26.800   3.3310837E+01   3.7043221E+01    
+ sal: month,layer,dens,range = 01  14 27.030   3.3529041E+01   3.7168385E+01    
+ sal: month,layer,dens,range = 01  15 27.220   3.3529041E+01   3.7168385E+01    
+ sal: month,layer,dens,range = 01  16 27.380   3.3529041E+01   3.7168385E+01    
+ sal: month,layer,dens,range = 01  17 27.520   3.3529041E+01   3.7168385E+01    
+ sal: month,layer,dens,range = 01  18 27.640   3.3529041E+01   3.7168385E+01    
+ sal: month,layer,dens,range = 01  19 27.740   3.3529041E+01   3.7168385E+01    
+ sal: month,layer,dens,range = 01  20 27.820   3.3529041E+01   3.7168385E+01    
+ sal: month,layer,dens,range = 01  21 27.880   3.3529041E+01   3.7168385E+01    
+ sal: month,layer,dens,range = 01  22 27.940   3.3529041E+01   3.7168385E+01    
+ 
+Levitus (NOAA World Ocean Atlas 1994) Climatology
+Expt 01.0  nhybrd=22 nsigma= 0 dp00s= 3.00 dp00= 3.00 dp00x=12.00 dp00f=1.125
+Layered averages w.r.t. Sigma-0
+Interface Depths
+i/jdm =   57   52
+ int: month,layer,dens,range = 01  01 19.500   0.0000000E+00   0.0000000E+00    
+ int: month,layer,dens,range = 01  02 20.250   2.9418000E+04   1.3640083E+05    
+ int: month,layer,dens,range = 01  03 21.000   6.2513250E+04   2.4515000E+05    
+ int: month,layer,dens,range = 01  04 21.750   9.9745406E+04   2.8238216E+05    
+ int: month,layer,dens,range = 01  05 22.500   1.4163158E+05   3.2426834E+05    
+ int: month,layer,dens,range = 01  06 23.250   1.8875353E+05   3.9224000E+05    
+ int: month,layer,dens,range = 01  07 24.000   2.4176572E+05   8.1397094E+05    
+ int: month,layer,dens,range = 01  08 24.700   3.0140444E+05   1.2254328E+06    
+ int: month,layer,dens,range = 01  09 25.280   3.6849797E+05   1.6199054E+06    
+ int: month,layer,dens,range = 01  10 25.770   4.4397822E+05   1.8702315E+06    
+ int: month,layer,dens,range = 01  11 26.180   5.2889350E+05   2.3291998E+06    
+ int: month,layer,dens,range = 01  12 26.520   6.2442319E+05   3.3709122E+06    
+ int: month,layer,dens,range = 01  13 26.800   7.3189412E+05   6.0931200E+06    
+ int: month,layer,dens,range = 01  14 27.030   8.4956612E+05   7.1461285E+06    
+ int: month,layer,dens,range = 01  15 27.220   9.6723812E+05   8.3351005E+06    
+ int: month,layer,dens,range = 01  16 27.380   1.0849101E+06   9.3464480E+06    
+ int: month,layer,dens,range = 01  17 27.520   1.2025821E+06   1.0811764E+07    
+ int: month,layer,dens,range = 01  18 27.640   1.3202541E+06   1.3025441E+07    
+ int: month,layer,dens,range = 01  19 27.740   1.4379261E+06   1.5705474E+07    
+ int: month,layer,dens,range = 01  20 27.820   1.5555981E+06   2.3789486E+07    
+ int: month,layer,dens,range = 01  21 27.880   1.9568418E+06   3.6131684E+07    
+ int: month,layer,dens,range = 01  22 27.940   1.9568418E+06   5.3589504E+07    
+  ...finished opening relaxation fields
+ rdrlax - month =  7 7
+ tem: month,layer,dens,range = 07  01 19.500   2.8657143E+00   2.9369673E+01    
+ tem: month,layer,dens,range = 07  02 20.250   2.6445973E+00   2.9307211E+01    
+ tem: month,layer,dens,range = 07  03 21.000   2.3229728E+00   2.9216356E+01    
+ tem: month,layer,dens,range = 07  04 21.750   2.3229728E+00   2.9216356E+01    
+ tem: month,layer,dens,range = 07  05 22.500   1.6953859E+00   2.9069651E+01    
+ tem: month,layer,dens,range = 07  06 23.250   1.6096910E+00   2.8896427E+01    
+ tem: month,layer,dens,range = 07  07 24.000   4.9567693E-01   2.7469702E+01    
+ tem: month,layer,dens,range = 07  08 24.700   4.0038532E-01   2.6145636E+01    
+ tem: month,layer,dens,range = 07  09 25.280  -7.5851434E-01   2.4801685E+01    
+ tem: month,layer,dens,range = 07  10 25.770  -1.6646845E+00   2.3166870E+01    
+ tem: month,layer,dens,range = 07  11 26.180  -1.9178749E+00   2.0732265E+01    
+ tem: month,layer,dens,range = 07  12 26.520  -1.6677066E+00   1.8659582E+01    
+ tem: month,layer,dens,range = 07  13 26.800  -1.5620947E+00   1.8647947E+01    
+ tem: month,layer,dens,range = 07  14 27.030  -8.3663267E-01   1.8647947E+01    
+ tem: month,layer,dens,range = 07  15 27.220  -8.0128932E-01   1.8647947E+01    
+ tem: month,layer,dens,range = 07  16 27.380  -8.0128932E-01   1.8647947E+01    
+ tem: month,layer,dens,range = 07  17 27.520  -8.0128932E-01   1.8647947E+01    
+ tem: month,layer,dens,range = 07  18 27.640  -8.0128932E-01   1.8647947E+01    
+ tem: month,layer,dens,range = 07  19 27.740  -8.0128932E-01   1.8647947E+01    
+ tem: month,layer,dens,range = 07  20 27.820  -8.0128932E-01   1.8647947E+01    
+ tem: month,layer,dens,range = 07  21 27.880  -8.0128932E-01   1.8647947E+01    
+ tem: month,layer,dens,range = 07  22 27.940  -8.0128932E-01   1.8647947E+01    
+ sal: month,layer,dens,range = 07  01 19.500   1.8931963E+01   3.7545372E+01    
+ sal: month,layer,dens,range = 07  02 20.250   2.9640791E+01   3.7544033E+01    
+ sal: month,layer,dens,range = 07  03 21.000   2.9920567E+01   3.7542091E+01    
+ sal: month,layer,dens,range = 07  04 21.750   2.9920567E+01   3.7542091E+01    
+ sal: month,layer,dens,range = 07  05 22.500   3.0395950E+01   3.7537663E+01    
+ sal: month,layer,dens,range = 07  06 23.250   3.0477800E+01   3.7537872E+01    
+ sal: month,layer,dens,range = 07  07 24.000   3.0894552E+01   3.7539551E+01    
+ sal: month,layer,dens,range = 07  08 24.700   3.1012806E+01   3.7539650E+01    
+ sal: month,layer,dens,range = 07  09 25.280   3.1557674E+01   3.7483273E+01    
+ sal: month,layer,dens,range = 07  10 25.770   3.2055946E+01   3.7484688E+01    
+ sal: month,layer,dens,range = 07  11 26.180   3.2522896E+01   3.7115925E+01    
+ sal: month,layer,dens,range = 07  12 26.520   3.2949604E+01   3.6841908E+01    
+ sal: month,layer,dens,range = 07  13 26.800   3.3298409E+01   3.7132610E+01    
+ sal: month,layer,dens,range = 07  14 27.030   3.3484467E+01   3.7295044E+01    
+ sal: month,layer,dens,range = 07  15 27.220   3.3616600E+01   3.7295044E+01    
+ sal: month,layer,dens,range = 07  16 27.380   3.3616600E+01   3.7295044E+01    
+ sal: month,layer,dens,range = 07  17 27.520   3.3616600E+01   3.7295044E+01    
+ sal: month,layer,dens,range = 07  18 27.640   3.3616600E+01   3.7295044E+01    
+ sal: month,layer,dens,range = 07  19 27.740   3.3616600E+01   3.7295044E+01    
+ sal: month,layer,dens,range = 07  20 27.820   3.3616600E+01   3.7295044E+01    
+ sal: month,layer,dens,range = 07  21 27.880   3.3616600E+01   3.7295044E+01    
+ sal: month,layer,dens,range = 07  22 27.940   3.3616600E+01   3.7295044E+01    
+ int: month,layer,dens,range = 07  01 19.500   0.0000000E+00   0.0000000E+00    
+ int: month,layer,dens,range = 07  02 20.250   2.9418000E+04   9.4660008E+04    
+ int: month,layer,dens,range = 07  03 21.000   6.2513250E+04   1.4709000E+05    
+ int: month,layer,dens,range = 07  04 21.750   9.9745406E+04   1.8432216E+05    
+ int: month,layer,dens,range = 07  05 22.500   1.4163158E+05   2.4587245E+05    
+ int: month,layer,dens,range = 07  06 23.250   1.8875353E+05   3.9224000E+05    
+ int: month,layer,dens,range = 07  07 24.000   2.4176572E+05   8.4708600E+05    
+ int: month,layer,dens,range = 07  08 24.700   3.0140444E+05   1.2674700E+06    
+ int: month,layer,dens,range = 07  09 25.280   3.6849797E+05   1.7034228E+06    
+ int: month,layer,dens,range = 07  10 25.770   4.4397822E+05   1.9186659E+06    
+ int: month,layer,dens,range = 07  11 26.180   5.2889350E+05   2.2378902E+06    
+ int: month,layer,dens,range = 07  12 26.520   6.2442319E+05   3.1335805E+06    
+ int: month,layer,dens,range = 07  13 26.800   7.3189412E+05   5.9888345E+06    
+ int: month,layer,dens,range = 07  14 27.030   8.4956612E+05   7.2103865E+06    
+ int: month,layer,dens,range = 07  15 27.220   9.6723812E+05   8.0430675E+06    
+ int: month,layer,dens,range = 07  16 27.380   1.0849101E+06   9.0629750E+06    
+ int: month,layer,dens,range = 07  17 27.520   1.2025821E+06   1.0599814E+07    
+ int: month,layer,dens,range = 07  18 27.640   1.3202541E+06   1.3022837E+07    
+ int: month,layer,dens,range = 07  19 27.740   1.4379261E+06   1.5477563E+07    
+ int: month,layer,dens,range = 07  20 27.820   1.9568418E+06   2.5432222E+07    
+ int: month,layer,dens,range = 07  21 27.880   1.9568418E+06   3.6131684E+07    
+ int: month,layer,dens,range = 07  22 27.940   1.9568418E+06   5.3434112E+07    
+rdrlax: pwall.2 ok; expected,input min depth =   3.00   3.00
+rdrlax: pwall.3 ok; expected,input min depth =   6.38   6.38
+ relaxation fields for month  7 written into slot  1
+ sigma(k):  19.50  20.25  21.00  21.75  22.50  23.25  24.00  24.70  25.28
+                 25.77  26.18  26.52  26.80  27.03  27.22  27.38  27.52  27.64
+                 27.74  27.82  27.88  27.94
+        0   38   17  istate:  temp    saln  thstar   thkns    dpth   montg
+                       mxl                                    19.2
+                         1   26.66   36.05   23.62     3.0     1.5   0.000
+                         2   26.60   36.06   23.65     3.4     4.7  -0.000
+                         3   26.51   36.07   23.68     3.8     8.3  -0.000
+                         4   26.51   36.07   23.68     4.3    12.3  -0.000
+                         5   26.01   36.07   23.84     4.8    16.8  -0.003
+                         6   25.95   36.07   23.86     5.4    22.0  -0.003
+                         7   24.02   35.48   24.00     6.3    27.8  -0.006
+                         8   23.91   36.36   24.70     9.0    35.5  -0.028
+                         9   19.25   35.42   25.28     8.4    44.2  -0.051
+                        10   19.25   36.06   25.77    14.1    55.4  -0.075
+                        11   15.84   35.51   26.18    18.3    71.7  -0.101
+                        12   13.79   35.36   26.52    67.6   114.6  -0.128
+                        13   11.75   35.20   26.80   172.4   234.6  -0.170
+                        14   10.04   35.10   27.03   168.3   404.9  -0.243
+                        15    8.17   34.96   27.22   171.5   574.8  -0.336
+                        16    6.22   34.82   27.38   271.8   796.4  -0.442
+                        17    5.29   34.85   27.52   202.0  1033.3  -0.573
+                        18    4.77   34.92   27.64   231.9  1250.3  -0.709
+                        19    4.13   34.96   27.74   323.8  1528.1  -0.845
+                        20    3.45   34.97   27.82   549.7  1964.8  -0.981
+                        21    2.43   34.93   27.88  1976.3  3227.8  -1.115
+                        22    2.20   34.98   27.94   449.4  4440.6  -1.368
+                       bot                                  4665.3
+        0   38   17  istate:  temp    saln  thstar   thkns    dpth   montg
+                       mxl                                    19.2
+                         1   26.66   36.05   23.62     3.0     1.5   0.000
+                         2   26.60   36.06   23.65     3.4     4.7  -0.000
+                         3   26.51   36.07   23.68     3.8     8.3  -0.000
+                         4   26.51   36.07   23.68     4.3    12.3  -0.000
+                         5   26.01   36.07   23.84     4.8    16.8  -0.003
+                         6   25.89   36.05   23.86     5.6    22.1  -0.003
+                         7   23.98   35.71   24.00     8.3    29.0  -0.006
+                         8   23.58   36.28   24.70     7.5    36.9  -0.028
+                         9   19.21   35.68   25.28    13.0    47.2  -0.051
+                        10   17.93   35.84   25.77    14.7    61.1  -0.075
+                        11   15.28   35.47   26.18    17.3    77.1  -0.101
+                        12   13.79   35.36   26.52    62.7   117.1  -0.128
+                        13   11.75   35.20   26.80   172.4   234.6  -0.170
+                        14   10.04   35.10   27.03   168.3   404.9  -0.243
+                        15    8.17   34.96   27.22   171.5   574.8  -0.336
+                        16    6.22   34.82   27.38   271.8   796.4  -0.442
+                        17    5.29   34.85   27.52   202.0  1033.3  -0.573
+                        18    4.77   34.92   27.64   231.9  1250.3  -0.709
+                        19    4.13   34.96   27.74   323.8  1528.1  -0.845
+                        20    3.45   34.97   27.82   549.7  1964.8  -0.981
+                        21    2.43   34.93   27.88  1976.3  3227.8  -1.115
+                        22    2.20   34.98   27.94   449.3  4440.6  -1.368
+                       bot                                  4665.3
+
+model starts at day   180.0, goes to day   210.0   (steps     2700 --     3150)
+
+ tau_ewd: month,range = 06  -1.3409366E-01   6.2211424E-02                      
+ tau_nwd: month,range = 06  -8.3536744E-02   7.1921557E-02                      
+ wnd_spd: month,range = 06   5.6210518E-01   8.7911081E+00                      
+  airtmp: month,range = 06   2.6573229E+00   2.8314667E+01                      
+  vapmix: month,range = 06   3.9182007E-03   1.9843597E-02                      
+  precip: month,range = 06   0.0000000E+00   0.0000000E+00                      
+  radflx: month,range = 06   3.0133682E+01   2.5528223E+02                      
+  shwflx: month,range = 06   8.1104271E+01   3.1369775E+02                      
+ forcing functions for month  6 written into slot  1
+ tau_ewd: month,range = 07  -1.4483103E-01   5.9297189E-02                      
+ tau_nwd: month,range = 07  -8.9374401E-02   7.6816708E-02                      
+ wnd_spd: month,range = 07   5.3771049E-01   9.3232794E+00                      
+  airtmp: month,range = 07   4.3251481E+00   2.8938793E+01                      
+  vapmix: month,range = 07   4.4841231E-03   1.9683102E-02                      
+  precip: month,range = 07   0.0000000E+00   0.0000000E+00                      
+  radflx: month,range = 07   3.8251835E+01   2.7387769E+02                      
+  shwflx: month,range = 07   8.6203804E+01   3.3245105E+02                      
+ forcing functions for month  7 written into slot  2
+ tau_ewd: month,range = 08  -1.0898437E-01   6.7981496E-02                      
+ tau_nwd: month,range = 08  -7.9796985E-02   7.7684812E-02                      
+ wnd_spd: month,range = 08   3.6901331E-01   8.0547819E+00                      
+  airtmp: month,range = 08   4.4975963E+00   2.9070583E+01                      
+  vapmix: month,range = 08   4.6108291E-03   1.9821566E-02                      
+  precip: month,range = 08   0.0000000E+00   0.0000000E+00                      
+  radflx: month,range = 08   5.9334679E+01   2.2942148E+02                      
+  shwflx: month,range = 08   1.0759599E+02   2.8783350E+02                      
+ forcing functions for month  8 written into slot  3
+ tau_ewd: month,range = 09  -1.0342798E-01   1.0507171E-01                      
+ tau_nwd: month,range = 09  -1.0403336E-01   8.1466794E-02                      
+ wnd_spd: month,range = 09   8.2266712E-01   8.4218292E+00                      
+  airtmp: month,range = 09   2.2597551E+00   2.8795778E+01                      
+  vapmix: month,range = 09   3.8652048E-03   1.9804288E-02                      
+  precip: month,range = 09   0.0000000E+00   0.0000000E+00                      
+  radflx: month,range = 09   1.1680672E+01   2.0058896E+02                      
+  shwflx: month,range = 09   5.9715652E+01   2.4904990E+02                      
+ forcing functions for month  9 written into slot  4
+ rdrlax - month =  6 6
+ tem: month,layer,dens,range = 06  01 19.500   5.4151970E-01   2.8715528E+01    
+ tem: month,layer,dens,range = 06  02 20.250   4.2373359E-01   2.8701090E+01    
+ tem: month,layer,dens,range = 06  03 21.000   2.5240839E-01   2.8680090E+01    
+ tem: month,layer,dens,range = 06  04 21.750   2.5240839E-01   2.8680090E+01    
+ tem: month,layer,dens,range = 06  05 22.500  -8.9554906E-02   2.8557041E+01    
+ tem: month,layer,dens,range = 06  06 23.250  -1.6685429E-01   2.8243385E+01    
+ tem: month,layer,dens,range = 06  07 24.000  -2.4895306E-01   2.7835609E+01    
+ tem: month,layer,dens,range = 06  08 24.700  -2.5389212E-01   2.6163345E+01    
+ tem: month,layer,dens,range = 06  09 25.280  -8.0972350E-01   2.4695631E+01    
+ tem: month,layer,dens,range = 06  10 25.770  -1.5449125E+00   2.2604315E+01    
+ tem: month,layer,dens,range = 06  11 26.180  -1.8360838E+00   2.1061350E+01    
+ tem: month,layer,dens,range = 06  12 26.520  -1.6709394E+00   1.9089441E+01    
+ tem: month,layer,dens,range = 06  13 26.800  -1.6464238E+00   1.9089441E+01    
+ tem: month,layer,dens,range = 06  14 27.030  -4.9820122E-01   1.9089441E+01    
+ tem: month,layer,dens,range = 06  15 27.220  -4.9820122E-01   1.9089441E+01    
+ tem: month,layer,dens,range = 06  16 27.380  -4.9820122E-01   1.9089441E+01    
+ tem: month,layer,dens,range = 06  17 27.520  -4.9820122E-01   1.9089441E+01    
+ tem: month,layer,dens,range = 06  18 27.640  -4.9820122E-01   1.9089441E+01    
+ tem: month,layer,dens,range = 06  19 27.740  -4.9820122E-01   1.9089441E+01    
+ tem: month,layer,dens,range = 06  20 27.820  -4.9820122E-01   1.9089441E+01    
+ tem: month,layer,dens,range = 06  21 27.880  -4.9820122E-01   1.9089441E+01    
+ tem: month,layer,dens,range = 06  22 27.940  -5.6279230E-01   1.9089441E+01    
+ sal: month,layer,dens,range = 06  01 19.500   2.0519176E+01   3.7391907E+01    
+ sal: month,layer,dens,range = 06  02 20.250   2.9494492E+01   3.7393494E+01    
+ sal: month,layer,dens,range = 06  03 21.000   3.0127628E+01   3.7395798E+01    
+ sal: month,layer,dens,range = 06  04 21.750   3.0127628E+01   3.7395798E+01    
+ sal: month,layer,dens,range = 06  05 22.500   3.0546223E+01   3.7339645E+01    
+ sal: month,layer,dens,range = 06  06 23.250   3.0586779E+01   3.7339626E+01    
+ sal: month,layer,dens,range = 06  07 24.000   3.0872286E+01   3.7308033E+01    
+ sal: month,layer,dens,range = 06  08 24.700   3.0883877E+01   3.7306145E+01    
+ sal: month,layer,dens,range = 06  09 25.280   3.1545963E+01   3.7440510E+01    
+ sal: month,layer,dens,range = 06  10 25.770   3.2058109E+01   3.7268875E+01    
+ sal: month,layer,dens,range = 06  11 26.180   3.2525398E+01   3.7234875E+01    
+ sal: month,layer,dens,range = 06  12 26.520   3.2949490E+01   3.6987053E+01    
+ sal: month,layer,dens,range = 06  13 26.800   3.3295212E+01   3.7115086E+01    
+ sal: month,layer,dens,range = 06  14 27.030   3.3593372E+01   3.7243557E+01    
+ sal: month,layer,dens,range = 06  15 27.220   3.3593372E+01   3.7243557E+01    
+ sal: month,layer,dens,range = 06  16 27.380   3.3593372E+01   3.7243557E+01    
+ sal: month,layer,dens,range = 06  17 27.520   3.3593372E+01   3.7243557E+01    
+ sal: month,layer,dens,range = 06  18 27.640   3.3593372E+01   3.7243557E+01    
+ sal: month,layer,dens,range = 06  19 27.740   3.3593372E+01   3.7243557E+01    
+ sal: month,layer,dens,range = 06  20 27.820   3.3593372E+01   3.7243557E+01    
+ sal: month,layer,dens,range = 06  21 27.880   3.3593372E+01   3.7243557E+01    
+ sal: month,layer,dens,range = 06  22 27.940   3.3593372E+01   3.7243557E+01    
+ int: month,layer,dens,range = 06  01 19.500   0.0000000E+00   0.0000000E+00    
+ int: month,layer,dens,range = 06  02 20.250   2.9418000E+04   1.1901381E+05    
+ int: month,layer,dens,range = 06  03 21.000   6.2513250E+04   2.2537919E+05    
+ int: month,layer,dens,range = 06  04 21.750   9.9745406E+04   2.6261134E+05    
+ int: month,layer,dens,range = 06  05 22.500   1.4163158E+05   3.0449753E+05    
+ int: month,layer,dens,range = 06  06 23.250   1.8875353E+05   3.9224000E+05    
+ int: month,layer,dens,range = 06  07 24.000   2.4176572E+05   7.6500181E+05    
+ int: month,layer,dens,range = 06  08 24.700   3.0140444E+05   1.2144150E+06    
+ int: month,layer,dens,range = 06  09 25.280   3.6849797E+05   1.6390770E+06    
+ int: month,layer,dens,range = 06  10 25.770   4.4397822E+05   1.8810376E+06    
+ int: month,layer,dens,range = 06  11 26.180   5.2889350E+05   2.2613062E+06    
+ int: month,layer,dens,range = 06  12 26.520   6.2442319E+05   3.0551842E+06    
+ int: month,layer,dens,range = 06  13 26.800   7.3189412E+05   5.5391670E+06    
+ int: month,layer,dens,range = 06  14 27.030   8.4956612E+05   6.7625795E+06    
+ int: month,layer,dens,range = 06  15 27.220   9.6723812E+05   8.0755235E+06    
+ int: month,layer,dens,range = 06  16 27.380   1.0849101E+06   9.9446130E+06    
+ int: month,layer,dens,range = 06  17 27.520   1.2025821E+06   1.0814475E+07    
+ int: month,layer,dens,range = 06  18 27.640   1.3202541E+06   1.3222515E+07    
+ int: month,layer,dens,range = 06  19 27.740   1.4379261E+06   1.5595920E+07    
+ int: month,layer,dens,range = 06  20 27.820   1.9568418E+06   2.5812596E+07    
+ int: month,layer,dens,range = 06  21 27.880   1.9568418E+06   3.6131684E+07    
+ int: month,layer,dens,range = 06  22 27.940   1.9568418E+06   5.3412060E+07    
+rdrlax: pwall.2 ok; expected,input min depth =   3.00   3.00
+rdrlax: pwall.3 ok; expected,input min depth =   6.38   6.38
+ relaxation fields for month  6 written into slot  1
+ rdrlax - month =  7 7
+ tem: month,layer,dens,range = 07  01 19.500   2.8657143E+00   2.9369673E+01    
+ tem: month,layer,dens,range = 07  02 20.250   2.6445973E+00   2.9307211E+01    
+ tem: month,layer,dens,range = 07  03 21.000   2.3229728E+00   2.9216356E+01    
+ tem: month,layer,dens,range = 07  04 21.750   2.3229728E+00   2.9216356E+01    
+ tem: month,layer,dens,range = 07  05 22.500   1.6953859E+00   2.9069651E+01    
+ tem: month,layer,dens,range = 07  06 23.250   1.6096910E+00   2.8896427E+01    
+ tem: month,layer,dens,range = 07  07 24.000   4.9567693E-01   2.7469702E+01    
+ tem: month,layer,dens,range = 07  08 24.700   4.0038532E-01   2.6145636E+01    
+ tem: month,layer,dens,range = 07  09 25.280  -7.5851434E-01   2.4801685E+01    
+ tem: month,layer,dens,range = 07  10 25.770  -1.6646845E+00   2.3166870E+01    
+ tem: month,layer,dens,range = 07  11 26.180  -1.9178749E+00   2.0732265E+01    
+ tem: month,layer,dens,range = 07  12 26.520  -1.6677066E+00   1.8659582E+01    
+ tem: month,layer,dens,range = 07  13 26.800  -1.5620947E+00   1.8647947E+01    
+ tem: month,layer,dens,range = 07  14 27.030  -8.3663267E-01   1.8647947E+01    
+ tem: month,layer,dens,range = 07  15 27.220  -8.0128932E-01   1.8647947E+01    
+ tem: month,layer,dens,range = 07  16 27.380  -8.0128932E-01   1.8647947E+01    
+ tem: month,layer,dens,range = 07  17 27.520  -8.0128932E-01   1.8647947E+01    
+ tem: month,layer,dens,range = 07  18 27.640  -8.0128932E-01   1.8647947E+01    
+ tem: month,layer,dens,range = 07  19 27.740  -8.0128932E-01   1.8647947E+01    
+ tem: month,layer,dens,range = 07  20 27.820  -8.0128932E-01   1.8647947E+01    
+ tem: month,layer,dens,range = 07  21 27.880  -8.0128932E-01   1.8647947E+01    
+ tem: month,layer,dens,range = 07  22 27.940  -8.0128932E-01   1.8647947E+01    
+ sal: month,layer,dens,range = 07  01 19.500   1.8931963E+01   3.7545372E+01    
+ sal: month,layer,dens,range = 07  02 20.250   2.9640791E+01   3.7544033E+01    
+ sal: month,layer,dens,range = 07  03 21.000   2.9920567E+01   3.7542091E+01    
+ sal: month,layer,dens,range = 07  04 21.750   2.9920567E+01   3.7542091E+01    
+ sal: month,layer,dens,range = 07  05 22.500   3.0395950E+01   3.7537663E+01    
+ sal: month,layer,dens,range = 07  06 23.250   3.0477800E+01   3.7537872E+01    
+ sal: month,layer,dens,range = 07  07 24.000   3.0894552E+01   3.7539551E+01    
+ sal: month,layer,dens,range = 07  08 24.700   3.1012806E+01   3.7539650E+01    
+ sal: month,layer,dens,range = 07  09 25.280   3.1557674E+01   3.7483273E+01    
+ sal: month,layer,dens,range = 07  10 25.770   3.2055946E+01   3.7484688E+01    
+ sal: month,layer,dens,range = 07  11 26.180   3.2522896E+01   3.7115925E+01    
+ sal: month,layer,dens,range = 07  12 26.520   3.2949604E+01   3.6841908E+01    
+ sal: month,layer,dens,range = 07  13 26.800   3.3298409E+01   3.7132610E+01    
+ sal: month,layer,dens,range = 07  14 27.030   3.3484467E+01   3.7295044E+01    
+ sal: month,layer,dens,range = 07  15 27.220   3.3616600E+01   3.7295044E+01    
+ sal: month,layer,dens,range = 07  16 27.380   3.3616600E+01   3.7295044E+01    
+ sal: month,layer,dens,range = 07  17 27.520   3.3616600E+01   3.7295044E+01    
+ sal: month,layer,dens,range = 07  18 27.640   3.3616600E+01   3.7295044E+01    
+ sal: month,layer,dens,range = 07  19 27.740   3.3616600E+01   3.7295044E+01    
+ sal: month,layer,dens,range = 07  20 27.820   3.3616600E+01   3.7295044E+01    
+ sal: month,layer,dens,range = 07  21 27.880   3.3616600E+01   3.7295044E+01    
+ sal: month,layer,dens,range = 07  22 27.940   3.3616600E+01   3.7295044E+01    
+ int: month,layer,dens,range = 07  01 19.500   0.0000000E+00   0.0000000E+00    
+ int: month,layer,dens,range = 07  02 20.250   2.9418000E+04   9.4660008E+04    
+ int: month,layer,dens,range = 07  03 21.000   6.2513250E+04   1.4709000E+05    
+ int: month,layer,dens,range = 07  04 21.750   9.9745406E+04   1.8432216E+05    
+ int: month,layer,dens,range = 07  05 22.500   1.4163158E+05   2.4587245E+05    
+ int: month,layer,dens,range = 07  06 23.250   1.8875353E+05   3.9224000E+05    
+ int: month,layer,dens,range = 07  07 24.000   2.4176572E+05   8.4708600E+05    
+ int: month,layer,dens,range = 07  08 24.700   3.0140444E+05   1.2674700E+06    
+ int: month,layer,dens,range = 07  09 25.280   3.6849797E+05   1.7034228E+06    
+ int: month,layer,dens,range = 07  10 25.770   4.4397822E+05   1.9186659E+06    
+ int: month,layer,dens,range = 07  11 26.180   5.2889350E+05   2.2378902E+06    
+ int: month,layer,dens,range = 07  12 26.520   6.2442319E+05   3.1335805E+06    
+ int: month,layer,dens,range = 07  13 26.800   7.3189412E+05   5.9888345E+06    
+ int: month,layer,dens,range = 07  14 27.030   8.4956612E+05   7.2103865E+06    
+ int: month,layer,dens,range = 07  15 27.220   9.6723812E+05   8.0430675E+06    
+ int: month,layer,dens,range = 07  16 27.380   1.0849101E+06   9.0629750E+06    
+ int: month,layer,dens,range = 07  17 27.520   1.2025821E+06   1.0599814E+07    
+ int: month,layer,dens,range = 07  18 27.640   1.3202541E+06   1.3022837E+07    
+ int: month,layer,dens,range = 07  19 27.740   1.4379261E+06   1.5477563E+07    
+ int: month,layer,dens,range = 07  20 27.820   1.9568418E+06   2.5432222E+07    
+ int: month,layer,dens,range = 07  21 27.880   1.9568418E+06   3.6131684E+07    
+ int: month,layer,dens,range = 07  22 27.940   1.9568418E+06   5.3434112E+07    
+ relaxation fields for month  7 written into slot  2
+ rdrlax - month =  8 8
+ tem: month,layer,dens,range = 08  01 19.500   3.4829490E+00   2.9693693E+01    
+ tem: month,layer,dens,range = 08  02 20.250   3.3781946E+00   2.9596666E+01    
+ tem: month,layer,dens,range = 08  03 21.000   3.2258246E+00   2.9542662E+01    
+ tem: month,layer,dens,range = 08  04 21.750   3.2258246E+00   2.9542662E+01    
+ tem: month,layer,dens,range = 08  05 22.500   2.8001907E+00   2.9439898E+01    
+ tem: month,layer,dens,range = 08  06 23.250   2.7256691E+00   2.9213850E+01    
+ tem: month,layer,dens,range = 08  07 24.000   1.4532744E+00   2.7420979E+01    
+ tem: month,layer,dens,range = 08  08 24.700   1.3129259E+00   2.6488924E+01    
+ tem: month,layer,dens,range = 08  09 25.280  -4.5030758E-01   2.4819098E+01    
+ tem: month,layer,dens,range = 08  10 25.770  -1.5866210E+00   2.3024136E+01    
+ tem: month,layer,dens,range = 08  11 26.180  -1.8248935E+00   2.0958496E+01    
+ tem: month,layer,dens,range = 08  12 26.520  -1.5458043E+00   1.9243652E+01    
+ tem: month,layer,dens,range = 08  13 26.800  -1.3847705E+00   1.9243652E+01    
+ tem: month,layer,dens,range = 08  14 27.030  -5.6081015E-01   1.9243652E+01    
+ tem: month,layer,dens,range = 08  15 27.220  -5.6081015E-01   1.9243652E+01    
+ tem: month,layer,dens,range = 08  16 27.380  -5.6081015E-01   1.9243652E+01    
+ tem: month,layer,dens,range = 08  17 27.520  -5.6081015E-01   1.9243652E+01    
+ tem: month,layer,dens,range = 08  18 27.640  -5.6081015E-01   1.9243652E+01    
+ tem: month,layer,dens,range = 08  19 27.740  -5.6081015E-01   1.9243652E+01    
+ tem: month,layer,dens,range = 08  20 27.820  -5.6081015E-01   1.9243652E+01    
+ tem: month,layer,dens,range = 08  21 27.880  -5.6081015E-01   1.9243652E+01    
+ tem: month,layer,dens,range = 08  22 27.940  -6.3860649E-01   1.9243652E+01    
+ sal: month,layer,dens,range = 08  01 19.500   2.3104599E+01   3.7550385E+01    
+ sal: month,layer,dens,range = 08  02 20.250   2.9561775E+01   3.7549366E+01    
+ sal: month,layer,dens,range = 08  03 21.000   2.9880459E+01   3.7547886E+01    
+ sal: month,layer,dens,range = 08  04 21.750   2.9880459E+01   3.7547886E+01    
+ sal: month,layer,dens,range = 08  05 22.500   3.0431799E+01   3.7524441E+01    
+ sal: month,layer,dens,range = 08  06 23.250   3.0524120E+01   3.7522381E+01    
+ sal: month,layer,dens,range = 08  07 24.000   3.0955847E+01   3.7552601E+01    
+ sal: month,layer,dens,range = 08  08 24.700   3.1147106E+01   3.7554501E+01    
+ sal: month,layer,dens,range = 08  09 25.280   3.1577326E+01   3.7490303E+01    
+ sal: month,layer,dens,range = 08  10 25.770   3.2066578E+01   3.7429592E+01    
+ sal: month,layer,dens,range = 08  11 26.180   3.2525749E+01   3.7197556E+01    
+ sal: month,layer,dens,range = 08  12 26.520   3.2954060E+01   3.6930164E+01    
+ sal: month,layer,dens,range = 08  13 26.800   3.3305504E+01   3.7154320E+01    
+ sal: month,layer,dens,range = 08  14 27.030   3.3551712E+01   3.7247730E+01    
+ sal: month,layer,dens,range = 08  15 27.220   3.3627441E+01   3.7247730E+01    
+ sal: month,layer,dens,range = 08  16 27.380   3.3627441E+01   3.7247730E+01    
+ sal: month,layer,dens,range = 08  17 27.520   3.3627441E+01   3.7247730E+01    
+ sal: month,layer,dens,range = 08  18 27.640   3.3627441E+01   3.7247730E+01    
+ sal: month,layer,dens,range = 08  19 27.740   3.3627441E+01   3.7247730E+01    
+ sal: month,layer,dens,range = 08  20 27.820   3.3627441E+01   3.7247730E+01    
+ sal: month,layer,dens,range = 08  21 27.880   3.3627441E+01   3.7247730E+01    
+ sal: month,layer,dens,range = 08  22 27.940   3.3627441E+01   3.7247730E+01    
+ int: month,layer,dens,range = 08  01 19.500   0.0000000E+00   0.0000000E+00    
+ int: month,layer,dens,range = 08  02 20.250   2.9418000E+04   7.1811289E+04    
+ int: month,layer,dens,range = 08  03 21.000   6.2513250E+04   1.4709000E+05    
+ int: month,layer,dens,range = 08  04 21.750   9.9745406E+04   1.8503234E+05    
+ int: month,layer,dens,range = 08  05 22.500   1.4163158E+05   2.4515000E+05    
+ int: month,layer,dens,range = 08  06 23.250   1.8875353E+05   4.6154306E+05    
+ int: month,layer,dens,range = 08  07 24.000   2.4176572E+05   8.9118556E+05    
+ int: month,layer,dens,range = 08  08 24.700   3.0140444E+05   1.3676658E+06    
+ int: month,layer,dens,range = 08  09 25.280   3.6849797E+05   1.7160500E+06    
+ int: month,layer,dens,range = 08  10 25.770   4.4397822E+05   2.0228956E+06    
+ int: month,layer,dens,range = 08  11 26.180   5.2889350E+05   2.3595748E+06    
+ int: month,layer,dens,range = 08  12 26.520   6.2442319E+05   3.2915272E+06    
+ int: month,layer,dens,range = 08  13 26.800   7.3189412E+05   5.5698810E+06    
+ int: month,layer,dens,range = 08  14 27.030   8.4956612E+05   7.0434390E+06    
+ int: month,layer,dens,range = 08  15 27.220   9.6723812E+05   8.0870015E+06    
+ int: month,layer,dens,range = 08  16 27.380   1.0849101E+06   8.7806750E+06    
+ int: month,layer,dens,range = 08  17 27.520   1.2025821E+06   1.0461129E+07    
+ int: month,layer,dens,range = 08  18 27.640   1.3202541E+06   1.2881625E+07    
+ int: month,layer,dens,range = 08  19 27.740   1.4379261E+06   1.5345266E+07    
+ int: month,layer,dens,range = 08  20 27.820   1.9568418E+06   2.5033320E+07    
+ int: month,layer,dens,range = 08  21 27.880   1.9568418E+06   3.6131684E+07    
+ int: month,layer,dens,range = 08  22 27.940   1.9568418E+06   5.3589504E+07    
+ relaxation fields for month  8 written into slot  3
+ rdrlax - month =  9 9
+ tem: month,layer,dens,range = 09  01 19.500   3.0273273E+00   2.9588755E+01    
+ tem: month,layer,dens,range = 09  02 20.250   2.9800065E+00   2.9579273E+01    
+ tem: month,layer,dens,range = 09  03 21.000   2.9111762E+00   2.9565481E+01    
+ tem: month,layer,dens,range = 09  04 21.750   2.9111762E+00   2.9565481E+01    
+ tem: month,layer,dens,range = 09  05 22.500   2.5595851E+00   2.9541178E+01    
+ tem: month,layer,dens,range = 09  06 23.250   2.5065005E+00   2.9114820E+01    
+ tem: month,layer,dens,range = 09  07 24.000   1.9598933E+00   2.7770029E+01    
+ tem: month,layer,dens,range = 09  08 24.700   1.8949426E+00   2.6666306E+01    
+ tem: month,layer,dens,range = 09  09 25.280   5.1282573E-01   2.5209921E+01    
+ tem: month,layer,dens,range = 09  10 25.770  -1.2382931E+00   2.3713158E+01    
+ tem: month,layer,dens,range = 09  11 26.180  -1.7593914E+00   2.0459518E+01    
+ tem: month,layer,dens,range = 09  12 26.520  -1.3380678E+00   2.0159611E+01    
+ tem: month,layer,dens,range = 09  13 26.800  -1.2815934E+00   2.0159611E+01    
+ tem: month,layer,dens,range = 09  14 27.030  -8.9546770E-01   2.0159611E+01    
+ tem: month,layer,dens,range = 09  15 27.220  -3.3843350E-01   2.0159611E+01    
+ tem: month,layer,dens,range = 09  16 27.380  -3.3843350E-01   2.0159611E+01    
+ tem: month,layer,dens,range = 09  17 27.520  -3.3843350E-01   2.0159611E+01    
+ tem: month,layer,dens,range = 09  18 27.640  -3.3843350E-01   2.0159611E+01    
+ tem: month,layer,dens,range = 09  19 27.740  -3.3843350E-01   2.0159611E+01    
+ tem: month,layer,dens,range = 09  20 27.820  -3.3843350E-01   2.0159611E+01    
+ tem: month,layer,dens,range = 09  21 27.880  -3.3843350E-01   2.0159611E+01    
+ tem: month,layer,dens,range = 09  22 27.940  -5.7953352E-01   2.0159611E+01    
+ sal: month,layer,dens,range = 09  01 19.500   2.5354326E+01   3.7772465E+01    
+ sal: month,layer,dens,range = 09  02 20.250   2.9447788E+01   3.7771233E+01    
+ sal: month,layer,dens,range = 09  03 21.000   2.9607378E+01   3.7769440E+01    
+ sal: month,layer,dens,range = 09  04 21.750   2.9607378E+01   3.7769440E+01    
+ sal: month,layer,dens,range = 09  05 22.500   2.9727716E+01   3.7763527E+01    
+ sal: month,layer,dens,range = 09  06 23.250   3.0178900E+01   3.7762753E+01    
+ sal: month,layer,dens,range = 09  07 24.000   3.0584585E+01   3.7655571E+01    
+ sal: month,layer,dens,range = 09  08 24.700   3.1376928E+01   3.7649147E+01    
+ sal: month,layer,dens,range = 09  09 25.280   3.1582432E+01   3.7649006E+01    
+ sal: month,layer,dens,range = 09  10 25.770   3.2041245E+01   3.7697678E+01    
+ sal: month,layer,dens,range = 09  11 26.180   3.2527843E+01   3.7018322E+01    
+ sal: month,layer,dens,range = 09  12 26.520   3.2962208E+01   3.6913307E+01    
+ sal: month,layer,dens,range = 09  13 26.800   3.3309864E+01   3.7248844E+01    
+ sal: month,layer,dens,range = 09  14 27.030   3.3597282E+01   3.7329803E+01    
+ sal: month,layer,dens,range = 09  15 27.220   3.3597282E+01   3.7329803E+01    
+ sal: month,layer,dens,range = 09  16 27.380   3.3597282E+01   3.7329803E+01    
+ sal: month,layer,dens,range = 09  17 27.520   3.3597282E+01   3.7329803E+01    
+ sal: month,layer,dens,range = 09  18 27.640   3.3597282E+01   3.7329803E+01    
+ sal: month,layer,dens,range = 09  19 27.740   3.3597282E+01   3.7329803E+01    
+ sal: month,layer,dens,range = 09  20 27.820   3.3597282E+01   3.7329803E+01    
+ sal: month,layer,dens,range = 09  21 27.880   3.3597282E+01   3.7329803E+01    
+ sal: month,layer,dens,range = 09  22 27.940   3.3597282E+01   3.7329803E+01    
+ int: month,layer,dens,range = 09  01 19.500   0.0000000E+00   0.0000000E+00    
+ int: month,layer,dens,range = 09  02 20.250   2.9418000E+04   8.3017125E+04    
+ int: month,layer,dens,range = 09  03 21.000   6.2513250E+04   1.4709000E+05    
+ int: month,layer,dens,range = 09  04 21.750   9.9745406E+04   2.4515000E+05    
+ int: month,layer,dens,range = 09  05 22.500   1.4163158E+05   3.4730794E+05    
+ int: month,layer,dens,range = 09  06 23.250   1.8875353E+05   5.2020534E+05    
+ int: month,layer,dens,range = 09  07 24.000   2.4176572E+05   9.2272706E+05    
+ int: month,layer,dens,range = 09  08 24.700   3.0140444E+05   1.2742031E+06    
+ int: month,layer,dens,range = 09  09 25.280   3.6849797E+05   1.6895282E+06    
+ int: month,layer,dens,range = 09  10 25.770   4.4397822E+05   1.8817875E+06    
+ int: month,layer,dens,range = 09  11 26.180   5.2889350E+05   2.3581400E+06    
+ int: month,layer,dens,range = 09  12 26.520   6.2442319E+05   3.2479508E+06    
+ int: month,layer,dens,range = 09  13 26.800   7.3189412E+05   5.4921555E+06    
+ int: month,layer,dens,range = 09  14 27.030   8.4956612E+05   6.7169515E+06    
+ int: month,layer,dens,range = 09  15 27.220   9.6723812E+05   7.7055665E+06    
+ int: month,layer,dens,range = 09  16 27.380   1.0849101E+06   8.9236780E+06    
+ int: month,layer,dens,range = 09  17 27.520   1.2025821E+06   1.0726810E+07    
+ int: month,layer,dens,range = 09  18 27.640   1.3202541E+06   1.2867238E+07    
+ int: month,layer,dens,range = 09  19 27.740   1.4379261E+06   1.5193296E+07    
+ int: month,layer,dens,range = 09  20 27.820   1.9568418E+06   2.4155934E+07    
+ int: month,layer,dens,range = 09  21 27.880   1.9568418E+06   3.6131684E+07    
+ int: month,layer,dens,range = 09  22 27.940   1.9568418E+06   5.3589504E+07    
+ relaxation fields for month  9 written into slot  4
+
+
+     timer statistics 
+    ------------------
+
+     total    calls =        1   time =    0.97232   time/call =    0.97231770
+
+
+
+     2701 mean basin temp, saln, dens     5.194   35.051   27.575
+     2701 (   1/196) mean sea srf.hgt. (mm):   -0.00  (-1.4E-01 to  1.8E-01)
+     2701 (   1/196) mean B. flux (m^2/s^3):  -17.07 hfl:  -17.06
+     2701 (   1/196) mean heat flux (w/m^2):   83.62 sst:    0.01  ml:   26.83
+     2701 (   1/196) mean P-E  flux (mm/wk):    0.01 sss:    0.01
+     2701 (   1/196) mean mixlayer thk. (m):   14.19  temp: 23.870 saln: 36.109
+     2701 (   1/196) mean surfclim thk. (m):   19.20   sst: 23.307  sss: 35.641
+     2701 (   1/196) mean layer  1 thk. (m):    3.00  temp: 23.314 saln: 35.645
+     2701 (   1/196) mean layer  2 thk. (m):    3.38  temp: 23.245 saln: 35.690
+     2701 (   1/196) mean layer  3 thk. (m):    3.83  temp: 23.184 saln: 35.755
+     2701 (   1/196) mean layer  4 thk. (m):    4.40  temp: 23.267 saln: 35.768
+     2701 (   1/196) mean layer  5 thk. (m):    5.51  temp: 23.396 saln: 35.820
+     2701 (   1/196) mean layer  6 thk. (m):    9.22  temp: 24.518 saln: 35.931
+     2701 (   1/196) mean layer  7 thk. (m):   14.47  temp: 24.287 saln: 36.232
+     2701 (   1/196) mean layer  8 thk. (m):   16.13  temp: 22.923 saln: 36.393
+     2701 (   1/196) mean layer  9 thk. (m):   19.48  temp: 21.364 saln: 36.461
+     2701 (   1/196) mean layer 10 thk. (m):   25.09  temp: 19.530 saln: 36.342
+     2701 (   1/196) mean layer 11 thk. (m):   42.41  temp: 17.632 saln: 36.148
+     2701 (   1/196) mean layer 12 thk. (m):   86.11  temp: 15.473 saln: 35.889
+     2701 (   1/196) mean layer 13 thk. (m):  105.57  temp: 12.801 saln: 35.503
+     2701 (   1/196) mean layer 14 thk. (m):  131.65  temp: 10.229 saln: 35.179
+     2701 (   1/196) mean layer 15 thk. (m):  166.22  temp:  7.859 saln: 34.938
+     2701 (   1/196) mean layer 16 thk. (m):  170.83  temp:  6.270 saln: 34.855
+     2701 (   1/196) mean layer 17 thk. (m):  157.28  temp:  5.601 saln: 34.916
+     2701 (   1/196) mean layer 18 thk. (m):  176.51  temp:  5.096 saln: 34.983
+     2701 (   1/196) mean layer 19 thk. (m):  349.41  temp:  4.330 saln: 34.993
+     2701 (   1/196) mean layer 20 thk. (m):  641.25  temp:  3.524 saln: 34.986
+     2701 (   1/196) mean layer 21 thk. (m): 1266.77  temp:  2.436 saln: 34.933
+     2701 (   1/196) mean layer 22 thk. (m):  158.07  temp:  2.257 saln: 35.009
+     2701 (   1/196) region-wide mean Kin. Energy:      231.8052065581
+     2701 (   1/196) region-wide mean Temperature:        5.1942747781
+     2701 (   1/196) region-wide mean Salinity:          35.0509865133
+     2701 (   1/196) region-wide mean Density Dev:        2.5750671236
+     2715 (   1/197) mean sea srf.hgt. (mm):    0.45  (-8.5E+02 to  7.8E+02)
+     2730 (   1/198) mean sea srf.hgt. (mm):    1.39  (-1.0E+03 to  8.2E+02)
+     2745 (   1/199) mean sea srf.hgt. (mm):    1.73  (-1.2E+03 to  6.1E+02)
+     2760 (   1/200) mean sea srf.hgt. (mm):    2.13  (-1.3E+03 to  7.1E+02)
+     2775 (   1/201) mean sea srf.hgt. (mm):    2.51  (-8.8E+02 to  7.4E+02)
+     2790 (   1/202) mean sea srf.hgt. (mm):    2.87  (-7.5E+02 to  4.6E+02)
+     2790 (   1/202) mean B. flux (m^2/s^3):  -25.98 hfl:  -23.16
+     2790 (   1/202) mean heat flux (w/m^2):   77.02 sst:   -1.53  ml:   33.38
+     2790 (   1/202) mean P-E  flux (mm/wk):    6.87 sss:    6.87
+     2790 (   1/202) mean mixlayer thk. (m):   20.06  temp: 24.465 saln: 36.069
+     2790 (   1/202) mean surfclim thk. (m):   19.20   sst: 23.412  sss: 35.639
+     2790 (   1/202) mean layer  1 thk. (m):    3.00  temp: 23.690 saln: 35.692
+     2790 (   1/202) mean layer  2 thk. (m):    3.38  temp: 23.565 saln: 35.713
+     2790 (   1/202) mean layer  3 thk. (m):    3.85  temp: 23.436 saln: 35.745
+     2790 (   1/202) mean layer  4 thk. (m):    4.41  temp: 23.366 saln: 35.777
+     2790 (   1/202) mean layer  5 thk. (m):    5.71  temp: 23.700 saln: 35.791
+     2790 (   1/202) mean layer  6 thk. (m):    9.31  temp: 24.573 saln: 35.926
+     2790 (   1/202) mean layer  7 thk. (m):   14.70  temp: 24.323 saln: 36.224
+     2790 (   1/202) mean layer  8 thk. (m):   15.81  temp: 22.882 saln: 36.395
+     2790 (   1/202) mean layer  9 thk. (m):   19.48  temp: 21.382 saln: 36.456
+     2790 (   1/202) mean layer 10 thk. (m):   25.19  temp: 19.526 saln: 36.334
+     2790 (   1/202) mean layer 11 thk. (m):   42.09  temp: 17.645 saln: 36.153
+     2790 (   1/202) mean layer 12 thk. (m):   85.98  temp: 15.480 saln: 35.890
+     2790 (   1/202) mean layer 13 thk. (m):  105.60  temp: 12.804 saln: 35.504
+     2790 (   1/202) mean layer 14 thk. (m):  131.67  temp: 10.232 saln: 35.179
+     2790 (   1/202) mean layer 15 thk. (m):  166.20  temp:  7.863 saln: 34.938
+     2790 (   1/202) mean layer 16 thk. (m):  170.87  temp:  6.272 saln: 34.856
+     2790 (   1/202) mean layer 17 thk. (m):  157.43  temp:  5.605 saln: 34.916
+     2790 (   1/202) mean layer 18 thk. (m):  176.79  temp:  5.099 saln: 34.984
+     2790 (   1/202) mean layer 19 thk. (m):  348.96  temp:  4.328 saln: 34.993
+     2790 (   1/202) mean layer 20 thk. (m):  640.39  temp:  3.522 saln: 34.985
+     2790 (   1/202) mean layer 21 thk. (m): 1259.80  temp:  2.435 saln: 34.932
+     2790 (   1/202) mean layer 22 thk. (m):  165.97  temp:  2.286 saln: 35.002
+     2790 (   1/202) region-wide mean Kin. Energy:     8461.2554485358
+     2790 (   1/202) region-wide mean Temperature:        5.1969198115
+     2790 (   1/202) region-wide mean Salinity:          35.0505734761
+     2790 (   1/202) region-wide mean Density Dev:        2.5742643612
+     2805 (   1/203) mean sea srf.hgt. (mm):    3.23  (-7.8E+02 to  5.0E+02)
+     2820 (   1/204) mean sea srf.hgt. (mm):    3.58  (-6.3E+02 to  4.8E+02)
+     2835 (   1/205) mean sea srf.hgt. (mm):    3.92  (-8.6E+02 to  4.0E+02)
+     2850 (   1/206) mean sea srf.hgt. (mm):    4.26  (-9.6E+02 to  6.2E+02)
+     2865 (   1/207) mean sea srf.hgt. (mm):    4.59  (-8.3E+02 to  6.3E+02)
+     2880 (   1/208) mean sea srf.hgt. (mm):    4.93  (-9.5E+02 to  5.9E+02)
+     2880 (   1/208) mean B. flux (m^2/s^3):  -24.31 hfl:  -21.12
+     2880 (   1/208) mean heat flux (w/m^2):   71.76 sst:   -2.47  ml:   29.74
+     2880 (   1/208) mean P-E  flux (mm/wk):    7.72 sss:    7.72
+     2880 (   1/208) mean mixlayer thk. (m):   22.80  temp: 24.597 saln: 36.090
+     2880 (   1/208) mean surfclim thk. (m):   19.20   sst: 23.513  sss: 35.641
+     2880 (   1/208) mean layer  1 thk. (m):    3.00  temp: 23.950 saln: 35.700
+     2880 (   1/208) mean layer  2 thk. (m):    3.38  temp: 23.851 saln: 35.721
+     2880 (   1/208) mean layer  3 thk. (m):    3.85  temp: 23.676 saln: 35.737
+     2880 (   1/208) mean layer  4 thk. (m):    4.45  temp: 23.568 saln: 35.762
+     2880 (   1/208) mean layer  5 thk. (m):    5.92  temp: 23.961 saln: 35.777
+     2880 (   1/208) mean layer  6 thk. (m):    9.40  temp: 24.651 saln: 35.933
+     2880 (   1/208) mean layer  7 thk. (m):   14.65  temp: 24.348 saln: 36.218
+     2880 (   1/208) mean layer  8 thk. (m):   15.54  temp: 22.876 saln: 36.397
+     2880 (   1/208) mean layer  9 thk. (m):   19.54  temp: 21.390 saln: 36.451
+     2880 (   1/208) mean layer 10 thk. (m):   25.32  temp: 19.527 saln: 36.329
+     2880 (   1/208) mean layer 11 thk. (m):   41.82  temp: 17.657 saln: 36.156
+     2880 (   1/208) mean layer 12 thk. (m):   85.90  temp: 15.487 saln: 35.891
+     2880 (   1/208) mean layer 13 thk. (m):  105.57  temp: 12.808 saln: 35.505
+     2880 (   1/208) mean layer 14 thk. (m):  131.59  temp: 10.238 saln: 35.180
+     2880 (   1/208) mean layer 15 thk. (m):  166.23  temp:  7.869 saln: 34.939
+     2880 (   1/208) mean layer 16 thk. (m):  170.94  temp:  6.275 saln: 34.856
+     2880 (   1/208) mean layer 17 thk. (m):  157.61  temp:  5.607 saln: 34.917
+     2880 (   1/208) mean layer 18 thk. (m):  176.78  temp:  5.097 saln: 34.983
+     2880 (   1/208) mean layer 19 thk. (m):  348.70  temp:  4.327 saln: 34.992
+     2880 (   1/208) mean layer 20 thk. (m):  639.57  temp:  3.520 saln: 34.984
+     2880 (   1/208) mean layer 21 thk. (m): 1257.61  temp:  2.438 saln: 34.933
+     2880 (   1/208) mean layer 22 thk. (m):  169.24  temp:  2.302 saln: 35.002
+     2880 (   1/208) region-wide mean Kin. Energy:     6798.3472352268
+     2880 (   1/208) region-wide mean Temperature:        5.2001830837
+     2880 (   1/208) region-wide mean Salinity:          35.0505717953
+     2880 (   1/208) region-wide mean Density Dev:        2.5736885204
+     2895 (   1/209) mean sea srf.hgt. (mm):    5.25  (-8.8E+02 to  7.2E+02)
+     2910 (   1/210) mean sea srf.hgt. (mm):    5.57  (-8.6E+02 to  4.9E+02)
+     2925 (   1/211) mean sea srf.hgt. (mm):    5.88  (-9.4E+02 to  5.1E+02)
+     2940 (   1/212) mean sea srf.hgt. (mm):    6.18  (-7.9E+02 to  5.6E+02)
+     2955 (   1/213) mean sea srf.hgt. (mm):    6.47  (-7.7E+02 to  4.1E+02)
+     2970 (   1/214) mean sea srf.hgt. (mm):    6.77  (-8.6E+02 to  4.8E+02)
+     2970 (   1/214) mean B. flux (m^2/s^3):  -22.60 hfl:  -19.44
+     2970 (   1/214) mean heat flux (w/m^2):   67.66 sst:   -3.05  ml:   26.92
+     2970 (   1/214) mean P-E  flux (mm/wk):    7.57 sss:    7.57
+     2970 (   1/214) mean mixlayer thk. (m):   24.06  temp: 24.679 saln: 36.079
+     2970 (   1/214) mean surfclim thk. (m):   19.20   sst: 23.604  sss: 35.646
+     2970 (   1/214) mean layer  1 thk. (m):    3.00  temp: 24.138 saln: 35.704
+     2970 (   1/214) mean layer  2 thk. (m):    3.38  temp: 24.061 saln: 35.725
+     2970 (   1/214) mean layer  3 thk. (m):    3.85  temp: 23.894 saln: 35.732
+     2970 (   1/214) mean layer  4 thk. (m):    4.49  temp: 23.772 saln: 35.752
+     2970 (   1/214) mean layer  5 thk. (m):    6.13  temp: 24.221 saln: 35.765
+     2970 (   1/214) mean layer  6 thk. (m):    9.59  temp: 24.746 saln: 35.934
+     2970 (   1/214) mean layer  7 thk. (m):   14.50  temp: 24.350 saln: 36.217
+     2970 (   1/214) mean layer  8 thk. (m):   15.37  temp: 22.865 saln: 36.393
+     2970 (   1/214) mean layer  9 thk. (m):   19.52  temp: 21.389 saln: 36.447
+     2970 (   1/214) mean layer 10 thk. (m):   25.24  temp: 19.541 saln: 36.330
+     2970 (   1/214) mean layer 11 thk. (m):   41.64  temp: 17.662 saln: 36.157
+     2970 (   1/214) mean layer 12 thk. (m):   85.87  temp: 15.497 saln: 35.893
+     2970 (   1/214) mean layer 13 thk. (m):  105.62  temp: 12.813 saln: 35.505
+     2970 (   1/214) mean layer 14 thk. (m):  131.45  temp: 10.243 saln: 35.181
+     2970 (   1/214) mean layer 15 thk. (m):  166.28  temp:  7.877 saln: 34.940
+     2970 (   1/214) mean layer 16 thk. (m):  170.98  temp:  6.278 saln: 34.856
+     2970 (   1/214) mean layer 17 thk. (m):  157.85  temp:  5.611 saln: 34.917
+     2970 (   1/214) mean layer 18 thk. (m):  176.76  temp:  5.095 saln: 34.983
+     2970 (   1/214) mean layer 19 thk. (m):  348.49  temp:  4.325 saln: 34.992
+     2970 (   1/214) mean layer 20 thk. (m):  638.77  temp:  3.518 saln: 34.984
+     2970 (   1/214) mean layer 21 thk. (m): 1256.61  temp:  2.441 saln: 34.933
+     2970 (   1/214) mean layer 22 thk. (m):  171.21  temp:  2.305 saln: 35.000
+     2970 (   1/214) region-wide mean Kin. Energy:     5114.9295918281
+     2970 (   1/214) region-wide mean Temperature:        5.2029711046
+     2970 (   1/214) region-wide mean Salinity:          35.0505676806
+     2970 (   1/214) region-wide mean Density Dev:        2.5731706063
+     2985 (   1/215) mean sea srf.hgt. (mm):    7.05  (-7.9E+02 to  5.9E+02)
+     3000 (   1/216) mean sea srf.hgt. (mm):    7.33  (-9.2E+02 to  4.8E+02)
+     3015 (   1/217) mean sea srf.hgt. (mm):    7.60  (-9.7E+02 to  5.9E+02)
+     3030 (   1/218) mean sea srf.hgt. (mm):    7.88  (-8.3E+02 to  6.2E+02)
+     3045 (   1/219) mean sea srf.hgt. (mm):    8.15  (-8.7E+02 to  5.0E+02)
+     3060 (   1/220) mean sea srf.hgt. (mm):    8.42  (-8.2E+02 to  5.7E+02)
+     3060 (   1/220) mean B. flux (m^2/s^3):  -20.82 hfl:  -17.78
+     3060 (   1/220) mean heat flux (w/m^2):   63.71 sst:   -3.49  ml:   24.27
+     3060 (   1/220) mean P-E  flux (mm/wk):    7.30 sss:    7.30
+     3060 (   1/220) mean mixlayer thk. (m):   24.46  temp: 24.732 saln: 36.064
+     3060 (   1/220) mean surfclim thk. (m):   19.20   sst: 23.680  sss: 35.650
+     3060 (   1/220) mean layer  1 thk. (m):    3.00  temp: 24.284 saln: 35.706
+     3060 (   1/220) mean layer  2 thk. (m):    3.38  temp: 24.225 saln: 35.727
+     3060 (   1/220) mean layer  3 thk. (m):    3.86  temp: 24.091 saln: 35.726
+     3060 (   1/220) mean layer  4 thk. (m):    4.55  temp: 24.001 saln: 35.732
+     3060 (   1/220) mean layer  5 thk. (m):    6.29  temp: 24.452 saln: 35.758
+     3060 (   1/220) mean layer  6 thk. (m):    9.72  temp: 24.856 saln: 35.939
+     3060 (   1/220) mean layer  7 thk. (m):   14.36  temp: 24.366 saln: 36.215
+     3060 (   1/220) mean layer  8 thk. (m):   15.17  temp: 22.868 saln: 36.393
+     3060 (   1/220) mean layer  9 thk. (m):   19.46  temp: 21.383 saln: 36.442
+     3060 (   1/220) mean layer 10 thk. (m):   25.21  temp: 19.547 saln: 36.330
+     3060 (   1/220) mean layer 11 thk. (m):   41.47  temp: 17.667 saln: 36.158
+     3060 (   1/220) mean layer 12 thk. (m):   85.87  temp: 15.506 saln: 35.896
+     3060 (   1/220) mean layer 13 thk. (m):  105.65  temp: 12.817 saln: 35.506
+     3060 (   1/220) mean layer 14 thk. (m):  131.34  temp: 10.247 saln: 35.182
+     3060 (   1/220) mean layer 15 thk. (m):  166.42  temp:  7.887 saln: 34.942
+     3060 (   1/220) mean layer 16 thk. (m):  170.95  temp:  6.281 saln: 34.857
+     3060 (   1/220) mean layer 17 thk. (m):  158.08  temp:  5.619 saln: 34.918
+     3060 (   1/220) mean layer 18 thk. (m):  176.80  temp:  5.093 saln: 34.982
+     3060 (   1/220) mean layer 19 thk. (m):  348.29  temp:  4.324 saln: 34.992
+     3060 (   1/220) mean layer 20 thk. (m):  638.06  temp:  3.516 saln: 34.984
+     3060 (   1/220) mean layer 21 thk. (m): 1256.13  temp:  2.444 saln: 34.933
+     3060 (   1/220) mean layer 22 thk. (m):  172.53  temp:  2.308 saln: 35.000
+     3060 (   1/220) region-wide mean Kin. Energy:     4198.1051001853
+     3060 (   1/220) region-wide mean Temperature:        5.2057084297
+     3060 (   1/220) region-wide mean Salinity:          35.0506211322
+     3060 (   1/220) region-wide mean Density Dev:        2.5727083161
+     3075 (   1/221) mean sea srf.hgt. (mm):    8.68  (-7.5E+02 to  5.2E+02)
+     3090 (   1/222) mean sea srf.hgt. (mm):    8.94  (-8.6E+02 to  4.6E+02)
+     3105 (   1/223) mean sea srf.hgt. (mm):    9.20  (-8.4E+02 to  5.7E+02)
+     3120 (   1/224) mean sea srf.hgt. (mm):    9.45  (-7.9E+02 to  5.4E+02)
+     3135 (   1/225) mean sea srf.hgt. (mm):    9.70  (-8.8E+02 to  5.4E+02)
+ tau_ewd: month,range = 10  -8.7501809E-02   1.4808270E-01                      
+ tau_nwd: month,range = 10  -1.2914288E-01   7.7723533E-02                      
+ wnd_spd: month,range = 10   4.4390085E-01   9.1007223E+00                      
+  airtmp: month,range = 10  -1.1293226E+00   2.8440361E+01                      
+  vapmix: month,range = 10   3.0245301E-03   1.9654252E-02                      
+  precip: month,range = 10   0.0000000E+00   0.0000000E+00                      
+  radflx: month,range = 10  -3.7298782E+01   1.9905554E+02                      
+  shwflx: month,range = 10   1.4698746E+01   2.4694714E+02                      
+ forcing functions for month 10 written into slot  1
+ rdrlax - month =  10 10
+ tem: month,layer,dens,range = 10  01 19.500   1.4183198E+00   2.9189674E+01    
+ tem: month,layer,dens,range = 10  02 20.250   1.4071945E+00   2.9134241E+01    
+ tem: month,layer,dens,range = 10  03 21.000   1.3910121E+00   2.9079937E+01    
+ tem: month,layer,dens,range = 10  04 21.750   1.3910121E+00   2.9079937E+01    
+ tem: month,layer,dens,range = 10  05 22.500   1.3930168E+00   2.9044912E+01    
+ tem: month,layer,dens,range = 10  06 23.250   1.3932794E+00   2.8590862E+01    
+ tem: month,layer,dens,range = 10  07 24.000   1.2776544E+00   2.7620886E+01    
+ tem: month,layer,dens,range = 10  08 24.700   1.2706984E+00   2.7025358E+01    
+ tem: month,layer,dens,range = 10  09 25.280   1.0092857E+00   2.5010479E+01    
+ tem: month,layer,dens,range = 10  10 25.770  -2.9921755E-01   2.2439177E+01    
+ tem: month,layer,dens,range = 10  11 26.180  -1.7717456E+00   2.0132826E+01    
+ tem: month,layer,dens,range = 10  12 26.520  -1.5402894E+00   1.9948690E+01    
+ tem: month,layer,dens,range = 10  13 26.800  -1.7579581E+00   1.9948690E+01    
+ tem: month,layer,dens,range = 10  14 27.030  -1.2961410E+00   1.9948690E+01    
+ tem: month,layer,dens,range = 10  15 27.220  -5.3208292E-01   1.9948690E+01    
+ tem: month,layer,dens,range = 10  16 27.380  -5.0760299E-01   1.9948690E+01    
+ tem: month,layer,dens,range = 10  17 27.520  -5.0760299E-01   1.9948690E+01    
+ tem: month,layer,dens,range = 10  18 27.640  -5.0760299E-01   1.9948690E+01    
+ tem: month,layer,dens,range = 10  19 27.740  -5.0760299E-01   1.9948690E+01    
+ tem: month,layer,dens,range = 10  20 27.820  -5.0760299E-01   1.9948690E+01    
+ tem: month,layer,dens,range = 10  21 27.880  -5.0760299E-01   1.9948690E+01    
+ tem: month,layer,dens,range = 10  22 27.940  -5.5396652E-01   1.9948690E+01    
+ sal: month,layer,dens,range = 10  01 19.500   2.8921852E+01   3.7446487E+01    
+ sal: month,layer,dens,range = 10  02 20.250   2.9728109E+01   3.7443382E+01    
+ sal: month,layer,dens,range = 10  03 21.000   2.9845325E+01   3.7473160E+01    
+ sal: month,layer,dens,range = 10  04 21.750   2.9845325E+01   3.7473160E+01    
+ sal: month,layer,dens,range = 10  05 22.500   3.0077539E+01   3.7633488E+01    
+ sal: month,layer,dens,range = 10  06 23.250   3.0010956E+01   3.7654491E+01    
+ sal: month,layer,dens,range = 10  07 24.000   3.0763227E+01   3.7670067E+01    
+ sal: month,layer,dens,range = 10  08 24.700   3.1000965E+01   3.7636902E+01    
+ sal: month,layer,dens,range = 10  09 25.280   3.1671579E+01   3.7567814E+01    
+ sal: month,layer,dens,range = 10  10 25.770   3.2085075E+01   3.7206211E+01    
+ sal: month,layer,dens,range = 10  11 26.180   3.2527443E+01   3.6902596E+01    
+ sal: month,layer,dens,range = 10  12 26.520   3.2954266E+01   3.6971828E+01    
+ sal: month,layer,dens,range = 10  13 26.800   3.3291164E+01   3.7063301E+01    
+ sal: month,layer,dens,range = 10  14 27.030   3.3549393E+01   3.7223236E+01    
+ sal: month,layer,dens,range = 10  15 27.220   3.3549393E+01   3.7223236E+01    
+ sal: month,layer,dens,range = 10  16 27.380   3.3549393E+01   3.7223236E+01    
+ sal: month,layer,dens,range = 10  17 27.520   3.3549393E+01   3.7223236E+01    
+ sal: month,layer,dens,range = 10  18 27.640   3.3549393E+01   3.7223236E+01    
+ sal: month,layer,dens,range = 10  19 27.740   3.3549393E+01   3.7223236E+01    
+ sal: month,layer,dens,range = 10  20 27.820   3.3549393E+01   3.7223236E+01    
+ sal: month,layer,dens,range = 10  21 27.880   3.3549393E+01   3.7223236E+01    
+ sal: month,layer,dens,range = 10  22 27.940   3.3549393E+01   3.7223236E+01    
+ int: month,layer,dens,range = 10  01 19.500   0.0000000E+00   0.0000000E+00    
+ int: month,layer,dens,range = 10  02 20.250   2.9418000E+04   7.4773164E+04    
+ int: month,layer,dens,range = 10  03 21.000   6.2513250E+04   1.4709000E+05    
+ int: month,layer,dens,range = 10  04 21.750   9.9745406E+04   2.3037875E+05    
+ int: month,layer,dens,range = 10  05 22.500   1.4163158E+05   2.7226494E+05    
+ int: month,layer,dens,range = 10  06 23.250   1.8875353E+05   6.1647006E+05    
+ int: month,layer,dens,range = 10  07 24.000   2.4176572E+05   9.1971269E+05    
+ int: month,layer,dens,range = 10  08 24.700   3.0140444E+05   1.2188745E+06    
+ int: month,layer,dens,range = 10  09 25.280   3.6849797E+05   1.5656656E+06    
+ int: month,layer,dens,range = 10  10 25.770   4.4397822E+05   1.8223888E+06    
+ int: month,layer,dens,range = 10  11 26.180   5.2889350E+05   2.2928100E+06    
+ int: month,layer,dens,range = 10  12 26.520   6.2442319E+05   3.1340960E+06    
+ int: month,layer,dens,range = 10  13 26.800   7.3189412E+05   5.9254285E+06    
+ int: month,layer,dens,range = 10  14 27.030   8.4956612E+05   7.3916625E+06    
+ int: month,layer,dens,range = 10  15 27.220   9.6723812E+05   8.8467710E+06    
+ int: month,layer,dens,range = 10  16 27.380   1.0849101E+06   9.7569740E+06    
+ int: month,layer,dens,range = 10  17 27.520   1.2025821E+06   1.0720624E+07    
+ int: month,layer,dens,range = 10  18 27.640   1.3202541E+06   1.2911037E+07    
+ int: month,layer,dens,range = 10  19 27.740   1.9513940E+06   1.5346305E+07    
+ int: month,layer,dens,range = 10  20 27.820   1.9568418E+06   2.2852122E+07    
+ int: month,layer,dens,range = 10  21 27.880   1.9568418E+06   3.6131684E+07    
+ int: month,layer,dens,range = 10  22 27.940   1.9568418E+06   5.3589504E+07    
+rdrlax: pwall.2 ok; expected,input min depth =   3.00   3.00
+rdrlax: pwall.3 ok; expected,input min depth =   6.38   6.38
+ relaxation fields for month 10 written into slot  1
+     3150  1 min/max of s after advection: 29.768 37.494   (range: 7.73E+00)
+     3150  2 min/max of s after advection: 29.950 37.494   (range: 7.54E+00)
+     3150  3 min/max of s after advection: 30.455 37.494   (range: 7.04E+00)
+     3150  4 min/max of s after advection: 30.720 37.494   (range: 6.77E+00)
+     3150  5 min/max of s after advection: 30.973 37.494   (range: 6.52E+00)
+     3150  6 min/max of s after advection: 31.232 37.488   (range: 6.26E+00)
+     3150  7 min/max of s after advection: 31.478 37.473   (range: 5.99E+00)
+     3150  8 min/max of s after advection: 31.678 37.446   (range: 5.77E+00)
+     3150  9 min/max of s after advection: 31.932 37.437   (range: 5.50E+00)
+     3150 10 min/max of s after advection: 32.215 37.411   (range: 5.20E+00)
+     3150 11 min/max of s after advection: 32.573 37.080   (range: 4.51E+00)
+     3150 12 min/max of s after advection: 32.979 36.567   (range: 3.59E+00)
+     3150 13 min/max of s after advection: 33.322 36.667   (range: 3.34E+00)
+     3150 14 min/max of s after advection: 33.627 36.217   (range: 2.59E+00)
+     3150 15 min/max of s after advection: 33.929 35.920   (range: 1.99E+00)
+     3150 16 min/max of s after advection: 34.207 35.842   (range: 1.64E+00)
+     3150 17 min/max of s after advection: 34.221 36.070   (range: 1.85E+00)
+     3150 18 min/max of s after advection: 34.469 36.178   (range: 1.71E+00)
+     3150 19 min/max of s after advection: 34.470 36.178   (range: 1.71E+00)
+     3150 20 min/max of s after advection: 34.739 36.168   (range: 1.43E+00)
+     3150 21 min/max of s after advection: 34.627 35.888   (range: 1.26E+00)
+     3150 22 min/max of s after advection: 34.779 35.710   (range: 9.31E-01)
+     3150 mean basin temp, saln, dens     5.208   35.051   27.572
+     3150 mean surface temp and saln     24.381   35.707
+     3150 energy residual (atmos,tot)    70.322   76.922 (w/m**2)
+     3150  e - p residual (atmos,tot)   -34.777  -35.737 (cm/year)
+     3150 temp drift per century         15.413   16.860
+     3150 saln drift per century         -0.342   -0.352
+     3150 dens drift per century                  -3.340
+     3150 (   1/226) mean sea srf.hgt. (mm):    9.96  (-8.2E+02 to  6.2E+02)
+     3150 (   1/226) mean B. flux (m^2/s^3):  -19.04 hfl:  -16.09
+     3150 (   1/226) mean heat flux (w/m^2):   59.76 sst:   -3.78  ml:   21.70
+     3150 (   1/226) mean P-E  flux (mm/wk):    7.10 sss:    7.10
+     3150 (   1/226) mean mixlayer thk. (m):   25.11  temp: 24.762 saln: 36.046
+     3150 (   1/226) mean surfclim thk. (m):   19.20   sst: 23.735  sss: 35.653
+     3150 (   1/226) mean layer  1 thk. (m):    3.00  temp: 24.385 saln: 35.707
+     3150 (   1/226) mean layer  2 thk. (m):    3.38  temp: 24.343 saln: 35.727
+     3150 (   1/226) mean layer  3 thk. (m):    3.87  temp: 24.251 saln: 35.722
+     3150 (   1/226) mean layer  4 thk. (m):    4.61  temp: 24.219 saln: 35.720
+     3150 (   1/226) mean layer  5 thk. (m):    6.42  temp: 24.655 saln: 35.753
+     3150 (   1/226) mean layer  6 thk. (m):    9.88  temp: 24.953 saln: 35.943
+     3150 (   1/226) mean layer  7 thk. (m):   14.22  temp: 24.380 saln: 36.212
+     3150 (   1/226) mean layer  8 thk. (m):   15.06  temp: 22.872 saln: 36.389
+     3150 (   1/226) mean layer  9 thk. (m):   19.32  temp: 21.384 saln: 36.439
+     3150 (   1/226) mean layer 10 thk. (m):   25.08  temp: 19.557 saln: 36.330
+     3150 (   1/226) mean layer 11 thk. (m):   41.39  temp: 17.671 saln: 36.158
+     3150 (   1/226) mean layer 12 thk. (m):   85.89  temp: 15.515 saln: 35.898
+     3150 (   1/226) mean layer 13 thk. (m):  105.70  temp: 12.822 saln: 35.507
+     3150 (   1/226) mean layer 14 thk. (m):  131.28  temp: 10.249 saln: 35.182
+     3150 (   1/226) mean layer 15 thk. (m):  166.53  temp:  7.897 saln: 34.944
+     3150 (   1/226) mean layer 16 thk. (m):  170.91  temp:  6.284 saln: 34.857
+     3150 (   1/226) mean layer 17 thk. (m):  158.28  temp:  5.627 saln: 34.920
+     3150 (   1/226) mean layer 18 thk. (m):  176.89  temp:  5.091 saln: 34.982
+     3150 (   1/226) mean layer 19 thk. (m):  348.10  temp:  4.323 saln: 34.991
+     3150 (   1/226) mean layer 20 thk. (m):  637.38  temp:  3.514 saln: 34.984
+     3150 (   1/226) mean layer 21 thk. (m): 1256.16  temp:  2.447 saln: 34.934
+     3150 (   1/226) mean layer 22 thk. (m):  173.29  temp:  2.311 saln: 34.999
+     3150 (   1/226) region-wide mean Kin. Energy:     3614.5881145177
+     3150 (   1/226) region-wide mean Temperature:        5.2083154502
+     3150 (   1/226) region-wide mean Salinity:          35.0506922880
+     3150 (   1/226) region-wide mean Density Dev:        2.5722766066
+ northward heat flux (petawatts):
+  0.000  0.228  0.054 -0.020  0.020  0.154  0.230  0.396  0.275 -0.180 -0.773
+  0.087  1.940 -0.384  0.366  0.257  0.322  0.524  0.688  0.557  0.435  0.458
+  0.407  0.380  0.263  0.064  0.029  0.057 -0.020  0.006 -0.052  0.122  0.285
+  0.189 -0.061 -0.214 -0.217 -0.187 -0.134 -0.063 -0.012  0.016  0.038  0.034
+  0.042  0.048  0.083  0.097  0.140  0.154  0.191
+ time step     3150         y e a r  0001         d a y  226         h o u r  00
+ creating a new standard restart file
+ restart created at model day     210.00
+ step     3150 day   210.00 -- archiving completed --
+
+
+     timer statistics 
+    ------------------
+
+     cnuity   calls =      450   time =    3.57940   time/call =    0.00795423
+     tsadvc   calls =      450   time =   23.37403   time/call =    0.05194229
+     momtum   calls =      450   time =    8.14554   time/call =    0.01810121
+     barotp   calls =      450   time =    0.33286   time/call =    0.00073968
+     thermf   calls =      450   time =    0.65930   time/call =    0.00146510
+     ic****   calls =      450   time =    0.00011   time/call =    0.00000025
+     mx****   calls =      450   time =    8.14726   time/call =    0.01810501
+     conv**   calls =      450   time =    0.00011   time/call =    0.00000025
+     diapf*   calls =      450   time =    0.00007   time/call =    0.00000016
+     hybgen   calls =      450   time =    6.52816   time/call =    0.01450703
+     restrt   calls =        1   time =    0.04266   time/call =    0.04266405
+     overtn   calls =        1   time =    0.00246   time/call =    0.00245762
+     archiv   calls =        1   time =    0.01354   time/call =    0.01353693
+     total    calls =        1   time =  132.55857   time/call =  132.55856824
+
+
+
+ **************************************************
+ (normal)
+ **************************************************
+STOP (xcstop)
+316.4u 12.2s 2:13 246% 939+48328k 0+0io 178pf+0w
+breaksw
+else
+C
+touch PIPE_DEBUG
+/bin/rm PIPE_DEBUG

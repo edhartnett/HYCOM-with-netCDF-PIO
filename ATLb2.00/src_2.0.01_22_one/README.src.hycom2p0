@@ -1,0 +1,26 @@
+src_2.0.01_16_omp/README.src.hycom2p0
+
+1. See README.src.hycom1p0 for the features of HYCOM 1.0.  Here we 
+concentrate on the differences in HYCOM 2.0.
+
+2. A Fortran 90 (or 95) compiler is now required.
+
+3. The pakked file format is no longer used.  Each data set now consists
+of two files, (i) a large ".a" file containing the raw REAL*4 arrays padded
+to a multiple of 4096 REAL*4 elements and with 2.0**100 indicating a
+data void, and (ii) a small ".b" file containing formatted (plain text)
+summary data.  The ".b" file typically contains a header followed by
+one line for each 2-D array in the associated ".a" file.
+
+4. In addition to the OpenMP parallelization supported in HYCOM 1.0, both
+MPI alone and dual-level MPI+OpenMP parallelization is also supported.
+As is the SHMEM put/get library alone on machines that support it.
+
+5. The Makefile's of setup programs are now consistent with that of
+the ocean model.  Both now separate out the machine-specific portion
+of the Makefile into a small file found in the config directory.
+
+6. The archive plot program now does dynamic memory allocation, and can
+therefore plot arbitrary sub-domains from a single executable (which is
+however still region-specific).  An associated program can also plot 
+any scalar field from an ".[ab]" file.

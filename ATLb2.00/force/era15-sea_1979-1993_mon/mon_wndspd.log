@@ -1,0 +1,339 @@
+set time = 1
+C
+setenv OS `uname`
+uname
+switch ( Linux )
+breaksw
+C
+C --- Create HYCOM wndspd data file from a monthly atmos. climatology.
+C
+switch ( Linux )
+setenv pget cp
+setenv pput cp
+endsw
+C
+C --- R is region, e.g. GLBgx1v3
+C --- W is wind dataset name, e.g. era40-sea_1978-2002_mon
+C --- N is wind dataset, e.g. era40
+C
+setenv R `echo $cwd | sed -e "s?^.*hycom/??" | awk -F"/" '{print $1}'`
+echo /home/ajax/wallcraf/hycom/ATLb2.00/force/era15-sea_1979-1993_mon
+sed -e s?^.*hycom/??
+awk -F/ {print $1}
+setenv W `echo $cwd                          | awk -F"/" '{print $NF}'`
+echo /home/ajax/wallcraf/hycom/ATLb2.00/force/era15-sea_1979-1993_mon
+awk -F/ {print $NF}
+setenv N `echo $W                            | awk -F"-" '{print $1}'`
+echo era15-sea_1979-1993_mon
+awk -F- {print $1}
+C
+C --- P is primary path,
+C --- S is scratch directory,
+C --- D is permanent directory,
+C
+setenv P hycom/ATLb2.00/force/era15-sea_1979-1993_mon
+C
+switch ( Linux )
+if ( -e /external/fast ) then
+if ( -e /net/ajax/data ) then
+setenv S /net/ajax/data/wallcraf/hycom/ATLb2.00/force/era15-sea_1979-1993_mon
+setenv D ~/hycom/ATLb2.00/force/era15-sea_1979-1993_mon
+else
+breaksw
+C
+mkdir -p /net/ajax/data/wallcraf/hycom/ATLb2.00/force/era15-sea_1979-1993_mon
+cd /net/ajax/data/wallcraf/hycom/ATLb2.00/force/era15-sea_1979-1993_mon
+echo /net/ajax/data/wallcraf/hycom/ATLb2.00/force/era15-sea_1979-1993_mon
+/net/ajax/data/wallcraf/hycom/ATLb2.00/force/era15-sea_1979-1993_mon
+C
+C --- Input.
+C
+touch fort.71
+/bin/rm -f fort.71
+[1] 15190
+ln -s /home/hermes/metzger/force/era15/monthly/era15-sea_1979-1993_mon_wndspd.D fort.71
+C
+touch regional.grid.a regional.grid.b
+
+[1]    Done                          ln -s ~metzger/force/era15/monthly/era15-sea_1979-1993_mon_wndspd.D fort.71
+if ( -z regional.grid.b ) then
+if ( -z regional.grid.a ) then
+C
+[1] 15194
+cp /home/ajax/wallcraf/hycom/ATLb2.00/force/era15-sea_1979-1993_mon/../../../ALL/force/src/kp .
+C
+
+[1]    Done                          cp  ...
+wait
+chmod a+rx kp
+C
+/bin/rm: No match.
+C
+setenv FOR010A fort.10A
+C
+switch ( Linux )
+/bin/rm -f fort.10
+./kp
+
+xcspmd: idm,jdm =   57   52
+
+ READING /AFTITL/
+ &AFTITL
+ CTITLE = era15-sea_1979-1993_mon wndspd          ,
+ CNAME = wndspd
+ /
+ READING /AFTIME/
+ &AFTIME
+ FSTART =    0.000000000000000     ,
+ WSTART =    0.000000000000000     ,
+ TSTART =    0.000000000000000     ,
+ TMAX =    0.000000000000000     ,
+ PARMIN =   -99.00000000000000     ,
+ PARMAX =    99.00000000000000     ,
+ PAROFF =    0.000000000000000     ,
+ PARSCL =    1.000000000000000     ,
+ TMPICE =   -1.700000000000000     ,
+ SEAMSK =   0.5000000    
+ /
+
+ READING /AFFLAG/
+ &AFFLAG
+ IFFILE =            3,
+ INTERP =            0,
+ INTMSK =            0,
+ NGLOBE =            0,
+ SMOOTH =            0,
+ JPR =            8
+ /
+
+ OUTPUT:  era15-sea_1979-1993_mon wndspd          
+
+
+
+era15-sea_1979-1993_mon wndspd                                                 
+                                                                               
+                                                                               
+                                                                               
+i/jdm =   57   52                                                              
+
+ FREAD0 - MAXREC,WSTART,WEND =         90000   -1.000000       -1.000000    
+ FREAD0 - IWI,JWI   =           320          160
+ FREAD0 - XFIN,DXIN =    -180.0000        1.125000    
+ FREAD0 - YFIN,DYIN =    -89.14100        0.000000    
+
+J,YAG =    1  -89.14156
+J,YAG =    2  -88.02940
+J,YAG =    3  -86.91078
+J,YAG =    4  -85.79061
+J,YAG =    5  -84.66990
+J,YAG =    6  -83.54894
+J,YAG =    7  -82.42780
+J,YAG =    8  -81.30658
+J,YAG =    9  -80.18530
+J,YAG =   10  -79.06399
+J,YAG =   11  -77.94262
+J,YAG =   12  -76.82124
+J,YAG =   13  -75.69984
+J,YAG =   14  -74.57844
+J,YAG =   15  -73.45701
+J,YAG =   16  -72.33556
+J,YAG =   17  -71.21413
+J,YAG =   18  -70.09268
+J,YAG =   19  -68.97123
+J,YAG =   20  -67.84978
+J,YAG =   21  -66.72832
+J,YAG =   22  -65.60686
+J,YAG =   23  -64.48540
+J,YAG =   24  -63.36393
+J,YAG =   25  -62.24246
+J,YAG =   26  -61.12099
+J,YAG =   27  -59.99952
+J,YAG =   28  -58.87804
+J,YAG =   29  -57.75657
+J,YAG =   30  -56.63509
+J,YAG =   31  -55.51361
+J,YAG =   32  -54.39213
+J,YAG =   33  -53.27065
+J,YAG =   34  -52.14917
+J,YAG =   35  -51.02769
+J,YAG =   36  -49.90621
+J,YAG =   37  -48.78473
+J,YAG =   38  -47.66324
+J,YAG =   39  -46.54176
+J,YAG =   40  -45.42027
+J,YAG =   41  -44.29879
+J,YAG =   42  -43.17730
+J,YAG =   43  -42.05582
+J,YAG =   44  -40.93434
+J,YAG =   45  -39.81285
+J,YAG =   46  -38.69137
+J,YAG =   47  -37.56988
+J,YAG =   48  -36.44839
+J,YAG =   49  -35.32690
+J,YAG =   50  -34.20541
+J,YAG =   51  -33.08392
+J,YAG =   52  -31.96244
+J,YAG =   53  -30.84096
+J,YAG =   54  -29.71947
+J,YAG =   55  -28.59798
+J,YAG =   56  -27.47649
+J,YAG =   57  -26.35500
+J,YAG =   58  -25.23351
+J,YAG =   59  -24.11202
+J,YAG =   60  -22.99054
+J,YAG =   61  -21.86905
+J,YAG =   62  -20.74756
+J,YAG =   63  -19.62607
+J,YAG =   64  -18.50458
+J,YAG =   65  -17.38309
+J,YAG =   66  -16.26160
+J,YAG =   67  -15.14011
+J,YAG =   68  -14.01862
+J,YAG =   69  -12.89713
+J,YAG =   70  -11.77564
+J,YAG =   71  -10.65415
+J,YAG =   72   -9.53266
+J,YAG =   73   -8.41117
+J,YAG =   74   -7.28968
+J,YAG =   75   -6.16819
+J,YAG =   76   -5.04670
+J,YAG =   77   -3.92521
+J,YAG =   78   -2.80372
+J,YAG =   79   -1.68223
+J,YAG =   80   -0.56075
+J,YAG =   81    0.56075
+J,YAG =   82    1.68223
+J,YAG =   83    2.80372
+J,YAG =   84    3.92521
+J,YAG =   85    5.04670
+J,YAG =   86    6.16819
+J,YAG =   87    7.28968
+J,YAG =   88    8.41117
+J,YAG =   89    9.53266
+J,YAG =   90   10.65415
+J,YAG =   91   11.77564
+J,YAG =   92   12.89713
+J,YAG =   93   14.01862
+J,YAG =   94   15.14011
+J,YAG =   95   16.26160
+J,YAG =   96   17.38309
+J,YAG =   97   18.50458
+J,YAG =   98   19.62607
+J,YAG =   99   20.74756
+J,YAG =  100   21.86905
+J,YAG =  101   22.99054
+J,YAG =  102   24.11202
+J,YAG =  103   25.23351
+J,YAG =  104   26.35500
+J,YAG =  105   27.47649
+J,YAG =  106   28.59798
+J,YAG =  107   29.71947
+J,YAG =  108   30.84096
+J,YAG =  109   31.96244
+J,YAG =  110   33.08392
+J,YAG =  111   34.20541
+J,YAG =  112   35.32690
+J,YAG =  113   36.44839
+J,YAG =  114   37.56988
+J,YAG =  115   38.69137
+J,YAG =  116   39.81285
+J,YAG =  117   40.93434
+J,YAG =  118   42.05582
+J,YAG =  119   43.17730
+J,YAG =  120   44.29879
+J,YAG =  121   45.42027
+J,YAG =  122   46.54176
+J,YAG =  123   47.66324
+J,YAG =  124   48.78473
+J,YAG =  125   49.90621
+J,YAG =  126   51.02769
+J,YAG =  127   52.14917
+J,YAG =  128   53.27065
+J,YAG =  129   54.39213
+J,YAG =  130   55.51361
+J,YAG =  131   56.63509
+J,YAG =  132   57.75657
+J,YAG =  133   58.87804
+J,YAG =  134   59.99952
+J,YAG =  135   61.12099
+J,YAG =  136   62.24246
+J,YAG =  137   63.36393
+J,YAG =  138   64.48540
+J,YAG =  139   65.60686
+J,YAG =  140   66.72832
+J,YAG =  141   67.84978
+J,YAG =  142   68.97123
+J,YAG =  143   70.09268
+J,YAG =  144   71.21413
+J,YAG =  145   72.33556
+J,YAG =  146   73.45701
+J,YAG =  147   74.57844
+J,YAG =  148   75.69984
+J,YAG =  149   76.82124
+J,YAG =  150   77.94262
+J,YAG =  151   79.06399
+J,YAG =  152   80.18530
+J,YAG =  153   81.30658
+J,YAG =  154   82.42780
+J,YAG =  155   83.54894
+J,YAG =  156   84.66990
+J,YAG =  157   85.79061
+J,YAG =  158   86.91078
+J,YAG =  159   88.02940
+J,YAG =  160   89.14156
+
+
+ MIN,MAX I COORDS =    76.78,  176.33
+ MIN,MAX J COORDS =    65.02,  138.78
+
+ KPAR: MIN=   1.51276803 MAX=  12.71693230 AVE=   6.88011026 RMS=   7.29380417
+          WRITING KPAR RECORD  1     FDAY =    31.00
+
+ KPAR: MIN=   1.58475721 MAX=  12.39465904 AVE=   6.73295736 RMS=   7.12994194
+          WRITING KPAR RECORD  2     FDAY =    29.00
+
+ KPAR: MIN=   1.60612941 MAX=  11.86464119 AVE=   6.49386168 RMS=   6.83456421
+          WRITING KPAR RECORD  3     FDAY =    31.00
+
+ KPAR: MIN=   1.43369889 MAX=  10.07028198 AVE=   6.01317167 RMS=   6.23525286
+          WRITING KPAR RECORD  4     FDAY =    30.00
+
+ KPAR: MIN=   1.31826282 MAX=   8.68848801 AVE=   5.58495855 RMS=   5.75047398
+          WRITING KPAR RECORD  5     FDAY =    31.00
+
+ KPAR: MIN=   1.38968170 MAX=  10.25942230 AVE=   5.45832062 RMS=   5.61063480
+          WRITING KPAR RECORD  6     FDAY =    30.00
+
+ KPAR: MIN=   1.41168535 MAX=  10.90546608 AVE=   5.36716843 RMS=   5.52456188
+          WRITING KPAR RECORD  7     FDAY =    31.00
+
+ KPAR: MIN=   1.38881123 MAX=   9.52903080 AVE=   5.40020227 RMS=   5.56103897
+          WRITING KPAR RECORD  8     FDAY =    31.00
+
+ KPAR: MIN=   1.33584023 MAX=   9.38638401 AVE=   5.80213404 RMS=   5.99741650
+          WRITING KPAR RECORD  9     FDAY =    30.00
+
+ KPAR: MIN=   1.37965894 MAX=  10.72471237 AVE=   6.26716471 RMS=   6.52365303
+          WRITING KPAR RECORD 10     FDAY =    31.00
+
+ KPAR: MIN=   1.38858843 MAX=  11.31848812 AVE=   6.67676210 RMS=   6.97853661
+          WRITING KPAR RECORD 11     FDAY =    30.00
+
+ KPAR: MIN=   1.46056890 MAX=  12.62019157 AVE=   6.87469244 RMS=   7.26428556
+          WRITING KPAR RECORD 12     FDAY =    31.00
+
+   12 RECORD CLIMATOLOGY STARTING ON  16.00/1904 COVERING   366.00 DAYS
+FORTRAN STOP
+switch ( Linux )
+C
+C --- Output.
+C
+/bin/mv fort.10 ./wndspd.b
+/bin/mv fort.10A ./wndspd.a
+C
+cp wndspd.b /home/ajax/wallcraf/hycom/ATLb2.00/force/era15-sea_1979-1993_mon/wndspd.b
+cp wndspd.a /home/ajax/wallcraf/hycom/ATLb2.00/force/era15-sea_1979-1993_mon/wndspd.a
+C
+C --- Delete all files.
+C
+/bin/rm -f fort.71 ./kp

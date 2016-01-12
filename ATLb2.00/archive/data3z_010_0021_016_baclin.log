@@ -1,0 +1,751 @@
+touch regional.depth.a regional.depth.b
+if ( -z regional.depth.a ) then
+if ( -z regional.depth.b ) then
+touch regional.grid.a regional.grid.b
+if ( -z regional.grid.a ) then
+if ( -z regional.grid.b ) then
+setenv D ../expt_01.0/data
+foreach y ( 0021 )
+foreach d ( 016 )
+setenv FOR051A ../expt_01.0/data/archv.0021_016_00_bot.a
+setenv FOR051 ../expt_01.0/data/archv.0021_016_00_bot.b
+setenv FOR021A ../expt_01.0/data/archv.0021_016_00_mlt.a
+setenv FOR021 ../expt_01.0/data/archv.0021_016_00_mlt.b
+setenv FOR022A ../expt_01.0/data/archv.0021_016_00_3di.a
+setenv FOR022 ../expt_01.0/data/archv.0021_016_00_3di.b
+setenv FOR033A ../expt_01.0/data/archv.0021_016_00_3zt.a
+setenv FOR033 ../expt_01.0/data/archv.0021_016_00_3zt.b
+setenv FOR034A ../expt_01.0/data/archv.0021_016_00_3zs.a
+setenv FOR034 ../expt_01.0/data/archv.0021_016_00_3zs.b
+setenv FOR035A ../expt_01.0/data/archv.0021_016_00_3zr.a
+setenv FOR035 ../expt_01.0/data/archv.0021_016_00_3zr.b
+setenv FOR037A ../expt_01.0/data/archv.0021_016_00_3zub.a
+setenv FOR037 ../expt_01.0/data/archv.0021_016_00_3zub.b
+setenv FOR038A ../expt_01.0/data/archv.0021_016_00_3zvb.a
+setenv FOR038 ../expt_01.0/data/archv.0021_016_00_3zvb.b
+setenv FOR040A ../expt_01.0/data/archv.0021_016_00_3zsb.a
+setenv FOR040 ../expt_01.0/data/archv.0021_016_00_3zsb.b
+setenv FOR039A ../expt_01.0/data/archv.0021_016_00_3zw.a
+setenv FOR039 ../expt_01.0/data/archv.0021_016_00_3zw.b
+/bin/rm ../expt_01.0/data/archv.0021_016_00_bot.b ../expt_01.0/data/archv.0021_016_00_mlt.b ../expt_01.0/data/archv.0021_016_00_3di.b
+../expt_01.0/data/archv.0021_016_00_bot.b: No such file or directory
+../expt_01.0/data/archv.0021_016_00_mlt.b: No such file or directory
+../expt_01.0/data/archv.0021_016_00_3di.b: No such file or directory
+/bin/rm ../expt_01.0/data/archv.0021_016_00_bot.a ../expt_01.0/data/archv.0021_016_00_mlt.a ../expt_01.0/data/archv.0021_016_00_3di.a
+../expt_01.0/data/archv.0021_016_00_bot.a: No such file or directory
+../expt_01.0/data/archv.0021_016_00_mlt.a: No such file or directory
+../expt_01.0/data/archv.0021_016_00_3di.a: No such file or directory
+/bin/rm ../expt_01.0/data/archv.0021_016_00_3zt.b ../expt_01.0/data/archv.0021_016_00_3zs.b ../expt_01.0/data/archv.0021_016_00_3zr.b ../expt_01.0/data/archv.0021_016_00_3zub.b ../expt_01.0/data/archv.0021_016_00_3zvb.b ../expt_01.0/data/archv.0021_016_00_3zw.b ../expt_01.0/data/archv.0021_016_00_3zsb.b
+../expt_01.0/data/archv.0021_016_00_3zt.b: No such file or directory
+../expt_01.0/data/archv.0021_016_00_3zs.b: No such file or directory
+../expt_01.0/data/archv.0021_016_00_3zr.b: No such file or directory
+../expt_01.0/data/archv.0021_016_00_3zub.b: No such file or directory
+../expt_01.0/data/archv.0021_016_00_3zvb.b: No such file or directory
+../expt_01.0/data/archv.0021_016_00_3zw.b: No such file or directory
+../expt_01.0/data/archv.0021_016_00_3zsb.b: No such file or directory
+/bin/rm ../expt_01.0/data/archv.0021_016_00_3zt.a ../expt_01.0/data/archv.0021_016_00_3zs.a ../expt_01.0/data/archv.0021_016_00_3zr.a ../expt_01.0/data/archv.0021_016_00_3zub.a ../expt_01.0/data/archv.0021_016_00_3zvb.a ../expt_01.0/data/archv.0021_016_00_3zw.a ../expt_01.0/data/archv.0021_016_00_3zsb.a
+../expt_01.0/data/archv.0021_016_00_3zt.a: No such file or directory
+../expt_01.0/data/archv.0021_016_00_3zs.a: No such file or directory
+../expt_01.0/data/archv.0021_016_00_3zr.a: No such file or directory
+../expt_01.0/data/archv.0021_016_00_3zub.a: No such file or directory
+../expt_01.0/data/archv.0021_016_00_3zvb.a: No such file or directory
+../expt_01.0/data/archv.0021_016_00_3zw.a: No such file or directory
+../expt_01.0/data/archv.0021_016_00_3zsb.a: No such file or directory
+../../ALL/archive/src/archv2data3z
+
+xcspmd: idm,jdm =   57   52
+
+ input file: ../expt_01.0/data/archv.0021_016_00.a
+output type: HYCOM
+blkini: iexpt  =     0
+blkini: yrflag =     0
+blkini: idm    =    57
+blkini: jdm    =    52
+blkini: kdm    =    22
+blkinr: thbase =    25.0000 sig
+blkinl: smooth =     F
+blkini: baclin =     1
+blkini: iorign =     1
+blkini: jorign =     1
+blkini: idmp   =     0
+blkini: jdmp   =     0
+
+extracting i =    1 ...   57         j =    1 ...   52
+
+blkini: itype  =     1
+blkini: kz     =    33
+blkinr: z      =     0.0000 m
+blkinr: z      =    10.0000 m
+blkinr: z      =    20.0000 m
+blkinr: z      =    30.0000 m
+blkinr: z      =    50.0000 m
+blkinr: z      =    75.0000 m
+blkinr: z      =   100.0000 m
+blkinr: z      =   125.0000 m
+blkinr: z      =   150.0000 m
+blkinr: z      =   200.0000 m
+blkinr: z      =   250.0000 m
+blkinr: z      =   300.0000 m
+blkinr: z      =   400.0000 m
+blkinr: z      =   500.0000 m
+blkinr: z      =   600.0000 m
+blkinr: z      =   700.0000 m
+blkinr: z      =   800.0000 m
+blkinr: z      =   900.0000 m
+blkinr: z      =  1000.0000 m
+blkinr: z      =  1100.0000 m
+blkinr: z      =  1200.0000 m
+blkinr: z      =  1300.0000 m
+blkinr: z      =  1400.0000 m
+blkinr: z      =  1500.0000 m
+blkinr: z      =  1750.0000 m
+blkinr: z      =  2000.0000 m
+blkinr: z      =  2500.0000 m
+blkinr: z      =  3000.0000 m
+blkinr: z      =  3500.0000 m
+blkinr: z      =  4000.0000 m
+blkinr: z      =  4500.0000 m
+blkinr: z      =  5000.0000 m
+blkinr: z      =  5500.0000 m
+ 
+blkini: botio  =    51
+blkini: mltio  =    21
+blkinr: tempml =     0.2000 degC
+blkinr: densml =     0.0000 kg/m3
+blkini: infio  =   -22
+blkini: wvlio  =    39
+blkini: uvlio  =    37
+blkini: vvlio  =    38
+blkini: splio  =    40
+blkini: temio  =    33
+blkini: salio  =    34
+blkini: tthio  =    35
+COADS forcing: precip_zero; srelax;                                             
+boundary relax; iniflg=2; KPP mixed layer; Jerlov IA;                           
+Z(22): dp00/f/x=3m/1.125/12m; ATLb2.00/src_2.1.00_22.                           
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+ iversn =  21
+ iexpt  =  10
+ yrflag =  0
+ idm    =  57
+ jdm    =  52
+field       time step  model day  k  dens        min              max
+artype = 1
+montg1   =     108000    7200.00  0  0.000  -2.3880370E+00   1.5416452E+01
+input  montg1   into montg   
+srfhgt   =     108000    7200.00  0  0.000  -8.1892319E+00   6.5884695E+00
+input  srfhgt   into srfht   
+surflx   =     108000    7200.00  0  0.000  -5.2793207E+02   1.3900906E+02
+input  surflx   into surflx  
+ time3 =  7200.0 7200.0 7200.0
+salflx   =     108000    7200.00  0  0.000  -5.1400308E-02   6.3910098E-03
+input  salflx   into salflx  
+bl_dpth  =     108000    7200.00  0  0.000   2.9065035E+04   4.0260935E+06
+input  bl_dpth  into dpbl    
+mix_dpth =     108000    7200.00  0  0.000   2.8966975E+04   4.4041530E+06
+input  mix_dpth into dpmixl  
+tmix     =     108000    7200.00  0  0.000  -1.9401265E+00   3.1511477E+01
+input  tmix     into tmix    
+smix     =     108000    7200.00  0  0.000   2.8306360E+01   3.7239616E+01
+input  smix     into smix    
+thmix    =     108000    7200.00  0  0.000  -8.0970573E+00   2.5685017E+00
+input  thmix    into thmix   
+umix     =     108000    7200.00  0  0.000  -8.4013861E-01   4.3202648E-01
+input  umix     into umix    
+vmix     =     108000    7200.00  0  0.000  -2.7984291E-01   7.6682037E-01
+input  vmix     into vmix    
+u_btrop  =     108000    7200.00  0  0.000  -3.2425368E-01   5.1642954E-01
+input  u_btrop  into ubaro   
+v_btrop  =     108000    7200.00  0  0.000  -1.4655043E-01   5.3623492E-01
+input  v_btrop  into vbaro   
+u-vel.   =     108000    7200.00  1 19.500  -9.2772037E-01   4.8688263E-01
+input  u-vel.   into u         1
+v-vel.   =     108000    7200.00  1 19.500  -4.5999730E-01   7.3470306E-01
+input  v-vel.   into v         1
+thknss   =     108000    7200.00  1 19.500   2.9418000E+04   2.9418000E+04
+input  thknss   into dp        1
+temp     =     108000    7200.00  1 19.500  -1.9439366E+00   3.1506077E+01
+input  temp     into temp      1
+salin    =     108000    7200.00  1 19.500   2.8306360E+01   3.7239765E+01
+input  salin    into saln      1
+density  =     108000    7200.00  1 19.500  -8.0970573E+00   2.5690188E+00
+input  density  into th3d      1
+u-vel.   =     108000    7200.00  2 20.250  -8.3946538E-01   4.7569683E-01
+finished reading data for layer 19.50000
+input  u-vel.   into u         2
+v-vel.   =     108000    7200.00  2 20.250  -4.6307650E-01   7.6345980E-01
+input  v-vel.   into v         2
+thknss   =     108000    7200.00  2 20.250   2.5365605E+04   1.1440030E+05
+input  thknss   into dp        2
+temp     =     108000    7200.00  2 20.250  -1.9228507E+00   3.1176327E+01
+input  temp     into temp      2
+salin    =     108000    7200.00  2 20.250   2.8800129E+01   3.7239716E+01
+input  salin    into saln      2
+density  =     108000    7200.00  2 20.250  -7.7266054E+00   2.5682213E+00
+input  density  into th3d      2
+finished reading data for layer 20.25000
+u-vel.   =     108000    7200.00  3 21.000  -8.0945396E-01   4.7122565E-01
+input  u-vel.   into u         3
+v-vel.   =     108000    7200.00  3 21.000  -4.6216074E-01   7.8535861E-01
+input  v-vel.   into v         3
+thknss   =     108000    7200.00  3 21.000   3.2837539E+04   1.6163447E+05
+input  thknss   into dp        3
+temp     =     108000    7200.00  3 21.000  -1.8927773E+00   3.0967789E+01
+input  temp     into temp      3
+salin    =     108000    7200.00  3 21.000   3.1913038E+01   3.7239708E+01
+input  salin    into saln      3
+density  =     108000    7200.00  3 21.000  -4.3854856E+00   2.5679359E+00
+input  density  into th3d      3
+finished reading data for layer 21.00000
+u-vel.   =     108000    7200.00  4 21.750  -7.7909195E-01   4.6915567E-01
+input  u-vel.   into u         4
+v-vel.   =     108000    7200.00  4 21.750  -4.5667124E-01   8.2797426E-01
+input  v-vel.   into v         4
+thknss   =     108000    7200.00  4 21.750   4.1886176E+04   1.8399845E+05
+input  thknss   into dp        4
+temp     =     108000    7200.00  4 21.750  -1.2995541E+00   3.0202200E+01
+input  temp     into temp      4
+salin    =     108000    7200.00  4 21.750   3.2195583E+01   3.7239697E+01
+input  salin    into saln      4
+density  =     108000    7200.00  4 21.750  -3.5972586E+00   2.5677905E+00
+input  density  into th3d      4
+finished reading data for layer 21.75000
+u-vel.   =     108000    7200.00  5 22.500  -7.4282944E-01   4.6857110E-01
+input  u-vel.   into u         5
+v-vel.   =     108000    7200.00  5 22.500  -4.4394442E-01   7.6867557E-01
+input  v-vel.   into v         5
+thknss   =     108000    7200.00  5 22.500   1.4006010E+04   7.3514525E+05
+input  thknss   into dp        5
+temp     =     108000    7200.00  5 22.500  -1.2174859E+00   2.9181013E+01
+input  temp     into temp      5
+salin    =     108000    7200.00  5 22.500   3.2455116E+01   3.7239704E+01
+input  salin    into saln      5
+density  =     108000    7200.00  5 22.500  -2.9062858E+00   2.5677047E+00
+input  density  into th3d      5
+finished reading data for layer 22.50000
+u-vel.   =     108000    7200.00  6 23.250  -4.9820063E-01   4.6916407E-01
+input  u-vel.   into u         6
+v-vel.   =     108000    7200.00  6 23.250  -4.8401779E-01   3.4411287E-01
+input  v-vel.   into v         6
+thknss   =     108000    7200.00  6 23.250   5.2850332E+04   1.5781436E+06
+input  thknss   into dp        6
+temp     =     108000    7200.00  6 23.250  -7.7910644E-01   2.8309362E+01
+input  temp     into temp      6
+salin    =     108000    7200.00  6 23.250   3.2631554E+01   3.7238605E+01
+input  salin    into saln      6
+density  =     108000    7200.00  6 23.250  -2.0405071E+00   2.5676515E+00
+input  density  into th3d      6
+finished reading data for layer 23.25000
+u-vel.   =     108000    7200.00  7 24.000  -4.8263058E-01   5.4686838E-01
+input  u-vel.   into u         7
+v-vel.   =     108000    7200.00  7 24.000  -4.0186787E-01   9.8865354E-01
+input  v-vel.   into v         7
+thknss   =     108000    7200.00  7 24.000   1.4702638E+04   1.4545488E+06
+input  thknss   into dp        7
+temp     =     108000    7200.00  7 24.000  -7.7084804E-01   2.7796625E+01
+input  temp     into temp      7
+salin    =     108000    7200.00  7 24.000   3.2792088E+01   3.7203590E+01
+input  salin    into saln      7
+density  =     108000    7200.00  7 24.000  -1.2346998E+00   2.5676196E+00
+input  density  into th3d      7
+finished reading data for layer 24.00000
+u-vel.   =     108000    7200.00  8 24.700  -4.3531609E-01   5.2007508E-01
+input  u-vel.   into u         8
+v-vel.   =     108000    7200.00  8 24.700  -2.7912709E-01   5.4007065E-01
+input  v-vel.   into v         8
+thknss   =     108000    7200.00  8 24.700   6.4037102E+04   1.5529274E+06
+input  thknss   into dp        8
+temp     =     108000    7200.00  8 24.700  -6.9628412E-01   2.5918373E+01
+input  temp     into temp      8
+salin    =     108000    7200.00  8 24.700   3.3034344E+01   3.7186069E+01
+input  salin    into saln      8
+density  =     108000    7200.00  8 24.700  -5.3615779E-01   2.5676029E+00
+input  density  into th3d      8
+finished reading data for layer 24.70000
+u-vel.   =     108000    7200.00  9 25.280  -4.3876374E-01   1.0477375E+00
+input  u-vel.   into u         9
+v-vel.   =     108000    7200.00  9 25.280  -3.0358243E-01   5.3957748E-01
+input  v-vel.   into v         9
+thknss   =     108000    7200.00  9 25.280   3.6468824E+04   1.6452479E+06
+input  thknss   into dp        9
+temp     =     108000    7200.00  9 25.280  -4.3566975E-01   2.3796917E+01
+input  temp     into temp      9
+salin    =     108000    7200.00  9 25.280   3.3130260E+01   3.7081268E+01
+input  salin    into saln      9
+density  =     108000    7200.00  9 25.280   1.5995350E-01   2.5675981E+00
+input  density  into th3d      9
+finished reading data for layer 25.28000
+u-vel.   =     108000    7200.00 10 25.770  -4.9011222E-01   4.8287690E-01
+input  u-vel.   into u        10
+v-vel.   =     108000    7200.00 10 25.770  -1.6810617E-01   3.9364511E-01
+input  v-vel.   into v        10
+thknss   =     108000    7200.00 10 25.770   7.5054469E+04   3.1943738E+06
+input  thknss   into dp       10
+temp     =     108000    7200.00 10 25.770  -4.3607342E-01   2.1042013E+01
+input  temp     into temp     10
+salin    =     108000    7200.00 10 25.770   3.3232880E+01   3.6731686E+01
+input  salin    into saln     10
+density  =     108000    7200.00 10 25.770   6.5810275E-01   2.5676038E+00
+input  density  into th3d     10
+finished reading data for layer 25.77000
+u-vel.   =     108000    7200.00 11 26.180  -4.4726691E-01   4.8928508E-01
+input  u-vel.   into u        11
+v-vel.   =     108000    7200.00 11 26.180  -2.2686684E-01   7.8500539E-01
+input  v-vel.   into v        11
+thknss   =     108000    7200.00 11 26.180   1.6094238E+03   3.7808648E+06
+input  thknss   into dp       11
+temp     =     108000    7200.00 11 26.180  -4.3677652E-01   1.8459009E+01
+input  temp     into temp     11
+salin    =     108000    7200.00 11 26.180   3.3377312E+01   3.6339409E+01
+input  salin    into saln     11
+density  =     108000    7200.00 11 26.180   8.9456081E-01   2.5676205E+00
+input  density  into th3d     11
+finished reading data for layer 26.18000
+u-vel.   =     108000    7200.00 12 26.520  -4.5386261E-01   4.9686134E-01
+input  u-vel.   into u        12
+v-vel.   =     108000    7200.00 12 26.520  -3.4249106E-01   2.3946032E-01
+input  v-vel.   into v        12
+thknss   =     108000    7200.00 12 26.520   9.3787067E+02   4.4544985E+06
+input  thknss   into dp       12
+temp     =     108000    7200.00 12 26.520  -4.3779460E-01   1.6619118E+01
+input  temp     into temp     12
+salin    =     108000    7200.00 12 26.520   3.3472954E+01   3.5977306E+01
+input  salin    into saln     12
+density  =     108000    7200.00 12 26.520   1.2335159E+00   2.5676486E+00
+input  density  into th3d     12
+finished reading data for layer 26.52000
+u-vel.   =     108000    7200.00 13 26.800  -4.6978530E-01   5.0518483E-01
+input  u-vel.   into u        13
+v-vel.   =     108000    7200.00 13 26.800  -4.0148148E-01   2.4518465E-01
+input  v-vel.   into v        13
+thknss   =     108000    7200.00 13 26.800   1.6298145E-09   5.1212135E+06
+input  thknss   into dp       13
+temp     =     108000    7200.00 13 26.800  -4.4268191E-01   1.5220854E+01
+input  temp     into temp     13
+salin    =     108000    7200.00 13 26.800   3.3472172E+01   3.5739788E+01
+input  salin    into saln     13
+density  =     108000    7200.00 13 26.800   1.3881603E+00   2.7323332E+00
+input  density  into th3d     13
+finished reading data for layer 26.80000
+u-vel.   =     108000    7200.00 14 27.030  -4.9036142E-01   5.1064324E-01
+input  u-vel.   into u        14
+v-vel.   =     108000    7200.00 14 27.030  -4.0193424E-01   2.4549076E-01
+input  v-vel.   into v        14
+thknss   =     108000    7200.00 14 27.030   0.0000000E+00   4.6922860E+06
+input  thknss   into dp       14
+temp     =     108000    7200.00 14 27.030   1.1026857E+00   1.3184839E+01
+input  temp     into temp     14
+salin    =     108000    7200.00 14 27.030   3.3747559E+01   3.5646572E+01
+input  salin    into saln     14
+density  =     108000    7200.00 14 27.030   1.7845305E+00   2.7345624E+00
+input  density  into th3d     14
+finished reading data for layer 27.03000
+u-vel.   =     108000    7200.00 15 27.220  -5.2845347E-01   5.8103067E-01
+input  u-vel.   into u        15
+v-vel.   =     108000    7200.00 15 27.220  -4.0193424E-01   4.6461657E-01
+input  v-vel.   into v        15
+thknss   =     108000    7200.00 15 27.220   0.0000000E+00   3.7581535E+06
+input  thknss   into dp       15
+temp     =     108000    7200.00 15 27.220   1.1967876E+00   1.1829559E+01
+input  temp     into temp     15
+salin    =     108000    7200.00 15 27.220   3.3989101E+01   3.5487076E+01
+input  salin    into saln     15
+density  =     108000    7200.00 15 27.220   1.9714994E+00   2.7363274E+00
+input  density  into th3d     15
+finished reading data for layer 27.22000
+u-vel.   =     108000    7200.00 16 27.380  -6.7536575E-01   2.8075260E-01
+input  u-vel.   into u        16
+v-vel.   =     108000    7200.00 16 27.380  -4.0193424E-01   2.4415947E-01
+input  v-vel.   into v        16
+thknss   =     108000    7200.00 16 27.380   0.0000000E+00   5.0544100E+06
+input  thknss   into dp       16
+temp     =     108000    7200.00 16 27.380   2.0729256E+00   1.0554555E+01
+input  temp     into temp     16
+salin    =     108000    7200.00 16 27.380   3.4269623E+01   3.5487076E+01
+input  salin    into saln     16
+density  =     108000    7200.00 16 27.380   2.0496557E+00   2.7173257E+00
+input  density  into th3d     16
+finished reading data for layer 27.38000
+u-vel.   =     108000    7200.00 17 27.520  -3.5370505E-01   4.4477215E-01
+input  u-vel.   into u        17
+v-vel.   =     108000    7200.00 17 27.520  -4.0193424E-01   2.4562402E-01
+input  v-vel.   into v        17
+thknss   =     108000    7200.00 17 27.520   0.0000000E+00   4.8233665E+06
+input  thknss   into dp       17
+temp     =     108000    7200.00 17 27.520   2.9673049E+00   8.9919462E+00
+input  temp     into temp     17
+salin    =     108000    7200.00 17 27.520   3.4533741E+01   3.5487076E+01
+input  salin    into saln     17
+density  =     108000    7200.00 17 27.520   2.2936494E+00   2.7766159E+00
+input  density  into th3d     17
+finished reading data for layer 27.52000
+u-vel.   =     108000    7200.00 18 27.640  -3.1391871E-01   2.4923998E-01
+input  u-vel.   into u        18
+v-vel.   =     108000    7200.00 18 27.640  -4.0193424E-01   2.4562402E-01
+input  v-vel.   into v        18
+thknss   =     108000    7200.00 18 27.640   0.0000000E+00   4.7129920E+06
+input  thknss   into dp       18
+temp     =     108000    7200.00 18 27.640   2.1561148E+00   8.9473391E+00
+input  temp     into temp     18
+salin    =     108000    7200.00 18 27.640   3.4601677E+01   3.5487076E+01
+input  salin    into saln     18
+density  =     108000    7200.00 18 27.640   2.3330531E+00   2.7949629E+00
+input  density  into th3d     18
+finished reading data for layer 27.64000
+u-vel.   =     108000    7200.00 19 27.740  -7.1031702E-01   2.9497358E-01
+input  u-vel.   into u        19
+v-vel.   =     108000    7200.00 19 27.740  -4.5897350E-01   2.9385084E-01
+input  v-vel.   into v        19
+thknss   =     108000    7200.00 19 27.740   0.0000000E+00   1.1087375E+07
+input  thknss   into dp       19
+temp     =     108000    7200.00 19 27.740   1.2075204E+00   8.2124958E+00
+input  temp     into temp     19
+salin    =     108000    7200.00 19 27.740   3.4635746E+01   3.5487076E+01
+input  salin    into saln     19
+density  =     108000    7200.00 19 27.740   2.4493475E+00   2.8198578E+00
+input  density  into th3d     19
+finished reading data for layer 27.74000
+u-vel.   =     108000    7200.00 20 27.820  -6.3265705E-01   2.4923998E-01
+input  u-vel.   into u        20
+v-vel.   =     108000    7200.00 20 27.820  -5.0446284E-01   2.4562402E-01
+input  v-vel.   into v        20
+thknss   =     108000    7200.00 20 27.820   0.0000000E+00   1.2503728E+07
+input  thknss   into dp       20
+temp     =     108000    7200.00 20 27.820   8.0989683E-01   6.8942456E+00
+input  temp     into temp     20
+salin    =     108000    7200.00 20 27.820   3.4702900E+01   3.5487076E+01
+input  salin    into saln     20
+density  =     108000    7200.00 20 27.820   2.6884785E+00   2.8803065E+00
+input  density  into th3d     20
+finished reading data for layer 27.82000
+u-vel.   =     108000    7200.00 21 27.880  -3.8784248E-01   3.5069317E-01
+input  u-vel.   into u        21
+v-vel.   =     108000    7200.00 21 27.880  -4.0979251E-01   3.6765552E-01
+input  v-vel.   into v        21
+thknss   =     108000    7200.00 21 27.880   0.0000000E+00   2.7192000E+07
+input  thknss   into dp       21
+temp     =     108000    7200.00 21 27.880  -2.0514186E-01   6.4532018E+00
+input  temp     into temp     21
+salin    =     108000    7200.00 21 27.880   3.4702900E+01   3.5487076E+01
+input  salin    into saln     21
+density  =     108000    7200.00 21 27.880   2.8147783E+00   2.9407928E+00
+input  density  into th3d     21
+finished reading data for layer 27.88000
+u-vel.   =     108000    7200.00 22 27.940  -4.2665884E-01   2.6883510E-01
+input  u-vel.   into u        22
+v-vel.   =     108000    7200.00 22 27.940  -4.0193424E-01   6.4321917E-01
+input  v-vel.   into v        22
+thknss   =     108000    7200.00 22 27.940   0.0000000E+00   1.1596153E+07
+input  thknss   into dp       22
+temp     =     108000    7200.00 22 27.940  -1.5618439E+00   5.9953637E+00
+input  temp     into temp     22
+salin    =     108000    7200.00 22 27.940   3.4702900E+01   3.5487076E+01
+input  salin    into saln     22
+density  =     108000    7200.00 22 27.940   2.9146059E+00   2.9976511E+00
+input  density  into th3d     22
+finished reading data for layer 27.94000
+closed archive file
+North Atlantic topography from ETOPO5 5-minute data set.                       
+56 x 51 depth values (idm,jdm = 57,52).                                        
+2.0000 deg. mercator resolution, with equat=11.000.                            
+lon: 97.000W to 13.000E.  lat: 19.606S to 62.195N.                             
+                                                                               
+min,max depth =    199.556  5837.000
+read North At into depths  
+mask North At into coast   
+plon:  min,max =       263.00000      375.00000
+plat:  min,max =       -19.60579       63.11375
+qlon:  min,max =       262.00000      374.00000
+qlat:  min,max =       -20.54502       62.65800
+ulon:  min,max =       262.00000      374.00000
+ulat:  min,max =       -19.60579       63.11375
+vlon:  min,max =       263.00000      375.00000
+vlat:  min,max =       -20.54502       62.65800
+pscx:  min,max =    100565.21875   222389.87500
+pscy:  min,max =    100571.95312   222378.59375
+uscx:  min,max =    100565.21875   222389.87500
+uscy:  min,max =    100571.95312   222378.59375
+vscx:  min,max =    102139.75781   222356.01562
+vscy:  min,max =    102146.85938   222344.73438
+
+sub-domain longitude range =   -97.00   15.00
+sub-domain latitude  range =   -19.61   63.11
+
+sub-domain assumed to be non-periodic
+
+bigrid called with ii,jj,ii1,jj1 =    57    52    56    51
+indxi called with ii,jj,ii1,jj1 =    57    52    56    51
+indxj called with ii,jj,ii1,jj1 =    57    52    56    51
+indxi called with ii,jj,ii1,jj1 =    57    52    56    51
+indxj called with ii,jj,ii1,jj1 =    57    52    56    51
+indxi called with ii,jj,ii1,jj1 =    57    52    56    51
+indxj called with ii,jj,ii1,jj1 =    57    52    56    51
+indxi called with ii,jj,ii1,jj1 =    57    52    56    51
+indxj called with ii,jj,ii1,jj1 =    57    52    56    51
+
+horout - HYCOM I/O
+
+z=   0.00 u-b.vel.  year  20.00 (jan 16) [01.0H] :  -0.821828       0.429573    
+z=  10.00 u-b.vel.  year  20.00 (jan 16) [01.0H] :  -0.744570       0.405963    
+z=  20.00 u-b.vel.  year  20.00 (jan 16) [01.0H] :  -0.669685       0.400180    
+z=  30.00 u-b.vel.  year  20.00 (jan 16) [01.0H] :  -0.591920       0.398230    
+z=  50.00 u-b.vel.  year  20.00 (jan 16) [01.0H] :  -0.426633       0.399918    
+z=  75.00 u-b.vel.  year  20.00 (jan 16) [01.0H] :  -0.454897       0.439187    
+z= 100.00 u-b.vel.  year  20.00 (jan 16) [01.0H] :  -0.509949       0.521853    
+z= 125.00 u-b.vel.  year  20.00 (jan 16) [01.0H] :  -0.603740       0.621690    
+z= 150.00 u-b.vel.  year  20.00 (jan 16) [01.0H] :  -0.629291       0.800797    
+z= 200.00 u-b.vel.  year  20.00 (jan 16) [01.0H] :  -0.443212       0.886191    
+z= 250.00 u-b.vel.  year  20.00 (jan 16) [01.0H] :  -0.342923       0.433439    
+z= 300.00 u-b.vel.  year  20.00 (jan 16) [01.0H] :  -0.270389       0.245000    
+z= 400.00 u-b.vel.  year  20.00 (jan 16) [01.0H] :  -0.201356       0.220596    
+z= 500.00 u-b.vel.  year  20.00 (jan 16) [01.0H] :  -0.173295       0.221421    
+z= 600.00 u-b.vel.  year  20.00 (jan 16) [01.0H] :  -0.258319       0.196354    
+z= 700.00 u-b.vel.  year  20.00 (jan 16) [01.0H] :  -0.348717       0.178563    
+z= 800.00 u-b.vel.  year  20.00 (jan 16) [01.0H] :  -0.352852       0.164711    
+z= 900.00 u-b.vel.  year  20.00 (jan 16) [01.0H] :  -0.279307       0.179986    
+z=1000.00 u-b.vel.  year  20.00 (jan 16) [01.0H] :  -0.492164       0.179986    
+z=1100.00 u-b.vel.  year  20.00 (jan 16) [01.0H] :  -0.315715       0.179986    
+z=1200.00 u-b.vel.  year  20.00 (jan 16) [01.0H] :  -0.227011       0.179986    
+z=1300.00 u-b.vel.  year  20.00 (jan 16) [01.0H] :  -0.230239       0.167923    
+z=1400.00 u-b.vel.  year  20.00 (jan 16) [01.0H] :  -0.233467       0.127749    
+z=1500.00 u-b.vel.  year  20.00 (jan 16) [01.0H] :  -0.236694       0.141665    
+z=1750.00 u-b.vel.  year  20.00 (jan 16) [01.0H] :  -0.238953       0.167720    
+z=2000.00 u-b.vel.  year  20.00 (jan 16) [01.0H] :  -0.156907       0.130685    
+z=2500.00 u-b.vel.  year  20.00 (jan 16) [01.0H] :  -0.122890       0.147639    
+z=3000.00 u-b.vel.  year  20.00 (jan 16) [01.0H] :  -0.124934       0.576106E-01
+z=3500.00 u-b.vel.  year  20.00 (jan 16) [01.0H] :  -0.755752E-01   0.327761E-01
+z=4000.00 u-b.vel.  year  20.00 (jan 16) [01.0H] :  -0.476495E-01   0.324981E-01
+z=4500.00 u-b.vel.  year  20.00 (jan 16) [01.0H] :  -0.374164E-01   0.318675E-01
+z=5000.00 u-b.vel.  year  20.00 (jan 16) [01.0H] :  -0.374185E-01   0.318675E-01
+z=5500.00 u-b.vel.  year  20.00 (jan 16) [01.0H] :  -0.405485E-02   0.421119E-02
+z=   0.00 v-b.vel.  year  20.00 (jan 16) [01.0H] :  -0.318224       0.702789    
+z=  10.00 v-b.vel.  year  20.00 (jan 16) [01.0H] :  -0.315383       0.769817    
+z=  20.00 v-b.vel.  year  20.00 (jan 16) [01.0H] :  -0.289178       0.648304    
+z=  30.00 v-b.vel.  year  20.00 (jan 16) [01.0H] :  -0.261985       0.554576    
+z=  50.00 v-b.vel.  year  20.00 (jan 16) [01.0H] :  -0.318485       0.367121    
+z=  75.00 v-b.vel.  year  20.00 (jan 16) [01.0H] :  -0.278065       0.695997    
+z= 100.00 v-b.vel.  year  20.00 (jan 16) [01.0H] :  -0.306769       0.344230    
+z= 125.00 v-b.vel.  year  20.00 (jan 16) [01.0H] :  -0.191742       0.384639    
+z= 150.00 v-b.vel.  year  20.00 (jan 16) [01.0H] :  -0.165086       0.509708    
+z= 200.00 v-b.vel.  year  20.00 (jan 16) [01.0H] :  -0.237013       0.244598    
+z= 250.00 v-b.vel.  year  20.00 (jan 16) [01.0H] :  -0.196633       0.572629    
+z= 300.00 v-b.vel.  year  20.00 (jan 16) [01.0H] :  -0.155925       0.196072    
+z= 400.00 v-b.vel.  year  20.00 (jan 16) [01.0H] :  -0.200952       0.147054    
+z= 500.00 v-b.vel.  year  20.00 (jan 16) [01.0H] :  -0.252957       0.173900    
+z= 600.00 v-b.vel.  year  20.00 (jan 16) [01.0H] :  -0.299302       0.272304    
+z= 700.00 v-b.vel.  year  20.00 (jan 16) [01.0H] :  -0.223191       0.328115    
+z= 800.00 v-b.vel.  year  20.00 (jan 16) [01.0H] :  -0.210262       0.339531    
+z= 900.00 v-b.vel.  year  20.00 (jan 16) [01.0H] :  -0.210639       0.339531    
+z=1000.00 v-b.vel.  year  20.00 (jan 16) [01.0H] :  -0.210639       0.110048    
+z=1100.00 v-b.vel.  year  20.00 (jan 16) [01.0H] :  -0.119937       0.701896E-01
+z=1200.00 v-b.vel.  year  20.00 (jan 16) [01.0H] :  -0.134867       0.571930E-01
+z=1300.00 v-b.vel.  year  20.00 (jan 16) [01.0H] :  -0.136967       0.517507E-01
+z=1400.00 v-b.vel.  year  20.00 (jan 16) [01.0H] :  -0.141071       0.437728E-01
+z=1500.00 v-b.vel.  year  20.00 (jan 16) [01.0H] :  -0.123855       0.471312E-01
+z=1750.00 v-b.vel.  year  20.00 (jan 16) [01.0H] :  -0.124444       0.607050E-01
+z=2000.00 v-b.vel.  year  20.00 (jan 16) [01.0H] :  -0.124637       0.557004E-01
+z=2500.00 v-b.vel.  year  20.00 (jan 16) [01.0H] :  -0.888325E-01   0.368685E-01
+z=3000.00 v-b.vel.  year  20.00 (jan 16) [01.0H] :  -0.648374E-01   0.226421E-01
+z=3500.00 v-b.vel.  year  20.00 (jan 16) [01.0H] :  -0.640662E-01   0.258398E-01
+z=4000.00 v-b.vel.  year  20.00 (jan 16) [01.0H] :  -0.414828E-01   0.167453E-01
+z=4500.00 v-b.vel.  year  20.00 (jan 16) [01.0H] :  -0.214916E-01   0.110440E-01
+z=5000.00 v-b.vel.  year  20.00 (jan 16) [01.0H] :  -0.216728E-01   0.104778E-01
+z=5500.00 v-b.vel.  year  20.00 (jan 16) [01.0H] :  -0.315884E-02   0.383979E-02
+z=   0.00 bcl.spd.  year  20.00 (jan 16) [01.0H] :   0.597192E-03   0.837168    
+z=  10.00 bcl.spd.  year  20.00 (jan 16) [01.0H] :   0.201793E-02   0.804234    
+z=  20.00 bcl.spd.  year  20.00 (jan 16) [01.0H] :   0.133290E-02   0.693212    
+z=  30.00 bcl.spd.  year  20.00 (jan 16) [01.0H] :   0.102353E-02   0.616574    
+z=  50.00 bcl.spd.  year  20.00 (jan 16) [01.0H] :   0.124773E-02   0.463921    
+z=  75.00 bcl.spd.  year  20.00 (jan 16) [01.0H] :   0.790666E-03   0.701129    
+z= 100.00 bcl.spd.  year  20.00 (jan 16) [01.0H] :   0.436766E-03   0.572431    
+z= 125.00 bcl.spd.  year  20.00 (jan 16) [01.0H] :   0.754387E-03   0.663972    
+z= 150.00 bcl.spd.  year  20.00 (jan 16) [01.0H] :   0.117976E-02   0.841070    
+z= 200.00 bcl.spd.  year  20.00 (jan 16) [01.0H] :   0.618785E-03   0.896225    
+z= 250.00 bcl.spd.  year  20.00 (jan 16) [01.0H] :   0.117124E-02   0.572918    
+z= 300.00 bcl.spd.  year  20.00 (jan 16) [01.0H] :   0.132265E-02   0.293155    
+z= 400.00 bcl.spd.  year  20.00 (jan 16) [01.0H] :   0.809674E-03   0.227448    
+z= 500.00 bcl.spd.  year  20.00 (jan 16) [01.0H] :   0.904073E-03   0.264472    
+z= 600.00 bcl.spd.  year  20.00 (jan 16) [01.0H] :   0.911165E-03   0.315083    
+z= 700.00 bcl.spd.  year  20.00 (jan 16) [01.0H] :   0.910841E-03   0.418498    
+z= 800.00 bcl.spd.  year  20.00 (jan 16) [01.0H] :   0.449527E-03   0.439652    
+z= 900.00 bcl.spd.  year  20.00 (jan 16) [01.0H] :   0.883698E-03   0.439652    
+z=1000.00 bcl.spd.  year  20.00 (jan 16) [01.0H] :   0.295075E-03   0.493400    
+z=1100.00 bcl.spd.  year  20.00 (jan 16) [01.0H] :   0.708880E-03   0.320594    
+z=1200.00 bcl.spd.  year  20.00 (jan 16) [01.0H] :   0.477896E-03   0.228187    
+z=1300.00 bcl.spd.  year  20.00 (jan 16) [01.0H] :   0.402321E-03   0.231996    
+z=1400.00 bcl.spd.  year  20.00 (jan 16) [01.0H] :   0.306761E-03   0.235806    
+z=1500.00 bcl.spd.  year  20.00 (jan 16) [01.0H] :   0.211201E-03   0.239615    
+z=1750.00 bcl.spd.  year  20.00 (jan 16) [01.0H] :   0.489948E-03   0.242281    
+z=2000.00 bcl.spd.  year  20.00 (jan 16) [01.0H] :   0.478293E-03   0.171325    
+z=2500.00 bcl.spd.  year  20.00 (jan 16) [01.0H] :   0.376714E-03   0.150115    
+z=3000.00 bcl.spd.  year  20.00 (jan 16) [01.0H] :   0.604791E-03   0.140756    
+z=3500.00 bcl.spd.  year  20.00 (jan 16) [01.0H] :   0.220490E-03   0.879419E-01
+z=4000.00 bcl.spd.  year  20.00 (jan 16) [01.0H] :   0.187044E-03   0.609746E-01
+z=4500.00 bcl.spd.  year  20.00 (jan 16) [01.0H] :   0.292850E-03   0.374925E-01
+z=5000.00 bcl.spd.  year  20.00 (jan 16) [01.0H] :   0.165726E-03   0.374946E-01
+z=5500.00 bcl.spd.  year  20.00 (jan 16) [01.0H] :   0.153415E-03   0.423703E-02
+z=   0.00 w-veloc.  year  20.00 (jan 16) [01.0H] :  -0.278065E-05   0.119063E-05
+z=  10.00 w-veloc.  year  20.00 (jan 16) [01.0H] :  -0.166711E-04   0.755413E-05
+z=  20.00 w-veloc.  year  20.00 (jan 16) [01.0H] :  -0.255832E-04   0.173303E-04
+z=  30.00 w-veloc.  year  20.00 (jan 16) [01.0H] :  -0.233084E-04   0.283420E-04
+z=  50.00 w-veloc.  year  20.00 (jan 16) [01.0H] :  -0.321067E-04   0.586505E-04
+z=  75.00 w-veloc.  year  20.00 (jan 16) [01.0H] :  -0.469440E-04   0.831866E-04
+z= 100.00 w-veloc.  year  20.00 (jan 16) [01.0H] :  -0.657833E-04   0.118433E-03
+z= 125.00 w-veloc.  year  20.00 (jan 16) [01.0H] :  -0.129947E-03   0.169781E-03
+z= 150.00 w-veloc.  year  20.00 (jan 16) [01.0H] :  -0.192102E-03   0.224372E-03
+z= 200.00 w-veloc.  year  20.00 (jan 16) [01.0H] :  -0.188577E-03   0.291410E-03
+z= 250.00 w-veloc.  year  20.00 (jan 16) [01.0H] :  -0.189108E-03   0.326896E-03
+z= 300.00 w-veloc.  year  20.00 (jan 16) [01.0H] :  -0.212384E-03   0.362382E-03
+z= 400.00 w-veloc.  year  20.00 (jan 16) [01.0H] :  -0.168517E-03   0.412779E-03
+z= 500.00 w-veloc.  year  20.00 (jan 16) [01.0H] :  -0.166439E-03   0.415826E-03
+z= 600.00 w-veloc.  year  20.00 (jan 16) [01.0H] :  -0.207305E-03   0.359419E-03
+z= 700.00 w-veloc.  year  20.00 (jan 16) [01.0H] :  -0.339926E-03   0.213267E-03
+z= 800.00 w-veloc.  year  20.00 (jan 16) [01.0H] :  -0.367054E-03   0.224508E-03
+z= 900.00 w-veloc.  year  20.00 (jan 16) [01.0H] :  -0.367054E-03   0.245071E-03
+z=1000.00 w-veloc.  year  20.00 (jan 16) [01.0H] :  -0.393936E-03   0.265039E-03
+z=1100.00 w-veloc.  year  20.00 (jan 16) [01.0H] :  -0.457843E-03   0.285007E-03
+z=1200.00 w-veloc.  year  20.00 (jan 16) [01.0H] :  -0.312696E-03   0.303903E-03
+z=1300.00 w-veloc.  year  20.00 (jan 16) [01.0H] :  -0.349439E-03   0.228065E-03
+z=1400.00 w-veloc.  year  20.00 (jan 16) [01.0H] :  -0.386182E-03   0.245141E-03
+z=1500.00 w-veloc.  year  20.00 (jan 16) [01.0H] :  -0.422925E-03   0.262216E-03
+z=1750.00 w-veloc.  year  20.00 (jan 16) [01.0H] :  -0.520121E-03   0.332329E-03
+z=2000.00 w-veloc.  year  20.00 (jan 16) [01.0H] :  -0.376456E-03   0.268313E-03
+z=2500.00 w-veloc.  year  20.00 (jan 16) [01.0H] :  -0.276821E-03   0.341962E-03
+z=3000.00 w-veloc.  year  20.00 (jan 16) [01.0H] :  -0.300421E-03   0.233015E-03
+z=3500.00 w-veloc.  year  20.00 (jan 16) [01.0H] :  -0.333724E-03   0.234365E-03
+z=4000.00 w-veloc.  year  20.00 (jan 16) [01.0H] :  -0.127141E-03   0.812067E-04
+z=4500.00 w-veloc.  year  20.00 (jan 16) [01.0H] :  -0.919834E-04   0.719434E-04
+z=5000.00 w-veloc.  year  20.00 (jan 16) [01.0H] :  -0.436453E-04   0.208982E-04
+z=5500.00 w-veloc.  year  20.00 (jan 16) [01.0H] :  -0.318961E-05   0.330270E-05
+z=   0.00  temp     year  20.00 (jan 16) [01.0H] :   -1.94394        31.5061    
+z=  10.00  temp     year  20.00 (jan 16) [01.0H] :   -1.62175        30.9837    
+z=  20.00  temp     year  20.00 (jan 16) [01.0H] :  -0.779439        29.7635    
+z=  30.00  temp     year  20.00 (jan 16) [01.0H] :  -0.744260        28.7994    
+z=  50.00  temp     year  20.00 (jan 16) [01.0H] :  -0.436104        27.7785    
+z=  75.00  temp     year  20.00 (jan 16) [01.0H] :  -0.438720        27.5020    
+z= 100.00  temp     year  20.00 (jan 16) [01.0H] :  -0.442682        27.4603    
+z= 125.00  temp     year  20.00 (jan 16) [01.0H] :   0.564897        26.0976    
+z= 150.00  temp     year  20.00 (jan 16) [01.0H] :    1.25426        25.8977    
+z= 200.00  temp     year  20.00 (jan 16) [01.0H] :    1.86244        23.5889    
+z= 250.00  temp     year  20.00 (jan 16) [01.0H] :    2.59241        20.7134    
+z= 300.00  temp     year  20.00 (jan 16) [01.0H] :    3.31386        19.4860    
+z= 400.00  temp     year  20.00 (jan 16) [01.0H] :    3.66594        18.1990    
+z= 500.00  temp     year  20.00 (jan 16) [01.0H] :    2.17876        16.6694    
+z= 600.00  temp     year  20.00 (jan 16) [01.0H] :    1.33327        14.7619    
+z= 700.00  temp     year  20.00 (jan 16) [01.0H] :   0.493818        12.7359    
+z= 800.00  temp     year  20.00 (jan 16) [01.0H] :   0.780604E-01    10.7657    
+z= 900.00  temp     year  20.00 (jan 16) [01.0H] :  -0.172137        8.64256    
+z=1000.00  temp     year  20.00 (jan 16) [01.0H] :  -0.172137        7.98512    
+z=1100.00  temp     year  20.00 (jan 16) [01.0H] :  -0.172137        7.43221    
+z=1200.00  temp     year  20.00 (jan 16) [01.0H] :  -0.172137        6.94662    
+z=1300.00  temp     year  20.00 (jan 16) [01.0H] :   0.127141        6.49967    
+z=1400.00  temp     year  20.00 (jan 16) [01.0H] :    2.83519        6.11275    
+z=1500.00  temp     year  20.00 (jan 16) [01.0H] :    2.50649        5.72700    
+z=1750.00  temp     year  20.00 (jan 16) [01.0H] :    2.40714        4.95324    
+z=2000.00  temp     year  20.00 (jan 16) [01.0H] :    2.57538        4.46370    
+z=2500.00  temp     year  20.00 (jan 16) [01.0H] :    2.30776        3.85007    
+z=3000.00  temp     year  20.00 (jan 16) [01.0H] :    1.97868        3.41701    
+z=3500.00  temp     year  20.00 (jan 16) [01.0H] :    1.55992        3.52010    
+z=4000.00  temp     year  20.00 (jan 16) [01.0H] :    1.28293        3.62960    
+z=4500.00  temp     year  20.00 (jan 16) [01.0H] :   0.887364        3.80641    
+z=5000.00  temp     year  20.00 (jan 16) [01.0H] :    1.06073        2.92973    
+z=5500.00  temp     year  20.00 (jan 16) [01.0H] :    1.90720        2.56640    
+z=   0.00 salinity  year  20.00 (jan 16) [01.0H] :    28.3064        37.2398    
+z=  10.00 salinity  year  20.00 (jan 16) [01.0H] :    29.9464        37.2397    
+z=  20.00 salinity  year  20.00 (jan 16) [01.0H] :    32.2773        37.2390    
+z=  30.00 salinity  year  20.00 (jan 16) [01.0H] :    32.8785        37.2121    
+z=  50.00 salinity  year  20.00 (jan 16) [01.0H] :    33.2391        37.1860    
+z=  75.00 salinity  year  20.00 (jan 16) [01.0H] :    33.4728        37.1861    
+z= 100.00 salinity  year  20.00 (jan 16) [01.0H] :    33.4722        37.1056    
+z= 125.00 salinity  year  20.00 (jan 16) [01.0H] :    33.6465        37.0110    
+z= 150.00 salinity  year  20.00 (jan 16) [01.0H] :    33.8443        36.8672    
+z= 200.00 salinity  year  20.00 (jan 16) [01.0H] :    34.1840        36.5606    
+z= 250.00 salinity  year  20.00 (jan 16) [01.0H] :    34.4265        36.2183    
+z= 300.00 salinity  year  20.00 (jan 16) [01.0H] :    34.6035        36.1248    
+z= 400.00 salinity  year  20.00 (jan 16) [01.0H] :    34.5834        36.0595    
+z= 500.00 salinity  year  20.00 (jan 16) [01.0H] :    34.5328        35.9395    
+z= 600.00 salinity  year  20.00 (jan 16) [01.0H] :    34.4629        35.7382    
+z= 700.00 salinity  year  20.00 (jan 16) [01.0H] :    34.3959        35.4899    
+z= 800.00 salinity  year  20.00 (jan 16) [01.0H] :    34.4074        35.3107    
+z= 900.00 salinity  year  20.00 (jan 16) [01.0H] :    34.4370        35.2707    
+z=1000.00 salinity  year  20.00 (jan 16) [01.0H] :    34.4929        35.2489    
+z=1100.00 salinity  year  20.00 (jan 16) [01.0H] :    34.5574        35.2173    
+z=1200.00 salinity  year  20.00 (jan 16) [01.0H] :    34.6212        35.2996    
+z=1300.00 salinity  year  20.00 (jan 16) [01.0H] :    34.7130        35.1830    
+z=1400.00 salinity  year  20.00 (jan 16) [01.0H] :    34.7698        35.1556    
+z=1500.00 salinity  year  20.00 (jan 16) [01.0H] :    34.8073        35.1273    
+z=1750.00 salinity  year  20.00 (jan 16) [01.0H] :    34.8608        35.0978    
+z=2000.00 salinity  year  20.00 (jan 16) [01.0H] :    34.8728        35.0785    
+z=2500.00 salinity  year  20.00 (jan 16) [01.0H] :    34.8891        35.0463    
+z=3000.00 salinity  year  20.00 (jan 16) [01.0H] :    34.8796        35.0800    
+z=3500.00 salinity  year  20.00 (jan 16) [01.0H] :    34.8644        35.1235    
+z=4000.00 salinity  year  20.00 (jan 16) [01.0H] :    34.8559        35.1464    
+z=4500.00 salinity  year  20.00 (jan 16) [01.0H] :    34.8506        35.1702    
+z=5000.00 salinity  year  20.00 (jan 16) [01.0H] :    34.8733        35.0610    
+z=5500.00 salinity  year  20.00 (jan 16) [01.0H] :    34.9507        35.0198    
+z=   0.00 density   year  20.00 (jan 16) [01.0H] :    16.9029        27.5690    
+z=  10.00 density   year  20.00 (jan 16) [01.0H] :    18.3059        27.5679    
+z=  20.00 density   year  20.00 (jan 16) [01.0H] :    20.8952        27.5677    
+z=  30.00 density   year  20.00 (jan 16) [01.0H] :    22.0471        27.5676    
+z=  50.00 density   year  20.00 (jan 16) [01.0H] :    22.7279        27.5676    
+z=  75.00 density   year  20.00 (jan 16) [01.0H] :    22.9500        27.5677    
+z= 100.00 density   year  20.00 (jan 16) [01.0H] :    22.9888        27.5678    
+z= 125.00 density   year  20.00 (jan 16) [01.0H] :    23.6139        27.5680    
+z= 150.00 density   year  20.00 (jan 16) [01.0H] :    23.6934        27.5697    
+z= 200.00 density   year  20.00 (jan 16) [01.0H] :    24.6532        27.6137    
+z= 250.00 density   year  20.00 (jan 16) [01.0H] :    25.4515        27.7188    
+z= 300.00 density   year  20.00 (jan 16) [01.0H] :    25.7560        27.7342    
+z= 400.00 density   year  20.00 (jan 16) [01.0H] :    26.0307        27.7979    
+z= 500.00 density   year  20.00 (jan 16) [01.0H] :    26.3108        27.8859    
+z= 600.00 density   year  20.00 (jan 16) [01.0H] :    26.5948        27.9161    
+z= 700.00 density   year  20.00 (jan 16) [01.0H] :    26.8289        27.9535    
+z= 800.00 density   year  20.00 (jan 16) [01.0H] :    27.0134        27.9772    
+z= 900.00 density   year  20.00 (jan 16) [01.0H] :    27.1929        27.9977    
+z=1000.00 density   year  20.00 (jan 16) [01.0H] :    27.3857        27.9977    
+z=1100.00 density   year  20.00 (jan 16) [01.0H] :    27.4538        27.9977    
+z=1200.00 density   year  20.00 (jan 16) [01.0H] :    27.5219        27.9977    
+z=1300.00 density   year  20.00 (jan 16) [01.0H] :    27.5839        27.9548    
+z=1400.00 density   year  20.00 (jan 16) [01.0H] :    27.6320        27.8599    
+z=1500.00 density   year  20.00 (jan 16) [01.0H] :    27.6325        27.8670    
+z=1750.00 density   year  20.00 (jan 16) [01.0H] :    27.7495        27.8748    
+z=2000.00 density   year  20.00 (jan 16) [01.0H] :    27.7781        27.8795    
+z=2500.00 density   year  20.00 (jan 16) [01.0H] :    27.8214        27.9088    
+z=3000.00 density   year  20.00 (jan 16) [01.0H] :    27.8427        27.9343    
+z=3500.00 density   year  20.00 (jan 16) [01.0H] :    27.8607        27.9391    
+z=4000.00 density   year  20.00 (jan 16) [01.0H] :    27.8782        27.9407    
+z=4500.00 density   year  20.00 (jan 16) [01.0H] :    27.8931        27.9418    
+z=5000.00 density   year  20.00 (jan 16) [01.0H] :    27.9054        27.9404    
+z=5500.00 density   year  20.00 (jan 16) [01.0H] :    27.9394        27.9397    
+
+horout - HYCOM I/O
+
+ bathymetry         year  20.00 (jan 16) [01.0H] :    199.555        5837.00    
+ MLT (0.20 degC)    year  20.00 (jan 16) [01.0H] :    2.15257        2885.00    
+
+horout - HYCOM I/O
+
+layer=01   i.depth  year  20.00 (jan 16) [01.0H] :    3.00000        3.00000    
+layer=02   i.depth  year  20.00 (jan 16) [01.0H] :    5.58674        14.6664    
+layer=03   i.depth  year  20.00 (jan 16) [01.0H] :    9.72372        24.2416    
+layer=04   i.depth  year  20.00 (jan 16) [01.0H] :    14.4434        29.3208    
+layer=05   i.depth  year  20.00 (jan 16) [01.0H] :    15.8717        89.4123    
+layer=06   i.depth  year  20.00 (jan 16) [01.0H] :    24.6384        180.185    
+layer=07   i.depth  year  20.00 (jan 16) [01.0H] :    28.6786        192.825    
+layer=08   i.depth  year  20.00 (jan 16) [01.0H] :    37.5788        219.729    
+layer=09   i.depth  year  20.00 (jan 16) [01.0H] :    41.2979        250.078    
+layer=10   i.depth  year  20.00 (jan 16) [01.0H] :    53.1763        429.437    
+layer=11   i.depth  year  20.00 (jan 16) [01.0H] :    63.6777        517.796    
+layer=12   i.depth  year  20.00 (jan 16) [01.0H] :    73.2192        621.678    
+layer=13   i.depth  year  20.00 (jan 16) [01.0H] :    86.6374        748.110    
+layer=14   i.depth  year  20.00 (jan 16) [01.0H] :    98.6374        883.138    
+layer=15   i.depth  year  20.00 (jan 16) [01.0H] :    110.637        949.376    
+layer=16   i.depth  year  20.00 (jan 16) [01.0H] :    122.637        1124.33    
+layer=17   i.depth  year  20.00 (jan 16) [01.0H] :    139.776        1277.06    
+layer=18   i.depth  year  20.00 (jan 16) [01.0H] :    199.532        1543.58    
+layer=19   i.depth  year  20.00 (jan 16) [01.0H] :    199.548        2039.44    
+layer=20   i.depth  year  20.00 (jan 16) [01.0H] :    199.555        3001.18    
+layer=21   i.depth  year  20.00 (jan 16) [01.0H] :    199.555        5385.75    
+layer=22   i.depth  year  20.00 (jan 16) [01.0H] :    199.555        5837.00    
+STOP: (normal)
+end
+end

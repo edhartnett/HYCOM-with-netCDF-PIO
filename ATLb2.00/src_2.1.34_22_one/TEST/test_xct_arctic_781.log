@@ -1,0 +1,1173 @@
+set time = 1
+set timestamp
+touch regional.depth.a
+/bin/rm regional.depth.a
+ln -s ../../topo/depth_GLBa0.08_05.a regional.depth.a
+cp ../../topo/partit/depth_GLBa0.08_05.781 patch.input
+setenv MP_SHARED_MEMORY yes
+setenv MP_SINGLE_THREAD yes
+setenv MP_EAGER_LIMIT 65536
+env MP_LABELIO=YES poe hostname
+ATTENTION: 0031-408  781 tasks allocated by LoadLeveler, continuing...
+ 177:k1n1e.navo.hpc.mil
+ 230:k1n2e.navo.hpc.mil
+ 555:k1n3e.navo.hpc.mil
+ 609:k1n4e.navo.hpc.mil
+ 723:k1n5e.navo.hpc.mil
+ 191:k1n6e.navo.hpc.mil
+ 168:k1n8e.navo.hpc.mil
+ 465:k1n9e.navo.hpc.mil
+ 202:k1n10e.navo.hpc.mil
+ 110:k1n11e.navo.hpc.mil
+ 744:k1n12e.navo.hpc.mil
+ 215:k1n13e.navo.hpc.mil
+ 641:k1n14e.navo.hpc.mil
+ 426:k2n1e.navo.hpc.mil
+ 769:k2n2e.navo.hpc.mil
+ 261:k2n3e.navo.hpc.mil
+ 269:k2n4e.navo.hpc.mil
+ 515:k2n5e.navo.hpc.mil
+ 417:k2n6e.navo.hpc.mil
+ 150:k2n7e.navo.hpc.mil
+ 497:k2n8e.navo.hpc.mil
+  20:k2n9e.navo.hpc.mil
+ 142:k2n10e.navo.hpc.mil
+ 407:k2n11e.navo.hpc.mil
+ 508:k2n12e.navo.hpc.mil
+ 240:k2n13e.navo.hpc.mil
+ 253:k2n14e.navo.hpc.mil
+  14:k2n16e.navo.hpc.mil
+ 550:k3n1e.navo.hpc.mil
+ 669:k3n2e.navo.hpc.mil
+ 527:k3n3e.navo.hpc.mil
+ 304:k3n4e.navo.hpc.mil
+ 706:k3n5e.navo.hpc.mil
+  81:k3n6e.navo.hpc.mil
+ 728:k3n7e.navo.hpc.mil
+ 538:k3n8e.navo.hpc.mil
+  30:k3n9e.navo.hpc.mil
+ 630:k3n10e.navo.hpc.mil
+ 272:k3n11e.navo.hpc.mil
+ 286:k3n12e.navo.hpc.mil
+ 293:k3n13e.navo.hpc.mil
+ 303:k3n14e.navo.hpc.mil
+ 762:k3n15e.navo.hpc.mil
+ 568:k3n16e.navo.hpc.mil
+ 594:k4n1e.navo.hpc.mil
+ 152:k4n2e.navo.hpc.mil
+ 317:k4n3e.navo.hpc.mil
+ 758:k4n4e.navo.hpc.mil
+  38:k4n5e.navo.hpc.mil
+ 452:k4n6e.navo.hpc.mil
+  41:k4n7e.navo.hpc.mil
+ 320:k4n8e.navo.hpc.mil
+ 650:k4n9e.navo.hpc.mil
+ 620:k4n10e.navo.hpc.mil
+ 582:k4n11e.navo.hpc.mil
+ 445:k4n12e.navo.hpc.mil
+ 531:k4n13e.navo.hpc.mil
+ 486:k4n14e.navo.hpc.mil
+ 434:k4n15e.navo.hpc.mil
+ 678:k4n16e.navo.hpc.mil
+ 357:k5n1e.navo.hpc.mil
+ 561:k5n2e.navo.hpc.mil
+ 657:k5n3e.navo.hpc.mil
+  48:k5n4e.navo.hpc.mil
+  60:k5n5e.navo.hpc.mil
+ 362:k5n6e.navo.hpc.mil
+ 113:k5n7e.navo.hpc.mil
+ 370:k5n8e.navo.hpc.mil
+ 689:k5n9e.navo.hpc.mil
+ 334:k5n10e.navo.hpc.mil
+  94:k5n11e.navo.hpc.mil
+ 604:k5n12e.navo.hpc.mil
+ 161:k5n13e.navo.hpc.mil
+ 343:k5n14e.navo.hpc.mil
+ 344:k5n15e.navo.hpc.mil
+ 638:k5n16e.navo.hpc.mil
+ 473:k6n2e.navo.hpc.mil
+  72:k6n4e.navo.hpc.mil
+ 457:k6n5e.navo.hpc.mil
+ 131:k6n6e.navo.hpc.mil
+ 101:k6n7e.navo.hpc.mil
+ 194:k6n8e.navo.hpc.mil
+ 591:k6n9e.navo.hpc.mil
+ 736:k6n10e.navo.hpc.mil
+ 715:k6n11e.navo.hpc.mil
+ 123:k6n12e.navo.hpc.mil
+  70:k6n13e.navo.hpc.mil
+ 702:k6n14e.navo.hpc.mil
+ 780:k6n15e.navo.hpc.mil
+ 681:k6n16e.navo.hpc.mil
+ 390:k7n1e.navo.hpc.mil
+ 393:k7n2e.navo.hpc.mil
+ 187:k1n6e.navo.hpc.mil
+ 172:k1n8e.navo.hpc.mil
+ 111:k1n11e.navo.hpc.mil
+ 767:k2n2e.navo.hpc.mil
+ 500:k2n8e.navo.hpc.mil
+  21:k2n9e.navo.hpc.mil
+ 405:k2n11e.navo.hpc.mil
+  15:k2n16e.navo.hpc.mil
+ 289:k3n13e.navo.hpc.mil
+ 655:k4n9e.navo.hpc.mil
+ 623:k4n10e.navo.hpc.mil
+ 578:k4n11e.navo.hpc.mil
+ 483:k4n14e.navo.hpc.mil
+ 436:k4n15e.navo.hpc.mil
+ 339:k5n14e.navo.hpc.mil
+ 348:k5n15e.navo.hpc.mil
+  76:k6n4e.navo.hpc.mil
+ 703:k6n14e.navo.hpc.mil
+ 775:k6n15e.navo.hpc.mil
+ 682:k6n16e.navo.hpc.mil
+ 559:k1n3e.navo.hpc.mil
+ 610:k1n4e.navo.hpc.mil
+ 727:k1n5e.navo.hpc.mil
+ 173:k1n8e.navo.hpc.mil
+ 466:k1n9e.navo.hpc.mil
+ 204:k1n10e.navo.hpc.mil
+ 745:k1n12e.navo.hpc.mil
+ 642:k1n14e.navo.hpc.mil
+ 262:k2n3e.navo.hpc.mil
+ 271:k2n4e.navo.hpc.mil
+ 519:k2n5e.navo.hpc.mil
+ 419:k2n6e.navo.hpc.mil
+ 151:k2n7e.navo.hpc.mil
+ 511:k2n12e.navo.hpc.mil
+ 241:k2n13e.navo.hpc.mil
+ 255:k2n14e.navo.hpc.mil
+ 670:k3n2e.navo.hpc.mil
+ 308:k3n4e.navo.hpc.mil
+ 711:k3n5e.navo.hpc.mil
+  87:k3n6e.navo.hpc.mil
+ 734:k3n7e.navo.hpc.mil
+ 540:k3n8e.navo.hpc.mil
+ 627:k3n10e.navo.hpc.mil
+ 273:k3n11e.navo.hpc.mil
+ 595:k4n1e.navo.hpc.mil
+ 153:k4n2e.navo.hpc.mil
+ 453:k4n6e.navo.hpc.mil
+  42:k4n7e.navo.hpc.mil
+ 321:k4n8e.navo.hpc.mil
+ 533:k4n13e.navo.hpc.mil
+ 663:k5n3e.navo.hpc.mil
+  49:k5n4e.navo.hpc.mil
+ 363:k5n6e.navo.hpc.mil
+ 115:k5n7e.navo.hpc.mil
+ 373:k5n8e.navo.hpc.mil
+ 693:k5n9e.navo.hpc.mil
+  95:k5n11e.navo.hpc.mil
+ 605:k5n12e.navo.hpc.mil
+ 164:k5n13e.navo.hpc.mil
+ 636:k5n16e.navo.hpc.mil
+ 475:k6n2e.navo.hpc.mil
+ 461:k6n5e.navo.hpc.mil
+ 102:k6n7e.navo.hpc.mil
+ 739:k6n10e.navo.hpc.mil
+  71:k6n13e.navo.hpc.mil
+ 680:k6n16e.navo.hpc.mil
+ 394:k7n2e.navo.hpc.mil
+ 176:k1n1e.navo.hpc.mil
+ 503:k2n8e.navo.hpc.mil
+ 137:k2n10e.navo.hpc.mil
+ 545:k3n1e.navo.hpc.mil
+ 521:k3n3e.navo.hpc.mil
+ 274:k3n11e.navo.hpc.mil
+ 282:k3n12e.navo.hpc.mil
+ 292:k3n13e.navo.hpc.mil
+ 296:k3n14e.navo.hpc.mil
+ 754:k4n4e.navo.hpc.mil
+  35:k4n5e.navo.hpc.mil
+ 439:k4n15e.navo.hpc.mil
+ 356:k5n1e.navo.hpc.mil
+ 330:k5n10e.navo.hpc.mil
+ 349:k5n15e.navo.hpc.mil
+  78:k6n4e.navo.hpc.mil
+ 197:k6n8e.navo.hpc.mil
+ 121:k6n12e.navo.hpc.mil
+ 384:k7n1e.navo.hpc.mil
+ 226:k1n2e.navo.hpc.mil
+ 554:k1n3e.navo.hpc.mil
+ 613:k1n4e.navo.hpc.mil
+ 467:k1n9e.navo.hpc.mil
+ 205:k1n10e.navo.hpc.mil
+ 746:k1n12e.navo.hpc.mil
+ 209:k1n13e.navo.hpc.mil
+ 645:k1n14e.navo.hpc.mil
+ 430:k2n1e.navo.hpc.mil
+ 263:k2n3e.navo.hpc.mil
+ 420:k2n6e.navo.hpc.mil
+ 242:k2n13e.navo.hpc.mil
+   0:k2n15e.navo.hpc.mil
+ 309:k3n4e.navo.hpc.mil
+ 735:k3n7e.navo.hpc.mil
+  27:k3n9e.navo.hpc.mil
+ 761:k3n15e.navo.hpc.mil
+ 573:k3n16e.navo.hpc.mil
+ 154:k4n2e.navo.hpc.mil
+ 448:k4n6e.navo.hpc.mil
+ 444:k4n12e.navo.hpc.mil
+ 676:k4n16e.navo.hpc.mil
+ 564:k5n2e.navo.hpc.mil
+  57:k5n5e.navo.hpc.mil
+ 366:k5n6e.navo.hpc.mil
+ 374:k5n8e.navo.hpc.mil
+ 332:k5n10e.navo.hpc.mil
+ 606:k5n12e.navo.hpc.mil
+ 165:k5n13e.navo.hpc.mil
+ 413:k6n1e.navo.hpc.mil
+ 476:k6n2e.navo.hpc.mil
+ 463:k6n5e.navo.hpc.mil
+ 128:k6n6e.navo.hpc.mil
+ 103:k6n7e.navo.hpc.mil
+ 590:k6n9e.navo.hpc.mil
+ 743:k6n10e.navo.hpc.mil
+ 714:k6n11e.navo.hpc.mil
+ 398:k7n2e.navo.hpc.mil
+ 105:k1n11e.navo.hpc.mil
+  17:k2n9e.navo.hpc.mil
+ 139:k2n10e.navo.hpc.mil
+ 544:k3n1e.navo.hpc.mil
+ 665:k3n2e.navo.hpc.mil
+ 522:k3n3e.navo.hpc.mil
+  25:k3n9e.navo.hpc.mil
+ 275:k3n11e.navo.hpc.mil
+ 284:k3n12e.navo.hpc.mil
+ 313:k4n3e.navo.hpc.mil
+ 755:k4n4e.navo.hpc.mil
+  37:k4n5e.navo.hpc.mil
+  79:k6n4e.navo.hpc.mil
+ 198:k6n8e.navo.hpc.mil
+ 698:k6n14e.navo.hpc.mil
+ 183:k1n1e.navo.hpc.mil
+ 747:k1n12e.navo.hpc.mil
+ 210:k1n13e.navo.hpc.mil
+ 429:k2n1e.navo.hpc.mil
+ 148:k2n7e.navo.hpc.mil
+ 403:k2n11e.navo.hpc.mil
+ 243:k2n13e.navo.hpc.mil
+   1:k2n15e.navo.hpc.mil
+ 536:k3n8e.navo.hpc.mil
+ 766:k3n15e.navo.hpc.mil
+ 574:k3n16e.navo.hpc.mil
+ 592:k4n1e.navo.hpc.mil
+ 155:k4n2e.navo.hpc.mil
+ 451:k4n6e.navo.hpc.mil
+ 441:k4n12e.navo.hpc.mil
+ 679:k4n16e.navo.hpc.mil
+  61:k5n5e.navo.hpc.mil
+  89:k5n11e.navo.hpc.mil
+ 607:k5n12e.navo.hpc.mil
+ 415:k6n1e.navo.hpc.mil
+ 477:k6n2e.navo.hpc.mil
+ 129:k6n6e.navo.hpc.mil
+ 713:k6n11e.navo.hpc.mil
+ 125:k6n12e.navo.hpc.mil
+ 391:k7n1e.navo.hpc.mil
+ 227:k1n2e.navo.hpc.mil
+ 185:k1n6e.navo.hpc.mil
+ 149:k2n7e.navo.hpc.mil
+  18:k2n9e.navo.hpc.mil
+ 141:k2n10e.navo.hpc.mil
+ 505:k2n12e.navo.hpc.mil
+ 667:k3n2e.navo.hpc.mil
+ 277:k3n11e.navo.hpc.mil
+ 301:k3n14e.navo.hpc.mil
+ 314:k4n3e.navo.hpc.mil
+ 616:k4n10e.navo.hpc.mil
+ 353:k5n1e.navo.hpc.mil
+ 566:k5n2e.navo.hpc.mil
+ 112:k5n7e.navo.hpc.mil
+ 688:k5n9e.navo.hpc.mil
+ 588:k6n9e.navo.hpc.mil
+ 700:k6n14e.navo.hpc.mil
+ 725:k1n5e.navo.hpc.mil
+ 748:k1n12e.navo.hpc.mil
+ 213:k1n13e.navo.hpc.mil
+ 506:k2n12e.navo.hpc.mil
+ 245:k2n13e.navo.hpc.mil
+ 249:k2n14e.navo.hpc.mil
+   2:k2n15e.navo.hpc.mil
+  11:k2n16e.navo.hpc.mil
+ 547:k3n1e.navo.hpc.mil
+ 668:k3n2e.navo.hpc.mil
+ 705:k3n5e.navo.hpc.mil
+ 156:k4n2e.navo.hpc.mil
+  39:k4n5e.navo.hpc.mil
+ 651:k4n9e.navo.hpc.mil
+ 576:k4n11e.navo.hpc.mil
+ 528:k4n13e.navo.hpc.mil
+ 480:k4n14e.navo.hpc.mil
+ 656:k5n3e.navo.hpc.mil
+  62:k5n5e.navo.hpc.mil
+  90:k5n11e.navo.hpc.mil
+ 337:k5n14e.navo.hpc.mil
+ 634:k5n16e.navo.hpc.mil
+ 589:k6n9e.navo.hpc.mil
+  64:k6n13e.navo.hpc.mil
+ 228:k1n2e.navo.hpc.mil
+ 189:k1n6e.navo.hpc.mil
+ 768:k2n2e.navo.hpc.mil
+  19:k2n9e.navo.hpc.mil
+ 539:k3n8e.navo.hpc.mil
+ 279:k3n11e.navo.hpc.mil
+ 569:k3n16e.navo.hpc.mil
+ 316:k4n3e.navo.hpc.mil
+ 618:k4n10e.navo.hpc.mil
+ 677:k4n16e.navo.hpc.mil
+ 354:k5n1e.navo.hpc.mil
+ 132:k6n6e.navo.hpc.mil
+ 718:k6n11e.navo.hpc.mil
+ 701:k6n14e.navo.hpc.mil
+ 774:k6n15e.navo.hpc.mil
+ 169:k1n8e.navo.hpc.mil
+ 749:k1n12e.navo.hpc.mil
+ 214:k1n13e.navo.hpc.mil
+ 406:k2n11e.navo.hpc.mil
+ 507:k2n12e.navo.hpc.mil
+ 247:k2n13e.navo.hpc.mil
+ 251:k2n14e.navo.hpc.mil
+   3:k2n15e.navo.hpc.mil
+  13:k2n16e.navo.hpc.mil
+ 524:k3n3e.navo.hpc.mil
+ 709:k3n5e.navo.hpc.mil
+ 597:k4n1e.navo.hpc.mil
+ 158:k4n2e.navo.hpc.mil
+ 654:k4n9e.navo.hpc.mil
+ 577:k4n11e.navo.hpc.mil
+ 529:k4n13e.navo.hpc.mil
+  63:k5n5e.navo.hpc.mil
+ 114:k5n7e.navo.hpc.mil
+  91:k5n11e.navo.hpc.mil
+ 635:k5n16e.navo.hpc.mil
+  65:k6n13e.navo.hpc.mil
+ 720:k1n5e.navo.hpc.mil
+ 237:k1n7e.navo.hpc.mil
+ 425:k2n1e.navo.hpc.mil
+ 772:k2n2e.navo.hpc.mil
+ 144:k2n7e.navo.hpc.mil
+  10:k2n16e.navo.hpc.mil
+ 710:k3n5e.navo.hpc.mil
+ 729:k3n7e.navo.hpc.mil
+ 624:k3n10e.navo.hpc.mil
+ 283:k3n12e.navo.hpc.mil
+ 571:k3n16e.navo.hpc.mil
+ 322:k4n8e.navo.hpc.mil
+ 619:k4n10e.navo.hpc.mil
+ 659:k5n3e.navo.hpc.mil
+ 694:k5n9e.navo.hpc.mil
+ 133:k6n6e.navo.hpc.mil
+  98:k6n7e.navo.hpc.mil
+  66:k6n13e.navo.hpc.mil
+ 470:k1n9e.navo.hpc.mil
+ 750:k1n12e.navo.hpc.mil
+ 264:k2n4e.navo.hpc.mil
+ 512:k2n5e.navo.hpc.mil
+ 252:k2n14e.navo.hpc.mil
+ 306:k3n4e.navo.hpc.mil
+  80:k3n6e.navo.hpc.mil
+ 542:k3n8e.navo.hpc.mil
+  29:k3n9e.navo.hpc.mil
+ 760:k3n15e.navo.hpc.mil
+ 599:k4n1e.navo.hpc.mil
+ 159:k4n2e.navo.hpc.mil
+ 318:k4n3e.navo.hpc.mil
+  40:k4n7e.navo.hpc.mil
+ 440:k4n12e.navo.hpc.mil
+ 530:k4n13e.navo.hpc.mil
+ 487:k4n14e.navo.hpc.mil
+ 375:k5n8e.navo.hpc.mil
+ 342:k5n14e.navo.hpc.mil
+ 408:k6n1e.navo.hpc.mil
+ 126:k6n12e.navo.hpc.mil
+ 776:k6n15e.navo.hpc.mil
+ 721:k1n5e.navo.hpc.mil
+ 239:k1n7e.navo.hpc.mil
+ 471:k1n9e.navo.hpc.mil
+ 427:k2n1e.navo.hpc.mil
+ 496:k2n8e.navo.hpc.mil
+ 510:k2n12e.navo.hpc.mil
+ 671:k3n2e.navo.hpc.mil
+ 730:k3n7e.navo.hpc.mil
+ 626:k3n10e.navo.hpc.mil
+ 323:k4n8e.navo.hpc.mil
+ 580:k4n11e.navo.hpc.mil
+ 432:k4n15e.navo.hpc.mil
+ 352:k5n1e.navo.hpc.mil
+ 660:k5n3e.navo.hpc.mil
+ 116:k5n7e.navo.hpc.mil
+ 695:k5n9e.navo.hpc.mil
+  99:k6n7e.navo.hpc.mil
+  68:k6n13e.navo.hpc.mil
+ 385:k7n1e.navo.hpc.mil
+ 608:k1n4e.navo.hpc.mil
+ 200:k1n10e.navo.hpc.mil
+ 751:k1n12e.navo.hpc.mil
+ 640:k1n14e.navo.hpc.mil
+ 256:k2n3e.navo.hpc.mil
+ 265:k2n4e.navo.hpc.mil
+ 513:k2n5e.navo.hpc.mil
+ 416:k2n6e.navo.hpc.mil
+ 138:k2n10e.navo.hpc.mil
+ 285:k3n12e.navo.hpc.mil
+ 763:k3n15e.navo.hpc.mil
+  50:k5n4e.navo.hpc.mil
+ 360:k5n6e.navo.hpc.mil
+ 328:k5n10e.navo.hpc.mil
+ 160:k5n13e.navo.hpc.mil
+ 412:k6n1e.navo.hpc.mil
+ 456:k6n5e.navo.hpc.mil
+ 192:k6n8e.navo.hpc.mil
+ 127:k6n12e.navo.hpc.mil
+ 777:k6n15e.navo.hpc.mil
+ 392:k7n2e.navo.hpc.mil
+ 178:k1n1e.navo.hpc.mil
+ 174:k1n8e.navo.hpc.mil
+ 464:k1n9e.navo.hpc.mil
+ 219:k1n16e.navo.hpc.mil
+ 254:k2n14e.navo.hpc.mil
+  82:k3n6e.navo.hpc.mil
+ 731:k3n7e.navo.hpc.mil
+ 288:k3n13e.navo.hpc.mil
+ 297:k3n14e.navo.hpc.mil
+ 752:k4n4e.navo.hpc.mil
+ 324:k4n8e.navo.hpc.mil
+ 621:k4n10e.navo.hpc.mil
+ 581:k4n11e.navo.hpc.mil
+ 446:k4n12e.navo.hpc.mil
+ 532:k4n13e.navo.hpc.mil
+ 433:k4n15e.navo.hpc.mil
+ 661:k5n3e.navo.hpc.mil
+ 118:k5n7e.navo.hpc.mil
+ 345:k5n15e.navo.hpc.mil
+ 100:k6n7e.navo.hpc.mil
+ 737:k6n10e.navo.hpc.mil
+  69:k6n13e.navo.hpc.mil
+ 386:k7n1e.navo.hpc.mil
+ 231:k1n2e.navo.hpc.mil
+ 552:k1n3e.navo.hpc.mil
+ 726:k1n5e.navo.hpc.mil
+ 184:k1n6e.navo.hpc.mil
+ 468:k1n9e.navo.hpc.mil
+ 201:k1n10e.navo.hpc.mil
+ 104:k1n11e.navo.hpc.mil
+ 257:k2n3e.navo.hpc.mil
+ 266:k2n4e.navo.hpc.mil
+ 514:k2n5e.navo.hpc.mil
+   4:k2n15e.navo.hpc.mil
+ 310:k3n4e.navo.hpc.mil
+ 732:k3n7e.navo.hpc.mil
+  28:k3n9e.navo.hpc.mil
+ 629:k3n10e.navo.hpc.mil
+ 764:k3n15e.navo.hpc.mil
+ 312:k4n3e.navo.hpc.mil
+  43:k4n7e.navo.hpc.mil
+ 484:k4n14e.navo.hpc.mil
+ 560:k5n2e.navo.hpc.mil
+  51:k5n4e.navo.hpc.mil
+ 361:k5n6e.navo.hpc.mil
+ 368:k5n8e.navo.hpc.mil
+ 329:k5n10e.navo.hpc.mil
+ 600:k5n12e.navo.hpc.mil
+ 338:k5n14e.navo.hpc.mil
+ 472:k6n2e.navo.hpc.mil
+ 193:k6n8e.navo.hpc.mil
+ 586:k6n9e.navo.hpc.mil
+ 778:k6n15e.navo.hpc.mil
+ 179:k1n1e.navo.hpc.mil
+ 233:k1n7e.navo.hpc.mil
+ 175:k1n8e.navo.hpc.mil
+ 469:k1n9e.navo.hpc.mil
+ 223:k1n16e.navo.hpc.mil
+ 418:k2n6e.navo.hpc.mil
+ 498:k2n8e.navo.hpc.mil
+ 400:k2n11e.navo.hpc.mil
+  83:k3n6e.navo.hpc.mil
+ 298:k3n14e.navo.hpc.mil
+ 753:k4n4e.navo.hpc.mil
+  32:k4n5e.navo.hpc.mil
+ 454:k4n6e.navo.hpc.mil
+ 325:k4n8e.navo.hpc.mil
+ 648:k4n9e.navo.hpc.mil
+ 622:k4n10e.navo.hpc.mil
+ 583:k4n11e.navo.hpc.mil
+ 359:k5n1e.navo.hpc.mil
+ 119:k5n7e.navo.hpc.mil
+ 162:k5n13e.navo.hpc.mil
+ 346:k5n15e.navo.hpc.mil
+ 414:k6n1e.navo.hpc.mil
+ 377:k6n3e.navo.hpc.mil
+  73:k6n4e.navo.hpc.mil
+ 458:k6n5e.navo.hpc.mil
+ 738:k6n10e.navo.hpc.mil
+ 683:k6n16e.navo.hpc.mil
+ 387:k7n1e.navo.hpc.mil
+ 553:k1n3e.navo.hpc.mil
+ 611:k1n4e.navo.hpc.mil
+ 186:k1n6e.navo.hpc.mil
+ 643:k1n14e.navo.hpc.mil
+ 494:k1n15e.navo.hpc.mil
+ 770:k2n2e.navo.hpc.mil
+ 258:k2n3e.navo.hpc.mil
+ 267:k2n4e.navo.hpc.mil
+ 546:k3n1e.navo.hpc.mil
+ 733:k3n7e.navo.hpc.mil
+ 631:k3n10e.navo.hpc.mil
+ 280:k3n12e.navo.hpc.mil
+ 290:k3n13e.navo.hpc.mil
+ 765:k3n15e.navo.hpc.mil
+  44:k4n7e.navo.hpc.mil
+ 535:k4n13e.navo.hpc.mil
+ 672:k4n16e.navo.hpc.mil
+ 562:k5n2e.navo.hpc.mil
+  52:k5n4e.navo.hpc.mil
+  56:k5n5e.navo.hpc.mil
+ 372:k5n8e.navo.hpc.mil
+ 601:k5n12e.navo.hpc.mil
+ 632:k5n16e.navo.hpc.mil
+ 195:k6n8e.navo.hpc.mil
+ 716:k6n11e.navo.hpc.mil
+ 779:k6n15e.navo.hpc.mil
+ 395:k7n2e.navo.hpc.mil
+ 180:k1n1e.navo.hpc.mil
+ 234:k1n7e.navo.hpc.mil
+ 203:k1n10e.navo.hpc.mil
+ 106:k1n11e.navo.hpc.mil
+ 212:k1n13e.navo.hpc.mil
+ 516:k2n5e.navo.hpc.mil
+ 499:k2n8e.navo.hpc.mil
+  16:k2n9e.navo.hpc.mil
+ 402:k2n11e.navo.hpc.mil
+ 520:k3n3e.navo.hpc.mil
+  84:k3n6e.navo.hpc.mil
+ 299:k3n14e.navo.hpc.mil
+  33:k4n5e.navo.hpc.mil
+ 326:k4n8e.navo.hpc.mil
+ 649:k4n9e.navo.hpc.mil
+ 435:k4n15e.navo.hpc.mil
+ 163:k5n13e.navo.hpc.mil
+ 347:k5n15e.navo.hpc.mil
+ 474:k6n2e.navo.hpc.mil
+ 378:k6n3e.navo.hpc.mil
+  74:k6n4e.navo.hpc.mil
+ 459:k6n5e.navo.hpc.mil
+ 684:k6n16e.navo.hpc.mil
+ 388:k7n1e.navo.hpc.mil
+ 225:k1n2e.navo.hpc.mil
+ 612:k1n4e.navo.hpc.mil
+ 188:k1n6e.navo.hpc.mil
+ 644:k1n14e.navo.hpc.mil
+ 424:k2n1e.navo.hpc.mil
+ 771:k2n2e.navo.hpc.mil
+ 259:k2n3e.navo.hpc.mil
+ 268:k2n4e.navo.hpc.mil
+ 136:k2n10e.navo.hpc.mil
+   5:k2n15e.navo.hpc.mil
+ 311:k3n4e.navo.hpc.mil
+  24:k3n9e.navo.hpc.mil
+ 291:k3n13e.navo.hpc.mil
+ 315:k4n3e.navo.hpc.mil
+ 450:k4n6e.navo.hpc.mil
+  45:k4n7e.navo.hpc.mil
+ 481:k4n14e.navo.hpc.mil
+ 674:k4n16e.navo.hpc.mil
+ 563:k5n2e.navo.hpc.mil
+  53:k5n4e.navo.hpc.mil
+ 364:k5n6e.navo.hpc.mil
+ 331:k5n10e.navo.hpc.mil
+  88:k5n11e.navo.hpc.mil
+ 602:k5n12e.navo.hpc.mil
+ 341:k5n14e.navo.hpc.mil
+ 633:k5n16e.navo.hpc.mil
+ 196:k6n8e.navo.hpc.mil
+ 585:k6n9e.navo.hpc.mil
+ 740:k6n10e.navo.hpc.mil
+ 717:k6n11e.navo.hpc.mil
+ 696:k6n14e.navo.hpc.mil
+ 396:k7n2e.navo.hpc.mil
+ 181:k1n1e.navo.hpc.mil
+ 229:k1n2e.navo.hpc.mil
+ 556:k1n3e.navo.hpc.mil
+ 107:k1n11e.navo.hpc.mil
+ 489:k1n15e.navo.hpc.mil
+ 517:k2n5e.navo.hpc.mil
+ 421:k2n6e.navo.hpc.mil
+ 504:k2n12e.navo.hpc.mil
+   8:k2n16e.navo.hpc.mil
+ 664:k3n2e.navo.hpc.mil
+ 523:k3n3e.navo.hpc.mil
+  85:k3n6e.navo.hpc.mil
+ 537:k3n8e.navo.hpc.mil
+  26:k3n9e.navo.hpc.mil
+ 593:k4n1e.navo.hpc.mil
+ 756:k4n4e.navo.hpc.mil
+  34:k4n5e.navo.hpc.mil
+ 327:k4n8e.navo.hpc.mil
+ 447:k4n12e.navo.hpc.mil
+ 482:k4n14e.navo.hpc.mil
+ 690:k5n9e.navo.hpc.mil
+  75:k6n4e.navo.hpc.mil
+ 460:k6n5e.navo.hpc.mil
+ 130:k6n6e.navo.hpc.mil
+  97:k6n7e.navo.hpc.mil
+ 120:k6n12e.navo.hpc.mil
+ 685:k6n16e.navo.hpc.mil
+ 389:k7n1e.navo.hpc.mil
+ 238:k1n7e.navo.hpc.mil
+ 260:k2n3e.navo.hpc.mil
+ 501:k2n8e.navo.hpc.mil
+ 140:k2n10e.navo.hpc.mil
+ 404:k2n11e.navo.hpc.mil
+ 248:k2n14e.navo.hpc.mil
+ 548:k3n1e.navo.hpc.mil
+ 628:k3n10e.navo.hpc.mil
+ 302:k3n14e.navo.hpc.mil
+ 570:k3n16e.navo.hpc.mil
+  46:k4n7e.navo.hpc.mil
+ 652:k4n9e.navo.hpc.mil
+ 437:k4n15e.navo.hpc.mil
+ 675:k4n16e.navo.hpc.mil
+ 565:k5n2e.navo.hpc.mil
+  54:k5n4e.navo.hpc.mil
+  58:k5n5e.navo.hpc.mil
+ 365:k5n6e.navo.hpc.mil
+ 603:k5n12e.navo.hpc.mil
+ 587:k6n9e.navo.hpc.mil
+ 741:k6n10e.navo.hpc.mil
+ 697:k6n14e.navo.hpc.mil
+ 397:k7n2e.navo.hpc.mil
+ 182:k1n1e.navo.hpc.mil
+ 557:k1n3e.navo.hpc.mil
+ 614:k1n4e.navo.hpc.mil
+ 170:k1n8e.navo.hpc.mil
+ 206:k1n10e.navo.hpc.mil
+ 108:k1n11e.navo.hpc.mil
+ 211:k1n13e.navo.hpc.mil
+ 646:k1n14e.navo.hpc.mil
+ 428:k2n1e.navo.hpc.mil
+ 773:k2n2e.navo.hpc.mil
+ 270:k2n4e.navo.hpc.mil
+ 518:k2n5e.navo.hpc.mil
+ 422:k2n6e.navo.hpc.mil
+ 145:k2n7e.navo.hpc.mil
+   9:k2n16e.navo.hpc.mil
+ 704:k3n5e.navo.hpc.mil
+  86:k3n6e.navo.hpc.mil
+ 287:k3n12e.navo.hpc.mil
+ 294:k3n13e.navo.hpc.mil
+ 596:k4n1e.navo.hpc.mil
+ 757:k4n4e.navo.hpc.mil
+ 658:k5n3e.navo.hpc.mil
+ 691:k5n9e.navo.hpc.mil
+ 333:k5n10e.navo.hpc.mil
+ 166:k5n13e.navo.hpc.mil
+ 350:k5n15e.navo.hpc.mil
+ 719:k6n11e.navo.hpc.mil
+ 122:k6n12e.navo.hpc.mil
+ 686:k6n16e.navo.hpc.mil
+ 502:k2n8e.navo.hpc.mil
+ 246:k2n13e.navo.hpc.mil
+   6:k2n15e.navo.hpc.mil
+ 549:k3n1e.navo.hpc.mil
+ 666:k3n2e.navo.hpc.mil
+ 525:k3n3e.navo.hpc.mil
+ 307:k3n4e.navo.hpc.mil
+ 541:k3n8e.navo.hpc.mil
+ 276:k3n11e.navo.hpc.mil
+ 319:k4n3e.navo.hpc.mil
+  36:k4n5e.navo.hpc.mil
+ 455:k4n6e.navo.hpc.mil
+  47:k4n7e.navo.hpc.mil
+ 653:k4n9e.navo.hpc.mil
+ 443:k4n12e.navo.hpc.mil
+ 438:k4n15e.navo.hpc.mil
+  55:k5n4e.navo.hpc.mil
+  59:k5n5e.navo.hpc.mil
+ 336:k5n14e.navo.hpc.mil
+ 637:k5n16e.navo.hpc.mil
+ 410:k6n1e.navo.hpc.mil
+ 478:k6n2e.navo.hpc.mil
+  77:k6n4e.navo.hpc.mil
+ 462:k6n5e.navo.hpc.mil
+ 742:k6n10e.navo.hpc.mil
+ 224:k1n2e.navo.hpc.mil
+ 558:k1n3e.navo.hpc.mil
+ 615:k1n4e.navo.hpc.mil
+ 722:k1n5e.navo.hpc.mil
+ 171:k1n8e.navo.hpc.mil
+ 207:k1n10e.navo.hpc.mil
+ 109:k1n11e.navo.hpc.mil
+ 647:k1n14e.navo.hpc.mil
+ 431:k2n1e.navo.hpc.mil
+ 423:k2n6e.navo.hpc.mil
+ 146:k2n7e.navo.hpc.mil
+  22:k2n9e.navo.hpc.mil
+ 250:k2n14e.navo.hpc.mil
+ 707:k3n5e.navo.hpc.mil
+ 625:k3n10e.navo.hpc.mil
+ 295:k3n13e.navo.hpc.mil
+ 572:k3n16e.navo.hpc.mil
+ 759:k4n4e.navo.hpc.mil
+ 617:k4n10e.navo.hpc.mil
+ 355:k5n1e.navo.hpc.mil
+ 567:k5n2e.navo.hpc.mil
+ 367:k5n6e.navo.hpc.mil
+ 692:k5n9e.navo.hpc.mil
+ 335:k5n10e.navo.hpc.mil
+  92:k5n11e.navo.hpc.mil
+ 167:k5n13e.navo.hpc.mil
+ 351:k5n15e.navo.hpc.mil
+ 134:k6n6e.navo.hpc.mil
+ 712:k6n11e.navo.hpc.mil
+ 124:k6n12e.navo.hpc.mil
+ 699:k6n14e.navo.hpc.mil
+ 687:k6n16e.navo.hpc.mil
+ 399:k7n2e.navo.hpc.mil
+ 490:k1n15e.navo.hpc.mil
+ 551:k3n1e.navo.hpc.mil
+ 526:k3n3e.navo.hpc.mil
+ 598:k4n1e.navo.hpc.mil
+ 485:k4n14e.navo.hpc.mil
+ 369:k5n8e.navo.hpc.mil
+ 639:k5n16e.navo.hpc.mil
+ 479:k6n2e.navo.hpc.mil
+ 724:k1n5e.navo.hpc.mil
+ 216:k1n16e.navo.hpc.mil
+ 147:k2n7e.navo.hpc.mil
+  23:k2n9e.navo.hpc.mil
+ 509:k2n12e.navo.hpc.mil
+  12:k2n16e.navo.hpc.mil
+ 708:k3n5e.navo.hpc.mil
+ 543:k3n8e.navo.hpc.mil
+ 278:k3n11e.navo.hpc.mil
+ 281:k3n12e.navo.hpc.mil
+ 300:k3n14e.navo.hpc.mil
+ 575:k3n16e.navo.hpc.mil
+ 358:k5n1e.navo.hpc.mil
+ 117:k5n7e.navo.hpc.mil
+  93:k5n11e.navo.hpc.mil
+ 379:k6n3e.navo.hpc.mil
+ 135:k6n6e.navo.hpc.mil
+ 584:k6n9e.navo.hpc.mil
+  67:k6n13e.navo.hpc.mil
+ 190:k1n6e.navo.hpc.mil
+ 208:k1n13e.navo.hpc.mil
+ 495:k1n15e.navo.hpc.mil
+ 143:k2n10e.navo.hpc.mil
+ 401:k2n11e.navo.hpc.mil
+ 244:k2n13e.navo.hpc.mil
+   7:k2n15e.navo.hpc.mil
+ 305:k3n4e.navo.hpc.mil
+ 157:k4n2e.navo.hpc.mil
+ 449:k4n6e.navo.hpc.mil
+ 579:k4n11e.navo.hpc.mil
+ 442:k4n12e.navo.hpc.mil
+ 534:k4n13e.navo.hpc.mil
+ 673:k4n16e.navo.hpc.mil
+ 662:k5n3e.navo.hpc.mil
+ 371:k5n8e.navo.hpc.mil
+ 340:k5n14e.navo.hpc.mil
+ 411:k6n1e.navo.hpc.mil
+  96:k6n7e.navo.hpc.mil
+ 199:k6n8e.navo.hpc.mil
+ 217:k1n16e.navo.hpc.mil
+  31:k3n9e.navo.hpc.mil
+ 381:k6n3e.navo.hpc.mil
+ 232:k1n7e.navo.hpc.mil
+ 218:k1n16e.navo.hpc.mil
+ 383:k6n3e.navo.hpc.mil
+ 409:k6n1e.navo.hpc.mil
+ 488:k1n15e.navo.hpc.mil
+ 376:k6n3e.navo.hpc.mil
+ 220:k1n16e.navo.hpc.mil
+ 235:k1n7e.navo.hpc.mil
+ 491:k1n15e.navo.hpc.mil
+ 221:k1n16e.navo.hpc.mil
+ 380:k6n3e.navo.hpc.mil
+ 236:k1n7e.navo.hpc.mil
+ 492:k1n15e.navo.hpc.mil
+ 222:k1n16e.navo.hpc.mil
+ 382:k6n3e.navo.hpc.mil
+ 493:k1n15e.navo.hpc.mil
+poe ./test_xct_arctic
+ATTENTION: 0031-408  781 tasks allocated by LoadLeveler, continuing...
+ERROR: 0031-250  task 379: Segmentation fault
+ERROR: 0031-250  task 376: Segmentation fault
+ERROR: 0031-250  task 370: Terminated
+ERROR: 0031-250  task 573: Terminated
+ERROR: 0031-250  task 368: Terminated
+ERROR: 0031-250  task 369: Terminated
+ERROR: 0031-250  task 574: Terminated
+ERROR: 0031-250  task 571: Terminated
+ERROR: 0031-250  task 569: Terminated
+ERROR: 0031-250  task 572: Terminated
+ERROR: 0031-250  task 575: Terminated
+ERROR: 0031-250  task 570: Terminated
+ERROR: 0031-250  task 568: Terminated
+ERROR: 0031-250  task 402: Terminated
+ERROR: 0031-250  task 400: Terminated
+ERROR: 0031-250  task 401: Terminated
+ERROR: 0031-250  task 403: Terminated
+ERROR: 0031-250  task 404: Terminated
+ERROR: 0031-250  task 405: Terminated
+ERROR: 0031-250  task 406: Terminated
+ERROR: 0031-250  task 407: Terminated
+ERROR: 0031-250  task 419: Terminated
+ERROR: 0031-250  task 417: Terminated
+ERROR: 0031-250  task 420: Terminated
+ERROR: 0031-250  task 422: Terminated
+ERROR: 0031-250  task 421: Terminated
+ERROR: 0031-250  task 418: Terminated
+ERROR: 0031-250  task 423: Terminated
+ERROR: 0031-250  task 416: Terminated
+ERROR: 0031-250  task 62: Terminated
+ERROR: 0031-250  task 59: Terminated
+ERROR: 0031-250  task 60: Terminated
+ERROR: 0031-250  task 56: Terminated
+ERROR: 0031-250  task 63: Terminated
+ERROR: 0031-250  task 61: Terminated
+ERROR: 0031-250  task 58: Terminated
+ERROR: 0031-250  task 57: Terminated
+ERROR: 0031-250  task 586: Terminated
+ERROR: 0031-250  task 584: Terminated
+ERROR: 0031-250  task 585: Terminated
+ERROR: 0031-250  task 587: Terminated
+ERROR: 0031-250  task 588: Terminated
+ERROR: 0031-250  task 589: Terminated
+ERROR: 0031-250  task 590: Terminated
+ERROR: 0031-250  task 591: Terminated
+ERROR: 0031-250  task 649: Segmentation fault
+ERROR: 0031-250  task 83: Terminated
+ERROR: 0031-250  task 85: Terminated
+ERROR: 0031-250  task 87: Terminated
+ERROR: 0031-250  task 81: Terminated
+ERROR: 0031-250  task 86: Terminated
+ERROR: 0031-250  task 84: Terminated
+ERROR: 0031-250  task 80: Terminated
+ERROR: 0031-250  task 82: Terminated
+ERROR: 0031-250  task 654: Segmentation fault
+ERROR: 0031-250  task 655: Segmentation fault
+ERROR: 0031-250  task 648: Segmentation fault
+ERROR: 0031-250  task 651: Segmentation fault
+ERROR: 0031-250  task 268: Terminated
+ERROR: 0031-250  task 264: Terminated
+ERROR: 0031-250  task 265: Terminated
+ERROR: 0031-250  task 266: Terminated
+ERROR: 0031-250  task 267: Terminated
+ERROR: 0031-250  task 269: Terminated
+ERROR: 0031-250  task 270: Terminated
+ERROR: 0031-250  task 271: Terminated
+ERROR: 0031-250  task 285: Terminated
+ERROR: 0031-250  task 561: Terminated
+ERROR: 0031-250  task 560: Terminated
+ERROR: 0031-250  task 562: Terminated
+ERROR: 0031-250  task 563: Terminated
+ERROR: 0031-250  task 564: Terminated
+ERROR: 0031-250  task 565: Terminated
+ERROR: 0031-250  task 566: Terminated
+ERROR: 0031-250  task 567: Terminated
+ERROR: 0031-250  task 287: Terminated
+ERROR: 0031-250  task 283: Terminated
+ERROR: 0031-250  task 286: Terminated
+ERROR: 0031-250  task 284: Terminated
+ERROR: 0031-250  task 280: Terminated
+ERROR: 0031-250  task 282: Terminated
+ERROR: 0031-250  task 281: Terminated
+ERROR: 0031-250  task 29: Terminated
+ERROR: 0031-250  task 24: Terminated
+ERROR: 0031-250  task 26: Terminated
+ERROR: 0031-250  task 25: Terminated
+ERROR: 0031-250  task 27: Terminated
+ERROR: 0031-250  task 30: Terminated
+ERROR: 0031-250  task 31: Terminated
+ERROR: 0031-250  task 28: Terminated
+ERROR: 0031-250  task 326: Segmentation fault
+ERROR: 0031-250  task 321: Segmentation fault
+ERROR: 0031-250  task 327: Segmentation fault
+ERROR: 0031-250  task 320: Segmentation fault
+ERROR: 0031-250  task 322: Segmentation fault
+ERROR: 0031-250  task 325: Segmentation fault
+ERROR: 0031-250  task 323: Segmentation fault
+ERROR: 0031-250  task 78: Segmentation fault
+ERROR: 0031-250  task 77: Segmentation fault
+ERROR: 0031-250  task 79: Segmentation fault
+ERROR: 0031-250  task 387: Segmentation fault
+ERROR: 0031-250  task 384: Segmentation fault
+ERROR: 0031-250  task 415: Segmentation fault
+ERROR: 0031-250  task 381: Segmentation fault
+ERROR: 0031-250  task 390: Segmentation fault
+ERROR: 0031-250  task 217: Segmentation fault
+ERROR: 0031-250  task 294: Segmentation fault
+ERROR: 0031-250  task 72: Segmentation fault
+ERROR: 0031-250  task 713: Segmentation fault
+ERROR: 0031-250  task 719: Segmentation fault
+ERROR: 0031-250  task 715: Segmentation fault
+ERROR: 0031-250  task 666: Segmentation fault
+ERROR: 0031-250  task 669: Segmentation fault
+ERROR: 0031-250  task 671: Segmentation fault
+ERROR: 0031-250  task 670: Segmentation fault
+ERROR: 0031-250  task 13: Segmentation fault
+ERROR: 0031-250  task 12: Segmentation fault
+ERROR: 0031-250  task 10: Segmentation fault
+ERROR: 0031-250  task 14: Segmentation fault
+ERROR: 0031-250  task 9: Segmentation fault
+ERROR: 0031-250  task 11: Segmentation fault
+ERROR: 0031-250  task 130: Segmentation fault
+ERROR: 0031-250  task 377: Segmentation fault
+ERROR: 0031-250  task 135: Segmentation fault
+ERROR: 0031-250  task 128: Segmentation fault
+ERROR: 0031-250  task 132: Segmentation fault
+ERROR: 0031-250  task 134: Segmentation fault
+ERROR: 0031-250  task 131: Segmentation fault
+ERROR: 0031-250  task 712: Segmentation fault
+ERROR: 0031-250  task 714: Segmentation fault
+ERROR: 0031-250  task 717: Segmentation fault
+ERROR: 0031-250  task 718: Segmentation fault
+ERROR: 0031-250  task 408: Segmentation fault
+ERROR: 0031-250  task 4: Segmentation fault
+ERROR: 0031-250  task 3: Segmentation fault
+ERROR: 0031-250  task 5: Segmentation fault
+ERROR: 0031-250  task 2: Segmentation fault
+ERROR: 0031-250  task 7: Segmentation fault
+ERROR: 0031-250  task 0: Segmentation fault
+ERROR: 0031-250  task 6: Segmentation fault
+ERROR: 0031-250  task 1: Segmentation fault
+ERROR: 0031-250  task 665: Segmentation fault
+ERROR: 0031-250  task 668: Segmentation fault
+ERROR: 0031-250  task 556: Segmentation fault
+ERROR: 0031-250  task 664: Segmentation fault
+ERROR: 0031-250  task 291: Segmentation fault
+ERROR: 0031-250  task 290: Segmentation fault
+ERROR: 0031-250  task 391: Segmentation fault
+ERROR: 0031-250  task 289: Segmentation fault
+ERROR: 0031-250  task 219: Segmentation fault
+ERROR: 0031-250  task 667: Segmentation fault
+ERROR: 0031-250  task 38: Segmentation fault
+ERROR: 0031-250  task 700: Segmentation fault
+ERROR: 0031-250  task 716: Segmentation fault
+ERROR: 0031-250  task 552: Segmentation fault
+ERROR: 0031-250  task 746: Segmentation fault
+ERROR: 0031-250  task 295: Segmentation fault
+ERROR: 0031-250  task 36: Segmentation fault
+ERROR: 0031-250  task 118: Segmentation fault
+ERROR: 0031-250  task 8: Segmentation fault
+ERROR: 0031-250  task 696: Segmentation fault
+ERROR: 0031-250  task 103: Segmentation fault
+ERROR: 0031-250  task 277: Segmentation fault
+ERROR: 0031-250  task 726: Segmentation fault
+ERROR: 0031-250  task 511: Segmentation fault
+ERROR: 0031-250  task 257: Segmentation fault
+ERROR: 0031-250  task 123: Segmentation fault
+ERROR: 0031-250  task 699: Segmentation fault
+ERROR: 0031-250  task 473: Segmentation fault
+ERROR: 0031-250  task 341: Segmentation fault
+ERROR: 0031-250  task 481: Segmentation fault
+ERROR: 0031-250  task 220: Segmentation fault
+ERROR: 0031-250  task 292: Segmentation fault
+ERROR: 0031-250  task 129: Segmentation fault
+ERROR: 0031-250  task 76: Segmentation fault
+ERROR: 0031-250  task 33: Segmentation fault
+ERROR: 0031-250  task 414: Segmentation fault
+ERROR: 0031-250  task 598: Segmentation fault
+ERROR: 0031-250  task 701: Segmentation fault
+ERROR: 0031-250  task 540: Segmentation fault
+ERROR: 0031-250  task 119: Segmentation fault
+ERROR: 0031-250  task 386: Segmentation fault
+ERROR: 0031-250  task 115: Segmentation fault
+ERROR: 0031-250  task 388: Segmentation fault
+ERROR: 0031-250  task 74: Segmentation fault
+ERROR: 0031-250  task 594: Segmentation fault
+ERROR: 0031-250  task 165: Segmentation fault
+ERROR: 0031-250  task 464: Segmentation fault
+ERROR: 0031-250  task 261: Segmentation fault
+ERROR: 0031-250  task 160: Segmentation fault
+ERROR: 0031-250  task 164: Segmentation fault
+ERROR: 0031-250  task 467: Segmentation fault
+ERROR: 0031-250  task 221: Segmentation fault
+ERROR: 0031-250  task 750: Segmentation fault
+ERROR: 0031-250  task 492: Segmentation fault
+ERROR: 0031-250  task 258: Segmentation fault
+ERROR: 0031-250  task 273: Segmentation fault
+ERROR: 0031-250  task 114: Segmentation fault
+ERROR: 0031-250  task 385: Segmentation fault
+ERROR: 0031-250  task 509: Segmentation fault
+ERROR: 0031-250  task 597: Segmentation fault
+ERROR: 0031-250  task 482: Segmentation fault
+ERROR: 0031-250  task 75: Segmentation fault
+ERROR: 0031-250  task 161: Segmentation fault
+ERROR: 0031-250  task 389: Segmentation fault
+ERROR: 0031-250  task 653: Segmentation fault
+ERROR: 0031-250  task 747: Segmentation fault
+ERROR: 0031-250  task 293: Segmentation fault
+ERROR: 0031-250  task 278: Segmentation fault
+ERROR: 0031-250  task 117: Segmentation fault
+ERROR: 0031-250  task 342: Segmentation fault
+ERROR: 0031-250  task 126: Segmentation fault
+ERROR: 0031-250  task 39: Segmentation fault
+ERROR: 0031-250  task 263: Segmentation fault
+ERROR: 0031-250  task 34: Segmentation fault
+ERROR: 0031-250  task 383: Segmentation fault
+ERROR: 0031-250  task 46: Segmentation fault
+ERROR: 0031-250  task 468: Segmentation fault
+ERROR: 0031-250  task 751: Segmentation fault
+ERROR: 0031-250  task 471: Segmentation fault
+ERROR: 0031-250  task 32: Segmentation fault
+ERROR: 0031-250  task 476: Segmentation fault
+ERROR: 0031-250  task 539: Segmentation fault
+ERROR: 0031-250  task 336: Segmentation fault
+ERROR: 0031-250  task 559: Segmentation fault
+ERROR: 0031-250  task 409: Segmentation fault
+ERROR: 0031-250  task 725: Segmentation fault
+ERROR: 0031-250  task 124: Segmentation fault
+ERROR: 0031-250  task 35: Segmentation fault
+ERROR: 0031-250  task 480: Segmentation fault
+ERROR: 0031-250  task 44: Segmentation fault
+ERROR: 0031-250  task 541: Segmentation fault
+ERROR: 0031-250  task 489: Segmentation fault
+ERROR: 0031-250  task 721: Segmentation fault
+ERROR: 0031-250  task 510: Segmentation fault
+ERROR: 0031-250  task 337: Segmentation fault
+ERROR: 0031-250  task 37: Segmentation fault
+ERROR: 0031-250  task 472: Segmentation fault
+ERROR: 0031-250  task 506: Segmentation fault
+ERROR: 0031-250  task 488: Segmentation fault
+ERROR: 0031-250  task 475: Segmentation fault
+ERROR: 0031-250  task 537: Segmentation fault
+ERROR: 0031-250  task 410: Segmentation fault
+ERROR: 0031-250  task 493: Segmentation fault
+ERROR: 0031-250  task 536: Segmentation fault
+ERROR: 0031-250  task 722: Segmentation fault
+ERROR: 0031-250  task 274: Segmentation fault
+ERROR: 0031-250  task 338: Segmentation fault
+ERROR: 0031-250  task 507: Segmentation fault
+ERROR: 0031-250  task 554: Segmentation fault
+ERROR: 0031-250  task 508: Segmentation fault
+ERROR: 0031-250  task 412: Segmentation fault
+ERROR: 0031-250  task 558: Segmentation fault
+ERROR: 0031-250  task 413: Segmentation fault
+ERROR: 0031-250  task 485: Segmentation fault
+ERROR: 0031-250  task 555: Segmentation fault
+ERROR: 0031-250  task 260: Segmentation fault
+ERROR: 0031-250  task 484: Segmentation fault
+ERROR: 0031-250  task 411: Segmentation fault
+ERROR: 0031-250  task 486: Segmentation fault
+ERROR: 0031-250  task 553: Segmentation fault
+ERROR: 0031-250  task 487: Segmentation fault
+ERROR: 0031-250  task 557: Segmentation fault
+ERROR: 0031-250  task 47: Segmentation fault
+ERROR: 0031-250  task 216: Segmentation fault
+ERROR: 0031-250  task 41: Segmentation fault
+ERROR: 0031-250  task 223: Segmentation fault
+ERROR: 0031-250  task 378: Segmentation fault
+ERROR: 0031-250  task 312: Segmentation fault
+ERROR: 0031-250  task 703: Segmentation fault
+ERROR: 0031-250  task 42: Segmentation fault
+ERROR: 0031-250  task 125: Segmentation fault
+ERROR: 0031-250  task 477: Segmentation fault
+ERROR: 0031-250  task 127: Segmentation fault
+ERROR: 0031-250  task 222: Segmentation fault
+ERROR: 0031-250  task 122: Segmentation fault
+ERROR: 0031-250  task 276: Segmentation fault
+ERROR: 0031-250  task 316: Segmentation fault
+ERROR: 0031-250  task 218: Segmentation fault
+ERROR: 0031-250  task 479: Segmentation fault
+ERROR: 0031-250  task 133: Segmentation fault
+ERROR: 0031-250  task 504: Segmentation fault
+ERROR: 0031-250  task 650: Segmentation fault
+ERROR: 0031-250  task 698: Segmentation fault
+ERROR: 0031-250  task 749: Segmentation fault
+ERROR: 0031-250  task 176: Segmentation fault
+ERROR: 0031-250  task 702: Segmentation fault
+ERROR: 0031-250  task 120: Segmentation fault
+ERROR: 0031-250  task 599: Segmentation fault
+ERROR: 0031-250  task 288: Segmentation fault
+ERROR: 0031-250  task 543: Segmentation fault
+ERROR: 0031-250  task 121: Segmentation fault
+ERROR: 0031-250  task 727: Segmentation fault
+ERROR: 0031-250  task 202: Segmentation fault
+ERROR: 0031-250  task 720: Segmentation fault
+ERROR: 0031-250  task 112: Segmentation fault
+ERROR: 0031-250  task 73: Segmentation fault
+ERROR: 0031-250  task 517: Segmentation fault
+ERROR: 0031-250  task 163: Segmentation fault
+ERROR: 0031-250  task 272: Segmentation fault
+ERROR: 0031-250  task 538: Segmentation fault
+ERROR: 0031-250  task 745: Segmentation fault
+ERROR: 0031-250  task 505: Segmentation fault
+ERROR: 0031-250  task 318: Segmentation fault
+ERROR: 0031-250  task 339: Segmentation fault
+ERROR: 0031-250  task 183: Segmentation fault
+ERROR: 0031-250  task 97: Segmentation fault
+ERROR: 0031-250  task 490: Segmentation fault
+ERROR: 0031-250  task 748: Segmentation fault
+ERROR: 0031-250  task 596: Segmentation fault
+ERROR: 0031-250  task 343: Segmentation fault
+ERROR: 0031-250  task 275: Segmentation fault
+ERROR: 0031-250  task 470: Segmentation fault
+ERROR: 0031-250  task 340: Segmentation fault
+ERROR: 0031-250  task 469: Segmentation fault
+ERROR: 0031-250  task 744: Segmentation fault
+ERROR: 0031-250  task 201: Segmentation fault
+ERROR: 0031-250  task 317: Segmentation fault
+ERROR: 0031-250  task 319: Segmentation fault
+ERROR: 0031-250  task 101: Segmentation fault
+ERROR: 0031-250  task 324: Segmentation fault
+ERROR: 0031-250  task 113: Segmentation fault
+ERROR: 0031-250  task 592: Segmentation fault
+ERROR: 0031-250  task 474: Segmentation fault
+ERROR: 0031-250  task 466: Segmentation fault
+ERROR: 0031-250  task 380: Segmentation fault
+ERROR: 0031-250  task 167: Segmentation fault
+ERROR: 0031-250  task 314: Segmentation fault
+ERROR: 0031-250  task 43: Segmentation fault
+ERROR: 0031-250  task 593: Segmentation fault
+ERROR: 0031-250  task 204: Segmentation fault
+ERROR: 0031-250  task 313: Segmentation fault
+ERROR: 0031-250  task 724: Segmentation fault
+ERROR: 0031-250  task 495: Segmentation fault
+ERROR: 0031-250  task 102: Segmentation fault
+ERROR: 0031-250  task 382: Segmentation fault
+ERROR: 0031-250  task 99: Segmentation fault
+ERROR: 0031-250  task 478: Segmentation fault
+ERROR: 0031-250  task 15: Segmentation fault
+ERROR: 0031-250  task 96: Segmentation fault
+ERROR: 0031-250  task 315: Segmentation fault
+ERROR: 0031-250  task 697: Segmentation fault
+ERROR: 0031-250  task 483: Segmentation fault
+ERROR: 0031-250  task 652: Segmentation fault
+ERROR: 0031-250  task 182: Segmentation fault
+ERROR: 0031-250  task 98: Segmentation fault
+ERROR: 0031-250  task 542: Segmentation fault
+ERROR: 0031-250  task 116: Segmentation fault
+ERROR: 0031-250  task 723: Segmentation fault
+ERROR: 0031-250  task 205: Segmentation fault
+ERROR: 0031-250  task 166: Segmentation fault
+ERROR: 0031-250  task 279: Segmentation fault
+ERROR: 0031-250  task 207: Segmentation fault
+ERROR: 0031-250  task 45: Segmentation fault
+ERROR: 0031-250  task 181: Segmentation fault
+ERROR: 0031-250  task 465: Segmentation fault
+ERROR: 0031-250  task 518: Segmentation fault
+ERROR: 0031-250  task 259: Segmentation fault
+ERROR: 0031-250  task 595: Segmentation fault
+ERROR: 0031-250  task 177: Segmentation fault
+ERROR: 0031-250  task 491: Segmentation fault
+ERROR: 0031-250  task 100: Segmentation fault
+ERROR: 0031-250  task 494: Segmentation fault
+ERROR: 0031-250  task 262: Segmentation fault
+ERROR: 0031-250  task 515: Segmentation fault
+ERROR: 0031-250  task 206: Segmentation fault
+ERROR: 0031-250  task 40: Segmentation fault
+ERROR: 0031-250  task 200: Segmentation fault
+ERROR: 0031-250  task 180: Segmentation fault
+ERROR: 0031-250  task 256: Segmentation fault
+ERROR: 0031-250  task 519: Segmentation fault
+ERROR: 0031-250  task 513: Segmentation fault
+ERROR: 0031-250  task 179: Segmentation fault
+ERROR: 0031-250  task 203: Segmentation fault
+ERROR: 0031-250  task 178: Segmentation fault
+ERROR: 0031-250  task 162: Segmentation fault
+ERROR: 0031-250  task 514: Segmentation fault
+ERROR: 0031-250  task 516: Segmentation fault
+ERROR: 0031-250  task 512: Segmentation fault

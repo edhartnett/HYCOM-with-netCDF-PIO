@@ -1,0 +1,153 @@
+set time = 1
+C
+setenv OS `uname`
+uname
+switch ( Linux )
+breaksw
+C
+C --- Create a wind stress curl data file.
+C
+switch ( Linux )
+setenv pget cp
+setenv pput cp
+endsw
+C
+C --- R is region, e.g. GLBgx1v3
+C --- W is wind dataset name, e.g. era40-sea_1978-2002_mon
+C --- N is wind dataset, e.g. era40
+C
+setenv R `echo $cwd | sed -e "s?^.*hycom/??" | awk -F"/" '{print $1}'`
+echo /home/ajax/wallcraf/hycom/ATLb2.00/force/era15-sea_1979-1993_mon
+awk -F/ {print $1}
+sed -e s?^.*hycom/??
+setenv W `echo $cwd                          | awk -F"/" '{print $NF}'`
+echo /home/ajax/wallcraf/hycom/ATLb2.00/force/era15-sea_1979-1993_mon
+awk -F/ {print $NF}
+setenv N `echo $W                            | awk -F"-" '{print $1}'`
+echo era15-sea_1979-1993_mon
+awk -F- {print $1}
+C
+C --- P is primary path,
+C --- S is scratch directory,
+C --- D is permanent directory,
+C
+setenv P hycom/ATLb2.00/force/era15-sea_1979-1993_mon
+C
+switch ( Linux )
+if ( -e /external/fast ) then
+if ( -e /net/ajax/data ) then
+setenv S /net/ajax/data/wallcraf/hycom/ATLb2.00/force/era15-sea_1979-1993_mon
+setenv D ~/hycom/ATLb2.00/force/era15-sea_1979-1993_mon
+else
+breaksw
+C
+mkdir -p /net/ajax/data/wallcraf/hycom/ATLb2.00/force/era15-sea_1979-1993_mon
+cd /net/ajax/data/wallcraf/hycom/ATLb2.00/force/era15-sea_1979-1993_mon
+echo /net/ajax/data/wallcraf/hycom/ATLb2.00/force/era15-sea_1979-1993_mon
+/net/ajax/data/wallcraf/hycom/ATLb2.00/force/era15-sea_1979-1993_mon
+C
+C --- Input.
+C
+touch fort.10 fort.10A fort.11 fort.11A
+/bin/rm -f fort.10 fort.10A fort.11 fort.11A
+[1] 15286
+ln -s tauewd.b fort.10
+ln -s tauewd.a fort.10A
+[2] 15287
+[3] 15288
+ln -s taunwd.b fort.11
+[4] 15289
+ln -s taunwd.a fort.11A
+C
+touch regional.grid.a regional.grid.b
+
+[1]    Done                          ln -s tauewd.b fort.10
+
+[2]    Done                          ln -s tauewd.a fort.10A
+
+[4]    Done                          ln -s taunwd.a fort.11A
+
+[3]    Done                          ln -s taunwd.b fort.11
+if ( -z regional.grid.b ) then
+if ( -z regional.grid.a ) then
+C
+[1] 15293
+cp /home/ajax/wallcraf/hycom/ATLb2.00/force/era15-sea_1979-1993_mon/../../../ALL/force/src/wi_curl .
+wait
+
+[1]    Done                          cp  ...
+chmod a+rx wi_curl
+C
+/bin/rm: No match.
+C
+setenv FOR010A fort.10A
+setenv FOR011A fort.11A
+setenv FOR012A fort.12A
+C
+switch ( Linux )
+/bin/rm -f core
+touch core
+endsw
+./wi_curl
+
+xcspmd: idm,jdm =   57   52
+
+plon:  min,max =       263.00000      375.00000                                 
+qscx:  min,max =    102139.75781   222356.01562                                 
+qscy:  min,max =    102146.85938   222344.73438                                 
+era15-sea_1979-1993_mon strblk                                                 
+Wind Stress Curl on p-grid                                                     
+                                                                               
+                                                                               
+i/jdm =   57   52                                                              
+
+ Wind stresses first interpolated to u and v grids.
+
+ tau_ewd: month,range = 01  -1.8155339E-01   2.6009908E-01                      
+ tau_nwd: month,range = 01  -9.7609848E-02   1.1701395E-01                      
+ wndcurl: month,range = 01  -4.0787904E-07   1.0795236E-06
+ tau_ewd: month,range = 02  -1.7750572E-01   2.3518842E-01                      
+ tau_nwd: month,range = 02  -1.0929658E-01   1.3664991E-01                      
+ wndcurl: month,range = 02  -5.3316637E-07   1.2042269E-06
+ tau_ewd: month,range = 03  -1.5833366E-01   2.1780598E-01                      
+ tau_nwd: month,range = 03  -9.8530203E-02   8.4758222E-02                      
+ wndcurl: month,range = 03  -3.8265250E-07   8.9910753E-07
+ tau_ewd: month,range = 04  -1.3099855E-01   1.1298738E-01                      
+ tau_nwd: month,range = 04  -1.1370531E-01   8.1247523E-02                      
+ wndcurl: month,range = 04  -2.0744045E-07   5.9552951E-07
+ tau_ewd: month,range = 05  -1.1562786E-01   5.5382308E-02                      
+ tau_nwd: month,range = 05  -1.2435739E-01   9.1778249E-02                      
+ wndcurl: month,range = 05  -2.5226032E-07   3.2537071E-07
+ tau_ewd: month,range = 06  -1.9899495E-01   6.4657316E-02                      
+ tau_nwd: month,range = 06  -1.2088691E-01   1.0781895E-01                      
+ wndcurl: month,range = 06  -3.4417843E-07   4.5333522E-07
+ tau_ewd: month,range = 07  -2.1812733E-01   6.9603398E-02                      
+ tau_nwd: month,range = 07  -1.2341799E-01   1.1167178E-01                      
+ wndcurl: month,range = 07  -3.5045031E-07   5.0678420E-07
+ tau_ewd: month,range = 08  -1.6387990E-01   8.2013875E-02                      
+ tau_nwd: month,range = 08  -1.1009064E-01   1.1199369E-01                      
+ wndcurl: month,range = 08  -3.0622084E-07   3.8867375E-07
+ tau_ewd: month,range = 09  -1.0309188E-01   1.0586114E-01                      
+ tau_nwd: month,range = 09  -9.3714461E-02   1.1865309E-01                      
+ wndcurl: month,range = 09  -3.2750791E-07   3.7531697E-07
+ tau_ewd: month,range = 10  -9.6589528E-02   1.5522963E-01                      
+ tau_nwd: month,range = 10  -8.4065497E-02   9.8664090E-02                      
+ wndcurl: month,range = 10  -2.5595068E-07   5.9723425E-07
+ tau_ewd: month,range = 11  -1.1582274E-01   1.6718915E-01                      
+ tau_nwd: month,range = 11  -9.4913125E-02   8.5894167E-02                      
+ wndcurl: month,range = 11  -3.0263931E-07   6.8096665E-07
+ tau_ewd: month,range = 12  -1.8009979E-01   2.6211768E-01                      
+ tau_nwd: month,range = 12  -1.2615614E-01   9.7064942E-02                      
+ wndcurl: month,range = 12  -5.0528229E-07   1.0101505E-06
+FORTRAN STOP
+switch ( Linux )
+endsw
+C
+C --- Output.
+C
+mv fort.12 wndcrl.b
+mv fort.12A wndcrl.a
+C
+C --- Delete all files.
+C
+/bin/rm -f wi_curl fort.10 fort.10A fort.11 fort.11A

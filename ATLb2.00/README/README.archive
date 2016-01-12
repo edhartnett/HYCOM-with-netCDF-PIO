@@ -1,0 +1,76 @@
+archive/README.archive:
+
+README.archive			this file
+022archv.com			convert HYCOM 1.0 to 2.0 archives
+archv_010_0021_016.com		recover a HYCOM 2.0 ".b" archive
+data2d_010_0021_016.com		extract layered data   fields
+data3z_010_0021_016.com		extract Z-level data   fields
+ncdf2d_010_0021_016.com		extract layered NetCDF fields
+ncdf3z_010_0021_016.com		extract Z-level NetCDF fields
+restart_010_0021_016.com	create  a HYCOM restart file
+link.com			link to regional.{grid,depth} files
+
+The program ..../ALL/archive/src/hycomarchv converts a HYCOM 1.0 archive 
+file to HYCOM 2.0.  See 022archv.com for how to use it in this mode.
+
+It can also be used to generate a new ".b" file corresponding to an ".a"
+HYCOM 2.0 archive file (e.g. if the original .b file is corrupted).  This
+is illustrated by archv_010_0021_016.com, which creates a new archive file 
+as *.[AB]:
+
+../expt_01.0/data/archv.0021_016_00.A
+../expt_01.0/data/archv.0021_016_00.B
+../expt_01.0/data/archv.0021_016_00.a
+../expt_01.0/data/archv.0021_016_00.b
+
+In this case the original ".b" file is correct and so the ".B" is identical
+(except that diafx fields are missing).  If the original ".b" file is
+missing, then a dummy version must be provided which has the correct 
+time step and model day but can have the wrong min and max values (e.g.
+create this by editing any existing ".b" file with the same number of
+layers).
+
+The program archv2restart creates a HYCOM 2.X restart file from an
+archive file.  Sicne the archive file only contains one time level,
+this is duplicated to get the two time levels needed for restart.
+In addition an example restart file is input to obtain the few fields
+that are not in the archive file.
+
+The programs archv2data2d and archv2ncdf2d extract diagnostic layered 
+fields in several file data formats.  They are identical except that
+archv2ncdf2d include the option of outputing NetCDF files, and 
+requires the NetCDF version 3.5 library.  If you don't need NetCDF, 
+then use archv2data2d.  The netCDF library (if required) is at:
+    http://www.unidata.ucar.edu/packages/netcdf/
+
+The programs archv2data3z and archv2ncdf3z extract diagnostic fields 
+at fixed Z-level depths in several file data formats.  They are identical 
+except that archv2ncdf3z include the option of outputing NetCDF files, 
+and requires the NetCDF version 3.5 library.  If you don't need NetCDF, 
+then use archv2data3z.
+
+One of the file formats supported by archv2data?? is the standard HYCOM
+.[ab] format (raw REAL*4 bigendian data padded to 4096 words with data 
+voids as 2.0**100).  These files can be plotted directly by fieldproc.
+Many plot packages can read fully raw binary files, but may not handle
+padded arrays.  The command ../../ALL/bin/hycom2raw converts HYCOM .a
+files to fully raw .A files (and can also change the data void marker).
+The data*_010_0021_016.com scripts are currently configured to write
+HYCOM .[ab] files and to convert the .a file to a "raw" .A file.
+
+NetCDF files are self-describing and can be plotted and otherwise
+processed by a wide array of packages.  This is our recommended format
+for diagnostic files.  The files conform to the NetCDF Climate and 
+Forecast (CF) metadata conventions, which were chosen because they
+allow for curvilinear grids.  This is a new convention that is not
+yet widely supported, but it is an extension of the popualar COARDS
+conventions which means that many existing NetCDF packages provide at 
+least partial support.
+
+The archv* programs can read all HYCOM 1.0 and HYCOM 2.X archive files.
+There are also corresponding archm* programs that read MICOM files.  
+For example, archm2ncdf2d and archm2ncdf3z provide a NetCDF capability
+for MICOM archive files.  Since MICOM is in CGS and uses a N-S then W-E 
+grid orientation, the input is immediately rotated (to HYCOM's W-E then 
+S-N grid) and converted to MKS.  Note that the bottom topography and all 
+the input parameters are always from HYCOM.

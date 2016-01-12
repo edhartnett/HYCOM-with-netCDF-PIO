@@ -1,0 +1,37 @@
+setenv D ../topo
+setenv R ../../IASa0.50/topo
+touch regional.grid.a
+if ( -z regional.grid.a ) then
+ln -s ../topo/regional.grid.a .
+ln: cannot create ./regional.grid.a: File exists
+ln -s ../topo/regional.grid.b .
+ln: cannot create ./regional.grid.b: File exists
+endif
+No match
+No match
+./src/isub_topog
+
+xcspmd: idm,jdm =   57   52
+
+../topo/depth_ATLa2.00_01.b                                                                                                     
+../../IASa0.50/topo/depth_IASa0.50_99.b                                                                                         
+depth_ATLa2.00_01 subregioned to IASa0.50 via isub_topog                        
+ 
+idm    =    93
+jdm    =    65
+irefi  =     1
+jrefi  =    13
+irefo  =     1
+jrefo  =     1
+ijgrd  =     4
+ 
+depth_ATLa2.00_01 subregioned to IASa0.50 via isub_topog                       
+56 x 51 depth values (idm,jdm = 57,52).                                        
+2.0000 deg. mercator resolution, with equat=11.000.                            
+lon: 97.000W to 13.000E.  lat: 19.606S to 62.195N.                             
+                                                                               
+ 
+   i,j,ss,a =    26    1  3.0     0.000
+landfill: pass   1 filled in   169 points
+ 
+min,max depth =    199.556  5837.000

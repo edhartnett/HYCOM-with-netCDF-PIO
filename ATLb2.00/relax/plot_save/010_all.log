@@ -1,0 +1,22 @@
+foreach t ( hor cs1 cs2 )
+foreach p ( 010_jul )
+[1] 8490
+end
+wait
+
+[1]    Done                 env NCARG_GKS_PS=010_jul_hor.ps ./src/hycomproc < ${p}_${t}.IN >& ${p}_${t}.log
+end
+foreach p ( 010_jul )
+[1] 8495
+end
+wait
+
+[1]    Done                 env NCARG_GKS_PS=010_jul_cs1.ps ./src/hycomproc < ${p}_${t}.IN >& ${p}_${t}.log
+end
+foreach p ( 010_jul )
+[1] 8518
+end
+wait
+
+[1]    Done                 env NCARG_GKS_PS=010_jul_cs2.ps ./src/hycomproc < ${p}_${t}.IN >& ${p}_${t}.log
+end

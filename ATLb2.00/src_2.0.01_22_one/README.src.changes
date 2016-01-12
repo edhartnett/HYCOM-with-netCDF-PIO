@@ -1,0 +1,30 @@
+src_2.0.01_16_omp/README.src.changes
+
+1.0.08 (08/01/00) to 1.0.10 (01/08/01):
+------------------
+ 
+a) See README.src.changes_1p0 for HYCOM 1.0 history.
+
+
+2.0.01 (02/12/02):
+------------------
+ 
+a) This is the first official release of HYCOM 2.0.
+
+b) See README.src.hycom2p0 for a description of the major differences
+   to HYCOM 1.0.
+
+c) Fixed a high frequency wind input bug in forfun.f.  Also, skip 
+   (rather than read) to the first required high frequency wind
+   inoput record in forfun.f.
+
+d) Fixed periodic domain and xcsum bugs in mod_xc_mp.F.
+
+e) Fixed do-loop extent bug in bigrid.f.
+
+f) Fixed a MICOM-like side-wall relaxation bug in thermf.f.
+
+g) Fixed thknew bug in mxkrt.f.
+
+In all source directories, diff.log provides a detailed listing of the 
+differences against the last major release.

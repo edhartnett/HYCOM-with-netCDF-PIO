@@ -1,0 +1,50 @@
+cd ~/hycom/IASb0.50/topo
+echo /home/ajax/wallcraf/hycom/IASb0.50/topo
+/home/ajax/wallcraf/hycom/IASb0.50/topo
+/bin/rm -f fort.51 fort.51A
+setenv FOR051 fort.51
+setenv FOR051A fort.51A
+setenv FOR061 fort.61
+setenv FOR061A fort.61A
+/bin/ln -s depth_IASb0.50_01.b fort.51
+/bin/ln -s depth_IASb0.50_01.a fort.51A
+../../ALL/topo/src/topo_landmask
+
+xcspmd: idm,jdm =   93   65
+
+old header:
+bathymetery from 5-minute TerrainBase global dataset                           
+i/jdm =   93   65                                                              
+plon,plat range =   263.00000   309.00000     3.99675    33.84122              
+                                                                               
+                                                                               
+min,max depth =     20.107  7439.446
+ 
+ new header:
+bathymetery from 5-minute TerrainBase global dataset                           
+i/jdm =   93   65                                                              
+plon,plat range =   263.00000   309.00000     3.99675    33.84122              
+                                                                               
+landmask the Pacific and Cuba                                                  
+fill subregion:     1   40    1   10
+fill subregion:     1   17   11   25
+fill subregion:    19   27   11   19
+fill subregion:    28   28   11   11
+fill subregion:    33   34   40   40
+fill subregion:    31   37   39   39
+fill subregion:    36   36   38   38
+fill subregion:    37   37   37   37
+ dh(  18,  11) set to zero (3 land nieghbours)
+ dh(  18,  12) set to zero (3 land nieghbours)
+ dh(  18,  13) set to zero (3 land nieghbours)
+ dh(  18,  14) set to zero (3 land nieghbours)
+ dh(  18,  15) set to zero (3 land nieghbours)
+ dh(  18,  16) set to zero (3 land nieghbours)
+ dh(  18,  17) set to zero (3 land nieghbours)
+ dh(  18,  18) set to zero (3 land nieghbours)
+ dh(  18,  19) set to zero (4 land nieghbours)
+min,max depth =     20.107  7439.446
+ 
+/bin/mv fort.61 depth_IASb0.50_02.b
+/bin/mv fort.61A depth_IASb0.50_02.a
+/bin/rm -f fort.51 fort.51A

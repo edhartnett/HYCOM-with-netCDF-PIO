@@ -1,0 +1,1006 @@
+set time = 1
+C
+setenv OS `uname`
+uname
+switch ( SunOS )
+breaksw
+C
+C --- Summer zonal climatological statistics.
+C
+switch ( SunOS )
+setenv pget cp
+setenv pput cp
+breaksw
+C
+C --- E is experiment number
+C --- P is primary path,
+C --- C is scratch directory,
+C --- D is permanent directory,
+C
+setenv E 999
+setenv P hycom/ATLa2.00/relax/999
+C
+switch ( SunOS )
+setenv C /net/hermes/scrb/wallcraf/hycom/ATLa2.00/relax/999
+setenv D ~/hycom/ATLa2.00/relax/999
+breaksw
+C
+mkdir -p /net/hermes/scrb/wallcraf/hycom/ATLa2.00/relax/999
+cd /net/hermes/scrb/wallcraf/hycom/ATLa2.00/relax/999
+echo /net/hermes/scrb/wallcraf/hycom/ATLa2.00/relax/999
+/net/hermes/scrb/wallcraf/hycom/ATLa2.00/relax/999
+C
+touch relax_zon blkdat.input fort.51
+/bin/rm relax_zon blkdat.input fort.51
+C
+C --- July.
+C
+foreach MM ( 07 )
+C
+C --- Input.
+C
+touch fort.71 fort.72
+/bin/rm -f fort.71 fort.72
+[1] 6813
+cp /home/ajax/wallcraf/hycom/ATLa2.00/relax/999/../levitus/dens_m07 fort.71
+cp /home/ajax/wallcraf/hycom/ATLa2.00/relax/999/../levitus/temp_m07 fort.72
+[2] 6814
+C
+touch fort.51
+
+[1]    Done                 cp /home/ajax/wallcraf/hycom/ATLa2.00/relax/999/../levitus/dens_m07 fort.71
+
+[2]    Done                 cp /home/ajax/wallcraf/hycom/ATLa2.00/relax/999/../levitus/temp_m07 fort.72
+if ( -z fort.51 ) then
+[1] 6817
+endif
+cp /home/ajax/wallcraf/hycom/ATLa2.00/relax/999/../../topo/depth_ATLa2.00_01 fort.51
+C
+touch blkdat.input
+
+[1]    Done                 cp /home/ajax/wallcraf/hycom/ATLa2.00/relax/999/../../topo/depth_ATLa2.00_01  ...
+if ( -z blkdat.input ) then
+[1] 6820
+endif
+cp /home/ajax/wallcraf/hycom/ATLa2.00/relax/999/blkdat.input blkdat.input
+C
+
+[1]    Done                 cp /home/ajax/wallcraf/hycom/ATLa2.00/relax/999/blkdat.input blkdat.input
+touch relax_zon
+if ( -z relax_zon ) then
+[1] 6823
+endif
+cp /home/ajax/wallcraf/hycom/ATLa2.00/relax/999/../src/relax_zon .
+wait
+
+[1]    Done                 cp /home/ajax/wallcraf/hycom/ATLa2.00/relax/999/../src/relax_zon .
+chmod a+rx relax_zon
+C
+sed -e s/^[ 	0-9]*'month ' =/  07	  'month ' =/ blkdat.input
+C
+switch ( SunOS )
+/bin/rm -f core relax_zon.trace
+touch core
+case unicos:
+/bin/rm -f core
+touch core
+setenv NCPUS 1
+endsw
+/bin/rm -f fort.10 fort.11 fort.12 fort.21
+./relax_zon
+ 
+Levitus (NOAA World Ocean Atlas 1994) Climatology                              
+ 
+month  =     7
+ 
+iversn =    10
+iexpt  =    21
+yrflag =     0
+ 
+mapflg =     0
+idm    =    57
+jdm    =    52
+pntlat =   11.0000 
+reflat =    0.0000 deg N
+grdlat =    2.0000 degrees
+kdm    =    15
+nhybrd =    15
+nsigma =     0
+dp00s  =    0.0100 m
+dp00   =    0.0100 m
+dp00x  =    0.0100 m
+dp00f  =    1.0000 
+ 
+thbase =   25.0000 sigma
+ 
+sigma  =   20.7500 sigma
+sigma  =   21.2500 sigma
+sigma  =   21.7500 sigma
+sigma  =   22.2500 sigma
+sigma  =   22.7500 sigma
+sigma  =   23.2500 sigma
+sigma  =   23.7500 sigma
+sigma  =   24.2500 sigma
+sigma  =   24.7500 sigma
+sigma  =   25.2500 sigma
+sigma  =   25.7500 sigma
+sigma  =   26.2500 sigma
+sigma  =   26.7500 sigma
+sigma  =   27.2500 sigma
+sigma  =   27.7500 sigma
+ 
+thkmin =    0.0100 m
+ 
+k =  1   thkns =   0.0 m   depth =    0.0 m   density = 20.75 Sig-th
+k =  2   thkns =   0.0 m   depth =    0.0 m   density = 21.25 Sig-th
+k =  3   thkns =   0.0 m   depth =    0.0 m   density = 21.75 Sig-th
+k =  4   thkns =   0.0 m   depth =    0.0 m   density = 22.25 Sig-th
+k =  5   thkns =   0.0 m   depth =    0.0 m   density = 22.75 Sig-th
+k =  6   thkns =   0.0 m   depth =    0.1 m   density = 23.25 Sig-th
+k =  7   thkns =   0.0 m   depth =    0.1 m   density = 23.75 Sig-th
+k =  8   thkns =   0.0 m   depth =    0.1 m   density = 24.25 Sig-th
+k =  9   thkns =   0.0 m   depth =    0.1 m   density = 24.75 Sig-th
+k = 10   thkns =   0.0 m   depth =    0.1 m   density = 25.25 Sig-th
+k = 11   thkns =   0.0 m   depth =    0.1 m   density = 25.75 Sig-th
+k = 12   thkns =   0.0 m   depth =    0.1 m   density = 26.25 Sig-th
+k = 13   thkns =   0.0 m   depth =    0.1 m   density = 26.75 Sig-th
+k = 14   thkns =   0.0 m   depth =    0.1 m   density = 27.25 Sig-th
+k = 15   thkns =   0.0 m   depth =    0.1 m   density = 27.75 Sig-th
+ 
+
+ North Atlantic topography from ETOPO5 5-minute data set.                       
+ 56 x 51 depth values (idm,jdm = 57,52).                                        
+ 2.0000 deg. resolution, with equat=11.000.                                     
+ lon: 97.000W to 13.000E.  lat: 19.606S to 62.195N.                             
+                                                                                
+
+ Levitus monthly, July                                                          
+ Potential Density                                                              
+                                                                                
+                                                                                
+                                                                                
+
+ Levitus monthly, July                                                          
+ Potential Temperature                                                          
+                                                                                
+                                                                                
+                                                                                
+
+ZLEV =     0.0   10.0   20.0   30.0   50.0   75.0  100.0  125.0  150.0  200.0
+         250.0  300.0  400.0  500.0  600.0  700.0  800.0  900.0 1000.0 1100.0
+        1200.0 1300.0 1400.0 1500.0 1750.0 2000.0 2500.0 3000.0 3500.0 4000.0
+        4500.0 5000.0 5500.0 9999.9
+ 
+Levitus (NOAA World Ocean Atlas 1994) Climatology                              
+Expt 02.1  nhybrd=15 nsigma= 0 dp00s= 0.01 dp00= 0.01 dp00x= 0.01 dp00f=1.000  
+Potential Temperature, or Salinity, or Interface Depths                        
+                                                                               
+                                                                               
+ 
+  tem: min=     2.87 ave=    21.07 max=    29.37
+  sal: min=    29.14 ave=    35.51 max=    37.54
+  inf: min=     0.00 ave=     0.00 max=     0.00
+  thk: min=     0.01 ave=     0.21 max=    34.59
+          WRITING CLIM LAYER  1     SIGMA = 20.750
+
+  tem: min=     2.87 ave=    21.07 max=    29.37
+  sal: min=    29.14 ave=    35.54 max=    37.54
+  inf: min=     0.01 ave=     0.21 max=    34.59
+  thk: min=     0.01 ave=     0.05 max=     8.76
+ k = 01 j = 0001 to 0003 sig = 20.75 lat = -17.7 inf =    0.01
+ k = 01 j = 0002 to 0004 sig = 20.75 lat = -15.8 inf =    0.01
+ k = 01 j = 0003 to 0005 sig = 20.75 lat = -13.9 inf =    0.01
+ k = 01 j = 0004 to 0006 sig = 20.75 lat = -11.9 inf =    0.01
+ k = 01 j = 0005 to 0007 sig = 20.75 lat =  -9.9 inf =    0.01
+ k = 01 j = 0006 to 0008 sig = 20.75 lat =  -8.0 inf =    0.01
+ k = 01 j = 0007 to 0009 sig = 20.75 lat =  -6.0 inf =    0.01
+ k = 01 j = 0008 to 0010 sig = 20.75 lat =  -4.0 inf =    0.05
+ k = 01 j = 0009 to 0011 sig = 20.75 lat =  -2.0 inf =    0.38
+ k = 01 j = 0010 to 0012 sig = 20.75 lat =   0.0 inf =    1.10
+ k = 01 j = 0011 to 0013 sig = 20.75 lat =   2.0 inf =    1.73
+ k = 01 j = 0012 to 0014 sig = 20.75 lat =   4.0 inf =    1.99
+ k = 01 j = 0013 to 0015 sig = 20.75 lat =   6.0 inf =    1.73
+ k = 01 j = 0014 to 0016 sig = 20.75 lat =   8.0 inf =    1.10
+ k = 01 j = 0015 to 0017 sig = 20.75 lat =   9.9 inf =    0.45
+ k = 01 j = 0016 to 0018 sig = 20.75 lat =  11.9 inf =    0.12
+ k = 01 j = 0017 to 0019 sig = 20.75 lat =  13.9 inf =    0.02
+ k = 01 j = 0018 to 0020 sig = 20.75 lat =  15.8 inf =    0.01
+ k = 01 j = 0019 to 0021 sig = 20.75 lat =  17.7 inf =    0.01
+ k = 01 j = 0020 to 0022 sig = 20.75 lat =  19.6 inf =    0.01
+ k = 01 j = 0021 to 0023 sig = 20.75 lat =  21.5 inf =    0.01
+ k = 01 j = 0022 to 0024 sig = 20.75 lat =  23.3 inf =    0.01
+ k = 01 j = 0023 to 0025 sig = 20.75 lat =  25.2 inf =    0.15
+ k = 01 j = 0024 to 0026 sig = 20.75 lat =  26.9 inf =    0.52
+ k = 01 j = 0025 to 0027 sig = 20.75 lat =  28.7 inf =    0.56
+ k = 01 j = 0026 to 0028 sig = 20.75 lat =  30.5 inf =    0.43
+ k = 01 j = 0027 to 0029 sig = 20.75 lat =  32.2 inf =    0.01
+ k = 01 j = 0028 to 0030 sig = 20.75 lat =  33.8 inf =    0.01
+ k = 01 j = 0029 to 0031 sig = 20.75 lat =  35.5 inf =    0.01
+ k = 01 j = 0030 to 0032 sig = 20.75 lat =  37.1 inf =    0.01
+ k = 01 j = 0031 to 0033 sig = 20.75 lat =  38.7 inf =    0.01
+ k = 01 j = 0032 to 0034 sig = 20.75 lat =  40.2 inf =    0.01
+ k = 01 j = 0033 to 0035 sig = 20.75 lat =  41.7 inf =    0.01
+ k = 01 j = 0034 to 0036 sig = 20.75 lat =  43.2 inf =    0.01
+ k = 01 j = 0035 to 0037 sig = 20.75 lat =  44.6 inf =    0.01
+ k = 01 j = 0036 to 0038 sig = 20.75 lat =  46.1 inf =    0.01
+ k = 01 j = 0037 to 0039 sig = 20.75 lat =  47.4 inf =    0.01
+ k = 01 j = 0038 to 0040 sig = 20.75 lat =  48.8 inf =    0.01
+ k = 01 j = 0039 to 0041 sig = 20.75 lat =  50.1 inf =    0.01
+ k = 01 j = 0040 to 0042 sig = 20.75 lat =  51.3 inf =    0.01
+ k = 01 j = 0041 to 0043 sig = 20.75 lat =  52.6 inf =    0.01
+ k = 01 j = 0042 to 0044 sig = 20.75 lat =  53.8 inf =    0.01
+ k = 01 j = 0043 to 0045 sig = 20.75 lat =  54.9 inf =    0.01
+ k = 01 j = 0044 to 0046 sig = 20.75 lat =  56.1 inf =    0.01
+ k = 01 j = 0045 to 0047 sig = 20.75 lat =  57.2 inf =    0.01
+ k = 01 j = 0046 to 0048 sig = 20.75 lat =  58.2 inf =    0.01
+ k = 01 j = 0047 to 0049 sig = 20.75 lat =  59.3 inf =    0.01
+ k = 01 j = 0048 to 0050 sig = 20.75 lat =  60.3 inf =    0.01
+ k = 01 j = 0049 to 0051 sig = 20.75 lat =  61.2 inf =    0.01
+ k = 01 j = 0050 to 0051 sig = 20.75 lat =  61.7 inf =    0.01
+ k = 01 j = 0051 to 0051 sig = 20.75 lat =  62.2 inf =    0.01
+          WRITING CLIM LAYER  2     SIGMA = 21.250
+
+  tem: min=     2.87 ave=    21.07 max=    29.37
+  sal: min=    29.14 ave=    35.55 max=    37.54
+  inf: min=     0.02 ave=     0.26 max=    34.60
+  thk: min=     0.01 ave=     0.28 max=    22.39
+ k = 02 j = 0001 to 0003 sig = 21.25 lat = -17.7 inf =    0.02
+ k = 02 j = 0002 to 0004 sig = 21.25 lat = -15.8 inf =    0.02
+ k = 02 j = 0003 to 0005 sig = 21.25 lat = -13.9 inf =    0.02
+ k = 02 j = 0004 to 0006 sig = 21.25 lat = -11.9 inf =    0.02
+ k = 02 j = 0005 to 0007 sig = 21.25 lat =  -9.9 inf =    0.02
+ k = 02 j = 0006 to 0008 sig = 21.25 lat =  -8.0 inf =    0.02
+ k = 02 j = 0007 to 0009 sig = 21.25 lat =  -6.0 inf =    0.02
+ k = 02 j = 0008 to 0010 sig = 21.25 lat =  -4.0 inf =    0.06
+ k = 02 j = 0009 to 0011 sig = 21.25 lat =  -2.0 inf =    0.45
+ k = 02 j = 0010 to 0012 sig = 21.25 lat =   0.0 inf =    1.30
+ k = 02 j = 0011 to 0013 sig = 21.25 lat =   2.0 inf =    1.98
+ k = 02 j = 0012 to 0014 sig = 21.25 lat =   4.0 inf =    2.23
+ k = 02 j = 0013 to 0015 sig = 21.25 lat =   6.0 inf =    1.95
+ k = 02 j = 0014 to 0016 sig = 21.25 lat =   8.0 inf =    1.42
+ k = 02 j = 0015 to 0017 sig = 21.25 lat =   9.9 inf =    0.80
+ k = 02 j = 0016 to 0018 sig = 21.25 lat =  11.9 inf =    0.34
+ k = 02 j = 0017 to 0019 sig = 21.25 lat =  13.9 inf =    0.12
+ k = 02 j = 0018 to 0020 sig = 21.25 lat =  15.8 inf =    0.03
+ k = 02 j = 0019 to 0021 sig = 21.25 lat =  17.7 inf =    0.02
+ k = 02 j = 0020 to 0022 sig = 21.25 lat =  19.6 inf =    0.02
+ k = 02 j = 0021 to 0023 sig = 21.25 lat =  21.5 inf =    0.02
+ k = 02 j = 0022 to 0024 sig = 21.25 lat =  23.3 inf =    0.02
+ k = 02 j = 0023 to 0025 sig = 21.25 lat =  25.2 inf =    0.18
+ k = 02 j = 0024 to 0026 sig = 21.25 lat =  26.9 inf =    0.60
+ k = 02 j = 0025 to 0027 sig = 21.25 lat =  28.7 inf =    0.63
+ k = 02 j = 0026 to 0028 sig = 21.25 lat =  30.5 inf =    0.49
+ k = 02 j = 0027 to 0029 sig = 21.25 lat =  32.2 inf =    0.02
+ k = 02 j = 0028 to 0030 sig = 21.25 lat =  33.8 inf =    0.02
+ k = 02 j = 0029 to 0031 sig = 21.25 lat =  35.5 inf =    0.02
+ k = 02 j = 0030 to 0032 sig = 21.25 lat =  37.1 inf =    0.02
+ k = 02 j = 0031 to 0033 sig = 21.25 lat =  38.7 inf =    0.03
+ k = 02 j = 0032 to 0034 sig = 21.25 lat =  40.2 inf =    0.02
+ k = 02 j = 0033 to 0035 sig = 21.25 lat =  41.7 inf =    0.02
+ k = 02 j = 0034 to 0036 sig = 21.25 lat =  43.2 inf =    0.02
+ k = 02 j = 0035 to 0037 sig = 21.25 lat =  44.6 inf =    0.02
+ k = 02 j = 0036 to 0038 sig = 21.25 lat =  46.1 inf =    0.02
+ k = 02 j = 0037 to 0039 sig = 21.25 lat =  47.4 inf =    0.02
+ k = 02 j = 0038 to 0040 sig = 21.25 lat =  48.8 inf =    0.02
+ k = 02 j = 0039 to 0041 sig = 21.25 lat =  50.1 inf =    0.02
+ k = 02 j = 0040 to 0042 sig = 21.25 lat =  51.3 inf =    0.02
+ k = 02 j = 0041 to 0043 sig = 21.25 lat =  52.6 inf =    0.02
+ k = 02 j = 0042 to 0044 sig = 21.25 lat =  53.8 inf =    0.02
+ k = 02 j = 0043 to 0045 sig = 21.25 lat =  54.9 inf =    0.02
+ k = 02 j = 0044 to 0046 sig = 21.25 lat =  56.1 inf =    0.02
+ k = 02 j = 0045 to 0047 sig = 21.25 lat =  57.2 inf =    0.02
+ k = 02 j = 0046 to 0048 sig = 21.25 lat =  58.2 inf =    0.02
+ k = 02 j = 0047 to 0049 sig = 21.25 lat =  59.3 inf =    0.02
+ k = 02 j = 0048 to 0050 sig = 21.25 lat =  60.3 inf =    0.02
+ k = 02 j = 0049 to 0051 sig = 21.25 lat =  61.2 inf =    0.02
+ k = 02 j = 0050 to 0051 sig = 21.25 lat =  61.7 inf =    0.02
+ k = 02 j = 0051 to 0051 sig = 21.25 lat =  62.2 inf =    0.02
+          WRITING CLIM LAYER  3     SIGMA = 21.750
+
+  tem: min=     2.86 ave=    21.06 max=    29.36
+  sal: min=    29.14 ave=    35.57 max=    37.54
+  inf: min=     0.03 ave=     0.54 max=    34.61
+  thk: min=     0.01 ave=     0.42 max=    20.84
+ k = 03 j = 0001 to 0003 sig = 21.75 lat = -17.7 inf =    0.03
+ k = 03 j = 0002 to 0004 sig = 21.75 lat = -15.8 inf =    0.03
+ k = 03 j = 0003 to 0005 sig = 21.75 lat = -13.9 inf =    0.03
+ k = 03 j = 0004 to 0006 sig = 21.75 lat = -11.9 inf =    0.03
+ k = 03 j = 0005 to 0007 sig = 21.75 lat =  -9.9 inf =    0.03
+ k = 03 j = 0006 to 0008 sig = 21.75 lat =  -8.0 inf =    0.03
+ k = 03 j = 0007 to 0009 sig = 21.75 lat =  -6.0 inf =    0.03
+ k = 03 j = 0008 to 0010 sig = 21.75 lat =  -4.0 inf =    0.07
+ k = 03 j = 0009 to 0011 sig = 21.75 lat =  -2.0 inf =    0.50
+ k = 03 j = 0010 to 0012 sig = 21.75 lat =   0.0 inf =    1.53
+ k = 03 j = 0011 to 0013 sig = 21.75 lat =   2.0 inf =    2.39
+ k = 03 j = 0012 to 0014 sig = 21.75 lat =   4.0 inf =    2.83
+ k = 03 j = 0013 to 0015 sig = 21.75 lat =   6.0 inf =    2.90
+ k = 03 j = 0014 to 0016 sig = 21.75 lat =   8.0 inf =    3.07
+ k = 03 j = 0015 to 0017 sig = 21.75 lat =   9.9 inf =    3.08
+ k = 03 j = 0016 to 0018 sig = 21.75 lat =  11.9 inf =    2.61
+ k = 03 j = 0017 to 0019 sig = 21.75 lat =  13.9 inf =    1.80
+ k = 03 j = 0018 to 0020 sig = 21.75 lat =  15.8 inf =    0.94
+ k = 03 j = 0019 to 0021 sig = 21.75 lat =  17.7 inf =    0.32
+ k = 03 j = 0020 to 0022 sig = 21.75 lat =  19.6 inf =    0.07
+ k = 03 j = 0021 to 0023 sig = 21.75 lat =  21.5 inf =    0.03
+ k = 03 j = 0022 to 0024 sig = 21.75 lat =  23.3 inf =    0.09
+ k = 03 j = 0023 to 0025 sig = 21.75 lat =  25.2 inf =    0.44
+ k = 03 j = 0024 to 0026 sig = 21.75 lat =  26.9 inf =    1.14
+ k = 03 j = 0025 to 0027 sig = 21.75 lat =  28.7 inf =    1.14
+ k = 03 j = 0026 to 0028 sig = 21.75 lat =  30.5 inf =    0.80
+ k = 03 j = 0027 to 0029 sig = 21.75 lat =  32.2 inf =    0.03
+ k = 03 j = 0028 to 0030 sig = 21.75 lat =  33.8 inf =    0.04
+ k = 03 j = 0029 to 0031 sig = 21.75 lat =  35.5 inf =    0.07
+ k = 03 j = 0030 to 0032 sig = 21.75 lat =  37.1 inf =    0.14
+ k = 03 j = 0031 to 0033 sig = 21.75 lat =  38.7 inf =    0.14
+ k = 03 j = 0032 to 0034 sig = 21.75 lat =  40.2 inf =    0.11
+ k = 03 j = 0033 to 0035 sig = 21.75 lat =  41.7 inf =    0.04
+ k = 03 j = 0034 to 0036 sig = 21.75 lat =  43.2 inf =    0.03
+ k = 03 j = 0035 to 0037 sig = 21.75 lat =  44.6 inf =    0.03
+ k = 03 j = 0036 to 0038 sig = 21.75 lat =  46.1 inf =    0.03
+ k = 03 j = 0037 to 0039 sig = 21.75 lat =  47.4 inf =    0.03
+ k = 03 j = 0038 to 0040 sig = 21.75 lat =  48.8 inf =    0.03
+ k = 03 j = 0039 to 0041 sig = 21.75 lat =  50.1 inf =    0.03
+ k = 03 j = 0040 to 0042 sig = 21.75 lat =  51.3 inf =    0.03
+ k = 03 j = 0041 to 0043 sig = 21.75 lat =  52.6 inf =    0.03
+ k = 03 j = 0042 to 0044 sig = 21.75 lat =  53.8 inf =    0.03
+ k = 03 j = 0043 to 0045 sig = 21.75 lat =  54.9 inf =    0.03
+ k = 03 j = 0044 to 0046 sig = 21.75 lat =  56.1 inf =    0.03
+ k = 03 j = 0045 to 0047 sig = 21.75 lat =  57.2 inf =    0.03
+ k = 03 j = 0046 to 0048 sig = 21.75 lat =  58.2 inf =    0.03
+ k = 03 j = 0047 to 0049 sig = 21.75 lat =  59.3 inf =    0.03
+ k = 03 j = 0048 to 0050 sig = 21.75 lat =  60.3 inf =    0.03
+ k = 03 j = 0049 to 0051 sig = 21.75 lat =  61.2 inf =    0.03
+ k = 03 j = 0050 to 0051 sig = 21.75 lat =  61.7 inf =    0.03
+ k = 03 j = 0051 to 0051 sig = 21.75 lat =  62.2 inf =    0.03
+          WRITING CLIM LAYER  4     SIGMA = 22.250
+
+  tem: min=     2.86 ave=    21.04 max=    29.29
+  sal: min=    29.14 ave=    35.60 max=    37.54
+  inf: min=     0.04 ave=     0.96 max=    36.33
+  thk: min=     0.01 ave=     1.08 max=    35.54
+ k = 04 j = 0001 to 0003 sig = 22.25 lat = -17.7 inf =    0.04
+ k = 04 j = 0002 to 0004 sig = 22.25 lat = -15.8 inf =    0.04
+ k = 04 j = 0003 to 0005 sig = 22.25 lat = -13.9 inf =    0.04
+ k = 04 j = 0004 to 0006 sig = 22.25 lat = -11.9 inf =    0.04
+ k = 04 j = 0005 to 0007 sig = 22.25 lat =  -9.9 inf =    0.04
+ k = 04 j = 0006 to 0008 sig = 22.25 lat =  -8.0 inf =    0.04
+ k = 04 j = 0007 to 0009 sig = 22.25 lat =  -6.0 inf =    0.04
+ k = 04 j = 0008 to 0010 sig = 22.25 lat =  -4.0 inf =    0.08
+ k = 04 j = 0009 to 0011 sig = 22.25 lat =  -2.0 inf =    0.55
+ k = 04 j = 0010 to 0012 sig = 22.25 lat =   0.0 inf =    1.74
+ k = 04 j = 0011 to 0013 sig = 22.25 lat =   2.0 inf =    2.94
+ k = 04 j = 0012 to 0014 sig = 22.25 lat =   4.0 inf =    4.08
+ k = 04 j = 0013 to 0015 sig = 22.25 lat =   6.0 inf =    4.91
+ k = 04 j = 0014 to 0016 sig = 22.25 lat =   8.0 inf =    5.59
+ k = 04 j = 0015 to 0017 sig = 22.25 lat =   9.9 inf =    5.46
+ k = 04 j = 0016 to 0018 sig = 22.25 lat =  11.9 inf =    4.78
+ k = 04 j = 0017 to 0019 sig = 22.25 lat =  13.9 inf =    3.86
+ k = 04 j = 0018 to 0020 sig = 22.25 lat =  15.8 inf =    2.74
+ k = 04 j = 0019 to 0021 sig = 22.25 lat =  17.7 inf =    1.50
+ k = 04 j = 0020 to 0022 sig = 22.25 lat =  19.6 inf =    0.58
+ k = 04 j = 0021 to 0023 sig = 22.25 lat =  21.5 inf =    0.17
+ k = 04 j = 0022 to 0024 sig = 22.25 lat =  23.3 inf =    0.25
+ k = 04 j = 0023 to 0025 sig = 22.25 lat =  25.2 inf =    0.84
+ k = 04 j = 0024 to 0026 sig = 22.25 lat =  26.9 inf =    1.73
+ k = 04 j = 0025 to 0027 sig = 22.25 lat =  28.7 inf =    1.63
+ k = 04 j = 0026 to 0028 sig = 22.25 lat =  30.5 inf =    1.03
+ k = 04 j = 0027 to 0029 sig = 22.25 lat =  32.2 inf =    0.04
+ k = 04 j = 0028 to 0030 sig = 22.25 lat =  33.8 inf =    0.08
+ k = 04 j = 0029 to 0031 sig = 22.25 lat =  35.5 inf =    0.17
+ k = 04 j = 0030 to 0032 sig = 22.25 lat =  37.1 inf =    0.31
+ k = 04 j = 0031 to 0033 sig = 22.25 lat =  38.7 inf =    0.30
+ k = 04 j = 0032 to 0034 sig = 22.25 lat =  40.2 inf =    0.20
+ k = 04 j = 0033 to 0035 sig = 22.25 lat =  41.7 inf =    0.06
+ k = 04 j = 0034 to 0036 sig = 22.25 lat =  43.2 inf =    0.09
+ k = 04 j = 0035 to 0037 sig = 22.25 lat =  44.6 inf =    0.20
+ k = 04 j = 0036 to 0038 sig = 22.25 lat =  46.1 inf =    0.21
+ k = 04 j = 0037 to 0039 sig = 22.25 lat =  47.4 inf =    0.17
+ k = 04 j = 0038 to 0040 sig = 22.25 lat =  48.8 inf =    0.05
+ k = 04 j = 0039 to 0041 sig = 22.25 lat =  50.1 inf =    0.04
+ k = 04 j = 0040 to 0042 sig = 22.25 lat =  51.3 inf =    0.04
+ k = 04 j = 0041 to 0043 sig = 22.25 lat =  52.6 inf =    0.04
+ k = 04 j = 0042 to 0044 sig = 22.25 lat =  53.8 inf =    0.04
+ k = 04 j = 0043 to 0045 sig = 22.25 lat =  54.9 inf =    0.04
+ k = 04 j = 0044 to 0046 sig = 22.25 lat =  56.1 inf =    0.04
+ k = 04 j = 0045 to 0047 sig = 22.25 lat =  57.2 inf =    0.04
+ k = 04 j = 0046 to 0048 sig = 22.25 lat =  58.2 inf =    0.04
+ k = 04 j = 0047 to 0049 sig = 22.25 lat =  59.3 inf =    0.04
+ k = 04 j = 0048 to 0050 sig = 22.25 lat =  60.3 inf =    0.04
+ k = 04 j = 0049 to 0051 sig = 22.25 lat =  61.2 inf =    0.04
+ k = 04 j = 0050 to 0051 sig = 22.25 lat =  61.7 inf =    0.04
+ k = 04 j = 0051 to 0051 sig = 22.25 lat =  62.2 inf =    0.04
+          WRITING CLIM LAYER  5     SIGMA = 22.750
+
+  tem: min=     2.86 ave=    20.95 max=    29.09
+  sal: min=    29.29 ave=    35.65 max=    37.54
+  inf: min=     0.05 ave=     2.04 max=    46.03
+  thk: min=     0.01 ave=     4.99 max=    87.93
+ k = 05 j = 0001 to 0003 sig = 22.75 lat = -17.7 inf =    0.05
+ k = 05 j = 0002 to 0004 sig = 22.75 lat = -15.8 inf =    0.05
+ k = 05 j = 0003 to 0005 sig = 22.75 lat = -13.9 inf =    0.05
+ k = 05 j = 0004 to 0006 sig = 22.75 lat = -11.9 inf =    0.05
+ k = 05 j = 0005 to 0007 sig = 22.75 lat =  -9.9 inf =    0.08
+ k = 05 j = 0006 to 0008 sig = 22.75 lat =  -8.0 inf =    0.09
+ k = 05 j = 0007 to 0009 sig = 22.75 lat =  -6.0 inf =    0.10
+ k = 05 j = 0008 to 0010 sig = 22.75 lat =  -4.0 inf =    0.13
+ k = 05 j = 0009 to 0011 sig = 22.75 lat =  -2.0 inf =    0.71
+ k = 05 j = 0010 to 0012 sig = 22.75 lat =   0.0 inf =    2.28
+ k = 05 j = 0011 to 0013 sig = 22.75 lat =   2.0 inf =    4.61
+ k = 05 j = 0012 to 0014 sig = 22.75 lat =   4.0 inf =    7.84
+ k = 05 j = 0013 to 0015 sig = 22.75 lat =   6.0 inf =   10.81
+ k = 05 j = 0014 to 0016 sig = 22.75 lat =   8.0 inf =   12.13
+ k = 05 j = 0015 to 0017 sig = 22.75 lat =   9.9 inf =   10.64
+ k = 05 j = 0016 to 0018 sig = 22.75 lat =  11.9 inf =    8.80
+ k = 05 j = 0017 to 0019 sig = 22.75 lat =  13.9 inf =    7.94
+ k = 05 j = 0018 to 0020 sig = 22.75 lat =  15.8 inf =    7.30
+ k = 05 j = 0019 to 0021 sig = 22.75 lat =  17.7 inf =    5.41
+ k = 05 j = 0020 to 0022 sig = 22.75 lat =  19.6 inf =    2.97
+ k = 05 j = 0021 to 0023 sig = 22.75 lat =  21.5 inf =    1.43
+ k = 05 j = 0022 to 0024 sig = 22.75 lat =  23.3 inf =    1.42
+ k = 05 j = 0023 to 0025 sig = 22.75 lat =  25.2 inf =    2.29
+ k = 05 j = 0024 to 0026 sig = 22.75 lat =  26.9 inf =    3.11
+ k = 05 j = 0025 to 0027 sig = 22.75 lat =  28.7 inf =    2.45
+ k = 05 j = 0026 to 0028 sig = 22.75 lat =  30.5 inf =    1.30
+ k = 05 j = 0027 to 0029 sig = 22.75 lat =  32.2 inf =    0.09
+ k = 05 j = 0028 to 0030 sig = 22.75 lat =  33.8 inf =    0.27
+ k = 05 j = 0029 to 0031 sig = 22.75 lat =  35.5 inf =    0.47
+ k = 05 j = 0030 to 0032 sig = 22.75 lat =  37.1 inf =    0.68
+ k = 05 j = 0031 to 0033 sig = 22.75 lat =  38.7 inf =    0.59
+ k = 05 j = 0032 to 0034 sig = 22.75 lat =  40.2 inf =    0.39
+ k = 05 j = 0033 to 0035 sig = 22.75 lat =  41.7 inf =    0.14
+ k = 05 j = 0034 to 0036 sig = 22.75 lat =  43.2 inf =    0.18
+ k = 05 j = 0035 to 0037 sig = 22.75 lat =  44.6 inf =    0.44
+ k = 05 j = 0036 to 0038 sig = 22.75 lat =  46.1 inf =    0.48
+ k = 05 j = 0037 to 0039 sig = 22.75 lat =  47.4 inf =    0.37
+ k = 05 j = 0038 to 0040 sig = 22.75 lat =  48.8 inf =    0.07
+ k = 05 j = 0039 to 0041 sig = 22.75 lat =  50.1 inf =    0.05
+ k = 05 j = 0040 to 0042 sig = 22.75 lat =  51.3 inf =    0.05
+ k = 05 j = 0041 to 0043 sig = 22.75 lat =  52.6 inf =    0.05
+ k = 05 j = 0042 to 0044 sig = 22.75 lat =  53.8 inf =    0.05
+ k = 05 j = 0043 to 0045 sig = 22.75 lat =  54.9 inf =    0.05
+ k = 05 j = 0044 to 0046 sig = 22.75 lat =  56.1 inf =    0.05
+ k = 05 j = 0045 to 0047 sig = 22.75 lat =  57.2 inf =    0.05
+ k = 05 j = 0046 to 0048 sig = 22.75 lat =  58.2 inf =    0.05
+ k = 05 j = 0047 to 0049 sig = 22.75 lat =  59.3 inf =    0.05
+ k = 05 j = 0048 to 0050 sig = 22.75 lat =  60.3 inf =    0.05
+ k = 05 j = 0049 to 0051 sig = 22.75 lat =  61.2 inf =    0.05
+ k = 05 j = 0050 to 0051 sig = 22.75 lat =  61.7 inf =    0.05
+ k = 05 j = 0051 to 0051 sig = 22.75 lat =  62.2 inf =    0.05
+          WRITING CLIM LAYER  6     SIGMA = 23.250
+
+  tem: min=     2.86 ave=    20.69 max=    27.76
+  sal: min=    29.89 ave=    35.70 max=    37.54
+  inf: min=     0.06 ave=     7.03 max=    87.98
+  thk: min=     0.01 ave=     7.74 max=    87.99
+ k = 06 j = 0001 to 0003 sig = 23.25 lat = -17.7 inf =    0.06
+ k = 06 j = 0002 to 0004 sig = 23.25 lat = -15.8 inf =    0.06
+ k = 06 j = 0003 to 0005 sig = 23.25 lat = -13.9 inf =    0.06
+ k = 06 j = 0004 to 0006 sig = 23.25 lat = -11.9 inf =    0.08
+ k = 06 j = 0005 to 0007 sig = 23.25 lat =  -9.9 inf =    0.16
+ k = 06 j = 0006 to 0008 sig = 23.25 lat =  -8.0 inf =    0.22
+ k = 06 j = 0007 to 0009 sig = 23.25 lat =  -6.0 inf =    0.22
+ k = 06 j = 0008 to 0010 sig = 23.25 lat =  -4.0 inf =    0.30
+ k = 06 j = 0009 to 0011 sig = 23.25 lat =  -2.0 inf =    2.32
+ k = 06 j = 0010 to 0012 sig = 23.25 lat =   0.0 inf =    9.99
+ k = 06 j = 0011 to 0013 sig = 23.25 lat =   2.0 inf =   23.24
+ k = 06 j = 0012 to 0014 sig = 23.25 lat =   4.0 inf =   36.07
+ k = 06 j = 0013 to 0015 sig = 23.25 lat =   6.0 inf =   42.37
+ k = 06 j = 0014 to 0016 sig = 23.25 lat =   8.0 inf =   36.80
+ k = 06 j = 0015 to 0017 sig = 23.25 lat =   9.9 inf =   26.08
+ k = 06 j = 0016 to 0018 sig = 23.25 lat =  11.9 inf =   18.81
+ k = 06 j = 0017 to 0019 sig = 23.25 lat =  13.9 inf =   18.11
+ k = 06 j = 0018 to 0020 sig = 23.25 lat =  15.8 inf =   22.28
+ k = 06 j = 0019 to 0021 sig = 23.25 lat =  17.7 inf =   24.50
+ k = 06 j = 0020 to 0022 sig = 23.25 lat =  19.6 inf =   21.22
+ k = 06 j = 0021 to 0023 sig = 23.25 lat =  21.5 inf =   14.54
+ k = 06 j = 0022 to 0024 sig = 23.25 lat =  23.3 inf =    9.51
+ k = 06 j = 0023 to 0025 sig = 23.25 lat =  25.2 inf =    7.12
+ k = 06 j = 0024 to 0026 sig = 23.25 lat =  26.9 inf =    5.99
+ k = 06 j = 0025 to 0027 sig = 23.25 lat =  28.7 inf =    4.01
+ k = 06 j = 0026 to 0028 sig = 23.25 lat =  30.5 inf =    2.41
+ k = 06 j = 0027 to 0029 sig = 23.25 lat =  32.2 inf =    0.99
+ k = 06 j = 0028 to 0030 sig = 23.25 lat =  33.8 inf =    1.18
+ k = 06 j = 0029 to 0031 sig = 23.25 lat =  35.5 inf =    1.26
+ k = 06 j = 0030 to 0032 sig = 23.25 lat =  37.1 inf =    1.39
+ k = 06 j = 0031 to 0033 sig = 23.25 lat =  38.7 inf =    1.09
+ k = 06 j = 0032 to 0034 sig = 23.25 lat =  40.2 inf =    0.72
+ k = 06 j = 0033 to 0035 sig = 23.25 lat =  41.7 inf =    0.36
+ k = 06 j = 0034 to 0036 sig = 23.25 lat =  43.2 inf =    0.53
+ k = 06 j = 0035 to 0037 sig = 23.25 lat =  44.6 inf =    1.05
+ k = 06 j = 0036 to 0038 sig = 23.25 lat =  46.1 inf =    1.13
+ k = 06 j = 0037 to 0039 sig = 23.25 lat =  47.4 inf =    0.80
+ k = 06 j = 0038 to 0040 sig = 23.25 lat =  48.8 inf =    0.21
+ k = 06 j = 0039 to 0041 sig = 23.25 lat =  50.1 inf =    0.06
+ k = 06 j = 0040 to 0042 sig = 23.25 lat =  51.3 inf =    0.06
+ k = 06 j = 0041 to 0043 sig = 23.25 lat =  52.6 inf =    0.08
+ k = 06 j = 0042 to 0044 sig = 23.25 lat =  53.8 inf =    0.08
+ k = 06 j = 0043 to 0045 sig = 23.25 lat =  54.9 inf =    0.08
+ k = 06 j = 0044 to 0046 sig = 23.25 lat =  56.1 inf =    0.07
+ k = 06 j = 0045 to 0047 sig = 23.25 lat =  57.2 inf =    0.06
+ k = 06 j = 0046 to 0048 sig = 23.25 lat =  58.2 inf =    0.06
+ k = 06 j = 0047 to 0049 sig = 23.25 lat =  59.3 inf =    0.06
+ k = 06 j = 0048 to 0050 sig = 23.25 lat =  60.3 inf =    0.06
+ k = 06 j = 0049 to 0051 sig = 23.25 lat =  61.2 inf =    0.06
+ k = 06 j = 0050 to 0051 sig = 23.25 lat =  61.7 inf =    0.06
+ k = 06 j = 0051 to 0051 sig = 23.25 lat =  62.2 inf =    0.06
+          WRITING CLIM LAYER  7     SIGMA = 23.750
+
+  tem: min=     2.86 ave=    20.24 max=    27.30
+  sal: min=    30.47 ave=    35.75 max=    37.54
+  inf: min=     0.07 ave=    14.76 max=   125.23
+  thk: min=     0.01 ave=     8.35 max=    89.11
+ k = 07 j = 0001 to 0003 sig = 23.75 lat = -17.7 inf =    0.07
+ k = 07 j = 0002 to 0004 sig = 23.75 lat = -15.8 inf =    0.07
+ k = 07 j = 0003 to 0005 sig = 23.75 lat = -13.9 inf =    0.07
+ k = 07 j = 0004 to 0006 sig = 23.75 lat = -11.9 inf =    1.59
+ k = 07 j = 0005 to 0007 sig = 23.75 lat =  -9.9 inf =    6.91
+ k = 07 j = 0006 to 0008 sig = 23.75 lat =  -8.0 inf =   14.72
+ k = 07 j = 0007 to 0009 sig = 23.75 lat =  -6.0 inf =   20.01
+ k = 07 j = 0008 to 0010 sig = 23.75 lat =  -4.0 inf =   21.47
+ k = 07 j = 0009 to 0011 sig = 23.75 lat =  -2.0 inf =   25.83
+ k = 07 j = 0010 to 0012 sig = 23.75 lat =   0.0 inf =   37.72
+ k = 07 j = 0011 to 0013 sig = 23.75 lat =   2.0 inf =   51.24
+ k = 07 j = 0012 to 0014 sig = 23.75 lat =   4.0 inf =   57.76
+ k = 07 j = 0013 to 0015 sig = 23.75 lat =   6.0 inf =   58.12
+ k = 07 j = 0014 to 0016 sig = 23.75 lat =   8.0 inf =   51.69
+ k = 07 j = 0015 to 0017 sig = 23.75 lat =   9.9 inf =   43.88
+ k = 07 j = 0016 to 0018 sig = 23.75 lat =  11.9 inf =   38.02
+ k = 07 j = 0017 to 0019 sig = 23.75 lat =  13.9 inf =   37.45
+ k = 07 j = 0018 to 0020 sig = 23.75 lat =  15.8 inf =   40.76
+ k = 07 j = 0019 to 0021 sig = 23.75 lat =  17.7 inf =   41.95
+ k = 07 j = 0020 to 0022 sig = 23.75 lat =  19.6 inf =   38.21
+ k = 07 j = 0021 to 0023 sig = 23.75 lat =  21.5 inf =   31.16
+ k = 07 j = 0022 to 0024 sig = 23.75 lat =  23.3 inf =   24.30
+ k = 07 j = 0023 to 0025 sig = 23.75 lat =  25.2 inf =   18.49
+ k = 07 j = 0024 to 0026 sig = 23.75 lat =  26.9 inf =   14.13
+ k = 07 j = 0025 to 0027 sig = 23.75 lat =  28.7 inf =    9.80
+ k = 07 j = 0026 to 0028 sig = 23.75 lat =  30.5 inf =    6.60
+ k = 07 j = 0027 to 0029 sig = 23.75 lat =  32.2 inf =    3.73
+ k = 07 j = 0028 to 0030 sig = 23.75 lat =  33.8 inf =    3.19
+ k = 07 j = 0029 to 0031 sig = 23.75 lat =  35.5 inf =    2.83
+ k = 07 j = 0030 to 0032 sig = 23.75 lat =  37.1 inf =    2.71
+ k = 07 j = 0031 to 0033 sig = 23.75 lat =  38.7 inf =    2.13
+ k = 07 j = 0032 to 0034 sig = 23.75 lat =  40.2 inf =    1.59
+ k = 07 j = 0033 to 0035 sig = 23.75 lat =  41.7 inf =    1.28
+ k = 07 j = 0034 to 0036 sig = 23.75 lat =  43.2 inf =    1.63
+ k = 07 j = 0035 to 0037 sig = 23.75 lat =  44.6 inf =    2.14
+ k = 07 j = 0036 to 0038 sig = 23.75 lat =  46.1 inf =    2.03
+ k = 07 j = 0037 to 0039 sig = 23.75 lat =  47.4 inf =    1.29
+ k = 07 j = 0038 to 0040 sig = 23.75 lat =  48.8 inf =    0.42
+ k = 07 j = 0039 to 0041 sig = 23.75 lat =  50.1 inf =    0.07
+ k = 07 j = 0040 to 0042 sig = 23.75 lat =  51.3 inf =    0.08
+ k = 07 j = 0041 to 0043 sig = 23.75 lat =  52.6 inf =    0.17
+ k = 07 j = 0042 to 0044 sig = 23.75 lat =  53.8 inf =    0.20
+ k = 07 j = 0043 to 0045 sig = 23.75 lat =  54.9 inf =    0.19
+ k = 07 j = 0044 to 0046 sig = 23.75 lat =  56.1 inf =    0.10
+ k = 07 j = 0045 to 0047 sig = 23.75 lat =  57.2 inf =    0.07
+ k = 07 j = 0046 to 0048 sig = 23.75 lat =  58.2 inf =    0.07
+ k = 07 j = 0047 to 0049 sig = 23.75 lat =  59.3 inf =    0.07
+ k = 07 j = 0048 to 0050 sig = 23.75 lat =  60.3 inf =    0.07
+ k = 07 j = 0049 to 0051 sig = 23.75 lat =  61.2 inf =    0.07
+ k = 07 j = 0050 to 0051 sig = 23.75 lat =  61.7 inf =    0.07
+ k = 07 j = 0051 to 0051 sig = 23.75 lat =  62.2 inf =    0.07
+          WRITING CLIM LAYER  8     SIGMA = 24.250
+
+  tem: min=     2.74 ave=    19.53 max=    26.14
+  sal: min=    31.05 ave=    35.79 max=    37.54
+  inf: min=     0.08 ave=    23.11 max=   137.48
+  thk: min=     0.01 ave=    12.53 max=   106.52
+ k = 08 j = 0001 to 0003 sig = 24.25 lat = -17.7 inf =    0.08
+ k = 08 j = 0002 to 0004 sig = 24.25 lat = -15.8 inf =    0.76
+ k = 08 j = 0003 to 0005 sig = 24.25 lat = -13.9 inf =    5.48
+ k = 08 j = 0004 to 0006 sig = 24.25 lat = -11.9 inf =   17.78
+ k = 08 j = 0005 to 0007 sig = 24.25 lat =  -9.9 inf =   34.05
+ k = 08 j = 0006 to 0008 sig = 24.25 lat =  -8.0 inf =   45.57
+ k = 08 j = 0007 to 0009 sig = 24.25 lat =  -6.0 inf =   45.74
+ k = 08 j = 0008 to 0010 sig = 24.25 lat =  -4.0 inf =   41.55
+ k = 08 j = 0009 to 0011 sig = 24.25 lat =  -2.0 inf =   42.86
+ k = 08 j = 0010 to 0012 sig = 24.25 lat =   0.0 inf =   51.84
+ k = 08 j = 0011 to 0013 sig = 24.25 lat =   2.0 inf =   61.46
+ k = 08 j = 0012 to 0014 sig = 24.25 lat =   4.0 inf =   65.27
+ k = 08 j = 0013 to 0015 sig = 24.25 lat =   6.0 inf =   65.72
+ k = 08 j = 0014 to 0016 sig = 24.25 lat =   8.0 inf =   63.38
+ k = 08 j = 0015 to 0017 sig = 24.25 lat =   9.9 inf =   61.92
+ k = 08 j = 0016 to 0018 sig = 24.25 lat =  11.9 inf =   60.34
+ k = 08 j = 0017 to 0019 sig = 24.25 lat =  13.9 inf =   60.01
+ k = 08 j = 0018 to 0020 sig = 24.25 lat =  15.8 inf =   59.59
+ k = 08 j = 0019 to 0021 sig = 24.25 lat =  17.7 inf =   56.27
+ k = 08 j = 0020 to 0022 sig = 24.25 lat =  19.6 inf =   50.15
+ k = 08 j = 0021 to 0023 sig = 24.25 lat =  21.5 inf =   42.13
+ k = 08 j = 0022 to 0024 sig = 24.25 lat =  23.3 inf =   34.48
+ k = 08 j = 0023 to 0025 sig = 24.25 lat =  25.2 inf =   27.68
+ k = 08 j = 0024 to 0026 sig = 24.25 lat =  26.9 inf =   22.72
+ k = 08 j = 0025 to 0027 sig = 24.25 lat =  28.7 inf =   18.22
+ k = 08 j = 0026 to 0028 sig = 24.25 lat =  30.5 inf =   15.29
+ k = 08 j = 0027 to 0029 sig = 24.25 lat =  32.2 inf =   12.52
+ k = 08 j = 0028 to 0030 sig = 24.25 lat =  33.8 inf =   11.83
+ k = 08 j = 0029 to 0031 sig = 24.25 lat =  35.5 inf =   11.12
+ k = 08 j = 0030 to 0032 sig = 24.25 lat =  37.1 inf =   10.61
+ k = 08 j = 0031 to 0033 sig = 24.25 lat =  38.7 inf =    9.35
+ k = 08 j = 0032 to 0034 sig = 24.25 lat =  40.2 inf =    7.69
+ k = 08 j = 0033 to 0035 sig = 24.25 lat =  41.7 inf =    5.87
+ k = 08 j = 0034 to 0036 sig = 24.25 lat =  43.2 inf =    4.70
+ k = 08 j = 0035 to 0037 sig = 24.25 lat =  44.6 inf =    4.02
+ k = 08 j = 0036 to 0038 sig = 24.25 lat =  46.1 inf =    3.30
+ k = 08 j = 0037 to 0039 sig = 24.25 lat =  47.4 inf =    2.10
+ k = 08 j = 0038 to 0040 sig = 24.25 lat =  48.8 inf =    0.87
+ k = 08 j = 0039 to 0041 sig = 24.25 lat =  50.1 inf =    0.20
+ k = 08 j = 0040 to 0042 sig = 24.25 lat =  51.3 inf =    0.21
+ k = 08 j = 0041 to 0043 sig = 24.25 lat =  52.6 inf =    0.37
+ k = 08 j = 0042 to 0044 sig = 24.25 lat =  53.8 inf =    0.37
+ k = 08 j = 0043 to 0045 sig = 24.25 lat =  54.9 inf =    0.31
+ k = 08 j = 0044 to 0046 sig = 24.25 lat =  56.1 inf =    0.14
+ k = 08 j = 0045 to 0047 sig = 24.25 lat =  57.2 inf =    0.08
+ k = 08 j = 0046 to 0048 sig = 24.25 lat =  58.2 inf =    0.08
+ k = 08 j = 0047 to 0049 sig = 24.25 lat =  59.3 inf =    0.08
+ k = 08 j = 0048 to 0050 sig = 24.25 lat =  60.3 inf =    0.08
+ k = 08 j = 0049 to 0051 sig = 24.25 lat =  61.2 inf =    0.08
+ k = 08 j = 0050 to 0051 sig = 24.25 lat =  61.7 inf =    0.08
+ k = 08 j = 0051 to 0051 sig = 24.25 lat =  62.2 inf =    0.08
+          WRITING CLIM LAYER  9     SIGMA = 24.750
+
+  tem: min=     1.50 ave=    18.56 max=    25.07
+  sal: min=    31.56 ave=    35.80 max=    37.55
+  inf: min=     0.09 ave=    35.65 max=   175.33
+  thk: min=     0.01 ave=    15.16 max=   179.02
+ k = 09 j = 0001 to 0003 sig = 24.75 lat = -17.7 inf =    7.28
+ k = 09 j = 0002 to 0004 sig = 24.75 lat = -15.8 inf =   18.36
+ k = 09 j = 0003 to 0005 sig = 24.75 lat = -13.9 inf =   36.12
+ k = 09 j = 0004 to 0006 sig = 24.75 lat = -11.9 inf =   58.44
+ k = 09 j = 0005 to 0007 sig = 24.75 lat =  -9.9 inf =   75.58
+ k = 09 j = 0006 to 0008 sig = 24.75 lat =  -8.0 inf =   81.50
+ k = 09 j = 0007 to 0009 sig = 24.75 lat =  -6.0 inf =   73.46
+ k = 09 j = 0008 to 0010 sig = 24.75 lat =  -4.0 inf =   63.54
+ k = 09 j = 0009 to 0011 sig = 24.75 lat =  -2.0 inf =   60.54
+ k = 09 j = 0010 to 0012 sig = 24.75 lat =   0.0 inf =   66.07
+ k = 09 j = 0011 to 0013 sig = 24.75 lat =   2.0 inf =   73.87
+ k = 09 j = 0012 to 0014 sig = 24.75 lat =   4.0 inf =   77.92
+ k = 09 j = 0013 to 0015 sig = 24.75 lat =   6.0 inf =   78.56
+ k = 09 j = 0014 to 0016 sig = 24.75 lat =   8.0 inf =   75.95
+ k = 09 j = 0015 to 0017 sig = 24.75 lat =   9.9 inf =   76.06
+ k = 09 j = 0016 to 0018 sig = 24.75 lat =  11.9 inf =   80.53
+ k = 09 j = 0017 to 0019 sig = 24.75 lat =  13.9 inf =   88.02
+ k = 09 j = 0018 to 0020 sig = 24.75 lat =  15.8 inf =   92.44
+ k = 09 j = 0019 to 0021 sig = 24.75 lat =  17.7 inf =   88.40
+ k = 09 j = 0020 to 0022 sig = 24.75 lat =  19.6 inf =   78.66
+ k = 09 j = 0021 to 0023 sig = 24.75 lat =  21.5 inf =   66.67
+ k = 09 j = 0022 to 0024 sig = 24.75 lat =  23.3 inf =   55.04
+ k = 09 j = 0023 to 0025 sig = 24.75 lat =  25.2 inf =   44.06
+ k = 09 j = 0024 to 0026 sig = 24.75 lat =  26.9 inf =   35.82
+ k = 09 j = 0025 to 0027 sig = 24.75 lat =  28.7 inf =   29.40
+ k = 09 j = 0026 to 0028 sig = 24.75 lat =  30.5 inf =   26.09
+ k = 09 j = 0027 to 0029 sig = 24.75 lat =  32.2 inf =   23.35
+ k = 09 j = 0028 to 0030 sig = 24.75 lat =  33.8 inf =   22.62
+ k = 09 j = 0029 to 0031 sig = 24.75 lat =  35.5 inf =   21.22
+ k = 09 j = 0030 to 0032 sig = 24.75 lat =  37.1 inf =   19.34
+ k = 09 j = 0031 to 0033 sig = 24.75 lat =  38.7 inf =   15.94
+ k = 09 j = 0032 to 0034 sig = 24.75 lat =  40.2 inf =   12.11
+ k = 09 j = 0033 to 0035 sig = 24.75 lat =  41.7 inf =    8.72
+ k = 09 j = 0034 to 0036 sig = 24.75 lat =  43.2 inf =    6.95
+ k = 09 j = 0035 to 0037 sig = 24.75 lat =  44.6 inf =    6.19
+ k = 09 j = 0036 to 0038 sig = 24.75 lat =  46.1 inf =    5.32
+ k = 09 j = 0037 to 0039 sig = 24.75 lat =  47.4 inf =    3.60
+ k = 09 j = 0038 to 0040 sig = 24.75 lat =  48.8 inf =    1.71
+ k = 09 j = 0039 to 0041 sig = 24.75 lat =  50.1 inf =    0.70
+ k = 09 j = 0040 to 0042 sig = 24.75 lat =  51.3 inf =    0.66
+ k = 09 j = 0041 to 0043 sig = 24.75 lat =  52.6 inf =    0.83
+ k = 09 j = 0042 to 0044 sig = 24.75 lat =  53.8 inf =    0.66
+ k = 09 j = 0043 to 0045 sig = 24.75 lat =  54.9 inf =    0.46
+ k = 09 j = 0044 to 0046 sig = 24.75 lat =  56.1 inf =    0.18
+ k = 09 j = 0045 to 0047 sig = 24.75 lat =  57.2 inf =    0.09
+ k = 09 j = 0046 to 0048 sig = 24.75 lat =  58.2 inf =    0.09
+ k = 09 j = 0047 to 0049 sig = 24.75 lat =  59.3 inf =    0.09
+ k = 09 j = 0048 to 0050 sig = 24.75 lat =  60.3 inf =    0.09
+ k = 09 j = 0049 to 0051 sig = 24.75 lat =  61.2 inf =    0.09
+ k = 09 j = 0050 to 0051 sig = 24.75 lat =  61.7 inf =    0.09
+ k = 09 j = 0051 to 0051 sig = 24.75 lat =  62.2 inf =    0.09
+          WRITING CLIM LAYER 10     SIGMA = 25.250
+
+  tem: min=     0.32 ave=    17.20 max=    23.14
+  sal: min=    32.10 ave=    35.77 max=    37.45
+  inf: min=     0.10 ave=    50.81 max=   195.43
+  thk: min=     0.01 ave=    27.31 max=   248.11
+ k = 10 j = 0001 to 0003 sig = 25.25 lat = -17.7 inf =   54.76
+ k = 10 j = 0002 to 0004 sig = 25.25 lat = -15.8 inf =   69.45
+ k = 10 j = 0003 to 0005 sig = 25.25 lat = -13.9 inf =   85.75
+ k = 10 j = 0004 to 0006 sig = 25.25 lat = -11.9 inf =   97.15
+ k = 10 j = 0005 to 0007 sig = 25.25 lat =  -9.9 inf =   98.55
+ k = 10 j = 0006 to 0008 sig = 25.25 lat =  -8.0 inf =   92.82
+ k = 10 j = 0007 to 0009 sig = 25.25 lat =  -6.0 inf =   81.31
+ k = 10 j = 0008 to 0010 sig = 25.25 lat =  -4.0 inf =   72.70
+ k = 10 j = 0009 to 0011 sig = 25.25 lat =  -2.0 inf =   70.14
+ k = 10 j = 0010 to 0012 sig = 25.25 lat =   0.0 inf =   74.81
+ k = 10 j = 0011 to 0013 sig = 25.25 lat =   2.0 inf =   81.58
+ k = 10 j = 0012 to 0014 sig = 25.25 lat =   4.0 inf =   86.18
+ k = 10 j = 0013 to 0015 sig = 25.25 lat =   6.0 inf =   88.39
+ k = 10 j = 0014 to 0016 sig = 25.25 lat =   8.0 inf =   87.70
+ k = 10 j = 0015 to 0017 sig = 25.25 lat =   9.9 inf =   88.94
+ k = 10 j = 0016 to 0018 sig = 25.25 lat =  11.9 inf =   94.90
+ k = 10 j = 0017 to 0019 sig = 25.25 lat =  13.9 inf =  106.36
+ k = 10 j = 0018 to 0020 sig = 25.25 lat =  15.8 inf =  118.30
+ k = 10 j = 0019 to 0021 sig = 25.25 lat =  17.7 inf =  121.52
+ k = 10 j = 0020 to 0022 sig = 25.25 lat =  19.6 inf =  114.41
+ k = 10 j = 0021 to 0023 sig = 25.25 lat =  21.5 inf =   99.92
+ k = 10 j = 0022 to 0024 sig = 25.25 lat =  23.3 inf =   84.13
+ k = 10 j = 0023 to 0025 sig = 25.25 lat =  25.2 inf =   69.51
+ k = 10 j = 0024 to 0026 sig = 25.25 lat =  26.9 inf =   58.53
+ k = 10 j = 0025 to 0027 sig = 25.25 lat =  28.7 inf =   49.56
+ k = 10 j = 0026 to 0028 sig = 25.25 lat =  30.5 inf =   44.57
+ k = 10 j = 0027 to 0029 sig = 25.25 lat =  32.2 inf =   40.40
+ k = 10 j = 0028 to 0030 sig = 25.25 lat =  33.8 inf =   39.02
+ k = 10 j = 0029 to 0031 sig = 25.25 lat =  35.5 inf =   37.21
+ k = 10 j = 0030 to 0032 sig = 25.25 lat =  37.1 inf =   34.72
+ k = 10 j = 0031 to 0033 sig = 25.25 lat =  38.7 inf =   29.68
+ k = 10 j = 0032 to 0034 sig = 25.25 lat =  40.2 inf =   23.21
+ k = 10 j = 0033 to 0035 sig = 25.25 lat =  41.7 inf =   16.82
+ k = 10 j = 0034 to 0036 sig = 25.25 lat =  43.2 inf =   13.01
+ k = 10 j = 0035 to 0037 sig = 25.25 lat =  44.6 inf =   11.01
+ k = 10 j = 0036 to 0038 sig = 25.25 lat =  46.1 inf =    9.15
+ k = 10 j = 0037 to 0039 sig = 25.25 lat =  47.4 inf =    6.15
+ k = 10 j = 0038 to 0040 sig = 25.25 lat =  48.8 inf =    3.06
+ k = 10 j = 0039 to 0041 sig = 25.25 lat =  50.1 inf =    1.48
+ k = 10 j = 0040 to 0042 sig = 25.25 lat =  51.3 inf =    1.31
+ k = 10 j = 0041 to 0043 sig = 25.25 lat =  52.6 inf =    1.48
+ k = 10 j = 0042 to 0044 sig = 25.25 lat =  53.8 inf =    1.16
+ k = 10 j = 0043 to 0045 sig = 25.25 lat =  54.9 inf =    0.86
+ k = 10 j = 0044 to 0046 sig = 25.25 lat =  56.1 inf =    0.39
+ k = 10 j = 0045 to 0047 sig = 25.25 lat =  57.2 inf =    0.18
+ k = 10 j = 0046 to 0048 sig = 25.25 lat =  58.2 inf =    0.11
+ k = 10 j = 0047 to 0049 sig = 25.25 lat =  59.3 inf =    0.10
+ k = 10 j = 0048 to 0050 sig = 25.25 lat =  60.3 inf =    0.10
+ k = 10 j = 0049 to 0051 sig = 25.25 lat =  61.2 inf =    0.10
+ k = 10 j = 0050 to 0051 sig = 25.25 lat =  61.7 inf =    0.10
+ k = 10 j = 0051 to 0051 sig = 25.25 lat =  62.2 inf =    0.10
+          WRITING CLIM LAYER 11     SIGMA = 25.750
+
+  tem: min=    -1.82 ave=    15.28 max=    20.14
+  sal: min=    32.61 ave=    35.66 max=    37.00
+  inf: min=     0.11 ave=    78.12 max=   248.21
+  thk: min=     0.01 ave=    46.76 max=   230.79
+ k = 11 j = 0001 to 0003 sig = 25.75 lat = -17.7 inf =  152.26
+ k = 11 j = 0002 to 0004 sig = 25.75 lat = -15.8 inf =  148.01
+ k = 11 j = 0003 to 0005 sig = 25.75 lat = -13.9 inf =  141.33
+ k = 11 j = 0004 to 0006 sig = 25.75 lat = -11.9 inf =  133.12
+ k = 11 j = 0005 to 0007 sig = 25.75 lat =  -9.9 inf =  122.37
+ k = 11 j = 0006 to 0008 sig = 25.75 lat =  -8.0 inf =  112.80
+ k = 11 j = 0007 to 0009 sig = 25.75 lat =  -6.0 inf =  100.97
+ k = 11 j = 0008 to 0010 sig = 25.75 lat =  -4.0 inf =   92.27
+ k = 11 j = 0009 to 0011 sig = 25.75 lat =  -2.0 inf =   88.67
+ k = 11 j = 0010 to 0012 sig = 25.75 lat =   0.0 inf =   92.22
+ k = 11 j = 0011 to 0013 sig = 25.75 lat =   2.0 inf =   98.34
+ k = 11 j = 0012 to 0014 sig = 25.75 lat =   4.0 inf =  102.81
+ k = 11 j = 0013 to 0015 sig = 25.75 lat =   6.0 inf =  105.01
+ k = 11 j = 0014 to 0016 sig = 25.75 lat =   8.0 inf =  106.42
+ k = 11 j = 0015 to 0017 sig = 25.75 lat =   9.9 inf =  111.23
+ k = 11 j = 0016 to 0018 sig = 25.75 lat =  11.9 inf =  120.82
+ k = 11 j = 0017 to 0019 sig = 25.75 lat =  13.9 inf =  135.15
+ k = 11 j = 0018 to 0020 sig = 25.75 lat =  15.8 inf =  150.81
+ k = 11 j = 0019 to 0021 sig = 25.75 lat =  17.7 inf =  160.77
+ k = 11 j = 0020 to 0022 sig = 25.75 lat =  19.6 inf =  163.56
+ k = 11 j = 0021 to 0023 sig = 25.75 lat =  21.5 inf =  158.09
+ k = 11 j = 0022 to 0024 sig = 25.75 lat =  23.3 inf =  147.23
+ k = 11 j = 0023 to 0025 sig = 25.75 lat =  25.2 inf =  131.11
+ k = 11 j = 0024 to 0026 sig = 25.75 lat =  26.9 inf =  113.68
+ k = 11 j = 0025 to 0027 sig = 25.75 lat =  28.7 inf =   95.62
+ k = 11 j = 0026 to 0028 sig = 25.75 lat =  30.5 inf =   81.79
+ k = 11 j = 0027 to 0029 sig = 25.75 lat =  32.2 inf =   71.92
+ k = 11 j = 0028 to 0030 sig = 25.75 lat =  33.8 inf =   68.49
+ k = 11 j = 0029 to 0031 sig = 25.75 lat =  35.5 inf =   65.81
+ k = 11 j = 0030 to 0032 sig = 25.75 lat =  37.1 inf =   62.17
+ k = 11 j = 0031 to 0033 sig = 25.75 lat =  38.7 inf =   55.38
+ k = 11 j = 0032 to 0034 sig = 25.75 lat =  40.2 inf =   46.70
+ k = 11 j = 0033 to 0035 sig = 25.75 lat =  41.7 inf =   37.21
+ k = 11 j = 0034 to 0036 sig = 25.75 lat =  43.2 inf =   29.88
+ k = 11 j = 0035 to 0037 sig = 25.75 lat =  44.6 inf =   24.79
+ k = 11 j = 0036 to 0038 sig = 25.75 lat =  46.1 inf =   20.36
+ k = 11 j = 0037 to 0039 sig = 25.75 lat =  47.4 inf =   14.08
+ k = 11 j = 0038 to 0040 sig = 25.75 lat =  48.8 inf =    7.61
+ k = 11 j = 0039 to 0041 sig = 25.75 lat =  50.1 inf =    3.45
+ k = 11 j = 0040 to 0042 sig = 25.75 lat =  51.3 inf =    2.61
+ k = 11 j = 0041 to 0043 sig = 25.75 lat =  52.6 inf =    2.69
+ k = 11 j = 0042 to 0044 sig = 25.75 lat =  53.8 inf =    2.19
+ k = 11 j = 0043 to 0045 sig = 25.75 lat =  54.9 inf =    1.79
+ k = 11 j = 0044 to 0046 sig = 25.75 lat =  56.1 inf =    0.99
+ k = 11 j = 0045 to 0047 sig = 25.75 lat =  57.2 inf =    0.52
+ k = 11 j = 0046 to 0048 sig = 25.75 lat =  58.2 inf =    0.34
+ k = 11 j = 0047 to 0049 sig = 25.75 lat =  59.3 inf =    0.36
+ k = 11 j = 0048 to 0050 sig = 25.75 lat =  60.3 inf =    0.40
+ k = 11 j = 0049 to 0051 sig = 25.75 lat =  61.2 inf =    0.29
+ k = 11 j = 0050 to 0051 sig = 25.75 lat =  61.7 inf =    0.21
+ k = 11 j = 0051 to 0051 sig = 25.75 lat =  62.2 inf =    0.15
+          WRITING CLIM LAYER 12     SIGMA = 26.250
+
+  tem: min=    -1.55 ave=    12.37 max=    18.22
+  sal: min=    33.24 ave=    35.38 max=    37.00
+  inf: min=     0.12 ave=   124.88 max=   355.81
+  thk: min=     0.00 ave=   187.49 max=   644.96
+ k = 12 j = 0001 to 0003 sig = 26.25 lat = -17.7 inf =  217.42
+ k = 12 j = 0002 to 0004 sig = 26.25 lat = -15.8 inf =  200.49
+ k = 12 j = 0003 to 0005 sig = 26.25 lat = -13.9 inf =  182.83
+ k = 12 j = 0004 to 0006 sig = 26.25 lat = -11.9 inf =  169.38
+ k = 12 j = 0005 to 0007 sig = 26.25 lat =  -9.9 inf =  159.58
+ k = 12 j = 0006 to 0008 sig = 26.25 lat =  -8.0 inf =  153.62
+ k = 12 j = 0007 to 0009 sig = 26.25 lat =  -6.0 inf =  144.52
+ k = 12 j = 0008 to 0010 sig = 26.25 lat =  -4.0 inf =  134.15
+ k = 12 j = 0009 to 0011 sig = 26.25 lat =  -2.0 inf =  127.87
+ k = 12 j = 0010 to 0012 sig = 26.25 lat =   0.0 inf =  130.22
+ k = 12 j = 0011 to 0013 sig = 26.25 lat =   2.0 inf =  138.43
+ k = 12 j = 0012 to 0014 sig = 26.25 lat =   4.0 inf =  145.44
+ k = 12 j = 0013 to 0015 sig = 26.25 lat =   6.0 inf =  144.82
+ k = 12 j = 0014 to 0016 sig = 26.25 lat =   8.0 inf =  143.78
+ k = 12 j = 0015 to 0017 sig = 26.25 lat =   9.9 inf =  147.00
+ k = 12 j = 0016 to 0018 sig = 26.25 lat =  11.9 inf =  160.63
+ k = 12 j = 0017 to 0019 sig = 26.25 lat =  13.9 inf =  179.18
+ k = 12 j = 0018 to 0020 sig = 26.25 lat =  15.8 inf =  200.45
+ k = 12 j = 0019 to 0021 sig = 26.25 lat =  17.7 inf =  217.28
+ k = 12 j = 0020 to 0022 sig = 26.25 lat =  19.6 inf =  227.78
+ k = 12 j = 0021 to 0023 sig = 26.25 lat =  21.5 inf =  230.55
+ k = 12 j = 0022 to 0024 sig = 26.25 lat =  23.3 inf =  228.78
+ k = 12 j = 0023 to 0025 sig = 26.25 lat =  25.2 inf =  223.36
+ k = 12 j = 0024 to 0026 sig = 26.25 lat =  26.9 inf =  218.19
+ k = 12 j = 0025 to 0027 sig = 26.25 lat =  28.7 inf =  211.21
+ k = 12 j = 0026 to 0028 sig = 26.25 lat =  30.5 inf =  199.89
+ k = 12 j = 0027 to 0029 sig = 26.25 lat =  32.2 inf =  180.72
+ k = 12 j = 0028 to 0030 sig = 26.25 lat =  33.8 inf =  160.44
+ k = 12 j = 0029 to 0031 sig = 26.25 lat =  35.5 inf =  142.00
+ k = 12 j = 0030 to 0032 sig = 26.25 lat =  37.1 inf =  125.21
+ k = 12 j = 0031 to 0033 sig = 26.25 lat =  38.7 inf =  106.13
+ k = 12 j = 0032 to 0034 sig = 26.25 lat =  40.2 inf =   86.79
+ k = 12 j = 0033 to 0035 sig = 26.25 lat =  41.7 inf =   70.95
+ k = 12 j = 0034 to 0036 sig = 26.25 lat =  43.2 inf =   62.93
+ k = 12 j = 0035 to 0037 sig = 26.25 lat =  44.6 inf =   60.32
+ k = 12 j = 0036 to 0038 sig = 26.25 lat =  46.1 inf =   57.90
+ k = 12 j = 0037 to 0039 sig = 26.25 lat =  47.4 inf =   49.33
+ k = 12 j = 0038 to 0040 sig = 26.25 lat =  48.8 inf =   35.45
+ k = 12 j = 0039 to 0041 sig = 26.25 lat =  50.1 inf =   20.84
+ k = 12 j = 0040 to 0042 sig = 26.25 lat =  51.3 inf =   11.93
+ k = 12 j = 0041 to 0043 sig = 26.25 lat =  52.6 inf =    7.65
+ k = 12 j = 0042 to 0044 sig = 26.25 lat =  53.8 inf =    5.28
+ k = 12 j = 0043 to 0045 sig = 26.25 lat =  54.9 inf =    4.31
+ k = 12 j = 0044 to 0046 sig = 26.25 lat =  56.1 inf =    2.64
+ k = 12 j = 0045 to 0047 sig = 26.25 lat =  57.2 inf =    1.78
+ k = 12 j = 0046 to 0048 sig = 26.25 lat =  58.2 inf =    1.43
+ k = 12 j = 0047 to 0049 sig = 26.25 lat =  59.3 inf =    1.78
+ k = 12 j = 0048 to 0050 sig = 26.25 lat =  60.3 inf =    2.12
+ k = 12 j = 0049 to 0051 sig = 26.25 lat =  61.2 inf =    2.37
+ k = 12 j = 0050 to 0051 sig = 26.25 lat =  61.7 inf =    2.42
+ k = 12 j = 0051 to 0051 sig = 26.25 lat =  62.2 inf =    2.52
+          WRITING CLIM LAYER 13     SIGMA = 26.750
+
+  tem: min=    -0.59 ave=     8.19 max=    18.22
+  sal: min=    33.89 ave=    35.03 max=    37.00
+  inf: min=     0.13 ave=   312.37 max=   905.78
+  thk: min=     0.00 ave=   394.73 max=   926.95
+ k = 13 j = 0001 to 0003 sig = 26.75 lat = -17.7 inf =  443.66
+ k = 13 j = 0002 to 0004 sig = 26.75 lat = -15.8 inf =  407.87
+ k = 13 j = 0003 to 0005 sig = 26.75 lat = -13.9 inf =  374.41
+ k = 13 j = 0004 to 0006 sig = 26.75 lat = -11.9 inf =  350.93
+ k = 13 j = 0005 to 0007 sig = 26.75 lat =  -9.9 inf =  338.55
+ k = 13 j = 0006 to 0008 sig = 26.75 lat =  -8.0 inf =  344.53
+ k = 13 j = 0007 to 0009 sig = 26.75 lat =  -6.0 inf =  366.51
+ k = 13 j = 0008 to 0010 sig = 26.75 lat =  -4.0 inf =  394.66
+ k = 13 j = 0009 to 0011 sig = 26.75 lat =  -2.0 inf =  413.00
+ k = 13 j = 0010 to 0012 sig = 26.75 lat =   0.0 inf =  413.88
+ k = 13 j = 0011 to 0013 sig = 26.75 lat =   2.0 inf =  395.63
+ k = 13 j = 0012 to 0014 sig = 26.75 lat =   4.0 inf =  364.51
+ k = 13 j = 0013 to 0015 sig = 26.75 lat =   6.0 inf =  331.51
+ k = 13 j = 0014 to 0016 sig = 26.75 lat =   8.0 inf =  303.96
+ k = 13 j = 0015 to 0017 sig = 26.75 lat =   9.9 inf =  295.89
+ k = 13 j = 0016 to 0018 sig = 26.75 lat =  11.9 inf =  311.41
+ k = 13 j = 0017 to 0019 sig = 26.75 lat =  13.9 inf =  342.16
+ k = 13 j = 0018 to 0020 sig = 26.75 lat =  15.8 inf =  384.71
+ k = 13 j = 0019 to 0021 sig = 26.75 lat =  17.7 inf =  426.34
+ k = 13 j = 0020 to 0022 sig = 26.75 lat =  19.6 inf =  466.60
+ k = 13 j = 0021 to 0023 sig = 26.75 lat =  21.5 inf =  495.84
+ k = 13 j = 0022 to 0024 sig = 26.75 lat =  23.3 inf =  520.34
+ k = 13 j = 0023 to 0025 sig = 26.75 lat =  25.2 inf =  537.87
+ k = 13 j = 0024 to 0026 sig = 26.75 lat =  26.9 inf =  559.41
+ k = 13 j = 0025 to 0027 sig = 26.75 lat =  28.7 inf =  587.78
+ k = 13 j = 0026 to 0028 sig = 26.75 lat =  30.5 inf =  608.08
+ k = 13 j = 0027 to 0029 sig = 26.75 lat =  32.2 inf =  606.16
+ k = 13 j = 0028 to 0030 sig = 26.75 lat =  33.8 inf =  568.92
+ k = 13 j = 0029 to 0031 sig = 26.75 lat =  35.5 inf =  513.22
+ k = 13 j = 0030 to 0032 sig = 26.75 lat =  37.1 inf =  441.61
+ k = 13 j = 0031 to 0033 sig = 26.75 lat =  38.7 inf =  360.07
+ k = 13 j = 0032 to 0034 sig = 26.75 lat =  40.2 inf =  275.53
+ k = 13 j = 0033 to 0035 sig = 26.75 lat =  41.7 inf =  198.51
+ k = 13 j = 0034 to 0036 sig = 26.75 lat =  43.2 inf =  144.74
+ k = 13 j = 0035 to 0037 sig = 26.75 lat =  44.6 inf =  114.85
+ k = 13 j = 0036 to 0038 sig = 26.75 lat =  46.1 inf =  100.78
+ k = 13 j = 0037 to 0039 sig = 26.75 lat =  47.4 inf =   88.90
+ k = 13 j = 0038 to 0040 sig = 26.75 lat =  48.8 inf =   79.66
+ k = 13 j = 0039 to 0041 sig = 26.75 lat =  50.1 inf =   73.68
+ k = 13 j = 0040 to 0042 sig = 26.75 lat =  51.3 inf =   69.45
+ k = 13 j = 0041 to 0043 sig = 26.75 lat =  52.6 inf =   61.66
+ k = 13 j = 0042 to 0044 sig = 26.75 lat =  53.8 inf =   49.66
+ k = 13 j = 0043 to 0045 sig = 26.75 lat =  54.9 inf =   38.82
+ k = 13 j = 0044 to 0046 sig = 26.75 lat =  56.1 inf =   27.87
+ k = 13 j = 0045 to 0047 sig = 26.75 lat =  57.2 inf =   19.73
+ k = 13 j = 0046 to 0048 sig = 26.75 lat =  58.2 inf =   13.00
+ k = 13 j = 0047 to 0049 sig = 26.75 lat =  59.3 inf =   11.13
+ k = 13 j = 0048 to 0050 sig = 26.75 lat =  60.3 inf =   10.85
+ k = 13 j = 0049 to 0051 sig = 26.75 lat =  61.2 inf =   12.18
+ k = 13 j = 0050 to 0051 sig = 26.75 lat =  61.7 inf =   12.62
+ k = 13 j = 0051 to 0051 sig = 26.75 lat =  62.2 inf =   12.94
+          WRITING CLIM LAYER 14     SIGMA = 27.250
+
+  tem: min=    -3.04 ave=     4.86 max=    18.22
+  sal: min=    33.89 ave=    35.06 max=    37.00
+  inf: min=    50.02 ave=   707.10 max=  1153.04
+  thk: min=     0.00 ave=  2609.51 max=  4987.80
+ k = 14 j = 0001 to 0003 sig = 27.25 lat = -17.7 inf =  937.96
+ k = 14 j = 0002 to 0004 sig = 27.25 lat = -15.8 inf =  938.49
+ k = 14 j = 0003 to 0005 sig = 27.25 lat = -13.9 inf =  959.55
+ k = 14 j = 0004 to 0006 sig = 27.25 lat = -11.9 inf =  978.64
+ k = 14 j = 0005 to 0007 sig = 27.25 lat =  -9.9 inf =  990.99
+ k = 14 j = 0006 to 0008 sig = 27.25 lat =  -8.0 inf =  981.31
+ k = 14 j = 0007 to 0009 sig = 27.25 lat =  -6.0 inf =  947.95
+ k = 14 j = 0008 to 0010 sig = 27.25 lat =  -4.0 inf =  919.03
+ k = 14 j = 0009 to 0011 sig = 27.25 lat =  -2.0 inf =  903.14
+ k = 14 j = 0010 to 0012 sig = 27.25 lat =   0.0 inf =  901.12
+ k = 14 j = 0011 to 0013 sig = 27.25 lat =   2.0 inf =  896.71
+ k = 14 j = 0012 to 0014 sig = 27.25 lat =   4.0 inf =  880.42
+ k = 14 j = 0013 to 0015 sig = 27.25 lat =   6.0 inf =  911.02
+ k = 14 j = 0014 to 0016 sig = 27.25 lat =   8.0 inf =  901.46
+ k = 14 j = 0015 to 0017 sig = 27.25 lat =   9.9 inf =  910.51
+ k = 14 j = 0016 to 0018 sig = 27.25 lat =  11.9 inf =  887.87
+ k = 14 j = 0017 to 0019 sig = 27.25 lat =  13.9 inf =  888.33
+ k = 14 j = 0018 to 0020 sig = 27.25 lat =  15.8 inf =  875.86
+ k = 14 j = 0019 to 0021 sig = 27.25 lat =  17.7 inf =  839.30
+ k = 14 j = 0020 to 0022 sig = 27.25 lat =  19.6 inf =  824.30
+ k = 14 j = 0021 to 0023 sig = 27.25 lat =  21.5 inf =  808.12
+ k = 14 j = 0022 to 0024 sig = 27.25 lat =  23.3 inf =  805.50
+ k = 14 j = 0023 to 0025 sig = 27.25 lat =  25.2 inf =  792.87
+ k = 14 j = 0024 to 0026 sig = 27.25 lat =  26.9 inf =  793.05
+ k = 14 j = 0025 to 0027 sig = 27.25 lat =  28.7 inf =  811.81
+ k = 14 j = 0026 to 0028 sig = 27.25 lat =  30.5 inf =  835.26
+ k = 14 j = 0027 to 0029 sig = 27.25 lat =  32.2 inf =  862.41
+ k = 14 j = 0028 to 0030 sig = 27.25 lat =  33.8 inf =  865.99
+ k = 14 j = 0029 to 0031 sig = 27.25 lat =  35.5 inf =  869.37
+ k = 14 j = 0030 to 0032 sig = 27.25 lat =  37.1 inf =  854.44
+ k = 14 j = 0031 to 0033 sig = 27.25 lat =  38.7 inf =  837.34
+ k = 14 j = 0032 to 0034 sig = 27.25 lat =  40.2 inf =  808.61
+ k = 14 j = 0033 to 0035 sig = 27.25 lat =  41.7 inf =  772.26
+ k = 14 j = 0034 to 0036 sig = 27.25 lat =  43.2 inf =  730.75
+ k = 14 j = 0035 to 0037 sig = 27.25 lat =  44.6 inf =  688.08
+ k = 14 j = 0036 to 0038 sig = 27.25 lat =  46.1 inf =  645.08
+ k = 14 j = 0037 to 0039 sig = 27.25 lat =  47.4 inf =  592.77
+ k = 14 j = 0038 to 0040 sig = 27.25 lat =  48.8 inf =  517.28
+ k = 14 j = 0039 to 0041 sig = 27.25 lat =  50.1 inf =  427.27
+ k = 14 j = 0040 to 0042 sig = 27.25 lat =  51.3 inf =  341.69
+ k = 14 j = 0041 to 0043 sig = 27.25 lat =  52.6 inf =  275.78
+ k = 14 j = 0042 to 0044 sig = 27.25 lat =  53.8 inf =  233.26
+ k = 14 j = 0043 to 0045 sig = 27.25 lat =  54.9 inf =  204.81
+ k = 14 j = 0044 to 0046 sig = 27.25 lat =  56.1 inf =  186.69
+ k = 14 j = 0045 to 0047 sig = 27.25 lat =  57.2 inf =  169.62
+ k = 14 j = 0046 to 0048 sig = 27.25 lat =  58.2 inf =  154.96
+ k = 14 j = 0047 to 0049 sig = 27.25 lat =  59.3 inf =  142.03
+ k = 14 j = 0048 to 0050 sig = 27.25 lat =  60.3 inf =  129.93
+ k = 14 j = 0049 to 0051 sig = 27.25 lat =  61.2 inf =  119.13
+ k = 14 j = 0050 to 0051 sig = 27.25 lat =  61.7 inf =  112.83
+ k = 14 j = 0051 to 0051 sig = 27.25 lat =  62.2 inf =  108.27
+          WRITING CLIM LAYER 15     SIGMA = 27.750
+
+ tmix: min=     2.87 ave=    21.07 max=    29.37
+ smix: min=    18.78 ave=    35.47 max=    37.54
+ rmix: min=    10.20 ave=    24.64 max=    27.08
+ mixl: min=     0.23 ave=    26.38 max=   124.84
+ Note: Nonstandard floating-point mode enabled 
+ See the Numerical Computation Guide, ieee_sun(3M) 
+1.0u 0.0s 0:01 54% 0+0k 0+0io 0pf+0w
+switch ( SunOS )
+if ( -e relax_zon.trace ) then
+breaksw
+C
+C --- Output.
+C
+C
+setenv DAYM `echo ${MM} | awk '{printf("%6.6d\n",30*($1-1))}'`
+echo 07
+awk {printf("%6.6d\n",30*($1-1))}
+cp fort.21 /home/ajax/wallcraf/hycom/ATLa2.00/relax/999/relax.000180
+C
+C --- end of month foreach loop
+C
+/bin/rm fort.71 fort.72
+end

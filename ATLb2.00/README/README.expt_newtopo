@@ -1,0 +1,16 @@
+README.expt_newtopo:
+
+To configure for a new bathymetry, do everything in README.expt_new plus 
+the following:
+
+a) Edit the "setenv T" line of ???.com for the new topography name.
+
+b) The forcing files are independent of the bathymetry, but any 
+   climatology files (in ../relax/???) must be regenerated for the
+   new bathymetry.  Note that the z-level climatology (e.g. in
+   ../relax/levitus) is independent of the  bathymetry and so does 
+   not need regenerating. See README.relax.
+
+c) When using MPI/SHMEM, the patch.input file must be regenerated for
+   the new bathymetry.  The ???.com script will the automatically get 
+   the corect file from ../topo/partit.

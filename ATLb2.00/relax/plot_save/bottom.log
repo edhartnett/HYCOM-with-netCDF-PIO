@@ -1,0 +1,3244 @@
+input file: ../024/bottom.0000_016_00.a
+blkini: iexpt  =     0
+blkini: yrflag =     0
+blkini: mapflg =     0
+blkini: idm    =    57
+blkinr: pntlon =     1.0000 
+blkinr: reflon =   263.0000 deg E
+blkinr: grdlon =     2.0000 degrees
+blkini: jdm    =    52
+blkinr: pntlat =    11.0000 
+blkinr: reflat =     0.0000 deg N
+blkinr: grdlat =     2.0000 degrees
+blkini: kdm    =    16
+blkinr: thbase =    25.0000 sig
+blkini: nperfr =     1
+blkini: lalolb =    10
+blkini: loclab =     4
+blkini: locbar =    11
+blkini: kpalet =     5
+blkinl: smooth =     F
+blkinl: mthin  =     F
+blkini: i_th   =     1
+blkini: iorign =     1
+blkini: jorign =     1
+blkini: idmp   =     0
+blkini: jdmp   =     0
+extracting i =    1 ...   57         j =    1 ...   52
+... plotting  1 maps per frame
+Dummy HYCOM archive from climatology for month 01.                              
+ Levitus (NOAA World Ocean Atlas 1994) Climatology                              
+ Expt 02.4  nhybrd=16 nsigma= 0 dp00s=10.00 dp00=10.00 dp00x=25.00 dp00f=1.070  
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+ iversn =  20
+ iexpt  =  24
+ yrflag =  0
+ idm    =  57
+ jdm    =  52
+field       time step  model day  k  dens        min              max
+artype = 1
+montg1   =          1       0.00  0  0.000   0.0000000E+00   0.0000000E+00
+input  montg1   into montg   
+srfhgt   =          1       0.00  0  0.000   0.0000000E+00   0.0000000E+00
+input  srfhgt   into srfht   
+surflx   =          1       0.00  0  0.000   0.0000000E+00   0.0000000E+00
+input  surflx   into surflx  
+ time3 =  0.0E+0 0.0E+0 0.0E+0
+salflx   =          1       0.00  0  0.000   0.0000000E+00   0.0000000E+00
+input  salflx   into salflx  
+bl_dpth  =          1       0.00  0  0.000   9.8060000E+03   9.8060000E+03
+input  bl_dpth  into dpbl    
+mix_dpth =          1       0.00  0  0.000   9.8060000E+03   9.8060000E+03
+input  mix_dpth into dpmixl  
+tmix     =          1       0.00  0  0.000  -1.3064419E+00   2.8575478E+01
+input  tmix     into tmix    
+smix     =          1       0.00  0  0.000   2.3815800E+01   3.7464058E+01
+input  smix     into smix    
+thmix    =          1       0.00  0  0.000  -1.0850566E+01   2.8008556E+00
+input  thmix    into thmix   
+umix     =          1       0.00  0  0.000   0.0000000E+00   0.0000000E+00
+input  umix     into umix    
+vmix     =          1       0.00  0  0.000   0.0000000E+00   0.0000000E+00
+input  vmix     into vmix    
+u_btrop  =          1       0.00  0  0.000   0.0000000E+00   0.0000000E+00
+input  u_btrop  into ubaro   
+v_btrop  =          1       0.00  0  0.000   0.0000000E+00   0.0000000E+00
+input  v_btrop  into vbaro   
+u-vel.   =          1       0.00  1 27.920   0.0000000E+00   0.0000000E+00
+input  u-vel.   into u         1
+v-vel.   =          1       0.00  1 27.920   0.0000000E+00   0.0000000E+00
+input  v-vel.   into v         1
+thknss   =          1       0.00  1 27.920   1.9568418E+06   5.7237624E+07
+input  thknss   into dp        1
+temp     =          1       0.00  1 27.920  -4.0897384E+00   1.8160624E+01
+input  temp     into temp      1
+salin    =          1       0.00  1 27.920   3.0544210E+01   3.8458054E+01
+input  salin    into saln      1
+density  =          1       0.00  1 27.920  -5.5232811E-01   3.1456490E+00
+input  density  into th3d      1
+finished reading data for layer 27.92000
+North Atlantic topography from ETOPO5 5-minute data set.                       
+56 x 51 depth values (idm,jdm = 57,52).                                        
+2.0000 deg. resolution, with equat=11.000.                                     
+lon: 97.000W to 13.000E.  lat: 19.606S to 62.195N.                             
+                                                                               
+min,max depth =    199.556  5837.000
+read North At into depths  
+bigrid called with ii,jj,ii1,jj1 =    57    52    56    51
+indxi called with ii,jj,ii1,jj1 =    57    52    56    51
+indxj called with ii,jj,ii1,jj1 =    57    52    56    51
+indxi called with ii,jj,ii1,jj1 =    57    52    56    51
+indxj called with ii,jj,ii1,jj1 =    57    52    56    51
+indxi called with ii,jj,ii1,jj1 =    57    52    56    51
+indxj called with ii,jj,ii1,jj1 =    57    52    56    51
+indxi called with ii,jj,ii1,jj1 =    57    52    56    51
+indxj called with ii,jj,ii1,jj1 =    57    52    56    51
+      0 island points submerged
+  calling portrait PostScript version of opngks
+     defining earth color table: entries    1 --    3
+     defining fc100 color table: entries    5 --  104
+
+
+ field to be contoured is constant ...  0.00000E+00
+ srfht =  0.0E+0 0.0E+0 0.0E+0
+ now plotting:  year   0.00 (jan 16) [02.4H]
+blkinr: botqq  =    60.0000 m
+min  2.00E+02 at   2  26  max  5.84E+03 at  20  24  intvl.,lines  5.00E+02  11
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =  12.000  12.000  12.000
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+ call to conrec => conpack
+blkinr: center =  3000.0000 m
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =   0.0006000.000  60.000
+ horiz. map:  bathymetry         year   0.00 (jan 16) [02.4H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+ call to conrec => conpack
+ use color table entries   5 -- 104         ipalet =  5
+ set area index below contour line  6.00E+01 to   5
+ set area index above contour line  6.00E+01 to   6
+ set area index below contour line  1.20E+02 to   6
+ set area index above contour line  1.20E+02 to   7
+ set area index below contour line  1.80E+02 to   7
+ set area index above contour line  1.80E+02 to   8
+ set area index below contour line  2.40E+02 to   8
+ set area index above contour line  2.40E+02 to   9
+ set area index below contour line  3.00E+02 to   9
+ set area index above contour line  3.00E+02 to  10
+ set area index below contour line  3.60E+02 to  10
+ set area index above contour line  3.60E+02 to  11
+ set area index below contour line  4.20E+02 to  11
+ set area index above contour line  4.20E+02 to  12
+ set area index below contour line  4.80E+02 to  12
+ set area index above contour line  4.80E+02 to  13
+ set area index below contour line  5.40E+02 to  13
+ set area index above contour line  5.40E+02 to  14
+ set area index below contour line  6.00E+02 to  14
+ set area index above contour line  6.00E+02 to  15
+ set area index below contour line  6.60E+02 to  15
+ set area index above contour line  6.60E+02 to  16
+ set area index below contour line  7.20E+02 to  16
+ set area index above contour line  7.20E+02 to  17
+ set area index below contour line  7.80E+02 to  17
+ set area index above contour line  7.80E+02 to  18
+ set area index below contour line  8.40E+02 to  18
+ set area index above contour line  8.40E+02 to  19
+ set area index below contour line  9.00E+02 to  19
+ set area index above contour line  9.00E+02 to  20
+ set area index below contour line  9.60E+02 to  20
+ set area index above contour line  9.60E+02 to  21
+ set area index below contour line  1.02E+03 to  21
+ set area index above contour line  1.02E+03 to  22
+ set area index below contour line  1.08E+03 to  22
+ set area index above contour line  1.08E+03 to  23
+ set area index below contour line  1.14E+03 to  23
+ set area index above contour line  1.14E+03 to  24
+ set area index below contour line  1.20E+03 to  24
+ set area index above contour line  1.20E+03 to  25
+ set area index below contour line  1.26E+03 to  25
+ set area index above contour line  1.26E+03 to  26
+ set area index below contour line  1.32E+03 to  26
+ set area index above contour line  1.32E+03 to  27
+ set area index below contour line  1.38E+03 to  27
+ set area index above contour line  1.38E+03 to  28
+ set area index below contour line  1.44E+03 to  28
+ set area index above contour line  1.44E+03 to  29
+ set area index below contour line  1.50E+03 to  29
+ set area index above contour line  1.50E+03 to  30
+ set area index below contour line  1.56E+03 to  30
+ set area index above contour line  1.56E+03 to  31
+ set area index below contour line  1.62E+03 to  31
+ set area index above contour line  1.62E+03 to  32
+ set area index below contour line  1.68E+03 to  32
+ set area index above contour line  1.68E+03 to  33
+ set area index below contour line  1.74E+03 to  33
+ set area index above contour line  1.74E+03 to  34
+ set area index below contour line  1.80E+03 to  34
+ set area index above contour line  1.80E+03 to  35
+ set area index below contour line  1.86E+03 to  35
+ set area index above contour line  1.86E+03 to  36
+ set area index below contour line  1.92E+03 to  36
+ set area index above contour line  1.92E+03 to  37
+ set area index below contour line  1.98E+03 to  37
+ set area index above contour line  1.98E+03 to  38
+ set area index below contour line  2.04E+03 to  38
+ set area index above contour line  2.04E+03 to  39
+ set area index below contour line  2.10E+03 to  39
+ set area index above contour line  2.10E+03 to  40
+ set area index below contour line  2.16E+03 to  40
+ set area index above contour line  2.16E+03 to  41
+ set area index below contour line  2.22E+03 to  41
+ set area index above contour line  2.22E+03 to  42
+ set area index below contour line  2.28E+03 to  42
+ set area index above contour line  2.28E+03 to  43
+ set area index below contour line  2.34E+03 to  43
+ set area index above contour line  2.34E+03 to  44
+ set area index below contour line  2.40E+03 to  44
+ set area index above contour line  2.40E+03 to  45
+ set area index below contour line  2.46E+03 to  45
+ set area index above contour line  2.46E+03 to  46
+ set area index below contour line  2.52E+03 to  46
+ set area index above contour line  2.52E+03 to  47
+ set area index below contour line  2.58E+03 to  47
+ set area index above contour line  2.58E+03 to  48
+ set area index below contour line  2.64E+03 to  48
+ set area index above contour line  2.64E+03 to  49
+ set area index below contour line  2.70E+03 to  49
+ set area index above contour line  2.70E+03 to  50
+ set area index below contour line  2.76E+03 to  50
+ set area index above contour line  2.76E+03 to  51
+ set area index below contour line  2.82E+03 to  51
+ set area index above contour line  2.82E+03 to  52
+ set area index below contour line  2.88E+03 to  52
+ set area index above contour line  2.88E+03 to  53
+ set area index below contour line  2.94E+03 to  53
+ set area index above contour line  2.94E+03 to  54
+ set area index below contour line  3.00E+03 to  54
+ set area index above contour line  3.00E+03 to  55
+ set area index below contour line  3.06E+03 to  55
+ set area index above contour line  3.06E+03 to  56
+ set area index below contour line  3.12E+03 to  56
+ set area index above contour line  3.12E+03 to  57
+ set area index below contour line  3.18E+03 to  57
+ set area index above contour line  3.18E+03 to  58
+ set area index below contour line  3.24E+03 to  58
+ set area index above contour line  3.24E+03 to  59
+ set area index below contour line  3.30E+03 to  59
+ set area index above contour line  3.30E+03 to  60
+ set area index below contour line  3.36E+03 to  60
+ set area index above contour line  3.36E+03 to  61
+ set area index below contour line  3.42E+03 to  61
+ set area index above contour line  3.42E+03 to  62
+ set area index below contour line  3.48E+03 to  62
+ set area index above contour line  3.48E+03 to  63
+ set area index below contour line  3.54E+03 to  63
+ set area index above contour line  3.54E+03 to  64
+ set area index below contour line  3.60E+03 to  64
+ set area index above contour line  3.60E+03 to  65
+ set area index below contour line  3.66E+03 to  65
+ set area index above contour line  3.66E+03 to  66
+ set area index below contour line  3.72E+03 to  66
+ set area index above contour line  3.72E+03 to  67
+ set area index below contour line  3.78E+03 to  67
+ set area index above contour line  3.78E+03 to  68
+ set area index below contour line  3.84E+03 to  68
+ set area index above contour line  3.84E+03 to  69
+ set area index below contour line  3.90E+03 to  69
+ set area index above contour line  3.90E+03 to  70
+ set area index below contour line  3.96E+03 to  70
+ set area index above contour line  3.96E+03 to  71
+ set area index below contour line  4.02E+03 to  71
+ set area index above contour line  4.02E+03 to  72
+ set area index below contour line  4.08E+03 to  72
+ set area index above contour line  4.08E+03 to  73
+ set area index below contour line  4.14E+03 to  73
+ set area index above contour line  4.14E+03 to  74
+ set area index below contour line  4.20E+03 to  74
+ set area index above contour line  4.20E+03 to  75
+ set area index below contour line  4.26E+03 to  75
+ set area index above contour line  4.26E+03 to  76
+ set area index below contour line  4.32E+03 to  76
+ set area index above contour line  4.32E+03 to  77
+ set area index below contour line  4.38E+03 to  77
+ set area index above contour line  4.38E+03 to  78
+ set area index below contour line  4.44E+03 to  78
+ set area index above contour line  4.44E+03 to  79
+ set area index below contour line  4.50E+03 to  79
+ set area index above contour line  4.50E+03 to  80
+ set area index below contour line  4.56E+03 to  80
+ set area index above contour line  4.56E+03 to  81
+ set area index below contour line  4.62E+03 to  81
+ set area index above contour line  4.62E+03 to  82
+ set area index below contour line  4.68E+03 to  82
+ set area index above contour line  4.68E+03 to  83
+ set area index below contour line  4.74E+03 to  83
+ set area index above contour line  4.74E+03 to  84
+ set area index below contour line  4.80E+03 to  84
+ set area index above contour line  4.80E+03 to  85
+ set area index below contour line  4.86E+03 to  85
+ set area index above contour line  4.86E+03 to  86
+ set area index below contour line  4.92E+03 to  86
+ set area index above contour line  4.92E+03 to  87
+ set area index below contour line  4.98E+03 to  87
+ set area index above contour line  4.98E+03 to  88
+ set area index below contour line  5.04E+03 to  88
+ set area index above contour line  5.04E+03 to  89
+ set area index below contour line  5.10E+03 to  89
+ set area index above contour line  5.10E+03 to  90
+ set area index below contour line  5.16E+03 to  90
+ set area index above contour line  5.16E+03 to  91
+ set area index below contour line  5.22E+03 to  91
+ set area index above contour line  5.22E+03 to  92
+ set area index below contour line  5.28E+03 to  92
+ set area index above contour line  5.28E+03 to  93
+ set area index below contour line  5.34E+03 to  93
+ set area index above contour line  5.34E+03 to  94
+ set area index below contour line  5.40E+03 to  94
+ set area index above contour line  5.40E+03 to  95
+ set area index below contour line  5.46E+03 to  95
+ set area index above contour line  5.46E+03 to  96
+ set area index below contour line  5.52E+03 to  96
+ set area index above contour line  5.52E+03 to  97
+ set area index below contour line  5.58E+03 to  97
+ set area index above contour line  5.58E+03 to  98
+ set area index below contour line  5.64E+03 to  98
+ set area index above contour line  5.64E+03 to  99
+ set area index below contour line  5.70E+03 to  99
+ set area index above contour line  5.70E+03 to 100
+ set area index below contour line  5.76E+03 to 100
+ set area index above contour line  5.76E+03 to 101
+ set area index below contour line  5.82E+03 to 101
+ set area index above contour line  5.82E+03 to 102
+ set area index below contour line  5.88E+03 to 102
+ set area index above contour line  5.88E+03 to 103
+ set area index below contour line  5.94E+03 to 103
+ set area index above contour line  5.94E+03 to 104
+ set area index below contour line  6.00E+03 to 104
+ set area index above contour line  6.00E+03 to 104
+horplt - lat,y =  -10    5.974
+horplt - lat,y =    0   11.000
+horplt - lat,y =   10   16.026
+horplt - lat,y =   20   21.209
+horplt - lat,y =   30   26.736
+horplt - lat,y =   40   32.856
+horplt - lat,y =   50   39.954
+horplt - lat,y =   60   48.728
+ horplt - reflon,gridsz,iorign,iref,orilon =  263.0 2.0 1 1 263.0
+horplt - lon,x =  -90    4.500
+horplt - lon,x =  -80    9.500
+horplt - lon,x =  -70   14.500
+horplt - lon,x =  -60   19.500
+horplt - lon,x =  -50   24.500
+horplt - lon,x =  -40   29.500
+horplt - lon,x =  -30   34.500
+horplt - lon,x =  -20   39.500
+horplt - lon,x =  -10   44.500
+horplt - lon,x =    0   49.500
+horplt - lon,x =   10   54.500
+ call to conrec => conpack
+                      fflo,ffhi,qq =   0.0006000.000  60.000
+draw color bar in box     0.880 < x < 0.960     0.668 < y < 0.919    logsc = F
+colbar -- write string     0     at   2.10   1.00
+colbar -- write string   500     at   2.10   3.83
+colbar -- write string  1000     at   2.10   6.67
+colbar -- write string  1500     at   2.10   9.50
+colbar -- write string  2000     at   2.10  12.33
+colbar -- write string  2500     at   2.10  15.17
+colbar -- write string  3000     at   2.10  18.00
+colbar -- write string  3500     at   2.10  20.83
+colbar -- write string  4000     at   2.10  23.67
+colbar -- write string  4500     at   2.10  26.50
+colbar -- write string  5000     at   2.10  29.33
+colbar -- write string  5500     at   2.10  32.17
+colbar -- write string  6000     at   2.10  35.00
+ call to conrec => conpack
+ use color table entries   5 -- 104         ipalet =  5
+ set area index below contour line  6.00E+01 to   5
+ set area index above contour line  6.00E+01 to   6
+ set area index below contour line  1.20E+02 to   6
+ set area index above contour line  1.20E+02 to   7
+ set area index below contour line  1.80E+02 to   7
+ set area index above contour line  1.80E+02 to   8
+ set area index below contour line  2.40E+02 to   8
+ set area index above contour line  2.40E+02 to   9
+ set area index below contour line  3.00E+02 to   9
+ set area index above contour line  3.00E+02 to  10
+ set area index below contour line  3.60E+02 to  10
+ set area index above contour line  3.60E+02 to  11
+ set area index below contour line  4.20E+02 to  11
+ set area index above contour line  4.20E+02 to  12
+ set area index below contour line  4.80E+02 to  12
+ set area index above contour line  4.80E+02 to  13
+ set area index below contour line  5.40E+02 to  13
+ set area index above contour line  5.40E+02 to  14
+ set area index below contour line  6.00E+02 to  14
+ set area index above contour line  6.00E+02 to  15
+ set area index below contour line  6.60E+02 to  15
+ set area index above contour line  6.60E+02 to  16
+ set area index below contour line  7.20E+02 to  16
+ set area index above contour line  7.20E+02 to  17
+ set area index below contour line  7.80E+02 to  17
+ set area index above contour line  7.80E+02 to  18
+ set area index below contour line  8.40E+02 to  18
+ set area index above contour line  8.40E+02 to  19
+ set area index below contour line  9.00E+02 to  19
+ set area index above contour line  9.00E+02 to  20
+ set area index below contour line  9.60E+02 to  20
+ set area index above contour line  9.60E+02 to  21
+ set area index below contour line  1.02E+03 to  21
+ set area index above contour line  1.02E+03 to  22
+ set area index below contour line  1.08E+03 to  22
+ set area index above contour line  1.08E+03 to  23
+ set area index below contour line  1.14E+03 to  23
+ set area index above contour line  1.14E+03 to  24
+ set area index below contour line  1.20E+03 to  24
+ set area index above contour line  1.20E+03 to  25
+ set area index below contour line  1.26E+03 to  25
+ set area index above contour line  1.26E+03 to  26
+ set area index below contour line  1.32E+03 to  26
+ set area index above contour line  1.32E+03 to  27
+ set area index below contour line  1.38E+03 to  27
+ set area index above contour line  1.38E+03 to  28
+ set area index below contour line  1.44E+03 to  28
+ set area index above contour line  1.44E+03 to  29
+ set area index below contour line  1.50E+03 to  29
+ set area index above contour line  1.50E+03 to  30
+ set area index below contour line  1.56E+03 to  30
+ set area index above contour line  1.56E+03 to  31
+ set area index below contour line  1.62E+03 to  31
+ set area index above contour line  1.62E+03 to  32
+ set area index below contour line  1.68E+03 to  32
+ set area index above contour line  1.68E+03 to  33
+ set area index below contour line  1.74E+03 to  33
+ set area index above contour line  1.74E+03 to  34
+ set area index below contour line  1.80E+03 to  34
+ set area index above contour line  1.80E+03 to  35
+ set area index below contour line  1.86E+03 to  35
+ set area index above contour line  1.86E+03 to  36
+ set area index below contour line  1.92E+03 to  36
+ set area index above contour line  1.92E+03 to  37
+ set area index below contour line  1.98E+03 to  37
+ set area index above contour line  1.98E+03 to  38
+ set area index below contour line  2.04E+03 to  38
+ set area index above contour line  2.04E+03 to  39
+ set area index below contour line  2.10E+03 to  39
+ set area index above contour line  2.10E+03 to  40
+ set area index below contour line  2.16E+03 to  40
+ set area index above contour line  2.16E+03 to  41
+ set area index below contour line  2.22E+03 to  41
+ set area index above contour line  2.22E+03 to  42
+ set area index below contour line  2.28E+03 to  42
+ set area index above contour line  2.28E+03 to  43
+ set area index below contour line  2.34E+03 to  43
+ set area index above contour line  2.34E+03 to  44
+ set area index below contour line  2.40E+03 to  44
+ set area index above contour line  2.40E+03 to  45
+ set area index below contour line  2.46E+03 to  45
+ set area index above contour line  2.46E+03 to  46
+ set area index below contour line  2.52E+03 to  46
+ set area index above contour line  2.52E+03 to  47
+ set area index below contour line  2.58E+03 to  47
+ set area index above contour line  2.58E+03 to  48
+ set area index below contour line  2.64E+03 to  48
+ set area index above contour line  2.64E+03 to  49
+ set area index below contour line  2.70E+03 to  49
+ set area index above contour line  2.70E+03 to  50
+ set area index below contour line  2.76E+03 to  50
+ set area index above contour line  2.76E+03 to  51
+ set area index below contour line  2.82E+03 to  51
+ set area index above contour line  2.82E+03 to  52
+ set area index below contour line  2.88E+03 to  52
+ set area index above contour line  2.88E+03 to  53
+ set area index below contour line  2.94E+03 to  53
+ set area index above contour line  2.94E+03 to  54
+ set area index below contour line  3.00E+03 to  54
+ set area index above contour line  3.00E+03 to  55
+ set area index below contour line  3.06E+03 to  55
+ set area index above contour line  3.06E+03 to  56
+ set area index below contour line  3.12E+03 to  56
+ set area index above contour line  3.12E+03 to  57
+ set area index below contour line  3.18E+03 to  57
+ set area index above contour line  3.18E+03 to  58
+ set area index below contour line  3.24E+03 to  58
+ set area index above contour line  3.24E+03 to  59
+ set area index below contour line  3.30E+03 to  59
+ set area index above contour line  3.30E+03 to  60
+ set area index below contour line  3.36E+03 to  60
+ set area index above contour line  3.36E+03 to  61
+ set area index below contour line  3.42E+03 to  61
+ set area index above contour line  3.42E+03 to  62
+ set area index below contour line  3.48E+03 to  62
+ set area index above contour line  3.48E+03 to  63
+ set area index below contour line  3.54E+03 to  63
+ set area index above contour line  3.54E+03 to  64
+ set area index below contour line  3.60E+03 to  64
+ set area index above contour line  3.60E+03 to  65
+ set area index below contour line  3.66E+03 to  65
+ set area index above contour line  3.66E+03 to  66
+ set area index below contour line  3.72E+03 to  66
+ set area index above contour line  3.72E+03 to  67
+ set area index below contour line  3.78E+03 to  67
+ set area index above contour line  3.78E+03 to  68
+ set area index below contour line  3.84E+03 to  68
+ set area index above contour line  3.84E+03 to  69
+ set area index below contour line  3.90E+03 to  69
+ set area index above contour line  3.90E+03 to  70
+ set area index below contour line  3.96E+03 to  70
+ set area index above contour line  3.96E+03 to  71
+ set area index below contour line  4.02E+03 to  71
+ set area index above contour line  4.02E+03 to  72
+ set area index below contour line  4.08E+03 to  72
+ set area index above contour line  4.08E+03 to  73
+ set area index below contour line  4.14E+03 to  73
+ set area index above contour line  4.14E+03 to  74
+ set area index below contour line  4.20E+03 to  74
+ set area index above contour line  4.20E+03 to  75
+ set area index below contour line  4.26E+03 to  75
+ set area index above contour line  4.26E+03 to  76
+ set area index below contour line  4.32E+03 to  76
+ set area index above contour line  4.32E+03 to  77
+ set area index below contour line  4.38E+03 to  77
+ set area index above contour line  4.38E+03 to  78
+ set area index below contour line  4.44E+03 to  78
+ set area index above contour line  4.44E+03 to  79
+ set area index below contour line  4.50E+03 to  79
+ set area index above contour line  4.50E+03 to  80
+ set area index below contour line  4.56E+03 to  80
+ set area index above contour line  4.56E+03 to  81
+ set area index below contour line  4.62E+03 to  81
+ set area index above contour line  4.62E+03 to  82
+ set area index below contour line  4.68E+03 to  82
+ set area index above contour line  4.68E+03 to  83
+ set area index below contour line  4.74E+03 to  83
+ set area index above contour line  4.74E+03 to  84
+ set area index below contour line  4.80E+03 to  84
+ set area index above contour line  4.80E+03 to  85
+ set area index below contour line  4.86E+03 to  85
+ set area index above contour line  4.86E+03 to  86
+ set area index below contour line  4.92E+03 to  86
+ set area index above contour line  4.92E+03 to  87
+ set area index below contour line  4.98E+03 to  87
+ set area index above contour line  4.98E+03 to  88
+ set area index below contour line  5.04E+03 to  88
+ set area index above contour line  5.04E+03 to  89
+ set area index below contour line  5.10E+03 to  89
+ set area index above contour line  5.10E+03 to  90
+ set area index below contour line  5.16E+03 to  90
+ set area index above contour line  5.16E+03 to  91
+ set area index below contour line  5.22E+03 to  91
+ set area index above contour line  5.22E+03 to  92
+ set area index below contour line  5.28E+03 to  92
+ set area index above contour line  5.28E+03 to  93
+ set area index below contour line  5.34E+03 to  93
+ set area index above contour line  5.34E+03 to  94
+ set area index below contour line  5.40E+03 to  94
+ set area index above contour line  5.40E+03 to  95
+ set area index below contour line  5.46E+03 to  95
+ set area index above contour line  5.46E+03 to  96
+ set area index below contour line  5.52E+03 to  96
+ set area index above contour line  5.52E+03 to  97
+ set area index below contour line  5.58E+03 to  97
+ set area index above contour line  5.58E+03 to  98
+ set area index below contour line  5.64E+03 to  98
+ set area index above contour line  5.64E+03 to  99
+ set area index below contour line  5.70E+03 to  99
+ set area index above contour line  5.70E+03 to 100
+ set area index below contour line  5.76E+03 to 100
+ set area index above contour line  5.76E+03 to 101
+ set area index below contour line  5.82E+03 to 101
+ set area index above contour line  5.82E+03 to 102
+ set area index below contour line  5.88E+03 to 102
+ set area index above contour line  5.88E+03 to 103
+ set area index below contour line  5.94E+03 to 103
+ set area index above contour line  5.94E+03 to 104
+ set area index below contour line  6.00E+03 to 104
+ set area index above contour line  6.00E+03 to 104
+ frame advance no.   1
+blkinr: flxqq  =    -1.0000 cm
+blkinr: sflqq  =    -1.0000 cm
+blkinr: icvqq  =    -1.0000 
+blkinr: ithqq  =    -1.0000 m
+blkinr: ictqq  =    -1.0000 deg
+blkinr: sshqq  =    -1.0000 cm
+blkinr: bsfqq  =    -1.0000 sv
+blkinr: mthrsh =     0.0000 cm
+blkinr: bltqq  =    -1.0000 m
+blkinr: mltqq  =    -1.0000 m
+blkinr: sstqq  =     0.3000 deg
+min -1.31E+00 at  23  38  max  2.86E+01 at  44  14  intvl.,lines  2.00E+00  14
+blkinr: center =    14.0000 deg
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =  -1.000  29.000   0.300
+ horiz. map: mix.layr.temp       year   0.00 (jan 16) [02.4H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+ call to conrec => conpack
+ use color table entries   5 -- 104         ipalet =  5
+ set area index below contour line -7.00E-01 to   5
+ set area index above contour line -7.00E-01 to   6
+ set area index below contour line -4.00E-01 to   6
+ set area index above contour line -4.00E-01 to   7
+ set area index below contour line -1.00E-01 to   7
+ set area index above contour line -1.00E-01 to   8
+ set area index below contour line  2.00E-01 to   8
+ set area index above contour line  2.00E-01 to   9
+ set area index below contour line  5.00E-01 to   9
+ set area index above contour line  5.00E-01 to  10
+ set area index below contour line  8.00E-01 to  10
+ set area index above contour line  8.00E-01 to  11
+ set area index below contour line  1.10E+00 to  11
+ set area index above contour line  1.10E+00 to  12
+ set area index below contour line  1.40E+00 to  12
+ set area index above contour line  1.40E+00 to  13
+ set area index below contour line  1.70E+00 to  13
+ set area index above contour line  1.70E+00 to  14
+ set area index below contour line  2.00E+00 to  14
+ set area index above contour line  2.00E+00 to  15
+ set area index below contour line  2.30E+00 to  15
+ set area index above contour line  2.30E+00 to  16
+ set area index below contour line  2.60E+00 to  16
+ set area index above contour line  2.60E+00 to  17
+ set area index below contour line  2.90E+00 to  17
+ set area index above contour line  2.90E+00 to  18
+ set area index below contour line  3.20E+00 to  18
+ set area index above contour line  3.20E+00 to  19
+ set area index below contour line  3.50E+00 to  19
+ set area index above contour line  3.50E+00 to  20
+ set area index below contour line  3.80E+00 to  20
+ set area index above contour line  3.80E+00 to  21
+ set area index below contour line  4.10E+00 to  21
+ set area index above contour line  4.10E+00 to  22
+ set area index below contour line  4.40E+00 to  22
+ set area index above contour line  4.40E+00 to  23
+ set area index below contour line  4.70E+00 to  23
+ set area index above contour line  4.70E+00 to  24
+ set area index below contour line  5.00E+00 to  24
+ set area index above contour line  5.00E+00 to  25
+ set area index below contour line  5.30E+00 to  25
+ set area index above contour line  5.30E+00 to  26
+ set area index below contour line  5.60E+00 to  26
+ set area index above contour line  5.60E+00 to  27
+ set area index below contour line  5.90E+00 to  27
+ set area index above contour line  5.90E+00 to  28
+ set area index below contour line  6.20E+00 to  28
+ set area index above contour line  6.20E+00 to  29
+ set area index below contour line  6.50E+00 to  29
+ set area index above contour line  6.50E+00 to  30
+ set area index below contour line  6.80E+00 to  30
+ set area index above contour line  6.80E+00 to  31
+ set area index below contour line  7.10E+00 to  31
+ set area index above contour line  7.10E+00 to  32
+ set area index below contour line  7.40E+00 to  32
+ set area index above contour line  7.40E+00 to  33
+ set area index below contour line  7.70E+00 to  33
+ set area index above contour line  7.70E+00 to  34
+ set area index below contour line  8.00E+00 to  34
+ set area index above contour line  8.00E+00 to  35
+ set area index below contour line  8.30E+00 to  35
+ set area index above contour line  8.30E+00 to  36
+ set area index below contour line  8.60E+00 to  36
+ set area index above contour line  8.60E+00 to  37
+ set area index below contour line  8.90E+00 to  37
+ set area index above contour line  8.90E+00 to  38
+ set area index below contour line  9.20E+00 to  38
+ set area index above contour line  9.20E+00 to  39
+ set area index below contour line  9.50E+00 to  39
+ set area index above contour line  9.50E+00 to  40
+ set area index below contour line  9.80E+00 to  40
+ set area index above contour line  9.80E+00 to  41
+ set area index below contour line  1.01E+01 to  41
+ set area index above contour line  1.01E+01 to  42
+ set area index below contour line  1.04E+01 to  42
+ set area index above contour line  1.04E+01 to  43
+ set area index below contour line  1.07E+01 to  43
+ set area index above contour line  1.07E+01 to  44
+ set area index below contour line  1.10E+01 to  44
+ set area index above contour line  1.10E+01 to  45
+ set area index below contour line  1.13E+01 to  45
+ set area index above contour line  1.13E+01 to  46
+ set area index below contour line  1.16E+01 to  46
+ set area index above contour line  1.16E+01 to  47
+ set area index below contour line  1.19E+01 to  47
+ set area index above contour line  1.19E+01 to  48
+ set area index below contour line  1.22E+01 to  48
+ set area index above contour line  1.22E+01 to  49
+ set area index below contour line  1.25E+01 to  49
+ set area index above contour line  1.25E+01 to  50
+ set area index below contour line  1.28E+01 to  50
+ set area index above contour line  1.28E+01 to  51
+ set area index below contour line  1.31E+01 to  51
+ set area index above contour line  1.31E+01 to  52
+ set area index below contour line  1.34E+01 to  52
+ set area index above contour line  1.34E+01 to  53
+ set area index below contour line  1.37E+01 to  53
+ set area index above contour line  1.37E+01 to  54
+ set area index below contour line  1.40E+01 to  54
+ set area index above contour line  1.40E+01 to  55
+ set area index below contour line  1.43E+01 to  55
+ set area index above contour line  1.43E+01 to  56
+ set area index below contour line  1.46E+01 to  56
+ set area index above contour line  1.46E+01 to  57
+ set area index below contour line  1.49E+01 to  57
+ set area index above contour line  1.49E+01 to  58
+ set area index below contour line  1.52E+01 to  58
+ set area index above contour line  1.52E+01 to  59
+ set area index below contour line  1.55E+01 to  59
+ set area index above contour line  1.55E+01 to  60
+ set area index below contour line  1.58E+01 to  60
+ set area index above contour line  1.58E+01 to  61
+ set area index below contour line  1.61E+01 to  61
+ set area index above contour line  1.61E+01 to  62
+ set area index below contour line  1.64E+01 to  62
+ set area index above contour line  1.64E+01 to  63
+ set area index below contour line  1.67E+01 to  63
+ set area index above contour line  1.67E+01 to  64
+ set area index below contour line  1.70E+01 to  64
+ set area index above contour line  1.70E+01 to  65
+ set area index below contour line  1.73E+01 to  65
+ set area index above contour line  1.73E+01 to  66
+ set area index below contour line  1.76E+01 to  66
+ set area index above contour line  1.76E+01 to  67
+ set area index below contour line  1.79E+01 to  67
+ set area index above contour line  1.79E+01 to  68
+ set area index below contour line  1.82E+01 to  68
+ set area index above contour line  1.82E+01 to  69
+ set area index below contour line  1.85E+01 to  69
+ set area index above contour line  1.85E+01 to  70
+ set area index below contour line  1.88E+01 to  70
+ set area index above contour line  1.88E+01 to  71
+ set area index below contour line  1.91E+01 to  71
+ set area index above contour line  1.91E+01 to  72
+ set area index below contour line  1.94E+01 to  72
+ set area index above contour line  1.94E+01 to  73
+ set area index below contour line  1.97E+01 to  73
+ set area index above contour line  1.97E+01 to  74
+ set area index below contour line  2.00E+01 to  74
+ set area index above contour line  2.00E+01 to  75
+ set area index below contour line  2.03E+01 to  75
+ set area index above contour line  2.03E+01 to  76
+ set area index below contour line  2.06E+01 to  76
+ set area index above contour line  2.06E+01 to  77
+ set area index below contour line  2.09E+01 to  77
+ set area index above contour line  2.09E+01 to  78
+ set area index below contour line  2.12E+01 to  78
+ set area index above contour line  2.12E+01 to  79
+ set area index below contour line  2.15E+01 to  79
+ set area index above contour line  2.15E+01 to  80
+ set area index below contour line  2.18E+01 to  80
+ set area index above contour line  2.18E+01 to  81
+ set area index below contour line  2.21E+01 to  81
+ set area index above contour line  2.21E+01 to  82
+ set area index below contour line  2.24E+01 to  82
+ set area index above contour line  2.24E+01 to  83
+ set area index below contour line  2.27E+01 to  83
+ set area index above contour line  2.27E+01 to  84
+ set area index below contour line  2.30E+01 to  84
+ set area index above contour line  2.30E+01 to  85
+ set area index below contour line  2.33E+01 to  85
+ set area index above contour line  2.33E+01 to  86
+ set area index below contour line  2.36E+01 to  86
+ set area index above contour line  2.36E+01 to  87
+ set area index below contour line  2.39E+01 to  87
+ set area index above contour line  2.39E+01 to  88
+ set area index below contour line  2.42E+01 to  88
+ set area index above contour line  2.42E+01 to  89
+ set area index below contour line  2.45E+01 to  89
+ set area index above contour line  2.45E+01 to  90
+ set area index below contour line  2.48E+01 to  90
+ set area index above contour line  2.48E+01 to  91
+ set area index below contour line  2.51E+01 to  91
+ set area index above contour line  2.51E+01 to  92
+ set area index below contour line  2.54E+01 to  92
+ set area index above contour line  2.54E+01 to  93
+ set area index below contour line  2.57E+01 to  93
+ set area index above contour line  2.57E+01 to  94
+ set area index below contour line  2.60E+01 to  94
+ set area index above contour line  2.60E+01 to  95
+ set area index below contour line  2.63E+01 to  95
+ set area index above contour line  2.63E+01 to  96
+ set area index below contour line  2.66E+01 to  96
+ set area index above contour line  2.66E+01 to  97
+ set area index below contour line  2.69E+01 to  97
+ set area index above contour line  2.69E+01 to  98
+ set area index below contour line  2.72E+01 to  98
+ set area index above contour line  2.72E+01 to  99
+ set area index below contour line  2.75E+01 to  99
+ set area index above contour line  2.75E+01 to 100
+ set area index below contour line  2.78E+01 to 100
+ set area index above contour line  2.78E+01 to 101
+ set area index below contour line  2.81E+01 to 101
+ set area index above contour line  2.81E+01 to 102
+ set area index below contour line  2.84E+01 to 102
+ set area index above contour line  2.84E+01 to 103
+ set area index below contour line  2.87E+01 to 103
+ set area index above contour line  2.87E+01 to 104
+ set area index below contour line  2.90E+01 to 104
+ set area index above contour line  2.90E+01 to 104
+horplt - lat,y =  -10    5.974
+horplt - lat,y =    0   11.000
+horplt - lat,y =   10   16.026
+horplt - lat,y =   20   21.209
+horplt - lat,y =   30   26.736
+horplt - lat,y =   40   32.856
+horplt - lat,y =   50   39.954
+horplt - lat,y =   60   48.728
+ horplt - reflon,gridsz,iorign,iref,orilon =  263.0 2.0 1 1 263.0
+horplt - lon,x =  -90    4.500
+horplt - lon,x =  -80    9.500
+horplt - lon,x =  -70   14.500
+horplt - lon,x =  -60   19.500
+horplt - lon,x =  -50   24.500
+horplt - lon,x =  -40   29.500
+horplt - lon,x =  -30   34.500
+horplt - lon,x =  -20   39.500
+horplt - lon,x =  -10   44.500
+horplt - lon,x =    0   49.500
+horplt - lon,x =   10   54.500
+ call to conrec => conpack
+                      fflo,ffhi,qq =  -1.000  29.000   0.300
+draw color bar in box     0.880 < x < 0.960     0.668 < y < 0.919    logsc = F
+colbar -- write string     0     at   2.10   2.13
+colbar -- write string     5     at   2.10   7.80
+colbar -- write string    10     at   2.10  13.47
+colbar -- write string    15     at   2.10  19.13
+colbar -- write string    20     at   2.10  24.80
+colbar -- write string    25     at   2.10  30.47
+ call to conrec => conpack
+ use color table entries   5 -- 104         ipalet =  5
+ set area index below contour line -7.00E-01 to   5
+ set area index above contour line -7.00E-01 to   6
+ set area index below contour line -4.00E-01 to   6
+ set area index above contour line -4.00E-01 to   7
+ set area index below contour line -1.00E-01 to   7
+ set area index above contour line -1.00E-01 to   8
+ set area index below contour line  2.00E-01 to   8
+ set area index above contour line  2.00E-01 to   9
+ set area index below contour line  5.00E-01 to   9
+ set area index above contour line  5.00E-01 to  10
+ set area index below contour line  8.00E-01 to  10
+ set area index above contour line  8.00E-01 to  11
+ set area index below contour line  1.10E+00 to  11
+ set area index above contour line  1.10E+00 to  12
+ set area index below contour line  1.40E+00 to  12
+ set area index above contour line  1.40E+00 to  13
+ set area index below contour line  1.70E+00 to  13
+ set area index above contour line  1.70E+00 to  14
+ set area index below contour line  2.00E+00 to  14
+ set area index above contour line  2.00E+00 to  15
+ set area index below contour line  2.30E+00 to  15
+ set area index above contour line  2.30E+00 to  16
+ set area index below contour line  2.60E+00 to  16
+ set area index above contour line  2.60E+00 to  17
+ set area index below contour line  2.90E+00 to  17
+ set area index above contour line  2.90E+00 to  18
+ set area index below contour line  3.20E+00 to  18
+ set area index above contour line  3.20E+00 to  19
+ set area index below contour line  3.50E+00 to  19
+ set area index above contour line  3.50E+00 to  20
+ set area index below contour line  3.80E+00 to  20
+ set area index above contour line  3.80E+00 to  21
+ set area index below contour line  4.10E+00 to  21
+ set area index above contour line  4.10E+00 to  22
+ set area index below contour line  4.40E+00 to  22
+ set area index above contour line  4.40E+00 to  23
+ set area index below contour line  4.70E+00 to  23
+ set area index above contour line  4.70E+00 to  24
+ set area index below contour line  5.00E+00 to  24
+ set area index above contour line  5.00E+00 to  25
+ set area index below contour line  5.30E+00 to  25
+ set area index above contour line  5.30E+00 to  26
+ set area index below contour line  5.60E+00 to  26
+ set area index above contour line  5.60E+00 to  27
+ set area index below contour line  5.90E+00 to  27
+ set area index above contour line  5.90E+00 to  28
+ set area index below contour line  6.20E+00 to  28
+ set area index above contour line  6.20E+00 to  29
+ set area index below contour line  6.50E+00 to  29
+ set area index above contour line  6.50E+00 to  30
+ set area index below contour line  6.80E+00 to  30
+ set area index above contour line  6.80E+00 to  31
+ set area index below contour line  7.10E+00 to  31
+ set area index above contour line  7.10E+00 to  32
+ set area index below contour line  7.40E+00 to  32
+ set area index above contour line  7.40E+00 to  33
+ set area index below contour line  7.70E+00 to  33
+ set area index above contour line  7.70E+00 to  34
+ set area index below contour line  8.00E+00 to  34
+ set area index above contour line  8.00E+00 to  35
+ set area index below contour line  8.30E+00 to  35
+ set area index above contour line  8.30E+00 to  36
+ set area index below contour line  8.60E+00 to  36
+ set area index above contour line  8.60E+00 to  37
+ set area index below contour line  8.90E+00 to  37
+ set area index above contour line  8.90E+00 to  38
+ set area index below contour line  9.20E+00 to  38
+ set area index above contour line  9.20E+00 to  39
+ set area index below contour line  9.50E+00 to  39
+ set area index above contour line  9.50E+00 to  40
+ set area index below contour line  9.80E+00 to  40
+ set area index above contour line  9.80E+00 to  41
+ set area index below contour line  1.01E+01 to  41
+ set area index above contour line  1.01E+01 to  42
+ set area index below contour line  1.04E+01 to  42
+ set area index above contour line  1.04E+01 to  43
+ set area index below contour line  1.07E+01 to  43
+ set area index above contour line  1.07E+01 to  44
+ set area index below contour line  1.10E+01 to  44
+ set area index above contour line  1.10E+01 to  45
+ set area index below contour line  1.13E+01 to  45
+ set area index above contour line  1.13E+01 to  46
+ set area index below contour line  1.16E+01 to  46
+ set area index above contour line  1.16E+01 to  47
+ set area index below contour line  1.19E+01 to  47
+ set area index above contour line  1.19E+01 to  48
+ set area index below contour line  1.22E+01 to  48
+ set area index above contour line  1.22E+01 to  49
+ set area index below contour line  1.25E+01 to  49
+ set area index above contour line  1.25E+01 to  50
+ set area index below contour line  1.28E+01 to  50
+ set area index above contour line  1.28E+01 to  51
+ set area index below contour line  1.31E+01 to  51
+ set area index above contour line  1.31E+01 to  52
+ set area index below contour line  1.34E+01 to  52
+ set area index above contour line  1.34E+01 to  53
+ set area index below contour line  1.37E+01 to  53
+ set area index above contour line  1.37E+01 to  54
+ set area index below contour line  1.40E+01 to  54
+ set area index above contour line  1.40E+01 to  55
+ set area index below contour line  1.43E+01 to  55
+ set area index above contour line  1.43E+01 to  56
+ set area index below contour line  1.46E+01 to  56
+ set area index above contour line  1.46E+01 to  57
+ set area index below contour line  1.49E+01 to  57
+ set area index above contour line  1.49E+01 to  58
+ set area index below contour line  1.52E+01 to  58
+ set area index above contour line  1.52E+01 to  59
+ set area index below contour line  1.55E+01 to  59
+ set area index above contour line  1.55E+01 to  60
+ set area index below contour line  1.58E+01 to  60
+ set area index above contour line  1.58E+01 to  61
+ set area index below contour line  1.61E+01 to  61
+ set area index above contour line  1.61E+01 to  62
+ set area index below contour line  1.64E+01 to  62
+ set area index above contour line  1.64E+01 to  63
+ set area index below contour line  1.67E+01 to  63
+ set area index above contour line  1.67E+01 to  64
+ set area index below contour line  1.70E+01 to  64
+ set area index above contour line  1.70E+01 to  65
+ set area index below contour line  1.73E+01 to  65
+ set area index above contour line  1.73E+01 to  66
+ set area index below contour line  1.76E+01 to  66
+ set area index above contour line  1.76E+01 to  67
+ set area index below contour line  1.79E+01 to  67
+ set area index above contour line  1.79E+01 to  68
+ set area index below contour line  1.82E+01 to  68
+ set area index above contour line  1.82E+01 to  69
+ set area index below contour line  1.85E+01 to  69
+ set area index above contour line  1.85E+01 to  70
+ set area index below contour line  1.88E+01 to  70
+ set area index above contour line  1.88E+01 to  71
+ set area index below contour line  1.91E+01 to  71
+ set area index above contour line  1.91E+01 to  72
+ set area index below contour line  1.94E+01 to  72
+ set area index above contour line  1.94E+01 to  73
+ set area index below contour line  1.97E+01 to  73
+ set area index above contour line  1.97E+01 to  74
+ set area index below contour line  2.00E+01 to  74
+ set area index above contour line  2.00E+01 to  75
+ set area index below contour line  2.03E+01 to  75
+ set area index above contour line  2.03E+01 to  76
+ set area index below contour line  2.06E+01 to  76
+ set area index above contour line  2.06E+01 to  77
+ set area index below contour line  2.09E+01 to  77
+ set area index above contour line  2.09E+01 to  78
+ set area index below contour line  2.12E+01 to  78
+ set area index above contour line  2.12E+01 to  79
+ set area index below contour line  2.15E+01 to  79
+ set area index above contour line  2.15E+01 to  80
+ set area index below contour line  2.18E+01 to  80
+ set area index above contour line  2.18E+01 to  81
+ set area index below contour line  2.21E+01 to  81
+ set area index above contour line  2.21E+01 to  82
+ set area index below contour line  2.24E+01 to  82
+ set area index above contour line  2.24E+01 to  83
+ set area index below contour line  2.27E+01 to  83
+ set area index above contour line  2.27E+01 to  84
+ set area index below contour line  2.30E+01 to  84
+ set area index above contour line  2.30E+01 to  85
+ set area index below contour line  2.33E+01 to  85
+ set area index above contour line  2.33E+01 to  86
+ set area index below contour line  2.36E+01 to  86
+ set area index above contour line  2.36E+01 to  87
+ set area index below contour line  2.39E+01 to  87
+ set area index above contour line  2.39E+01 to  88
+ set area index below contour line  2.42E+01 to  88
+ set area index above contour line  2.42E+01 to  89
+ set area index below contour line  2.45E+01 to  89
+ set area index above contour line  2.45E+01 to  90
+ set area index below contour line  2.48E+01 to  90
+ set area index above contour line  2.48E+01 to  91
+ set area index below contour line  2.51E+01 to  91
+ set area index above contour line  2.51E+01 to  92
+ set area index below contour line  2.54E+01 to  92
+ set area index above contour line  2.54E+01 to  93
+ set area index below contour line  2.57E+01 to  93
+ set area index above contour line  2.57E+01 to  94
+ set area index below contour line  2.60E+01 to  94
+ set area index above contour line  2.60E+01 to  95
+ set area index below contour line  2.63E+01 to  95
+ set area index above contour line  2.63E+01 to  96
+ set area index below contour line  2.66E+01 to  96
+ set area index above contour line  2.66E+01 to  97
+ set area index below contour line  2.69E+01 to  97
+ set area index above contour line  2.69E+01 to  98
+ set area index below contour line  2.72E+01 to  98
+ set area index above contour line  2.72E+01 to  99
+ set area index below contour line  2.75E+01 to  99
+ set area index above contour line  2.75E+01 to 100
+ set area index below contour line  2.78E+01 to 100
+ set area index above contour line  2.78E+01 to 101
+ set area index below contour line  2.81E+01 to 101
+ set area index above contour line  2.81E+01 to 102
+ set area index below contour line  2.84E+01 to 102
+ set area index above contour line  2.84E+01 to 103
+ set area index below contour line  2.87E+01 to 103
+ set area index above contour line  2.87E+01 to 104
+ set area index below contour line  2.90E+01 to 104
+ set area index above contour line  2.90E+01 to 104
+ frame advance no.   2
+blkinr: sssqq  =     0.0500 psu
+min  2.38E+01 at  25  12  max  3.75E+01 at  27  23  intvl.,lines  1.00E+00  13
+blkinr: center =    36.0000 psu
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =  33.500  38.500   0.050
+ horiz. map: mix.layr.saln       year   0.00 (jan 16) [02.4H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+ call to conrec => conpack
+ use color table entries   5 -- 104         ipalet =  5
+ set area index below contour line  3.35E+01 to   5
+ set area index above contour line  3.35E+01 to   6
+ set area index below contour line  3.36E+01 to   6
+ set area index above contour line  3.36E+01 to   7
+ set area index below contour line  3.37E+01 to   7
+ set area index above contour line  3.37E+01 to   8
+ set area index below contour line  3.37E+01 to   8
+ set area index above contour line  3.37E+01 to   9
+ set area index below contour line  3.38E+01 to   9
+ set area index above contour line  3.38E+01 to  10
+ set area index below contour line  3.38E+01 to  10
+ set area index above contour line  3.38E+01 to  11
+ set area index below contour line  3.38E+01 to  11
+ set area index above contour line  3.38E+01 to  12
+ set area index below contour line  3.39E+01 to  12
+ set area index above contour line  3.39E+01 to  13
+ set area index below contour line  3.40E+01 to  13
+ set area index above contour line  3.40E+01 to  14
+ set area index below contour line  3.40E+01 to  14
+ set area index above contour line  3.40E+01 to  15
+ set area index below contour line  3.40E+01 to  15
+ set area index above contour line  3.40E+01 to  16
+ set area index below contour line  3.41E+01 to  16
+ set area index above contour line  3.41E+01 to  17
+ set area index below contour line  3.42E+01 to  17
+ set area index above contour line  3.42E+01 to  18
+ set area index below contour line  3.42E+01 to  18
+ set area index above contour line  3.42E+01 to  19
+ set area index below contour line  3.42E+01 to  19
+ set area index above contour line  3.42E+01 to  20
+ set area index below contour line  3.43E+01 to  20
+ set area index above contour line  3.43E+01 to  21
+ set area index below contour line  3.43E+01 to  21
+ set area index above contour line  3.43E+01 to  22
+ set area index below contour line  3.44E+01 to  22
+ set area index above contour line  3.44E+01 to  23
+ set area index below contour line  3.45E+01 to  23
+ set area index above contour line  3.45E+01 to  24
+ set area index below contour line  3.45E+01 to  24
+ set area index above contour line  3.45E+01 to  25
+ set area index below contour line  3.45E+01 to  25
+ set area index above contour line  3.45E+01 to  26
+ set area index below contour line  3.46E+01 to  26
+ set area index above contour line  3.46E+01 to  27
+ set area index below contour line  3.47E+01 to  27
+ set area index above contour line  3.47E+01 to  28
+ set area index below contour line  3.47E+01 to  28
+ set area index above contour line  3.47E+01 to  29
+ set area index below contour line  3.48E+01 to  29
+ set area index above contour line  3.48E+01 to  30
+ set area index below contour line  3.48E+01 to  30
+ set area index above contour line  3.48E+01 to  31
+ set area index below contour line  3.48E+01 to  31
+ set area index above contour line  3.48E+01 to  32
+ set area index below contour line  3.49E+01 to  32
+ set area index above contour line  3.49E+01 to  33
+ set area index below contour line  3.50E+01 to  33
+ set area index above contour line  3.50E+01 to  34
+ set area index below contour line  3.50E+01 to  34
+ set area index above contour line  3.50E+01 to  35
+ set area index below contour line  3.50E+01 to  35
+ set area index above contour line  3.50E+01 to  36
+ set area index below contour line  3.51E+01 to  36
+ set area index above contour line  3.51E+01 to  37
+ set area index below contour line  3.52E+01 to  37
+ set area index above contour line  3.52E+01 to  38
+ set area index below contour line  3.52E+01 to  38
+ set area index above contour line  3.52E+01 to  39
+ set area index below contour line  3.52E+01 to  39
+ set area index above contour line  3.52E+01 to  40
+ set area index below contour line  3.53E+01 to  40
+ set area index above contour line  3.53E+01 to  41
+ set area index below contour line  3.53E+01 to  41
+ set area index above contour line  3.53E+01 to  42
+ set area index below contour line  3.54E+01 to  42
+ set area index above contour line  3.54E+01 to  43
+ set area index below contour line  3.55E+01 to  43
+ set area index above contour line  3.55E+01 to  44
+ set area index below contour line  3.55E+01 to  44
+ set area index above contour line  3.55E+01 to  45
+ set area index below contour line  3.55E+01 to  45
+ set area index above contour line  3.55E+01 to  46
+ set area index below contour line  3.56E+01 to  46
+ set area index above contour line  3.56E+01 to  47
+ set area index below contour line  3.57E+01 to  47
+ set area index above contour line  3.57E+01 to  48
+ set area index below contour line  3.57E+01 to  48
+ set area index above contour line  3.57E+01 to  49
+ set area index below contour line  3.58E+01 to  49
+ set area index above contour line  3.58E+01 to  50
+ set area index below contour line  3.58E+01 to  50
+ set area index above contour line  3.58E+01 to  51
+ set area index below contour line  3.58E+01 to  51
+ set area index above contour line  3.58E+01 to  52
+ set area index below contour line  3.59E+01 to  52
+ set area index above contour line  3.59E+01 to  53
+ set area index below contour line  3.60E+01 to  53
+ set area index above contour line  3.60E+01 to  54
+ set area index below contour line  3.60E+01 to  54
+ set area index above contour line  3.60E+01 to  55
+ set area index below contour line  3.60E+01 to  55
+ set area index above contour line  3.60E+01 to  56
+ set area index below contour line  3.61E+01 to  56
+ set area index above contour line  3.61E+01 to  57
+ set area index below contour line  3.62E+01 to  57
+ set area index above contour line  3.62E+01 to  58
+ set area index below contour line  3.62E+01 to  58
+ set area index above contour line  3.62E+01 to  59
+ set area index below contour line  3.62E+01 to  59
+ set area index above contour line  3.62E+01 to  60
+ set area index below contour line  3.63E+01 to  60
+ set area index above contour line  3.63E+01 to  61
+ set area index below contour line  3.63E+01 to  61
+ set area index above contour line  3.63E+01 to  62
+ set area index below contour line  3.64E+01 to  62
+ set area index above contour line  3.64E+01 to  63
+ set area index below contour line  3.65E+01 to  63
+ set area index above contour line  3.65E+01 to  64
+ set area index below contour line  3.65E+01 to  64
+ set area index above contour line  3.65E+01 to  65
+ set area index below contour line  3.65E+01 to  65
+ set area index above contour line  3.65E+01 to  66
+ set area index below contour line  3.66E+01 to  66
+ set area index above contour line  3.66E+01 to  67
+ set area index below contour line  3.67E+01 to  67
+ set area index above contour line  3.67E+01 to  68
+ set area index below contour line  3.67E+01 to  68
+ set area index above contour line  3.67E+01 to  69
+ set area index below contour line  3.68E+01 to  69
+ set area index above contour line  3.68E+01 to  70
+ set area index below contour line  3.68E+01 to  70
+ set area index above contour line  3.68E+01 to  71
+ set area index below contour line  3.68E+01 to  71
+ set area index above contour line  3.68E+01 to  72
+ set area index below contour line  3.69E+01 to  72
+ set area index above contour line  3.69E+01 to  73
+ set area index below contour line  3.70E+01 to  73
+ set area index above contour line  3.70E+01 to  74
+ set area index below contour line  3.70E+01 to  74
+ set area index above contour line  3.70E+01 to  75
+ set area index below contour line  3.70E+01 to  75
+ set area index above contour line  3.70E+01 to  76
+ set area index below contour line  3.71E+01 to  76
+ set area index above contour line  3.71E+01 to  77
+ set area index below contour line  3.72E+01 to  77
+ set area index above contour line  3.72E+01 to  78
+ set area index below contour line  3.72E+01 to  78
+ set area index above contour line  3.72E+01 to  79
+ set area index below contour line  3.72E+01 to  79
+ set area index above contour line  3.72E+01 to  80
+ set area index below contour line  3.73E+01 to  80
+ set area index above contour line  3.73E+01 to  81
+ set area index below contour line  3.73E+01 to  81
+ set area index above contour line  3.73E+01 to  82
+ set area index below contour line  3.74E+01 to  82
+ set area index above contour line  3.74E+01 to  83
+ set area index below contour line  3.75E+01 to  83
+ set area index above contour line  3.75E+01 to  84
+ set area index below contour line  3.75E+01 to  84
+ set area index above contour line  3.75E+01 to  85
+ set area index below contour line  3.75E+01 to  85
+ set area index above contour line  3.75E+01 to  86
+ set area index below contour line  3.76E+01 to  86
+ set area index above contour line  3.76E+01 to  87
+ set area index below contour line  3.77E+01 to  87
+ set area index above contour line  3.77E+01 to  88
+ set area index below contour line  3.77E+01 to  88
+ set area index above contour line  3.77E+01 to  89
+ set area index below contour line  3.78E+01 to  89
+ set area index above contour line  3.78E+01 to  90
+ set area index below contour line  3.78E+01 to  90
+ set area index above contour line  3.78E+01 to  91
+ set area index below contour line  3.78E+01 to  91
+ set area index above contour line  3.78E+01 to  92
+ set area index below contour line  3.79E+01 to  92
+ set area index above contour line  3.79E+01 to  93
+ set area index below contour line  3.80E+01 to  93
+ set area index above contour line  3.80E+01 to  94
+ set area index below contour line  3.80E+01 to  94
+ set area index above contour line  3.80E+01 to  95
+ set area index below contour line  3.80E+01 to  95
+ set area index above contour line  3.80E+01 to  96
+ set area index below contour line  3.81E+01 to  96
+ set area index above contour line  3.81E+01 to  97
+ set area index below contour line  3.82E+01 to  97
+ set area index above contour line  3.82E+01 to  98
+ set area index below contour line  3.82E+01 to  98
+ set area index above contour line  3.82E+01 to  99
+ set area index below contour line  3.82E+01 to  99
+ set area index above contour line  3.82E+01 to 100
+ set area index below contour line  3.83E+01 to 100
+ set area index above contour line  3.83E+01 to 101
+ set area index below contour line  3.83E+01 to 101
+ set area index above contour line  3.83E+01 to 102
+ set area index below contour line  3.84E+01 to 102
+ set area index above contour line  3.84E+01 to 103
+ set area index below contour line  3.85E+01 to 103
+ set area index above contour line  3.85E+01 to 104
+ set area index below contour line  3.85E+01 to 104
+ set area index above contour line  3.85E+01 to 104
+horplt - lat,y =  -10    5.974
+horplt - lat,y =    0   11.000
+horplt - lat,y =   10   16.026
+horplt - lat,y =   20   21.209
+horplt - lat,y =   30   26.736
+horplt - lat,y =   40   32.856
+horplt - lat,y =   50   39.954
+horplt - lat,y =   60   48.728
+ horplt - reflon,gridsz,iorign,iref,orilon =  263.0 2.0 1 1 263.0
+horplt - lon,x =  -90    4.500
+horplt - lon,x =  -80    9.500
+horplt - lon,x =  -70   14.500
+horplt - lon,x =  -60   19.500
+horplt - lon,x =  -50   24.500
+horplt - lon,x =  -40   29.500
+horplt - lon,x =  -30   34.500
+horplt - lon,x =  -20   39.500
+horplt - lon,x =  -10   44.500
+horplt - lon,x =    0   49.500
+horplt - lon,x =   10   54.500
+ call to conrec => conpack
+                      fflo,ffhi,qq =  33.500  38.500   0.050
+draw color bar in box     0.880 < x < 0.960     0.668 < y < 0.919    logsc = F
+colbar -- write string  33.50    at   2.10   1.00
+colbar -- write string  34.00    at   2.10   4.40
+colbar -- write string  34.50    at   2.10   7.80
+colbar -- write string  35.00    at   2.10  11.20
+colbar -- write string  35.50    at   2.10  14.60
+colbar -- write string  36.00    at   2.10  18.00
+colbar -- write string  36.50    at   2.10  21.40
+colbar -- write string  37.00    at   2.10  24.80
+colbar -- write string  37.50    at   2.10  28.20
+colbar -- write string  38.00    at   2.10  31.60
+colbar -- write string  38.50    at   2.10  35.00
+ call to conrec => conpack
+ use color table entries   5 -- 104         ipalet =  5
+ set area index below contour line  3.35E+01 to   5
+ set area index above contour line  3.35E+01 to   6
+ set area index below contour line  3.36E+01 to   6
+ set area index above contour line  3.36E+01 to   7
+ set area index below contour line  3.37E+01 to   7
+ set area index above contour line  3.37E+01 to   8
+ set area index below contour line  3.37E+01 to   8
+ set area index above contour line  3.37E+01 to   9
+ set area index below contour line  3.38E+01 to   9
+ set area index above contour line  3.38E+01 to  10
+ set area index below contour line  3.38E+01 to  10
+ set area index above contour line  3.38E+01 to  11
+ set area index below contour line  3.38E+01 to  11
+ set area index above contour line  3.38E+01 to  12
+ set area index below contour line  3.39E+01 to  12
+ set area index above contour line  3.39E+01 to  13
+ set area index below contour line  3.40E+01 to  13
+ set area index above contour line  3.40E+01 to  14
+ set area index below contour line  3.40E+01 to  14
+ set area index above contour line  3.40E+01 to  15
+ set area index below contour line  3.40E+01 to  15
+ set area index above contour line  3.40E+01 to  16
+ set area index below contour line  3.41E+01 to  16
+ set area index above contour line  3.41E+01 to  17
+ set area index below contour line  3.42E+01 to  17
+ set area index above contour line  3.42E+01 to  18
+ set area index below contour line  3.42E+01 to  18
+ set area index above contour line  3.42E+01 to  19
+ set area index below contour line  3.42E+01 to  19
+ set area index above contour line  3.42E+01 to  20
+ set area index below contour line  3.43E+01 to  20
+ set area index above contour line  3.43E+01 to  21
+ set area index below contour line  3.43E+01 to  21
+ set area index above contour line  3.43E+01 to  22
+ set area index below contour line  3.44E+01 to  22
+ set area index above contour line  3.44E+01 to  23
+ set area index below contour line  3.45E+01 to  23
+ set area index above contour line  3.45E+01 to  24
+ set area index below contour line  3.45E+01 to  24
+ set area index above contour line  3.45E+01 to  25
+ set area index below contour line  3.45E+01 to  25
+ set area index above contour line  3.45E+01 to  26
+ set area index below contour line  3.46E+01 to  26
+ set area index above contour line  3.46E+01 to  27
+ set area index below contour line  3.47E+01 to  27
+ set area index above contour line  3.47E+01 to  28
+ set area index below contour line  3.47E+01 to  28
+ set area index above contour line  3.47E+01 to  29
+ set area index below contour line  3.48E+01 to  29
+ set area index above contour line  3.48E+01 to  30
+ set area index below contour line  3.48E+01 to  30
+ set area index above contour line  3.48E+01 to  31
+ set area index below contour line  3.48E+01 to  31
+ set area index above contour line  3.48E+01 to  32
+ set area index below contour line  3.49E+01 to  32
+ set area index above contour line  3.49E+01 to  33
+ set area index below contour line  3.50E+01 to  33
+ set area index above contour line  3.50E+01 to  34
+ set area index below contour line  3.50E+01 to  34
+ set area index above contour line  3.50E+01 to  35
+ set area index below contour line  3.50E+01 to  35
+ set area index above contour line  3.50E+01 to  36
+ set area index below contour line  3.51E+01 to  36
+ set area index above contour line  3.51E+01 to  37
+ set area index below contour line  3.52E+01 to  37
+ set area index above contour line  3.52E+01 to  38
+ set area index below contour line  3.52E+01 to  38
+ set area index above contour line  3.52E+01 to  39
+ set area index below contour line  3.52E+01 to  39
+ set area index above contour line  3.52E+01 to  40
+ set area index below contour line  3.53E+01 to  40
+ set area index above contour line  3.53E+01 to  41
+ set area index below contour line  3.53E+01 to  41
+ set area index above contour line  3.53E+01 to  42
+ set area index below contour line  3.54E+01 to  42
+ set area index above contour line  3.54E+01 to  43
+ set area index below contour line  3.55E+01 to  43
+ set area index above contour line  3.55E+01 to  44
+ set area index below contour line  3.55E+01 to  44
+ set area index above contour line  3.55E+01 to  45
+ set area index below contour line  3.55E+01 to  45
+ set area index above contour line  3.55E+01 to  46
+ set area index below contour line  3.56E+01 to  46
+ set area index above contour line  3.56E+01 to  47
+ set area index below contour line  3.57E+01 to  47
+ set area index above contour line  3.57E+01 to  48
+ set area index below contour line  3.57E+01 to  48
+ set area index above contour line  3.57E+01 to  49
+ set area index below contour line  3.58E+01 to  49
+ set area index above contour line  3.58E+01 to  50
+ set area index below contour line  3.58E+01 to  50
+ set area index above contour line  3.58E+01 to  51
+ set area index below contour line  3.58E+01 to  51
+ set area index above contour line  3.58E+01 to  52
+ set area index below contour line  3.59E+01 to  52
+ set area index above contour line  3.59E+01 to  53
+ set area index below contour line  3.60E+01 to  53
+ set area index above contour line  3.60E+01 to  54
+ set area index below contour line  3.60E+01 to  54
+ set area index above contour line  3.60E+01 to  55
+ set area index below contour line  3.60E+01 to  55
+ set area index above contour line  3.60E+01 to  56
+ set area index below contour line  3.61E+01 to  56
+ set area index above contour line  3.61E+01 to  57
+ set area index below contour line  3.62E+01 to  57
+ set area index above contour line  3.62E+01 to  58
+ set area index below contour line  3.62E+01 to  58
+ set area index above contour line  3.62E+01 to  59
+ set area index below contour line  3.62E+01 to  59
+ set area index above contour line  3.62E+01 to  60
+ set area index below contour line  3.63E+01 to  60
+ set area index above contour line  3.63E+01 to  61
+ set area index below contour line  3.63E+01 to  61
+ set area index above contour line  3.63E+01 to  62
+ set area index below contour line  3.64E+01 to  62
+ set area index above contour line  3.64E+01 to  63
+ set area index below contour line  3.65E+01 to  63
+ set area index above contour line  3.65E+01 to  64
+ set area index below contour line  3.65E+01 to  64
+ set area index above contour line  3.65E+01 to  65
+ set area index below contour line  3.65E+01 to  65
+ set area index above contour line  3.65E+01 to  66
+ set area index below contour line  3.66E+01 to  66
+ set area index above contour line  3.66E+01 to  67
+ set area index below contour line  3.67E+01 to  67
+ set area index above contour line  3.67E+01 to  68
+ set area index below contour line  3.67E+01 to  68
+ set area index above contour line  3.67E+01 to  69
+ set area index below contour line  3.68E+01 to  69
+ set area index above contour line  3.68E+01 to  70
+ set area index below contour line  3.68E+01 to  70
+ set area index above contour line  3.68E+01 to  71
+ set area index below contour line  3.68E+01 to  71
+ set area index above contour line  3.68E+01 to  72
+ set area index below contour line  3.69E+01 to  72
+ set area index above contour line  3.69E+01 to  73
+ set area index below contour line  3.70E+01 to  73
+ set area index above contour line  3.70E+01 to  74
+ set area index below contour line  3.70E+01 to  74
+ set area index above contour line  3.70E+01 to  75
+ set area index below contour line  3.70E+01 to  75
+ set area index above contour line  3.70E+01 to  76
+ set area index below contour line  3.71E+01 to  76
+ set area index above contour line  3.71E+01 to  77
+ set area index below contour line  3.72E+01 to  77
+ set area index above contour line  3.72E+01 to  78
+ set area index below contour line  3.72E+01 to  78
+ set area index above contour line  3.72E+01 to  79
+ set area index below contour line  3.72E+01 to  79
+ set area index above contour line  3.72E+01 to  80
+ set area index below contour line  3.73E+01 to  80
+ set area index above contour line  3.73E+01 to  81
+ set area index below contour line  3.73E+01 to  81
+ set area index above contour line  3.73E+01 to  82
+ set area index below contour line  3.74E+01 to  82
+ set area index above contour line  3.74E+01 to  83
+ set area index below contour line  3.75E+01 to  83
+ set area index above contour line  3.75E+01 to  84
+ set area index below contour line  3.75E+01 to  84
+ set area index above contour line  3.75E+01 to  85
+ set area index below contour line  3.75E+01 to  85
+ set area index above contour line  3.75E+01 to  86
+ set area index below contour line  3.76E+01 to  86
+ set area index above contour line  3.76E+01 to  87
+ set area index below contour line  3.77E+01 to  87
+ set area index above contour line  3.77E+01 to  88
+ set area index below contour line  3.77E+01 to  88
+ set area index above contour line  3.77E+01 to  89
+ set area index below contour line  3.78E+01 to  89
+ set area index above contour line  3.78E+01 to  90
+ set area index below contour line  3.78E+01 to  90
+ set area index above contour line  3.78E+01 to  91
+ set area index below contour line  3.78E+01 to  91
+ set area index above contour line  3.78E+01 to  92
+ set area index below contour line  3.79E+01 to  92
+ set area index above contour line  3.79E+01 to  93
+ set area index below contour line  3.80E+01 to  93
+ set area index above contour line  3.80E+01 to  94
+ set area index below contour line  3.80E+01 to  94
+ set area index above contour line  3.80E+01 to  95
+ set area index below contour line  3.80E+01 to  95
+ set area index above contour line  3.80E+01 to  96
+ set area index below contour line  3.81E+01 to  96
+ set area index above contour line  3.81E+01 to  97
+ set area index below contour line  3.82E+01 to  97
+ set area index above contour line  3.82E+01 to  98
+ set area index below contour line  3.82E+01 to  98
+ set area index above contour line  3.82E+01 to  99
+ set area index below contour line  3.82E+01 to  99
+ set area index above contour line  3.82E+01 to 100
+ set area index below contour line  3.83E+01 to 100
+ set area index above contour line  3.83E+01 to 101
+ set area index below contour line  3.83E+01 to 101
+ set area index above contour line  3.83E+01 to 102
+ set area index below contour line  3.84E+01 to 102
+ set area index above contour line  3.84E+01 to 103
+ set area index below contour line  3.85E+01 to 103
+ set area index above contour line  3.85E+01 to 104
+ set area index below contour line  3.85E+01 to 104
+ set area index above contour line  3.85E+01 to 104
+ frame advance no.   3
+blkinr: ssdqq  =     0.1000 sig
+min  1.41E+01 at  25  12  max  2.78E+01 at  23  47  intvl.,lines  1.00E+00  13
+blkinr: center =    23.5000 sig
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =  18.500  28.500   0.100
+ horiz. map: mix.layr.dens       year   0.00 (jan 16) [02.4H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+ call to conrec => conpack
+ use color table entries   5 -- 104         ipalet =  5
+ set area index below contour line  1.86E+01 to   5
+ set area index above contour line  1.86E+01 to   6
+ set area index below contour line  1.87E+01 to   6
+ set area index above contour line  1.87E+01 to   7
+ set area index below contour line  1.88E+01 to   7
+ set area index above contour line  1.88E+01 to   8
+ set area index below contour line  1.89E+01 to   8
+ set area index above contour line  1.89E+01 to   9
+ set area index below contour line  1.90E+01 to   9
+ set area index above contour line  1.90E+01 to  10
+ set area index below contour line  1.91E+01 to  10
+ set area index above contour line  1.91E+01 to  11
+ set area index below contour line  1.92E+01 to  11
+ set area index above contour line  1.92E+01 to  12
+ set area index below contour line  1.93E+01 to  12
+ set area index above contour line  1.93E+01 to  13
+ set area index below contour line  1.94E+01 to  13
+ set area index above contour line  1.94E+01 to  14
+ set area index below contour line  1.95E+01 to  14
+ set area index above contour line  1.95E+01 to  15
+ set area index below contour line  1.96E+01 to  15
+ set area index above contour line  1.96E+01 to  16
+ set area index below contour line  1.97E+01 to  16
+ set area index above contour line  1.97E+01 to  17
+ set area index below contour line  1.98E+01 to  17
+ set area index above contour line  1.98E+01 to  18
+ set area index below contour line  1.99E+01 to  18
+ set area index above contour line  1.99E+01 to  19
+ set area index below contour line  2.00E+01 to  19
+ set area index above contour line  2.00E+01 to  20
+ set area index below contour line  2.01E+01 to  20
+ set area index above contour line  2.01E+01 to  21
+ set area index below contour line  2.02E+01 to  21
+ set area index above contour line  2.02E+01 to  22
+ set area index below contour line  2.03E+01 to  22
+ set area index above contour line  2.03E+01 to  23
+ set area index below contour line  2.04E+01 to  23
+ set area index above contour line  2.04E+01 to  24
+ set area index below contour line  2.05E+01 to  24
+ set area index above contour line  2.05E+01 to  25
+ set area index below contour line  2.06E+01 to  25
+ set area index above contour line  2.06E+01 to  26
+ set area index below contour line  2.07E+01 to  26
+ set area index above contour line  2.07E+01 to  27
+ set area index below contour line  2.08E+01 to  27
+ set area index above contour line  2.08E+01 to  28
+ set area index below contour line  2.09E+01 to  28
+ set area index above contour line  2.09E+01 to  29
+ set area index below contour line  2.10E+01 to  29
+ set area index above contour line  2.10E+01 to  30
+ set area index below contour line  2.11E+01 to  30
+ set area index above contour line  2.11E+01 to  31
+ set area index below contour line  2.12E+01 to  31
+ set area index above contour line  2.12E+01 to  32
+ set area index below contour line  2.13E+01 to  32
+ set area index above contour line  2.13E+01 to  33
+ set area index below contour line  2.14E+01 to  33
+ set area index above contour line  2.14E+01 to  34
+ set area index below contour line  2.15E+01 to  34
+ set area index above contour line  2.15E+01 to  35
+ set area index below contour line  2.16E+01 to  35
+ set area index above contour line  2.16E+01 to  36
+ set area index below contour line  2.17E+01 to  36
+ set area index above contour line  2.17E+01 to  37
+ set area index below contour line  2.18E+01 to  37
+ set area index above contour line  2.18E+01 to  38
+ set area index below contour line  2.19E+01 to  38
+ set area index above contour line  2.19E+01 to  39
+ set area index below contour line  2.20E+01 to  39
+ set area index above contour line  2.20E+01 to  40
+ set area index below contour line  2.21E+01 to  40
+ set area index above contour line  2.21E+01 to  41
+ set area index below contour line  2.22E+01 to  41
+ set area index above contour line  2.22E+01 to  42
+ set area index below contour line  2.23E+01 to  42
+ set area index above contour line  2.23E+01 to  43
+ set area index below contour line  2.24E+01 to  43
+ set area index above contour line  2.24E+01 to  44
+ set area index below contour line  2.25E+01 to  44
+ set area index above contour line  2.25E+01 to  45
+ set area index below contour line  2.26E+01 to  45
+ set area index above contour line  2.26E+01 to  46
+ set area index below contour line  2.27E+01 to  46
+ set area index above contour line  2.27E+01 to  47
+ set area index below contour line  2.28E+01 to  47
+ set area index above contour line  2.28E+01 to  48
+ set area index below contour line  2.29E+01 to  48
+ set area index above contour line  2.29E+01 to  49
+ set area index below contour line  2.30E+01 to  49
+ set area index above contour line  2.30E+01 to  50
+ set area index below contour line  2.31E+01 to  50
+ set area index above contour line  2.31E+01 to  51
+ set area index below contour line  2.32E+01 to  51
+ set area index above contour line  2.32E+01 to  52
+ set area index below contour line  2.33E+01 to  52
+ set area index above contour line  2.33E+01 to  53
+ set area index below contour line  2.34E+01 to  53
+ set area index above contour line  2.34E+01 to  54
+ set area index below contour line  2.35E+01 to  54
+ set area index above contour line  2.35E+01 to  55
+ set area index below contour line  2.36E+01 to  55
+ set area index above contour line  2.36E+01 to  56
+ set area index below contour line  2.37E+01 to  56
+ set area index above contour line  2.37E+01 to  57
+ set area index below contour line  2.38E+01 to  57
+ set area index above contour line  2.38E+01 to  58
+ set area index below contour line  2.39E+01 to  58
+ set area index above contour line  2.39E+01 to  59
+ set area index below contour line  2.40E+01 to  59
+ set area index above contour line  2.40E+01 to  60
+ set area index below contour line  2.41E+01 to  60
+ set area index above contour line  2.41E+01 to  61
+ set area index below contour line  2.42E+01 to  61
+ set area index above contour line  2.42E+01 to  62
+ set area index below contour line  2.43E+01 to  62
+ set area index above contour line  2.43E+01 to  63
+ set area index below contour line  2.44E+01 to  63
+ set area index above contour line  2.44E+01 to  64
+ set area index below contour line  2.45E+01 to  64
+ set area index above contour line  2.45E+01 to  65
+ set area index below contour line  2.46E+01 to  65
+ set area index above contour line  2.46E+01 to  66
+ set area index below contour line  2.47E+01 to  66
+ set area index above contour line  2.47E+01 to  67
+ set area index below contour line  2.48E+01 to  67
+ set area index above contour line  2.48E+01 to  68
+ set area index below contour line  2.49E+01 to  68
+ set area index above contour line  2.49E+01 to  69
+ set area index below contour line  2.50E+01 to  69
+ set area index above contour line  2.50E+01 to  70
+ set area index below contour line  2.51E+01 to  70
+ set area index above contour line  2.51E+01 to  71
+ set area index below contour line  2.52E+01 to  71
+ set area index above contour line  2.52E+01 to  72
+ set area index below contour line  2.53E+01 to  72
+ set area index above contour line  2.53E+01 to  73
+ set area index below contour line  2.54E+01 to  73
+ set area index above contour line  2.54E+01 to  74
+ set area index below contour line  2.55E+01 to  74
+ set area index above contour line  2.55E+01 to  75
+ set area index below contour line  2.56E+01 to  75
+ set area index above contour line  2.56E+01 to  76
+ set area index below contour line  2.57E+01 to  76
+ set area index above contour line  2.57E+01 to  77
+ set area index below contour line  2.58E+01 to  77
+ set area index above contour line  2.58E+01 to  78
+ set area index below contour line  2.59E+01 to  78
+ set area index above contour line  2.59E+01 to  79
+ set area index below contour line  2.60E+01 to  79
+ set area index above contour line  2.60E+01 to  80
+ set area index below contour line  2.61E+01 to  80
+ set area index above contour line  2.61E+01 to  81
+ set area index below contour line  2.62E+01 to  81
+ set area index above contour line  2.62E+01 to  82
+ set area index below contour line  2.63E+01 to  82
+ set area index above contour line  2.63E+01 to  83
+ set area index below contour line  2.64E+01 to  83
+ set area index above contour line  2.64E+01 to  84
+ set area index below contour line  2.65E+01 to  84
+ set area index above contour line  2.65E+01 to  85
+ set area index below contour line  2.66E+01 to  85
+ set area index above contour line  2.66E+01 to  86
+ set area index below contour line  2.67E+01 to  86
+ set area index above contour line  2.67E+01 to  87
+ set area index below contour line  2.68E+01 to  87
+ set area index above contour line  2.68E+01 to  88
+ set area index below contour line  2.69E+01 to  88
+ set area index above contour line  2.69E+01 to  89
+ set area index below contour line  2.70E+01 to  89
+ set area index above contour line  2.70E+01 to  90
+ set area index below contour line  2.71E+01 to  90
+ set area index above contour line  2.71E+01 to  91
+ set area index below contour line  2.72E+01 to  91
+ set area index above contour line  2.72E+01 to  92
+ set area index below contour line  2.73E+01 to  92
+ set area index above contour line  2.73E+01 to  93
+ set area index below contour line  2.74E+01 to  93
+ set area index above contour line  2.74E+01 to  94
+ set area index below contour line  2.75E+01 to  94
+ set area index above contour line  2.75E+01 to  95
+ set area index below contour line  2.76E+01 to  95
+ set area index above contour line  2.76E+01 to  96
+ set area index below contour line  2.77E+01 to  96
+ set area index above contour line  2.77E+01 to  97
+ set area index below contour line  2.78E+01 to  97
+ set area index above contour line  2.78E+01 to  98
+ set area index below contour line  2.79E+01 to  98
+ set area index above contour line  2.79E+01 to  99
+ set area index below contour line  2.80E+01 to  99
+ set area index above contour line  2.80E+01 to 100
+ set area index below contour line  2.81E+01 to 100
+ set area index above contour line  2.81E+01 to 101
+ set area index below contour line  2.82E+01 to 101
+ set area index above contour line  2.82E+01 to 102
+ set area index below contour line  2.83E+01 to 102
+ set area index above contour line  2.83E+01 to 103
+ set area index below contour line  2.84E+01 to 103
+ set area index above contour line  2.84E+01 to 104
+ set area index below contour line  2.85E+01 to 104
+ set area index above contour line  2.85E+01 to 104
+horplt - lat,y =  -10    5.974
+horplt - lat,y =    0   11.000
+horplt - lat,y =   10   16.026
+horplt - lat,y =   20   21.209
+horplt - lat,y =   30   26.736
+horplt - lat,y =   40   32.856
+horplt - lat,y =   50   39.954
+horplt - lat,y =   60   48.728
+ horplt - reflon,gridsz,iorign,iref,orilon =  263.0 2.0 1 1 263.0
+horplt - lon,x =  -90    4.500
+horplt - lon,x =  -80    9.500
+horplt - lon,x =  -70   14.500
+horplt - lon,x =  -60   19.500
+horplt - lon,x =  -50   24.500
+horplt - lon,x =  -40   29.500
+horplt - lon,x =  -30   34.500
+horplt - lon,x =  -20   39.500
+horplt - lon,x =  -10   44.500
+horplt - lon,x =    0   49.500
+horplt - lon,x =   10   54.500
+ call to conrec => conpack
+                      fflo,ffhi,qq =  18.500  28.500   0.100
+draw color bar in box     0.880 < x < 0.960     0.668 < y < 0.919    logsc = F
+colbar -- write string    19     at   2.10   2.70
+colbar -- write string    20     at   2.10   6.10
+colbar -- write string    21     at   2.10   9.50
+colbar -- write string    22     at   2.10  12.90
+colbar -- write string    23     at   2.10  16.30
+colbar -- write string    24     at   2.10  19.70
+colbar -- write string    25     at   2.10  23.10
+colbar -- write string    26     at   2.10  26.50
+colbar -- write string    27     at   2.10  29.90
+colbar -- write string    28     at   2.10  33.30
+ call to conrec => conpack
+ use color table entries   5 -- 104         ipalet =  5
+ set area index below contour line  1.86E+01 to   5
+ set area index above contour line  1.86E+01 to   6
+ set area index below contour line  1.87E+01 to   6
+ set area index above contour line  1.87E+01 to   7
+ set area index below contour line  1.88E+01 to   7
+ set area index above contour line  1.88E+01 to   8
+ set area index below contour line  1.89E+01 to   8
+ set area index above contour line  1.89E+01 to   9
+ set area index below contour line  1.90E+01 to   9
+ set area index above contour line  1.90E+01 to  10
+ set area index below contour line  1.91E+01 to  10
+ set area index above contour line  1.91E+01 to  11
+ set area index below contour line  1.92E+01 to  11
+ set area index above contour line  1.92E+01 to  12
+ set area index below contour line  1.93E+01 to  12
+ set area index above contour line  1.93E+01 to  13
+ set area index below contour line  1.94E+01 to  13
+ set area index above contour line  1.94E+01 to  14
+ set area index below contour line  1.95E+01 to  14
+ set area index above contour line  1.95E+01 to  15
+ set area index below contour line  1.96E+01 to  15
+ set area index above contour line  1.96E+01 to  16
+ set area index below contour line  1.97E+01 to  16
+ set area index above contour line  1.97E+01 to  17
+ set area index below contour line  1.98E+01 to  17
+ set area index above contour line  1.98E+01 to  18
+ set area index below contour line  1.99E+01 to  18
+ set area index above contour line  1.99E+01 to  19
+ set area index below contour line  2.00E+01 to  19
+ set area index above contour line  2.00E+01 to  20
+ set area index below contour line  2.01E+01 to  20
+ set area index above contour line  2.01E+01 to  21
+ set area index below contour line  2.02E+01 to  21
+ set area index above contour line  2.02E+01 to  22
+ set area index below contour line  2.03E+01 to  22
+ set area index above contour line  2.03E+01 to  23
+ set area index below contour line  2.04E+01 to  23
+ set area index above contour line  2.04E+01 to  24
+ set area index below contour line  2.05E+01 to  24
+ set area index above contour line  2.05E+01 to  25
+ set area index below contour line  2.06E+01 to  25
+ set area index above contour line  2.06E+01 to  26
+ set area index below contour line  2.07E+01 to  26
+ set area index above contour line  2.07E+01 to  27
+ set area index below contour line  2.08E+01 to  27
+ set area index above contour line  2.08E+01 to  28
+ set area index below contour line  2.09E+01 to  28
+ set area index above contour line  2.09E+01 to  29
+ set area index below contour line  2.10E+01 to  29
+ set area index above contour line  2.10E+01 to  30
+ set area index below contour line  2.11E+01 to  30
+ set area index above contour line  2.11E+01 to  31
+ set area index below contour line  2.12E+01 to  31
+ set area index above contour line  2.12E+01 to  32
+ set area index below contour line  2.13E+01 to  32
+ set area index above contour line  2.13E+01 to  33
+ set area index below contour line  2.14E+01 to  33
+ set area index above contour line  2.14E+01 to  34
+ set area index below contour line  2.15E+01 to  34
+ set area index above contour line  2.15E+01 to  35
+ set area index below contour line  2.16E+01 to  35
+ set area index above contour line  2.16E+01 to  36
+ set area index below contour line  2.17E+01 to  36
+ set area index above contour line  2.17E+01 to  37
+ set area index below contour line  2.18E+01 to  37
+ set area index above contour line  2.18E+01 to  38
+ set area index below contour line  2.19E+01 to  38
+ set area index above contour line  2.19E+01 to  39
+ set area index below contour line  2.20E+01 to  39
+ set area index above contour line  2.20E+01 to  40
+ set area index below contour line  2.21E+01 to  40
+ set area index above contour line  2.21E+01 to  41
+ set area index below contour line  2.22E+01 to  41
+ set area index above contour line  2.22E+01 to  42
+ set area index below contour line  2.23E+01 to  42
+ set area index above contour line  2.23E+01 to  43
+ set area index below contour line  2.24E+01 to  43
+ set area index above contour line  2.24E+01 to  44
+ set area index below contour line  2.25E+01 to  44
+ set area index above contour line  2.25E+01 to  45
+ set area index below contour line  2.26E+01 to  45
+ set area index above contour line  2.26E+01 to  46
+ set area index below contour line  2.27E+01 to  46
+ set area index above contour line  2.27E+01 to  47
+ set area index below contour line  2.28E+01 to  47
+ set area index above contour line  2.28E+01 to  48
+ set area index below contour line  2.29E+01 to  48
+ set area index above contour line  2.29E+01 to  49
+ set area index below contour line  2.30E+01 to  49
+ set area index above contour line  2.30E+01 to  50
+ set area index below contour line  2.31E+01 to  50
+ set area index above contour line  2.31E+01 to  51
+ set area index below contour line  2.32E+01 to  51
+ set area index above contour line  2.32E+01 to  52
+ set area index below contour line  2.33E+01 to  52
+ set area index above contour line  2.33E+01 to  53
+ set area index below contour line  2.34E+01 to  53
+ set area index above contour line  2.34E+01 to  54
+ set area index below contour line  2.35E+01 to  54
+ set area index above contour line  2.35E+01 to  55
+ set area index below contour line  2.36E+01 to  55
+ set area index above contour line  2.36E+01 to  56
+ set area index below contour line  2.37E+01 to  56
+ set area index above contour line  2.37E+01 to  57
+ set area index below contour line  2.38E+01 to  57
+ set area index above contour line  2.38E+01 to  58
+ set area index below contour line  2.39E+01 to  58
+ set area index above contour line  2.39E+01 to  59
+ set area index below contour line  2.40E+01 to  59
+ set area index above contour line  2.40E+01 to  60
+ set area index below contour line  2.41E+01 to  60
+ set area index above contour line  2.41E+01 to  61
+ set area index below contour line  2.42E+01 to  61
+ set area index above contour line  2.42E+01 to  62
+ set area index below contour line  2.43E+01 to  62
+ set area index above contour line  2.43E+01 to  63
+ set area index below contour line  2.44E+01 to  63
+ set area index above contour line  2.44E+01 to  64
+ set area index below contour line  2.45E+01 to  64
+ set area index above contour line  2.45E+01 to  65
+ set area index below contour line  2.46E+01 to  65
+ set area index above contour line  2.46E+01 to  66
+ set area index below contour line  2.47E+01 to  66
+ set area index above contour line  2.47E+01 to  67
+ set area index below contour line  2.48E+01 to  67
+ set area index above contour line  2.48E+01 to  68
+ set area index below contour line  2.49E+01 to  68
+ set area index above contour line  2.49E+01 to  69
+ set area index below contour line  2.50E+01 to  69
+ set area index above contour line  2.50E+01 to  70
+ set area index below contour line  2.51E+01 to  70
+ set area index above contour line  2.51E+01 to  71
+ set area index below contour line  2.52E+01 to  71
+ set area index above contour line  2.52E+01 to  72
+ set area index below contour line  2.53E+01 to  72
+ set area index above contour line  2.53E+01 to  73
+ set area index below contour line  2.54E+01 to  73
+ set area index above contour line  2.54E+01 to  74
+ set area index below contour line  2.55E+01 to  74
+ set area index above contour line  2.55E+01 to  75
+ set area index below contour line  2.56E+01 to  75
+ set area index above contour line  2.56E+01 to  76
+ set area index below contour line  2.57E+01 to  76
+ set area index above contour line  2.57E+01 to  77
+ set area index below contour line  2.58E+01 to  77
+ set area index above contour line  2.58E+01 to  78
+ set area index below contour line  2.59E+01 to  78
+ set area index above contour line  2.59E+01 to  79
+ set area index below contour line  2.60E+01 to  79
+ set area index above contour line  2.60E+01 to  80
+ set area index below contour line  2.61E+01 to  80
+ set area index above contour line  2.61E+01 to  81
+ set area index below contour line  2.62E+01 to  81
+ set area index above contour line  2.62E+01 to  82
+ set area index below contour line  2.63E+01 to  82
+ set area index above contour line  2.63E+01 to  83
+ set area index below contour line  2.64E+01 to  83
+ set area index above contour line  2.64E+01 to  84
+ set area index below contour line  2.65E+01 to  84
+ set area index above contour line  2.65E+01 to  85
+ set area index below contour line  2.66E+01 to  85
+ set area index above contour line  2.66E+01 to  86
+ set area index below contour line  2.67E+01 to  86
+ set area index above contour line  2.67E+01 to  87
+ set area index below contour line  2.68E+01 to  87
+ set area index above contour line  2.68E+01 to  88
+ set area index below contour line  2.69E+01 to  88
+ set area index above contour line  2.69E+01 to  89
+ set area index below contour line  2.70E+01 to  89
+ set area index above contour line  2.70E+01 to  90
+ set area index below contour line  2.71E+01 to  90
+ set area index above contour line  2.71E+01 to  91
+ set area index below contour line  2.72E+01 to  91
+ set area index above contour line  2.72E+01 to  92
+ set area index below contour line  2.73E+01 to  92
+ set area index above contour line  2.73E+01 to  93
+ set area index below contour line  2.74E+01 to  93
+ set area index above contour line  2.74E+01 to  94
+ set area index below contour line  2.75E+01 to  94
+ set area index above contour line  2.75E+01 to  95
+ set area index below contour line  2.76E+01 to  95
+ set area index above contour line  2.76E+01 to  96
+ set area index below contour line  2.77E+01 to  96
+ set area index above contour line  2.77E+01 to  97
+ set area index below contour line  2.78E+01 to  97
+ set area index above contour line  2.78E+01 to  98
+ set area index below contour line  2.79E+01 to  98
+ set area index above contour line  2.79E+01 to  99
+ set area index below contour line  2.80E+01 to  99
+ set area index above contour line  2.80E+01 to 100
+ set area index below contour line  2.81E+01 to 100
+ set area index above contour line  2.81E+01 to 101
+ set area index below contour line  2.82E+01 to 101
+ set area index above contour line  2.82E+01 to 102
+ set area index below contour line  2.83E+01 to 102
+ set area index above contour line  2.83E+01 to 103
+ set area index below contour line  2.84E+01 to 103
+ set area index above contour line  2.84E+01 to 104
+ set area index below contour line  2.85E+01 to 104
+ set area index above contour line  2.85E+01 to 104
+ frame advance no.   4
+blkini: k      =     1
+blkinr: vthrsh =     0.0000 cm
+blkinr: infqq  =    -1.0000 m
+blkinr: thkqq  =    -1.0000 m
+blkinr: temqq  =     0.1000 deg
+min -4.09E+00 at  36   4  max  1.82E+01 at  48  11  intvl.,lines  2.00E+00  11
+blkinr: center =     3.0000 deg
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =  -2.000   8.000   0.100
+ horiz. map: sig=27.92  temp     year   0.00 (jan 16) [02.4H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+ call to conrec => conpack
+ use color table entries   5 -- 104         ipalet =  5
+ set area index below contour line -1.90E+00 to   5
+ set area index above contour line -1.90E+00 to   6
+ set area index below contour line -1.80E+00 to   6
+ set area index above contour line -1.80E+00 to   7
+ set area index below contour line -1.70E+00 to   7
+ set area index above contour line -1.70E+00 to   8
+ set area index below contour line -1.60E+00 to   8
+ set area index above contour line -1.60E+00 to   9
+ set area index below contour line -1.50E+00 to   9
+ set area index above contour line -1.50E+00 to  10
+ set area index below contour line -1.40E+00 to  10
+ set area index above contour line -1.40E+00 to  11
+ set area index below contour line -1.30E+00 to  11
+ set area index above contour line -1.30E+00 to  12
+ set area index below contour line -1.20E+00 to  12
+ set area index above contour line -1.20E+00 to  13
+ set area index below contour line -1.10E+00 to  13
+ set area index above contour line -1.10E+00 to  14
+ set area index below contour line -1.00E+00 to  14
+ set area index above contour line -1.00E+00 to  15
+ set area index below contour line -9.00E-01 to  15
+ set area index above contour line -9.00E-01 to  16
+ set area index below contour line -8.00E-01 to  16
+ set area index above contour line -8.00E-01 to  17
+ set area index below contour line -7.00E-01 to  17
+ set area index above contour line -7.00E-01 to  18
+ set area index below contour line -6.00E-01 to  18
+ set area index above contour line -6.00E-01 to  19
+ set area index below contour line -5.00E-01 to  19
+ set area index above contour line -5.00E-01 to  20
+ set area index below contour line -4.00E-01 to  20
+ set area index above contour line -4.00E-01 to  21
+ set area index below contour line -3.00E-01 to  21
+ set area index above contour line -3.00E-01 to  22
+ set area index below contour line -2.00E-01 to  22
+ set area index above contour line -2.00E-01 to  23
+ set area index below contour line -1.00E-01 to  23
+ set area index above contour line -1.00E-01 to  24
+ set area index below contour line  0.00E+00 to  24
+ set area index above contour line  0.00E+00 to  25
+ set area index below contour line  1.00E-01 to  25
+ set area index above contour line  1.00E-01 to  26
+ set area index below contour line  2.00E-01 to  26
+ set area index above contour line  2.00E-01 to  27
+ set area index below contour line  3.00E-01 to  27
+ set area index above contour line  3.00E-01 to  28
+ set area index below contour line  4.00E-01 to  28
+ set area index above contour line  4.00E-01 to  29
+ set area index below contour line  5.00E-01 to  29
+ set area index above contour line  5.00E-01 to  30
+ set area index below contour line  6.00E-01 to  30
+ set area index above contour line  6.00E-01 to  31
+ set area index below contour line  7.00E-01 to  31
+ set area index above contour line  7.00E-01 to  32
+ set area index below contour line  8.00E-01 to  32
+ set area index above contour line  8.00E-01 to  33
+ set area index below contour line  9.00E-01 to  33
+ set area index above contour line  9.00E-01 to  34
+ set area index below contour line  1.00E+00 to  34
+ set area index above contour line  1.00E+00 to  35
+ set area index below contour line  1.10E+00 to  35
+ set area index above contour line  1.10E+00 to  36
+ set area index below contour line  1.20E+00 to  36
+ set area index above contour line  1.20E+00 to  37
+ set area index below contour line  1.30E+00 to  37
+ set area index above contour line  1.30E+00 to  38
+ set area index below contour line  1.40E+00 to  38
+ set area index above contour line  1.40E+00 to  39
+ set area index below contour line  1.50E+00 to  39
+ set area index above contour line  1.50E+00 to  40
+ set area index below contour line  1.60E+00 to  40
+ set area index above contour line  1.60E+00 to  41
+ set area index below contour line  1.70E+00 to  41
+ set area index above contour line  1.70E+00 to  42
+ set area index below contour line  1.80E+00 to  42
+ set area index above contour line  1.80E+00 to  43
+ set area index below contour line  1.90E+00 to  43
+ set area index above contour line  1.90E+00 to  44
+ set area index below contour line  2.00E+00 to  44
+ set area index above contour line  2.00E+00 to  45
+ set area index below contour line  2.10E+00 to  45
+ set area index above contour line  2.10E+00 to  46
+ set area index below contour line  2.20E+00 to  46
+ set area index above contour line  2.20E+00 to  47
+ set area index below contour line  2.30E+00 to  47
+ set area index above contour line  2.30E+00 to  48
+ set area index below contour line  2.40E+00 to  48
+ set area index above contour line  2.40E+00 to  49
+ set area index below contour line  2.50E+00 to  49
+ set area index above contour line  2.50E+00 to  50
+ set area index below contour line  2.60E+00 to  50
+ set area index above contour line  2.60E+00 to  51
+ set area index below contour line  2.70E+00 to  51
+ set area index above contour line  2.70E+00 to  52
+ set area index below contour line  2.80E+00 to  52
+ set area index above contour line  2.80E+00 to  53
+ set area index below contour line  2.90E+00 to  53
+ set area index above contour line  2.90E+00 to  54
+ set area index below contour line  3.00E+00 to  54
+ set area index above contour line  3.00E+00 to  55
+ set area index below contour line  3.10E+00 to  55
+ set area index above contour line  3.10E+00 to  56
+ set area index below contour line  3.20E+00 to  56
+ set area index above contour line  3.20E+00 to  57
+ set area index below contour line  3.30E+00 to  57
+ set area index above contour line  3.30E+00 to  58
+ set area index below contour line  3.40E+00 to  58
+ set area index above contour line  3.40E+00 to  59
+ set area index below contour line  3.50E+00 to  59
+ set area index above contour line  3.50E+00 to  60
+ set area index below contour line  3.60E+00 to  60
+ set area index above contour line  3.60E+00 to  61
+ set area index below contour line  3.70E+00 to  61
+ set area index above contour line  3.70E+00 to  62
+ set area index below contour line  3.80E+00 to  62
+ set area index above contour line  3.80E+00 to  63
+ set area index below contour line  3.90E+00 to  63
+ set area index above contour line  3.90E+00 to  64
+ set area index below contour line  4.00E+00 to  64
+ set area index above contour line  4.00E+00 to  65
+ set area index below contour line  4.10E+00 to  65
+ set area index above contour line  4.10E+00 to  66
+ set area index below contour line  4.20E+00 to  66
+ set area index above contour line  4.20E+00 to  67
+ set area index below contour line  4.30E+00 to  67
+ set area index above contour line  4.30E+00 to  68
+ set area index below contour line  4.40E+00 to  68
+ set area index above contour line  4.40E+00 to  69
+ set area index below contour line  4.50E+00 to  69
+ set area index above contour line  4.50E+00 to  70
+ set area index below contour line  4.60E+00 to  70
+ set area index above contour line  4.60E+00 to  71
+ set area index below contour line  4.70E+00 to  71
+ set area index above contour line  4.70E+00 to  72
+ set area index below contour line  4.80E+00 to  72
+ set area index above contour line  4.80E+00 to  73
+ set area index below contour line  4.90E+00 to  73
+ set area index above contour line  4.90E+00 to  74
+ set area index below contour line  5.00E+00 to  74
+ set area index above contour line  5.00E+00 to  75
+ set area index below contour line  5.10E+00 to  75
+ set area index above contour line  5.10E+00 to  76
+ set area index below contour line  5.20E+00 to  76
+ set area index above contour line  5.20E+00 to  77
+ set area index below contour line  5.30E+00 to  77
+ set area index above contour line  5.30E+00 to  78
+ set area index below contour line  5.40E+00 to  78
+ set area index above contour line  5.40E+00 to  79
+ set area index below contour line  5.50E+00 to  79
+ set area index above contour line  5.50E+00 to  80
+ set area index below contour line  5.60E+00 to  80
+ set area index above contour line  5.60E+00 to  81
+ set area index below contour line  5.70E+00 to  81
+ set area index above contour line  5.70E+00 to  82
+ set area index below contour line  5.80E+00 to  82
+ set area index above contour line  5.80E+00 to  83
+ set area index below contour line  5.90E+00 to  83
+ set area index above contour line  5.90E+00 to  84
+ set area index below contour line  6.00E+00 to  84
+ set area index above contour line  6.00E+00 to  85
+ set area index below contour line  6.10E+00 to  85
+ set area index above contour line  6.10E+00 to  86
+ set area index below contour line  6.20E+00 to  86
+ set area index above contour line  6.20E+00 to  87
+ set area index below contour line  6.30E+00 to  87
+ set area index above contour line  6.30E+00 to  88
+ set area index below contour line  6.40E+00 to  88
+ set area index above contour line  6.40E+00 to  89
+ set area index below contour line  6.50E+00 to  89
+ set area index above contour line  6.50E+00 to  90
+ set area index below contour line  6.60E+00 to  90
+ set area index above contour line  6.60E+00 to  91
+ set area index below contour line  6.70E+00 to  91
+ set area index above contour line  6.70E+00 to  92
+ set area index below contour line  6.80E+00 to  92
+ set area index above contour line  6.80E+00 to  93
+ set area index below contour line  6.90E+00 to  93
+ set area index above contour line  6.90E+00 to  94
+ set area index below contour line  7.00E+00 to  94
+ set area index above contour line  7.00E+00 to  95
+ set area index below contour line  7.10E+00 to  95
+ set area index above contour line  7.10E+00 to  96
+ set area index below contour line  7.20E+00 to  96
+ set area index above contour line  7.20E+00 to  97
+ set area index below contour line  7.30E+00 to  97
+ set area index above contour line  7.30E+00 to  98
+ set area index below contour line  7.40E+00 to  98
+ set area index above contour line  7.40E+00 to  99
+ set area index below contour line  7.50E+00 to  99
+ set area index above contour line  7.50E+00 to 100
+ set area index below contour line  7.60E+00 to 100
+ set area index above contour line  7.60E+00 to 101
+ set area index below contour line  7.70E+00 to 101
+ set area index above contour line  7.70E+00 to 102
+ set area index below contour line  7.80E+00 to 102
+ set area index above contour line  7.80E+00 to 103
+ set area index below contour line  7.90E+00 to 103
+ set area index above contour line  7.90E+00 to 104
+ set area index below contour line  8.00E+00 to 104
+ set area index above contour line  8.00E+00 to 104
+horplt - lat,y =  -10    5.974
+horplt - lat,y =    0   11.000
+horplt - lat,y =   10   16.026
+horplt - lat,y =   20   21.209
+horplt - lat,y =   30   26.736
+horplt - lat,y =   40   32.856
+horplt - lat,y =   50   39.954
+horplt - lat,y =   60   48.728
+ horplt - reflon,gridsz,iorign,iref,orilon =  263.0 2.0 1 1 263.0
+horplt - lon,x =  -90    4.500
+horplt - lon,x =  -80    9.500
+horplt - lon,x =  -70   14.500
+horplt - lon,x =  -60   19.500
+horplt - lon,x =  -50   24.500
+horplt - lon,x =  -40   29.500
+horplt - lon,x =  -30   34.500
+horplt - lon,x =  -20   39.500
+horplt - lon,x =  -10   44.500
+horplt - lon,x =    0   49.500
+horplt - lon,x =   10   54.500
+ call to conrec => conpack
+                      fflo,ffhi,qq =  -2.000   8.000   0.100
+draw color bar in box     0.880 < x < 0.960     0.668 < y < 0.919    logsc = F
+colbar -- write string    -2     at   2.10   1.00
+colbar -- write string    -1     at   2.10   4.40
+colbar -- write string     0     at   2.10   7.80
+colbar -- write string     1     at   2.10  11.20
+colbar -- write string     2     at   2.10  14.60
+colbar -- write string     3     at   2.10  18.00
+colbar -- write string     4     at   2.10  21.40
+colbar -- write string     5     at   2.10  24.80
+colbar -- write string     6     at   2.10  28.20
+colbar -- write string     7     at   2.10  31.60
+colbar -- write string     8     at   2.10  35.00
+ call to conrec => conpack
+ use color table entries   5 -- 104         ipalet =  5
+ set area index below contour line -1.90E+00 to   5
+ set area index above contour line -1.90E+00 to   6
+ set area index below contour line -1.80E+00 to   6
+ set area index above contour line -1.80E+00 to   7
+ set area index below contour line -1.70E+00 to   7
+ set area index above contour line -1.70E+00 to   8
+ set area index below contour line -1.60E+00 to   8
+ set area index above contour line -1.60E+00 to   9
+ set area index below contour line -1.50E+00 to   9
+ set area index above contour line -1.50E+00 to  10
+ set area index below contour line -1.40E+00 to  10
+ set area index above contour line -1.40E+00 to  11
+ set area index below contour line -1.30E+00 to  11
+ set area index above contour line -1.30E+00 to  12
+ set area index below contour line -1.20E+00 to  12
+ set area index above contour line -1.20E+00 to  13
+ set area index below contour line -1.10E+00 to  13
+ set area index above contour line -1.10E+00 to  14
+ set area index below contour line -1.00E+00 to  14
+ set area index above contour line -1.00E+00 to  15
+ set area index below contour line -9.00E-01 to  15
+ set area index above contour line -9.00E-01 to  16
+ set area index below contour line -8.00E-01 to  16
+ set area index above contour line -8.00E-01 to  17
+ set area index below contour line -7.00E-01 to  17
+ set area index above contour line -7.00E-01 to  18
+ set area index below contour line -6.00E-01 to  18
+ set area index above contour line -6.00E-01 to  19
+ set area index below contour line -5.00E-01 to  19
+ set area index above contour line -5.00E-01 to  20
+ set area index below contour line -4.00E-01 to  20
+ set area index above contour line -4.00E-01 to  21
+ set area index below contour line -3.00E-01 to  21
+ set area index above contour line -3.00E-01 to  22
+ set area index below contour line -2.00E-01 to  22
+ set area index above contour line -2.00E-01 to  23
+ set area index below contour line -1.00E-01 to  23
+ set area index above contour line -1.00E-01 to  24
+ set area index below contour line  0.00E+00 to  24
+ set area index above contour line  0.00E+00 to  25
+ set area index below contour line  1.00E-01 to  25
+ set area index above contour line  1.00E-01 to  26
+ set area index below contour line  2.00E-01 to  26
+ set area index above contour line  2.00E-01 to  27
+ set area index below contour line  3.00E-01 to  27
+ set area index above contour line  3.00E-01 to  28
+ set area index below contour line  4.00E-01 to  28
+ set area index above contour line  4.00E-01 to  29
+ set area index below contour line  5.00E-01 to  29
+ set area index above contour line  5.00E-01 to  30
+ set area index below contour line  6.00E-01 to  30
+ set area index above contour line  6.00E-01 to  31
+ set area index below contour line  7.00E-01 to  31
+ set area index above contour line  7.00E-01 to  32
+ set area index below contour line  8.00E-01 to  32
+ set area index above contour line  8.00E-01 to  33
+ set area index below contour line  9.00E-01 to  33
+ set area index above contour line  9.00E-01 to  34
+ set area index below contour line  1.00E+00 to  34
+ set area index above contour line  1.00E+00 to  35
+ set area index below contour line  1.10E+00 to  35
+ set area index above contour line  1.10E+00 to  36
+ set area index below contour line  1.20E+00 to  36
+ set area index above contour line  1.20E+00 to  37
+ set area index below contour line  1.30E+00 to  37
+ set area index above contour line  1.30E+00 to  38
+ set area index below contour line  1.40E+00 to  38
+ set area index above contour line  1.40E+00 to  39
+ set area index below contour line  1.50E+00 to  39
+ set area index above contour line  1.50E+00 to  40
+ set area index below contour line  1.60E+00 to  40
+ set area index above contour line  1.60E+00 to  41
+ set area index below contour line  1.70E+00 to  41
+ set area index above contour line  1.70E+00 to  42
+ set area index below contour line  1.80E+00 to  42
+ set area index above contour line  1.80E+00 to  43
+ set area index below contour line  1.90E+00 to  43
+ set area index above contour line  1.90E+00 to  44
+ set area index below contour line  2.00E+00 to  44
+ set area index above contour line  2.00E+00 to  45
+ set area index below contour line  2.10E+00 to  45
+ set area index above contour line  2.10E+00 to  46
+ set area index below contour line  2.20E+00 to  46
+ set area index above contour line  2.20E+00 to  47
+ set area index below contour line  2.30E+00 to  47
+ set area index above contour line  2.30E+00 to  48
+ set area index below contour line  2.40E+00 to  48
+ set area index above contour line  2.40E+00 to  49
+ set area index below contour line  2.50E+00 to  49
+ set area index above contour line  2.50E+00 to  50
+ set area index below contour line  2.60E+00 to  50
+ set area index above contour line  2.60E+00 to  51
+ set area index below contour line  2.70E+00 to  51
+ set area index above contour line  2.70E+00 to  52
+ set area index below contour line  2.80E+00 to  52
+ set area index above contour line  2.80E+00 to  53
+ set area index below contour line  2.90E+00 to  53
+ set area index above contour line  2.90E+00 to  54
+ set area index below contour line  3.00E+00 to  54
+ set area index above contour line  3.00E+00 to  55
+ set area index below contour line  3.10E+00 to  55
+ set area index above contour line  3.10E+00 to  56
+ set area index below contour line  3.20E+00 to  56
+ set area index above contour line  3.20E+00 to  57
+ set area index below contour line  3.30E+00 to  57
+ set area index above contour line  3.30E+00 to  58
+ set area index below contour line  3.40E+00 to  58
+ set area index above contour line  3.40E+00 to  59
+ set area index below contour line  3.50E+00 to  59
+ set area index above contour line  3.50E+00 to  60
+ set area index below contour line  3.60E+00 to  60
+ set area index above contour line  3.60E+00 to  61
+ set area index below contour line  3.70E+00 to  61
+ set area index above contour line  3.70E+00 to  62
+ set area index below contour line  3.80E+00 to  62
+ set area index above contour line  3.80E+00 to  63
+ set area index below contour line  3.90E+00 to  63
+ set area index above contour line  3.90E+00 to  64
+ set area index below contour line  4.00E+00 to  64
+ set area index above contour line  4.00E+00 to  65
+ set area index below contour line  4.10E+00 to  65
+ set area index above contour line  4.10E+00 to  66
+ set area index below contour line  4.20E+00 to  66
+ set area index above contour line  4.20E+00 to  67
+ set area index below contour line  4.30E+00 to  67
+ set area index above contour line  4.30E+00 to  68
+ set area index below contour line  4.40E+00 to  68
+ set area index above contour line  4.40E+00 to  69
+ set area index below contour line  4.50E+00 to  69
+ set area index above contour line  4.50E+00 to  70
+ set area index below contour line  4.60E+00 to  70
+ set area index above contour line  4.60E+00 to  71
+ set area index below contour line  4.70E+00 to  71
+ set area index above contour line  4.70E+00 to  72
+ set area index below contour line  4.80E+00 to  72
+ set area index above contour line  4.80E+00 to  73
+ set area index below contour line  4.90E+00 to  73
+ set area index above contour line  4.90E+00 to  74
+ set area index below contour line  5.00E+00 to  74
+ set area index above contour line  5.00E+00 to  75
+ set area index below contour line  5.10E+00 to  75
+ set area index above contour line  5.10E+00 to  76
+ set area index below contour line  5.20E+00 to  76
+ set area index above contour line  5.20E+00 to  77
+ set area index below contour line  5.30E+00 to  77
+ set area index above contour line  5.30E+00 to  78
+ set area index below contour line  5.40E+00 to  78
+ set area index above contour line  5.40E+00 to  79
+ set area index below contour line  5.50E+00 to  79
+ set area index above contour line  5.50E+00 to  80
+ set area index below contour line  5.60E+00 to  80
+ set area index above contour line  5.60E+00 to  81
+ set area index below contour line  5.70E+00 to  81
+ set area index above contour line  5.70E+00 to  82
+ set area index below contour line  5.80E+00 to  82
+ set area index above contour line  5.80E+00 to  83
+ set area index below contour line  5.90E+00 to  83
+ set area index above contour line  5.90E+00 to  84
+ set area index below contour line  6.00E+00 to  84
+ set area index above contour line  6.00E+00 to  85
+ set area index below contour line  6.10E+00 to  85
+ set area index above contour line  6.10E+00 to  86
+ set area index below contour line  6.20E+00 to  86
+ set area index above contour line  6.20E+00 to  87
+ set area index below contour line  6.30E+00 to  87
+ set area index above contour line  6.30E+00 to  88
+ set area index below contour line  6.40E+00 to  88
+ set area index above contour line  6.40E+00 to  89
+ set area index below contour line  6.50E+00 to  89
+ set area index above contour line  6.50E+00 to  90
+ set area index below contour line  6.60E+00 to  90
+ set area index above contour line  6.60E+00 to  91
+ set area index below contour line  6.70E+00 to  91
+ set area index above contour line  6.70E+00 to  92
+ set area index below contour line  6.80E+00 to  92
+ set area index above contour line  6.80E+00 to  93
+ set area index below contour line  6.90E+00 to  93
+ set area index above contour line  6.90E+00 to  94
+ set area index below contour line  7.00E+00 to  94
+ set area index above contour line  7.00E+00 to  95
+ set area index below contour line  7.10E+00 to  95
+ set area index above contour line  7.10E+00 to  96
+ set area index below contour line  7.20E+00 to  96
+ set area index above contour line  7.20E+00 to  97
+ set area index below contour line  7.30E+00 to  97
+ set area index above contour line  7.30E+00 to  98
+ set area index below contour line  7.40E+00 to  98
+ set area index above contour line  7.40E+00 to  99
+ set area index below contour line  7.50E+00 to  99
+ set area index above contour line  7.50E+00 to 100
+ set area index below contour line  7.60E+00 to 100
+ set area index above contour line  7.60E+00 to 101
+ set area index below contour line  7.70E+00 to 101
+ set area index above contour line  7.70E+00 to 102
+ set area index below contour line  7.80E+00 to 102
+ set area index above contour line  7.80E+00 to 103
+ set area index below contour line  7.90E+00 to 103
+ set area index above contour line  7.90E+00 to 104
+ set area index below contour line  8.00E+00 to 104
+ set area index above contour line  8.00E+00 to 104
+ frame advance no.   5
+blkinr: salqq  =     0.0500 psu
+blkinr: center =    36.0000 psu
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =  33.500  38.500   0.050
+ horiz. map: sig=27.92 salinity  year   0.00 (jan 16) [02.4H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+ call to conrec => conpack
+ use color table entries   5 -- 104         ipalet =  5
+ set area index below contour line  3.35E+01 to   5
+ set area index above contour line  3.35E+01 to   6
+ set area index below contour line  3.36E+01 to   6
+ set area index above contour line  3.36E+01 to   7
+ set area index below contour line  3.37E+01 to   7
+ set area index above contour line  3.37E+01 to   8
+ set area index below contour line  3.37E+01 to   8
+ set area index above contour line  3.37E+01 to   9
+ set area index below contour line  3.38E+01 to   9
+ set area index above contour line  3.38E+01 to  10
+ set area index below contour line  3.38E+01 to  10
+ set area index above contour line  3.38E+01 to  11
+ set area index below contour line  3.38E+01 to  11
+ set area index above contour line  3.38E+01 to  12
+ set area index below contour line  3.39E+01 to  12
+ set area index above contour line  3.39E+01 to  13
+ set area index below contour line  3.40E+01 to  13
+ set area index above contour line  3.40E+01 to  14
+ set area index below contour line  3.40E+01 to  14
+ set area index above contour line  3.40E+01 to  15
+ set area index below contour line  3.40E+01 to  15
+ set area index above contour line  3.40E+01 to  16
+ set area index below contour line  3.41E+01 to  16
+ set area index above contour line  3.41E+01 to  17
+ set area index below contour line  3.42E+01 to  17
+ set area index above contour line  3.42E+01 to  18
+ set area index below contour line  3.42E+01 to  18
+ set area index above contour line  3.42E+01 to  19
+ set area index below contour line  3.42E+01 to  19
+ set area index above contour line  3.42E+01 to  20
+ set area index below contour line  3.43E+01 to  20
+ set area index above contour line  3.43E+01 to  21
+ set area index below contour line  3.43E+01 to  21
+ set area index above contour line  3.43E+01 to  22
+ set area index below contour line  3.44E+01 to  22
+ set area index above contour line  3.44E+01 to  23
+ set area index below contour line  3.45E+01 to  23
+ set area index above contour line  3.45E+01 to  24
+ set area index below contour line  3.45E+01 to  24
+ set area index above contour line  3.45E+01 to  25
+ set area index below contour line  3.45E+01 to  25
+ set area index above contour line  3.45E+01 to  26
+ set area index below contour line  3.46E+01 to  26
+ set area index above contour line  3.46E+01 to  27
+ set area index below contour line  3.47E+01 to  27
+ set area index above contour line  3.47E+01 to  28
+ set area index below contour line  3.47E+01 to  28
+ set area index above contour line  3.47E+01 to  29
+ set area index below contour line  3.48E+01 to  29
+ set area index above contour line  3.48E+01 to  30
+ set area index below contour line  3.48E+01 to  30
+ set area index above contour line  3.48E+01 to  31
+ set area index below contour line  3.48E+01 to  31
+ set area index above contour line  3.48E+01 to  32
+ set area index below contour line  3.49E+01 to  32
+ set area index above contour line  3.49E+01 to  33
+ set area index below contour line  3.50E+01 to  33
+ set area index above contour line  3.50E+01 to  34
+ set area index below contour line  3.50E+01 to  34
+ set area index above contour line  3.50E+01 to  35
+ set area index below contour line  3.50E+01 to  35
+ set area index above contour line  3.50E+01 to  36
+ set area index below contour line  3.51E+01 to  36
+ set area index above contour line  3.51E+01 to  37
+ set area index below contour line  3.52E+01 to  37
+ set area index above contour line  3.52E+01 to  38
+ set area index below contour line  3.52E+01 to  38
+ set area index above contour line  3.52E+01 to  39
+ set area index below contour line  3.52E+01 to  39
+ set area index above contour line  3.52E+01 to  40
+ set area index below contour line  3.53E+01 to  40
+ set area index above contour line  3.53E+01 to  41
+ set area index below contour line  3.53E+01 to  41
+ set area index above contour line  3.53E+01 to  42
+ set area index below contour line  3.54E+01 to  42
+ set area index above contour line  3.54E+01 to  43
+ set area index below contour line  3.55E+01 to  43
+ set area index above contour line  3.55E+01 to  44
+ set area index below contour line  3.55E+01 to  44
+ set area index above contour line  3.55E+01 to  45
+ set area index below contour line  3.55E+01 to  45
+ set area index above contour line  3.55E+01 to  46
+ set area index below contour line  3.56E+01 to  46
+ set area index above contour line  3.56E+01 to  47
+ set area index below contour line  3.57E+01 to  47
+ set area index above contour line  3.57E+01 to  48
+ set area index below contour line  3.57E+01 to  48
+ set area index above contour line  3.57E+01 to  49
+ set area index below contour line  3.58E+01 to  49
+ set area index above contour line  3.58E+01 to  50
+ set area index below contour line  3.58E+01 to  50
+ set area index above contour line  3.58E+01 to  51
+ set area index below contour line  3.58E+01 to  51
+ set area index above contour line  3.58E+01 to  52
+ set area index below contour line  3.59E+01 to  52
+ set area index above contour line  3.59E+01 to  53
+ set area index below contour line  3.60E+01 to  53
+ set area index above contour line  3.60E+01 to  54
+ set area index below contour line  3.60E+01 to  54
+ set area index above contour line  3.60E+01 to  55
+ set area index below contour line  3.60E+01 to  55
+ set area index above contour line  3.60E+01 to  56
+ set area index below contour line  3.61E+01 to  56
+ set area index above contour line  3.61E+01 to  57
+ set area index below contour line  3.62E+01 to  57
+ set area index above contour line  3.62E+01 to  58
+ set area index below contour line  3.62E+01 to  58
+ set area index above contour line  3.62E+01 to  59
+ set area index below contour line  3.62E+01 to  59
+ set area index above contour line  3.62E+01 to  60
+ set area index below contour line  3.63E+01 to  60
+ set area index above contour line  3.63E+01 to  61
+ set area index below contour line  3.63E+01 to  61
+ set area index above contour line  3.63E+01 to  62
+ set area index below contour line  3.64E+01 to  62
+ set area index above contour line  3.64E+01 to  63
+ set area index below contour line  3.65E+01 to  63
+ set area index above contour line  3.65E+01 to  64
+ set area index below contour line  3.65E+01 to  64
+ set area index above contour line  3.65E+01 to  65
+ set area index below contour line  3.65E+01 to  65
+ set area index above contour line  3.65E+01 to  66
+ set area index below contour line  3.66E+01 to  66
+ set area index above contour line  3.66E+01 to  67
+ set area index below contour line  3.67E+01 to  67
+ set area index above contour line  3.67E+01 to  68
+ set area index below contour line  3.67E+01 to  68
+ set area index above contour line  3.67E+01 to  69
+ set area index below contour line  3.68E+01 to  69
+ set area index above contour line  3.68E+01 to  70
+ set area index below contour line  3.68E+01 to  70
+ set area index above contour line  3.68E+01 to  71
+ set area index below contour line  3.68E+01 to  71
+ set area index above contour line  3.68E+01 to  72
+ set area index below contour line  3.69E+01 to  72
+ set area index above contour line  3.69E+01 to  73
+ set area index below contour line  3.70E+01 to  73
+ set area index above contour line  3.70E+01 to  74
+ set area index below contour line  3.70E+01 to  74
+ set area index above contour line  3.70E+01 to  75
+ set area index below contour line  3.70E+01 to  75
+ set area index above contour line  3.70E+01 to  76
+ set area index below contour line  3.71E+01 to  76
+ set area index above contour line  3.71E+01 to  77
+ set area index below contour line  3.72E+01 to  77
+ set area index above contour line  3.72E+01 to  78
+ set area index below contour line  3.72E+01 to  78
+ set area index above contour line  3.72E+01 to  79
+ set area index below contour line  3.72E+01 to  79
+ set area index above contour line  3.72E+01 to  80
+ set area index below contour line  3.73E+01 to  80
+ set area index above contour line  3.73E+01 to  81
+ set area index below contour line  3.73E+01 to  81
+ set area index above contour line  3.73E+01 to  82
+ set area index below contour line  3.74E+01 to  82
+ set area index above contour line  3.74E+01 to  83
+ set area index below contour line  3.75E+01 to  83
+ set area index above contour line  3.75E+01 to  84
+ set area index below contour line  3.75E+01 to  84
+ set area index above contour line  3.75E+01 to  85
+ set area index below contour line  3.75E+01 to  85
+ set area index above contour line  3.75E+01 to  86
+ set area index below contour line  3.76E+01 to  86
+ set area index above contour line  3.76E+01 to  87
+ set area index below contour line  3.77E+01 to  87
+ set area index above contour line  3.77E+01 to  88
+ set area index below contour line  3.77E+01 to  88
+ set area index above contour line  3.77E+01 to  89
+ set area index below contour line  3.78E+01 to  89
+ set area index above contour line  3.78E+01 to  90
+ set area index below contour line  3.78E+01 to  90
+ set area index above contour line  3.78E+01 to  91
+ set area index below contour line  3.78E+01 to  91
+ set area index above contour line  3.78E+01 to  92
+ set area index below contour line  3.79E+01 to  92
+ set area index above contour line  3.79E+01 to  93
+ set area index below contour line  3.80E+01 to  93
+ set area index above contour line  3.80E+01 to  94
+ set area index below contour line  3.80E+01 to  94
+ set area index above contour line  3.80E+01 to  95
+ set area index below contour line  3.80E+01 to  95
+ set area index above contour line  3.80E+01 to  96
+ set area index below contour line  3.81E+01 to  96
+ set area index above contour line  3.81E+01 to  97
+ set area index below contour line  3.82E+01 to  97
+ set area index above contour line  3.82E+01 to  98
+ set area index below contour line  3.82E+01 to  98
+ set area index above contour line  3.82E+01 to  99
+ set area index below contour line  3.82E+01 to  99
+ set area index above contour line  3.82E+01 to 100
+ set area index below contour line  3.83E+01 to 100
+ set area index above contour line  3.83E+01 to 101
+ set area index below contour line  3.83E+01 to 101
+ set area index above contour line  3.83E+01 to 102
+ set area index below contour line  3.84E+01 to 102
+ set area index above contour line  3.84E+01 to 103
+ set area index below contour line  3.85E+01 to 103
+ set area index above contour line  3.85E+01 to 104
+ set area index below contour line  3.85E+01 to 104
+ set area index above contour line  3.85E+01 to 104
+horplt - lat,y =  -10    5.974
+horplt - lat,y =    0   11.000
+horplt - lat,y =   10   16.026
+horplt - lat,y =   20   21.209
+horplt - lat,y =   30   26.736
+horplt - lat,y =   40   32.856
+horplt - lat,y =   50   39.954
+horplt - lat,y =   60   48.728
+ horplt - reflon,gridsz,iorign,iref,orilon =  263.0 2.0 1 1 263.0
+horplt - lon,x =  -90    4.500
+horplt - lon,x =  -80    9.500
+horplt - lon,x =  -70   14.500
+horplt - lon,x =  -60   19.500
+horplt - lon,x =  -50   24.500
+horplt - lon,x =  -40   29.500
+horplt - lon,x =  -30   34.500
+horplt - lon,x =  -20   39.500
+horplt - lon,x =  -10   44.500
+horplt - lon,x =    0   49.500
+horplt - lon,x =   10   54.500
+ call to conrec => conpack
+                      fflo,ffhi,qq =  33.500  38.500   0.050
+draw color bar in box     0.880 < x < 0.960     0.668 < y < 0.919    logsc = F
+colbar -- write string  33.50    at   2.10   1.00
+colbar -- write string  34.00    at   2.10   4.40
+colbar -- write string  34.50    at   2.10   7.80
+colbar -- write string  35.00    at   2.10  11.20
+colbar -- write string  35.50    at   2.10  14.60
+colbar -- write string  36.00    at   2.10  18.00
+colbar -- write string  36.50    at   2.10  21.40
+colbar -- write string  37.00    at   2.10  24.80
+colbar -- write string  37.50    at   2.10  28.20
+colbar -- write string  38.00    at   2.10  31.60
+colbar -- write string  38.50    at   2.10  35.00
+ call to conrec => conpack
+ use color table entries   5 -- 104         ipalet =  5
+ set area index below contour line  3.35E+01 to   5
+ set area index above contour line  3.35E+01 to   6
+ set area index below contour line  3.36E+01 to   6
+ set area index above contour line  3.36E+01 to   7
+ set area index below contour line  3.37E+01 to   7
+ set area index above contour line  3.37E+01 to   8
+ set area index below contour line  3.37E+01 to   8
+ set area index above contour line  3.37E+01 to   9
+ set area index below contour line  3.38E+01 to   9
+ set area index above contour line  3.38E+01 to  10
+ set area index below contour line  3.38E+01 to  10
+ set area index above contour line  3.38E+01 to  11
+ set area index below contour line  3.38E+01 to  11
+ set area index above contour line  3.38E+01 to  12
+ set area index below contour line  3.39E+01 to  12
+ set area index above contour line  3.39E+01 to  13
+ set area index below contour line  3.40E+01 to  13
+ set area index above contour line  3.40E+01 to  14
+ set area index below contour line  3.40E+01 to  14
+ set area index above contour line  3.40E+01 to  15
+ set area index below contour line  3.40E+01 to  15
+ set area index above contour line  3.40E+01 to  16
+ set area index below contour line  3.41E+01 to  16
+ set area index above contour line  3.41E+01 to  17
+ set area index below contour line  3.42E+01 to  17
+ set area index above contour line  3.42E+01 to  18
+ set area index below contour line  3.42E+01 to  18
+ set area index above contour line  3.42E+01 to  19
+ set area index below contour line  3.42E+01 to  19
+ set area index above contour line  3.42E+01 to  20
+ set area index below contour line  3.43E+01 to  20
+ set area index above contour line  3.43E+01 to  21
+ set area index below contour line  3.43E+01 to  21
+ set area index above contour line  3.43E+01 to  22
+ set area index below contour line  3.44E+01 to  22
+ set area index above contour line  3.44E+01 to  23
+ set area index below contour line  3.45E+01 to  23
+ set area index above contour line  3.45E+01 to  24
+ set area index below contour line  3.45E+01 to  24
+ set area index above contour line  3.45E+01 to  25
+ set area index below contour line  3.45E+01 to  25
+ set area index above contour line  3.45E+01 to  26
+ set area index below contour line  3.46E+01 to  26
+ set area index above contour line  3.46E+01 to  27
+ set area index below contour line  3.47E+01 to  27
+ set area index above contour line  3.47E+01 to  28
+ set area index below contour line  3.47E+01 to  28
+ set area index above contour line  3.47E+01 to  29
+ set area index below contour line  3.48E+01 to  29
+ set area index above contour line  3.48E+01 to  30
+ set area index below contour line  3.48E+01 to  30
+ set area index above contour line  3.48E+01 to  31
+ set area index below contour line  3.48E+01 to  31
+ set area index above contour line  3.48E+01 to  32
+ set area index below contour line  3.49E+01 to  32
+ set area index above contour line  3.49E+01 to  33
+ set area index below contour line  3.50E+01 to  33
+ set area index above contour line  3.50E+01 to  34
+ set area index below contour line  3.50E+01 to  34
+ set area index above contour line  3.50E+01 to  35
+ set area index below contour line  3.50E+01 to  35
+ set area index above contour line  3.50E+01 to  36
+ set area index below contour line  3.51E+01 to  36
+ set area index above contour line  3.51E+01 to  37
+ set area index below contour line  3.52E+01 to  37
+ set area index above contour line  3.52E+01 to  38
+ set area index below contour line  3.52E+01 to  38
+ set area index above contour line  3.52E+01 to  39
+ set area index below contour line  3.52E+01 to  39
+ set area index above contour line  3.52E+01 to  40
+ set area index below contour line  3.53E+01 to  40
+ set area index above contour line  3.53E+01 to  41
+ set area index below contour line  3.53E+01 to  41
+ set area index above contour line  3.53E+01 to  42
+ set area index below contour line  3.54E+01 to  42
+ set area index above contour line  3.54E+01 to  43
+ set area index below contour line  3.55E+01 to  43
+ set area index above contour line  3.55E+01 to  44
+ set area index below contour line  3.55E+01 to  44
+ set area index above contour line  3.55E+01 to  45
+ set area index below contour line  3.55E+01 to  45
+ set area index above contour line  3.55E+01 to  46
+ set area index below contour line  3.56E+01 to  46
+ set area index above contour line  3.56E+01 to  47
+ set area index below contour line  3.57E+01 to  47
+ set area index above contour line  3.57E+01 to  48
+ set area index below contour line  3.57E+01 to  48
+ set area index above contour line  3.57E+01 to  49
+ set area index below contour line  3.58E+01 to  49
+ set area index above contour line  3.58E+01 to  50
+ set area index below contour line  3.58E+01 to  50
+ set area index above contour line  3.58E+01 to  51
+ set area index below contour line  3.58E+01 to  51
+ set area index above contour line  3.58E+01 to  52
+ set area index below contour line  3.59E+01 to  52
+ set area index above contour line  3.59E+01 to  53
+ set area index below contour line  3.60E+01 to  53
+ set area index above contour line  3.60E+01 to  54
+ set area index below contour line  3.60E+01 to  54
+ set area index above contour line  3.60E+01 to  55
+ set area index below contour line  3.60E+01 to  55
+ set area index above contour line  3.60E+01 to  56
+ set area index below contour line  3.61E+01 to  56
+ set area index above contour line  3.61E+01 to  57
+ set area index below contour line  3.62E+01 to  57
+ set area index above contour line  3.62E+01 to  58
+ set area index below contour line  3.62E+01 to  58
+ set area index above contour line  3.62E+01 to  59
+ set area index below contour line  3.62E+01 to  59
+ set area index above contour line  3.62E+01 to  60
+ set area index below contour line  3.63E+01 to  60
+ set area index above contour line  3.63E+01 to  61
+ set area index below contour line  3.63E+01 to  61
+ set area index above contour line  3.63E+01 to  62
+ set area index below contour line  3.64E+01 to  62
+ set area index above contour line  3.64E+01 to  63
+ set area index below contour line  3.65E+01 to  63
+ set area index above contour line  3.65E+01 to  64
+ set area index below contour line  3.65E+01 to  64
+ set area index above contour line  3.65E+01 to  65
+ set area index below contour line  3.65E+01 to  65
+ set area index above contour line  3.65E+01 to  66
+ set area index below contour line  3.66E+01 to  66
+ set area index above contour line  3.66E+01 to  67
+ set area index below contour line  3.67E+01 to  67
+ set area index above contour line  3.67E+01 to  68
+ set area index below contour line  3.67E+01 to  68
+ set area index above contour line  3.67E+01 to  69
+ set area index below contour line  3.68E+01 to  69
+ set area index above contour line  3.68E+01 to  70
+ set area index below contour line  3.68E+01 to  70
+ set area index above contour line  3.68E+01 to  71
+ set area index below contour line  3.68E+01 to  71
+ set area index above contour line  3.68E+01 to  72
+ set area index below contour line  3.69E+01 to  72
+ set area index above contour line  3.69E+01 to  73
+ set area index below contour line  3.70E+01 to  73
+ set area index above contour line  3.70E+01 to  74
+ set area index below contour line  3.70E+01 to  74
+ set area index above contour line  3.70E+01 to  75
+ set area index below contour line  3.70E+01 to  75
+ set area index above contour line  3.70E+01 to  76
+ set area index below contour line  3.71E+01 to  76
+ set area index above contour line  3.71E+01 to  77
+ set area index below contour line  3.72E+01 to  77
+ set area index above contour line  3.72E+01 to  78
+ set area index below contour line  3.72E+01 to  78
+ set area index above contour line  3.72E+01 to  79
+ set area index below contour line  3.72E+01 to  79
+ set area index above contour line  3.72E+01 to  80
+ set area index below contour line  3.73E+01 to  80
+ set area index above contour line  3.73E+01 to  81
+ set area index below contour line  3.73E+01 to  81
+ set area index above contour line  3.73E+01 to  82
+ set area index below contour line  3.74E+01 to  82
+ set area index above contour line  3.74E+01 to  83
+ set area index below contour line  3.75E+01 to  83
+ set area index above contour line  3.75E+01 to  84
+ set area index below contour line  3.75E+01 to  84
+ set area index above contour line  3.75E+01 to  85
+ set area index below contour line  3.75E+01 to  85
+ set area index above contour line  3.75E+01 to  86
+ set area index below contour line  3.76E+01 to  86
+ set area index above contour line  3.76E+01 to  87
+ set area index below contour line  3.77E+01 to  87
+ set area index above contour line  3.77E+01 to  88
+ set area index below contour line  3.77E+01 to  88
+ set area index above contour line  3.77E+01 to  89
+ set area index below contour line  3.78E+01 to  89
+ set area index above contour line  3.78E+01 to  90
+ set area index below contour line  3.78E+01 to  90
+ set area index above contour line  3.78E+01 to  91
+ set area index below contour line  3.78E+01 to  91
+ set area index above contour line  3.78E+01 to  92
+ set area index below contour line  3.79E+01 to  92
+ set area index above contour line  3.79E+01 to  93
+ set area index below contour line  3.80E+01 to  93
+ set area index above contour line  3.80E+01 to  94
+ set area index below contour line  3.80E+01 to  94
+ set area index above contour line  3.80E+01 to  95
+ set area index below contour line  3.80E+01 to  95
+ set area index above contour line  3.80E+01 to  96
+ set area index below contour line  3.81E+01 to  96
+ set area index above contour line  3.81E+01 to  97
+ set area index below contour line  3.82E+01 to  97
+ set area index above contour line  3.82E+01 to  98
+ set area index below contour line  3.82E+01 to  98
+ set area index above contour line  3.82E+01 to  99
+ set area index below contour line  3.82E+01 to  99
+ set area index above contour line  3.82E+01 to 100
+ set area index below contour line  3.83E+01 to 100
+ set area index above contour line  3.83E+01 to 101
+ set area index below contour line  3.83E+01 to 101
+ set area index above contour line  3.83E+01 to 102
+ set area index below contour line  3.84E+01 to 102
+ set area index above contour line  3.84E+01 to 103
+ set area index below contour line  3.85E+01 to 103
+ set area index above contour line  3.85E+01 to 104
+ set area index below contour line  3.85E+01 to 104
+ set area index above contour line  3.85E+01 to 104
+min  3.05E+01 at  20  24  max  3.85E+01 at  48  11  intvl.,lines  5.00E-01  15
+ frame advance no.   6
+blkinr: tthqq  =     0.0250 sig
+min  2.44E+01 at  20  24  max  2.81E+01 at  41  18  intvl.,lines  2.00E-01  18
+blkinr: center =    27.0000 
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =  25.750  28.250   0.025
+ horiz. map: sig=27.92 density   year   0.00 (jan 16) [02.4H] 
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+ call to conrec => conpack
+ use color table entries   5 -- 104         ipalet =  5
+ set area index below contour line  2.58E+01 to   5
+ set area index above contour line  2.58E+01 to   6
+ set area index below contour line  2.58E+01 to   6
+ set area index above contour line  2.58E+01 to   7
+ set area index below contour line  2.58E+01 to   7
+ set area index above contour line  2.58E+01 to   8
+ set area index below contour line  2.59E+01 to   8
+ set area index above contour line  2.59E+01 to   9
+ set area index below contour line  2.59E+01 to   9
+ set area index above contour line  2.59E+01 to  10
+ set area index below contour line  2.59E+01 to  10
+ set area index above contour line  2.59E+01 to  11
+ set area index below contour line  2.59E+01 to  11
+ set area index above contour line  2.59E+01 to  12
+ set area index below contour line  2.60E+01 to  12
+ set area index above contour line  2.60E+01 to  13
+ set area index below contour line  2.60E+01 to  13
+ set area index above contour line  2.60E+01 to  14
+ set area index below contour line  2.60E+01 to  14
+ set area index above contour line  2.60E+01 to  15
+ set area index below contour line  2.60E+01 to  15
+ set area index above contour line  2.60E+01 to  16
+ set area index below contour line  2.60E+01 to  16
+ set area index above contour line  2.60E+01 to  17
+ set area index below contour line  2.61E+01 to  17
+ set area index above contour line  2.61E+01 to  18
+ set area index below contour line  2.61E+01 to  18
+ set area index above contour line  2.61E+01 to  19
+ set area index below contour line  2.61E+01 to  19
+ set area index above contour line  2.61E+01 to  20
+ set area index below contour line  2.61E+01 to  20
+ set area index above contour line  2.61E+01 to  21
+ set area index below contour line  2.62E+01 to  21
+ set area index above contour line  2.62E+01 to  22
+ set area index below contour line  2.62E+01 to  22
+ set area index above contour line  2.62E+01 to  23
+ set area index below contour line  2.62E+01 to  23
+ set area index above contour line  2.62E+01 to  24
+ set area index below contour line  2.62E+01 to  24
+ set area index above contour line  2.62E+01 to  25
+ set area index below contour line  2.63E+01 to  25
+ set area index above contour line  2.63E+01 to  26
+ set area index below contour line  2.63E+01 to  26
+ set area index above contour line  2.63E+01 to  27
+ set area index below contour line  2.63E+01 to  27
+ set area index above contour line  2.63E+01 to  28
+ set area index below contour line  2.64E+01 to  28
+ set area index above contour line  2.64E+01 to  29
+ set area index below contour line  2.64E+01 to  29
+ set area index above contour line  2.64E+01 to  30
+ set area index below contour line  2.64E+01 to  30
+ set area index above contour line  2.64E+01 to  31
+ set area index below contour line  2.64E+01 to  31
+ set area index above contour line  2.64E+01 to  32
+ set area index below contour line  2.65E+01 to  32
+ set area index above contour line  2.65E+01 to  33
+ set area index below contour line  2.65E+01 to  33
+ set area index above contour line  2.65E+01 to  34
+ set area index below contour line  2.65E+01 to  34
+ set area index above contour line  2.65E+01 to  35
+ set area index below contour line  2.65E+01 to  35
+ set area index above contour line  2.65E+01 to  36
+ set area index below contour line  2.65E+01 to  36
+ set area index above contour line  2.65E+01 to  37
+ set area index below contour line  2.66E+01 to  37
+ set area index above contour line  2.66E+01 to  38
+ set area index below contour line  2.66E+01 to  38
+ set area index above contour line  2.66E+01 to  39
+ set area index below contour line  2.66E+01 to  39
+ set area index above contour line  2.66E+01 to  40
+ set area index below contour line  2.66E+01 to  40
+ set area index above contour line  2.66E+01 to  41
+ set area index below contour line  2.67E+01 to  41
+ set area index above contour line  2.67E+01 to  42
+ set area index below contour line  2.67E+01 to  42
+ set area index above contour line  2.67E+01 to  43
+ set area index below contour line  2.67E+01 to  43
+ set area index above contour line  2.67E+01 to  44
+ set area index below contour line  2.68E+01 to  44
+ set area index above contour line  2.68E+01 to  45
+ set area index below contour line  2.68E+01 to  45
+ set area index above contour line  2.68E+01 to  46
+ set area index below contour line  2.68E+01 to  46
+ set area index above contour line  2.68E+01 to  47
+ set area index below contour line  2.68E+01 to  47
+ set area index above contour line  2.68E+01 to  48
+ set area index below contour line  2.69E+01 to  48
+ set area index above contour line  2.69E+01 to  49
+ set area index below contour line  2.69E+01 to  49
+ set area index above contour line  2.69E+01 to  50
+ set area index below contour line  2.69E+01 to  50
+ set area index above contour line  2.69E+01 to  51
+ set area index below contour line  2.69E+01 to  51
+ set area index above contour line  2.69E+01 to  52
+ set area index below contour line  2.70E+01 to  52
+ set area index above contour line  2.70E+01 to  53
+ set area index below contour line  2.70E+01 to  53
+ set area index above contour line  2.70E+01 to  54
+ set area index below contour line  2.70E+01 to  54
+ set area index above contour line  2.70E+01 to  55
+ set area index below contour line  2.70E+01 to  55
+ set area index above contour line  2.70E+01 to  56
+ set area index below contour line  2.70E+01 to  56
+ set area index above contour line  2.70E+01 to  57
+ set area index below contour line  2.71E+01 to  57
+ set area index above contour line  2.71E+01 to  58
+ set area index below contour line  2.71E+01 to  58
+ set area index above contour line  2.71E+01 to  59
+ set area index below contour line  2.71E+01 to  59
+ set area index above contour line  2.71E+01 to  60
+ set area index below contour line  2.71E+01 to  60
+ set area index above contour line  2.71E+01 to  61
+ set area index below contour line  2.72E+01 to  61
+ set area index above contour line  2.72E+01 to  62
+ set area index below contour line  2.72E+01 to  62
+ set area index above contour line  2.72E+01 to  63
+ set area index below contour line  2.72E+01 to  63
+ set area index above contour line  2.72E+01 to  64
+ set area index below contour line  2.72E+01 to  64
+ set area index above contour line  2.72E+01 to  65
+ set area index below contour line  2.73E+01 to  65
+ set area index above contour line  2.73E+01 to  66
+ set area index below contour line  2.73E+01 to  66
+ set area index above contour line  2.73E+01 to  67
+ set area index below contour line  2.73E+01 to  67
+ set area index above contour line  2.73E+01 to  68
+ set area index below contour line  2.74E+01 to  68
+ set area index above contour line  2.74E+01 to  69
+ set area index below contour line  2.74E+01 to  69
+ set area index above contour line  2.74E+01 to  70
+ set area index below contour line  2.74E+01 to  70
+ set area index above contour line  2.74E+01 to  71
+ set area index below contour line  2.74E+01 to  71
+ set area index above contour line  2.74E+01 to  72
+ set area index below contour line  2.75E+01 to  72
+ set area index above contour line  2.75E+01 to  73
+ set area index below contour line  2.75E+01 to  73
+ set area index above contour line  2.75E+01 to  74
+ set area index below contour line  2.75E+01 to  74
+ set area index above contour line  2.75E+01 to  75
+ set area index below contour line  2.75E+01 to  75
+ set area index above contour line  2.75E+01 to  76
+ set area index below contour line  2.75E+01 to  76
+ set area index above contour line  2.75E+01 to  77
+ set area index below contour line  2.76E+01 to  77
+ set area index above contour line  2.76E+01 to  78
+ set area index below contour line  2.76E+01 to  78
+ set area index above contour line  2.76E+01 to  79
+ set area index below contour line  2.76E+01 to  79
+ set area index above contour line  2.76E+01 to  80
+ set area index below contour line  2.76E+01 to  80
+ set area index above contour line  2.76E+01 to  81
+ set area index below contour line  2.77E+01 to  81
+ set area index above contour line  2.77E+01 to  82
+ set area index below contour line  2.77E+01 to  82
+ set area index above contour line  2.77E+01 to  83
+ set area index below contour line  2.77E+01 to  83
+ set area index above contour line  2.77E+01 to  84
+ set area index below contour line  2.78E+01 to  84
+ set area index above contour line  2.78E+01 to  85
+ set area index below contour line  2.78E+01 to  85
+ set area index above contour line  2.78E+01 to  86
+ set area index below contour line  2.78E+01 to  86
+ set area index above contour line  2.78E+01 to  87
+ set area index below contour line  2.78E+01 to  87
+ set area index above contour line  2.78E+01 to  88
+ set area index below contour line  2.79E+01 to  88
+ set area index above contour line  2.79E+01 to  89
+ set area index below contour line  2.79E+01 to  89
+ set area index above contour line  2.79E+01 to  90
+ set area index below contour line  2.79E+01 to  90
+ set area index above contour line  2.79E+01 to  91
+ set area index below contour line  2.79E+01 to  91
+ set area index above contour line  2.79E+01 to  92
+ set area index below contour line  2.80E+01 to  92
+ set area index above contour line  2.80E+01 to  93
+ set area index below contour line  2.80E+01 to  93
+ set area index above contour line  2.80E+01 to  94
+ set area index below contour line  2.80E+01 to  94
+ set area index above contour line  2.80E+01 to  95
+ set area index below contour line  2.80E+01 to  95
+ set area index above contour line  2.80E+01 to  96
+ set area index below contour line  2.80E+01 to  96
+ set area index above contour line  2.80E+01 to  97
+ set area index below contour line  2.81E+01 to  97
+ set area index above contour line  2.81E+01 to  98
+ set area index below contour line  2.81E+01 to  98
+ set area index above contour line  2.81E+01 to  99
+ set area index below contour line  2.81E+01 to  99
+ set area index above contour line  2.81E+01 to 100
+ set area index below contour line  2.81E+01 to 100
+ set area index above contour line  2.81E+01 to 101
+ set area index below contour line  2.82E+01 to 101
+ set area index above contour line  2.82E+01 to 102
+ set area index below contour line  2.82E+01 to 102
+ set area index above contour line  2.82E+01 to 103
+ set area index below contour line  2.82E+01 to 103
+ set area index above contour line  2.82E+01 to 104
+ set area index below contour line  2.82E+01 to 104
+ set area index above contour line  2.82E+01 to 104
+horplt - lat,y =  -10    5.974
+horplt - lat,y =    0   11.000
+horplt - lat,y =   10   16.026
+horplt - lat,y =   20   21.209
+horplt - lat,y =   30   26.736
+horplt - lat,y =   40   32.856
+horplt - lat,y =   50   39.954
+horplt - lat,y =   60   48.728
+ horplt - reflon,gridsz,iorign,iref,orilon =  263.0 2.0 1 1 263.0
+horplt - lon,x =  -90    4.500
+horplt - lon,x =  -80    9.500
+horplt - lon,x =  -70   14.500
+horplt - lon,x =  -60   19.500
+horplt - lon,x =  -50   24.500
+horplt - lon,x =  -40   29.500
+horplt - lon,x =  -30   34.500
+horplt - lon,x =  -20   39.500
+horplt - lon,x =  -10   44.500
+horplt - lon,x =    0   49.500
+horplt - lon,x =   10   54.500
+ call to conrec => conpack
+                      fflo,ffhi,qq =  25.750  28.250   0.025
+draw color bar in box     0.880 < x < 0.960     0.668 < y < 0.919    logsc = F
+colbar -- write string  25.80    at   2.10   1.68
+colbar -- write string  26.00    at   2.10   4.40
+colbar -- write string  26.20    at   2.10   7.12
+colbar -- write string  26.40    at   2.10   9.84
+colbar -- write string  26.60    at   2.10  12.56
+colbar -- write string  26.80    at   2.10  15.28
+colbar -- write string  27.00    at   2.10  18.00
+colbar -- write string  27.20    at   2.10  20.72
+colbar -- write string  27.40    at   2.10  23.44
+colbar -- write string  27.60    at   2.10  26.16
+colbar -- write string  27.80    at   2.10  28.88
+colbar -- write string  28.00    at   2.10  31.60
+colbar -- write string  28.20    at   2.10  34.32
+ call to conrec => conpack
+ use color table entries   5 -- 104         ipalet =  5
+ set area index below contour line  2.58E+01 to   5
+ set area index above contour line  2.58E+01 to   6
+ set area index below contour line  2.58E+01 to   6
+ set area index above contour line  2.58E+01 to   7
+ set area index below contour line  2.58E+01 to   7
+ set area index above contour line  2.58E+01 to   8
+ set area index below contour line  2.59E+01 to   8
+ set area index above contour line  2.59E+01 to   9
+ set area index below contour line  2.59E+01 to   9
+ set area index above contour line  2.59E+01 to  10
+ set area index below contour line  2.59E+01 to  10
+ set area index above contour line  2.59E+01 to  11
+ set area index below contour line  2.59E+01 to  11
+ set area index above contour line  2.59E+01 to  12
+ set area index below contour line  2.60E+01 to  12
+ set area index above contour line  2.60E+01 to  13
+ set area index below contour line  2.60E+01 to  13
+ set area index above contour line  2.60E+01 to  14
+ set area index below contour line  2.60E+01 to  14
+ set area index above contour line  2.60E+01 to  15
+ set area index below contour line  2.60E+01 to  15
+ set area index above contour line  2.60E+01 to  16
+ set area index below contour line  2.60E+01 to  16
+ set area index above contour line  2.60E+01 to  17
+ set area index below contour line  2.61E+01 to  17
+ set area index above contour line  2.61E+01 to  18
+ set area index below contour line  2.61E+01 to  18
+ set area index above contour line  2.61E+01 to  19
+ set area index below contour line  2.61E+01 to  19
+ set area index above contour line  2.61E+01 to  20
+ set area index below contour line  2.61E+01 to  20
+ set area index above contour line  2.61E+01 to  21
+ set area index below contour line  2.62E+01 to  21
+ set area index above contour line  2.62E+01 to  22
+ set area index below contour line  2.62E+01 to  22
+ set area index above contour line  2.62E+01 to  23
+ set area index below contour line  2.62E+01 to  23
+ set area index above contour line  2.62E+01 to  24
+ set area index below contour line  2.62E+01 to  24
+ set area index above contour line  2.62E+01 to  25
+ set area index below contour line  2.63E+01 to  25
+ set area index above contour line  2.63E+01 to  26
+ set area index below contour line  2.63E+01 to  26
+ set area index above contour line  2.63E+01 to  27
+ set area index below contour line  2.63E+01 to  27
+ set area index above contour line  2.63E+01 to  28
+ set area index below contour line  2.64E+01 to  28
+ set area index above contour line  2.64E+01 to  29
+ set area index below contour line  2.64E+01 to  29
+ set area index above contour line  2.64E+01 to  30
+ set area index below contour line  2.64E+01 to  30
+ set area index above contour line  2.64E+01 to  31
+ set area index below contour line  2.64E+01 to  31
+ set area index above contour line  2.64E+01 to  32
+ set area index below contour line  2.65E+01 to  32
+ set area index above contour line  2.65E+01 to  33
+ set area index below contour line  2.65E+01 to  33
+ set area index above contour line  2.65E+01 to  34
+ set area index below contour line  2.65E+01 to  34
+ set area index above contour line  2.65E+01 to  35
+ set area index below contour line  2.65E+01 to  35
+ set area index above contour line  2.65E+01 to  36
+ set area index below contour line  2.65E+01 to  36
+ set area index above contour line  2.65E+01 to  37
+ set area index below contour line  2.66E+01 to  37
+ set area index above contour line  2.66E+01 to  38
+ set area index below contour line  2.66E+01 to  38
+ set area index above contour line  2.66E+01 to  39
+ set area index below contour line  2.66E+01 to  39
+ set area index above contour line  2.66E+01 to  40
+ set area index below contour line  2.66E+01 to  40
+ set area index above contour line  2.66E+01 to  41
+ set area index below contour line  2.67E+01 to  41
+ set area index above contour line  2.67E+01 to  42
+ set area index below contour line  2.67E+01 to  42
+ set area index above contour line  2.67E+01 to  43
+ set area index below contour line  2.67E+01 to  43
+ set area index above contour line  2.67E+01 to  44
+ set area index below contour line  2.68E+01 to  44
+ set area index above contour line  2.68E+01 to  45
+ set area index below contour line  2.68E+01 to  45
+ set area index above contour line  2.68E+01 to  46
+ set area index below contour line  2.68E+01 to  46
+ set area index above contour line  2.68E+01 to  47
+ set area index below contour line  2.68E+01 to  47
+ set area index above contour line  2.68E+01 to  48
+ set area index below contour line  2.69E+01 to  48
+ set area index above contour line  2.69E+01 to  49
+ set area index below contour line  2.69E+01 to  49
+ set area index above contour line  2.69E+01 to  50
+ set area index below contour line  2.69E+01 to  50
+ set area index above contour line  2.69E+01 to  51
+ set area index below contour line  2.69E+01 to  51
+ set area index above contour line  2.69E+01 to  52
+ set area index below contour line  2.70E+01 to  52
+ set area index above contour line  2.70E+01 to  53
+ set area index below contour line  2.70E+01 to  53
+ set area index above contour line  2.70E+01 to  54
+ set area index below contour line  2.70E+01 to  54
+ set area index above contour line  2.70E+01 to  55
+ set area index below contour line  2.70E+01 to  55
+ set area index above contour line  2.70E+01 to  56
+ set area index below contour line  2.70E+01 to  56
+ set area index above contour line  2.70E+01 to  57
+ set area index below contour line  2.71E+01 to  57
+ set area index above contour line  2.71E+01 to  58
+ set area index below contour line  2.71E+01 to  58
+ set area index above contour line  2.71E+01 to  59
+ set area index below contour line  2.71E+01 to  59
+ set area index above contour line  2.71E+01 to  60
+ set area index below contour line  2.71E+01 to  60
+ set area index above contour line  2.71E+01 to  61
+ set area index below contour line  2.72E+01 to  61
+ set area index above contour line  2.72E+01 to  62
+ set area index below contour line  2.72E+01 to  62
+ set area index above contour line  2.72E+01 to  63
+ set area index below contour line  2.72E+01 to  63
+ set area index above contour line  2.72E+01 to  64
+ set area index below contour line  2.72E+01 to  64
+ set area index above contour line  2.72E+01 to  65
+ set area index below contour line  2.73E+01 to  65
+ set area index above contour line  2.73E+01 to  66
+ set area index below contour line  2.73E+01 to  66
+ set area index above contour line  2.73E+01 to  67
+ set area index below contour line  2.73E+01 to  67
+ set area index above contour line  2.73E+01 to  68
+ set area index below contour line  2.74E+01 to  68
+ set area index above contour line  2.74E+01 to  69
+ set area index below contour line  2.74E+01 to  69
+ set area index above contour line  2.74E+01 to  70
+ set area index below contour line  2.74E+01 to  70
+ set area index above contour line  2.74E+01 to  71
+ set area index below contour line  2.74E+01 to  71
+ set area index above contour line  2.74E+01 to  72
+ set area index below contour line  2.75E+01 to  72
+ set area index above contour line  2.75E+01 to  73
+ set area index below contour line  2.75E+01 to  73
+ set area index above contour line  2.75E+01 to  74
+ set area index below contour line  2.75E+01 to  74
+ set area index above contour line  2.75E+01 to  75
+ set area index below contour line  2.75E+01 to  75
+ set area index above contour line  2.75E+01 to  76
+ set area index below contour line  2.75E+01 to  76
+ set area index above contour line  2.75E+01 to  77
+ set area index below contour line  2.76E+01 to  77
+ set area index above contour line  2.76E+01 to  78
+ set area index below contour line  2.76E+01 to  78
+ set area index above contour line  2.76E+01 to  79
+ set area index below contour line  2.76E+01 to  79
+ set area index above contour line  2.76E+01 to  80
+ set area index below contour line  2.76E+01 to  80
+ set area index above contour line  2.76E+01 to  81
+ set area index below contour line  2.77E+01 to  81
+ set area index above contour line  2.77E+01 to  82
+ set area index below contour line  2.77E+01 to  82
+ set area index above contour line  2.77E+01 to  83
+ set area index below contour line  2.77E+01 to  83
+ set area index above contour line  2.77E+01 to  84
+ set area index below contour line  2.78E+01 to  84
+ set area index above contour line  2.78E+01 to  85
+ set area index below contour line  2.78E+01 to  85
+ set area index above contour line  2.78E+01 to  86
+ set area index below contour line  2.78E+01 to  86
+ set area index above contour line  2.78E+01 to  87
+ set area index below contour line  2.78E+01 to  87
+ set area index above contour line  2.78E+01 to  88
+ set area index below contour line  2.79E+01 to  88
+ set area index above contour line  2.79E+01 to  89
+ set area index below contour line  2.79E+01 to  89
+ set area index above contour line  2.79E+01 to  90
+ set area index below contour line  2.79E+01 to  90
+ set area index above contour line  2.79E+01 to  91
+ set area index below contour line  2.79E+01 to  91
+ set area index above contour line  2.79E+01 to  92
+ set area index below contour line  2.80E+01 to  92
+ set area index above contour line  2.80E+01 to  93
+ set area index below contour line  2.80E+01 to  93
+ set area index above contour line  2.80E+01 to  94
+ set area index below contour line  2.80E+01 to  94
+ set area index above contour line  2.80E+01 to  95
+ set area index below contour line  2.80E+01 to  95
+ set area index above contour line  2.80E+01 to  96
+ set area index below contour line  2.80E+01 to  96
+ set area index above contour line  2.80E+01 to  97
+ set area index below contour line  2.81E+01 to  97
+ set area index above contour line  2.81E+01 to  98
+ set area index below contour line  2.81E+01 to  98
+ set area index above contour line  2.81E+01 to  99
+ set area index below contour line  2.81E+01 to  99
+ set area index above contour line  2.81E+01 to 100
+ set area index below contour line  2.81E+01 to 100
+ set area index above contour line  2.81E+01 to 101
+ set area index below contour line  2.82E+01 to 101
+ set area index above contour line  2.82E+01 to 102
+ set area index below contour line  2.82E+01 to 102
+ set area index above contour line  2.82E+01 to 103
+ set area index below contour line  2.82E+01 to 103
+ set area index above contour line  2.82E+01 to 104
+ set area index below contour line  2.82E+01 to 104
+ set area index above contour line  2.82E+01 to 104
+ frame advance no.   7
+blkinr: sfnqq  =    -1.0000 sv
+blkini: k      =     0

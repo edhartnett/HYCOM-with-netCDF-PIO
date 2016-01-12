@@ -1,0 +1,47 @@
+meanstd/README.meanstd:
+
+Forms the mean or mean-squared of a sequence of archive files.  The 
+resulting special archive files can be again input to the mean program 
+(to form extended means) or the mean can be plotted by hycomproc.  The 
+standard deviation can then be calculated from the mean and mean-squared, 
+and again plotted by hycomproc.
+
+The reason for using mean and mean-squared files to generate the standard 
+deviation (rather than generating it from the mean and the original 
+archives) is that this approach allows incremental calculations.  For 
+example, you can generate the annual MN and SQ from each year of the run 
+as it becomes available and later merge them together to form (say) 5 
+year MN and SQ files (and then a 5 year SD file).  This is done with the
+same hycom_mean program, just give it MN (or SQ) archive files instead of 
+(or in addition to) standard archive files.  In eddy resolving cases it
+would be typical to produce, and plot, monthly or seasonal means and them 
+combine them into annual and multi-year means and standard deviations.
+
+The layered means are weighted by the layer thickness, but the mixed layer
+means and all non-layered means are simple means.  Weighting by layer 
+thickness is clearly to right approach for iso-pycnal layers (since the
+means are then in density space), and is equivalent to a simple mean for
+any contant thickness layers near the surface.  However, layers that are
+sometimes iso-pycnal and sometimes near-surface (constant thickness) can
+be difficult to interpret.  Seasonal means may help keep the two layer
+modes separate.
+
+010_mn+sq_0020.com	script to form single year means and mnsqs
+010_mn+sq_0020.log	from  csh 010_mn+sq_0020.com >& 010_mn+sq_0020.log
+010_std_0020.com	script to form standard deviations
+010_std_0020.log	from 010_std_0020.com >& 010_std_0020.log
+
+See ../plot/010y020MN.*, ../plot/010y020SD.* and README.plot for how to 
+plot the resulting mean and standard deviation files.  Be careful when
+interpreting vertical sections that use depth (rather than layer number)
+as the vertical axis.  These associate mean layer quantities with the 
+mean location of the layer.  If the layer's location or thickness is
+highly variable, then its mean location and thickness may not be as
+good a representation of the layer as you expect.  For example, suppose
+a layer were 100 m thick in the summer but inside the mixed layer and
+therefore a 10 m z-layer in the winter.  Then its mean, layer thickness
+weighted, density would be close to its summer (iso-pycnal) value but
+its mean thickness would be 55 m which isn't close to either its winter
+or summer value.  It could also be in a location that it almost never
+ocupies in the water column.  Using seasonal means should help reduce 
+the impact of such hybrid coordinate variability.

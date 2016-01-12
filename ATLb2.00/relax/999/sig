@@ -1,0 +1,40 @@
+#
+set echo
+#
+# --- tabulate zonal statistics
+#
+echo "# sig     lat   zonal inf. depth"                    >! sig_21.0
+echo "# sig     lat   zonal inf. depth"                    >! sig_21.5
+echo "# sig     lat   zonal inf. depth"                    >! sig_22.0
+echo "# sig     lat   zonal inf. depth"                    >! sig_22.5
+echo "# sig     lat   zonal inf. depth"                    >! sig_23.0
+echo "# sig     lat   zonal inf. depth"                    >! sig_23.5
+echo "# sig     lat   zonal inf. depth"                    >! sig_24.0
+echo "# sig     lat   zonal inf. depth"                    >! sig_24.5
+echo "# sig     lat   zonal inf. depth"                    >! sig_25.0
+echo "# sig     lat   zonal inf. depth"                    >! sig_25.5
+echo "# sig     lat   zonal inf. depth"                    >! sig_26.0
+echo "# sig     lat   zonal inf. depth"                    >! sig_26.5
+echo "# sig     lat   zonal inf. depth"                    >! sig_27.0
+echo "# sig     lat   zonal inf. depth"                    >! sig_27.5
+grep "sig = 20.75 " relax_zon.log | cut -c 31-37,43-49,55- >> sig_21.0
+grep "sig = 21.25 " relax_zon.log | cut -c 31-37,43-49,55- >> sig_21.5
+grep "sig = 21.75 " relax_zon.log | cut -c 31-37,43-49,55- >> sig_22.0
+grep "sig = 22.25 " relax_zon.log | cut -c 31-37,43-49,55- >> sig_22.5
+grep "sig = 22.75 " relax_zon.log | cut -c 31-37,43-49,55- >> sig_23.0
+grep "sig = 23.25 " relax_zon.log | cut -c 31-37,43-49,55- >> sig_23.5
+grep "sig = 23.75 " relax_zon.log | cut -c 31-37,43-49,55- >> sig_24.0
+grep "sig = 24.25 " relax_zon.log | cut -c 31-37,43-49,55- >> sig_24.5
+grep "sig = 24.75 " relax_zon.log | cut -c 31-37,43-49,55- >> sig_25.0
+grep "sig = 25.25 " relax_zon.log | cut -c 31-37,43-49,55- >> sig_25.5
+grep "sig = 25.75 " relax_zon.log | cut -c 31-37,43-49,55- >> sig_26.0
+grep "sig = 26.25 " relax_zon.log | cut -c 31-37,43-49,55- >> sig_26.5
+grep "sig = 26.75 " relax_zon.log | cut -c 31-37,43-49,55- >> sig_27.0
+grep "sig = 27.25 " relax_zon.log | cut -c 31-37,43-49,55- >> sig_27.5
+#
+# --- plot zonal statitics
+#
+gnuplot sig.gnu
+sed -e "s?/gnulinewidth 5?/gnulinewidth 16?" -e "s/gnulinewidth 2/gnulinewidth 1/" sig.ps >! sig.ps+
+mv sig.ps+ sig.ps
+ghostview -landscape  -magstep 1 sig.ps

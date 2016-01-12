@@ -1,0 +1,52 @@
+sample/README.sample:
+
+Samples transport across specified sections from archive files or from
+mean archive files.
+
+010M020-020.com		script to sample a mean archive file
+010M020-020mn.com	script to produce statistics from mean transports
+010y020-020.com		script to sample archive files
+010y020-020mn.com	script to produce statistics from transports
+link.com*		create softlinks for topography and ./src
+
+In all cases, file.log is created from  csh file.com >& file.log
+
+The link.com script is typically edited for each new region and run just
+once to define softlinks to topography for that region.
+
+The program hycom/ALL/src/transport is used, in 010y020-020.com, to sample
+the tranport across a list of sections from a sequence of archive files.
+The sections are specified by end points in p-grid array space: if,il,jf,jl 
+with either if=il or jf=jl.  Sections are therefore either zonal or 
+meridional.  Transports are +ve for a net current from right to left when 
+standing at (if,jf) facing towards (il,jl).  Note that max(if,il) can be 
+greater than idm in periodic (global) cases and max(jf,jl) can be greater 
+than jdm in arctic dipole patch (global) cases.  It is possible to add 
+several consecutive sections together by using special names for the 
+sections: '@0' means skip this section, '@+': means add to next section, 
+and '@-' means subtract from next section.  The '@+' and '@-' transports 
+are carried over to the first following section that does not have a name 
+starting with '@'.  These names are processed at the statistics production 
+phase, by hycom/ALL/src/meantspt, but are defined and placed into the 
+output sample transport file by the transport program.  This output file 
+is plain text, and can be edited if statistics from a different combination 
+of sections is desired than originally specified.  For example, '@0'
+would not normally be in the original sample file but can replace the
+name of sections that are not desired in a particular set of statistics.
+
+The program hycom/ALL/src/transp_mn is used, in 010M020-020.com, to sample
+the transport across a list of sections from a mean archive file.  Only one 
+mean archive file is input, but the output is a transport sample file 
+covering all the model days that made up the mean - each with identical 
+transport.  This file has identical form to those produced by the transport 
+program, but because all times have identical trasnports the statistics 
+(from meantspt) will have accurate means but zero variability.
+
+The program hycom/ALL/src/mergetspt is used to merge transport sample 
+files that contain identical sections but for different time periods.
+
+The program hycom/ALL/src/meantspt is used, in 010[yM]020-020mn.com, to
+produce mean and variability (zero variability from mean archives) 
+statistics.  As illustrated in the example scripts, it is possible to
+combine a set of consecutive layers in the statistics, e.g. to start
+with 22 layers but write statistics for only 5 multi-layer combinations.

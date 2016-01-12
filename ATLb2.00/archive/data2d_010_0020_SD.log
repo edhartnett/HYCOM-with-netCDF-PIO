@@ -1,0 +1,1067 @@
+touch regional.depth.a regional.depth.b
+if ( -z regional.depth.a ) then
+if ( -z regional.depth.b ) then
+touch regional.grid.a regional.grid.b
+if ( -z regional.grid.a ) then
+if ( -z regional.grid.b ) then
+setenv D ../expt_01.0/data
+foreach y ( 0020 )
+setenv FOR051A ../expt_01.0/data/archSD.0020_bot.a
+setenv FOR051 ../expt_01.0/data/archSD.0020_bot.b
+setenv FOR021A ../expt_01.0/data/archSD.0020_flx.a
+setenv FOR021 ../expt_01.0/data/archSD.0020_flx.b
+setenv FOR022A ../expt_01.0/data/archSD.0020_ice.a
+setenv FOR022 ../expt_01.0/data/archSD.0020_ice.b
+setenv FOR023A ../expt_01.0/data/archSD.0020_fsd.a
+setenv FOR023 ../expt_01.0/data/archSD.0020_fsd.b
+setenv FOR024A ../expt_01.0/data/archSD.0020_mix.a
+setenv FOR024 ../expt_01.0/data/archSD.0020_mix.b
+setenv FOR025A ../expt_01.0/data/archSD.0020_bke.a
+setenv FOR025 ../expt_01.0/data/archSD.0020_bke.b
+setenv FOR031A ../expt_01.0/data/archSD.0020_3di.a
+setenv FOR031 ../expt_01.0/data/archSD.0020_3di.b
+setenv FOR032A ../expt_01.0/data/archSD.0020_3dh.a
+setenv FOR032 ../expt_01.0/data/archSD.0020_3dh.b
+setenv FOR033A ../expt_01.0/data/archSD.0020_3dt.a
+setenv FOR033 ../expt_01.0/data/archSD.0020_3dt.b
+setenv FOR034A ../expt_01.0/data/archSD.0020_3ds.a
+setenv FOR034 ../expt_01.0/data/archSD.0020_3ds.b
+setenv FOR035A ../expt_01.0/data/archSD.0020_3dr.a
+setenv FOR035 ../expt_01.0/data/archSD.0020_3dr.b
+setenv FOR036A ../expt_01.0/data/archSD.0020_3dn.a
+setenv FOR036 ../expt_01.0/data/archSD.0020_3dn.b
+setenv FOR037A ../expt_01.0/data/archSD.0020_3du.a
+setenv FOR037 ../expt_01.0/data/archSD.0020_3du.b
+setenv FOR038A ../expt_01.0/data/archSD.0020_3dv.a
+setenv FOR038 ../expt_01.0/data/archSD.0020_3dv.b
+setenv FOR039A ../expt_01.0/data/archSD.0020_3dc.a
+setenv FOR039 ../expt_01.0/data/archSD.0020_3dc.b
+setenv FOR040A ../expt_01.0/data/archSD.0020_3dw.a
+setenv FOR040 ../expt_01.0/data/archSD.0020_3dw.b
+setenv FOR041A ../expt_01.0/data/archSD.0020_3dk.a
+setenv FOR041 ../expt_01.0/data/archSD.0020_3dk.b
+/bin/rm ../expt_01.0/data/archSD.0020_bot.b
+../expt_01.0/data/archSD.0020_bot.b: No such file or directory
+/bin/rm ../expt_01.0/data/archSD.0020_bot.a
+../expt_01.0/data/archSD.0020_bot.a: No such file or directory
+/bin/rm ../expt_01.0/data/archSD.0020_flx.b ../expt_01.0/data/archSD.0020_ice.b ../expt_01.0/data/archSD.0020_fsd.b ../expt_01.0/data/archSD.0020_mix.b ../expt_01.0/data/archSD.0020_bke.b
+../expt_01.0/data/archSD.0020_flx.b: No such file or directory
+../expt_01.0/data/archSD.0020_ice.b: No such file or directory
+../expt_01.0/data/archSD.0020_fsd.b: No such file or directory
+../expt_01.0/data/archSD.0020_mix.b: No such file or directory
+../expt_01.0/data/archSD.0020_bke.b: No such file or directory
+/bin/rm ../expt_01.0/data/archSD.0020_flx.a ../expt_01.0/data/archSD.0020_ice.a ../expt_01.0/data/archSD.0020_fsd.a ../expt_01.0/data/archSD.0020_mix.a ../expt_01.0/data/archSD.0020_bke.a
+../expt_01.0/data/archSD.0020_flx.a: No such file or directory
+../expt_01.0/data/archSD.0020_ice.a: No such file or directory
+../expt_01.0/data/archSD.0020_fsd.a: No such file or directory
+../expt_01.0/data/archSD.0020_mix.a: No such file or directory
+../expt_01.0/data/archSD.0020_bke.a: No such file or directory
+/bin/rm ../expt_01.0/data/archSD.0020_3di.b ../expt_01.0/data/archSD.0020_3dh.b ../expt_01.0/data/archSD.0020_3dt.b ../expt_01.0/data/archSD.0020_3ds.b ../expt_01.0/data/archSD.0020_3dr.b
+../expt_01.0/data/archSD.0020_3di.b: No such file or directory
+../expt_01.0/data/archSD.0020_3dh.b: No such file or directory
+../expt_01.0/data/archSD.0020_3dt.b: No such file or directory
+../expt_01.0/data/archSD.0020_3ds.b: No such file or directory
+../expt_01.0/data/archSD.0020_3dr.b: No such file or directory
+/bin/rm ../expt_01.0/data/archSD.0020_3di.a ../expt_01.0/data/archSD.0020_3dh.a ../expt_01.0/data/archSD.0020_3dt.a ../expt_01.0/data/archSD.0020_3ds.a ../expt_01.0/data/archSD.0020_3dr.a
+../expt_01.0/data/archSD.0020_3di.a: No such file or directory
+../expt_01.0/data/archSD.0020_3dh.a: No such file or directory
+../expt_01.0/data/archSD.0020_3dt.a: No such file or directory
+../expt_01.0/data/archSD.0020_3ds.a: No such file or directory
+../expt_01.0/data/archSD.0020_3dr.a: No such file or directory
+/bin/rm ../expt_01.0/data/archSD.0020_3dn.b ../expt_01.0/data/archSD.0020_3du.b ../expt_01.0/data/archSD.0020_3dv.b ../expt_01.0/data/archSD.0020_3dc.b ../expt_01.0/data/archSD.0020_3dw.b ../expt_01.0/data/archSD.0020_3dk.b
+../expt_01.0/data/archSD.0020_3dn.b: No such file or directory
+../expt_01.0/data/archSD.0020_3du.b: No such file or directory
+../expt_01.0/data/archSD.0020_3dv.b: No such file or directory
+../expt_01.0/data/archSD.0020_3dc.b: No such file or directory
+../expt_01.0/data/archSD.0020_3dw.b: No such file or directory
+../expt_01.0/data/archSD.0020_3dk.b: No such file or directory
+/bin/rm ../expt_01.0/data/archSD.0020_3dn.a ../expt_01.0/data/archSD.0020_3du.a ../expt_01.0/data/archSD.0020_3dv.a ../expt_01.0/data/archSD.0020_3dc.a ../expt_01.0/data/archSD.0020_3dw.a ../expt_01.0/data/archSD.0020_3dk.a
+../expt_01.0/data/archSD.0020_3dn.a: No such file or directory
+../expt_01.0/data/archSD.0020_3du.a: No such file or directory
+../expt_01.0/data/archSD.0020_3dv.a: No such file or directory
+../expt_01.0/data/archSD.0020_3dc.a: No such file or directory
+../expt_01.0/data/archSD.0020_3dw.a: No such file or directory
+../expt_01.0/data/archSD.0020_3dk.a: No such file or directory
+../../ALL/archive/src/archv2data2d
+
+xcspmd: idm,jdm =   57   52
+
+ input file: ../expt_01.0/data/archSD.0020.a
+output type: HYCOM
+blkini: iexpt  =     0
+blkini: yrflag =     0
+blkini: idm    =    57
+blkini: jdm    =    52
+blkini: kdm    =    22
+blkinr: thbase =    25.0000 sig
+blkinl: smooth =     F
+blkinl: mthin  =     F
+blkini: iorign =     1
+blkini: jorign =     1
+blkini: idmp   =     0
+blkini: jdmp   =     0
+extracting i =    1 ...   57         j =    1 ...   52
+COADS forcing: precip_zero; srelax;                                             
+boundary relax; iniflg=2; KPP mixed layer; Jerlov IA;                           
+Z(22): dp00/f/x=3m/1.125/12m; ATLb2.00/src_2.1.00_22.                           
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+ iversn =  20
+ iexpt  =  10
+ yrflag =  0
+ idm    =  57
+ jdm    =  52
+field         no. recs  std. day  k  dens        min              max
+artype = 3
+montg1   =         12    6840.00  0  0.000   2.8329359E-02   1.3415574E+00
+input  montg1   into montg   
+srfhgt   =         12    7170.00  0  0.000   4.6713550E-02   1.2598014E+00
+input  srfhgt   into srfht   
+surflx   =         12    7005.00  0  0.000   7.7622762E+00   2.3226701E+02
+input  surflx   into surflx  
+ time3 =  6840.0 7170.0 7005.0
+salflx   =         12    7005.00  0  0.000   1.1042865E-04   1.8266939E-02
+input  salflx   into salflx  
+bl_dpth  =         12    7005.00  0  0.000   5.8097845E+02   1.6879808E+06
+input  bl_dpth  into dpbl    
+mix_dpth =         12    7005.00  0  0.000   5.8097845E+02   2.2948900E+06
+input  mix_dpth into dpmixl  
+tmix     =         12    7005.00  0  0.000   2.8545040E-01   5.2307472E+00
+input  tmix     into tmix    
+smix     =         12    7005.00  0  0.000   0.0000000E+00   1.7922494E+00
+input  smix     into smix    
+thmix    =         12    7005.00  0  0.000   9.5642693E-02   1.9081675E+00
+input  thmix    into thmix   
+umix     =         12    7005.00  0  0.000   6.7026927E-03   4.1413984E-01
+input  umix     into umix    
+vmix     =         12    7005.00  0  0.000   6.6828206E-03   3.8701132E-01
+input  vmix     into vmix    
+kemix    =         12    7005.00  0  0.000   1.0260627E-04   3.5822171E-01
+input  kemix    into kemix   
+u_btrop  =         12    7005.00  0  0.000   2.8504553E-04   1.4433266E-01
+input  u_btrop  into ubaro   
+v_btrop  =         12    7005.00  0  0.000   2.8717378E-04   1.4267455E-01
+input  v_btrop  into vbaro   
+kebtrop  =         12    7005.00  0  0.000   2.7753654E-07   1.5210855E-02
+input  kebtrop  into kebaro  
+u-vel.   =         12    7005.00  1 19.500   9.8338416E-03   4.4763336E-01
+input  u-vel.   into u         1
+v-vel.   =         12    7005.00  1 19.500   6.3813920E-03   4.6104366E-01
+input  v-vel.   into v         1
+k.e.     =         12    7005.00  1 19.500   3.7148630E-04   3.0816731E-01
+input  k.e.     into ke        1
+thknss   =         12    7005.00  1 19.500   0.0000000E+00   0.0000000E+00
+input  thknss   into dp        1
+temp     =         12    7005.00  1 19.500   2.7444014E-01   5.2264657E+00
+input  temp     into temp      1
+salin    =         12    7005.00  1 19.500   0.0000000E+00   1.7840917E+00
+input  salin    into saln      1
+density  =         12    7005.00  1 19.500   9.5569126E-02   1.9035888E+00
+input  density  into th3d      1
+finished reading data for layer 19.50000
+u-vel.   =         12    7005.00  2 20.250   8.5830111E-03   4.4033557E-01
+input  u-vel.   into u         2
+v-vel.   =         12    7005.00  2 20.250   5.6221290E-03   4.2472857E-01
+input  v-vel.   into v         2
+k.e.     =         12    7005.00  2 20.250   8.6536638E-05   2.2097751E-01
+input  k.e.     into ke        2
+thknss   =         12    7005.00  2 20.250   1.1313708E+01   4.0305953E+04
+input  thknss   into dp        2
+temp     =         12    7005.00  2 20.250   2.7354908E-01   4.8890395E+00
+input  temp     into temp      2
+salin    =         12    7005.00  2 20.250   0.0000000E+00   1.6774149E+00
+input  salin    into saln      2
+density  =         12    7005.00  2 20.250   9.5333710E-02   1.6220218E+00
+input  density  into th3d      2
+finished reading data for layer 20.25000
+u-vel.   =         12    7005.00  3 21.000   8.0466429E-03   4.3341058E-01
+input  u-vel.   into u         3
+v-vel.   =         12    7005.00  3 21.000   6.1145886E-03   4.0825787E-01
+input  v-vel.   into v         3
+k.e.     =         12    7005.00  3 21.000   4.5961900E-05   2.1252133E-01
+input  k.e.     into ke        3
+thknss   =         12    7005.00  3 21.000   1.1313708E+01   6.8077172E+04
+input  thknss   into dp        3
+temp     =         12    7005.00  3 21.000   2.7254319E-01   4.3628259E+00
+input  temp     into temp      3
+salin    =         12    7005.00  3 21.000   0.0000000E+00   1.1464961E+00
+input  salin    into saln      3
+density  =         12    7005.00  3 21.000   9.4993606E-02   1.2937150E+00
+input  density  into th3d      3
+finished reading data for layer 21.00000
+u-vel.   =         12    7005.00  4 21.750   4.7489610E-03   4.2494643E-01
+input  u-vel.   into u         4
+v-vel.   =         12    7005.00  4 21.750   7.0007439E-03   3.6922979E-01
+input  v-vel.   into v         4
+k.e.     =         12    7005.00  4 21.750   4.2474036E-05   1.5608785E-01
+input  k.e.     into ke        4
+thknss   =         12    7005.00  4 21.750   0.0000000E+00   1.4509609E+05
+input  thknss   into dp        4
+temp     =         12    7005.00  4 21.750   2.7074566E-01   4.5632272E+00
+input  temp     into temp      4
+salin    =         12    7005.00  4 21.750   0.0000000E+00   7.4485540E-01
+input  salin    into saln      4
+density  =         12    7005.00  4 21.750   8.3264485E-02   1.0723183E+00
+input  density  into th3d      4
+finished reading data for layer 21.75000
+u-vel.   =         12    7005.00  5 22.500   8.1942799E-03   3.5118750E-01
+input  u-vel.   into u         5
+v-vel.   =         12    7005.00  5 22.500   5.5165640E-03   2.3976010E-01
+input  v-vel.   into v         5
+k.e.     =         12    7005.00  5 22.500   5.7593752E-05   1.3701828E-01
+input  k.e.     into ke        5
+thknss   =         12    7005.00  5 22.500   2.2627417E+01   3.2409097E+05
+input  thknss   into dp        5
+temp     =         12    7005.00  5 22.500   1.1294400E-01   4.7542257E+00
+input  temp     into temp      5
+salin    =         12    7005.00  5 22.500   0.0000000E+00   6.0937500E-01
+input  salin    into saln      5
+density  =         12    7005.00  5 22.500   1.2059657E-02   1.0122939E+00
+input  density  into th3d      5
+finished reading data for layer 22.50000
+u-vel.   =         12    7005.00  6 23.250   7.8410199E-03   3.4643427E-01
+input  u-vel.   into u         6
+v-vel.   =         12    7005.00  6 23.250   6.6993623E-03   2.2484687E-01
+input  v-vel.   into v         6
+k.e.     =         12    7005.00  6 23.250   6.7810448E-05   1.1775669E-01
+input  k.e.     into ke        6
+thknss   =         12    7005.00  6 23.250   0.0000000E+00   3.8478903E+05
+input  thknss   into dp        6
+temp     =         12    7005.00  6 23.250   7.6944202E-02   4.6613445E+00
+input  temp     into temp      6
+salin    =         12    7005.00  6 23.250   0.0000000E+00   7.2010744E-01
+input  salin    into saln      6
+density  =         12    7005.00  6 23.250   5.6522642E-03   8.8584578E-01
+input  density  into th3d      6
+finished reading data for layer 23.25000
+u-vel.   =         12    7005.00  7 24.000   8.1310440E-03   3.4049028E-01
+input  u-vel.   into u         7
+v-vel.   =         12    7005.00  7 24.000   5.0578802E-03   2.8617072E-01
+input  v-vel.   into v         7
+k.e.     =         12    7005.00  7 24.000   6.5055377E-05   2.2864209E-01
+input  k.e.     into ke        7
+thknss   =         12    7005.00  7 24.000   0.0000000E+00   4.8284381E+05
+input  thknss   into dp        7
+temp     =         12    7005.00  7 24.000   2.3437500E-02   4.4405060E+00
+input  temp     into temp      7
+salin    =         12    7005.00  7 24.000   0.0000000E+00   7.5389612E-01
+input  salin    into saln      7
+density  =         12    7005.00  7 24.000   0.0000000E+00   7.6116109E-01
+input  density  into th3d      7
+finished reading data for layer 24.00000
+u-vel.   =         12    7005.00  8 24.700   5.9314347E-03   3.0676866E-01
+input  u-vel.   into u         8
+v-vel.   =         12    7005.00  8 24.700   4.9855276E-03   2.4960415E-01
+input  v-vel.   into v         8
+k.e.     =         12    7005.00  8 24.700   5.3900712E-05   1.5094323E-01
+input  k.e.     into ke        8
+thknss   =         12    7005.00  8 24.700   0.0000000E+00   4.1669866E+05
+input  thknss   into dp        8
+temp     =         12    7005.00  8 24.700   1.1048543E-02   4.0988541E+00
+input  temp     into temp      8
+salin    =         12    7005.00  8 24.700   0.0000000E+00   7.2719228E-01
+input  salin    into saln      8
+density  =         12    7005.00  8 24.700   2.9900999E-04   5.6375808E-01
+input  density  into th3d      8
+finished reading data for layer 24.70000
+u-vel.   =         12    7005.00  9 25.280   5.3469427E-03   3.7656781E-01
+input  u-vel.   into u         9
+v-vel.   =         12    7005.00  9 25.280   4.3199286E-03   2.6076898E-01
+input  v-vel.   into v         9
+k.e.     =         12    7005.00  9 25.280   6.5728855E-05   2.1322364E-01
+input  k.e.     into ke        9
+thknss   =         12    7005.00  9 25.280   2.2627417E+01   4.8925850E+05
+input  thknss   into dp        9
+temp     =         12    7005.00  9 25.280   0.0000000E+00   3.8131063E+00
+input  temp     into temp      9
+salin    =         12    7005.00  9 25.280   0.0000000E+00   7.3387617E-01
+input  salin    into saln      9
+density  =         12    7005.00  9 25.280   3.4526698E-04   4.0454742E-01
+input  density  into th3d      9
+finished reading data for layer 25.28000
+u-vel.   =         12    7005.00 10 25.770   4.0688678E-03   5.0936365E-01
+input  u-vel.   into u        10
+v-vel.   =         12    7005.00 10 25.770   3.5972483E-03   2.8824696E-01
+input  v-vel.   into v        10
+k.e.     =         12    7005.00 10 25.770   3.0263231E-05   1.3970003E-01
+input  k.e.     into ke       10
+thknss   =         12    7005.00 10 25.770   5.0596443E+01   9.6347706E+05
+input  thknss   into dp       10
+temp     =         12    7005.00 10 25.770   0.0000000E+00   3.7451813E+00
+input  temp     into temp     10
+salin    =         12    7005.00 10 25.770   0.0000000E+00   6.5448052E-01
+input  salin    into saln     10
+density  =         12    7005.00 10 25.770   0.0000000E+00   3.4821713E-01
+input  density  into th3d     10
+finished reading data for layer 25.77000
+u-vel.   =         12    7005.00 11 26.180   3.4823981E-03   2.6106128E-01
+input  u-vel.   into u        11
+v-vel.   =         12    7005.00 11 26.180   3.8424630E-03   1.8906258E-01
+input  v-vel.   into v        11
+k.e.     =         12    7005.00 11 26.180   3.3487799E-05   6.9556326E-02
+input  k.e.     into ke       11
+thknss   =         12    7005.00 11 26.180   0.0000000E+00   1.1494084E+06
+input  thknss   into dp       11
+temp     =         12    7005.00 11 26.180   0.0000000E+00   3.2354198E+00
+input  temp     into temp     11
+salin    =         12    7005.00 11 26.180   0.0000000E+00   4.9311668E-01
+input  salin    into saln     11
+density  =         12    7005.00 11 26.180   0.0000000E+00   2.6647633E-01
+input  density  into th3d     11
+finished reading data for layer 26.18000
+u-vel.   =         12    7005.00 12 26.520   0.0000000E+00   2.2024395E-01
+input  u-vel.   into u        12
+v-vel.   =         12    7005.00 12 26.520   1.7323892E-03   1.9203524E-01
+input  v-vel.   into v        12
+k.e.     =         12    7005.00 12 26.520   8.0778937E-06   3.7663516E-02
+input  k.e.     into ke       12
+thknss   =         12    7005.00 12 26.520   3.2000000E+01   1.4212740E+06
+input  thknss   into dp       12
+temp     =         12    7005.00 12 26.520   0.0000000E+00   2.3627145E+00
+input  temp     into temp     12
+salin    =         12    7005.00 12 26.520   0.0000000E+00   3.9513028E-01
+input  salin    into saln     12
+density  =         12    7005.00 12 26.520   0.0000000E+00   2.4468300E-01
+input  density  into th3d     12
+finished reading data for layer 26.52000
+u-vel.   =         12    7005.00 13 26.800   0.0000000E+00   1.9997481E-01
+input  u-vel.   into u        13
+v-vel.   =         12    7005.00 13 26.800   0.0000000E+00   1.6162571E-01
+input  v-vel.   into v        13
+k.e.     =         12    7005.00 13 26.800   9.0945014E-06   3.5151917E-02
+input  k.e.     into ke       13
+thknss   =         12    7005.00 13 26.800   0.0000000E+00   1.6064028E+06
+input  thknss   into dp       13
+temp     =         12    7005.00 13 26.800   0.0000000E+00   1.7311256E+00
+input  temp     into temp     13
+salin    =         12    7005.00 13 26.800   0.0000000E+00   4.4235587E-01
+input  salin    into saln     13
+density  =         12    7005.00 13 26.800   0.0000000E+00   2.0130812E-01
+input  density  into th3d     13
+finished reading data for layer 26.80000
+u-vel.   =         12    7005.00 14 27.030   0.0000000E+00   1.8266881E-01
+input  u-vel.   into u        14
+v-vel.   =         12    7005.00 14 27.030   0.0000000E+00   2.0268190E-01
+input  v-vel.   into v        14
+k.e.     =         12    7005.00 14 27.030   1.7177749E-06   6.9123209E-02
+input  k.e.     into ke       14
+thknss   =         12    7005.00 14 27.030   0.0000000E+00   1.3821651E+06
+input  thknss   into dp       14
+temp     =         12    7005.00 14 27.030   0.0000000E+00   1.7535691E+00
+input  temp     into temp     14
+salin    =         12    7005.00 14 27.030   0.0000000E+00   2.7488455E-01
+input  salin    into saln     14
+density  =         12    7005.00 14 27.030   0.0000000E+00   2.0459917E-01
+input  density  into th3d     14
+finished reading data for layer 27.03000
+u-vel.   =         12    7005.00 15 27.220   0.0000000E+00   2.0845811E-01
+input  u-vel.   into u        15
+v-vel.   =         12    7005.00 15 27.220   0.0000000E+00   1.8941784E-01
+input  v-vel.   into v        15
+k.e.     =         12    7005.00 15 27.220   1.3440285E-06   9.3536310E-02
+input  k.e.     into ke       15
+thknss   =         12    7005.00 15 27.220   0.0000000E+00   1.2511830E+06
+input  thknss   into dp       15
+temp     =         12    7005.00 15 27.220   0.0000000E+00   1.9770381E+00
+input  temp     into temp     15
+salin    =         12    7005.00 15 27.220   0.0000000E+00   4.0247646E-01
+input  salin    into saln     15
+density  =         12    7005.00 15 27.220   0.0000000E+00   2.4523728E-01
+input  density  into th3d     15
+finished reading data for layer 27.22000
+u-vel.   =         12    7005.00 16 27.380   0.0000000E+00   2.1643999E-01
+input  u-vel.   into u        16
+v-vel.   =         12    7005.00 16 27.380   0.0000000E+00   1.4428535E-01
+input  v-vel.   into v        16
+k.e.     =         12    7005.00 16 27.380   1.4403341E-06   1.3012633E-01
+input  k.e.     into ke       16
+thknss   =         12    7005.00 16 27.380   2.4475641E+00   1.3205266E+06
+input  thknss   into dp       16
+temp     =         12    7005.00 16 27.380   0.0000000E+00   2.1504474E+00
+input  temp     into temp     16
+salin    =         12    7005.00 16 27.380   0.0000000E+00   1.6828640E-01
+input  salin    into saln     16
+density  =         12    7005.00 16 27.380   0.0000000E+00   2.5289765E-01
+input  density  into th3d     16
+finished reading data for layer 27.38000
+u-vel.   =         12    7005.00 17 27.520   0.0000000E+00   1.7919712E-01
+input  u-vel.   into u        17
+v-vel.   =         12    7005.00 17 27.520   0.0000000E+00   1.2287845E-01
+input  v-vel.   into v        17
+k.e.     =         12    7005.00 17 27.520   0.0000000E+00   8.8863991E-02
+input  k.e.     into ke       17
+thknss   =         12    7005.00 17 27.520   3.5054894E-04   1.6333124E+06
+input  thknss   into dp       17
+temp     =         12    7005.00 17 27.520   0.0000000E+00   2.1779797E+00
+input  temp     into temp     17
+salin    =         12    7005.00 17 27.520   0.0000000E+00   3.0896437E-01
+input  salin    into saln     17
+density  =         12    7005.00 17 27.520   0.0000000E+00   3.0926982E-01
+input  density  into th3d     17
+finished reading data for layer 27.52000
+u-vel.   =         12    7005.00 18 27.640   0.0000000E+00   1.6855362E-01
+input  u-vel.   into u        18
+v-vel.   =         12    7005.00 18 27.640   0.0000000E+00   1.2287845E-01
+input  v-vel.   into v        18
+k.e.     =         12    7005.00 18 27.640   0.0000000E+00   5.1406689E-02
+input  k.e.     into ke       18
+thknss   =         12    7005.00 18 27.640   5.8529503E-04   1.6025282E+06
+input  thknss   into dp       18
+temp     =         12    7005.00 18 27.640   0.0000000E+00   2.4472032E+00
+input  temp     into temp     18
+salin    =         12    7005.00 18 27.640   0.0000000E+00   1.7917727E-01
+input  salin    into saln     18
+density  =         12    7005.00 18 27.640   0.0000000E+00   3.6001000E-01
+input  density  into th3d     18
+finished reading data for layer 27.64000
+u-vel.   =         12    7005.00 19 27.740   0.0000000E+00   1.5031062E-01
+input  u-vel.   into u        19
+v-vel.   =         12    7005.00 19 27.740   0.0000000E+00   1.7162298E-01
+input  v-vel.   into v        19
+k.e.     =         12    7005.00 19 27.740   1.1963756E-06   5.6911740E-02
+input  k.e.     into ke       19
+thknss   =         12    7005.00 19 27.740   0.0000000E+00   1.9559655E+06
+input  thknss   into dp       19
+temp     =         12    7005.00 19 27.740   0.0000000E+00   1.7782412E+00
+input  temp     into temp     19
+salin    =         12    7005.00 19 27.740   0.0000000E+00   3.0075589E-01
+input  salin    into saln     19
+density  =         12    7005.00 19 27.740   0.0000000E+00   9.2449062E-02
+input  density  into th3d     19
+finished reading data for layer 27.74000
+u-vel.   =         12    7005.00 20 27.820   0.0000000E+00   1.9436860E-01
+input  u-vel.   into u        20
+v-vel.   =         12    7005.00 20 27.820   0.0000000E+00   2.0034242E-01
+input  v-vel.   into v        20
+k.e.     =         12    7005.00 20 27.820   6.3182085E-07   6.2435646E-02
+input  k.e.     into ke       20
+thknss   =         12    7005.00 20 27.820   0.0000000E+00   1.9364379E+06
+input  thknss   into dp       20
+temp     =         12    7005.00 20 27.820   0.0000000E+00   1.8913431E+00
+input  temp     into temp     20
+salin    =         12    7005.00 20 27.820   0.0000000E+00   2.9625759E-01
+input  salin    into saln     20
+density  =         12    7005.00 20 27.820   0.0000000E+00   7.9480432E-02
+input  density  into th3d     20
+finished reading data for layer 27.82000
+u-vel.   =         12    7005.00 21 27.880   0.0000000E+00   2.5659421E-01
+input  u-vel.   into u        21
+v-vel.   =         12    7005.00 21 27.880   0.0000000E+00   2.0659976E-01
+input  v-vel.   into v        21
+k.e.     =         12    7005.00 21 27.880   1.0637477E-07   3.6535658E-02
+input  k.e.     into ke       21
+thknss   =         12    7005.00 21 27.880   0.0000000E+00   1.2450222E+06
+input  thknss   into dp       21
+temp     =         12    7005.00 21 27.880   0.0000000E+00   2.2277715E+00
+input  temp     into temp     21
+salin    =         12    7005.00 21 27.880   0.0000000E+00   3.1464109E-01
+input  salin    into saln     21
+density  =         12    7005.00 21 27.880   0.0000000E+00   5.6353666E-02
+input  density  into th3d     21
+finished reading data for layer 27.88000
+u-vel.   =         12    7005.00 22 27.940   0.0000000E+00   2.5659421E-01
+input  u-vel.   into u        22
+v-vel.   =         12    7005.00 22 27.940   0.0000000E+00   1.2287845E-01
+input  v-vel.   into v        22
+k.e.     =         12    7005.00 22 27.940   9.9441941E-08   1.4199170E-02
+input  k.e.     into ke       22
+thknss   =         12    7005.00 22 27.940   0.0000000E+00   1.2779412E+06
+input  thknss   into dp       22
+temp     =         12    7005.00 22 27.940   0.0000000E+00   2.4159174E+00
+input  temp     into temp     22
+salin    =         12    7005.00 22 27.940   0.0000000E+00   3.1464109E-01
+input  salin    into saln     22
+density  =         12    7005.00 22 27.940   0.0000000E+00   2.6131032E-02
+input  density  into th3d     22
+finished reading data for layer 27.94000
+closed archive file
+North Atlantic topography from ETOPO5 5-minute data set.                       
+56 x 51 depth values (idm,jdm = 57,52).                                        
+2.0000 deg. mercator resolution, with equat=11.000.                            
+lon: 97.000W to 13.000E.  lat: 19.606S to 62.195N.                             
+                                                                               
+min,max depth =    199.556  5837.000
+read North At into depths  
+mask North At into coast   
+plon:  min,max =       263.00000      375.00000
+plat:  min,max =       -19.60579       63.11375
+qlon:  min,max =       262.00000      374.00000
+qlat:  min,max =       -20.54502       62.65800
+ulon:  min,max =       262.00000      374.00000
+ulat:  min,max =       -19.60579       63.11375
+vlon:  min,max =       263.00000      375.00000
+vlat:  min,max =       -20.54502       62.65800
+pscx:  min,max =    100565.21875   222389.87500
+pscy:  min,max =    100571.95312   222378.59375
+uscx:  min,max =    100565.21875   222389.87500
+uscy:  min,max =    100571.95312   222378.59375
+vscx:  min,max =    102139.75781   222356.01562
+vscy:  min,max =    102146.85938   222344.73438
+
+sub-domain longitude range =   263.00  375.00
+sub-domain latitude  range =   -19.61   63.11
+
+sub-domain assumed to be non-periodic
+
+bigrid called with ii,jj,ii1,jj1 =    57    52    56    51
+indxi called with ii,jj,ii1,jj1 =    57    52    56    51
+indxj called with ii,jj,ii1,jj1 =    57    52    56    51
+indxi called with ii,jj,ii1,jj1 =    57    52    56    51
+indxj called with ii,jj,ii1,jj1 =    57    52    56    51
+indxi called with ii,jj,ii1,jj1 =    57    52    56    51
+indxj called with ii,jj,ii1,jj1 =    57    52    56    51
+indxi called with ii,jj,ii1,jj1 =    57    52    56    51
+indxj called with ii,jj,ii1,jj1 =    57    52    56    51
+      0 island points submerged
+blkini: botio  =    51
+
+horout - HYCOM I/O
+
+ time3 =  6840.0 7170.0 7005.0
+ bathymetry        sdev:   19.00-  20.00 [01.0H] :   0.579091E-01    691.536    
+blkini: flxio  =    21
+ surf. heat flux   sdev:   19.00-  20.00 [01.0H] :    7.76228        232.267    
+blkini: empio  =     0
+blkini: ttrio  =     0
+blkini: strio  =     0
+blkini: icvio  =     0
+blkini: ithio  =     0
+blkini: ictio  =     0
+blkini: sshio  =    23
+ sea surf. height  sdev:   19.00-  20.00 [01.0H] :   0.476377        12.8472    
+blkini: bkeio  =    25
+    baro.k.e./mass sdev:   19.00-  20.00 [01.0H] :   0.277537E-06   0.152109E-01
+blkini: bsfio  =     0
+blkini: uvmio  =    24
+mix.l. u-velocity  sdev:   19.00-  20.00 [01.0H] :   0.629414        40.7668    
+blkini: vvmio  =    24
+ mixl. v-velocity  sdev:   19.00-  20.00 [01.0H] :   0.549515        38.2449    
+blkini: spmio  =     0
+blkini: bltio  =    24
+bnd.layr.thickness sdev:   19.00-  20.00 [01.0H] :   0.592472E-01    172.138    
+blkini: mltio  =    24
+mix.layr.thickness sdev:   19.00-  20.00 [01.0H] :   0.592472E-01    234.029    
+blkini: sstio  =    24
+mix.layr.temp      sdev:   19.00-  20.00 [01.0H] :   0.285450        5.23075    
+blkini: sssio  =    24
+mix.layr.saln      sdev:   19.00-  20.00 [01.0H] :    0.00000        1.79225    
+blkini: ssdio  =    24
+mix.layr.dens      sdev:   19.00-  20.00 [01.0H] :    25.0956        26.9082    
+blkini: mkeio  =    24
+    mixl.k.e./mass sdev:   19.00-  20.00 [01.0H] :   0.102606E-03   0.358222    
+blkini: kf     =    -1
+blkini: kl     =    22
+blkini: uvlio  =    37
+
+horout - HYCOM I/O
+
+ time3 =  6840.0 7170.0 7005.0
+layer=01  u-veloc. sdev:   19.00-  20.00 [01.0H] :   0.596601        44.2403    
+layer=02  u-veloc. sdev:   19.00-  20.00 [01.0H] :   0.610768        43.7050    
+layer=03  u-veloc. sdev:   19.00-  20.00 [01.0H] :   0.684500        43.1849    
+layer=04  u-veloc. sdev:   19.00-  20.00 [01.0H] :   0.650546        42.0670    
+layer=05  u-veloc. sdev:   19.00-  20.00 [01.0H] :   0.488031        35.0568    
+layer=06  u-veloc. sdev:   19.00-  20.00 [01.0H] :   0.497302        28.9287    
+layer=07  u-veloc. sdev:   19.00-  20.00 [01.0H] :   0.459523        31.5920    
+layer=08  u-veloc. sdev:   19.00-  20.00 [01.0H] :   0.296572        29.8574    
+layer=09  u-veloc. sdev:   19.00-  20.00 [01.0H] :   0.358163        36.4260    
+layer=10  u-veloc. sdev:   19.00-  20.00 [01.0H] :   0.295115        37.7057    
+layer=11  u-veloc. sdev:   19.00-  20.00 [01.0H] :   0.253262        22.4909    
+layer=12  u-veloc. sdev:   19.00-  20.00 [01.0H] :    0.00000        19.5073    
+layer=13  u-veloc. sdev:   19.00-  20.00 [01.0H] :    0.00000        17.5483    
+layer=14  u-veloc. sdev:   19.00-  20.00 [01.0H] :    0.00000        15.3467    
+layer=15  u-veloc. sdev:   19.00-  20.00 [01.0H] :    0.00000        17.9263    
+layer=16  u-veloc. sdev:   19.00-  20.00 [01.0H] :    0.00000        19.9137    
+layer=17  u-veloc. sdev:   19.00-  20.00 [01.0H] :    0.00000        17.1819    
+layer=18  u-veloc. sdev:   19.00-  20.00 [01.0H] :    0.00000        13.6591    
+layer=19  u-veloc. sdev:   19.00-  20.00 [01.0H] :    0.00000        11.9231    
+layer=20  u-veloc. sdev:   19.00-  20.00 [01.0H] :    0.00000        17.0569    
+layer=21  u-veloc. sdev:   19.00-  20.00 [01.0H] :    0.00000        22.5481    
+layer=22  u-veloc. sdev:   19.00-  20.00 [01.0H] :    0.00000        22.5481    
+blkini: vvlio  =    38
+layer=01  v-veloc. sdev:   19.00-  20.00 [01.0H] :   0.491262        45.1718    
+layer=02  v-veloc. sdev:   19.00-  20.00 [01.0H] :   0.505509        39.4020    
+layer=03  v-veloc. sdev:   19.00-  20.00 [01.0H] :   0.465732        37.1618    
+layer=04  v-veloc. sdev:   19.00-  20.00 [01.0H] :   0.521959        33.5437    
+layer=05  v-veloc. sdev:   19.00-  20.00 [01.0H] :   0.437348        23.5736    
+layer=06  v-veloc. sdev:   19.00-  20.00 [01.0H] :   0.370960        18.3184    
+layer=07  v-veloc. sdev:   19.00-  20.00 [01.0H] :   0.419880        21.7263    
+layer=08  v-veloc. sdev:   19.00-  20.00 [01.0H] :   0.390964        22.8483    
+layer=09  v-veloc. sdev:   19.00-  20.00 [01.0H] :   0.467124        20.9652    
+layer=10  v-veloc. sdev:   19.00-  20.00 [01.0H] :   0.281691        21.9294    
+layer=11  v-veloc. sdev:   19.00-  20.00 [01.0H] :   0.217115        13.9573    
+layer=12  v-veloc. sdev:   19.00-  20.00 [01.0H] :   0.170190        13.8315    
+layer=13  v-veloc. sdev:   19.00-  20.00 [01.0H] :    0.00000        13.2143    
+layer=14  v-veloc. sdev:   19.00-  20.00 [01.0H] :    0.00000        15.6991    
+layer=15  v-veloc. sdev:   19.00-  20.00 [01.0H] :    0.00000        16.8014    
+layer=16  v-veloc. sdev:   19.00-  20.00 [01.0H] :    0.00000        10.4609    
+layer=17  v-veloc. sdev:   19.00-  20.00 [01.0H] :    0.00000        10.4480    
+layer=18  v-veloc. sdev:   19.00-  20.00 [01.0H] :    0.00000        10.4480    
+layer=19  v-veloc. sdev:   19.00-  20.00 [01.0H] :    0.00000        12.5197    
+layer=20  v-veloc. sdev:   19.00-  20.00 [01.0H] :    0.00000        14.3747    
+layer=21  v-veloc. sdev:   19.00-  20.00 [01.0H] :    0.00000        13.2117    
+layer=22  v-veloc. sdev:   19.00-  20.00 [01.0H] :    0.00000        10.4480    
+blkini: splio  =     0
+blkini: iwvio  =    40
+layer=01   i.veloc sdev:   19.00-  20.00 [01.0H] :    0.00000        0.00000    
+layer=02   i.veloc sdev:   19.00-  20.00 [01.0H] :  -0.153723       0.738594E-01
+layer=03   i.veloc sdev:   19.00-  20.00 [01.0H] :  -0.376516       0.129198    
+layer=04   i.veloc sdev:   19.00-  20.00 [01.0H] :  -0.819836       0.649768    
+layer=05   i.veloc sdev:   19.00-  20.00 [01.0H] :   -1.46391        1.23740    
+layer=06   i.veloc sdev:   19.00-  20.00 [01.0H] :   -2.33233        2.70426    
+layer=07   i.veloc sdev:   19.00-  20.00 [01.0H] :   -2.42518        4.24449    
+layer=08   i.veloc sdev:   19.00-  20.00 [01.0H] :   -3.35410        5.79919    
+layer=09   i.veloc sdev:   19.00-  20.00 [01.0H] :   -4.33329        6.05776    
+layer=10   i.veloc sdev:   19.00-  20.00 [01.0H] :   -7.63807        7.19415    
+layer=11   i.veloc sdev:   19.00-  20.00 [01.0H] :   -9.28204        8.32232    
+layer=12   i.veloc sdev:   19.00-  20.00 [01.0H] :   -9.98119        7.96838    
+layer=13   i.veloc sdev:   19.00-  20.00 [01.0H] :   -10.3523        6.25976    
+layer=14   i.veloc sdev:   19.00-  20.00 [01.0H] :   -10.8119        6.88525    
+layer=15   i.veloc sdev:   19.00-  20.00 [01.0H] :   -10.9938        7.09949    
+layer=16   i.veloc sdev:   19.00-  20.00 [01.0H] :   -11.0726        7.96617    
+layer=17   i.veloc sdev:   19.00-  20.00 [01.0H] :   -12.7031        9.10527    
+layer=18   i.veloc sdev:   19.00-  20.00 [01.0H] :   -15.2380        10.6079    
+layer=19   i.veloc sdev:   19.00-  20.00 [01.0H] :   -18.7396        11.6236    
+layer=20   i.veloc sdev:   19.00-  20.00 [01.0H] :   -20.4138        12.3505    
+layer=21   i.veloc sdev:   19.00-  20.00 [01.0H] :   -21.1925        13.9105    
+layer=22   i.veloc sdev:   19.00-  20.00 [01.0H] :   -20.9558        16.4134    
+blkini: infio  =    31
+layer=01   i.depth sdev:   19.00-  20.00 [01.0H] :    0.00000        0.00000    
+layer=02   i.depth sdev:   19.00-  20.00 [01.0H] :   0.115375E-02    4.11034    
+layer=03   i.depth sdev:   19.00-  20.00 [01.0H] :   0.230751E-02    8.79423    
+layer=04   i.depth sdev:   19.00-  20.00 [01.0H] :   0.230751E-02    17.1866    
+layer=05   i.depth sdev:   19.00-  20.00 [01.0H] :   0.461501E-02    50.2369    
+layer=06   i.depth sdev:   19.00-  20.00 [01.0H] :   0.513361E-02    82.3182    
+layer=07   i.depth sdev:   19.00-  20.00 [01.0H] :   0.513361E-02    119.823    
+layer=08   i.depth sdev:   19.00-  20.00 [01.0H] :   0.795972E-02    122.463    
+layer=09   i.depth sdev:   19.00-  20.00 [01.0H] :   0.102672E-01    124.256    
+layer=10   i.depth sdev:   19.00-  20.00 [01.0H] :   0.154270E-01    193.097    
+layer=11   i.depth sdev:   19.00-  20.00 [01.0H] :   0.154270E-01    223.337    
+layer=12   i.depth sdev:   19.00-  20.00 [01.0H] :   0.186903E-01    229.483    
+layer=13   i.depth sdev:   19.00-  20.00 [01.0H] :   0.186903E-01    273.814    
+layer=14   i.depth sdev:   19.00-  20.00 [01.0H] :   0.186903E-01    293.692    
+layer=15   i.depth sdev:   19.00-  20.00 [01.0H] :   0.186903E-01    311.104    
+layer=16   i.depth sdev:   19.00-  20.00 [01.0H] :   0.579090E-01    346.930    
+layer=17   i.depth sdev:   19.00-  20.00 [01.0H] :   0.579090E-01    435.114    
+layer=18   i.depth sdev:   19.00-  20.00 [01.0H] :   0.579091E-01    444.871    
+layer=19   i.depth sdev:   19.00-  20.00 [01.0H] :   0.579091E-01    461.522    
+layer=20   i.depth sdev:   19.00-  20.00 [01.0H] :   0.579091E-01    489.864    
+layer=21   i.depth sdev:   19.00-  20.00 [01.0H] :   0.579091E-01    577.554    
+layer=22   i.depth sdev:   19.00-  20.00 [01.0H] :   0.579091E-01    691.536    
+blkini: thkio  =    32
+layer=01   thknss  sdev:   19.00-  20.00 [01.0H] :    0.00000        0.00000    
+layer=02   thknss  sdev:   19.00-  20.00 [01.0H] :   0.115375E-02    4.11034    
+layer=03   thknss  sdev:   19.00-  20.00 [01.0H] :   0.115375E-02    6.94240    
+layer=04   thknss  sdev:   19.00-  20.00 [01.0H] :    0.00000        14.7967    
+layer=05   thknss  sdev:   19.00-  20.00 [01.0H] :   0.230751E-02    33.0503    
+layer=06   thknss  sdev:   19.00-  20.00 [01.0H] :    0.00000        39.2402    
+layer=07   thknss  sdev:   19.00-  20.00 [01.0H] :    0.00000        49.2396    
+layer=08   thknss  sdev:   19.00-  20.00 [01.0H] :    0.00000        42.4943    
+layer=09   thknss  sdev:   19.00-  20.00 [01.0H] :   0.230751E-02    49.8938    
+layer=10   thknss  sdev:   19.00-  20.00 [01.0H] :   0.515974E-02    98.2538    
+layer=11   thknss  sdev:   19.00-  20.00 [01.0H] :    0.00000        117.215    
+layer=12   thknss  sdev:   19.00-  20.00 [01.0H] :   0.326331E-02    144.939    
+layer=13   thknss  sdev:   19.00-  20.00 [01.0H] :    0.00000        163.818    
+layer=14   thknss  sdev:   19.00-  20.00 [01.0H] :    0.00000        140.951    
+layer=15   thknss  sdev:   19.00-  20.00 [01.0H] :    0.00000        127.594    
+layer=16   thknss  sdev:   19.00-  20.00 [01.0H] :   0.145193E-02    134.665    
+layer=17   thknss  sdev:   19.00-  20.00 [01.0H] :   0.166741E-02    166.563    
+layer=18   thknss  sdev:   19.00-  20.00 [01.0H] :   0.265119E-02    163.423    
+layer=19   thknss  sdev:   19.00-  20.00 [01.0H] :   0.218555E-02    199.466    
+layer=20   thknss  sdev:   19.00-  20.00 [01.0H] :   0.581452E-02    197.475    
+layer=21   thknss  sdev:   19.00-  20.00 [01.0H] :   0.956729E-02    126.965    
+layer=22   thknss  sdev:   19.00-  20.00 [01.0H] :   0.104625E-01    130.322    
+blkini: temio  =    33
+layer=01   temp    sdev:   19.00-  20.00 [01.0H] :   0.274440        5.22647    
+layer=02   temp    sdev:   19.00-  20.00 [01.0H] :   0.273549        4.88904    
+layer=03   temp    sdev:   19.00-  20.00 [01.0H] :   0.272543        4.36283    
+layer=04   temp    sdev:   19.00-  20.00 [01.0H] :   0.270746        4.56323    
+layer=05   temp    sdev:   19.00-  20.00 [01.0H] :   0.112944        4.75423    
+layer=06   temp    sdev:   19.00-  20.00 [01.0H] :   0.769442E-01    4.66134    
+layer=07   temp    sdev:   19.00-  20.00 [01.0H] :   0.234375E-01    4.44051    
+layer=08   temp    sdev:   19.00-  20.00 [01.0H] :   0.110485E-01    4.09885    
+layer=09   temp    sdev:   19.00-  20.00 [01.0H] :    0.00000        3.81311    
+layer=10   temp    sdev:   19.00-  20.00 [01.0H] :    0.00000        3.74518    
+layer=11   temp    sdev:   19.00-  20.00 [01.0H] :    0.00000        3.23542    
+layer=12   temp    sdev:   19.00-  20.00 [01.0H] :    0.00000        2.36271    
+layer=13   temp    sdev:   19.00-  20.00 [01.0H] :    0.00000        1.73113    
+layer=14   temp    sdev:   19.00-  20.00 [01.0H] :    0.00000        1.75357    
+layer=15   temp    sdev:   19.00-  20.00 [01.0H] :    0.00000        1.97704    
+layer=16   temp    sdev:   19.00-  20.00 [01.0H] :    0.00000        2.15045    
+layer=17   temp    sdev:   19.00-  20.00 [01.0H] :    0.00000        2.17798    
+layer=18   temp    sdev:   19.00-  20.00 [01.0H] :    0.00000        2.44720    
+layer=19   temp    sdev:   19.00-  20.00 [01.0H] :    0.00000        1.77824    
+layer=20   temp    sdev:   19.00-  20.00 [01.0H] :    0.00000        1.89134    
+layer=21   temp    sdev:   19.00-  20.00 [01.0H] :    0.00000        2.22777    
+layer=22   temp    sdev:   19.00-  20.00 [01.0H] :    0.00000        2.41592    
+blkini: salio  =    34
+layer=01  salinity sdev:   19.00-  20.00 [01.0H] :    0.00000        1.78409    
+layer=02  salinity sdev:   19.00-  20.00 [01.0H] :    0.00000        1.67741    
+layer=03  salinity sdev:   19.00-  20.00 [01.0H] :    0.00000        1.14650    
+layer=04  salinity sdev:   19.00-  20.00 [01.0H] :    0.00000       0.744855    
+layer=05  salinity sdev:   19.00-  20.00 [01.0H] :    0.00000       0.609375    
+layer=06  salinity sdev:   19.00-  20.00 [01.0H] :    0.00000       0.720107    
+layer=07  salinity sdev:   19.00-  20.00 [01.0H] :    0.00000       0.753896    
+layer=08  salinity sdev:   19.00-  20.00 [01.0H] :    0.00000       0.727192    
+layer=09  salinity sdev:   19.00-  20.00 [01.0H] :    0.00000       0.733876    
+layer=10  salinity sdev:   19.00-  20.00 [01.0H] :    0.00000       0.654481    
+layer=11  salinity sdev:   19.00-  20.00 [01.0H] :    0.00000       0.493117    
+layer=12  salinity sdev:   19.00-  20.00 [01.0H] :    0.00000       0.395130    
+layer=13  salinity sdev:   19.00-  20.00 [01.0H] :    0.00000       0.442356    
+layer=14  salinity sdev:   19.00-  20.00 [01.0H] :    0.00000       0.274885    
+layer=15  salinity sdev:   19.00-  20.00 [01.0H] :    0.00000       0.402476    
+layer=16  salinity sdev:   19.00-  20.00 [01.0H] :    0.00000       0.168286    
+layer=17  salinity sdev:   19.00-  20.00 [01.0H] :    0.00000       0.308964    
+layer=18  salinity sdev:   19.00-  20.00 [01.0H] :    0.00000       0.179177    
+layer=19  salinity sdev:   19.00-  20.00 [01.0H] :    0.00000       0.300756    
+layer=20  salinity sdev:   19.00-  20.00 [01.0H] :    0.00000       0.296258    
+layer=21  salinity sdev:   19.00-  20.00 [01.0H] :    0.00000       0.314641    
+layer=22  salinity sdev:   19.00-  20.00 [01.0H] :    0.00000       0.314641    
+blkini: tthio  =    35
+layer=01  density  sdev:   19.00-  20.00 [01.0H] :    25.0956        26.9036    
+layer=02  density  sdev:   19.00-  20.00 [01.0H] :    25.0953        26.6220    
+layer=03  density  sdev:   19.00-  20.00 [01.0H] :    25.0950        26.2937    
+layer=04  density  sdev:   19.00-  20.00 [01.0H] :    25.0833        26.0723    
+layer=05  density  sdev:   19.00-  20.00 [01.0H] :    25.0121        26.0123    
+layer=06  density  sdev:   19.00-  20.00 [01.0H] :    25.0057        25.8858    
+layer=07  density  sdev:   19.00-  20.00 [01.0H] :    25.0000        25.7612    
+layer=08  density  sdev:   19.00-  20.00 [01.0H] :    25.0003        25.5638    
+layer=09  density  sdev:   19.00-  20.00 [01.0H] :    25.0003        25.4045    
+layer=10  density  sdev:   19.00-  20.00 [01.0H] :    25.0000        25.3482    
+layer=11  density  sdev:   19.00-  20.00 [01.0H] :    25.0000        25.2665    
+layer=12  density  sdev:   19.00-  20.00 [01.0H] :    25.0000        25.2447    
+layer=13  density  sdev:   19.00-  20.00 [01.0H] :    25.0000        25.2013    
+layer=14  density  sdev:   19.00-  20.00 [01.0H] :    25.0000        25.2046    
+layer=15  density  sdev:   19.00-  20.00 [01.0H] :    25.0000        25.2452    
+layer=16  density  sdev:   19.00-  20.00 [01.0H] :    25.0000        25.2529    
+layer=17  density  sdev:   19.00-  20.00 [01.0H] :    25.0000        25.3093    
+layer=18  density  sdev:   19.00-  20.00 [01.0H] :    25.0000        25.3600    
+layer=19  density  sdev:   19.00-  20.00 [01.0H] :    25.0000        25.0924    
+layer=20  density  sdev:   19.00-  20.00 [01.0H] :    25.0000        25.0795    
+layer=21  density  sdev:   19.00-  20.00 [01.0H] :    25.0000        25.0564    
+layer=22  density  sdev:   19.00-  20.00 [01.0H] :    25.0000        25.0261    
+blkini: keio   =    41
+layer=01  ke/mass  sdev:   19.00-  20.00 [01.0H] :   0.371486E-03   0.308167    
+layer=02  ke/mass  sdev:   19.00-  20.00 [01.0H] :   0.865366E-04   0.220978    
+layer=03  ke/mass  sdev:   19.00-  20.00 [01.0H] :   0.459619E-04   0.212521    
+layer=04  ke/mass  sdev:   19.00-  20.00 [01.0H] :   0.424740E-04   0.156088    
+layer=05  ke/mass  sdev:   19.00-  20.00 [01.0H] :   0.575938E-04   0.137018    
+layer=06  ke/mass  sdev:   19.00-  20.00 [01.0H] :   0.678104E-04   0.117757    
+layer=07  ke/mass  sdev:   19.00-  20.00 [01.0H] :   0.650554E-04   0.228642    
+layer=08  ke/mass  sdev:   19.00-  20.00 [01.0H] :   0.539007E-04   0.150943    
+layer=09  ke/mass  sdev:   19.00-  20.00 [01.0H] :   0.657289E-04   0.213224    
+layer=10  ke/mass  sdev:   19.00-  20.00 [01.0H] :   0.302632E-04   0.139700    
+layer=11  ke/mass  sdev:   19.00-  20.00 [01.0H] :   0.334878E-04   0.695563E-01
+layer=12  ke/mass  sdev:   19.00-  20.00 [01.0H] :   0.807789E-05   0.376635E-01
+layer=13  ke/mass  sdev:   19.00-  20.00 [01.0H] :   0.909450E-05   0.351519E-01
+layer=14  ke/mass  sdev:   19.00-  20.00 [01.0H] :   0.171777E-05   0.691232E-01
+layer=15  ke/mass  sdev:   19.00-  20.00 [01.0H] :   0.134403E-05   0.935363E-01
+layer=16  ke/mass  sdev:   19.00-  20.00 [01.0H] :   0.144033E-05   0.130126    
+layer=17  ke/mass  sdev:   19.00-  20.00 [01.0H] :    0.00000       0.888640E-01
+layer=18  ke/mass  sdev:   19.00-  20.00 [01.0H] :    0.00000       0.514067E-01
+layer=19  ke/mass  sdev:   19.00-  20.00 [01.0H] :   0.119638E-05   0.569117E-01
+layer=20  ke/mass  sdev:   19.00-  20.00 [01.0H] :   0.631821E-06   0.624356E-01
+layer=21  ke/mass  sdev:   19.00-  20.00 [01.0H] :   0.106375E-06   0.365357E-01
+layer=22  ke/mass  sdev:   19.00-  20.00 [01.0H] :   0.994419E-07   0.141992E-01
+blkini: sfnio  =     0
+blkini: kf     =     0
+STOP: (normal)
+foreach t ( bot flx ice fsd mix bke 3di 3dh 3dt 3ds 3dr 3dn 3du 3dv 3dm 3dk )
+if ( -e ../expt_01.0/data/archSD.0020_bot.a ) then
+/bin/rm -f ../expt_01.0/data/archSD.0020_bot.A
+../../ALL/bin/hycom2raw ../expt_01.0/data/archSD.0020_bot.a 57 52 1.e10 ../expt_01.0/data/archSD.0020_bot.A
+min, max =   5.79090975E-02   691.53589    
+ 
+ 1  FIELDS PROCESSED
+ 
+endif
+end
+if ( -e ../expt_01.0/data/archSD.0020_flx.a ) then
+/bin/rm -f ../expt_01.0/data/archSD.0020_flx.A
+../../ALL/bin/hycom2raw ../expt_01.0/data/archSD.0020_flx.a 57 52 1.e10 ../expt_01.0/data/archSD.0020_flx.A
+min, max =    7.7622762       232.26701    
+ 
+ 1  FIELDS PROCESSED
+ 
+endif
+end
+if ( -e ../expt_01.0/data/archSD.0020_ice.a ) then
+end
+if ( -e ../expt_01.0/data/archSD.0020_fsd.a ) then
+/bin/rm -f ../expt_01.0/data/archSD.0020_fsd.A
+../../ALL/bin/hycom2raw ../expt_01.0/data/archSD.0020_fsd.a 57 52 1.e10 ../expt_01.0/data/archSD.0020_fsd.A
+min, max =   0.47637719       12.847250    
+ 
+ 1  FIELDS PROCESSED
+ 
+endif
+end
+if ( -e ../expt_01.0/data/archSD.0020_mix.a ) then
+/bin/rm -f ../expt_01.0/data/archSD.0020_mix.A
+../../ALL/bin/hycom2raw ../expt_01.0/data/archSD.0020_mix.a 57 52 1.e10 ../expt_01.0/data/archSD.0020_mix.A
+min, max =   0.62941366       40.766766    
+min, max =   0.54951507       38.244881    
+min, max =   5.92472441E-02   172.13754    
+min, max =   5.92472441E-02   234.02917    
+min, max =   0.28545040       5.2307472    
+min, max =    0.0000000       1.7922494    
+min, max =    25.095642       26.908167    
+min, max =   1.02606275E-04  0.35822171    
+ 
+ 8  FIELDS PROCESSED
+ 
+endif
+end
+if ( -e ../expt_01.0/data/archSD.0020_bke.a ) then
+/bin/rm -f ../expt_01.0/data/archSD.0020_bke.A
+../../ALL/bin/hycom2raw ../expt_01.0/data/archSD.0020_bke.a 57 52 1.e10 ../expt_01.0/data/archSD.0020_bke.A
+min, max =   2.77536543E-07  1.52108548E-02
+ 
+ 1  FIELDS PROCESSED
+ 
+endif
+end
+if ( -e ../expt_01.0/data/archSD.0020_3di.a ) then
+/bin/rm -f ../expt_01.0/data/archSD.0020_3di.A
+../../ALL/bin/hycom2raw ../expt_01.0/data/archSD.0020_3di.a 57 52 1.e10 ../expt_01.0/data/archSD.0020_3di.A
+min, max =    0.0000000       0.0000000    
+min, max =   1.15375360E-03   4.1103358    
+min, max =   2.30750721E-03   8.7942276    
+min, max =   2.30750721E-03   17.186581    
+min, max =   4.61501442E-03   50.236855    
+min, max =   5.13361488E-03   82.318207    
+min, max =   5.13361488E-03   119.82320    
+min, max =   7.95972254E-03   122.46271    
+min, max =   1.02672298E-02   124.25571    
+min, max =   1.54269729E-02   193.09695    
+min, max =   1.54269729E-02   223.33710    
+min, max =   1.86902806E-02   229.48311    
+min, max =   1.86902806E-02   273.81384    
+min, max =   1.86902806E-02   293.69189    
+min, max =   1.86902806E-02   311.10373    
+min, max =   5.79090007E-02   346.93015    
+min, max =   5.79090379E-02   435.11389    
+min, max =   5.79090975E-02   444.87115    
+min, max =   5.79090975E-02   461.52155    
+min, max =   5.79090975E-02   489.86365    
+min, max =   5.79090975E-02   577.55353    
+min, max =   5.79090975E-02   691.53589    
+ 
+ 22  FIELDS PROCESSED
+ 
+endif
+end
+if ( -e ../expt_01.0/data/archSD.0020_3dh.a ) then
+/bin/rm -f ../expt_01.0/data/archSD.0020_3dh.A
+../../ALL/bin/hycom2raw ../expt_01.0/data/archSD.0020_3dh.a 57 52 1.e10 ../expt_01.0/data/archSD.0020_3dh.A
+min, max =    0.0000000       0.0000000    
+min, max =   1.15375360E-03   4.1103358    
+min, max =   1.15375360E-03   6.9424000    
+min, max =    0.0000000       14.796665    
+min, max =   2.30750721E-03   33.050274    
+min, max =    0.0000000       39.240162    
+min, max =    0.0000000       49.239632    
+min, max =    0.0000000       42.494255    
+min, max =   2.30750721E-03   49.893791    
+min, max =   5.15974360E-03   98.253830    
+min, max =    0.0000000       117.21481    
+min, max =   3.26330820E-03   144.93922    
+min, max =    0.0000000       163.81836    
+min, max =    0.0000000       140.95096    
+min, max =    0.0000000       127.59362    
+min, max =   1.45192817E-03   134.66516    
+min, max =   1.66740839E-03   166.56255    
+min, max =   2.65118596E-03   163.42323    
+min, max =   2.18555355E-03   199.46620    
+min, max =   5.81451505E-03   197.47479    
+min, max =   9.56728682E-03   126.96535    
+min, max =   1.04625002E-02   130.32237    
+ 
+ 22  FIELDS PROCESSED
+ 
+endif
+end
+if ( -e ../expt_01.0/data/archSD.0020_3dt.a ) then
+/bin/rm -f ../expt_01.0/data/archSD.0020_3dt.A
+../../ALL/bin/hycom2raw ../expt_01.0/data/archSD.0020_3dt.a 57 52 1.e10 ../expt_01.0/data/archSD.0020_3dt.A
+min, max =   0.27444014       5.2264657    
+min, max =   0.27354908       4.8890395    
+min, max =   0.27254319       4.3628259    
+min, max =   0.27074566       4.5632272    
+min, max =   0.11294400       4.7542257    
+min, max =   7.69442022E-02   4.6613445    
+min, max =   2.34375000E-02   4.4405060    
+min, max =   1.10485433E-02   4.0988541    
+min, max =    0.0000000       3.8131063    
+min, max =    0.0000000       3.7451813    
+min, max =    0.0000000       3.2354198    
+min, max =    0.0000000       2.3627145    
+min, max =    0.0000000       1.7311256    
+min, max =    0.0000000       1.7535691    
+min, max =    0.0000000       1.9770381    
+min, max =    0.0000000       2.1504474    
+min, max =    0.0000000       2.1779797    
+min, max =    0.0000000       2.4472032    
+min, max =    0.0000000       1.7782412    
+min, max =    0.0000000       1.8913431    
+min, max =    0.0000000       2.2277715    
+min, max =    0.0000000       2.4159174    
+ 
+ 22  FIELDS PROCESSED
+ 
+endif
+end
+if ( -e ../expt_01.0/data/archSD.0020_3ds.a ) then
+/bin/rm -f ../expt_01.0/data/archSD.0020_3ds.A
+../../ALL/bin/hycom2raw ../expt_01.0/data/archSD.0020_3ds.a 57 52 1.e10 ../expt_01.0/data/archSD.0020_3ds.A
+min, max =    0.0000000       1.7840917    
+min, max =    0.0000000       1.6774149    
+min, max =    0.0000000       1.1464961    
+min, max =    0.0000000      0.74485540    
+min, max =    0.0000000      0.60937500    
+min, max =    0.0000000      0.72010744    
+min, max =    0.0000000      0.75389612    
+min, max =    0.0000000      0.72719228    
+min, max =    0.0000000      0.73387617    
+min, max =    0.0000000      0.65448052    
+min, max =    0.0000000      0.49311668    
+min, max =    0.0000000      0.39513028    
+min, max =    0.0000000      0.44235587    
+min, max =    0.0000000      0.27488455    
+min, max =    0.0000000      0.40247646    
+min, max =    0.0000000      0.16828640    
+min, max =    0.0000000      0.30896437    
+min, max =    0.0000000      0.17917727    
+min, max =    0.0000000      0.30075589    
+min, max =    0.0000000      0.29625759    
+min, max =    0.0000000      0.31464109    
+min, max =    0.0000000      0.31464109    
+ 
+ 22  FIELDS PROCESSED
+ 
+endif
+end
+if ( -e ../expt_01.0/data/archSD.0020_3dr.a ) then
+/bin/rm -f ../expt_01.0/data/archSD.0020_3dr.A
+../../ALL/bin/hycom2raw ../expt_01.0/data/archSD.0020_3dr.a 57 52 1.e10 ../expt_01.0/data/archSD.0020_3dr.A
+min, max =    25.095570       26.903589    
+min, max =    25.095333       26.622023    
+min, max =    25.094994       26.293715    
+min, max =    25.083265       26.072319    
+min, max =    25.012060       26.012295    
+min, max =    25.005651       25.885845    
+min, max =    25.000000       25.761162    
+min, max =    25.000299       25.563759    
+min, max =    25.000345       25.404547    
+min, max =    25.000000       25.348217    
+min, max =    25.000000       25.266476    
+min, max =    25.000000       25.244682    
+min, max =    25.000000       25.201307    
+min, max =    25.000000       25.204599    
+min, max =    25.000000       25.245237    
+min, max =    25.000000       25.252897    
+min, max =    25.000000       25.309269    
+min, max =    25.000000       25.360010    
+min, max =    25.000000       25.092449    
+min, max =    25.000000       25.079481    
+min, max =    25.000000       25.056355    
+min, max =    25.000000       25.026131    
+ 
+ 22  FIELDS PROCESSED
+ 
+endif
+end
+if ( -e ../expt_01.0/data/archSD.0020_3dn.a ) then
+end
+if ( -e ../expt_01.0/data/archSD.0020_3du.a ) then
+/bin/rm -f ../expt_01.0/data/archSD.0020_3du.A
+../../ALL/bin/hycom2raw ../expt_01.0/data/archSD.0020_3du.a 57 52 1.e10 ../expt_01.0/data/archSD.0020_3du.A
+min, max =   0.59660095       44.240303    
+min, max =   0.61076802       43.705029    
+min, max =   0.68449980       43.184940    
+min, max =   0.65054625       42.066978    
+min, max =   0.48803058       35.056789    
+min, max =   0.49730241       28.928741    
+min, max =   0.45952341       31.591982    
+min, max =   0.29657173       29.857388    
+min, max =   0.35816342       36.426006    
+min, max =   0.29511535       37.705673    
+min, max =   0.25326201       22.490873    
+min, max =    0.0000000       19.507290    
+min, max =    0.0000000       17.548258    
+min, max =    0.0000000       15.346724    
+min, max =    0.0000000       17.926285    
+min, max =    0.0000000       19.913704    
+min, max =    0.0000000       17.181854    
+min, max =    0.0000000       13.659101    
+min, max =    0.0000000       11.923089    
+min, max =    0.0000000       17.056936    
+min, max =    0.0000000       22.548141    
+min, max =    0.0000000       22.548141    
+ 
+ 22  FIELDS PROCESSED
+ 
+endif
+end
+if ( -e ../expt_01.0/data/archSD.0020_3dv.a ) then
+/bin/rm -f ../expt_01.0/data/archSD.0020_3dv.A
+../../ALL/bin/hycom2raw ../expt_01.0/data/archSD.0020_3dv.a 57 52 1.e10 ../expt_01.0/data/archSD.0020_3dv.A
+min, max =   0.49126250       45.171757    
+min, max =   0.50550860       39.402016    
+min, max =   0.46573240       37.161758    
+min, max =   0.52195930       33.543682    
+min, max =   0.43734801       23.573648    
+min, max =   0.37096041       18.318386    
+min, max =   0.41988045       21.726294    
+min, max =   0.39096385       22.848314    
+min, max =   0.46712402       20.965179    
+min, max =   0.28169069       21.929390    
+min, max =   0.21711500       13.957329    
+min, max =   0.17019008       13.831496    
+min, max =    0.0000000       13.214297    
+min, max =    0.0000000       15.699080    
+min, max =    0.0000000       16.801353    
+min, max =    0.0000000       10.460923    
+min, max =    0.0000000       10.447994    
+min, max =    0.0000000       10.447994    
+min, max =    0.0000000       12.519735    
+min, max =    0.0000000       14.374667    
+min, max =    0.0000000       13.211675    
+min, max =    0.0000000       10.447994    
+ 
+ 22  FIELDS PROCESSED
+ 
+endif
+end
+if ( -e ../expt_01.0/data/archSD.0020_3dm.a ) then
+end
+if ( -e ../expt_01.0/data/archSD.0020_3dk.a ) then
+/bin/rm -f ../expt_01.0/data/archSD.0020_3dk.A
+../../ALL/bin/hycom2raw ../expt_01.0/data/archSD.0020_3dk.a 57 52 1.e10 ../expt_01.0/data/archSD.0020_3dk.A
+min, max =   3.71486298E-04  0.30816731    
+min, max =   8.65366383E-05  0.22097751    
+min, max =   4.59619005E-05  0.21252133    
+min, max =   4.24740356E-05  0.15608785    
+min, max =   5.75937520E-05  0.13701828    
+min, max =   6.78104479E-05  0.11775669    
+min, max =   6.50553775E-05  0.22864209    
+min, max =   5.39007124E-05  0.15094323    
+min, max =   6.57288547E-05  0.21322364    
+min, max =   3.02632307E-05  0.13970003    
+min, max =   3.34877986E-05  6.95563257E-02
+min, max =   8.07789365E-06  3.76635157E-02
+min, max =   9.09450137E-06  3.51519175E-02
+min, max =   1.71777492E-06  6.91232085E-02
+min, max =   1.34402853E-06  9.35363099E-02
+min, max =   1.44033413E-06  0.13012633    
+min, max =    0.0000000      8.88639912E-02
+min, max =    0.0000000      5.14066890E-02
+min, max =   1.19637559E-06  5.69117405E-02
+min, max =   6.31820853E-07  6.24356456E-02
+min, max =   1.06374770E-07  3.65356579E-02
+min, max =   9.94419409E-08  1.41991703E-02
+ 
+ 22  FIELDS PROCESSED
+ 
+endif
+end
+end

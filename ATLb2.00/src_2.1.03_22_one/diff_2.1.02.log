@@ -1,0 +1,2418 @@
+foreach f ( READ* Makefile Make.com *.h *.f *.F )
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw README.src.MICOMvsHYCOM ../src_2.1.02_22_one
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw README.src.OpenMP ../src_2.1.02_22_one
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw README.src.changes ../src_2.1.02_22_one
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw README.src.changes_1p0 ../src_2.1.02_22_one
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw README.src.changes_2p0 ../src_2.1.02_22_one
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw README.src.make ../src_2.1.02_22_one
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw README.src.mod_xc ../src_2.1.02_22_one
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw README.src.mod_za ../src_2.1.02_22_one
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw README.src.newmachine ../src_2.1.02_22_one
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw README.src.newregion ../src_2.1.02_22_one
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw README.src.test ../src_2.1.02_22_one
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw Makefile ../src_2.1.02_22_one
+24,29c24,29
+< OBJS =	 hycom.o archiv.o  barotp.o bigrid.o  blkdat.o cnuity.o convec.o \
+< 	diapfl.o dpthuv.o  dpudpv.o forfun.o  geopar.o hybgen.o \
+< 	icloan.o inicon.o  inikpp.o  inimy.o  latbdy.o \
+< 	matinv.o momtum.o  mxkprf.o  mxkrt.o  mxkrtm.o  mxpwp.o \
+< 	overtn.o poflat.o  prtmsk.o  psmoo.o restart.o stencl.o \
+< 	thermf.o trcupd.o  tsadvc.o  zebra.o \
+---
+> OBJS =	 hycom.o           barotp.o bigrid.o blkdat.o cnuity.o convec.o \
+> 	diapfl.o dpthuv.o  dpudpv.o forfun.o geopar.o hybgen.o inicon.o \
+> 	inikpp.o  inimy.o  latbdy.o matinv.o momtum.o mxkprf.o  mxkrt.o \
+> 	mxkrtm.o  mxpwp.o  overtn.o                            poflat.o \
+> 	prtmsk.o  psmoo.o restart.o stencl.o thermf.o tsadvc.o  zebra.o \
+> 	icloan.o archiv.o \
+32,37c32,37
+< SRCS =	 hycom.f archiv.f  barotp.f bigrid.f  blkdat.f cnuity.f convec.f \
+< 	diapfl.f dpthuv.f  dpudpv.f forfun.f  geopar.f hybgen.f \
+< 	icloan.f inicon.f  inikpp.f  inimy.f  latbdy.f \
+< 	matinv.f momtum.f  mxkprf.f  mxkrt.f  mxkrtm.f  mxpwp.f \
+< 	overtn.f poflat.f  prtmsk.f  psmoo.f restart.f stencl.f \
+< 	thermf.f trcupd.f  tsadvc.f  zebra.f \
+---
+> SRCS =	 hycom.f           barotp.f bigrid.f blkdat.f cnuity.f convec.f \
+> 	diapfl.f dpthuv.f  dpudpv.f forfun.f geopar.f hybgen.f inicon.f \
+> 	inikpp.f  inimy.f  latbdy.f matinv.f momtum.f mxkprf.f  mxkrt.f \
+> 	mxkrtm.f  mxpwp.f  overtn.f                            poflat.f \
+> 	prtmsk.f  psmoo.f restart.f stencl.f thermf.f tsadvc.f  zebra.f \
+> 	icloan.f archiv.f \
+79d78
+< trcupd.o:  trcupd.f  mod_xc.o common_blocks.h
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw Make.com ../src_2.1.02_22_one
+15a16
+> #setenv ARCH sp3GPFS
+17d17
+< #setenv ARCH sp4
+22c22
+< setenv ARCH sp3
+---
+> setenv ARCH sp3GPFS
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw common_blocks.h ../src_2.1.02_22_one
+7c7,8
+<      & th3d           ! potential density
+---
+>      & th3d,          ! potential density
+>      & tracer         ! inert tracer
+9,11d9
+<       real, dimension (1-nbdy:idm+nbdy,1-nbdy:jdm+nbdy,kdm,2,mxtrcr) ::
+<      & tracer         ! inert tracers
+< 
+50c48,50
+<      & uflux3,vflux3  ! more mass fluxes
+---
+>      & uflux3,vflux3, ! more mass fluxes
+>      & uflux4,vflux4, ! more mass fluxes
+>      & uflux5,vflux5  ! more mass fluxes
+54,55c54,55
+<      &                uflux, vflux, uflux1,vflux1,
+<      &                uflux2,vflux2,uflux3,vflux3,
+---
+>      &                uflux, vflux, uflux1,vflux1,uflux2,vflux2,
+>      &                uflux3,vflux3,uflux4,vflux4,uflux5,vflux5,
+155c155
+< c --- relax       activate lateral boundary T/S/p  climatological nudging
+---
+> c --- relax       activate lateral boundary    climatological nudging
+158,159c158
+< c --- trcrlx      activate lateral boundary tracer climatological nudging
+< c --- relaxf      input T/S/p   relaxation fields
+---
+> c --- relaxf      input         relaxation fields
+161d159
+< c --- relaxt      input tracer  relaxation fields
+181c179
+<      &              relax,srelax,trelax,trcrlx,relaxf,relaxs,relaxt,
+---
+>      &              relax,srelax,trelax,relaxf,relaxs,
+187c185
+<      &              relax,srelax,trelax,trcrlx,relaxf,relaxs,relaxt,
+---
+>      &              relax,srelax,trelax,relaxf,relaxs,
+231,234d228
+<       real, dimension (1-nbdy:idm+nbdy,1-nbdy:jdm+nbdy,kkwall,4,
+<      &                                                   mxtrcr) ::
+<      & trwall         ! tracer   b.c. at sidewalls
+< 
+238,240c232
+<      & tnest,         ! temp.    b.c. at nestwalls
+<      & unest,         ! u-vel.   b.c. at nestwalls
+<      & vnest          ! v-vel.   b.c. at nestwalls
+---
+>      & tnest          ! temp.    b.c. at nestwalls
+251d242
+<      & rmutr,         ! weightc for trc.b.c. relax
+255,256c246
+<      &               rmutr,trwall,
+<      &               rmun, pnest,snest,tnest,unest,vnest,
+---
+>      &               rmun,pnest,snest,tnest,
+417,418c407
+< c --- 'ntracr' = number of tracers (<=mxtrcr)
+< c --- 'trcflg' = tracer type flag (one per tracer)
+---
+> c --- 'ntracr' = number of time steps between tracer transport
+450,451c439
+<       integer        mixfrq,nhybrd,nsigma,hybflg,advflg,
+<      &               ntracr,trcflg(mxtrcr),
+---
+>       integer        mixfrq,nhybrd,nsigma,hybflg,advflg,ntracr,
+454,455c442
+<       common/parms1i/mixfrq,nhybrd,nsigma,hybflg,advflg,
+<      &               ntracr,trcflg,
+---
+>       common/parms1i/mixfrq,nhybrd,nsigma,hybflg,advflg,ntracr,
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw dimensions.h ../src_2.1.02_22_one
+35,38d34
+< c --- mxtrcr= maximum number of tracers
+<       integer    mxtrcr
+<       parameter (mxtrcr=8)
+< c
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw dimensions_ATLb2.00_omp.h ../src_2.1.02_22_one
+35,38d34
+< c --- mxtrcr= maximum number of tracers
+<       integer    mxtrcr
+<       parameter (mxtrcr=1)
+< c
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw dimensions_ATLb2.00_ompi.h ../src_2.1.02_22_one
+35,38d34
+< c --- mxtrcr= maximum number of tracers
+<       integer    mxtrcr
+<       parameter (mxtrcr=1)
+< c
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw dimensions_ATLd0.08_ompi.h ../src_2.1.02_22_one
+36,39d35
+< c --- mxtrcr= maximum number of tracers
+<       integer    mxtrcr
+<       parameter (mxtrcr=1)
+< c
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw dimensions_ATLd0.32_omp.h ../src_2.1.02_22_one
+35,38d34
+< c --- mxtrcr= maximum number of tracers
+<       integer    mxtrcr
+<       parameter (mxtrcr=1)
+< c
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw dimensions_ATLd0.32_ompi.h ../src_2.1.02_22_one
+36,39d35
+< c --- mxtrcr= maximum number of tracers
+<       integer    mxtrcr
+<       parameter (mxtrcr=1)
+< c
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw dimensions_F1Da0.00_one.h ../src_2.1.02_22_one
+35,38d34
+< c --- mxtrcr= maximum number of tracers
+<       integer    mxtrcr
+<       parameter (mxtrcr=1)
+< c
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw dimensions_F2Db0.03_one.h ../src_2.1.02_22_one
+35,38d34
+< c --- mxtrcr= maximum number of tracers
+<       integer    mxtrcr
+<       parameter (mxtrcr=1)
+< c
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw dimensions_GLBx2.00_omp.h ../src_2.1.02_22_one
+35,38d34
+< c --- mxtrcr= maximum number of tracers
+<       integer    mxtrcr
+<       parameter (mxtrcr=1)
+< c
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw dimensions_GLBx2.00_ompi.h ../src_2.1.02_22_one
+36,39d35
+< c --- mxtrcr= maximum number of tracers
+<       integer    mxtrcr
+<       parameter (mxtrcr=1)
+< c
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw dimensions_IASb0.50_omp.h ../src_2.1.02_22_one
+35,38d34
+< c --- mxtrcr= maximum number of tracers
+<       integer    mxtrcr
+<       parameter (mxtrcr=1)
+< c
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw dimensions_IASd0.08_mpi.h ../src_2.1.02_22_one
+36,39d35
+< c --- mxtrcr= maximum number of tracers
+<       integer    mxtrcr
+<       parameter (mxtrcr=1)
+< c
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw dimensions_IASd0.32_mpi.h ../src_2.1.02_22_one
+36,39d35
+< c --- mxtrcr= maximum number of tracers
+<       integer    mxtrcr
+<       parameter (mxtrcr=1)
+< c
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw dimensions_IASd0.32_omp.h ../src_2.1.02_22_one
+35,38d34
+< c --- mxtrcr= maximum number of tracers
+<       integer    mxtrcr
+<       parameter (mxtrcr=1)
+< c
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw dimensions_JESd0.08_omp.h ../src_2.1.02_22_one
+35,38d34
+< c --- mxtrcr= maximum number of tracers
+<       integer    mxtrcr
+<       parameter (mxtrcr=1)
+< c
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw dimensions_JESd0.08_ompi.h ../src_2.1.02_22_one
+36,39d35
+< c --- mxtrcr= maximum number of tracers
+<       integer    mxtrcr
+<       parameter (mxtrcr=1)
+< c
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw dimensions_PORd0.32_mpi.h ../src_2.1.02_22_one
+36,39d35
+< c --- mxtrcr= maximum number of tracers
+<       integer    mxtrcr
+<       parameter (mxtrcr=1)
+< c
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw dimensions_PORd0.32_omp.h ../src_2.1.02_22_one
+35,38d34
+< c --- mxtrcr= maximum number of tracers
+<       integer    mxtrcr
+<       parameter (mxtrcr=1)
+< c
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw dimensions_SYMa1.00_one.h ../src_2.1.02_22_one
+35,38d34
+< c --- mxtrcr= maximum number of tracers
+<       integer    mxtrcr
+<       parameter (mxtrcr=1)
+< c
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw stmt_fns.h ../src_2.1.02_22_one
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw stmt_fns_SIGMA0.h ../src_2.1.02_22_one
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw stmt_fns_SIGMA2.h ../src_2.1.02_22_one
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw stmt_fns_SIGMA4.h ../src_2.1.02_22_one
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw archiv.f ../src_2.1.02_22_one
+13,14c13
+<       character*80 cformat
+<       integer      k,ktr,l,nop
+---
+>       integer   k,l,nop
+196,197c195,196
+<       do ktr= 1,ntracr
+<         call zaiowr(tracer(1-nbdy,1-nbdy,k,n,ktr),ip,.true.,
+---
+>       if(trcout) then
+>         call zaiowr(tracer(1-nbdy,1-nbdy,k,n),ip,.true.,
+203c202
+<       enddo !ktr
+---
+>       endif
+258,267c257
+<         if     (ntracr.eq.0) then
+<           write(cformat,'(a)')
+<      &      '(3a / (i4,2f8.2,3f8.3,f9.3,f10.3,2f8.2))'
+<         else
+<           write(cformat,'(a,i2,a,i2,a)')
+<      &      '(3a,', ntracr,
+<      &      'a / (i4,2f8.2,3f8.3,f9.3,f10.3,2f8.2,', ntracr,
+<      &      'f8.4))'
+<         endif
+<         write (nop,cformat)
+---
+>         write (nop,'(3a/(i4,2f8.2,3f8.3,f9.3,f10.3,2f8.2))')
+271d260
+<      &      ('  tracer',ktr=1,ntracr),
+284d272
+<      &       (tracer(itest,jtest,k,n,ktr),ktr=1,ntracr),             !0.0-1.0
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw barotp.f ../src_2.1.02_22_one
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw bigrid.f ../src_2.1.02_22_one
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw blkdat.f ../src_2.1.02_22_one
+3d2
+<       implicit none
+8c7
+<       integer   k,mlflag,thflag,kapflg,trcflg1
+---
+>       integer   k,trcflg,mlflag,thflag,kapflg
+660,666c659
+< c --- 'ntracr' = number of tracers (0=none,negative to initialize)
+< c --- 'trcflg' = tracer flags      (one digit per tracer, most sig. replicated)
+< c ---              0: passive, 100% at surface
+< c ---              1: passive, psudo-silicate
+< c ---              2: passive, temperature
+< c ---            3-8: unused
+< c ---              9: default biology (NPZ-3,NPZD-4,Chai-9)
+---
+> c --- 'trcflg' = tracer flag      (0=none,-1=out,1=in/out)
+719,722c712,714
+<       call blkini(ntracr,'ntracr')
+<       trcrin = ntracr.gt.0  ! positive from restart, otherwise initialize
+<       trcout = ntracr.ne.0
+<       ntracr = abs(ntracr)
+---
+>       call blkini(trcflg,'trcflg')
+>       trcrin = trcflg.eq.1
+>       trcout = trcflg.ne.0
+724c716
+<       if (ntracr.gt.mxtrcr) then
+---
+>       if (trcflg.lt.-1 .or. trcflg.gt.1) then
+726,728c718,719
+<         write(lp,'(/ a,i3, a /)') 
+<      &    'error - maximum ntracr is',mxtrcr,
+<      &    '  (recompile with larger mxtrcr)'
+---
+>         write(lp,'(/ a /)') 
+>      &    'error - trcflg must be between -1 and 1'
+735,742d725
+<       call blkini(trcflg1,'trcflg')
+<       do k= 1,ntracr
+<         trcflg(k) = mod(trcflg1,10)  ! least significant decimal digit
+<         if     (trcflg1.ge.10) then
+<           trcflg1 = trcflg1/10  ! shift by one decimal digit
+<         else
+<           ! replicate last decimal digit across remaining tracers
+<         endif
+744,757d726
+<         write(lp,'(a,i3,i2)') '    k,trcflg =',k,trcflg(k)
+<         endif !1st tile
+<         if     (trcflg(k).gt.2 .and. trcflg(k).lt.9) then !not 0,1,2,9
+<           if (mnproc.eq.1) then
+<           write(lp,'(/ a,i3 /)') 
+<      &      'error - unknown tracer type for tracer',k
+<           call flush(lp)
+<           endif !1st tile
+<           call xcstop('(blkdat)')
+<                  stop '(blkdat)'
+<         endif
+<       enddo
+< c
+<       if (mnproc.eq.1) then
+980c949
+< c --- relax       activate lateral boundary T/S/p  climatological nudging
+---
+> c --- relax       activate lateral boundary    climatological nudging
+983,984c952
+< c --- trcrlx      activate lateral boundary tracer climatological nudging
+< c --- relaxf      input T/S/p   relaxation fields
+---
+> c --- relaxf      input         relaxation fields
+986d953
+< c --- relaxt      input tracer  relaxation fields
+1003d969
+<       call blkinl(trcrlx,'trcrlx')
+1012,1013d977
+<       relaxt = trcout .and. (trcrlx .or.
+<      &                       (.not.trcrin .and. iniflg.eq.2))
+1167c1131
+< c> Aug  2002 - added ntracr and trcflg to control tracers
+---
+> c> May  2002 - added trcflg to control tracers
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw cnuity.f ../src_2.1.02_22_one
+86,87c86
+<               utotm(i,j)=(u(i+1,j,k,m)+ubavg(i,j,m))*scuy(i,j)
+<               uflux(i,j)=utotm(i,j)*q
+---
+>               uflux(i,j)=ubavg(i,j,m)*scuy(i,j)*q
+92,93c91
+<               utotm(i,j)=(u(i-1,j,k,m)+ubavg(i,j,m))*scuy(i,j)
+<               uflux(i,j)=utotm(i,j)*q
+---
+>               uflux(i,j)=ubavg(i,j,m)*scuy(i,j)*q
+108,109c106
+<               vtotm(i,j)=(v(i,j+1,k,m)+vbavg(i,j,m))*scvx(i,j)
+<               vflux(i,j)=vtotm(i,j)*q
+---
+>               vflux(i,j)=vbavg(i,j,m)*scvx(i,j)*q
+114,115c111
+<               vtotm(i,j)=(v(i,j-1,k,m)+vbavg(i,j,m))*scvx(i,j)
+<               vflux(i,j)=vtotm(i,j)*q
+---
+>               vflux(i,j)=vbavg(i,j,m)*scvx(i,j)*q
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw convec.f ../src_2.1.02_22_one
+12,13c12,13
+<       real q,tem,sal,thet,trc(mxtrcr)
+<       integer i,iter,j,k,ks,kp,l,ktr
+---
+>       real q,tem,sal,thet,trc
+>       integer i,iter,j,k,ks,kp,l
+85c85
+< !$OMP PARALLEL DO PRIVATE(j,l,i,k,ktr,iter,ks,kp,
+---
+> !$OMP PARALLEL DO PRIVATE(j,l,k,i,iter,ks,kp,
+116,118c116,117
+<             do ktr= 1,ntracr
+<               tracer(i,j,k,n,ktr)=tracer(i,j,k-1,n,ktr)
+<             enddo
+---
+>             if (trcout) then
+>               tracer(i,j,k,n)=tracer(i,j,k-1,n)
+119a119
+>           end if
+137,140c137,139
+<             do ktr= 1,ntracr
+<               trc(ktr)=tracer(i,j,k,n,ktr)+q*(tracer(i,j,ks,n,ktr)-
+<      &                                        tracer(i,j,k,n,ktr))
+<             enddo
+---
+>             if (trcout) then
+>               trc=tracer(i,j,k,n)+q*(tracer(i,j,ks,n)-tracer(i,j,k,n))
+>             endif
+146,148c145,147
+<             do ktr= 1,ntracr
+<               tracer(i,j,kp,n,ktr)=trc(ktr)
+<             enddo
+---
+>             if (trcout) then
+>               tracer(i,j,kp,n)=trc
+>             endif
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw diapfl.f ../src_2.1.02_22_one
+133,136c133,135
+<       real t1do(kdm+1),t1dn(kdm+1),s1do(kdm+1),s1dn(kdm+1),
+<      &     tr1do(kdm+1,mxtrcr),tr1dn(kdm+1,mxtrcr),
+<      &     difft(kdm+1),diffs(kdm+1),
+<      &     zm(kdm+1),hm(kdm),dzb(kdm)
+---
+>       real t1do(kdm+1),t1dn(kdm+1),s1do(kdm+1),s1dn(kdm+1),tr1do(kdm+1),
+>      .     tr1dn(kdm+1),difft(kdm+1),diffs(kdm+1),
+>      .     zm(kdm+1),hm(kdm),dzb(kdm)
+141,143c140,142
+<      &     tcc(kdm),         ! central ...     (k  ) ..
+<      &     tcl(kdm),         ! lower .....     (k-1) ..
+<      &     rhs(kdm)          ! right-hand-side terms
+---
+>      +     tcc(kdm),         ! central ...     (k  ) ..
+>      +     tcl(kdm),         ! lower .....     (k-1) ..
+>      +     rhs(kdm)          ! right-hand-side terms
+146c145
+<       integer k,ka,kmask,ktr,nlayer,mixflg
+---
+>       integer k,ka,kmask,nlayer,mixflg
+268,270c267,269
+<         do ktr= 1,ntracr
+<           tr1do(k,ktr)=tracer(i,j,k,n,ktr)
+<         enddo
+---
+>         if (trcout) then
+>           tr1do(k)=tracer(i,j,k,n)
+>         endif
+283,285c282,284
+<       do ktr= 1,ntracr
+<         tr1do(k,ktr)=tracer(i,j,ka,n,ktr)
+<       enddo
+---
+>       if (trcout) then
+>         tr1do(k)=tracer(i,j,ka,n)
+>       endif
+327c326
+<       do ktr= 1,ntracr
+---
+>       if (trcout) then
+329c328
+<           rhs(k)=tr1do(k,ktr)
+---
+>           rhs(k)=tr1do(k)
+331,332c330
+<         call tridmat(tcu,tcc,tcl,nlayer,hm,rhs,tr1do(1,ktr),
+<      &                                         tr1dn(1,ktr),diffs)
+---
+>         call tridmat(tcu,tcc,tcl,nlayer,hm,rhs,tr1do,tr1dn,diffs)
+334c332
+<           tracer(i,j,k,n,ktr)=tr1dn(k,ktr)
+---
+>           tracer(i,j,k,n)=tr1dn(k)
+336c334
+<       enddo !ktr
+---
+>       endif
+372,374c370,372
+<      &     tcc(kdm),         ! central ...     (k  ) ..
+<      &     tcl(kdm),         ! lower .....     (k-1) ..
+<      &     rhs(kdm)          ! right-hand-side terms
+---
+>      +     tcc(kdm),         ! central ...     (k  ) ..
+>      +     tcl(kdm),         ! lower .....     (k-1) ..
+>      +     rhs(kdm)          ! right-hand-side terms
+457,459c455,457
+<      &     tcc(kdm),         ! central ...     (k  ) ..
+<      &     tcl(kdm),         ! lower .....     (k-1) ..
+<      &     rhs(kdm)          ! right-hand-side terms
+---
+>      +     tcc(kdm),         ! central ...     (k  ) ..
+>      +     tcl(kdm),         ! lower .....     (k-1) ..
+>      +     rhs(kdm)          ! right-hand-side terms
+561c559
+<       integer i,k,ka,kmin(idm),kmax(idm),ktr,l
+---
+>       integer i,k,ka,kmin(idm),kmax(idm),l
+563,568c561,565
+<      &     ennsq,alfa,beta,q,qmin,qmax,amount,froglp,delp,
+<      &     trflxu(idm,0:kdm+1,mxtrcr),
+<      &     trflxl(idm,0:kdm+1,mxtrcr),cliptr(idm,mxtrcr),
+<      &      tflxu(idm,0:kdm+1), tflxl(idm,0:kdm+1),clipt( idm),
+<      &      sflxu(idm,0:kdm+1), sflxl(idm,0:kdm+1),clips( idm),
+<      &     told(idm,2),sold(idm,2),trold(idm,2,mxtrcr)
+---
+>      .     ennsq,alfa,beta,q,qmin,qmax,amount,froglp,delp,
+>      .     trflxu(idm,0:kdm+1),trflxl(idm,0:kdm+1),cliptr(idm),
+>      .      tflxu(idm,0:kdm+1), tflxl(idm,0:kdm+1),clipt( idm),
+>      .      sflxu(idm,0:kdm+1), sflxl(idm,0:kdm+1),clips( idm),
+>      .     told(idm,2),sold(idm,2),trold(idm,2)
+607,611c604,608
+<       do ktr= 1,ntracr
+<         trold( i,   1,ktr)=tracer(i,j,kk,n,ktr)
+<         trflxl(i,   0,ktr)=0.
+<         trflxu(i,kk+1,ktr)=0.
+<       enddo
+---
+>       if (trcout) then
+>         trold(i,1)=tracer(i,j,kk,n)
+>         trflxl(i,   0)=0.
+>         trflxu(i,kk+1)=0.
+>       endif
+723a721,722
+>       trflxu(i,k)=0.
+>       trflxl(i,k)=0.
+729a729,732
+> c
+>         if (trcout) then
+>           trflxu(i,k)=flxu(i,k)*tracer(i,j,k-1,n)
+>           trflxl(i,k)=flxl(i,k)*tracer(i,j,k+1,n)
+731,736d733
+<       do ktr= 1,ntracr
+<         trflxu(i,k,ktr)=0.
+<         trflxl(i,k,ktr)=0.
+<         if (k.gt.kmin(i) .and. k.lt.kmax(i)) then
+<           trflxu(i,k,ktr)=flxu(i,k)*tracer(i,j,k-1,n,ktr)
+<           trflxl(i,k,ktr)=flxl(i,k)*tracer(i,j,k+1,n,ktr)
+738d734
+<       enddo
+742,744c738
+<       do ktr= 1,ntracr
+<         cliptr(i,ktr)=0.
+<       enddo
+---
+>       cliptr(i)=0.
+758,761c752,755
+<       do ktr= 1,ntracr
+<         trold(i,2,ktr)=trold( i,1,    ktr)
+<         trold(i,1,ktr)=tracer(i,j,k,n,ktr)
+<       enddo
+---
+>       if (trcout) then
+>         trold(i,2)=trold(i,1)
+>         trold(i,1)=tracer(i,j,k,n)
+>       endif
+788,791c782,784
+<           do ktr= 1,ntracr
+<             amount=tracer(i,j,k,n,ktr)*dpold(i,j,k)
+<      &           -(trflxu(i,k+1,ktr)-trflxu(i,k,ktr)+
+<      &             trflxl(i,k-1,ktr)-trflxl(i,k,ktr))
+---
+>           if (trcout) then
+>             amount=tracer(i,j,k,n)*dpold(i,j,k)
+>      .           -(trflxu(i,k+1)-trflxu(i,k)+trflxl(i,k-1)-trflxl(i,k))
+793,796c786,787
+<             qmax=max(tracer(i,j,ka,n,ktr),trold(i,1,ktr),
+<      &                                    trold(i,2,ktr))
+<             qmin=min(tracer(i,j,ka,n,ktr),trold(i,1,ktr),
+<      &                                    trold(i,2,ktr))
+---
+>             qmax=max(tracer(i,j,ka,n),trold(i,1),trold(i,2))
+>             qmin=min(tracer(i,j,ka,n),trold(i,1),trold(i,2))
+798,800c789,790
+<             cliptr(i,ktr)=cliptr(i,ktr)+(q-amount)
+<             tracer(i,j,k,n,ktr)=amount/delp
+<           enddo !ktr
+---
+>             cliptr(i)=cliptr(i)+(q-amount)
+>             tracer(i,j,k,n)=amount/delp
+802a793
+>       endif
+808,810c799,801
+<       do ktr= 1,ntracr
+<         cliptr(i,ktr)=cliptr(i,ktr)/pbot(i,j)
+<       enddo
+---
+>       if (trcout) then
+>         cliptr(i)=cliptr(i)/pbot(i,j)
+>       endif
+820,822c811,813
+<       do ktr= 1,ntracr
+<         tracer(i,j,k,n,ktr)=tracer(i,j,k,n,ktr)+cliptr(i,ktr)
+<       enddo
+---
+>       if (trcout) then
+>         tracer(i,j,k,n)=tracer(i,j,k,n)+cliptr(i)
+>       endif
+900c891
+<       integer i,k,ktr,l
+---
+>       integer i,k,l
+903,905c894,895
+<      &     ennsq,alfa,beta,smax,smin,sold(idm,2),q,salt,froglp,
+<      &     flxtru(idm,kdm,mxtrcr),
+<      &     flxtrl(idm,kdm,mxtrcr),trold(idm,2,mxtrcr),trmax,trmin
+---
+>      .     ennsq,alfa,beta,smax,smin,sold(idm,2),q,salt,froglp,
+>      .     flxtru(idm,kdm),flxtrl(idm,kdm),trold(idm,2),trmax,trmin
+930,932c920
+<       do ktr= 1,ntracr
+<         trold(i,1,ktr)=tracer(i,j,kk,n,ktr)
+<       enddo
+---
+>       trold(i,1)=tracer(i,j,kk,n)
+987,991c975,979
+<         do ktr= 1,ntracr
+<           q=tracer(i,j,k-1,n,ktr)
+<           tracer(i,j,k-1,n,ktr)=tracer(i,j,1,n,ktr)
+<           tracer(i,j,  1,n,ktr)=q
+<         enddo
+---
+>         if (trcout) then
+>           q=tracer(i,j,k-1,n)
+>           tracer(i,j,k-1,n)=tracer(i,j,1,n)
+>           tracer(i,j,1,n)=q
+>         endif
+1076,1081c1064,1067
+<         do ktr= 1,ntracr
+<           flxtru(i,k,ktr)=-flxu(i,k)*(tracer(i,j,k  ,n,ktr)-
+<      &                                tracer(i,j,k-1,n,ktr))
+<           flxtrl(i,k,ktr)=-flxl(i,k)*(tracer(i,j,k+1,n,ktr)-
+<      &                                tracer(i,j,k  ,n,ktr))
+<         enddo
+---
+>         if (trcout) then
+>           flxtru(i,k)=-flxu(i,k)*(tracer(i,j,k  ,n)-tracer(i,j,k-1,n))
+>           flxtrl(i,k)=-flxl(i,k)*(tracer(i,j,k+1,n)-tracer(i,j,k  ,n))
+>         endif
+1093,1096c1079,1080
+<       do ktr= 1,ntracr
+<         trold(i,2,ktr)=trold( i,1,    ktr)
+<         trold(i,1,ktr)=tracer(i,j,k,n,ktr)
+<       enddo
+---
+>       trold(i,2)=trold(i,1)
+>       trold(i,1)=tracer(i,j,k,n)
+1102,1106c1086,1089
+<         do ktr= 1,ntracr
+<           tracer(i,j,k,n,ktr)=tracer(i,j,k,n,ktr)-
+<      &      (flxtrl(i,k,ktr)-flxtru(i,k,ktr))
+<      &        /max(p(i,j,k+1)-p(i,j,k),small)
+<         enddo
+---
+>         if (trcout) then
+>           tracer(i,j,k,n)=tracer(i,j,k,n)-(flxtrl(i,k)-flxtru(i,k))
+>      .        /max(p(i,j,k+1)-p(i,j,k),small)
+>         endif
+1113,1119c1096,1100
+<         do ktr= 1,ntracr
+<           trmin=min(tracer(i,j,k-1,n,ktr),trold(i,1,ktr),
+<      &                                    trold(i,2,ktr))
+<           trmax=max(tracer(i,j,k-1,n,ktr),trold(i,1,ktr),
+<      &                                    trold(i,2,ktr))
+<           tracer(i,j,k,n,ktr)=max(trmin,min(tracer(i,j,k,n,ktr),trmax))
+<         enddo
+---
+>         if (trcout) then
+>           trmin=min(tracer(i,j,k-1,n),trold(i,1),trold(i,2))
+>           trmax=max(tracer(i,j,k-1,n),trold(i,1),trold(i,2))
+>           tracer(i,j,k,n)=max(trmin,min(tracer(i,j,k,n),trmax))
+>         end if
+1145,1149c1126,1129
+<         do ktr= 1,ntracr
+<           q=tracer(i,j,k-1,n,ktr)
+<           tracer(i,j,k-1,n,ktr)=tracer(i,j,1,n,ktr)
+<           tracer(i,j,  1,n,ktr)=q
+<         enddo
+---
+>         if (trcout) then
+>           q=tracer(i,j,k-1,n)
+>           tracer(i,j,k-1,n)=tracer(i,j,1,n)
+>           tracer(i,j,1,n)=q
+1150a1131
+>       endif
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw dpthuv.f ../src_2.1.02_22_one
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw dpudpv.f ../src_2.1.02_22_one
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw forfun.f ../src_2.1.02_22_one
+641c641
+< c --- initialize input of thermal/tracer relaxation forcing fields
+---
+> c --- initialize input of relaxation forcing fields
+644c644
+< c ---        set to zero where there is no thermal boundary relaxation
+---
+> c ---        set to zero where there is no boundary relaxation
+649,651c649
+< c --- rmutr  is a single field specifying 1 / e-folding time (1/s)
+< c ---         set to zero where there is no tracer boundary relaxation
+< c --- trwall is tracer climatology for all layers and tracers
+---
+> c --- I/O array I/O units 910-913 are reserved for the entire run.
+653,654d650
+< c --- I/O array I/O units 911-914 are reserved for the entire run.
+< c
+664c660
+<       integer   i,incmon,j,k,ktr,nrec
+---
+>       integer   i,incmon,j,k,nrec
+680c676
+<       if     (relax) then  ! boundary thermal relaxation
+---
+>       if     (relax) then  ! boundary relaxation
+695,709d690
+<       if     (trcrlx) then  ! boundary tracer relaxation
+<         call zaiopf(flnmforw(1:lgth)//'relax.rmutr.a', 'old', 910)
+<         if     (mnproc.eq.1) then  ! .b file from 1st tile only
+<         open (unit=910,file=flnmforw(1:lgth)//'relax.rmutr.b',
+<      &        status='old', action='read')
+<         read (910,'(a79)') preambl
+<         endif !1st tile
+<         call preambl_print(preambl)
+<         call rdmonth(rmutr, 910)
+<         if     (mnproc.eq.1) then  ! .b file from 1st tile only
+<         close (unit=910)
+<         endif
+<         call zaiocl(910)
+<       endif
+< c
+759,773d739
+<       if     (relaxt) then
+<         call zaiopf(flnmforw(1:lgth)//'relax.trcr.a', 'old', 914)
+<         if     (mnproc.eq.1) then  ! .b file from 1st tile only
+<         open (unit=914,file=flnmforw(1:lgth)//'relax.trcr.b',
+<      &        status='old', action='read')
+<         read (914,'(a79)') preambl
+<         endif !1st tile
+<         call preambl_print(preambl)
+<         do ktr= 1,ntracr
+<           do k=1,kk
+<             call rdmonth(util1, 914)
+<           enddo
+<         enddo
+<       endif
+< c
+823c789
+< c --- iunit=911-914; relaxation  forcing field
+---
+> c --- iunit=911-913; relaxation  forcing field
+855c821
+<       elseif (iunit.ge.911 .and. iunit.le.914) then
+---
+>       elseif (iunit.ge.911 .and. iunit.le.913) then
+890c856
+<      &    'error - iunit must be 901-908 or 910-914',
+---
+>      &    'error - iunit must be 901-908 or 910-913',
+935c901
+< c --- iunit=911-914; relaxation forcing field
+---
+> c --- iunit=911-913; relaxation forcing field
+1309c1275
+<       integer i,irec,iunit,j,k,ktr,mrec,mnth,mxunit
+---
+>       integer i,irec,iunit,j,k,mrec,mnth,mxunit
+1326,1327d1291
+<         elseif (relaxt) then
+<           mxunit = 914  ! tracers
+1363d1326
+<             if     (iunit.lt.914) then
+1367,1370d1329
+<             else
+<               do ktr= 1,ntracr
+<                 do k= 1,kk
+<                   call skmonth(iunit)
+1373,1375d1331
+<             endif
+<           enddo
+<         enddo
+1402,1409d1357
+<         if (relaxt) then
+<           do ktr= 1,ntracr
+<             do k= 1,kk
+<               call rdmonth(trwall(1-nbdy,1-nbdy,k,lslot,ktr),914)
+<             enddo
+<           enddo
+<         endif
+< c
+1842,1843d1789
+<         call xctilr(rmun,1,1, nbdy,nbdy, halo_ps)
+< c
+1879,1880d1824
+<               unest(i,j,k,1) = unest(i,j,k,2)
+<               vnest(i,j,k,1) = vnest(i,j,k,2)
+1919,1921d1862
+<       logical    ldebug_rdnest
+<       parameter (ldebug_rdnest=.false.)
+< c
+2031,2038c1972,1973
+<         call rd_archive(unest(1-nbdy,1-nbdy,k,lslot), cfield, 920)
+<         if     (cfield.ne.'u-vel.  ') then
+<           if     (mnproc.eq.1) then
+<           write(lp,'(/ a / a,a /)') cfield,
+<      &           'error in rdnest_in - expected ','u-vel.  '
+<           endif !1st tile
+<           call xcstop('(rdnest_in)')
+<                  stop '(rdnest_in)'
+---
+>         if     (mnproc.eq.1) then  ! .b file from 1st tile only
+>           read (920,*)
+2040,2047c1975,1977
+<         call rd_archive(vnest(1-nbdy,1-nbdy,k,lslot), cfield, 920)
+<         if     (cfield.ne.'v-vel.  ') then
+<           if     (mnproc.eq.1) then
+<           write(lp,'(/ a / a,a /)') cfield,
+<      &           'error in rdnest_in - expected ','v-vel.  '
+<           endif !1st tile
+<           call xcstop('(rdnest_in)')
+<                  stop '(rdnest_in)'
+---
+>         call zaiosk(920)
+>         if     (mnproc.eq.1) then  ! .b file from 1st tile only
+>           read (920,*)
+2048a1979
+>         call zaiosk(920)
+2106c2037
+<       if     (ldebug_rdnest .and. ittest.ne.-1 .and. jttest.ne.-1) then
+---
+>       if     (.false. .and. ittest.ne.-1 .and. jttest.ne.-1) then
+2116,2117c2047
+<      &       unest(itest,jtest,k,lslot)+ubnest(itest,jtest,lslot),
+<      &       vnest(itest,jtest,k,lslot)+vbnest(itest,jtest,lslot),
+---
+>      &       0.0,0.0,
+2126,2127c2056
+<      &       unest(itest,jtest,k,lslot)+ubnest(itest,jtest,lslot),
+<      &       vnest(itest,jtest,k,lslot)+vbnest(itest,jtest,lslot),
+---
+>      &       0.0,0.0,
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw geopar.f ../src_2.1.02_22_one
+15c15
+<       integer   i,ios,j,k,ktr,l
+---
+>       integer   i,ios,j,k,l
+363c363
+< !$OMP PARALLEL DO PRIVATE(j,i,k,ktr)
+---
+> !$OMP PARALLEL DO PRIVATE(j,i,k)
+419,421c419,420
+<             do ktr= 1,ntracr
+<               tracer(i,j,k,1,ktr)=0.0
+<               tracer(i,j,k,2,ktr)=0.0
+---
+>             tracer(i,j,k,1)=0.0
+>             tracer(i,j,k,2)=0.0
+424d422
+<         enddo
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw hybgen.f ../src_2.1.02_22_one
+123,125c123,124
+<       double precision tsum,ssum,thsum,trsum(mxtrcr),
+<      &                 psum,q2sum,q2lsum,rpsum
+<       real ttem(kdm+1),ssal(kdm+1),tthe(kdm+1),ttrc(kdm+1,mxtrcr),
+---
+>       double precision tsum,ssum,thsum,trsum,psum,q2sum,q2lsum,rpsum
+>       real ttem(kdm+1),ssal(kdm+1),tthe(kdm+1),ttrc(kdm+1),
+129,130c128,129
+<      .     delt,deltm,dels,delsm,thnew,q,qtr,qts,thkbop
+<       integer i,k,k1,ka,l,ksubl,kp,ktr,iter
+---
+>      .     delt,deltm,dels,delsm,thnew,q,qts,thkbop
+>       integer i,k,k1,ka,l,ksubl,kp,iter
+203,205c202,204
+<           do ktr= 1,ntracr
+<             tracer(i,j,k,n,ktr)=tracer(i,j,k-1,n,ktr)
+<           enddo
+---
+>           if(trcout) then
+>             tracer(i,j,k,n)=tracer(i,j,k-1,n)
+>           endif
+212,213c211,212
+<      &           (theta(k)     -th3d(i,j,k,  n)).gt.0.002 .and.
+<      &           (th3d(i,j,k,n)-th3d(i,j,k-1,n)).gt.0.002      ) then
+---
+>      .           (theta(k)    -th3d(i,j,k,  n)).gt.0.002 .and.
+>      .           (th3d(i,j,k,n)-th3d(i,j,k-1,n)).gt.0.002      ) then
+236,237c235
+<           p_hat=q*(p(i,j,k+1)-p(i,j,k))
+<           p(i,j,k)=p(i,j,k)+p_hat
+---
+>           p(i,j,k)=p(i,j,k)+q*(p(i,j,k+1)-p(i,j,k))
+258,268c256,258
+<           if     (ntracr.gt.0.0) then
+<             qtr=p_hat/(p(i,j,k+1)-p(i,j,k))  !ok because <1.0 and >0.0
+<             do ktr= 1,ntracr
+<               if     (trcflg(ktr).eq.2) then !temperature tracer
+<                 tracer(i,j,k,n,ktr)=tracer(i,j,k,n,ktr)+
+<      &                             (q/(1.0-q))*(tracer(i,j,k,  n,ktr)-
+<      &                                          tracer(i,j,k-1,n,ktr))
+<               else !standard tracer - not split into two sub-layers
+<                 tracer(i,j,k-1,n,ktr)=tracer(i,j,k-1,n,ktr)+
+<      &                                     qtr*(tracer(i,j,k,  n,ktr)-
+<      &                                          tracer(i,j,k-1,n,ktr))
+---
+>           if (trcout) then
+>             tracer(i,j,k,n)=tracer(i,j,k,n)+
+>      .            (q/(1.0-q))*(tracer(i,j,k,n)-tracer(i,j,k-1,n))
+270,271d259
+<             enddo !ktr
+<            endif !tracers
+307,309c295,297
+<         do ktr= 1,ntracr
+<           ttrc(k1,ktr)=tracer(i,j,k,n,ktr)
+<         enddo
+---
+>         if(trcout) then
+>           ttrc(k1)=tracer(i,j,k,n)
+>         endif
+326,330c314,317
+<         do ktr= 1,ntracr
+<           ttrc(k,  ktr)=ttrc(k-1,ktr)
+<           ttrc(k+1,ktr)=tracer(i,j,k,n,ktr)+
+<      &                    q*(ttrc(k,ktr)-tracer(i,j,k,n,ktr))
+<         enddo
+---
+>         if (trcout) then
+>           ttrc(k)=ttrc(k-1)
+>           ttrc(k+1)=tracer(i,j,k,n)+q*(ttrc(k)-tracer(i,j,k,n))
+>         end if
+386,388c373,375
+<         do ktr= 1,ntracr
+<           tracer(i,j,k,n,ktr)=tracer(i,j,k-1,n,ktr)
+<         enddo
+---
+>         if (trcout) then
+>           tracer(i,j,k,n)=tracer(i,j,k-1,n)
+>         endif
+655a643
+>       trsum=0.0d0
+658d645
+<       trsum(:)=0.0d0
+674,676c661,663
+<           do ktr= 1,ntracr
+<             trsum(ktr)=ttrc(k1,ktr)
+<           enddo
+---
+>           if (trcout) then
+>             trsum=ttrc(k1)
+>           endif
+694,696c681,683
+<           do ktr= 1,ntracr
+<             trsum(ktr)=trsum(ktr)+ttrc(k1,ktr)*pwidth
+<           enddo
+---
+>           if (trcout) then
+>             trsum=trsum+ttrc(k1)*pwidth
+>           endif
+729,731c716,718
+<         do ktr= 1,ntracr
+<           tracer(i,j,k,n,ktr)=trsum(ktr)*rpsum
+<         enddo
+---
+>         if (trcout) then
+>           tracer(i,j,k,n)=trsum*rpsum
+>         endif
+754,756c741,743
+<         do ktr= 1,ntracr
+<           tracer(i,j,k,n,ktr)=tracer(i,j,k-1,n,ktr)
+<         enddo
+---
+>         if (trcout) then
+>           tracer(i,j,k,n)=tracer(i,j,k-1,n)
+>         endif
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw hycom.f ../src_2.1.02_22_one
+60c60
+<       call xctmrn(50,'trcupd')
+---
+>       call xctmrn(50,'archiv')
+63d62
+<       call xctmrn(53,'archiv')
+239,240d237
+<         trcrin = .false.
+<         call initrc(mnth)
+259,260c256,257
+<             enddo !i
+<           enddo !l
+---
+>             enddo
+>           enddo
+265,266c262,263
+<               enddo !i
+<             enddo !l
+---
+>               enddo
+>             enddo
+270,273c267,277
+<               enddo !i
+<             enddo !l
+<           endif !isopyc.or.mxlkrt
+<         enddo !j
+---
+>               enddo
+>             enddo
+>           endif
+>           do k= 1,kk
+>             do l=1,isp(j)
+>               do i=max(1,ifp(j,l)),min(ii,ilp(j,l))
+>                 diaflx(i,j,k)=0.0
+>               enddo
+>             enddo
+>           enddo
+>         enddo
+319,325d322
+<           endif !nstep0.ne.nstep1
+<         endif !linit:else
+< c
+<         if     (clmflg.eq.12) then
+<           mnth=   1.+nint(mod(dtime0+dyear0,dyear)/dmonth)
+<         elseif (clmflg.eq.6) then
+<           mnth=2*(1.+nint(mod(dtime0+dyear0,dyear)/dbimon))-1
+327c324,325
+<         call initrc(mnth)
+---
+>         endif
+>       endif
+329,344d326
+<         if     (trcout .and. .not.trcrin) then
+< c
+< c ---     new tracers, so output to archive file
+< c
+<           m=mod(nstep0  ,2)+1
+<           n=mod(nstep0+1,2)+1
+<           nstep=nstep0
+<           time=dtime0
+<           call forday(dtime0,yrflag, iyear,iday,ihour)
+<           if (mnproc.eq.1) then
+<           write (intvl,'(i3.3)') 0
+<           endif !1st tile
+<           call archiv(n, kk, iyear,iday,ihour, intvl)
+<         endif !archive output
+<       endif !initial conditions
+< c
+520,525d501
+<       if     (bnstfq.ne.0.0) then  ! initialize barotropic boundary input
+<         wb0=-99.0
+<         wb1=-99.0
+<         call rdbaro(dtime0)
+<       endif
+< c
+531a508,513
+>       if     (bnstfq.ne.0.0) then  ! initialize barotropic boundary input
+>         wb0=-99.0
+>         wb1=-99.0
+>         call rdbaro(dtime0)
+>       endif
+> c
+673,676d654
+<       if     (bnstfq.ne.0.0) then  ! wieghts for baro nesting
+<         call rdbaro(dtime)
+<       endif
+< c
+680a659,662
+>       if     (bnstfq.ne.0.0) then  ! wieghts for baro nesting
+>         call rdbaro(dtime)
+>       endif
+> c
+710,716c692
+<       endif !icegln
+<       if (trcout) then
+<            call xctmr0(50)
+<         call trcupd(m,n)
+<            call xctmr1(50)
+<            call pipe_comparall(m,n, 'trcupd, step')
+<       endif !trcout
+---
+>       endif
+791c767
+<       endif !hybrid:isopyc
+---
+>       endif
+1150c1126
+<         call xctmr0(53)
+---
+>         call xctmr0(50)
+1220c1196
+<         call xctmr1(53)
+---
+>         call xctmr1(50)
+1293d1268
+< c> Aug. 2002 - added support for multiple tracers
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw icloan.f ../src_2.1.02_22_one
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw inicon.f ../src_2.1.02_22_one
+12,14c12,14
+< c --- ------------------------------------------------------
+< c --- initializatize all fields (except tracers, see initrc)
+< c --- ------------------------------------------------------
+---
+> c --- -------------------------
+> c --- initializatize all fields
+> c --- -------------------------
+146a147,149
+>       tracer(i,j,k,1)=0.
+>       tracer(i,j,k,2)=0.
+> c
+315,316c318
+<      &    (p(itest,jtest,k+1)+p(itest,jtest,k))*0.5*qonem,
+<      &    montg(itest,jtest,k)/g,k=1,kk)
+---
+>      &   p(itest,jtest,k+1)*qonem,montg(itest,jtest,k)/g,k=1,kk)
+353a356,359
+>         if(p(i,j,k+1).lt.thkmin*onem) then
+>           tracer(i,j,k,1)=1.
+>           tracer(i,j,k,2)=1.
+>         endif
+457,458c463
+<      &    (p(itest,jtest,k+1)+p(itest,jtest,k))*0.5*qonem,
+<      &    montg(itest,jtest,k)/g,k=1,kk)
+---
+>      &   p(itest,jtest,k+1)*qonem,montg(itest,jtest,k)/g,k=1,kk)
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw inikpp.f ../src_2.1.02_22_one
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw inimy.f ../src_2.1.02_22_one
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw latbdy.f ../src_2.1.02_22_one
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw matinv.f ../src_2.1.02_22_one
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw momtum.f ../src_2.1.02_22_one
+380,381c380,384
+<             utotm(i,j)=u(i+1,j,k,m)+ubavg(i,j,m)
+<             utotn(i,j)=u(i+1,j,k,n)+ubavg(i,j,n)
+---
+> *           uflux(i,j)=uflx(i,j,k)*scuxi(i,j)
+> *           utotm(i,j)=u(i,j,k,m)+ubavg(i,j,m)
+> *           utotn(i,j)=u(i,j,k,n)+ubavg(i,j,n)
+>             utotm(i,j)=ubavg(i,j,m)
+>             utotn(i,j)=ubavg(i,j,n)
+386,387c389,393
+<             utotm(i,j)=u(i-1,j,k,m)+ubavg(i,j,m)
+<             utotn(i,j)=u(i-1,j,k,n)+ubavg(i,j,n)
+---
+> *           uflux(i,j)=uflx(i,j,k)*scuxi(i,j)
+> *           utotm(i,j)=u(i,j,k,m)+ubavg(i,j,m)
+> *           utotn(i,j)=u(i,j,k,n)+ubavg(i,j,n)
+>             utotm(i,j)=ubavg(i,j,m)
+>             utotn(i,j)=ubavg(i,j,n)
+413,414c419,423
+<             vtotm(i,j)=v(i,j+1,k,m)+vbavg(i,j,m)
+<             vtotn(i,j)=v(i,j+1,k,n)+vbavg(i,j,n)
+---
+> *           vflux(i,j)=vflx(i,j,k)*scvyi(i,j)
+> *           vtotm(i,j)=v(i,j,k,m)+vbavg(i,j,m)
+> *           vtotn(i,j)=v(i,j,k,n)+vbavg(i,j,n)
+>             vtotm(i,j)=vbavg(i,j,m)
+>             vtotn(i,j)=vbavg(i,j,n)
+419,420c428,432
+<             vtotm(i,j)=v(i,j-1,k,m)+vbavg(i,j,m)
+<             vtotn(i,j)=v(i,j-1,k,n)+vbavg(i,j,n)
+---
+> *           vflux(i,j)=vflx(i,j,k)*scvyi(i,j)
+> *           vtotm(i,j)=v(i,j,k,m)+vbavg(i,j,m)
+> *           vtotn(i,j)=v(i,j,k,n)+vbavg(i,j,n)
+>             vtotm(i,j)=vbavg(i,j,m)
+>             vtotn(i,j)=vbavg(i,j,n)
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw mxkprf.f ../src_2.1.02_22_one
+384,385c384,385
+<      &     t1dn(kdm+1),s1do(kdm+1),s1dn(kdm+1),
+<      &     diffm(kdm+1),difft(kdm+1),diffs(kdm+1),
+---
+>      &     t1dn(kdm+1),s1do(kdm+1),s1dn(kdm+1),tr1do(kdm+1),
+>      &     tr1dn(kdm+1),diffm(kdm+1),difft(kdm+1),diffs(kdm+1),
+981,982c981
+< cdiag&        hm(k),t1do(k),t1dn(k),s1do(k),s1dn(k),
+< cdiag&        0.0,0.0,
+---
+> cdiag&        hm(k),t1do(k),t1dn(k),s1do(k),s1dn(k),tr1do(k),tr1dn(k),
+1438c1437
+<      &     tr1do(kdm+1,mxtrcr),tr1dn(kdm+1,mxtrcr),
+---
+>      &     tr1do(kdm+1),tr1dn(kdm+1),
+1450c1449
+<       integer k,ka,ktr,nlayer
+---
+>       integer k,ka,nlayer
+1462,1464c1461,1463
+<         do ktr= 1,ntracr
+<           tr1do(k,ktr)=tracer(i,j,k,n,ktr)
+<         enddo
+---
+>         if (trcout) then
+>           tr1do(k)=tracer(i,j,k,n)
+>         endif
+1476,1478c1475,1477
+<       do ktr= 1,ntracr
+<         tr1do(k,ktr)=tracer(i,j,ka,n,ktr)
+<       enddo
+---
+>       if (trcout) then
+>         tr1do(k)=tracer(i,j,ka,n)
+>       endif
+1505,1515d1503
+< c --- t-like tracer solution
+<       do ktr= 1,ntracr
+<         if     (trcflg(ktr).eq.2) then
+<           ghatflux=-(surflx(i,j)-sswflx(i,j))*thref/spcifh
+<           call tridrhs(hm,
+<      &                 tr1do(1,ktr),difft,ghat,ghatflux,tri,nlayer,rhs)
+<           call tridmat(tcu,tcc,tcl,nlayer,hm,rhs,
+<      &                 tr1do(1,ktr),tr1dn(1,ktr),difft)
+<         endif
+<       enddo
+< c
+1522,1524c1510,1511
+< c --- standard tracer solution
+<       do ktr= 1,ntracr
+<         if     (trcflg(ktr).ne.2) then
+---
+> c --- tracer solution
+>       if (trcout) then
+1526,1529c1513,1514
+<           call tridrhs(hm,
+<      &                 tr1do(1,ktr),diffs,ghat,ghatflux,tri,nlayer,rhs)
+<           call tridmat(tcu,tcc,tcl,nlayer,hm,rhs,
+<      &                 tr1do(1,ktr),tr1dn(1,ktr),diffs)
+---
+>         call tridrhs(hm,tr1do,diffs,ghat,ghatflux,tri,nlayer,rhs)
+>         call tridmat(tcu,tcc,tcl,nlayer,hm,rhs,tr1do,tr1dn,diffs)
+1531d1515
+<       enddo
+1538,1539c1522,1524
+<         do ktr= 1,ntracr
+<           tracer(i,j,k,n,ktr)=tr1dn(k,ktr)
+---
+>         if (trcout) then
+>           tracer(i,j,k,n)=tr1dn(k)
+>         endif
+1541d1525
+<       enddo
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw mxkrt.f ../src_2.1.02_22_one
+108c108
+<       integer i,k,k0,k1,ktr,l
+---
+>       integer i,k,k0,k1,l
+241,247c241,246
+<         do ktr= 1,ntracr
+<           tr1=1.0  ! THIS MAY BE WRONG FOR MULTIPLE TRACERS
+<           trmin=min(tr1,tracer(i,j,k,n,ktr),tracer(i,j,k0,n,ktr))
+<           trmax=max(tr1,tracer(i,j,k,n,ktr),tracer(i,j,k0,n,ktr))
+<           tr2=tracer(i,j,k,n,ktr)+q*(tr1-tracer(i,j,k,n,ktr))
+<           tracer(i,j,k,n,ktr)=min(trmax,max(trmin,tr2))
+<         enddo
+---
+>         if(trcout) then
+>           tr1=1.0
+>           trmin=min(tr1,tracer(i,j,k,n),tracer(i,j,k0,n))
+>           trmax=max(tr1,tracer(i,j,k,n),tracer(i,j,k0,n))
+>           tr2=tracer(i,j,k,n)+q*(tr1-tracer(i,j,k,n))
+>           tracer(i,j,k,n)=min(trmax,max(trmin,tr2))
+248a248
+>       end if
+447,450c447,450
+<       do ktr= 1,ntracr
+<         tracer(i,j,k,n,ktr)=tracer(i,j,k,n,ktr)
+<      &    +q*(tracer(i,j,1,n,ktr)-tracer(i,j,k,n,ktr))
+<       enddo
+---
+>       if (trcout) then
+>         tracer(i,j,k,n)=tracer(i,j,k,n)
+>      &    +q*(tracer(i,j,1,n)-tracer(i,j,k,n))
+>       endif
+701,704c701,703
+<      &        ustar3,thkold,thknew,value,q,tdp,sdp,trdp(mxtrcr),
+<      &        tem,sal,rho,
+<      &        ttem(kdm),ssal(kdm),ttrc(kdm,mxtrcr),dens(kdm),
+<      &        pres(kdm+1),delp(kdm),sum1,sum2,buoyfl,dsgdt,tmn,smn
+---
+>      .        ustar3,thkold,thknew,value,q,tdp,sdp,trdp,tem,sal,rho,
+>      .        ttem(kdm),ssal(kdm),ttrc(kdm),dens(kdm),pres(kdm+1),
+>      .        delp(kdm),sum1,sum2,buoyfl,dsgdt,tmn,smn
+707c706
+<       integer i,k,ktr,l
+---
+>       integer i,k,l
+728,730c727,729
+<       do ktr= 1,ntracr
+<         ttrc(k,ktr)=tracer(i,j,k,n,ktr)
+<       enddo
+---
+>       if (trcout) then
+>         ttrc(k)=tracer(i,j,k,n)
+>       endif
+749,751c748,750
+<       do ktr= 1,ntracr
+<         trdp(ktr)=delp(1)
+<       enddo
+---
+>       if (trcout) then
+>         trdp=delp(1)
+>       endif
+766,768c765,767
+<         do ktr= 1,ntracr
+<           trdp(ktr)=trdp(ktr)+ttrc(k,ktr)*delp(k)
+<         enddo
+---
+>         if (trcout) then
+>           trdp=trdp+ttrc(k)*delp(k)
+>         endif
+781,783c780,782
+<       do ktr= 1,ntracr
+<         ttrc(k,ktr)=ttrc(1,ktr)
+<       enddo
+---
+>       if (trcout) then
+>         ttrc(k)=ttrc(1)
+>       endif
+912,914c911,913
+<         do ktr= 1,ntracr
+<           ttrc(k,ktr)=ttrc(1,ktr)
+<         enddo
+---
+>         if (trcout) then
+>           ttrc(k)=ttrc(1)
+>         endif
+927,930c926,928
+<         do ktr= 1,ntracr
+<           ttrc(k,ktr)=(ttrc(1,ktr)*(thknew-pres(k))
+<      &                +ttrc(k,ktr)*(pres(k+1)-thknew))/delp(k)
+<         enddo
+---
+>         if (trcout) then
+>           ttrc(k)=(ttrc(1)*(thknew-pres(k))
+>      .            +ttrc(k)*(pres(k+1)-thknew))/delp(k)
+931a930
+>       end if
+964,966c963,965
+<       do ktr= 1,ntracr
+<         tracer(i,j,k,n,ktr)=ttrc(k,ktr)
+<       enddo
+---
+>       if (trcout) then
+>         tracer(i,j,k,n)=ttrc(k)
+>       endif
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw mxkrtm.f ../src_2.1.02_22_one
+330c330
+<       integer i,k,ktr,l,num
+---
+>       integer i,k,l,num
+383,385c383
+<         do ktr= 1,ntracr
+<           tracer(i,j,k,n,ktr)=0.
+<         enddo
+---
+>         tracer(i,j,k,n)=0.
+553,556c551,554
+<       do ktr= 1,ntracr
+<         tracer(i,j,k,n,ktr)=(tracer(i,j,k,n,ktr)*dpn-sdot(i,j))
+<      &                               /(dpn-sdot(i,j))
+<       enddo
+---
+>       if (trcout) then
+>       tracer(i,j,k,n)=(tracer(i,j,k,n)*dpn-sdot(i,j))
+>      .                               /(dpn-sdot(i,j))
+>       end if
+568,570c566,568
+<       do ktr= 1,ntracr
+<         tracer(i,j,1,n,ktr)=1.0
+<       enddo
+---
+>       if (trcout) then
+>         tracer(i,j,1,n)=1.0
+>       endif
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw mxpwp.f ../src_2.1.02_22_one
+248,249c248,249
+<       real t1d(kdm),s1d(kdm),th1d(kdm),tr1d(kdm,mxtrcr),
+<      &     dp1d(kdm),p1d(kdm+1),u1d(kdm),v1d(kdm),rig(kdm+1)
+---
+>       real t1d(kdm),s1d(kdm),th1d(kdm),tr1d(kdm),dp1d(kdm),p1d(kdm+1),
+>      &     u1d(kdm),v1d(kdm),rig(kdm+1)
+254c254
+<       integer k,k1,k2,k3,kmax,kmlb,kmlb1,kmask,kintf,ktr,iter,jrlv
+---
+>       integer k,k1,k2,k3,kmax,kmlb,kmlb1,kmask,kintf,iter,jrlv
+267,269c267,269
+<         do ktr= 1,ntracr
+<           tr1d(k,ktr)=tracer(i,j,k,n,ktr)
+<         enddo
+---
+>         if (trcout) then
+>           tr1d(k)=tracer(i,j,k,n)
+>         endif
+391,393c391,393
+<           do ktr= 1,ntracr
+<             tr1d(k,ktr)=1.0
+<           enddo
+---
+>           if (trcout) then
+>             tr1d(k)=1.0
+>           endif
+398c398
+< cdiag&        t1d(k),s1d(k),tr1d(k,1)
+---
+> cdiag&        t1d(k),s1d(k),tr1d(k)
+430,432c430,432
+<           do ktr= 1,ntracr
+<             tr1d(k,ktr)=1.0
+<           enddo
+---
+>           if (trcout) then
+>             tr1d(k)=1.0
+>           endif
+446,448c446,448
+<             do ktr= 1,ntracr
+<               tr1d(k3,ktr)=1.0
+<             enddo
+---
+>             if (trcout) then
+>               tr1d(k3)=1.0
+>             endif
+519,522c519,522
+<           do ktr= 1,ntracr
+<             rigf=rig1*(tr1d(k-1,ktr)-tr1d(k,ktr))
+<             trold=tr1d(k-1,ktr)
+<             tr1d(k-1,ktr)=tr1d(k-1,ktr)-rigf*dp1d(k  )/
+---
+>           if (trcout) then
+>             rigf=rig1*(tr1d(k-1)-tr1d(k))
+>             trold=tr1d(k-1)
+>             tr1d(k-1)=tr1d(k-1)-rigf*dp1d(k  )/
+524c524
+<             tr1d(k  ,ktr)=tr1d(k  ,ktr)+rigf*dp1d(k-1)/
+---
+>             tr1d(k  )=tr1d(k  )+rigf*dp1d(k-1)/
+526c526
+<           enddo
+---
+>           end if
+560,561c560,562
+<         do ktr= 1,ntracr
+<           tracer(i,j,k,n,ktr)=tr1d(k,ktr)
+---
+>         if (trcout) then
+>           tracer(i,j,k,n)=tr1d(k)
+>         endif
+563d563
+<       enddo
+656,658c656,658
+<       integer k,kmlb,kmax,ktr
+<       real t1d(kdm),s1d(kdm),th1d(kdm),tr1d(kdm,mxtrcr),
+<      &     u1d(kdm),v1d(kdm),p1d(kdm+1),dp1d(kdm)
+---
+>       integer k,kmlb,kmax
+>       real t1d(kdm),s1d(kdm),th1d(kdm),tr1d(kdm),u1d(kdm),v1d(kdm),
+>      &     p1d(kdm+1),dp1d(kdm)
+697,699c697,699
+<         do ktr= 1,ntracr
+<           tr1d(1,ktr)=1.0
+<         enddo
+---
+>         if (trcout) then
+>           tr1d(1)=1.0
+>         endif
+706,708c706,708
+<           do ktr= 1,ntracr
+<             tr1d(k,ktr)=1.0
+<           enddo
+---
+>           if (trcout) then
+>             tr1d(k)=1.0
+>           endif
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw overtn.f ../src_2.1.02_22_one
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw poflat.f ../src_2.1.02_22_one
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw poflat_ATLd.f ../src_2.1.02_22_one
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw poflat_F1Da.f ../src_2.1.02_22_one
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw poflat_F2Db.f ../src_2.1.02_22_one
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw poflat_IASd.f ../src_2.1.02_22_one
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw poflat_JESa.f ../src_2.1.02_22_one
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw poflat_SYMa.f ../src_2.1.02_22_one
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw prtmsk.f ../src_2.1.02_22_one
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw psmoo.f ../src_2.1.02_22_one
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw restart.f ../src_2.1.02_22_one
+13c13
+<       integer   i,ios,j,k,ktr
+---
+>       integer   i,ios,j,k
+146,149c146
+<         do ktr= 1,ntracr
+<           call restart_in3d(tracer(1-nbdy,1-nbdy,1,1,ktr),
+<      &                             2*kdm, ip, 'tracer  ')
+<         enddo
+---
+>         call restart_in3d(tracer,2*kdm, ip, 'tracer  ')
+236c233
+<       integer   i,j,k,ktr,l
+---
+>       integer   i,j,k,l
+481,485c478,479
+<         do ktr= 1,ntracr
+<           call zaiowr3(tracer(1-nbdy,1-nbdy,1,1,ktr),  2*kdm,
+<      &                 ip,.false., xmin,xmax, 12, .true.)
+<           call xctilr( tracer(1-nbdy,1-nbdy,1,1,ktr),1,2*kdm,
+<      &                  nbdy,nbdy, halo_ps)
+---
+>         call zaiowr3(tracer,  2*kdm, ip,.false., xmin,xmax, 12, .true.)
+>         call xctilr( tracer,1,2*kdm, nbdy,nbdy, halo_ps)
+489,490c483
+<               write(12,4100) 'tracer  ',k,l+1,xmin(k+l*kdm),
+<      &                                        xmax(k+l*kdm)
+---
+>             write(12,4100) 'tracer  ',k,l+1,xmin(k+l*kdm),xmax(k+l*kdm)
+495,496c488
+<         enddo !ktr
+<       endif !trcout
+---
+>       endif
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw stencl.f ../src_2.1.02_22_one
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw thermf.f ../src_2.1.02_22_one
+13c13
+<       integer i,j,k,ktr,nm,l
+---
+>       integer i,j,k,nm,l
+26c26
+< !$OMP PARALLEL DO PRIVATE(j,k,l,i,ktr)
+---
+> !$OMP PARALLEL DO PRIVATE(j,k,l,i)
+35a36,45
+> c
+>         if (trcout) then
+> c
+> c ---     ----------------------------
+> c         tracer always 1.0 at surface
+> c ---     ----------------------------
+> c
+>           do l=1,isp(j)
+>             do i=max(1-margin,ifp(j,l)),min(ii+margin,ilp(j,l))
+>               tracer(i,j,1,n) = 1.0
+36a47,49
+>           enddo
+>         endif
+>       enddo
+44c57
+< !$OMP PARALLEL DO PRIVATE(j,i,k,pwl)
+---
+> !$OMP PARALLEL DO PRIVATE(j,l,i,k,pwl)
+46,48c59,62
+<       do j=1-margin,jj+margin
+<         do i=1-margin,ii+margin
+<           if (ip(i,j).eq.1 .and. rmun(i,j).ne.0.0) then
+---
+>       do 43 j=1-margin,jj+margin
+>       do 43 l=1,isp(j)
+>       do 43 i=max(1-margin,ifp(j,l)),min(ii+margin,ilp(j,l))
+>         if (rmun(i,j).ne.0.0) then
+76,77c90
+<                     th3d(i,j,k,n)=sig(temp(i,j,k,n),
+<      &                                saln(i,j,k,n))-thbase
+---
+>                   th3d(i,j,k,n)=sig(temp(i,j,k,n),saln(i,j,k,n))-thbase
+83c96
+<               enddo  !k
+---
+>             enddo
+101,106d113
+<               enddo  !k
+<             endif  ! hybrid:isopyc
+< c
+< c ---       minimal tracer support (non-negative in buffer zone).
+<             do ktr= 1,ntracr
+<               tracer(i,j,k,n,ktr)=max(tracer(i,j,k,n,ktr),0.0)
+108c115,117
+<           endif  !ip.eq.1 .and. rmun.ne.0.0
+---
+>           endif
+>         endif
+>  43   continue
+110,131d118
+<           if (iu(i,j).eq.1 .and.
+<      &        max(rmun(i,j),rmun(i-1,j)).ne.0.0) then
+<             do k= 1,kk
+<               pwl=u(i,j,k,n)
+<               u(i,j,k,n)=u(i,j,k,n)+delt1*max(rmun(i,j),rmun(i-1,j))*
+<      &           ((unest(i,j,k,ln0)*wn0+unest(i,j,k,ln1)*wn1)
+<      &               - u(i,j,k,n))
+<             enddo  !k
+<           endif  !iu.eq.1 .and. rmun.ne.0.0
+< c
+<           if (iv(i,j).eq.1 .and.
+<      &        max(rmun(i,j),rmun(i,j-1)).ne.0.0) then
+<             do k= 1,kk
+<               pwl=v(i,j,k,n)
+<               v(i,j,k,n)=v(i,j,k,n)+delt1*max(rmun(i,j),rmun(i,j-1))*
+<      &           ((vnest(i,j,k,ln0)*wn0+vnest(i,j,k,ln1)*wn1)
+<      &               - v(i,j,k,n))
+<             enddo  !k
+<           endif  !iu.eq.1 .and. rmun.ne.0.0
+<         enddo  !i
+<       enddo  !j
+< c
+182,184c169,171
+<                 endif !hybrid:else
+<               endif !pwl.lt.p(i,j,kk+1)
+<             enddo !k
+---
+>                 endif
+>               endif
+>             enddo
+202c189
+<               endif !k.ge.3
+---
+>               endif
+204,206c191,193
+<             enddo !k
+<           endif !hybrid:isopyc
+<         endif !rmu(i,j).ne.0.0
+---
+>             enddo
+>           endif
+>         endif
+211,242d197
+< c --- ----------------------------
+< c --- tracer forcing at sidewalls
+< c --- ----------------------------
+< c
+<       if (trcrlx .and. nstep.gt.2) then
+< c
+< !$OMP PARALLEL DO PRIVATE(j,l,i,k,pwl)
+< !$OMP&         SCHEDULE(STATIC,jblk)
+<       do 54 j=1-margin,jj+margin
+<       do 54 l=1,isp(j)
+<       do 54 i=max(1-margin,ifp(j,l)),min(ii+margin,ilp(j,l))
+<         if (rmutr(i,j).ne.0.0) then
+<           do k=kk,1,-1
+<             pwl=pwall(i,j,k,lc0)*wc0+pwall(i,j,k,lc1)*wc1
+<      &         +pwall(i,j,k,lc2)*wc2+pwall(i,j,k,lc3)*wc3
+<             if     (pwl.lt.p(i,j,kk+1)-tencm) then
+<               do ktr= 1,ntracr
+<                 tracer(i,j,k,n,ktr)=tracer(i,j,k,n,ktr)+
+<      &             delt1*rmutr(i,j)*
+<      &               ((trwall(i,j,k,lc0,ktr)*wc0
+<      &                +trwall(i,j,k,lc1,ktr)*wc1
+<      &                +trwall(i,j,k,lc2,ktr)*wc2
+<      &                +trwall(i,j,k,lc3,ktr)*wc3)
+<      &                - tracer(i,j,k,n,ktr))
+<               enddo !ktr
+<             endif !pwl.lt.p(i,j,kk+1)
+<           enddo !k
+<         endif !rmutr(i,j).ne.0.0
+<  54   continue
+< c
+<       endif  !  trcrlx = .true.
+< c
+633d587
+< c> Aug  2002 - added nested velocity relaxation
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw trcupd.f ../src_2.1.02_22_one
+diff: ../src_2.1.02_22_one/trcupd.f: No such file or directory
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw tsadvc.f ../src_2.1.02_22_one
+356,357c356
+< *     if (vlume.ne.0.0 .and. clip.ne.0.0) then
+<       if (.false.) then
+---
+>       if (vlume.ne.0.0 .and. clip.ne.0.0) then
+430,432c429
+<      & sold,told,q2old,q2lold
+<       real, save, dimension (1-nbdy:idm+nbdy,1-nbdy:jdm+nbdy,mxtrcr) ::
+<      & trold
+---
+>      & sold,told,trold,q2old,q2lold
+435c432
+<       integer i,isave,j,jsave,k,ktr,l,ia,ib,ja,jb,mbdy
+---
+>       integer i,isave,j,jsave,k,l,ia,ib,ja,jb,mbdy
+447,449c444,446
+< c ---        0 for -tracer-,   1 for -q2-
+<       integer    pdtemp,pdth3d,pdq2
+<       parameter (pdtemp=256.0, pdth3d=32.0, pdq2=1.0)
+---
+> c ---        4 for -tracer-, 1 for -q2-
+>       integer    pdtemp,pdth3d,pdtrcr,pdq2
+>       parameter (pdtemp=256.0, pdth3d=32.0, pdtrcr=4.0, pdq2=1.0)
+466,468c463,465
+<       do ktr= 1,ntracr
+<         call xctilr(tracer( 1-nbdy,1-nbdy,1,1,ktr),1,2*kk, 6,6, halo_ps)
+<       enddo
+---
+>       if (trcout) then
+>         call xctilr(tracer( 1-nbdy,1-nbdy,1,1),1,2*kk, 6,6, halo_ps)
+>       endif
+525c522
+< !$OMP PARALLEL DO PRIVATE(j,l,i,ktr,flxdiv,offset)
+---
+> !$OMP PARALLEL DO PRIVATE(j,l,i,flxdiv,offset)
+538,541c535,536
+<             do ktr= 1,ntracr
+<               trold(i,j,ktr)=tracer(i,j,k,n,ktr)
+<               if     (trcflg(ktr).eq.2) then
+<                tracer(i,j,k,n,ktr)=tracer(i,j,k,n,ktr)+pdtemp
+---
+>             if (trcout) then
+>               trold(i,j)=tracer(i,j,k,n)
+543d537
+<             enddo
+568a563,565
+>             if     (trcout) then
+>               tracer(i,j,k,n)=tracer(i,j,k,n)+pdtrcr
+>             endif
+629,631c626,627
+<       do ktr= 1,ntracr
+< *       call advem(2,tracer(1-nbdy,1-nbdy,k,n,ktr),  !MPDATA     fails
+<         call advem(1,tracer(1-nbdy,1-nbdy,k,n,ktr),  !donor cell works
+---
+>       if (trcout) then
+>         call advem(2,tracer(1-nbdy,1-nbdy,k,n),
+634c630
+<       enddo
+---
+>       endif
+664c660
+< !$OMP PARALLEL DO PRIVATE(j,l,i,ktr,pold,pmid,pnew,wts2dp)
+---
+> !$OMP PARALLEL DO PRIVATE(j,l,i,pold,pmid,pnew,wts2dp)
+686a683,685
+>             if     (trcout) then
+>               tracer(i,j,k,n)=tracer(i,j,k,n)-pdtrcr
+>             endif
+691,695d689
+<             do ktr= 1,ntracr
+<               if     (trcflg(ktr).eq.2) then
+<                tracer(i,j,k,n,ktr)=tracer(i,j,k,n,ktr)-pdtemp
+<               endif
+<             enddo
+722,726c716,720
+<             do ktr= 1,ntracr
+<               tracer(i,j,k,m,ktr)=tracer(i,j,k,m,ktr)
+<      &         +wts2dp*(pold*( trold(i,j,    ktr)-tracer(i,j,k,m,ktr))+
+<      &                  pnew*(tracer(i,j,k,n,ktr)-tracer(i,j,k,m,ktr)) )
+<             enddo
+---
+>             if (trcout) then
+>               tracer(i,j,k,m)=tracer(i,j,k,m)
+>      &                 +wts2dp*(pold*( trold(i,j)    -tracer(i,j,k,m))+
+>      &                          pnew*(tracer(i,j,k,n)-tracer(i,j,k,m)) )
+>             endif
+771,772d764
+< *
+<       call pipe_comparall(m,n, 'advem,  step')
+846,848c838,840
+<       do ktr= 1,ntracr
+<         call xctilr(tracer( 1-nbdy,1-nbdy,1,n,ktr),1,kk, 2,2, halo_ps)
+<       enddo
+---
+>       if (trcout) then
+>         call xctilr(tracer( 1-nbdy,1-nbdy,1,n),1,kk, 2,2, halo_ps)
+>       endif
+889a882,888
+>             if (trcout) then
+>               uflux3(i,j)=factor*(tracer(i-1,j,k,n)-tracer(i,j,k,n))
+>             endif
+>             if (mxlmy) then
+>               uflux4(i,j)=factor*(q2( i-1,j,k,n)-q2( i,j,k,n))
+>               uflux5(i,j)=factor*(q2l(i-1,j,k,n)-q2l(i,j,k,n))
+>             endif
+902a902,908
+>             if (trcout) then
+>               vflux3(i,j)=factor*(tracer(i,j-1,k,n)-tracer(i,j,k,n))
+>             endif
+>             if (mxlmy) then
+>               vflux4(i,j)=factor*(q2( i,j-1,k,n)-q2( i,j,k,n))
+>               vflux5(i,j)=factor*(q2l(i,j-1,k,n)-q2l(i,j,k,n))
+>             endif
+947a954,966
+>             if (trcout) then
+>               util3(i,j)=(uflux3(i+1,j)-uflux3(i,j)
+>      &                   +vflux3(i,j+1)-vflux3(i,j))*factor
+>               tracer(i,j,k,n)=tracer(i,j,k,n)+util3(i,j)
+>             endif
+>             if (mxlmy) then
+>               util4(i,j)=(uflux4(i+1,j)-uflux4(i,j)
+>      &                   +vflux4(i,j+1)-vflux4(i,j))*factor
+>               util5(i,j)=(uflux5(i+1,j)-uflux5(i,j)
+>      &                   +vflux5(i,j+1)-vflux5(i,j))*factor
+>               q2( i,j,k,n)=q2( i,j,k,n)+util4(i,j)
+>               q2l(i,j,k,n)=q2l(i,j,k,n)+util5(i,j)
+>             endif
+986,1143d1004
+< c --- tracers.
+< c
+<       do ktr= 1,ntracr
+< c
+< c --- rhs: dp.n+, tracer.n+
+< c --- lhs: uflux, vflux
+< c
+<       margin = mbdy - 1
+< c
+< !$OMP PARALLEL DO PRIVATE(j,l,i,factor)
+< !$OMP&         SCHEDULE(STATIC,jblk)
+<       do j=1-margin,jj+margin
+<         do l=1,isu(j)
+<           do i=max(1-margin,ifu(j,l)),min(ii+margin,ilu(j,l))
+<             factor=temdf2*aspux(i,j)*
+<      &             scuy(i,j)*harmon(max(dp(i-1,j,k,n),onemm)
+<      &                             ,max(dp(i  ,j,k,n),onemm))
+<             uflux(i,j)=factor*(tracer(i-1,j,k,n,ktr)-
+<      &                         tracer(i,  j,k,n,ktr))
+<           enddo
+<         enddo
+<         do l=1,isv(j)
+<           do i=max(1-margin,ifv(j,l)),min(ii+margin,ilv(j,l))
+<             factor=temdf2*aspvy(i,j)*
+<      &             scvx(i,j)*harmon(max(dp(i,j-1,k,n),onemm)
+<      &                             ,max(dp(i,j  ,k,n),onemm))
+<             vflux(i,j)=factor*(tracer(i,j-1,k,n,ktr)-
+<      &                         tracer(i,j,  k,n,ktr))
+<           enddo
+<         enddo
+<       enddo
+< !$OMP END PARALLEL DO
+< c
+<         if     (lpipe .and. lpipe_tsadvc) then
+< c ---     compare two model runs.
+<           write (textu,'(a9,i3)') 'uflux  k=',k
+<           write (textv,'(a9,i3)') 'vflux  k=',k
+<           call pipe_compare_sym2(uflux, iu,textu,
+<      &                           vflux, iv,textv)
+<         endif
+< c
+< c --- rhs: dp.n, uflux+, vflux+
+< c --- lhs: tracer.n
+< c
+<       margin = mbdy - 2
+< c
+< !$OMP PARALLEL DO PRIVATE(j,l,i,factor)
+< !$OMP&         SCHEDULE(STATIC,jblk)
+<       do j=1-margin,jj+margin
+<         do l=1,isp(j)
+<           do i=max(1-margin,ifp(j,l)),min(ii+margin,ilp(j,l))
+<             factor=-delt1/(scp2(i,j)*max(dp(i,j,k,n),onemm))
+<             util1(i,j)=(uflux(i+1,j)-uflux(i,j)
+<      &                 +vflux(i,j+1)-vflux(i,j))*factor
+<             tracer(i,j,k,n,ktr)=tracer(i,j,k,n,ktr)+util1(i,j)
+< c
+< cdiag       if (i.eq.itest.and.j.eq.jtest) then
+< cdiag         if (1.le.i .and. i.le.ii .and.
+< cdiag.            1.le.j .and. j.le.jj      ) then
+< cdiag.          write (lp,100) nstep,i+i0,j+j0,k,'t,s,dt,ds',
+< cdiag.          tracer(i,j,k,n,ktr),0.0,util1(i,j),0.0
+< cdiag.          call flush(lp)
+< cdiag.        endif
+< cdiag.      endif
+< c
+<           enddo
+<         enddo
+<       enddo
+< !$OMP END PARALLEL DO
+< c
+<       if     (lpipe .and. lpipe_tsadvc) then
+< c ---   compare two model runs.
+<         write (text,'(a9,i3)') 'util1  k=',k
+<         call pipe_compare_sym1(util1,ip,text)
+<         write (text,'(a9,i3)') 'trcr.n k=',k
+<         call pipe_compare_sym1(tracer(1-nbdy,1-nbdy,k,n,ktr),ip,text)
+<       endif
+< c
+< cdiag if (itest.gt.0.and.jtest.gt.0) then
+< cdiag.  write (lp,'(i9,2i5,i3,a,f9.3,f8.2)')
+< cdiag.    nstep,itest+i0,jtest+j0,k,
+< cdiag.    ' trc,dp after isopyc.mix.',
+< cdiag.    tracer(itest,jtest,k,n,ktr),
+< cdiag.    dp(itest,jtest,k,n)*qonem
+< cdiag.  call flush(lp)
+< cdiag.endif
+< c
+<       enddo !ktr
+< c
+< c --- MYL2.5
+< c
+<       if (mxlmy) then
+< c
+< c --- rhs: dp.n+, temp.n+, th3d.n+, saln.n+
+< c --- lhs: uflux, uflux2, vflux, vflux2
+< c
+<       margin = mbdy - 1
+< c
+< !$OMP PARALLEL DO PRIVATE(j,l,i,factor)
+< !$OMP&         SCHEDULE(STATIC,jblk)
+<       do j=1-margin,jj+margin
+<         do l=1,isu(j)
+<           do i=max(1-margin,ifu(j,l)),min(ii+margin,ilu(j,l))
+<             factor=temdf2*aspux(i,j)*
+<      &             scuy(i,j)*harmon(max(dp(i-1,j,k,n),onemm)
+<      &                             ,max(dp(i  ,j,k,n),onemm))
+<             uflux (i,j)=factor*(q2( i-1,j,k,n)-q2( i,j,k,n))
+<             uflux2(i,j)=factor*(q2l(i-1,j,k,n)-q2l(i,j,k,n))
+<           enddo
+<         enddo
+<         do l=1,isv(j)
+<           do i=max(1-margin,ifv(j,l)),min(ii+margin,ilv(j,l))
+<             factor=temdf2*aspvy(i,j)*
+<      &             scvx(i,j)*harmon(max(dp(i,j-1,k,n),onemm)
+<      &                             ,max(dp(i,j  ,k,n),onemm))
+<             vflux (i,j)=factor*(q2( i,j-1,k,n)-q2( i,j,k,n))
+<             vflux2(i,j)=factor*(q2l(i,j-1,k,n)-q2l(i,j,k,n))
+<           enddo
+<         enddo
+<       enddo
+< !$OMP END PARALLEL DO
+< c
+<         if     (lpipe .and. lpipe_tsadvc) then
+< c ---     compare two model runs.
+<           write (textu,'(a9,i3)') 'uflux  k=',k
+<           write (textv,'(a9,i3)') 'vflux  k=',k
+<           call pipe_compare_sym2(uflux, iu,textu,
+<      &                           vflux, iv,textv)
+<           write (textu,'(a9,i3)') 'uflux2 k=',k
+<           write (textv,'(a9,i3)') 'vflux2 k=',k
+<           call pipe_compare_sym2(uflux2,iu,textu,
+<      &                           vflux2,iv,textv)
+<         endif
+< c
+< c --- rhs: dp.n, uflux+, vflux+, uflux2+, vflux2+
+< c --- lhs: saln.n, temp.n, th3d.n
+< c
+<       margin = mbdy - 2
+< c
+< !$OMP PARALLEL DO PRIVATE(j,l,i,factor)
+< !$OMP&         SCHEDULE(STATIC,jblk)
+<       do j=1-margin,jj+margin
+<         do l=1,isp(j)
+<           do i=max(1-margin,ifp(j,l)),min(ii+margin,ilp(j,l))
+<             factor=-delt1/(scp2(i,j)*max(dp(i,j,k,n),onemm))
+<             util1(i,j)=(uflux (i+1,j)-uflux (i,j)
+<      &                 +vflux (i,j+1)-vflux (i,j))*factor
+<             util2(i,j)=(uflux2(i+1,j)-uflux2(i,j)
+<      &                 +vflux2(i,j+1)-vflux2(i,j))*factor
+<             q2( i,j,k,n)=q2( i,j,k,n)+util1(i,j)
+<             q2l(i,j,k,n)=q2l(i,j,k,n)+util2(i,j)
+<           enddo
+<         enddo
+<       enddo
+< !$OMP END PARALLEL DO
+< c
+<       endif !mxlmy
+< c
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw zebra.f ../src_2.1.02_22_one
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw machine.F ../src_2.1.02_22_one
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw mod_pipe.F ../src_2.1.02_22_one
+10,11c10
+<      &                          lmaster,lpipeio,lshift,lslave,
+<      &                          lsym,ltracer
+---
+>      &                          lmaster,lpipeio,lshift,lslave,lsym
+29d27
+< c ---   if the file 'PIPE_TRACER' exists then this is master and slave,
+47,50d44
+< c ---   if the file 'PIPE_TRACER' exists, there is no slave and the
+< c ---   master checks that all appropriate tracers are non-negative
+< c ---   and compares temperature to any "temperature" tracer.
+< c
+74c68
+< c --- call 'pipe_comparall'   (from master and slave) after major routines
+---
+> c --- call 'pipe_compareall'   (from master and slave) after major routines
+90d83
+<       inquire(file='PIPE_TRACER', exist=ltracer)
+107c100
+<       if     (lpipe .or. ltracer) then
+---
+>       if     (lpipe) then
+456,565d448
+<       subroutine pipe_compare_same(fielda,fieldb,mask,what)
+<       use mod_xc  ! HYCOM communication interface
+<       implicit none
+< c
+<       real,    dimension (1-nbdy:idm+nbdy,1-nbdy:jdm+nbdy),
+<      &         intent(in) :: fielda,fieldb
+<       integer, dimension (1-nbdy:idm+nbdy,1-nbdy:jdm+nbdy),
+<      &         intent(in) :: mask
+<       character*12,
+<      &         intent(in) :: what
+< c
+< c --- call this routine from anywhere in the code 
+< c --- to check whether data stored in 'fielda' and 'fieldb'
+< c --- are identical.
+< c
+< c --- only active in PIPE_TRACER mode.
+< c --- typically fielda is temp and fieldb is a "temperature" tracer.
+< c
+<       integer      i,j
+<       logical      fail
+< c
+<       if     (ltracer) then
+<         do j=1,jj
+<           do i=1,ii
+<             amask(i,j) = mask(i,j)
+<           enddo
+<         enddo
+<         call xcaget(tmask,  amask,  1)
+<         call xcaget(field1, fielda, 1)
+<         call xcaget(field2, fieldb, 1)
+<         if     (mnproc.eq.1) then
+<           write (lpunit,'(2a)') 'comparing: ',what
+<           call flush(lpunit)
+<           fail=.false.
+<           do j=1,jtdm
+<             do i=1,itdm
+<               if (tmask(i,j).gt.0.0 .and.
+<      &            field1(i,j).ne.field2(i,j)) then
+<                 write (lpunit,'(a,2i5,1p,2(a,e12.5),4x,a)')
+<      &            'i,j=',i,j,
+<      &            '  orig :',field1(i,j),
+<      &            '  error:',field1(i,j)-field2(i,j),what
+<                 fail=.true.
+<               endif
+<             enddo
+<           enddo
+<           if (fail) then  ! optional
+<             call xchalt('(pipe_compare_same)')
+<                    stop '(pipe_compare_same)'
+<           endif
+<         endif !1st tile
+<         call xcsync(no_flush) ! wait for 1st tile
+<       endif !ltracer
+<       return
+<       end subroutine pipe_compare_same
+< 
+<       subroutine pipe_compare_notneg(field,mask,what)
+<       use mod_xc  ! HYCOM communication interface
+<       implicit none
+< c
+<       real,    dimension (1-nbdy:idm+nbdy,1-nbdy:jdm+nbdy),
+<      &         intent(in) :: field
+<       integer, dimension (1-nbdy:idm+nbdy,1-nbdy:jdm+nbdy),
+<      &         intent(in) :: mask
+<       character*12,
+<      &         intent(in) :: what
+< c
+< c --- call this routine from anywhere in the code 
+< c --- to check whether data stored in 'field' is non-negative.
+< c
+< c --- only active in PIPE_TRACER mode.
+< c --- typically field is a tracer.
+< c
+<       integer      i,j
+<       logical      fail
+< c
+<       if     (ltracer) then
+<         do j=1,jj
+<           do i=1,ii
+<             amask(i,j) = mask(i,j)
+<           enddo
+<         enddo
+<         call xcaget(tmask,  amask,  1)
+<         call xcaget(field1, field, 1)
+<         if     (mnproc.eq.1) then
+<           write (lpunit,'(2a)') 'comparing: ',what
+<           call flush(lpunit)
+<           fail=.false.
+<           do j=1,jtdm
+<             do i=1,itdm
+<               if (tmask(i,j).gt.0.0 .and.
+<      &            field1(i,j).lt.0.0) then
+<                 write (lpunit,'(a,2i5,1p,2(a,e12.5),4x,a)')
+<      &            'i,j=',i,j,
+<      &            '  orig :',field1(i,j),
+<      &            '  error:',field1(i,j),what
+<                 fail=.true.
+<               endif
+<             enddo
+<           enddo
+<           if (fail) then  ! optional
+<             call xchalt('(pipe_compare_notneg)')
+<                    stop '(pipe_compare_notneg)'
+<           endif
+<         endif !1st tile
+<         call xcsync(no_flush) ! wait for 1st tile
+<       endif !ltracer
+<       return
+<       end subroutine pipe_compare_notneg
+< 
+578d460
+<       character*99 cformat
+580c462
+<       integer      i,imax,imin,j,jmax,jmin,k,ktr,l,mnp
+---
+>       integer      i,imax,imin,j,jmax,jmin,k,l,mnp
+595a478,480
+>  103  format (i8,i5,i4,1x,a,a/
+>      &       (i8,5x,i4,1x,a,a,2f7.3,2f7.3,f8.4,f9.3,f9.2))
+> c
+598,599c483,484
+<           call xcstop('(pipe_comparall: debug ambiguity)')
+<                  stop '(pipe_comparall: debug ambiguity)'
+---
+>           call xcstop('(pipe_compareall: debug ambiguity)')
+>                  stop '(pipe_compareall: debug ambiguity)'
+603,613d487
+<         if     (ntracr.eq.0) then
+<           write(cformat,'(a,a)')
+<      &      '(i8,i5,i4,1x,a,a/',
+<      &      '(i8,5x,i4,1x,a,a,2f7.3,2f7.3,f8.4,f9.3,f9.2))'
+<         else
+<           write(cformat,'(a,i2,a,a,i2,a)')
+<      &      '(i8,i5,i4,1x,a,a,',ntracr,'a / ',
+<      &      '(i8,5x,i4,1x,a,a,2f7.3,2f7.3,f8.4,f9.3,f9.2,',
+<      &      ntracr,'f8.4))'
+<         endif
+<         write(lp,'(3a)') '"',trim(cformat),'"'
+615c489
+<           write (lp,cformat) 
+---
+>           write (lp,103) 
+618d491
+<      &      ('  tracer',ktr=1,ntracr),
+627d499
+<      &       (tracer(itest,jtest,k,n,ktr),ktr=1,ntracr),
+631c503
+<           write (lp,cformat) 
+---
+>           write (lp,103) 
+634d505
+<      &      ('  tracer',ktr=1,ntracr),
+643d513
+<      &       (0.0,ktr=1,ntracr),
+652d521
+<      &       (tracer(itest,jtest,k,n,ktr),ktr=1,ntracr),
+778,804d646
+<       if     (ltracer .and. cinfo(1:1).ne.'i') then
+<         do ktr= 1,ntracr
+<           write (lpunit,'(a,i10)') cinfo,nstep
+<           if     (trcflg(ktr).eq.2) then
+< c
+< c ---       compare temp and this temperature tracer.
+< c
+<             do k=1,kk
+<               write (txt1,'(a9,i3)') 'temp(kn) ',k
+<               call pipe_compare_same(  temp(1-nbdy,1-nbdy,k,n),
+<      &                               tracer(1-nbdy,1-nbdy,k,n,ktr),
+<      $                               ip,txt1)
+<             enddo
+<           else
+< c
+< c ---       check that tracer is non-negative.
+< c
+<             do k=1,kk
+<               write (txt1,'(a6,i3,i3)') 'tracer',ktr,k
+<               call pipe_compare_notneg(tracer(1-nbdy,1-nbdy,k,n,ktr),
+<      $                                 ip,txt1)
+<             enddo
+<           endif
+<         enddo !ktr
+<         write (lpunit,'(a,i10,a)') cinfo,nstep,' -- OK'
+<       endif !ltracer
+< c
+833c675
+<       endif !lpipe
+---
+>       endif
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw mod_xc.F ../src_2.1.02_22_one
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw mod_xc_mp.F ../src_2.1.02_22_one
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw mod_xc_sm.F ../src_2.1.02_22_one
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw mod_za.F ../src_2.1.02_22_one
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw mod_za_mp.F ../src_2.1.02_22_one
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw mod_za_mp1.F ../src_2.1.02_22_one
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw mod_za_sm.F ../src_2.1.02_22_one
+end
+echo *****     *****     *****     *****     *****     *****     *****
+*****     *****     *****     *****     *****     *****     *****
+diff -ibw wtime.F ../src_2.1.02_22_one
+end

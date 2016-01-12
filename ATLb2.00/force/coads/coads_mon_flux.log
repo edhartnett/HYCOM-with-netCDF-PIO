@@ -1,0 +1,247 @@
+set time = 1
+C
+setenv OS `uname`
+uname
+switch ( SunOS )
+breaksw
+C
+C --- Create HYCOM heat flux files.
+W/: No such file or directory
+C
+switch ( SunOS )
+if ( -e /scr ) then
+setenv pget cp
+setenv pput cp
+endif
+breaksw
+C
+C --- P is primary path,
+C --- S is scratch directory,
+C --- D is permanent directory,
+C
+setenv P hycom/ATLb2.00/force/coads
+C
+switch ( SunOS )
+if ( -e /scr ) then
+if ( -e /net/hermes/scrb ) then
+setenv S /net/hermes/scrb/wallcraf/hycom/ATLb2.00/force/coads
+setenv D ~/hycom/ATLb2.00/force/coads
+else
+breaksw
+C
+mkdir -p /net/hermes/scrb/wallcraf/hycom/ATLb2.00/force/coads
+cd /net/hermes/scrb/wallcraf/hycom/ATLb2.00/force/coads
+echo /net/hermes/scrb/wallcraf/hycom/ATLb2.00/force/coads
+/net/hermes/scrb/wallcraf/hycom/ATLb2.00/force/coads
+C
+C --- Input.
+C
+touch fort.71
+/bin/rm -f fort.71
+[1] 86
+C
+cp /home/ajax/wallcraf/flux_ieee/coads/coads_mon_taqaqrqppc.d fort.71
+touch regional.grid.a regional.grid.b
+if ( -z regional.grid.b ) then
+if ( -z regional.grid.a ) then
+C
+[2] 92
+wait
+cp /home/ajax/wallcraf/hycom/ATLb2.00/force/coads/../../../ALL/force/src/ap_100_co .
+
+[2]    Done                 cp  ...
+
+[1]    Done                 cp ~wallcraf/flux_ieee/coads/coads_mon_taqaqrqppc.d fort.71
+chmod a+rx ap_100_co
+C
+/bin/rm -f fort.13 fort.13A
+C
+setenv FOR010A fort.10A
+setenv FOR011A fort.11A
+setenv FOR012A fort.12A
+setenv FOR013A fort.13A
+setenv FOR014A fort.14A
+C
+switch ( SunOS )
+/bin/rm -f core ap_100_co.trace
+touch core
+default:
+/bin/rm -f core
+touch core
+endsw
+C
+./ap_100_co
+
+xcspmd: idm,jdm =   57   52
+
+ READING /AFTITL/
+ &AFTITL
+ CTITLE = COADS monthly, MKS                      
+ /
+ READING /AFTIME/
+ &AFTIME
+ FSTART = 0.0E+0
+ WSTART = 0.0E+0
+ TSTART = 0.0E+0
+ TMAX = 0.0E+0
+ BIASPC = 0.0E+0
+ BIASRD = 0.0E+0
+ /
+ 
+ READING /AFFLAG/
+ &AFFLAG
+ IFFILE = 3
+ IFTYPE = 5
+ INTERP = 1
+ JPR = 8
+ /
+ 
+ OUTPUT:  COADS monthly, MKS                      
+
+
+ 
+COADS monthly, MKS                                                             
+No radiation flux correction                                                   
+No precipitation correction                                                    
+                                                                               
+i/jdm =   57   52                                                              
+ 
+ FREAD0 - MAXREC,WSTART,WEND =  90000 -1.0 -1.0
+I,J,LONV,XAF =    1    1   263.000   265.500
+I,J,LONV,XAF =   11    1   283.000   285.500
+I,J,LONV,XAF =   21    1   303.000   305.500
+I,J,LONV,XAF =   31    1   323.000   325.500
+I,J,LONV,XAF =   41    1   343.000   345.500
+I,J,LONV,XAF =   51    1     3.000     5.500
+I,J,LONV,XAF =   57    1    15.000    17.500
+I,J,LONV,XAF =    1   52   263.000   265.500
+I,J,LONV,XAF =   11   52   283.000   285.500
+I,J,LONV,XAF =   21   52   303.000   305.500
+I,J,LONV,XAF =   31   52   323.000   325.500
+I,J,LONV,XAF =   41   52   343.000   345.500
+I,J,LONV,XAF =   51   52     3.000     5.500
+I,J,LONV,XAF =   57   52    15.000    17.500
+I,J,LATU,YAF =    1    1   -19.606    72.894
+I,J,LATU,YAF =    1   11     0.000    92.500
+I,J,LATU,YAF =    1   21    19.606   112.106
+I,J,LATU,YAF =    1   31    37.098   129.598
+I,J,LATU,YAF =    1   41    51.326   143.826
+I,J,LATU,YAF =    1   51    62.195   154.695
+I,J,LATU,YAF =    1   52    63.114   155.614
+I,J,LATU,YAF =   57    1   -19.606    72.894
+I,J,LATU,YAF =   57   11     0.000    92.500
+I,J,LATU,YAF =   57   21    19.606   112.106
+I,J,LATU,YAF =   57   31    37.098   129.598
+I,J,LATU,YAF =   57   41    51.326   143.826
+I,J,LATU,YAF =   57   51    62.195   154.695
+I,J,LATU,YAF =   57   52    63.114   155.614
+
+ MIN,MAX I COORDS =     3.50,  361.50
+ MIN,MAX J COORDS =    72.89,  155.61
+
+ TAIR: MIN=  -9.27441883 MAX=  27.82165527 AVE=  14.83740330 RMS=  18.50968933
+ HAIR: MIN=   0.00163968 MAX=   0.01907207 AVE=   0.01028014 RMS=   0.01161362
+ FLXR: MIN= -85.58634949 MAX= 195.92234802 AVE=  35.39826202 RMS=  94.79216766
+ FLXP: MIN=  -0.21830188 MAX= 248.93423462 AVE=  95.54609680 RMS= 124.58194733
+ PCIP: MIN=  -0.00000068 MAX=   0.00009091 AVE=   0.00003423 RMS=   0.00003922
+          WRITING FLUX RECORD  1     FDAY =    31.00
+
+ TAIR: MIN=  -7.07916069 MAX=  28.17399025 AVE=  15.32413006 RMS=  18.52729797
+ HAIR: MIN=   0.00115215 MAX=   0.01954737 AVE=   0.01031674 RMS=   0.01171874
+ FLXR: MIN= -64.16909027 MAX= 193.56983948 AVE=  58.36301804 RMS= 101.29193878
+ FLXP: MIN=   0.02961823 MAX= 247.58070374 AVE= 116.66815186 RMS= 139.98817444
+ PCIP: MIN=  -0.00000056 MAX=   0.00010956 AVE=   0.00003261 RMS=   0.00003801
+          WRITING FLUX RECORD  2     FDAY =    29.00
+
+ TAIR: MIN=  -5.87667990 MAX=  28.62919235 AVE=  15.87678432 RMS=  18.76843643
+ HAIR: MIN=   0.00193357 MAX=   0.01975662 AVE=   0.01060349 RMS=   0.01194483
+ FLXR: MIN= -45.07902908 MAX= 204.21473694 AVE=  88.38573456 RMS= 110.54005432
+ FLXP: MIN=  30.33510971 MAX= 260.28350830 AVE= 144.54206848 RMS= 157.65963745
+ PCIP: MIN=  -0.00000112 MAX=   0.00009700 AVE=   0.00002934 RMS=   0.00003430
+          WRITING FLUX RECORD  3     FDAY =    31.00
+
+ TAIR: MIN=  -2.81946802 MAX=  28.68703842 AVE=  16.73017120 RMS=  19.14229774
+ HAIR: MIN=   0.00046323 MAX=   0.01975369 AVE=   0.01094038 RMS=   0.01218025
+ FLXR: MIN=  13.60001945 MAX= 222.98655701 AVE= 119.41753387 RMS= 126.76008606
+ FLXP: MIN=  79.25083923 MAX= 281.99435425 AVE= 172.57853699 RMS= 177.81147766
+ PCIP: MIN=  -0.00000097 MAX=   0.00011145 AVE=   0.00002587 RMS=   0.00003036
+          WRITING FLUX RECORD  4     FDAY =    30.00
+
+ TAIR: MIN=   0.23984760 MAX=  28.99636650 AVE=  18.07976341 RMS=  19.76066971
+ HAIR: MIN=   0.00329865 MAX=   0.01967803 AVE=   0.01161300 RMS=   0.01258143
+ FLXR: MIN=  44.60160828 MAX= 226.34439087 AVE= 141.56350708 RMS= 145.88252258
+ FLXP: MIN=  94.36293030 MAX= 284.52807617 AVE= 190.93096924 RMS= 194.47424316
+ PCIP: MIN=  -0.00000042 MAX=   0.00011460 AVE=   0.00002506 RMS=   0.00003105
+          WRITING FLUX RECORD  5     FDAY =    31.00
+
+ TAIR: MIN=   2.65732288 MAX=  28.31466675 AVE=  19.08737755 RMS=  20.41864967
+ HAIR: MIN=   0.00391820 MAX=   0.01984360 AVE=   0.01218692 RMS=   0.01298345
+ FLXR: MIN=  30.13368225 MAX= 255.28222656 AVE= 151.06452942 RMS= 157.43801880
+ FLXP: MIN=  81.10427094 MAX= 313.69775391 AVE= 199.17196655 RMS= 204.23143005
+ PCIP: MIN=  -0.00000033 MAX=   0.00014048 AVE=   0.00002499 RMS=   0.00003245
+          WRITING FLUX RECORD  6     FDAY =    30.00
+
+ TAIR: MIN=   4.32514811 MAX=  28.93879318 AVE=  20.01143074 RMS=  21.07753563
+ HAIR: MIN=   0.00448412 MAX=   0.01968310 AVE=   0.01272024 RMS=   0.01339433
+ FLXR: MIN=  38.25183487 MAX= 273.87768555 AVE= 150.97456360 RMS= 157.43463135
+ FLXP: MIN=  86.20380402 MAX= 332.45104980 AVE= 197.38749695 RMS= 202.59762573
+ PCIP: MIN=  -0.00000051 MAX=   0.00012893 AVE=   0.00002274 RMS=   0.00002972
+          WRITING FLUX RECORD  7     FDAY =    31.00
+
+ TAIR: MIN=   4.49759626 MAX=  29.07058334 AVE=  20.30096054 RMS=  21.33895493
+ HAIR: MIN=   0.00461083 MAX=   0.01982157 AVE=   0.01294706 RMS=   0.01361533
+ FLXR: MIN=  59.33467865 MAX= 229.42147827 AVE= 134.12019348 RMS= 139.61323547
+ FLXP: MIN= 107.59598541 MAX= 287.83349609 AVE= 181.66717529 RMS= 186.32386780
+ PCIP: MIN=  -0.00000033 MAX=   0.00014737 AVE=   0.00002349 RMS=   0.00003024
+          WRITING FLUX RECORD  8     FDAY =    31.00
+
+ TAIR: MIN=   2.25975513 MAX=  28.79577827 AVE=  19.62797546 RMS=  20.90731812
+ HAIR: MIN=   0.00386520 MAX=   0.01980429 AVE=   0.01251918 RMS=   0.01331870
+ FLXR: MIN=  11.68067169 MAX= 200.58895874 AVE= 104.68774414 RMS= 115.16629791
+ FLXP: MIN=  59.71565247 MAX= 249.04989624 AVE= 153.73495483 RMS= 161.42948914
+ PCIP: MIN=  -0.00000062 MAX=   0.00017168 AVE=   0.00002679 RMS=   0.00003343
+          WRITING FLUX RECORD  9     FDAY =    30.00
+
+ TAIR: MIN=  -1.12932265 MAX=  28.44036102 AVE=  18.33680916 RMS=  20.08414841
+ HAIR: MIN=   0.00302453 MAX=   0.01965425 AVE=   0.01180543 RMS=   0.01272772
+ FLXR: MIN= -37.29878235 MAX= 199.05554199 AVE=  70.93371582 RMS=  96.67665100
+ FLXP: MIN=  14.69874573 MAX= 246.94714355 AVE= 122.49160767 RMS= 138.47891235
+ PCIP: MIN=  -0.00000019 MAX=   0.00014834 AVE=   0.00003001 RMS=   0.00003540
+          WRITING FLUX RECORD 10     FDAY =    31.00
+
+ TAIR: MIN=  -6.40185261 MAX=  27.90373611 AVE=  16.81687546 RMS=  19.25693893
+ HAIR: MIN=   0.00187164 MAX=   0.01926228 AVE=   0.01096437 RMS=   0.01210416
+ FLXR: MIN= -75.73088074 MAX= 185.57360840 AVE=  42.43691254 RMS=  89.84748840
+ FLXP: MIN=  -0.20761441 MAX= 237.78977966 AVE=  97.23483276 RMS= 122.72642517
+ PCIP: MIN=  -0.00000046 MAX=   0.00012419 AVE=   0.00003217 RMS=   0.00003635
+          WRITING FLUX RECORD 11     FDAY =    30.00
+
+ TAIR: MIN=  -5.14352465 MAX=  27.83065796 AVE=  15.74952888 RMS=  18.67326355
+ HAIR: MIN=   0.00209409 MAX=   0.01898573 AVE=   0.01051548 RMS=   0.01171864
+ FLXR: MIN= -79.73898315 MAX= 184.03588867 AVE=  29.13696289 RMS=  89.86406708
+ FLXP: MIN=  -0.20707649 MAX= 239.00505066 AVE=  87.62101746 RMS= 117.27304077
+ PCIP: MIN=  -0.00000156 MAX=   0.00009958 AVE=   0.00003405 RMS=   0.00003892
+          WRITING FLUX RECORD 12     FDAY =    31.00
+
+   12 RECORD CLIMATOLOGY STARTING ON  16.00/1904 COVERING   366.00 DAYS
+9.0u 0.0s 0:11 81% 0+0k 0+0io 0pf+0w
+C
+switch ( SunOS )
+if ( -e ap_100_co.trace ) cat ap_100_co.trace
+breaksw
+C
+C --- Output.
+C
+cp fort.10 /home/ajax/wallcraf/hycom/ATLb2.00/force/coads/airtmp.b
+cp fort.10A /home/ajax/wallcraf/hycom/ATLb2.00/force/coads/airtmp.a
+cp fort.11 /home/ajax/wallcraf/hycom/ATLb2.00/force/coads/vapmix.b
+cp fort.11A /home/ajax/wallcraf/hycom/ATLb2.00/force/coads/vapmix.a
+cp fort.12 /home/ajax/wallcraf/hycom/ATLb2.00/force/coads/radflx.b
+cp fort.12A /home/ajax/wallcraf/hycom/ATLb2.00/force/coads/radflx.a
+cp fort.13 /home/ajax/wallcraf/hycom/ATLb2.00/force/coads/shwflx.b
+cp fort.13A /home/ajax/wallcraf/hycom/ATLb2.00/force/coads/shwflx.a
+cp fort.14 /home/ajax/wallcraf/hycom/ATLb2.00/force/coads/precip.b
+cp fort.14A /home/ajax/wallcraf/hycom/ATLb2.00/force/coads/precip.a
+C
+C --- Delete all files.
+C

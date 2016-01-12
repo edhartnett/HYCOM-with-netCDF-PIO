@@ -1,0 +1,108 @@
+COADS forcing: precip_zero; srelax;
+boundary relax; iniflg=2; KPP mixed layer; Jerlov IA;
+Z(22): dp00/f/x=3m/1.125/12m; ATLb2.00/src_2.1.03_22.
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+  21	  'iversn' = hycom version number x10
+ 015	  'iexpt ' = experiment number x10
+  57	  'idm   ' = longitudinal array size
+  52	  'jdm   ' = latitudinal  array size
+  38	  'itest ' = grid point where detailed diagnostics are desired
+  17	  'jtest ' = grid point where detailed diagnostics are desired
+  22	  'kdm   ' = number of layers
+  22	  'nhybrd' = number of hybrid levels (0=all isopycnal)
+   0	  'nsigma' = number of sigma  levels (nhybrd-nsigma z-levels)
+   3.0	  'dp00  ' = deep    z-level spacing minimum thickness (m)
+  12.0	  'dp00x ' = deep    z-level spacing maximum thickness (m)
+   1.125  'dp00f ' = deep    z-level spacing stretching factor (1.0=const.space)
+   3.0	  'ds00  ' = shallow z-level spacing minimum thickness (m)
+  12.0	  'ds00x ' = shallow z-level spacing maximum thickness (m)
+   1.125  'ds00f ' = shallow z-level spacing stretching factor (1.0=const.space)
+  35.0	  'saln0 ' = initial salinity value (psu), only used for iniflg<2
+  -1	  'kapflg' = thermobaric compressibility flag (-1=none or thflag)
+   0	  'thflag' = reference pressure flag (0=Sigma-0, 2=Sigma-2, 4=Sigma-4)
+  25.0	  'thbase' = reference density (sigma units)
+  19.50   'sigma ' = layer  1  density (sigma units)
+  20.25   'sigma ' = layer  2  density (sigma units)
+  21.00   'sigma ' = layer  3  density (sigma units)
+  21.75   'sigma ' = layer  4  density (sigma units)
+  22.50   'sigma ' = layer  5  density (sigma units)
+  23.25   'sigma ' = layer  6  density (sigma units)
+  24.00   'sigma ' = layer  7  density (sigma units)
+  24.70   'sigma ' = layer  8  density (sigma units)
+  25.28   'sigma ' = layer  9  density (sigma units)
+  25.77   'sigma ' = layer 10  density (sigma units)
+  26.18   'sigma ' = layer 11  density (sigma units)
+  26.52   'sigma ' = layer 12  density (sigma units)
+  26.80   'sigma ' = layer 13  density (sigma units)
+  27.03   'sigma ' = layer 14  density (sigma units)
+  27.22   'sigma ' = layer 15  density (sigma units)
+  27.38   'sigma ' = layer 16  density (sigma units)
+  27.52   'sigma ' = layer 17  density (sigma units)
+  27.64   'sigma ' = layer 18  density (sigma units)
+  27.74   'sigma ' = layer 19  density (sigma units)
+  27.82   'sigma ' = layer 20  density (sigma units)
+  27.88   'sigma ' = layer 21  density (sigma units)
+  27.94   'sigma ' = layer 22  density (sigma units)
+   2	  'iniflg' = initial state flag (0=levl, 1=zonl, 2=clim, 3=archv)
+   2	  'jerlv0' = initial jerlov water type (1 to 5)
+   0	  'yrflag' = days in year flag (0=360,  1=366,  2=366J1, 3=actual)
+  30.0	  'dsurfq' = number of days between model diagnostics at the surface
+  30.0	  'diagfq' = number of days between model diagnostics
+  30.0	  'rstrfq' = number of days between model restart output
+   0.0	  'bnstfq' = number of days between baro nesting archive input
+   0.0	  'nestfq' = number of days between 3-d  nesting archive input
+5760.0	  'baclin' = baroclinic time step (seconds), int. divisor of 86400
+ 360.0	  'batrop' = barotropic time step (seconds), int. div. of baclin/2
+   1	  'hybflg' = hybrid generator  flag (0=T&S, 1=th&S, 2=th&T)
+   1	  'advflg' = thermal advection flag (0=T&S, 1=th&S, 2=th&T)
+  -1.0	  'slip  ' = +1 for free-slip, -1 for non-slip boundary conditions
+   0.1	  'visco2' = deformation-dependent Laplacian  viscosity factor
+   0.0	  'visco4' = deformation-dependent biharmonic viscosity factor
+   0.03	  'veldf2' = diffusion velocity (m/s) for Laplacian  momentum dissip.
+   0.01   'veldf4' = diffusion velocity (m/s) for biharmonic momentum dissip.
+   0.0    'thkdf2' = diffusion velocity (m/s) for Laplacian  thickness diffus.
+   0.05   'thkdf4' = diffusion velocity (m/s) for biharmonic thickness diffus.
+   0.015  'temdf2' = diffusion velocity (m/s) for Laplacian  temp/saln diffus.
+   2.e-5  'vertmx' = diffusion velocity (m/s) for momentum at MICOM M.L.base
+   0.1	  'cbar  ' = rms flow speed     (m/s) for linear bottom friction
+   3.e-3  'cb    ' = coefficient of quadratic bottom friction
+  10.0	  'thkbot' = thickness of bottom boundary layer (m)
+   0.02	  'sigjmp' = minimum density jump across interfaces  (kg/m**3)
+   0.2	  'tmljmp' = equivalent temperature jump across mixed-layer (degC)
+  19.2	  'thkmlr' = reference mixed-layer thickness for SST/SSS relaxation (m)
+   0	  'iceflg' = ice model flag   (0=none,1=energy loan model)
+   0	  'ntracr' = number of tracers (0=none,negative to initialize)
+   0	  'trcflg' = tracer flags      (one digit per tr, most sig. replicated)
+   1	  'mlflag' = mixed layer flag (0=none,1=KPP,2=KTa,3=KTb,4=PWP,5=MY2.5)
+   1	  'pensol' = KT:      activate penetrating solar rad.   (0=F,1=T)
+ 999.0	  'dtrate' = KT:      maximum permitted m.l. detrainment rate  (m/day)
+  19.2	  'thkmin' = KT/PWP:  minimum mixed-layer thickness (m)
+   2	  'dypflg' = KT/PWP:  diapycnal mixing flag (0=none, 1=KPP, 2=explicit)
+  10	  'mixfrq' = KT/PWP:  number of time steps between diapycnal mix calcs
+   1.e-7  'diapyc' = KT/PWP:  diapycnal diffusivity x buoyancy freq. (m**2/s**2)
+   0.0	  'rigr  ' = PWP:     critical gradient richardson number
+   0.3	  'ricr  ' = PWP/KPP: critical     bulk richardson number
+   1	  'shinst' = KPP:     activate shear instability mixing (0=F,1=T)
+   1	  'dbdiff' = KPP:     activate double diffusion  mixing (0=F,1=T)
+   1	  'nonloc' = KPP:     activate nonlocal b. layer mixing (0=F,1=T)
+   0	  'difsmo' = KPP:     activate horiz smooth diff coeffs (0=F,1=T)
+   0.7	  'rinfty' = KPP:     value for calculating rshear instability
+  50.e-4  'difm0 ' = KPP:     max viscosity   due to shear instability (m**2/s)
+  50.e-4  'difs0 ' = KPP:     max diffusivity due to shear instability (m**2/s)
+   1.e-4  'difmiw' = KPP:     background/internal wave viscosity       (m**2/s)
+   1.e-5  'difsiw' = KPP:     background/internal wave diffusivity     (m**2/s)
+  10.e-4  'dsfmax' = KPP:     salt fingering diffusivity factor        (m**2/s)
+   1.9	  'rrho0 ' = KPP:     salt fingering rp=(alpha*delT)/(beta*delS)
+  98.96	  'cs    ' = KPP:     value for nonlocal flux term
+  10.0	  'cstar ' = KPP:     value for nonlocal flux term
+   1.8	  'cv    ' = KPP:     value for turb shear contributon to bulk rich. no.
+   5.0	  'c11   ' = KPP:     value for turb velocity scale
+   2	  'niter ' = KPP:     iterations for semi-implicit soln. (2 recomended)
+  12	  'clmflg' = climatology frequency flag   (6=bimonthly, 12=monthly)
+   0	  'lbflag' = lateral barotropic bndy flag (0=none, 1=port, 2=input)
+   1	  'wndflg' = wind stress input flag (0=none,1=u/v-grid,2=p-grid)
+   1	  'flxflg' = thermal forcing flag (0=none,1=orig,2=new-flux-calc)
+   1	  'relax ' = activate lateral boundary nudging    (0=F,1=T)
+   1	  'srelax' = activate surface salinity nudging    (0=F,1=T)
+   0	  'trelax' = activate surface temperature nudging (0=F,1=T)
+   0	  'trcrlx' = activate lat. bound. tracer nudging  (0=F,1=T)

@@ -1,0 +1,80 @@
+setenv NCARG_GKS_PS 013y021w_fsd+vel.ps
+setenv OVERLAY VECTOR
+./src/fieldtest
+(normal)
+
+xcspmd: idm,jdm =   57   52
+
+overlay  type: VECTOR
+input    file: ../expt_01.3/data/archv.0021_016_00_fsd.a
+u-vector file: ../expt_01.3/data/archv.0021_016_00_3du.a
+v-vector file: ../expt_01.3/data/archv.0021_016_00_3dv.a
+       region: ATLb2.00
+blkini: idm    =    57
+blkini: jdm    =    52
+blkini: nperfr =     1
+blkini: lalolb =    10
+blkini: lalogr =    10
+blkini: loclab =     4
+blkini: locbar =    11
+blkini: kpalet =     5
+blkini: i_th   =     2
+blkini: j_th   =     2
+blkini: iorign =     1
+blkini: jorign =     1
+blkini: idmp   =     0
+blkini: jdmp   =     0
+extracting i =    1 ...   57         j =    1 ...   52
+ chrsiz =    0.5478260        104.0476        94.92065    
+... plotting  1 maps per frame
+North Atlantic topography from ETOPO5 5-minute data set.                       
+56 x 51 depth values (idm,jdm = 57,52).                                        
+2.0000 deg. mercator resolution, with equat=11.000.                            
+lon: 97.000W to 13.000E.  lat: 19.606S to 62.195N.                             
+                                                                               
+min,max depth =    199.556  5837.000
+read North At into depths  
+mask North At into coast   
+plon:  min,max =       263.00000      375.00000
+plat:  min,max =       -19.60579       63.11375
+pscx:  min,max =    100565.21875   222389.87500
+pscy:  min,max =    100571.95312   222378.59375
+ calling portrait RGB PostScript version of opngks
+ filename: 013y021w_fsd+vel.ps
+     defining earth color table: entries    2 --    3
+     defining fc100 color table: entries    6 --  105
+blkini: nrec   =     1
+blkini: nrec2  =     1
+blkinr: qscale =   1.000E+02
+blkinr: qq     =   2.000E+00
+min -8.42E+01 at   33   50  max  5.41E+01 at   12   26  intvl.,lines  1.00E+01   13
+ field =    -84.16113        54.05150        2.000000    
+blkinr: center =   0.000E+00
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =-100.000 100.000   2.000
+ horiz. map: FSD (cm) and V.1 - Jan Year 20
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+bordplt - qlatlo,qlathi,qlatlon =     -30.00     70.00     10.00
+bordplt - qlonlo,qlonhi,qlatlon =     250.00    390.00     10.00
+                      fflo,ffhi,qq =-100.000 100.000   2.000
+ now plotting: FSD (cm) and V.1 - Jan Year 20
+blkinr: vscale =   1.000E+02
+blkinr: vthrsh =   1.000E+01 cm/s
+ frame advance no.   1
+blkini: nrec   =     1
+blkini: nrec2  =     6
+blkinr: qscale =   1.000E+02
+blkinr: qq     =   2.000E+00
+min -8.42E+01 at   33   50  max  5.41E+01 at   12   26  intvl.,lines  1.00E+01   13
+ field =    -84.16113        54.05150        2.000000    
+blkinr: center =   0.000E+00
+horplt called with idm,jdm,ii1,jj1 =    57    52    56    51
+                        qlo,qhi,qq =-100.000 100.000   2.000
+ horiz. map: FSD (cm) and V.6 - Jan Year 20
+horplt calling SET with arguments    0.040    0.960    0.081    0.919
+                      fflo,ffhi,qq =-100.000 100.000   2.000
+ now plotting: FSD (cm) and V.6 - Jan Year 20
+blkinr: vscale =   1.000E+02
+blkinr: vthrsh =   1.000E+01 cm/s
+ frame advance no.   2
+blkini: nrec   =    -1

@@ -1,0 +1,64 @@
+force/README.force:
+
+Interpolation of Naval Research Laboratory (NRL) format wind/flux files
+on their "native" grids to HYCOM model grid.
+
+../../ALL/bin/wind_stat		lists contents of "native" file
+../../ALL/bin/wind_stat.1	man page for wind_stat
+../../ALL/force/src/		softlink to latest source directory
+force/coads/			COADS winds/fluxes on HYCOM grid
+force/offset/			offset field required by wind interpolation
+force/plot/			plot net radiation flux
+force/new_force.com		edits scripts for a new region
+
+Before interpolating COADS winds to the hycom grid, an offset file 
+is required.  In this case it is all zeros.  See force/offset.
+
+The interpolation program (in hycom/ALL/force/src) reads (say) COADS 
+wind/flux files in NRL format (a Fortran unformatted sequential file with 
+a single header record identifying wind dates, followed by the wind/flux 
+data).  COADS in the required format is available from the HYCOM ftp site, 
+see: ftp://obelix.rsmas.miami.edu/awall/hycom/coads_for_hycom.tar.gz
+The hycom/ALL/bin/wind_stat command lists the contents of a native wind
+or flux file.  There is also a wind "offset" input file, that allows the
+annual mean wind to be from a different wind data set.  Usually the offset
+is zero, but it must always be read in and so the typical first step for
+wind generation is to create force/offset/tau[en]wd_zero.[ab] for the 
+specified model region.  The offset can also be a different field for each 
+sample time.  This allows combining a climatology with an anomaly field.
+
+The output data sets are atmospheric forcing in MKS, with heat flux positive
+into the ocean (see README/README.src.MICOMvsHYCOM).  They also include any
+bias or minimum wind speed constraints.  For example, in force/coads, 
+compare coads_mon_flux.com (zero bias) to coads_mon_flux+070w.com (70w bias).  
+An all zero precip file input to HYCOM indicates that there should be no e-p
+surface salinity forcing, see force/coads/precip_zero*.  By default the 
+output wind stress components are on the "native" u and v grids, but setting
+NAMELIST variable IGRID=2 will output wind stress component on the pressure
+grid (which is always used for all other atmospheric forcing fields).
+When running HYCOM, use wndflg=1 for u/v winds and wndflg=2 for winds on
+the pressure grid (wndflg set in blkdat.input).  Note that in all cases
+the HYCOM wind stresses are orientated w.r.t. the local HYCOM grid, i.e.
+taunwd (tau_y) is only actually "North-ward" when the HYCOM grid is E-W/N-S.  
+The actual surface forcing fields and their units are:
+
+   surface wind stress,      tau_x,  units are N/sq_m (positive  eastwards)
+   surface wind stress,      tau_y,  units are N/sq_m (positive northwards)
+   wind speed at 10 m,       wndspd, units are m/s
+   surface air temperature,  airtmp, units are degC
+   water vapor mixing ratio, vapmix, units are kg/kg
+   precipitation,            precip, units are m/s    (postive into ocean)
+   total     radiation flux, radflx, units are w/sq_m (postive into ocean)
+   shortwave radiation flux, swflx,  units are w/sq_m (postive into ocean)
+
+The same interpolation programs can be used as part of the standard HYCOM
+run script to produce the 12-hrly or 6hrly winds/fluxes for actual
+calendar days from operational center wind/flux files on their native grid 
+in NRL format.  This is done "just in time", i.e. the files for the NEXT
+model segment are generated while the CURRENT model segment is running.
+
+See also:
+
+force/coads/README.force.coads
+force/plot/README.force.plot
+ALL/force/src/README.ALL.force.src

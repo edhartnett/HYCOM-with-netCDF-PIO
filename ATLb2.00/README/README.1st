@@ -1,0 +1,81 @@
+README.1st:
+
+Contents of directory hycom/ATLb2.00 (Atlantic region-b 2-deg):
+
+README/			links to all READMEs
+README.1st		this file
+README.newregion	how to configure a new region
+archive/         	read archive, write archive/data/netCDF/restart
+config/         	machine and parallelization specific part of Makefiles
+doc/            	documentation
+expt_01.0/      	old    example simulation, hybrid vertical coordinate
+expt_01.5/      	old    example simulation, hybrid vertical coordinate
+expt_01.6/      	old    example simulation, hybrid vertical coordinate
+expt_02.0/      	latest example simulation, hybrid vertical coordinate
+force/          	atmospheric forcing data files
+meanstd/        	mean and std. dev. of HYCOM archive fields
+plot/           	example of NCARG plotting
+relax/          	relaxation data files
+sample/          	transport across sections from archive files
+src_2.0.01_22_one/	source code, version 2.0.01 for 22 layers and one cpu
+src_2.1.03_22_one/	source code, version 2.1.03 for 22 layers and one cpu
+src_2.1.34_22_one/	source code, version 2.1.34 for 22 layers and one cpu
+src_2.2.18_22_one/	source code, version 2.2.18 for 22 layers and one cpu
+subregion/           	interpolate bathyymetry/archive to new grid/sub-domain
+topo/           	grid and bathymetry data files
+
+README/README.1st		this file
+README/README.archive		archive post-processing
+README/README.config		machine specific part of Makefiles
+README/README.config.macros	Macros used internally or in config files
+README/README.doc		list of documents
+README/README.expt_demorun	how to run the example simulation
+README/README.expt_msub		running a simulation
+README/README.expt_new		configuring a new simulation
+README/README.expt_parallel	how to run HYCOM on multiple processors
+README/README.expt_pipe		how to use a name pipe to compare two runs
+README/README.expt_pput		allowing for a remote file server
+README/README.force		creating the forcing files
+README/README.force.coads	generating the COADS forcing files
+README/README.force.plot	plotting the forcing files
+README/README.meanstd		creating mean and std. dev. HYCOM archives
+README/README.nesting		how to nest a (finer grid) region in another
+README/README.nesting_samegrid	how to nest a (same  grid) region in another
+README/README.newregion		how to configure a new region
+README/README.plot		plotting HYCOM archive files
+README/README.plot.micom	plotting MICOM archive files
+README/README.relax		interpolating climatology to a HYCOM model grid
+README/README.relax.plot	plotting climatology fields
+README/README.relax.src		customizing the climatology source
+README/README.sample		sampling transport sections from archive files
+README/README.topo		converting bathymetry from MICOM to HYCOM grid
+README/README.topo.partit	how to generate tile partitions for MPI 
+
+See README/README.expt_demorun for how to run the example simulation.
+
+The source code directory name should end with _${TYPE}, where ${TYPE} is 
+the parallelization type (one,omp,mpi,ompi,shmem).  The script 
+src_*/Make.com should be edited to define ${ARCH} appropriately for the 
+machine, and dimensions.h will be different for shared memory types
+(one,omp) and distributed memory types (mpi,ompi,shmem).  Each executable 
+can then be created by invoking the following command in the corresponding 
+source directory:
+    ./Make.com >& Make.log
+In order for this to work, the file config/${ARCH}_${TYPE} must exist
+and must contain the machine-specific parts of Makefile (see README.config).
+There is no need to create an executable for every parallelization
+technique, just for the one that you plan to actually use.
+
+See README/README.expt_parallel for more information on how to run HYCOM 
+on multiple processors.  The example source directory (src_2.2.18_22_one),
+and scripts (expt_02.0/*.com) are currently configured for a single 
+processor.  Note that some of the READMEs may still refer to 2.1.03 and
+expt_01.5, or 2.1.34 and expt_01.6, these apply equally to the newer version.
+
+
+Version 2.2.18 has extensive changes from 2.1.34.  See doc/hycom_v2p2.pdf for 
+an overview of 2.2.
+
+The hycom_ALL.tar.gz tar bundle has also been extensively updated.  However,
+not all pre- and post-processing scripts included here have been updated to 
+reflect the latest capabilities, and some may be broken.  

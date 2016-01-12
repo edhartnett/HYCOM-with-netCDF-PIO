@@ -1,0 +1,73 @@
+ATLb2.00/topo/README.topo.grid:
+
+README.topo.grid		this file
+regional.grid.[ab]		HYCOM grid location file
+regional.grid.com		script to create regional.grid.[ab]
+regional.grid.log		From csh regional.grid.com >& regional.grid.log
+
+All HYCOM pre and post-processing programs read regional.grid.b at 
+run-time to get idm and jdm for the particular region being processed.  
+So regional.grid.com must be run first to generate regional.grid.[ab].
+The source code is domain-independent (and therefore in ../../ALL/topo).
+
+In this case the grid is "mercator", i.e. constant longitudinal grid 
+spacing in degrees but latitudinal grid spacing in degrees varying with
+cos(latitude) to give a square grid cell in meters.  The method of 
+specifying the grid location is as used previously by MICOM and earlier
+versions of HYCOM:
+
+  0     'mapflg' = map flag (0=mercator,2=uniform,4=f-plane)
+  1.0   'pntlon' = longitudinal reference grid point on pressure grid
+263.0   'reflon' = longitude of reference grid point on pressure grid
+  2.0   'grdlon' = longitudinal grid size (degrees)
+ 11.0   'pntlat' = latitudinal  reference grid point on pressure grid
+  0.0   'reflat' = latitude of  reference grid point on pressure grid
+  2.0   'grdlat' = latitudinal  grid size at the equator (degrees)
+
+Grid array point (pntlon,pntlat) is at lon,lat location (reflon,reflat) 
+with equatorial grid spacing of grdlon by grdlat.  For a mercator grid,
+grdlon=grdlat and reflat is always zero (i.e. pntlat indicates the
+array index of the equator, which need not be in 1:jdm).  The same 
+program (ALL/topo/src/grid_mercator) can also produce cylindrical 
+equidistant grids (constant latitudinal grid spacing, perhaps with 
+grdlon .ne. grdlat) and and f-plane grids.  There are other programs 
+in ALL/topo/src for non-constant/non-mercator latitudinal grids 
+(grid_latitude) and global grids with an arctic dipole patch (grid_panam 
+or grid_lpanam).
+
+Any orthogonal curvilinear grid can be used, so if the above programs
+don't meet your needs - just produce your own regional.grid.[ab] in the
+right format.  The easiest way to get the format right is to use the
+"zaio" routines to write the .a file, just as grid_mercator.f does.
+The concents of the file are:
+
+   57    'idm   ' = longitudinal array size
+   52    'jdm   ' = latitudinal  array size
+    0    'mapflg' = map flag (-1=unknown,0=mercator,2=uniform,4=f-plane)
+plon:  min,max =       263.00000      375.00000
+plat:  min,max =       -19.60579       63.11375
+qlon:  min,max =       262.00000      374.00000
+qlat:  min,max =       -20.54502       62.65800
+ulon:  min,max =       262.00000      374.00000
+ulat:  min,max =       -19.60579       63.11375
+vlon:  min,max =       263.00000      375.00000
+vlat:  min,max =       -20.54502       62.65800
+pang:  min,max =         0.00000        0.00000
+pscx:  min,max =    100565.21875   222389.87500
+pscy:  min,max =    100571.95312   222378.59375
+qscx:  min,max =    102139.75781   222356.01562
+qscy:  min,max =    102146.85938   222344.73438
+uscx:  min,max =    100565.21875   222389.87500
+uscy:  min,max =    100571.95312   222378.59375
+vscx:  min,max =    102139.75781   222356.01562
+vscy:  min,max =    102146.85938   222344.73438
+cori:  min,max =   -0.0000511824   0.0001295491
+pasp:  min,max =         0.99993        1.00005
+
+Three header lines in regional.grid.b identify the domain size and the
+map projection (which is ignored for most purposes).  This is followed
+by one line for each field in regional.grid.a:  (i) the longitude and
+latitude of all four grids, (ii) the angle of the p grid w.r.t. a 
+standard lat,lon grid, (iii) the grid spacing in meters of all four 
+grids, (iv) the coriolis parameter (q-grid), and (v) the aspect ratio
+of the p grid (pasx/pscy).

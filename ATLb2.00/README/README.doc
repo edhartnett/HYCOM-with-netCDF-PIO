@@ -1,0 +1,13 @@
+doc/README.doc:
+
+Postscript and LaTex documents on HYCOM.
+
+energy_loan_ice.ps	HYCOM energy-loan ice model
+eqn_of_state.ps		HYCOM Equation of State for Sea Water
+hybrid.ps		Generalized coordinate treatment in HYCOM
+hycom_mxlay.ps		Kraus-Turner mixed layer implementation in HYCOM
+hycom_press.ps		Formulation of the PGF in generalized coordinates
+meshmap_hycom.ps	HYCOM grid and array layout
+meshmap_hycom.tex	HYCOM grid and array layout, LaTeX
+meshmap_micom.ps	MICOM grid and array layout
+meshmap_micom.tex	MICOM grid and array layout, LaTeX

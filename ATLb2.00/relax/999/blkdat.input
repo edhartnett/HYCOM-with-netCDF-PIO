@@ -1,0 +1,35 @@
+Levitus (NOAA World Ocean Atlas 1994) Climatology
+  00	  'month ' = month of climatology (01 to 12)
+  10	  'iversn' = hycom version number x10
+  21	  'iexpt ' = experiment number x10
+   0	  'yrflag' = days in year flag (0=360,  1=366,  2=366J1, 3=actual)
+   0	  'mapflg' = map flag (0=mercator,1=rotated,2=uniform,3=beta-plane)
+  57	  'idm   ' = longitudinal array size
+  52	  'jdm   ' = latitudinal  array size
+  11.0	  'pntlat' = latitudinal  reference grid point on pressure grid
+   0.0	  'reflat' = latitude of  reference grid point on pressure grid
+   2.0	  'grdlat' = latitudinal  grid size at the equator (degrees)
+  15	  'kdm   ' = number of layers
+  15	  'nhybrd' = number of hybrid levels (0=all isopycnal)
+   0	  'nsigma' = number of sigma  levels (nhybrd-nsigma z-levels)
+   0.01	  'dp00s ' = sigma   spacing minimum thickness (m)
+   0.01	  'dp00  ' = z-level spacing minimum thickness (m)
+   0.01	  'dp00x ' = z-level spacing maximum thickness (m)
+   1.0	  'dp00f ' = z-level spacing stretching factor (1.0=const.spacing)
+  25.0	  'thbase' = reference density (sigma units)
+  20.75	  'sigma ' = layer  1  density (sigma units)
+  21.25	  'sigma ' = layer  2  density (sigma units)
+  21.75	  'sigma ' = layer  3  density (sigma units)
+  22.25	  'sigma ' = layer  4  density (sigma units)
+  22.75	  'sigma ' = layer  5  density (sigma units)
+  23.25	  'sigma ' = layer  6  density (sigma units)
+  23.75	  'sigma ' = layer  7  density (sigma units)
+  24.25	  'sigma ' = layer  8  density (sigma units)
+  24.75	  'sigma ' = layer  9  density (sigma units)
+  25.25	  'sigma ' = layer 10  density (sigma units)
+  25.75	  'sigma ' = layer 11  density (sigma units)
+  26.25	  'sigma ' = layer 12  density (sigma units)
+  26.75	  'sigma ' = layer 13  density (sigma units)
+  27.25	  'sigma ' = layer 14  density (sigma units)
+  27.75	  'sigma ' = layer 15  density (sigma units)
+   0.01	  'thkmin' = minimum mixed-layer thickness (m)

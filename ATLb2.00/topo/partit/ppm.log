@@ -1,0 +1,175 @@
+cd ~/hycom/ATLb2.00/topo/partit
+echo /home/ajax/wallcraf/hycom/ATLb2.00/topo/partit
+/home/ajax/wallcraf/hycom/ATLb2.00/topo/partit
+setenv FOR021 fort.21
+setenv FOR051 ../depth_ATLb2.00_01.b
+setenv FOR051A ../depth_ATLb2.00_01.a
+foreach f ( *[0-9]? )
+cp depth_ATLb2.00_01.002 fort.21
+../../../ALL/topo/src/topo_ppm
+
+xcspmd: idm,jdm =   57   52
+
+
+North Atlantic topography from ETOPO5 5-minute data set.                       
+56 x 51 depth values (idm,jdm = 57,52).                                        
+2.0000 deg. mercator resolution, with equat=11.000.                            
+lon: 97.000W to 13.000E.  lat: 19.606S to 62.195N.                             
+                                                                               
+min,max depth =    199.556  5837.000
+ 
+ IP(:,47) =  255 255 0
+ IP(:,48) =  0 0 255
+ IP(:,49) =  0 255 255
+ IP(:,50) =  255 0 255
+ 
+ 
+ TOPIMG STATISTICS:
+            LAND POINTS =  1385
+             SEA POINTS =  1579
+     SEA POINTS > 500 M =  1579
+ 
+ WRITING IMAGE TO fort.31
+mv fort.31 depth_ATLb2.00_01.002.ppm
+/bin/rm -f fort.21
+end
+cp depth_ATLb2.00_01.003 fort.21
+../../../ALL/topo/src/topo_ppm
+
+xcspmd: idm,jdm =   57   52
+
+
+North Atlantic topography from ETOPO5 5-minute data set.                       
+56 x 51 depth values (idm,jdm = 57,52).                                        
+2.0000 deg. mercator resolution, with equat=11.000.                            
+lon: 97.000W to 13.000E.  lat: 19.606S to 62.195N.                             
+                                                                               
+min,max depth =    199.556  5837.000
+ 
+ IP(:,47) =  255 255 0
+ IP(:,48) =  0 0 255
+ IP(:,49) =  0 255 255
+ IP(:,50) =  255 0 255
+ 
+ 
+ TOPIMG STATISTICS:
+            LAND POINTS =  1385
+             SEA POINTS =  1579
+     SEA POINTS > 500 M =  1579
+ 
+ WRITING IMAGE TO fort.31
+mv fort.31 depth_ATLb2.00_01.003.ppm
+/bin/rm -f fort.21
+end
+cp depth_ATLb2.00_01.004 fort.21
+../../../ALL/topo/src/topo_ppm
+
+xcspmd: idm,jdm =   57   52
+
+
+North Atlantic topography from ETOPO5 5-minute data set.                       
+56 x 51 depth values (idm,jdm = 57,52).                                        
+2.0000 deg. mercator resolution, with equat=11.000.                            
+lon: 97.000W to 13.000E.  lat: 19.606S to 62.195N.                             
+                                                                               
+min,max depth =    199.556  5837.000
+ 
+ IP(:,47) =  255 255 0
+ IP(:,48) =  0 0 255
+ IP(:,49) =  0 255 255
+ IP(:,50) =  255 0 255
+ 
+ 
+ TOPIMG STATISTICS:
+            LAND POINTS =  1385
+             SEA POINTS =  1579
+     SEA POINTS > 500 M =  1579
+ 
+ WRITING IMAGE TO fort.31
+mv fort.31 depth_ATLb2.00_01.004.ppm
+/bin/rm -f fort.21
+end
+cp depth_ATLb2.00_01.008 fort.21
+../../../ALL/topo/src/topo_ppm
+
+xcspmd: idm,jdm =   57   52
+
+
+North Atlantic topography from ETOPO5 5-minute data set.                       
+56 x 51 depth values (idm,jdm = 57,52).                                        
+2.0000 deg. mercator resolution, with equat=11.000.                            
+lon: 97.000W to 13.000E.  lat: 19.606S to 62.195N.                             
+                                                                               
+min,max depth =    199.556  5837.000
+ 
+ IP(:,47) =  255 255 0
+ IP(:,48) =  0 0 255
+ IP(:,49) =  0 255 255
+ IP(:,50) =  255 0 255
+ 
+ 
+ TOPIMG STATISTICS:
+            LAND POINTS =  1385
+             SEA POINTS =  1579
+     SEA POINTS > 500 M =  1579
+ 
+ WRITING IMAGE TO fort.31
+mv fort.31 depth_ATLb2.00_01.008.ppm
+/bin/rm -f fort.21
+end
+cp depth_ATLb2.00_01.009 fort.21
+../../../ALL/topo/src/topo_ppm
+
+xcspmd: idm,jdm =   57   52
+
+
+North Atlantic topography from ETOPO5 5-minute data set.                       
+56 x 51 depth values (idm,jdm = 57,52).                                        
+2.0000 deg. mercator resolution, with equat=11.000.                            
+lon: 97.000W to 13.000E.  lat: 19.606S to 62.195N.                             
+                                                                               
+min,max depth =    199.556  5837.000
+ 
+ IP(:,47) =  255 255 0
+ IP(:,48) =  0 0 255
+ IP(:,49) =  0 255 255
+ IP(:,50) =  255 0 255
+ 
+ 
+ TOPIMG STATISTICS:
+            LAND POINTS =  1385
+             SEA POINTS =  1579
+     SEA POINTS > 500 M =  1579
+ 
+ WRITING IMAGE TO fort.31
+mv fort.31 depth_ATLb2.00_01.009.ppm
+/bin/rm -f fort.21
+end
+cp depth_ATLb2.00_01.016 fort.21
+../../../ALL/topo/src/topo_ppm
+
+xcspmd: idm,jdm =   57   52
+
+
+North Atlantic topography from ETOPO5 5-minute data set.                       
+56 x 51 depth values (idm,jdm = 57,52).                                        
+2.0000 deg. mercator resolution, with equat=11.000.                            
+lon: 97.000W to 13.000E.  lat: 19.606S to 62.195N.                             
+                                                                               
+min,max depth =    199.556  5837.000
+ 
+ IP(:,47) =  255 255 0
+ IP(:,48) =  0 0 255
+ IP(:,49) =  0 255 255
+ IP(:,50) =  255 0 255
+ 
+ 
+ TOPIMG STATISTICS:
+            LAND POINTS =  1385
+             SEA POINTS =  1579
+     SEA POINTS > 500 M =  1579
+ 
+ WRITING IMAGE TO fort.31
+mv fort.31 depth_ATLb2.00_01.016.ppm
+/bin/rm -f fort.21
+end

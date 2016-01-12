@@ -1,0 +1,21 @@
+cd ~/hycom/IASb0.50/topo
+echo /home/ajax/wallcraf/hycom/IASb0.50/topo
+/home/ajax/wallcraf/hycom/IASb0.50/topo
+No match
+setenv FOR051A fort.51A
+setenv FOR061A fort.61A
+/bin/mv landsea_IASb0.50.a landsea_IASb0.50.a_orig
+/bin/ln -s landsea_IASb0.50.a_orig fort.51A
+../../ALL/topo/src/mask_modify
+
+xcspmd: idm,jdm =   93   65
+
+land subregion:    35   35   10   10
+land subregion:    38   38   10   10
+land subregion:    36   36   11   11
+land subregion:    40   40   35   35
+land subregion:    29   32   39   39
+land subregion:    33   33   46   46
+land subregion:    32   33   47   47
+/bin/mv fort.61A landsea_IASb0.50.a
+/bin/rm -f fort.51A
