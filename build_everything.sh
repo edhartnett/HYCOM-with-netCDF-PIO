@@ -131,7 +131,7 @@ cd ../..
 echo "Building model..."
 cd ../ATLb2.00
 # Need to create a config file for the model for gfortran.
-rm config/intelGF_one
+rm -f config/intelGF_one
 cat > config/intelGF_one <<End-of-message
 FC            =	gfortran
 FCFFLAGS      =	-fPIC -fno-second-underscore -O2 -march=native -m64 -mcmodel=medium -fdefault-real-8 -fdefault-double-8
