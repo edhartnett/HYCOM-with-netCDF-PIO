@@ -1,3 +1,6 @@
+# Emacs backups
+*~
+
 # Object files
 *.o
 *.ko
@@ -10,7 +13,6 @@
 
 # Libraries
 *.lib
-*.a
 *.la
 *.lo
 
