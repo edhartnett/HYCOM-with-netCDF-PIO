@@ -1,0 +1,17 @@
+set time = 1
+set timestamp
+C
+C --- tar archive files in a batch job
+C
+setenv OS `uname`
+uname
+C
+C --- pget, pput copy files between scratch and permanent storage.
+C --- Can both be cp if the permanent filesystem is mounted locally.
+C
+switch ( Linux )
+case OSF1:
+case AIX:
+case unicos:
+if ( -e ~wallcraf/bin/pget_NAVO ) then
+Unknown user: wallcraf.

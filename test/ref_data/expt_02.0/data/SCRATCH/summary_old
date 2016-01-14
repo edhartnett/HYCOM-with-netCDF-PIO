@@ -1,0 +1,1098 @@
+
+model starts at day   180.0, goes to day   345.0   (steps     2880 --     5520)
+
+     2881 (0001/196 01) mean      SSH (mm):   -0.03  (-4.1E-01 to  2.3E-01)
+     2881 (0001/196 01) mean BFL (m^2/s^3):   -7.02 hfl:   -7.02
+     2881 (0001/196 01) mean HFLUX (w/m^2):   76.63 sst:    0.64  ml:   14.73
+     2881 (0001/196 01) mean WFLUX (mm/wk):    0.01 sss:    0.01
+     2881 (0001/196 01) mean mixl thk. (m):   16.67  temp: 23.716 saln: 36.135
+     2881 (0001/196 01) mean surf thk. (m):    3.00   sst: 23.310  sss: 35.644
+     2881 (0001/196 01) mean clim thk. (m):   19.20   sst: 23.307  sss: 35.641
+     2881 (0001/196 01) mean L  1 thk. (m):    3.00  temp: 23.310 saln: 35.644
+     2881 (0001/196 01) mean L  2 thk. (m):    3.38  temp: 23.245 saln: 35.689
+     2881 (0001/196 01) mean L  3 thk. (m):    3.84  temp: 23.197 saln: 35.741
+     2881 (0001/196 01) mean L  4 thk. (m):    4.41  temp: 23.274 saln: 35.769
+     2881 (0001/196 01) mean L  5 thk. (m):    5.51  temp: 23.396 saln: 35.824
+     2881 (0001/196 01) mean L  6 thk. (m):    9.16  temp: 24.508 saln: 35.933
+     2881 (0001/196 01) mean L  7 thk. (m):   14.54  temp: 24.298 saln: 36.230
+     2881 (0001/196 01) mean L  8 thk. (m):   16.26  temp: 22.907 saln: 36.389
+     2881 (0001/196 01) mean L  9 thk. (m):   19.51  temp: 21.364 saln: 36.462
+     2881 (0001/196 01) mean L 10 thk. (m):   24.86  temp: 19.519 saln: 36.347
+     2881 (0001/196 01) mean L 11 thk. (m):   42.44  temp: 17.625 saln: 36.147
+     2881 (0001/196 01) mean L 12 thk. (m):   86.14  temp: 15.473 saln: 35.889
+     2881 (0001/196 01) mean L 13 thk. (m):  105.49  temp: 12.799 saln: 35.503
+     2881 (0001/196 01) mean L 14 thk. (m):  131.69  temp: 10.230 saln: 35.179
+     2881 (0001/196 01) mean L 15 thk. (m):  166.30  temp:  7.859 saln: 34.938
+     2881 (0001/196 01) mean L 16 thk. (m):  170.93  temp:  6.270 saln: 34.855
+     2881 (0001/196 01) mean L 17 thk. (m):  157.41  temp:  5.603 saln: 34.917
+     2881 (0001/196 01) mean L 18 thk. (m):  176.48  temp:  5.096 saln: 34.984
+     2881 (0001/196 01) mean L 19 thk. (m):  349.42  temp:  4.330 saln: 34.993
+     2881 (0001/196 01) mean L 20 thk. (m):  641.32  temp:  3.525 saln: 34.986
+     2881 (0001/196 01) mean L 21 thk. (m): 1266.84  temp:  2.436 saln: 34.933
+     2881 (0001/196 01) mean L 22 thk. (m):  157.68  temp:  2.245 saln: 35.008
+     2881 (0001/196 01) region-wide mean Kin. Energy:      197.4865461835
+     2881 (0001/196 01) region-wide mean Temperature:        5.1941769683
+     2881 (0001/196 01) region-wide mean Salinity:          35.0509866571
+     2881 (0001/196 01) region-wide mean Density Dev:        2.5750800458
+     2896 (0001/197 00) mean      SSH (mm):    0.22  (-9.5E+02 to  4.7E+02)
+     2912 (0001/198 00) mean      SSH (mm):    0.46  (-9.2E+02 to  6.7E+02)
+     2928 (0001/199 00) mean      SSH (mm):    0.69  (-8.9E+02 to  4.5E+02)
+     2944 (0001/200 00) mean      SSH (mm):    0.89  (-1.0E+03 to  5.9E+02)
+     2960 (0001/201 00) mean      SSH (mm):    1.09  (-8.6E+02 to  8.7E+02)
+     2976 (0001/202 00) mean      SSH (mm):    1.31  (-8.4E+02 to  6.5E+02)
+     2976 (0001/202 00) mean BFL (m^2/s^3):  -19.71 hfl:  -17.70
+     2976 (0001/202 00) mean HFLUX (w/m^2):   71.37 sst:   -0.15  ml:   27.10
+     2976 (0001/202 00) mean WFLUX (mm/wk):    4.81 sss:    4.81
+     2976 (0001/202 00) mean mixl thk. (m):   21.89  temp: 24.467 saln: 36.109
+     2976 (0001/202 00) mean surf thk. (m):    3.00   sst: 23.560  sss: 35.687
+     2976 (0001/202 00) mean clim thk. (m):   19.20   sst: 23.412  sss: 35.639
+     2976 (0001/202 00) mean L  1 thk. (m):    3.00  temp: 23.560 saln: 35.687
+     2976 (0001/202 00) mean L  2 thk. (m):    3.38  temp: 23.521 saln: 35.705
+     2976 (0001/202 00) mean L  3 thk. (m):    3.86  temp: 23.434 saln: 35.726
+     2976 (0001/202 00) mean L  4 thk. (m):    4.42  temp: 23.380 saln: 35.772
+     2976 (0001/202 00) mean L  5 thk. (m):    5.72  temp: 23.686 saln: 35.798
+     2976 (0001/202 00) mean L  6 thk. (m):    9.25  temp: 24.573 saln: 35.933
+     2976 (0001/202 00) mean L  7 thk. (m):   14.57  temp: 24.335 saln: 36.222
+     2976 (0001/202 00) mean L  8 thk. (m):   16.03  temp: 22.897 saln: 36.393
+     2976 (0001/202 00) mean L  9 thk. (m):   19.43  temp: 21.392 saln: 36.462
+     2976 (0001/202 00) mean L 10 thk. (m):   25.09  temp: 19.511 saln: 36.338
+     2976 (0001/202 00) mean L 11 thk. (m):   42.13  temp: 17.644 saln: 36.153
+     2976 (0001/202 00) mean L 12 thk. (m):   86.07  temp: 15.480 saln: 35.890
+     2976 (0001/202 00) mean L 13 thk. (m):  105.46  temp: 12.803 saln: 35.504
+     2976 (0001/202 00) mean L 14 thk. (m):  131.65  temp: 10.234 saln: 35.179
+     2976 (0001/202 00) mean L 15 thk. (m):  166.33  temp:  7.862 saln: 34.938
+     2976 (0001/202 00) mean L 16 thk. (m):  170.87  temp:  6.270 saln: 34.855
+     2976 (0001/202 00) mean L 17 thk. (m):  157.50  temp:  5.604 saln: 34.916
+     2976 (0001/202 00) mean L 18 thk. (m):  176.22  temp:  5.090 saln: 34.982
+     2976 (0001/202 00) mean L 19 thk. (m):  348.74  temp:  4.327 saln: 34.992
+     2976 (0001/202 00) mean L 20 thk. (m):  637.73  temp:  3.504 saln: 34.982
+     2976 (0001/202 00) mean L 21 thk. (m): 1258.88  temp:  2.445 saln: 34.934
+     2976 (0001/202 00) mean L 22 thk. (m):  170.27  temp:  2.328 saln: 35.012
+     2976 (0001/202 00) region-wide mean Kin. Energy:    11297.5679618173
+     2976 (0001/202 00) region-wide mean Temperature:        5.1967052522
+     2976 (0001/202 00) region-wide mean Salinity:          35.0509703915
+     2976 (0001/202 00) region-wide mean Density Dev:        2.5747085000
+     2992 (0001/203 00) mean      SSH (mm):    1.52  (-1.1E+03 to  5.3E+02)
+     3008 (0001/204 00) mean      SSH (mm):    1.73  (-9.2E+02 to  7.4E+02)
+     3024 (0001/205 00) mean      SSH (mm):    1.94  (-7.5E+02 to  6.1E+02)
+     3040 (0001/206 00) mean      SSH (mm):    2.17  (-9.1E+02 to  4.2E+02)
+     3056 (0001/207 00) mean      SSH (mm):    2.40  (-9.3E+02 to  5.2E+02)
+     3072 (0001/208 00) mean      SSH (mm):    2.63  (-7.7E+02 to  5.1E+02)
+     3072 (0001/208 00) mean BFL (m^2/s^3):  -18.41 hfl:  -16.12
+     3072 (0001/208 00) mean HFLUX (w/m^2):   66.05 sst:   -0.77  ml:   23.84
+     3072 (0001/208 00) mean WFLUX (mm/wk):    5.46 sss:    5.46
+     3072 (0001/208 00) mean mixl thk. (m):   23.66  temp: 24.568 saln: 36.110
+     3072 (0001/208 00) mean surf thk. (m):    3.00   sst: 23.762  sss: 35.696
+     3072 (0001/208 00) mean clim thk. (m):   19.20   sst: 23.513  sss: 35.641
+     3072 (0001/208 00) mean L  1 thk. (m):    3.00  temp: 23.762 saln: 35.696
+     3072 (0001/208 00) mean L  2 thk. (m):    3.38  temp: 23.738 saln: 35.713
+     3072 (0001/208 00) mean L  3 thk. (m):    3.86  temp: 23.641 saln: 35.721
+     3072 (0001/208 00) mean L  4 thk. (m):    4.46  temp: 23.561 saln: 35.753
+     3072 (0001/208 00) mean L  5 thk. (m):    5.85  temp: 23.906 saln: 35.790
+     3072 (0001/208 00) mean L  6 thk. (m):    9.51  temp: 24.684 saln: 35.938
+     3072 (0001/208 00) mean L  7 thk. (m):   14.38  temp: 24.355 saln: 36.219
+     3072 (0001/208 00) mean L  8 thk. (m):   15.81  temp: 22.908 saln: 36.394
+     3072 (0001/208 00) mean L  9 thk. (m):   19.38  temp: 21.413 saln: 36.462
+     3072 (0001/208 00) mean L 10 thk. (m):   25.19  temp: 19.507 saln: 36.333
+     3072 (0001/208 00) mean L 11 thk. (m):   41.98  temp: 17.658 saln: 36.156
+     3072 (0001/208 00) mean L 12 thk. (m):   86.02  temp: 15.487 saln: 35.891
+     3072 (0001/208 00) mean L 13 thk. (m):  105.42  temp: 12.808 saln: 35.505
+     3072 (0001/208 00) mean L 14 thk. (m):  131.52  temp: 10.238 saln: 35.180
+     3072 (0001/208 00) mean L 15 thk. (m):  166.30  temp:  7.867 saln: 34.939
+     3072 (0001/208 00) mean L 16 thk. (m):  171.05  temp:  6.274 saln: 34.856
+     3072 (0001/208 00) mean L 17 thk. (m):  157.66  temp:  5.605 saln: 34.916
+     3072 (0001/208 00) mean L 18 thk. (m):  176.18  temp:  5.088 saln: 34.982
+     3072 (0001/208 00) mean L 19 thk. (m):  348.11  temp:  4.321 saln: 34.991
+     3072 (0001/208 00) mean L 20 thk. (m):  634.50  temp:  3.490 saln: 34.980
+     3072 (0001/208 00) mean L 21 thk. (m): 1252.64  temp:  2.455 saln: 34.935
+     3072 (0001/208 00) mean L 22 thk. (m):  180.39  temp:  2.351 saln: 35.010
+     3072 (0001/208 00) region-wide mean Kin. Energy:     9480.0087624276
+     3072 (0001/208 00) region-wide mean Temperature:        5.1992009380
+     3072 (0001/208 00) region-wide mean Salinity:          35.0509981504
+     3072 (0001/208 00) region-wide mean Density Dev:        2.5743355300
+     3088 (0001/209 00) mean      SSH (mm):    2.86  (-8.3E+02 to  4.1E+02)
+     3104 (0001/210 00) mean      SSH (mm):    3.08  (-8.8E+02 to  5.2E+02)
+     3120 (0001/211 00) mean      SSH (mm):    3.30  (-7.9E+02 to  5.4E+02)
+     3136 (0001/212 00) mean      SSH (mm):    3.51  (-8.6E+02 to  4.6E+02)
+     3152 (0001/213 00) mean      SSH (mm):    3.71  (-9.2E+02 to  5.2E+02)
+     3168 (0001/214 00) mean      SSH (mm):    3.91  (-8.4E+02 to  5.8E+02)
+     3168 (0001/214 00) mean BFL (m^2/s^3):  -16.79 hfl:  -14.43
+     3168 (0001/214 00) mean HFLUX (w/m^2):   61.89 sst:   -1.11  ml:   20.89
+     3168 (0001/214 00) mean WFLUX (mm/wk):    5.54 sss:    5.54
+     3168 (0001/214 00) mean mixl thk. (m):   24.65  temp: 24.629 saln: 36.101
+     3168 (0001/214 00) mean surf thk. (m):    3.00   sst: 23.906  sss: 35.701
+     3168 (0001/214 00) mean clim thk. (m):   19.20   sst: 23.604  sss: 35.646
+     3168 (0001/214 00) mean L  1 thk. (m):    3.00  temp: 23.906 saln: 35.701
+     3168 (0001/214 00) mean L  2 thk. (m):    3.38  temp: 23.891 saln: 35.717
+     3168 (0001/214 00) mean L  3 thk. (m):    3.87  temp: 23.822 saln: 35.715
+     3168 (0001/214 00) mean L  4 thk. (m):    4.48  temp: 23.723 saln: 35.753
+     3168 (0001/214 00) mean L  5 thk. (m):    6.10  temp: 24.160 saln: 35.772
+     3168 (0001/214 00) mean L  6 thk. (m):    9.72  temp: 24.773 saln: 35.940
+     3168 (0001/214 00) mean L  7 thk. (m):   14.12  temp: 24.355 saln: 36.218
+     3168 (0001/214 00) mean L  8 thk. (m):   15.70  temp: 22.916 saln: 36.393
+     3168 (0001/214 00) mean L  9 thk. (m):   19.29  temp: 21.420 saln: 36.462
+     3168 (0001/214 00) mean L 10 thk. (m):   25.14  temp: 19.510 saln: 36.330
+     3168 (0001/214 00) mean L 11 thk. (m):   41.89  temp: 17.667 saln: 36.158
+     3168 (0001/214 00) mean L 12 thk. (m):   85.96  temp: 15.496 saln: 35.894
+     3168 (0001/214 00) mean L 13 thk. (m):  105.39  temp: 12.813 saln: 35.506
+     3168 (0001/214 00) mean L 14 thk. (m):  131.39  temp: 10.244 saln: 35.181
+     3168 (0001/214 00) mean L 15 thk. (m):  166.37  temp:  7.875 saln: 34.940
+     3168 (0001/214 00) mean L 16 thk. (m):  171.08  temp:  6.278 saln: 34.856
+     3168 (0001/214 00) mean L 17 thk. (m):  157.98  temp:  5.608 saln: 34.917
+     3168 (0001/214 00) mean L 18 thk. (m):  176.14  temp:  5.086 saln: 34.982
+     3168 (0001/214 00) mean L 19 thk. (m):  347.68  temp:  4.318 saln: 34.991
+     3168 (0001/214 00) mean L 20 thk. (m):  633.33  temp:  3.487 saln: 34.979
+     3168 (0001/214 00) mean L 21 thk. (m): 1249.55  temp:  2.459 saln: 34.936
+     3168 (0001/214 00) mean L 22 thk. (m):  185.04  temp:  2.364 saln: 35.009
+     3168 (0001/214 00) region-wide mean Kin. Energy:     7315.7594156473
+     3168 (0001/214 00) region-wide mean Temperature:        5.2016086250
+     3168 (0001/214 00) region-wide mean Salinity:          35.0510619769
+     3168 (0001/214 00) region-wide mean Density Dev:        2.5739768972
+     3184 (0001/215 00) mean      SSH (mm):    4.11  (-8.8E+02 to  5.0E+02)
+     3200 (0001/216 00) mean      SSH (mm):    4.32  (-9.5E+02 to  5.2E+02)
+     3216 (0001/217 00) mean      SSH (mm):    4.51  (-8.6E+02 to  6.0E+02)
+     3232 (0001/218 00) mean      SSH (mm):    4.71  (-8.3E+02 to  5.3E+02)
+     3248 (0001/219 00) mean      SSH (mm):    4.90  (-8.8E+02 to  5.4E+02)
+     3264 (0001/220 00) mean      SSH (mm):    5.09  (-8.2E+02 to  6.0E+02)
+     3264 (0001/220 00) mean BFL (m^2/s^3):  -15.70 hfl:  -13.33
+     3264 (0001/220 00) mean HFLUX (w/m^2):   58.27 sst:   -1.30  ml:   18.97
+     3264 (0001/220 00) mean WFLUX (mm/wk):    5.59 sss:    5.59
+     3264 (0001/220 00) mean mixl thk. (m):   25.26  temp: 24.639 saln: 36.086
+     3264 (0001/220 00) mean surf thk. (m):    3.00   sst: 24.008  sss: 35.706
+     3264 (0001/220 00) mean clim thk. (m):   19.20   sst: 23.680  sss: 35.650
+     3264 (0001/220 00) mean L  1 thk. (m):    3.00  temp: 24.008 saln: 35.706
+     3264 (0001/220 00) mean L  2 thk. (m):    3.38  temp: 23.997 saln: 35.721
+     3264 (0001/220 00) mean L  3 thk. (m):    3.89  temp: 23.981 saln: 35.704
+     3264 (0001/220 00) mean L  4 thk. (m):    4.52  temp: 23.909 saln: 35.733
+     3264 (0001/220 00) mean L  5 thk. (m):    6.22  temp: 24.358 saln: 35.777
+     3264 (0001/220 00) mean L  6 thk. (m):    9.84  temp: 24.885 saln: 35.945
+     3264 (0001/220 00) mean L  7 thk. (m):   13.97  temp: 24.354 saln: 36.213
+     3264 (0001/220 00) mean L  8 thk. (m):   15.64  temp: 22.924 saln: 36.391
+     3264 (0001/220 00) mean L  9 thk. (m):   19.18  temp: 21.418 saln: 36.458
+     3264 (0001/220 00) mean L 10 thk. (m):   25.07  temp: 19.518 saln: 36.331
+     3264 (0001/220 00) mean L 11 thk. (m):   41.78  temp: 17.676 saln: 36.160
+     3264 (0001/220 00) mean L 12 thk. (m):   85.90  temp: 15.505 saln: 35.896
+     3264 (0001/220 00) mean L 13 thk. (m):  105.40  temp: 12.819 saln: 35.507
+     3264 (0001/220 00) mean L 14 thk. (m):  131.30  temp: 10.248 saln: 35.182
+     3264 (0001/220 00) mean L 15 thk. (m):  166.40  temp:  7.885 saln: 34.942
+     3264 (0001/220 00) mean L 16 thk. (m):  171.19  temp:  6.282 saln: 34.857
+     3264 (0001/220 00) mean L 17 thk. (m):  158.20  temp:  5.613 saln: 34.917
+     3264 (0001/220 00) mean L 18 thk. (m):  176.21  temp:  5.085 saln: 34.981
+     3264 (0001/220 00) mean L 19 thk. (m):  347.26  temp:  4.315 saln: 34.990
+     3264 (0001/220 00) mean L 20 thk. (m):  632.40  temp:  3.484 saln: 34.979
+     3264 (0001/220 00) mean L 21 thk. (m): 1248.51  temp:  2.462 saln: 34.936
+     3264 (0001/220 00) mean L 22 thk. (m):  187.33  temp:  2.374 saln: 35.009
+     3264 (0001/220 00) region-wide mean Kin. Energy:     6035.2248240124
+     3264 (0001/220 00) region-wide mean Temperature:        5.2039732449
+     3264 (0001/220 00) region-wide mean Salinity:          35.0511597861
+     3264 (0001/220 00) region-wide mean Density Dev:        2.5736460444
+     3280 (0001/221 00) mean      SSH (mm):    5.28  (-7.9E+02 to  5.4E+02)
+     3296 (0001/222 00) mean      SSH (mm):    5.47  (-8.4E+02 to  5.2E+02)
+     3312 (0001/223 00) mean      SSH (mm):    5.66  (-8.2E+02 to  5.7E+02)
+     3328 (0001/224 00) mean      SSH (mm):    5.84  (-7.9E+02 to  5.4E+02)
+     3344 (0001/225 00) mean      SSH (mm):    6.02  (-8.3E+02 to  5.1E+02)
+     3360 (0001/226 00) mean      SSH (mm):    6.21  (-8.1E+02 to  5.7E+02)
+     3360 (0001/226 00) mean BFL (m^2/s^3):  -14.23 hfl:  -11.94
+     3360 (0001/226 00) mean HFLUX (w/m^2):   54.35 sst:   -1.45  ml:   16.76
+     3360 (0001/226 00) mean WFLUX (mm/wk):    5.45 sss:    5.45
+     3360 (0001/226 00) mean mixl thk. (m):   25.82  temp: 24.643 saln: 36.067
+     3360 (0001/226 00) mean surf thk. (m):    3.00   sst: 24.080  sss: 35.707
+     3360 (0001/226 00) mean clim thk. (m):   19.20   sst: 23.735  sss: 35.653
+     3360 (0001/226 00) mean L  1 thk. (m):    3.00  temp: 24.080 saln: 35.707
+     3360 (0001/226 00) mean L  2 thk. (m):    3.38  temp: 24.073 saln: 35.722
+     3360 (0001/226 00) mean L  3 thk. (m):    3.89  temp: 24.090 saln: 35.701
+     3360 (0001/226 00) mean L  4 thk. (m):    4.56  temp: 24.074 saln: 35.723
+     3360 (0001/226 00) mean L  5 thk. (m):    6.34  temp: 24.556 saln: 35.774
+     3360 (0001/226 00) mean L  6 thk. (m):    9.99  temp: 24.977 saln: 35.946
+     3360 (0001/226 00) mean L  7 thk. (m):   13.71  temp: 24.366 saln: 36.215
+     3360 (0001/226 00) mean L  8 thk. (m):   15.67  temp: 22.943 saln: 36.385
+     3360 (0001/226 00) mean L  9 thk. (m):   19.04  temp: 21.430 saln: 36.458
+     3360 (0001/226 00) mean L 10 thk. (m):   25.05  temp: 19.523 saln: 36.329
+     3360 (0001/226 00) mean L 11 thk. (m):   41.65  temp: 17.684 saln: 36.161
+     3360 (0001/226 00) mean L 12 thk. (m):   85.82  temp: 15.512 saln: 35.897
+     3360 (0001/226 00) mean L 13 thk. (m):  105.47  temp: 12.826 saln: 35.508
+     3360 (0001/226 00) mean L 14 thk. (m):  131.28  temp: 10.250 saln: 35.182
+     3360 (0001/226 00) mean L 15 thk. (m):  166.37  temp:  7.893 saln: 34.943
+     3360 (0001/226 00) mean L 16 thk. (m):  171.22  temp:  6.287 saln: 34.857
+     3360 (0001/226 00) mean L 17 thk. (m):  158.48  temp:  5.620 saln: 34.919
+     3360 (0001/226 00) mean L 18 thk. (m):  176.28  temp:  5.084 saln: 34.981
+     3360 (0001/226 00) mean L 19 thk. (m):  346.93  temp:  4.313 saln: 34.990
+     3360 (0001/226 00) mean L 20 thk. (m):  631.23  temp:  3.481 saln: 34.978
+     3360 (0001/226 00) mean L 21 thk. (m): 1248.02  temp:  2.465 saln: 34.936
+     3360 (0001/226 00) mean L 22 thk. (m):  189.22  temp:  2.385 saln: 35.010
+     3360 (0001/226 00) region-wide mean Kin. Energy:     5396.7538438567
+     3360 (0001/226 00) region-wide mean Temperature:        5.2062753507
+     3360 (0001/226 00) region-wide mean Salinity:          35.0512729458
+     3360 (0001/226 00) region-wide mean Density Dev:        2.5733326582
+     3376 (0001/227 00) mean      SSH (mm):    6.39  (-7.8E+02 to  5.6E+02)
+     3392 (0001/228 00) mean      SSH (mm):    6.57  (-8.1E+02 to  5.3E+02)
+     3408 (0001/229 00) mean      SSH (mm):    6.76  (-8.2E+02 to  5.7E+02)
+     3424 (0001/230 00) mean      SSH (mm):    6.95  (-7.9E+02 to  5.8E+02)
+     3440 (0001/231 00) mean      SSH (mm):    7.13  (-8.1E+02 to  5.5E+02)
+     3456 (0001/232 00) mean      SSH (mm):    7.31  (-8.2E+02 to  5.8E+02)
+     3456 (0001/232 00) mean BFL (m^2/s^3):  -12.08 hfl:   -9.91
+     3456 (0001/232 00) mean HFLUX (w/m^2):   50.55 sst:   -1.49  ml:   13.76
+     3456 (0001/232 00) mean WFLUX (mm/wk):    5.21 sss:    5.21
+     3456 (0001/232 00) mean mixl thk. (m):   26.29  temp: 24.620 saln: 36.050
+     3456 (0001/232 00) mean surf thk. (m):    3.00   sst: 24.114  sss: 35.705
+     3456 (0001/232 00) mean clim thk. (m):   19.20   sst: 23.770  sss: 35.654
+     3456 (0001/232 00) mean L  1 thk. (m):    3.00  temp: 24.114 saln: 35.705
+     3456 (0001/232 00) mean L  2 thk. (m):    3.38  temp: 24.109 saln: 35.721
+     3456 (0001/232 00) mean L  3 thk. (m):    3.89  temp: 24.154 saln: 35.701
+     3456 (0001/232 00) mean L  4 thk. (m):    4.59  temp: 24.202 saln: 35.712
+     3456 (0001/232 00) mean L  5 thk. (m):    6.53  temp: 24.734 saln: 35.765
+     3456 (0001/232 00) mean L  6 thk. (m):   10.10  temp: 25.060 saln: 35.951
+     3456 (0001/232 00) mean L  7 thk. (m):   13.60  temp: 24.368 saln: 36.213
+     3456 (0001/232 00) mean L  8 thk. (m):   15.62  temp: 22.959 saln: 36.382
+     3456 (0001/232 00) mean L  9 thk. (m):   18.96  temp: 21.424 saln: 36.454
+     3456 (0001/232 00) mean L 10 thk. (m):   24.96  temp: 19.536 saln: 36.333
+     3456 (0001/232 00) mean L 11 thk. (m):   41.53  temp: 17.688 saln: 36.162
+     3456 (0001/232 00) mean L 12 thk. (m):   85.73  temp: 15.518 saln: 35.898
+     3456 (0001/232 00) mean L 13 thk. (m):  105.48  temp: 12.831 saln: 35.509
+     3456 (0001/232 00) mean L 14 thk. (m):  131.26  temp: 10.253 saln: 35.183
+     3456 (0001/232 00) mean L 15 thk. (m):  166.40  temp:  7.901 saln: 34.945
+     3456 (0001/232 00) mean L 16 thk. (m):  171.24  temp:  6.291 saln: 34.858
+     3456 (0001/232 00) mean L 17 thk. (m):  158.49  temp:  5.623 saln: 34.919
+     3456 (0001/232 00) mean L 18 thk. (m):  176.54  temp:  5.087 saln: 34.982
+     3456 (0001/232 00) mean L 19 thk. (m):  346.61  temp:  4.311 saln: 34.990
+     3456 (0001/232 00) mean L 20 thk. (m):  630.25  temp:  3.479 saln: 34.978
+     3456 (0001/232 00) mean L 21 thk. (m): 1247.89  temp:  2.467 saln: 34.936
+     3456 (0001/232 00) mean L 22 thk. (m):  190.56  temp:  2.392 saln: 35.010
+     3456 (0001/232 00) region-wide mean Kin. Energy:     4919.3898858477
+     3456 (0001/232 00) region-wide mean Temperature:        5.2083939017
+     3456 (0001/232 00) region-wide mean Salinity:          35.0513569326
+     3456 (0001/232 00) region-wide mean Density Dev:        2.5730216502
+     3472 (0001/233 00) mean      SSH (mm):    7.50  (-7.9E+02 to  5.9E+02)
+     3488 (0001/234 00) mean      SSH (mm):    7.69  (-8.0E+02 to  5.6E+02)
+     3504 (0001/235 00) mean      SSH (mm):    7.88  (-8.2E+02 to  5.7E+02)
+     3520 (0001/236 00) mean      SSH (mm):    8.07  (-8.0E+02 to  5.9E+02)
+     3536 (0001/237 00) mean      SSH (mm):    8.26  (-8.1E+02 to  5.6E+02)
+     3552 (0001/238 00) mean      SSH (mm):    8.45  (-8.2E+02 to  5.7E+02)
+     3552 (0001/238 00) mean BFL (m^2/s^3):   -8.74 hfl:   -6.60
+     3552 (0001/238 00) mean HFLUX (w/m^2):   46.13 sst:   -1.54  ml:    9.03
+     3552 (0001/238 00) mean WFLUX (mm/wk):    5.19 sss:    5.19
+     3552 (0001/238 00) mean mixl thk. (m):   26.64  temp: 24.575 saln: 36.033
+     3552 (0001/238 00) mean surf thk. (m):    3.00   sst: 24.134  sss: 35.704
+     3552 (0001/238 00) mean clim thk. (m):   19.20   sst: 23.789  sss: 35.654
+     3552 (0001/238 00) mean L  1 thk. (m):    3.00  temp: 24.134 saln: 35.704
+     3552 (0001/238 00) mean L  2 thk. (m):    3.38  temp: 24.128 saln: 35.719
+     3552 (0001/238 00) mean L  3 thk. (m):    3.89  temp: 24.193 saln: 35.704
+     3552 (0001/238 00) mean L  4 thk. (m):    4.66  temp: 24.338 saln: 35.690
+     3552 (0001/238 00) mean L  5 thk. (m):    6.59  temp: 24.879 saln: 35.771
+     3552 (0001/238 00) mean L  6 thk. (m):   10.19  temp: 25.155 saln: 35.957
+     3552 (0001/238 00) mean L  7 thk. (m):   13.55  temp: 24.373 saln: 36.208
+     3552 (0001/238 00) mean L  8 thk. (m):   15.63  temp: 22.967 saln: 36.378
+     3552 (0001/238 00) mean L  9 thk. (m):   18.78  temp: 21.429 saln: 36.452
+     3552 (0001/238 00) mean L 10 thk. (m):   24.95  temp: 19.553 saln: 36.335
+     3552 (0001/238 00) mean L 11 thk. (m):   41.53  temp: 17.691 saln: 36.161
+     3552 (0001/238 00) mean L 12 thk. (m):   85.64  temp: 15.520 saln: 35.898
+     3552 (0001/238 00) mean L 13 thk. (m):  105.46  temp: 12.835 saln: 35.510
+     3552 (0001/238 00) mean L 14 thk. (m):  131.20  temp: 10.254 saln: 35.183
+     3552 (0001/238 00) mean L 15 thk. (m):  166.44  temp:  7.907 saln: 34.946
+     3552 (0001/238 00) mean L 16 thk. (m):  171.32  temp:  6.293 saln: 34.858
+     3552 (0001/238 00) mean L 17 thk. (m):  158.34  temp:  5.623 saln: 34.919
+     3552 (0001/238 00) mean L 18 thk. (m):  176.86  temp:  5.088 saln: 34.982
+     3552 (0001/238 00) mean L 19 thk. (m):  346.30  temp:  4.310 saln: 34.989
+     3552 (0001/238 00) mean L 20 thk. (m):  629.55  temp:  3.477 saln: 34.978
+     3552 (0001/238 00) mean L 21 thk. (m): 1247.78  temp:  2.469 saln: 34.937
+     3552 (0001/238 00) mean L 22 thk. (m):  191.56  temp:  2.399 saln: 35.011
+     3552 (0001/238 00) region-wide mean Kin. Energy:     4618.4364204263
+     3552 (0001/238 00) region-wide mean Temperature:        5.2101600981
+     3552 (0001/238 00) region-wide mean Salinity:          35.0513621286
+     3552 (0001/238 00) region-wide mean Density Dev:        2.5727009599
+     3568 (0001/239 00) mean      SSH (mm):    8.64  (-8.0E+02 to  5.9E+02)
+     3584 (0001/240 00) mean      SSH (mm):    8.84  (-8.0E+02 to  5.8E+02)
+     3600 (0001/241 00) mean      SSH (mm):    9.03  (-8.1E+02 to  5.8E+02)
+     3616 (0001/242 00) mean      SSH (mm):    9.23  (-8.0E+02 to  5.9E+02)
+     3632 (0001/243 00) mean      SSH (mm):    9.43  (-8.0E+02 to  5.8E+02)
+     3648 (0001/244 00) mean      SSH (mm):    9.63  (-8.2E+02 to  5.8E+02)
+     3648 (0001/244 00) mean BFL (m^2/s^3):   -5.63 hfl:   -3.47
+     3648 (0001/244 00) mean HFLUX (w/m^2):   41.55 sst:   -1.55  ml:    4.44
+     3648 (0001/244 00) mean WFLUX (mm/wk):    5.23 sss:    5.23
+     3648 (0001/244 00) mean mixl thk. (m):   26.93  temp: 24.533 saln: 36.019
+     3648 (0001/244 00) mean surf thk. (m):    3.00   sst: 24.129  sss: 35.705
+     3648 (0001/244 00) mean clim thk. (m):   19.20   sst: 23.790  sss: 35.654
+     3648 (0001/244 00) mean L  1 thk. (m):    3.00  temp: 24.129 saln: 35.705
+     3648 (0001/244 00) mean L  2 thk. (m):    3.38  temp: 24.122 saln: 35.719
+     3648 (0001/244 00) mean L  3 thk. (m):    3.89  temp: 24.206 saln: 35.704
+     3648 (0001/244 00) mean L  4 thk. (m):    4.71  temp: 24.426 saln: 35.677
+     3648 (0001/244 00) mean L  5 thk. (m):    6.74  temp: 25.013 saln: 35.762
+     3648 (0001/244 00) mean L  6 thk. (m):   10.30  temp: 25.229 saln: 35.963
+     3648 (0001/244 00) mean L  7 thk. (m):   13.48  temp: 24.395 saln: 36.209
+     3648 (0001/244 00) mean L  8 thk. (m):   15.49  temp: 22.974 saln: 36.375
+     3648 (0001/244 00) mean L  9 thk. (m):   18.70  temp: 21.437 saln: 36.451
+     3648 (0001/244 00) mean L 10 thk. (m):   24.99  temp: 19.564 saln: 36.336
+     3648 (0001/244 00) mean L 11 thk. (m):   41.61  temp: 17.693 saln: 36.161
+     3648 (0001/244 00) mean L 12 thk. (m):   85.53  temp: 15.521 saln: 35.898
+     3648 (0001/244 00) mean L 13 thk. (m):  105.41  temp: 12.836 saln: 35.510
+     3648 (0001/244 00) mean L 14 thk. (m):  131.11  temp: 10.255 saln: 35.183
+     3648 (0001/244 00) mean L 15 thk. (m):  166.50  temp:  7.908 saln: 34.946
+     3648 (0001/244 00) mean L 16 thk. (m):  171.36  temp:  6.294 saln: 34.858
+     3648 (0001/244 00) mean L 17 thk. (m):  158.19  temp:  5.621 saln: 34.919
+     3648 (0001/244 00) mean L 18 thk. (m):  177.15  temp:  5.088 saln: 34.982
+     3648 (0001/244 00) mean L 19 thk. (m):  345.97  temp:  4.309 saln: 34.989
+     3648 (0001/244 00) mean L 20 thk. (m):  628.78  temp:  3.476 saln: 34.978
+     3648 (0001/244 00) mean L 21 thk. (m): 1247.25  temp:  2.471 saln: 34.937
+     3648 (0001/244 00) mean L 22 thk. (m):  193.05  temp:  2.405 saln: 35.011
+     3648 (0001/244 00) region-wide mean Kin. Energy:     4375.1145792611
+     3648 (0001/244 00) region-wide mean Temperature:        5.2115782874
+     3648 (0001/244 00) region-wide mean Salinity:          35.0512848884
+     3648 (0001/244 00) region-wide mean Density Dev:        2.5723696336
+     3664 (0001/245 00) mean      SSH (mm):    9.83  (-8.2E+02 to  5.9E+02)
+     3680 (0001/246 00) mean      SSH (mm):   10.03  (-8.1E+02 to  5.9E+02)
+     3696 (0001/247 00) mean      SSH (mm):   10.24  (-8.2E+02 to  5.8E+02)
+     3712 (0001/248 00) mean      SSH (mm):   10.44  (-8.2E+02 to  5.9E+02)
+     3728 (0001/249 00) mean      SSH (mm):   10.65  (-8.1E+02 to  5.9E+02)
+     3744 (0001/250 00) mean      SSH (mm):   10.86  (-8.2E+02 to  5.8E+02)
+     3744 (0001/250 00) mean BFL (m^2/s^3):   -2.77 hfl:   -0.63
+     3744 (0001/250 00) mean HFLUX (w/m^2):   36.54 sst:   -1.55  ml:    0.25
+     3744 (0001/250 00) mean WFLUX (mm/wk):    5.21 sss:    5.21
+     3744 (0001/250 00) mean mixl thk. (m):   27.42  temp: 24.458 saln: 36.001
+     3744 (0001/250 00) mean surf thk. (m):    3.00   sst: 24.104  sss: 35.705
+     3744 (0001/250 00) mean clim thk. (m):   19.20   sst: 23.771  sss: 35.655
+     3744 (0001/250 00) mean L  1 thk. (m):    3.00  temp: 24.104 saln: 35.705
+     3744 (0001/250 00) mean L  2 thk. (m):    3.38  temp: 24.096 saln: 35.720
+     3744 (0001/250 00) mean L  3 thk. (m):    3.89  temp: 24.196 saln: 35.702
+     3744 (0001/250 00) mean L  4 thk. (m):    4.74  temp: 24.463 saln: 35.670
+     3744 (0001/250 00) mean L  5 thk. (m):    6.89  temp: 25.129 saln: 35.755
+     3744 (0001/250 00) mean L  6 thk. (m):   10.36  temp: 25.299 saln: 35.969
+     3744 (0001/250 00) mean L  7 thk. (m):   13.48  temp: 24.416 saln: 36.204
+     3744 (0001/250 00) mean L  8 thk. (m):   15.40  temp: 22.982 saln: 36.374
+     3744 (0001/250 00) mean L  9 thk. (m):   18.70  temp: 21.435 saln: 36.447
+     3744 (0001/250 00) mean L 10 thk. (m):   24.98  temp: 19.575 saln: 36.338
+     3744 (0001/250 00) mean L 11 thk. (m):   41.73  temp: 17.697 saln: 36.160
+     3744 (0001/250 00) mean L 12 thk. (m):   85.39  temp: 15.520 saln: 35.897
+     3744 (0001/250 00) mean L 13 thk. (m):  105.37  temp: 12.836 saln: 35.509
+     3744 (0001/250 00) mean L 14 thk. (m):  130.97  temp: 10.255 saln: 35.183
+     3744 (0001/250 00) mean L 15 thk. (m):  166.56  temp:  7.907 saln: 34.945
+     3744 (0001/250 00) mean L 16 thk. (m):  171.42  temp:  6.294 saln: 34.858
+     3744 (0001/250 00) mean L 17 thk. (m):  158.02  temp:  5.618 saln: 34.918
+     3744 (0001/250 00) mean L 18 thk. (m):  177.42  temp:  5.086 saln: 34.981
+     3744 (0001/250 00) mean L 19 thk. (m):  345.63  temp:  4.308 saln: 34.989
+     3744 (0001/250 00) mean L 20 thk. (m):  628.18  temp:  3.475 saln: 34.978
+     3744 (0001/250 00) mean L 21 thk. (m): 1246.70  temp:  2.472 saln: 34.937
+     3744 (0001/250 00) mean L 22 thk. (m):  194.41  temp:  2.411 saln: 35.011
+     3744 (0001/250 00) region-wide mean Kin. Energy:     4047.2299136892
+     3744 (0001/250 00) region-wide mean Temperature:        5.2127171331
+     3744 (0001/250 00) region-wide mean Salinity:          35.0511415412
+     3744 (0001/250 00) region-wide mean Density Dev:        2.5720240544
+     3760 (0001/251 00) mean      SSH (mm):   11.07  (-8.2E+02 to  5.9E+02)
+     3776 (0001/252 00) mean      SSH (mm):   11.27  (-8.2E+02 to  5.9E+02)
+     3792 (0001/253 00) mean      SSH (mm):   11.48  (-8.2E+02 to  5.9E+02)
+     3808 (0001/254 00) mean      SSH (mm):   11.69  (-8.3E+02 to  5.9E+02)
+     3824 (0001/255 00) mean      SSH (mm):   11.89  (-8.2E+02 to  6.0E+02)
+     3840 (0001/256 00) mean      SSH (mm):   12.10  (-8.3E+02 to  5.9E+02)
+     3840 (0001/256 00) mean BFL (m^2/s^3):    0.36 hfl:    2.34
+     3840 (0001/256 00) mean HFLUX (w/m^2):   30.97 sst:   -1.58  ml:   -4.14
+     3840 (0001/256 00) mean WFLUX (mm/wk):    4.85 sss:    4.85
+     3840 (0001/256 00) mean mixl thk. (m):   27.89  temp: 24.347 saln: 35.981
+     3840 (0001/256 00) mean surf thk. (m):    3.00   sst: 24.063  sss: 35.704
+     3840 (0001/256 00) mean clim thk. (m):   19.20   sst: 23.730  sss: 35.657
+     3840 (0001/256 00) mean L  1 thk. (m):    3.00  temp: 24.063 saln: 35.704
+     3840 (0001/256 00) mean L  2 thk. (m):    3.38  temp: 24.055 saln: 35.719
+     3840 (0001/256 00) mean L  3 thk. (m):    3.88  temp: 24.158 saln: 35.701
+     3840 (0001/256 00) mean L  4 thk. (m):    4.78  temp: 24.494 saln: 35.662
+     3840 (0001/256 00) mean L  5 thk. (m):    6.99  temp: 25.213 saln: 35.748
+     3840 (0001/256 00) mean L  6 thk. (m):   10.42  temp: 25.366 saln: 35.976
+     3840 (0001/256 00) mean L  7 thk. (m):   13.43  temp: 24.433 saln: 36.200
+     3840 (0001/256 00) mean L  8 thk. (m):   15.42  temp: 22.992 saln: 36.370
+     3840 (0001/256 00) mean L  9 thk. (m):   18.64  temp: 21.443 saln: 36.446
+     3840 (0001/256 00) mean L 10 thk. (m):   24.99  temp: 19.585 saln: 36.339
+     3840 (0001/256 00) mean L 11 thk. (m):   41.95  temp: 17.698 saln: 36.158
+     3840 (0001/256 00) mean L 12 thk. (m):   85.23  temp: 15.517 saln: 35.896
+     3840 (0001/256 00) mean L 13 thk. (m):  105.32  temp: 12.833 saln: 35.508
+     3840 (0001/256 00) mean L 14 thk. (m):  130.88  temp: 10.256 saln: 35.183
+     3840 (0001/256 00) mean L 15 thk. (m):  166.58  temp:  7.904 saln: 34.944
+     3840 (0001/256 00) mean L 16 thk. (m):  171.49  temp:  6.293 saln: 34.858
+     3840 (0001/256 00) mean L 17 thk. (m):  157.95  temp:  5.616 saln: 34.917
+     3840 (0001/256 00) mean L 18 thk. (m):  177.51  temp:  5.081 saln: 34.980
+     3840 (0001/256 00) mean L 19 thk. (m):  345.25  temp:  4.307 saln: 34.989
+     3840 (0001/256 00) mean L 20 thk. (m):  627.67  temp:  3.473 saln: 34.977
+     3840 (0001/256 00) mean L 21 thk. (m): 1246.74  temp:  2.474 saln: 34.937
+     3840 (0001/256 00) mean L 22 thk. (m):  195.10  temp:  2.416 saln: 35.011
+     3840 (0001/256 00) region-wide mean Kin. Energy:     3797.5056326038
+     3840 (0001/256 00) region-wide mean Temperature:        5.2136905569
+     3840 (0001/256 00) region-wide mean Salinity:          35.0509723287
+     3840 (0001/256 00) region-wide mean Density Dev:        2.5716761361
+     3856 (0001/257 00) mean      SSH (mm):   12.29  (-8.3E+02 to  5.9E+02)
+     3872 (0001/258 00) mean      SSH (mm):   12.48  (-8.3E+02 to  6.0E+02)
+     3888 (0001/259 00) mean      SSH (mm):   12.67  (-8.3E+02 to  5.9E+02)
+     3904 (0001/260 00) mean      SSH (mm):   12.86  (-8.4E+02 to  6.0E+02)
+     3920 (0001/261 00) mean      SSH (mm):   13.04  (-8.3E+02 to  6.0E+02)
+     3936 (0001/262 00) mean      SSH (mm):   13.21  (-8.3E+02 to  6.0E+02)
+     3936 (0001/262 00) mean BFL (m^2/s^3):    3.79 hfl:    5.56
+     3936 (0001/262 00) mean HFLUX (w/m^2):   24.53 sst:   -1.62  ml:   -8.97
+     3936 (0001/262 00) mean WFLUX (mm/wk):    4.33 sss:    4.33
+     3936 (0001/262 00) mean mixl thk. (m):   28.49  temp: 24.206 saln: 35.960
+     3936 (0001/262 00) mean surf thk. (m):    3.00   sst: 24.002  sss: 35.704
+     3936 (0001/262 00) mean clim thk. (m):   19.20   sst: 23.661  sss: 35.662
+     3936 (0001/262 00) mean L  1 thk. (m):    3.00  temp: 24.002 saln: 35.704
+     3936 (0001/262 00) mean L  2 thk. (m):    3.38  temp: 23.996 saln: 35.718
+     3936 (0001/262 00) mean L  3 thk. (m):    3.88  temp: 24.091 saln: 35.704
+     3936 (0001/262 00) mean L  4 thk. (m):    4.82  temp: 24.493 saln: 35.652
+     3936 (0001/262 00) mean L  5 thk. (m):    7.10  temp: 25.263 saln: 35.742
+     3936 (0001/262 00) mean L  6 thk. (m):   10.54  temp: 25.412 saln: 35.981
+     3936 (0001/262 00) mean L  7 thk. (m):   13.38  temp: 24.453 saln: 36.198
+     3936 (0001/262 00) mean L  8 thk. (m):   15.36  temp: 22.999 saln: 36.370
+     3936 (0001/262 00) mean L  9 thk. (m):   18.59  temp: 21.457 saln: 36.446
+     3936 (0001/262 00) mean L 10 thk. (m):   25.05  temp: 19.595 saln: 36.341
+     3936 (0001/262 00) mean L 11 thk. (m):   42.19  temp: 17.693 saln: 36.156
+     3936 (0001/262 00) mean L 12 thk. (m):   85.04  temp: 15.515 saln: 35.895
+     3936 (0001/262 00) mean L 13 thk. (m):  105.29  temp: 12.829 saln: 35.507
+     3936 (0001/262 00) mean L 14 thk. (m):  130.84  temp: 10.256 saln: 35.183
+     3936 (0001/262 00) mean L 15 thk. (m):  166.56  temp:  7.900 saln: 34.944
+     3936 (0001/262 00) mean L 16 thk. (m):  171.57  temp:  6.292 saln: 34.857
+     3936 (0001/262 00) mean L 17 thk. (m):  157.88  temp:  5.614 saln: 34.917
+     3936 (0001/262 00) mean L 18 thk. (m):  177.53  temp:  5.076 saln: 34.979
+     3936 (0001/262 00) mean L 19 thk. (m):  344.93  temp:  4.306 saln: 34.989
+     3936 (0001/262 00) mean L 20 thk. (m):  626.73  temp:  3.471 saln: 34.977
+     3936 (0001/262 00) mean L 21 thk. (m): 1247.41  temp:  2.476 saln: 34.937
+     3936 (0001/262 00) mean L 22 thk. (m):  195.55  temp:  2.421 saln: 35.011
+     3936 (0001/262 00) region-wide mean Kin. Energy:     3559.3880067285
+     3936 (0001/262 00) region-wide mean Temperature:        5.2145501686
+     3936 (0001/262 00) region-wide mean Salinity:          35.0508157176
+     3936 (0001/262 00) region-wide mean Density Dev:        2.5713637117
+     3952 (0001/263 00) mean      SSH (mm):   13.38  (-8.3E+02 to  6.0E+02)
+     3968 (0001/264 00) mean      SSH (mm):   13.54  (-8.3E+02 to  6.0E+02)
+     3984 (0001/265 00) mean      SSH (mm):   13.70  (-8.3E+02 to  6.0E+02)
+     4000 (0001/266 00) mean      SSH (mm):   13.84  (-8.3E+02 to  6.0E+02)
+     4016 (0001/267 00) mean      SSH (mm):   13.99  (-8.3E+02 to  6.0E+02)
+     4032 (0001/268 00) mean      SSH (mm):   14.12  (-8.3E+02 to  6.0E+02)
+     4032 (0001/268 00) mean BFL (m^2/s^3):    7.94 hfl:    9.44
+     4032 (0001/268 00) mean HFLUX (w/m^2):   17.21 sst:   -1.68  ml:  -14.85
+     4032 (0001/268 00) mean WFLUX (mm/wk):    3.70 sss:    3.70
+     4032 (0001/268 00) mean mixl thk. (m):   29.14  temp: 24.021 saln: 35.939
+     4032 (0001/268 00) mean surf thk. (m):    3.00   sst: 23.921  sss: 35.705
+     4032 (0001/268 00) mean clim thk. (m):   19.20   sst: 23.564  sss: 35.670
+     4032 (0001/268 00) mean L  1 thk. (m):    3.00  temp: 23.921 saln: 35.705
+     4032 (0001/268 00) mean L  2 thk. (m):    3.38  temp: 23.914 saln: 35.719
+     4032 (0001/268 00) mean L  3 thk. (m):    3.87  temp: 23.997 saln: 35.708
+     4032 (0001/268 00) mean L  4 thk. (m):    4.84  temp: 24.445 saln: 35.646
+     4032 (0001/268 00) mean L  5 thk. (m):    7.23  temp: 25.286 saln: 35.733
+     4032 (0001/268 00) mean L  6 thk. (m):   10.59  temp: 25.439 saln: 35.986
+     4032 (0001/268 00) mean L  7 thk. (m):   13.36  temp: 24.469 saln: 36.195
+     4032 (0001/268 00) mean L  8 thk. (m):   15.41  temp: 23.014 saln: 36.368
+     4032 (0001/268 00) mean L  9 thk. (m):   18.50  temp: 21.466 saln: 36.447
+     4032 (0001/268 00) mean L 10 thk. (m):   25.10  temp: 19.615 saln: 36.344
+     4032 (0001/268 00) mean L 11 thk. (m):   42.32  temp: 17.685 saln: 36.153
+     4032 (0001/268 00) mean L 12 thk. (m):   84.90  temp: 15.514 saln: 35.895
+     4032 (0001/268 00) mean L 13 thk. (m):  105.30  temp: 12.825 saln: 35.506
+     4032 (0001/268 00) mean L 14 thk. (m):  130.93  temp: 10.254 saln: 35.182
+     4032 (0001/268 00) mean L 15 thk. (m):  166.45  temp:  7.898 saln: 34.943
+     4032 (0001/268 00) mean L 16 thk. (m):  171.71  temp:  6.290 saln: 34.857
+     4032 (0001/268 00) mean L 17 thk. (m):  157.72  temp:  5.612 saln: 34.917
+     4032 (0001/268 00) mean L 18 thk. (m):  177.48  temp:  5.073 saln: 34.979
+     4032 (0001/268 00) mean L 19 thk. (m):  344.66  temp:  4.306 saln: 34.988
+     4032 (0001/268 00) mean L 20 thk. (m):  626.40  temp:  3.470 saln: 34.977
+     4032 (0001/268 00) mean L 21 thk. (m): 1247.58  temp:  2.477 saln: 34.937
+     4032 (0001/268 00) mean L 22 thk. (m):  195.89  temp:  2.424 saln: 35.012
+     4032 (0001/268 00) region-wide mean Kin. Energy:     3407.3079810040
+     4032 (0001/268 00) region-wide mean Temperature:        5.2152775502
+     4032 (0001/268 00) region-wide mean Salinity:          35.0506863949
+     4032 (0001/268 00) region-wide mean Density Dev:        2.5711086920
+     4048 (0001/269 00) mean      SSH (mm):   14.25  (-8.3E+02 to  6.0E+02)
+     4064 (0001/270 00) mean      SSH (mm):   14.36  (-8.3E+02 to  6.1E+02)
+     4080 (0001/271 00) mean      SSH (mm):   14.47  (-8.3E+02 to  6.1E+02)
+     4096 (0001/272 00) mean      SSH (mm):   14.58  (-8.3E+02 to  6.1E+02)
+     4112 (0001/273 00) mean      SSH (mm):   14.67  (-8.3E+02 to  6.1E+02)
+     4128 (0001/274 00) mean      SSH (mm):   14.76  (-8.3E+02 to  6.1E+02)
+     4128 (0001/274 00) mean BFL (m^2/s^3):   12.08 hfl:   13.26
+     4128 (0001/274 00) mean HFLUX (w/m^2):    9.38 sst:   -1.75  ml:  -20.81
+     4128 (0001/274 00) mean WFLUX (mm/wk):    2.97 sss:    2.97
+     4128 (0001/274 00) mean mixl thk. (m):   30.00  temp: 23.795 saln: 35.919
+     4128 (0001/274 00) mean surf thk. (m):    3.00   sst: 23.826  sss: 35.706
+     4128 (0001/274 00) mean clim thk. (m):   19.20   sst: 23.450  sss: 35.678
+     4128 (0001/274 00) mean L  1 thk. (m):    3.00  temp: 23.826 saln: 35.706
+     4128 (0001/274 00) mean L  2 thk. (m):    3.38  temp: 23.820 saln: 35.718
+     4128 (0001/274 00) mean L  3 thk. (m):    3.85  temp: 23.885 saln: 35.712
+     4128 (0001/274 00) mean L  4 thk. (m):    4.86  temp: 24.374 saln: 35.640
+     4128 (0001/274 00) mean L  5 thk. (m):    7.26  temp: 25.273 saln: 35.727
+     4128 (0001/274 00) mean L  6 thk. (m):   10.74  temp: 25.452 saln: 35.989
+     4128 (0001/274 00) mean L  7 thk. (m):   13.31  temp: 24.478 saln: 36.193
+     4128 (0001/274 00) mean L  8 thk. (m):   15.51  temp: 23.027 saln: 36.364
+     4128 (0001/274 00) mean L  9 thk. (m):   18.47  temp: 21.468 saln: 36.447
+     4128 (0001/274 00) mean L 10 thk. (m):   25.09  temp: 19.636 saln: 36.349
+     4128 (0001/274 00) mean L 11 thk. (m):   42.32  temp: 17.681 saln: 36.150
+     4128 (0001/274 00) mean L 12 thk. (m):   84.79  temp: 15.515 saln: 35.894
+     4128 (0001/274 00) mean L 13 thk. (m):  105.38  temp: 12.821 saln: 35.504
+     4128 (0001/274 00) mean L 14 thk. (m):  131.10  temp: 10.250 saln: 35.181
+     4128 (0001/274 00) mean L 15 thk. (m):  166.33  temp:  7.898 saln: 34.943
+     4128 (0001/274 00) mean L 16 thk. (m):  171.79  temp:  6.289 saln: 34.857
+     4128 (0001/274 00) mean L 17 thk. (m):  157.59  temp:  5.611 saln: 34.916
+     4128 (0001/274 00) mean L 18 thk. (m):  177.33  temp:  5.070 saln: 34.979
+     4128 (0001/274 00) mean L 19 thk. (m):  344.41  temp:  4.305 saln: 34.988
+     4128 (0001/274 00) mean L 20 thk. (m):  626.20  temp:  3.469 saln: 34.977
+     4128 (0001/274 00) mean L 21 thk. (m): 1247.84  temp:  2.479 saln: 34.938
+     4128 (0001/274 00) mean L 22 thk. (m):  196.07  temp:  2.427 saln: 35.012
+     4128 (0001/274 00) region-wide mean Kin. Energy:     3330.5385075289
+     4128 (0001/274 00) region-wide mean Temperature:        5.2158238305
+     4128 (0001/274 00) region-wide mean Salinity:          35.0505855187
+     4128 (0001/274 00) region-wide mean Density Dev:        2.5709302123
+     4144 (0001/275 00) mean      SSH (mm):   14.84  (-8.3E+02 to  6.1E+02)
+     4160 (0001/276 00) mean      SSH (mm):   14.91  (-8.3E+02 to  6.1E+02)
+     4176 (0001/277 00) mean      SSH (mm):   14.97  (-8.3E+02 to  6.1E+02)
+     4192 (0001/278 00) mean      SSH (mm):   15.02  (-8.4E+02 to  6.1E+02)
+     4208 (0001/279 00) mean      SSH (mm):   15.07  (-8.4E+02 to  6.1E+02)
+     4224 (0001/280 00) mean      SSH (mm):   15.11  (-8.3E+02 to  6.1E+02)
+     4224 (0001/280 00) mean BFL (m^2/s^3):   15.80 hfl:   16.71
+     4224 (0001/280 00) mean HFLUX (w/m^2):    2.13 sst:   -1.74  ml:  -26.35
+     4224 (0001/280 00) mean WFLUX (mm/wk):    2.35 sss:    2.35
+     4224 (0001/280 00) mean mixl thk. (m):   31.08  temp: 23.545 saln: 35.904
+     4224 (0001/280 00) mean surf thk. (m):    3.00   sst: 23.708  sss: 35.707
+     4224 (0001/280 00) mean clim thk. (m):   19.20   sst: 23.328  sss: 35.685
+     4224 (0001/280 00) mean L  1 thk. (m):    3.00  temp: 23.708 saln: 35.707
+     4224 (0001/280 00) mean L  2 thk. (m):    3.38  temp: 23.703 saln: 35.719
+     4224 (0001/280 00) mean L  3 thk. (m):    3.85  temp: 23.766 saln: 35.712
+     4224 (0001/280 00) mean L  4 thk. (m):    4.83  temp: 24.249 saln: 35.643
+     4224 (0001/280 00) mean L  5 thk. (m):    7.37  temp: 25.261 saln: 35.719
+     4224 (0001/280 00) mean L  6 thk. (m):   10.84  temp: 25.430 saln: 35.993
+     4224 (0001/280 00) mean L  7 thk. (m):   13.33  temp: 24.468 saln: 36.189
+     4224 (0001/280 00) mean L  8 thk. (m):   15.51  temp: 23.038 saln: 36.363
+     4224 (0001/280 00) mean L  9 thk. (m):   18.41  temp: 21.481 saln: 36.448
+     4224 (0001/280 00) mean L 10 thk. (m):   25.16  temp: 19.652 saln: 36.352
+     4224 (0001/280 00) mean L 11 thk. (m):   42.22  temp: 17.677 saln: 36.148
+     4224 (0001/280 00) mean L 12 thk. (m):   84.68  temp: 15.517 saln: 35.895
+     4224 (0001/280 00) mean L 13 thk. (m):  105.51  temp: 12.816 saln: 35.503
+     4224 (0001/280 00) mean L 14 thk. (m):  131.35  temp: 10.244 saln: 35.180
+     4224 (0001/280 00) mean L 15 thk. (m):  166.17  temp:  7.899 saln: 34.943
+     4224 (0001/280 00) mean L 16 thk. (m):  171.80  temp:  6.288 saln: 34.857
+     4224 (0001/280 00) mean L 17 thk. (m):  157.48  temp:  5.610 saln: 34.916
+     4224 (0001/280 00) mean L 18 thk. (m):  177.16  temp:  5.068 saln: 34.978
+     4224 (0001/280 00) mean L 19 thk. (m):  344.22  temp:  4.305 saln: 34.988
+     4224 (0001/280 00) mean L 20 thk. (m):  626.06  temp:  3.468 saln: 34.977
+     4224 (0001/280 00) mean L 21 thk. (m): 1248.02  temp:  2.479 saln: 34.938
+     4224 (0001/280 00) mean L 22 thk. (m):  196.25  temp:  2.431 saln: 35.012
+     4224 (0001/280 00) region-wide mean Kin. Energy:     3174.6763161028
+     4224 (0001/280 00) region-wide mean Temperature:        5.2161580065
+     4224 (0001/280 00) region-wide mean Salinity:          35.0505103361
+     4224 (0001/280 00) region-wide mean Density Dev:        2.5708316791
+     4240 (0001/281 00) mean      SSH (mm):   15.15  (-8.3E+02 to  6.1E+02)
+     4256 (0001/282 00) mean      SSH (mm):   15.17  (-8.3E+02 to  6.1E+02)
+     4272 (0001/283 00) mean      SSH (mm):   15.19  (-8.3E+02 to  6.1E+02)
+     4288 (0001/284 00) mean      SSH (mm):   15.21  (-8.3E+02 to  6.1E+02)
+     4304 (0001/285 00) mean      SSH (mm):   15.22  (-8.3E+02 to  6.1E+02)
+     4320 (0001/286 00) mean      SSH (mm):   15.22  (-8.4E+02 to  6.1E+02)
+     4320 (0001/286 00) mean BFL (m^2/s^3):   18.67 hfl:   19.33
+     4320 (0001/286 00) mean HFLUX (w/m^2):   -4.21 sst:   -1.69  ml:  -30.80
+     4320 (0001/286 00) mean WFLUX (mm/wk):    1.82 sss:    1.82
+     4320 (0001/286 00) mean mixl thk. (m):   32.38  temp: 23.275 saln: 35.888
+     4320 (0001/286 00) mean surf thk. (m):    3.00   sst: 23.577  sss: 35.708
+     4320 (0001/286 00) mean clim thk. (m):   19.20   sst: 23.209  sss: 35.692
+     4320 (0001/286 00) mean L  1 thk. (m):    3.00  temp: 23.577 saln: 35.708
+     4320 (0001/286 00) mean L  2 thk. (m):    3.38  temp: 23.574 saln: 35.720
+     4320 (0001/286 00) mean L  3 thk. (m):    3.85  temp: 23.639 saln: 35.710
+     4320 (0001/286 00) mean L  4 thk. (m):    4.78  temp: 24.088 saln: 35.651
+     4320 (0001/286 00) mean L  5 thk. (m):    7.50  temp: 25.230 saln: 35.710
+     4320 (0001/286 00) mean L  6 thk. (m):   10.90  temp: 25.400 saln: 35.997
+     4320 (0001/286 00) mean L  7 thk. (m):   13.43  temp: 24.441 saln: 36.185
+     4320 (0001/286 00) mean L  8 thk. (m):   15.52  temp: 23.040 saln: 36.362
+     4320 (0001/286 00) mean L  9 thk. (m):   18.33  temp: 21.492 saln: 36.450
+     4320 (0001/286 00) mean L 10 thk. (m):   25.21  temp: 19.672 saln: 36.356
+     4320 (0001/286 00) mean L 11 thk. (m):   42.07  temp: 17.672 saln: 36.147
+     4320 (0001/286 00) mean L 12 thk. (m):   84.58  temp: 15.521 saln: 35.895
+     4320 (0001/286 00) mean L 13 thk. (m):  105.66  temp: 12.812 saln: 35.502
+     4320 (0001/286 00) mean L 14 thk. (m):  131.60  temp: 10.239 saln: 35.178
+     4320 (0001/286 00) mean L 15 thk. (m):  166.04  temp:  7.901 saln: 34.944
+     4320 (0001/286 00) mean L 16 thk. (m):  171.84  temp:  6.288 saln: 34.857
+     4320 (0001/286 00) mean L 17 thk. (m):  157.31  temp:  5.610 saln: 34.916
+     4320 (0001/286 00) mean L 18 thk. (m):  177.01  temp:  5.067 saln: 34.978
+     4320 (0001/286 00) mean L 19 thk. (m):  344.06  temp:  4.305 saln: 34.988
+     4320 (0001/286 00) mean L 20 thk. (m):  625.94  temp:  3.466 saln: 34.976
+     4320 (0001/286 00) mean L 21 thk. (m): 1248.33  temp:  2.481 saln: 34.938
+     4320 (0001/286 00) mean L 22 thk. (m):  196.26  temp:  2.433 saln: 35.012
+     4320 (0001/286 00) region-wide mean Kin. Energy:     3159.5874681307
+     4320 (0001/286 00) region-wide mean Temperature:        5.2162982944
+     4320 (0001/286 00) region-wide mean Salinity:          35.0504557863
+     4320 (0001/286 00) region-wide mean Density Dev:        2.5708008525
+     4336 (0001/287 00) mean      SSH (mm):   15.22  (-8.4E+02 to  6.1E+02)
+     4352 (0001/288 00) mean      SSH (mm):   15.22  (-8.4E+02 to  6.1E+02)
+     4368 (0001/289 00) mean      SSH (mm):   15.20  (-8.4E+02 to  6.2E+02)
+     4384 (0001/290 00) mean      SSH (mm):   15.18  (-8.4E+02 to  6.1E+02)
+     4400 (0001/291 00) mean      SSH (mm):   15.16  (-8.4E+02 to  6.2E+02)
+     4416 (0001/292 00) mean      SSH (mm):   15.13  (-8.4E+02 to  6.2E+02)
+     4416 (0001/292 00) mean BFL (m^2/s^3):   21.46 hfl:   21.96
+     4416 (0001/292 00) mean HFLUX (w/m^2):  -10.23 sst:   -1.66  ml:  -35.20
+     4416 (0001/292 00) mean WFLUX (mm/wk):    1.44 sss:    1.44
+     4416 (0001/292 00) mean mixl thk. (m):   33.81  temp: 23.007 saln: 35.879
+     4416 (0001/292 00) mean surf thk. (m):    3.00   sst: 23.444  sss: 35.709
+     4416 (0001/292 00) mean clim thk. (m):   19.20   sst: 23.090  sss: 35.697
+     4416 (0001/292 00) mean L  1 thk. (m):    3.00  temp: 23.444 saln: 35.709
+     4416 (0001/292 00) mean L  2 thk. (m):    3.38  temp: 23.442 saln: 35.720
+     4416 (0001/292 00) mean L  3 thk. (m):    3.85  temp: 23.509 saln: 35.708
+     4416 (0001/292 00) mean L  4 thk. (m):    4.72  temp: 23.923 saln: 35.662
+     4416 (0001/292 00) mean L  5 thk. (m):    7.56  temp: 25.169 saln: 35.702
+     4416 (0001/292 00) mean L  6 thk. (m):   11.04  temp: 25.372 saln: 35.999
+     4416 (0001/292 00) mean L  7 thk. (m):   13.52  temp: 24.405 saln: 36.182
+     4416 (0001/292 00) mean L  8 thk. (m):   15.46  temp: 23.029 saln: 36.363
+     4416 (0001/292 00) mean L  9 thk. (m):   18.26  temp: 21.506 saln: 36.451
+     4416 (0001/292 00) mean L 10 thk. (m):   25.34  temp: 19.688 saln: 36.359
+     4416 (0001/292 00) mean L 11 thk. (m):   41.91  temp: 17.668 saln: 36.145
+     4416 (0001/292 00) mean L 12 thk. (m):   84.47  temp: 15.525 saln: 35.896
+     4416 (0001/292 00) mean L 13 thk. (m):  105.79  temp: 12.809 saln: 35.501
+     4416 (0001/292 00) mean L 14 thk. (m):  131.84  temp: 10.234 saln: 35.177
+     4416 (0001/292 00) mean L 15 thk. (m):  165.96  temp:  7.903 saln: 34.944
+     4416 (0001/292 00) mean L 16 thk. (m):  171.86  temp:  6.287 saln: 34.857
+     4416 (0001/292 00) mean L 17 thk. (m):  157.14  temp:  5.609 saln: 34.916
+     4416 (0001/292 00) mean L 18 thk. (m):  176.84  temp:  5.065 saln: 34.978
+     4416 (0001/292 00) mean L 19 thk. (m):  343.95  temp:  4.305 saln: 34.988
+     4416 (0001/292 00) mean L 20 thk. (m):  625.95  temp:  3.465 saln: 34.976
+     4416 (0001/292 00) mean L 21 thk. (m): 1248.52  temp:  2.481 saln: 34.938
+     4416 (0001/292 00) mean L 22 thk. (m):  196.23  temp:  2.435 saln: 35.012
+     4416 (0001/292 00) region-wide mean Kin. Energy:     3154.3099638783
+     4416 (0001/292 00) region-wide mean Temperature:        5.2162151377
+     4416 (0001/292 00) region-wide mean Salinity:          35.0504101634
+     4416 (0001/292 00) region-wide mean Density Dev:        2.5708271431
+     4432 (0001/293 00) mean      SSH (mm):   15.10  (-8.4E+02 to  6.2E+02)
+     4448 (0001/294 00) mean      SSH (mm):   15.06  (-8.4E+02 to  6.2E+02)
+     4464 (0001/295 00) mean      SSH (mm):   15.01  (-8.4E+02 to  6.2E+02)
+     4480 (0001/296 00) mean      SSH (mm):   14.96  (-8.4E+02 to  6.2E+02)
+     4496 (0001/297 00) mean      SSH (mm):   14.91  (-8.4E+02 to  6.2E+02)
+     4512 (0001/298 00) mean      SSH (mm):   14.85  (-8.4E+02 to  6.2E+02)
+     4512 (0001/298 00) mean BFL (m^2/s^3):   24.24 hfl:   24.69
+     4512 (0001/298 00) mean HFLUX (w/m^2):  -16.37 sst:   -1.67  ml:  -39.79
+     4512 (0001/298 00) mean WFLUX (mm/wk):    1.37 sss:    1.37
+     4512 (0001/298 00) mean mixl thk. (m):   35.28  temp: 22.721 saln: 35.869
+     4512 (0001/298 00) mean surf thk. (m):    3.00   sst: 23.304  sss: 35.712
+     4512 (0001/298 00) mean clim thk. (m):   19.20   sst: 22.964  sss: 35.701
+     4512 (0001/298 00) mean L  1 thk. (m):    3.00  temp: 23.304 saln: 35.712
+     4512 (0001/298 00) mean L  2 thk. (m):    3.38  temp: 23.303 saln: 35.723
+     4512 (0001/298 00) mean L  3 thk. (m):    3.85  temp: 23.366 saln: 35.706
+     4512 (0001/298 00) mean L  4 thk. (m):    4.73  temp: 23.806 saln: 35.666
+     4512 (0001/298 00) mean L  5 thk. (m):    7.56  temp: 25.073 saln: 35.699
+     4512 (0001/298 00) mean L  6 thk. (m):   11.21  temp: 25.338 saln: 35.999
+     4512 (0001/298 00) mean L  7 thk. (m):   13.51  temp: 24.366 saln: 36.180
+     4512 (0001/298 00) mean L  8 thk. (m):   15.47  temp: 23.009 saln: 36.363
+     4512 (0001/298 00) mean L  9 thk. (m):   18.27  temp: 21.508 saln: 36.449
+     4512 (0001/298 00) mean L 10 thk. (m):   25.40  temp: 19.699 saln: 36.361
+     4512 (0001/298 00) mean L 11 thk. (m):   41.78  temp: 17.664 saln: 36.143
+     4512 (0001/298 00) mean L 12 thk. (m):   84.37  temp: 15.527 saln: 35.897
+     4512 (0001/298 00) mean L 13 thk. (m):  105.85  temp: 12.808 saln: 35.500
+     4512 (0001/298 00) mean L 14 thk. (m):  132.04  temp: 10.229 saln: 35.176
+     4512 (0001/298 00) mean L 15 thk. (m):  165.94  temp:  7.903 saln: 34.944
+     4512 (0001/298 00) mean L 16 thk. (m):  171.87  temp:  6.288 saln: 34.857
+     4512 (0001/298 00) mean L 17 thk. (m):  156.99  temp:  5.607 saln: 34.916
+     4512 (0001/298 00) mean L 18 thk. (m):  176.70  temp:  5.064 saln: 34.977
+     4512 (0001/298 00) mean L 19 thk. (m):  343.83  temp:  4.305 saln: 34.988
+     4512 (0001/298 00) mean L 20 thk. (m):  626.00  temp:  3.465 saln: 34.976
+     4512 (0001/298 00) mean L 21 thk. (m): 1248.67  temp:  2.482 saln: 34.938
+     4512 (0001/298 00) mean L 22 thk. (m):  196.20  temp:  2.437 saln: 35.012
+     4512 (0001/298 00) region-wide mean Kin. Energy:     3083.1615367303
+     4512 (0001/298 00) region-wide mean Temperature:        5.2158753651
+     4512 (0001/298 00) region-wide mean Salinity:          35.0503616667
+     4512 (0001/298 00) region-wide mean Density Dev:        2.5709084847
+     4528 (0001/299 00) mean      SSH (mm):   14.78  (-8.4E+02 to  6.2E+02)
+     4544 (0001/300 00) mean      SSH (mm):   14.71  (-8.4E+02 to  6.2E+02)
+     4560 (0001/301 00) mean      SSH (mm):   14.63  (-8.4E+02 to  6.2E+02)
+     4576 (0001/302 00) mean      SSH (mm):   14.55  (-8.4E+02 to  6.2E+02)
+     4592 (0001/303 00) mean      SSH (mm):   14.46  (-8.4E+02 to  6.1E+02)
+     4608 (0001/304 00) mean      SSH (mm):   14.36  (-8.4E+02 to  6.1E+02)
+     4608 (0001/304 00) mean BFL (m^2/s^3):   26.98 hfl:   27.35
+     4608 (0001/304 00) mean HFLUX (w/m^2):  -22.53 sst:   -1.71  ml:  -44.33
+     4608 (0001/304 00) mean WFLUX (mm/wk):    1.19 sss:    1.19
+     4608 (0001/304 00) mean mixl thk. (m):   36.73  temp: 22.409 saln: 35.860
+     4608 (0001/304 00) mean surf thk. (m):    3.00   sst: 23.165  sss: 35.714
+     4608 (0001/304 00) mean clim thk. (m):   19.20   sst: 22.835  sss: 35.704
+     4608 (0001/304 00) mean L  1 thk. (m):    3.00  temp: 23.165 saln: 35.714
+     4608 (0001/304 00) mean L  2 thk. (m):    3.38  temp: 23.165 saln: 35.724
+     4608 (0001/304 00) mean L  3 thk. (m):    3.86  temp: 23.243 saln: 35.698
+     4608 (0001/304 00) mean L  4 thk. (m):    4.73  temp: 23.682 saln: 35.669
+     4608 (0001/304 00) mean L  5 thk. (m):    7.47  temp: 24.938 saln: 35.701
+     4608 (0001/304 00) mean L  6 thk. (m):   11.41  temp: 25.294 saln: 35.993
+     4608 (0001/304 00) mean L  7 thk. (m):   13.56  temp: 24.331 saln: 36.181
+     4608 (0001/304 00) mean L  8 thk. (m):   15.44  temp: 22.965 saln: 36.362
+     4608 (0001/304 00) mean L  9 thk. (m):   18.32  temp: 21.511 saln: 36.448
+     4608 (0001/304 00) mean L 10 thk. (m):   25.40  temp: 19.706 saln: 36.362
+     4608 (0001/304 00) mean L 11 thk. (m):   41.72  temp: 17.661 saln: 36.142
+     4608 (0001/304 00) mean L 12 thk. (m):   84.28  temp: 15.529 saln: 35.897
+     4608 (0001/304 00) mean L 13 thk. (m):  105.83  temp: 12.809 saln: 35.500
+     4608 (0001/304 00) mean L 14 thk. (m):  132.14  temp: 10.226 saln: 35.175
+     4608 (0001/304 00) mean L 15 thk. (m):  166.03  temp:  7.903 saln: 34.944
+     4608 (0001/304 00) mean L 16 thk. (m):  171.86  temp:  6.288 saln: 34.857
+     4608 (0001/304 00) mean L 17 thk. (m):  156.87  temp:  5.606 saln: 34.915
+     4608 (0001/304 00) mean L 18 thk. (m):  176.58  temp:  5.063 saln: 34.977
+     4608 (0001/304 00) mean L 19 thk. (m):  343.70  temp:  4.305 saln: 34.988
+     4608 (0001/304 00) mean L 20 thk. (m):  626.06  temp:  3.463 saln: 34.976
+     4608 (0001/304 00) mean L 21 thk. (m): 1248.80  temp:  2.483 saln: 34.938
+     4608 (0001/304 00) mean L 22 thk. (m):  196.17  temp:  2.439 saln: 35.012
+     4608 (0001/304 00) region-wide mean Kin. Energy:     3019.0329810311
+     4608 (0001/304 00) region-wide mean Temperature:        5.2152667594
+     4608 (0001/304 00) region-wide mean Salinity:          35.0503068150
+     4608 (0001/304 00) region-wide mean Density Dev:        2.5710444448
+     4624 (0001/305 00) mean      SSH (mm):   14.26  (-8.4E+02 to  6.1E+02)
+     4640 (0001/306 00) mean      SSH (mm):   14.16  (-8.5E+02 to  6.1E+02)
+     4656 (0001/307 00) mean      SSH (mm):   14.05  (-8.5E+02 to  6.1E+02)
+     4672 (0001/308 00) mean      SSH (mm):   13.94  (-8.5E+02 to  6.1E+02)
+     4688 (0001/309 00) mean      SSH (mm):   13.82  (-8.5E+02 to  6.1E+02)
+     4704 (0001/310 00) mean      SSH (mm):   13.69  (-8.5E+02 to  6.1E+02)
+     4704 (0001/310 00) mean BFL (m^2/s^3):   29.48 hfl:   29.79
+     4704 (0001/310 00) mean HFLUX (w/m^2):  -28.21 sst:   -1.75  ml:  -48.63
+     4704 (0001/310 00) mean WFLUX (mm/wk):    1.06 sss:    1.06
+     4704 (0001/310 00) mean mixl thk. (m):   38.54  temp: 22.072 saln: 35.853
+     4704 (0001/310 00) mean surf thk. (m):    3.00   sst: 23.022  sss: 35.716
+     4704 (0001/310 00) mean clim thk. (m):   19.20   sst: 22.705  sss: 35.708
+     4704 (0001/310 00) mean L  1 thk. (m):    3.00  temp: 23.022 saln: 35.716
+     4704 (0001/310 00) mean L  2 thk. (m):    3.38  temp: 23.023 saln: 35.726
+     4704 (0001/310 00) mean L  3 thk. (m):    3.87  temp: 23.107 saln: 35.695
+     4704 (0001/310 00) mean L  4 thk. (m):    4.73  temp: 23.549 saln: 35.674
+     4704 (0001/310 00) mean L  5 thk. (m):    7.39  temp: 24.799 saln: 35.704
+     4704 (0001/310 00) mean L  6 thk. (m):   11.64  temp: 25.241 saln: 35.986
+     4704 (0001/310 00) mean L  7 thk. (m):   13.53  temp: 24.277 saln: 36.177
+     4704 (0001/310 00) mean L  8 thk. (m):   15.47  temp: 22.927 saln: 36.365
+     4704 (0001/310 00) mean L  9 thk. (m):   18.37  temp: 21.507 saln: 36.447
+     4704 (0001/310 00) mean L 10 thk. (m):   25.40  temp: 19.708 saln: 36.361
+     4704 (0001/310 00) mean L 11 thk. (m):   41.69  temp: 17.657 saln: 36.141
+     4704 (0001/310 00) mean L 12 thk. (m):   84.21  temp: 15.528 saln: 35.896
+     4704 (0001/310 00) mean L 13 thk. (m):  105.73  temp: 12.811 saln: 35.501
+     4704 (0001/310 00) mean L 14 thk. (m):  132.18  temp: 10.224 saln: 35.175
+     4704 (0001/310 00) mean L 15 thk. (m):  166.21  temp:  7.901 saln: 34.943
+     4704 (0001/310 00) mean L 16 thk. (m):  171.80  temp:  6.288 saln: 34.857
+     4704 (0001/310 00) mean L 17 thk. (m):  156.82  temp:  5.605 saln: 34.915
+     4704 (0001/310 00) mean L 18 thk. (m):  176.47  temp:  5.061 saln: 34.977
+     4704 (0001/310 00) mean L 19 thk. (m):  343.61  temp:  4.305 saln: 34.988
+     4704 (0001/310 00) mean L 20 thk. (m):  626.10  temp:  3.462 saln: 34.976
+     4704 (0001/310 00) mean L 21 thk. (m): 1248.91  temp:  2.483 saln: 34.938
+     4704 (0001/310 00) mean L 22 thk. (m):  196.12  temp:  2.441 saln: 35.012
+     4704 (0001/310 00) region-wide mean Kin. Energy:     2929.8810112114
+     4704 (0001/310 00) region-wide mean Temperature:        5.2143809385
+     4704 (0001/310 00) region-wide mean Salinity:          35.0502425174
+     4704 (0001/310 00) region-wide mean Density Dev:        2.5712337849
+     4720 (0001/311 00) mean      SSH (mm):   13.56  (-8.5E+02 to  6.0E+02)
+     4736 (0001/312 00) mean      SSH (mm):   13.43  (-8.5E+02 to  6.0E+02)
+     4752 (0001/313 00) mean      SSH (mm):   13.29  (-8.5E+02 to  6.0E+02)
+     4768 (0001/314 00) mean      SSH (mm):   13.15  (-8.5E+02 to  6.0E+02)
+     4784 (0001/315 00) mean      SSH (mm):   13.00  (-8.5E+02 to  6.0E+02)
+     4800 (0001/316 00) mean      SSH (mm):   12.85  (-8.5E+02 to  5.9E+02)
+     4800 (0001/316 00) mean BFL (m^2/s^3):   31.49 hfl:   31.71
+     4800 (0001/316 00) mean HFLUX (w/m^2):  -33.15 sst:   -1.76  ml:  -52.31
+     4800 (0001/316 00) mean WFLUX (mm/wk):    0.86 sss:    0.86
+     4800 (0001/316 00) mean mixl thk. (m):   40.69  temp: 21.617 saln: 35.840
+     4800 (0001/316 00) mean surf thk. (m):    3.00   sst: 22.878  sss: 35.718
+     4800 (0001/316 00) mean clim thk. (m):   19.20   sst: 22.576  sss: 35.712
+     4800 (0001/316 00) mean L  1 thk. (m):    3.00  temp: 22.878 saln: 35.718
+     4800 (0001/316 00) mean L  2 thk. (m):    3.38  temp: 22.880 saln: 35.727
+     4800 (0001/316 00) mean L  3 thk. (m):    3.87  temp: 22.966 saln: 35.692
+     4800 (0001/316 00) mean L  4 thk. (m):    4.72  temp: 23.405 saln: 35.678
+     4800 (0001/316 00) mean L  5 thk. (m):    7.24  temp: 24.632 saln: 35.706
+     4800 (0001/316 00) mean L  6 thk. (m):   11.91  temp: 25.190 saln: 35.979
+     4800 (0001/316 00) mean L  7 thk. (m):   13.55  temp: 24.223 saln: 36.172
+     4800 (0001/316 00) mean L  8 thk. (m):   15.50  temp: 22.865 saln: 36.367
+     4800 (0001/316 00) mean L  9 thk. (m):   18.44  temp: 21.494 saln: 36.449
+     4800 (0001/316 00) mean L 10 thk. (m):   25.33  temp: 19.707 saln: 36.360
+     4800 (0001/316 00) mean L 11 thk. (m):   41.69  temp: 17.653 saln: 36.140
+     4800 (0001/316 00) mean L 12 thk. (m):   84.15  temp: 15.526 saln: 35.896
+     4800 (0001/316 00) mean L 13 thk. (m):  105.59  temp: 12.815 saln: 35.501
+     4800 (0001/316 00) mean L 14 thk. (m):  132.21  temp: 10.223 saln: 35.174
+     4800 (0001/316 00) mean L 15 thk. (m):  166.44  temp:  7.898 saln: 34.943
+     4800 (0001/316 00) mean L 16 thk. (m):  171.73  temp:  6.288 saln: 34.857
+     4800 (0001/316 00) mean L 17 thk. (m):  156.72  temp:  5.604 saln: 34.915
+     4800 (0001/316 00) mean L 18 thk. (m):  176.41  temp:  5.060 saln: 34.976
+     4800 (0001/316 00) mean L 19 thk. (m):  343.52  temp:  4.305 saln: 34.988
+     4800 (0001/316 00) mean L 20 thk. (m):  626.21  temp:  3.461 saln: 34.976
+     4800 (0001/316 00) mean L 21 thk. (m): 1248.94  temp:  2.484 saln: 34.938
+     4800 (0001/316 00) mean L 22 thk. (m):  196.06  temp:  2.442 saln: 35.012
+     4800 (0001/316 00) region-wide mean Kin. Energy:     2806.5970276062
+     4800 (0001/316 00) region-wide mean Temperature:        5.2132615699
+     4800 (0001/316 00) region-wide mean Salinity:          35.0501729254
+     4800 (0001/316 00) region-wide mean Density Dev:        2.5714717184
+     4816 (0001/317 00) mean      SSH (mm):   12.69  (-8.5E+02 to  5.9E+02)
+     4832 (0001/318 00) mean      SSH (mm):   12.53  (-8.5E+02 to  5.9E+02)
+     4848 (0001/319 00) mean      SSH (mm):   12.37  (-8.5E+02 to  5.9E+02)
+     4864 (0001/320 00) mean      SSH (mm):   12.20  (-8.5E+02 to  5.9E+02)
+     4880 (0001/321 00) mean      SSH (mm):   12.02  (-8.5E+02 to  5.9E+02)
+     4896 (0001/322 00) mean      SSH (mm):   11.84  (-8.5E+02 to  5.9E+02)
+     4896 (0001/322 00) mean BFL (m^2/s^3):   33.61 hfl:   33.72
+     4896 (0001/322 00) mean HFLUX (w/m^2):  -37.79 sst:   -1.79  ml:  -56.12
+     4896 (0001/322 00) mean WFLUX (mm/wk):    0.64 sss:    0.64
+     4896 (0001/322 00) mean mixl thk. (m):   43.09  temp: 21.129 saln: 35.829
+     4896 (0001/322 00) mean surf thk. (m):    3.00   sst: 22.737  sss: 35.721
+     4896 (0001/322 00) mean clim thk. (m):   19.20   sst: 22.448  sss: 35.718
+     4896 (0001/322 00) mean L  1 thk. (m):    3.00  temp: 22.737 saln: 35.721
+     4896 (0001/322 00) mean L  2 thk. (m):    3.38  temp: 22.738 saln: 35.728
+     4896 (0001/322 00) mean L  3 thk. (m):    3.87  temp: 22.836 saln: 35.689
+     4896 (0001/322 00) mean L  4 thk. (m):    4.69  temp: 23.231 saln: 35.686
+     4896 (0001/322 00) mean L  5 thk. (m):    7.18  temp: 24.487 saln: 35.704
+     4896 (0001/322 00) mean L  6 thk. (m):   12.04  temp: 25.129 saln: 35.974
+     4896 (0001/322 00) mean L  7 thk. (m):   13.70  temp: 24.169 saln: 36.166
+     4896 (0001/322 00) mean L  8 thk. (m):   15.26  temp: 22.822 saln: 36.376
+     4896 (0001/322 00) mean L  9 thk. (m):   18.73  temp: 21.461 saln: 36.444
+     4896 (0001/322 00) mean L 10 thk. (m):   25.31  temp: 19.695 saln: 36.357
+     4896 (0001/322 00) mean L 11 thk. (m):   41.66  temp: 17.649 saln: 36.139
+     4896 (0001/322 00) mean L 12 thk. (m):   84.06  temp: 15.525 saln: 35.895
+     4896 (0001/322 00) mean L 13 thk. (m):  105.46  temp: 12.818 saln: 35.502
+     4896 (0001/322 00) mean L 14 thk. (m):  132.21  temp: 10.222 saln: 35.174
+     4896 (0001/322 00) mean L 15 thk. (m):  166.66  temp:  7.895 saln: 34.942
+     4896 (0001/322 00) mean L 16 thk. (m):  171.63  temp:  6.288 saln: 34.856
+     4896 (0001/322 00) mean L 17 thk. (m):  156.67  temp:  5.603 saln: 34.915
+     4896 (0001/322 00) mean L 18 thk. (m):  176.38  temp:  5.058 saln: 34.976
+     4896 (0001/322 00) mean L 19 thk. (m):  343.40  temp:  4.305 saln: 34.988
+     4896 (0001/322 00) mean L 20 thk. (m):  626.35  temp:  3.460 saln: 34.975
+     4896 (0001/322 00) mean L 21 thk. (m): 1248.98  temp:  2.485 saln: 34.938
+     4896 (0001/322 00) mean L 22 thk. (m):  195.99  temp:  2.443 saln: 35.012
+     4896 (0001/322 00) region-wide mean Kin. Energy:     2721.9407615974
+     4896 (0001/322 00) region-wide mean Temperature:        5.2119645927
+     4896 (0001/322 00) region-wide mean Salinity:          35.0501073100
+     4896 (0001/322 00) region-wide mean Density Dev:        2.5717551756
+     4912 (0001/323 00) mean      SSH (mm):   11.66  (-8.6E+02 to  5.8E+02)
+     4928 (0001/324 00) mean      SSH (mm):   11.47  (-8.6E+02 to  5.8E+02)
+     4944 (0001/325 00) mean      SSH (mm):   11.27  (-8.6E+02 to  5.8E+02)
+     4960 (0001/326 00) mean      SSH (mm):   11.07  (-8.6E+02 to  5.8E+02)
+     4976 (0001/327 00) mean      SSH (mm):   10.87  (-8.6E+02 to  5.8E+02)
+     4992 (0001/328 00) mean      SSH (mm):   10.66  (-8.6E+02 to  5.8E+02)
+     4992 (0001/328 00) mean BFL (m^2/s^3):   35.95 hfl:   35.95
+     4992 (0001/328 00) mean HFLUX (w/m^2):  -42.38 sst:   -1.85  ml:  -60.23
+     4992 (0001/328 00) mean WFLUX (mm/wk):    0.41 sss:    0.41
+     4992 (0001/328 00) mean mixl thk. (m):   45.79  temp: 20.637 saln: 35.817
+     4992 (0001/328 00) mean surf thk. (m):    3.00   sst: 22.598  sss: 35.724
+     4992 (0001/328 00) mean clim thk. (m):   19.20   sst: 22.320  sss: 35.724
+     4992 (0001/328 00) mean L  1 thk. (m):    3.00  temp: 22.598 saln: 35.724
+     4992 (0001/328 00) mean L  2 thk. (m):    3.38  temp: 22.601 saln: 35.731
+     4992 (0001/328 00) mean L  3 thk. (m):    3.87  temp: 22.710 saln: 35.686
+     4992 (0001/328 00) mean L  4 thk. (m):    4.67  temp: 23.080 saln: 35.692
+     4992 (0001/328 00) mean L  5 thk. (m):    7.09  temp: 24.320 saln: 35.706
+     4992 (0001/328 00) mean L  6 thk. (m):   12.16  temp: 25.066 saln: 35.966
+     4992 (0001/328 00) mean L  7 thk. (m):   13.77  temp: 24.123 saln: 36.163
+     4992 (0001/328 00) mean L  8 thk. (m):   15.16  temp: 22.775 saln: 36.379
+     4992 (0001/328 00) mean L  9 thk. (m):   18.95  temp: 21.423 saln: 36.442
+     4992 (0001/328 00) mean L 10 thk. (m):   25.31  temp: 19.678 saln: 36.354
+     4992 (0001/328 00) mean L 11 thk. (m):   41.64  temp: 17.644 saln: 36.138
+     4992 (0001/328 00) mean L 12 thk. (m):   83.97  temp: 15.523 saln: 35.895
+     4992 (0001/328 00) mean L 13 thk. (m):  105.34  temp: 12.822 saln: 35.503
+     4992 (0001/328 00) mean L 14 thk. (m):  132.23  temp: 10.221 saln: 35.174
+     4992 (0001/328 00) mean L 15 thk. (m):  166.88  temp:  7.892 saln: 34.942
+     4992 (0001/328 00) mean L 16 thk. (m):  171.48  temp:  6.289 saln: 34.856
+     4992 (0001/328 00) mean L 17 thk. (m):  156.64  temp:  5.602 saln: 34.915
+     4992 (0001/328 00) mean L 18 thk. (m):  176.38  temp:  5.057 saln: 34.976
+     4992 (0001/328 00) mean L 19 thk. (m):  343.33  temp:  4.305 saln: 34.988
+     4992 (0001/328 00) mean L 20 thk. (m):  626.48  temp:  3.459 saln: 34.975
+     4992 (0001/328 00) mean L 21 thk. (m): 1249.01  temp:  2.486 saln: 34.938
+     4992 (0001/328 00) mean L 22 thk. (m):  195.87  temp:  2.444 saln: 35.012
+     4992 (0001/328 00) region-wide mean Kin. Energy:     2617.0037044913
+     4992 (0001/328 00) region-wide mean Temperature:        5.2104999248
+     4992 (0001/328 00) region-wide mean Salinity:          35.0500508884
+     4992 (0001/328 00) region-wide mean Density Dev:        2.5720877206
+     5008 (0001/329 00) mean      SSH (mm):   10.45  (-8.6E+02 to  5.7E+02)
+     5024 (0001/330 00) mean      SSH (mm):   10.23  (-8.6E+02 to  5.7E+02)
+     5040 (0001/331 00) mean      SSH (mm):   10.01  (-8.6E+02 to  5.7E+02)
+     5056 (0001/332 00) mean      SSH (mm):    9.78  (-8.6E+02 to  5.7E+02)
+     5072 (0001/333 00) mean      SSH (mm):    9.55  (-8.6E+02 to  5.7E+02)
+     5088 (0001/334 00) mean      SSH (mm):    9.31  (-8.6E+02 to  5.6E+02)
+     5088 (0001/334 00) mean BFL (m^2/s^3):   37.92 hfl:   37.82
+     5088 (0001/334 00) mean HFLUX (w/m^2):  -46.58 sst:   -1.93  ml:  -63.87
+     5088 (0001/334 00) mean WFLUX (mm/wk):    0.22 sss:    0.22
+     5088 (0001/334 00) mean mixl thk. (m):   48.82  temp: 20.152 saln: 35.805
+     5088 (0001/334 00) mean surf thk. (m):    3.00   sst: 22.463  sss: 35.728
+     5088 (0001/334 00) mean clim thk. (m):   19.20   sst: 22.191  sss: 35.730
+     5088 (0001/334 00) mean L  1 thk. (m):    3.00  temp: 22.463 saln: 35.728
+     5088 (0001/334 00) mean L  2 thk. (m):    3.38  temp: 22.466 saln: 35.735
+     5088 (0001/334 00) mean L  3 thk. (m):    3.88  temp: 22.595 saln: 35.683
+     5088 (0001/334 00) mean L  4 thk. (m):    4.65  temp: 22.929 saln: 35.701
+     5088 (0001/334 00) mean L  5 thk. (m):    6.99  temp: 24.146 saln: 35.706
+     5088 (0001/334 00) mean L  6 thk. (m):   12.23  temp: 25.006 saln: 35.960
+     5088 (0001/334 00) mean L  7 thk. (m):   13.85  temp: 24.071 saln: 36.159
+     5088 (0001/334 00) mean L  8 thk. (m):   15.10  temp: 22.722 saln: 36.382
+     5088 (0001/334 00) mean L  9 thk. (m):   19.15  temp: 21.383 saln: 36.442
+     5088 (0001/334 00) mean L 10 thk. (m):   25.28  temp: 19.658 saln: 36.351
+     5088 (0001/334 00) mean L 11 thk. (m):   41.63  temp: 17.642 saln: 36.138
+     5088 (0001/334 00) mean L 12 thk. (m):   83.90  temp: 15.521 saln: 35.895
+     5088 (0001/334 00) mean L 13 thk. (m):  105.22  temp: 12.824 saln: 35.504
+     5088 (0001/334 00) mean L 14 thk. (m):  132.28  temp: 10.221 saln: 35.174
+     5088 (0001/334 00) mean L 15 thk. (m):  167.05  temp:  7.889 saln: 34.941
+     5088 (0001/334 00) mean L 16 thk. (m):  171.34  temp:  6.289 saln: 34.856
+     5088 (0001/334 00) mean L 17 thk. (m):  156.64  temp:  5.602 saln: 34.914
+     5088 (0001/334 00) mean L 18 thk. (m):  176.40  temp:  5.056 saln: 34.976
+     5088 (0001/334 00) mean L 19 thk. (m):  343.28  temp:  4.305 saln: 34.988
+     5088 (0001/334 00) mean L 20 thk. (m):  626.61  temp:  3.458 saln: 34.975
+     5088 (0001/334 00) mean L 21 thk. (m): 1248.97  temp:  2.486 saln: 34.938
+     5088 (0001/334 00) mean L 22 thk. (m):  195.78  temp:  2.445 saln: 35.013
+     5088 (0001/334 00) region-wide mean Kin. Energy:     2502.7445058273
+     5088 (0001/334 00) region-wide mean Temperature:        5.2088729816
+     5088 (0001/334 00) region-wide mean Salinity:          35.0500042593
+     5088 (0001/334 00) region-wide mean Density Dev:        2.5724686522
+     5104 (0001/335 00) mean      SSH (mm):    9.07  (-8.6E+02 to  5.6E+02)
+     5120 (0001/336 00) mean      SSH (mm):    8.82  (-8.6E+02 to  5.6E+02)
+     5136 (0001/337 00) mean      SSH (mm):    8.57  (-8.6E+02 to  5.6E+02)
+     5152 (0001/338 00) mean      SSH (mm):    8.32  (-8.6E+02 to  5.5E+02)
+     5168 (0001/339 00) mean      SSH (mm):    8.06  (-8.6E+02 to  5.5E+02)
+     5184 (0001/340 00) mean      SSH (mm):    7.80  (-8.6E+02 to  5.5E+02)
+     5184 (0001/340 00) mean BFL (m^2/s^3):   39.68 hfl:   39.44
+     5184 (0001/340 00) mean HFLUX (w/m^2):  -50.10 sst:   -2.02  ml:  -67.12
+     5184 (0001/340 00) mean WFLUX (mm/wk):   -0.08 sss:   -0.08
+     5184 (0001/340 00) mean mixl thk. (m):   51.82  temp: 19.676 saln: 35.794
+     5184 (0001/340 00) mean surf thk. (m):    3.00   sst: 22.336  sss: 35.730
+     5184 (0001/340 00) mean clim thk. (m):   19.20   sst: 22.062  sss: 35.736
+     5184 (0001/340 00) mean L  1 thk. (m):    3.00  temp: 22.336 saln: 35.730
+     5184 (0001/340 00) mean L  2 thk. (m):    3.38  temp: 22.339 saln: 35.737
+     5184 (0001/340 00) mean L  3 thk. (m):    3.88  temp: 22.472 saln: 35.684
+     5184 (0001/340 00) mean L  4 thk. (m):    4.61  temp: 22.761 saln: 35.711
+     5184 (0001/340 00) mean L  5 thk. (m):    6.94  temp: 24.006 saln: 35.707
+     5184 (0001/340 00) mean L  6 thk. (m):   12.27  temp: 24.954 saln: 35.960
+     5184 (0001/340 00) mean L  7 thk. (m):   13.87  temp: 24.007 saln: 36.150
+     5184 (0001/340 00) mean L  8 thk. (m):   15.06  temp: 22.673 saln: 36.384
+     5184 (0001/340 00) mean L  9 thk. (m):   19.39  temp: 21.332 saln: 36.440
+     5184 (0001/340 00) mean L 10 thk. (m):   25.25  temp: 19.635 saln: 36.348
+     5184 (0001/340 00) mean L 11 thk. (m):   41.61  temp: 17.637 saln: 36.137
+     5184 (0001/340 00) mean L 12 thk. (m):   83.85  temp: 15.518 saln: 35.894
+     5184 (0001/340 00) mean L 13 thk. (m):  105.10  temp: 12.827 saln: 35.504
+     5184 (0001/340 00) mean L 14 thk. (m):  132.35  temp: 10.220 saln: 35.174
+     5184 (0001/340 00) mean L 15 thk. (m):  167.18  temp:  7.886 saln: 34.941
+     5184 (0001/340 00) mean L 16 thk. (m):  171.19  temp:  6.289 saln: 34.856
+     5184 (0001/340 00) mean L 17 thk. (m):  156.64  temp:  5.602 saln: 34.914
+     5184 (0001/340 00) mean L 18 thk. (m):  176.42  temp:  5.055 saln: 34.976
+     5184 (0001/340 00) mean L 19 thk. (m):  343.27  temp:  4.305 saln: 34.988
+     5184 (0001/340 00) mean L 20 thk. (m):  626.71  temp:  3.457 saln: 34.975
+     5184 (0001/340 00) mean L 21 thk. (m): 1248.93  temp:  2.487 saln: 34.938
+     5184 (0001/340 00) mean L 22 thk. (m):  195.70  temp:  2.446 saln: 35.013
+     5184 (0001/340 00) region-wide mean Kin. Energy:     2417.7870575568
+     5184 (0001/340 00) region-wide mean Temperature:        5.2070958359
+     5184 (0001/340 00) region-wide mean Salinity:          35.0499660180
+     5184 (0001/340 00) region-wide mean Density Dev:        2.5728921031
+     5200 (0001/341 00) mean      SSH (mm):    7.54  (-8.6E+02 to  5.5E+02)
+     5216 (0001/342 00) mean      SSH (mm):    7.28  (-8.6E+02 to  5.5E+02)
+     5232 (0001/343 00) mean      SSH (mm):    7.01  (-8.7E+02 to  5.4E+02)
+     5248 (0001/344 00) mean      SSH (mm):    6.74  (-8.7E+02 to  5.4E+02)
+     5264 (0001/345 00) mean      SSH (mm):    6.47  (-8.7E+02 to  5.4E+02)
+     5280 (0001/346 00) mean      SSH (mm):    6.20  (-8.7E+02 to  5.4E+02)
+     5280 (0001/346 00) mean BFL (m^2/s^3):   40.57 hfl:   40.28
+     5280 (0001/346 00) mean HFLUX (w/m^2):  -52.48 sst:   -2.08  ml:  -69.25
+     5280 (0001/346 00) mean WFLUX (mm/wk):   -0.20 sss:   -0.20
+     5280 (0001/346 00) mean mixl thk. (m):   55.17  temp: 19.211 saln: 35.784
+     5280 (0001/346 00) mean surf thk. (m):    3.00   sst: 22.214  sss: 35.733
+     5280 (0001/346 00) mean clim thk. (m):   19.20   sst: 21.933  sss: 35.739
+     5280 (0001/346 00) mean L  1 thk. (m):    3.00  temp: 22.214 saln: 35.733
+     5280 (0001/346 00) mean L  2 thk. (m):    3.38  temp: 22.217 saln: 35.739
+     5280 (0001/346 00) mean L  3 thk. (m):    3.88  temp: 22.348 saln: 35.688
+     5280 (0001/346 00) mean L  4 thk. (m):    4.58  temp: 22.600 saln: 35.719
+     5280 (0001/346 00) mean L  5 thk. (m):    6.87  temp: 23.860 saln: 35.708
+     5280 (0001/346 00) mean L  6 thk. (m):   12.30  temp: 24.897 saln: 35.957
+     5280 (0001/346 00) mean L  7 thk. (m):   13.91  temp: 23.946 saln: 36.144
+     5280 (0001/346 00) mean L  8 thk. (m):   14.94  temp: 22.625 saln: 36.384
+     5280 (0001/346 00) mean L  9 thk. (m):   19.60  temp: 21.295 saln: 36.443
+     5280 (0001/346 00) mean L 10 thk. (m):   25.35  temp: 19.607 saln: 36.343
+     5280 (0001/346 00) mean L 11 thk. (m):   41.58  temp: 17.631 saln: 36.137
+     5280 (0001/346 00) mean L 12 thk. (m):   83.78  temp: 15.516 saln: 35.894
+     5280 (0001/346 00) mean L 13 thk. (m):  105.01  temp: 12.827 saln: 35.505
+     5280 (0001/346 00) mean L 14 thk. (m):  132.40  temp: 10.220 saln: 35.173
+     5280 (0001/346 00) mean L 15 thk. (m):  167.32  temp:  7.884 saln: 34.940
+     5280 (0001/346 00) mean L 16 thk. (m):  171.05  temp:  6.288 saln: 34.856
+     5280 (0001/346 00) mean L 17 thk. (m):  156.62  temp:  5.602 saln: 34.914
+     5280 (0001/346 00) mean L 18 thk. (m):  176.46  temp:  5.053 saln: 34.975
+     5280 (0001/346 00) mean L 19 thk. (m):  343.26  temp:  4.305 saln: 34.988
+     5280 (0001/346 00) mean L 20 thk. (m):  626.79  temp:  3.455 saln: 34.975
+     5280 (0001/346 00) mean L 21 thk. (m): 1248.90  temp:  2.487 saln: 34.938
+     5280 (0001/346 00) mean L 22 thk. (m):  195.62  temp:  2.447 saln: 35.013
+     5280 (0001/346 00) region-wide mean Kin. Energy:     2369.9051220417
+     5280 (0001/346 00) region-wide mean Temperature:        5.2052175052
+     5280 (0001/346 00) region-wide mean Salinity:          35.0499322243
+     5280 (0001/346 00) region-wide mean Density Dev:        2.5733421009
+     5296 (0001/347 00) mean      SSH (mm):    5.93  (-8.7E+02 to  5.4E+02)
+     5312 (0001/348 00) mean      SSH (mm):    5.66  (-8.7E+02 to  5.3E+02)
+     5328 (0001/349 00) mean      SSH (mm):    5.39  (-8.7E+02 to  5.3E+02)
+     5344 (0001/350 00) mean      SSH (mm):    5.12  (-8.7E+02 to  5.3E+02)
+     5360 (0001/351 00) mean      SSH (mm):    4.84  (-8.7E+02 to  5.3E+02)
+     5376 (0001/352 00) mean      SSH (mm):    4.57  (-8.7E+02 to  5.2E+02)
+     5376 (0001/352 00) mean BFL (m^2/s^3):   41.16 hfl:   41.05
+     5376 (0001/352 00) mean HFLUX (w/m^2):  -54.29 sst:   -2.20  ml:  -71.19
+     5376 (0001/352 00) mean WFLUX (mm/wk):    0.19 sss:    0.19
+     5376 (0001/352 00) mean mixl thk. (m):   58.67  temp: 18.747 saln: 35.776
+     5376 (0001/352 00) mean surf thk. (m):    3.00   sst: 22.106  sss: 35.739
+     5376 (0001/352 00) mean clim thk. (m):   19.20   sst: 21.795  sss: 35.741
+     5376 (0001/352 00) mean L  1 thk. (m):    3.00  temp: 22.106 saln: 35.739
+     5376 (0001/352 00) mean L  2 thk. (m):    3.38  temp: 22.109 saln: 35.744
+     5376 (0001/352 00) mean L  3 thk. (m):    3.88  temp: 22.245 saln: 35.691
+     5376 (0001/352 00) mean L  4 thk. (m):    4.57  temp: 22.477 saln: 35.727
+     5376 (0001/352 00) mean L  5 thk. (m):    6.85  temp: 23.744 saln: 35.711
+     5376 (0001/352 00) mean L  6 thk. (m):   12.20  temp: 24.819 saln: 35.953
+     5376 (0001/352 00) mean L  7 thk. (m):   14.00  temp: 23.900 saln: 36.140
+     5376 (0001/352 00) mean L  8 thk. (m):   14.92  temp: 22.578 saln: 36.386
+     5376 (0001/352 00) mean L  9 thk. (m):   19.45  temp: 21.293 saln: 36.455
+     5376 (0001/352 00) mean L 10 thk. (m):   25.66  temp: 19.548 saln: 36.329
+     5376 (0001/352 00) mean L 11 thk. (m):   41.59  temp: 17.626 saln: 36.137
+     5376 (0001/352 00) mean L 12 thk. (m):   83.72  temp: 15.514 saln: 35.894
+     5376 (0001/352 00) mean L 13 thk. (m):  104.92  temp: 12.826 saln: 35.505
+     5376 (0001/352 00) mean L 14 thk. (m):  132.44  temp: 10.219 saln: 35.173
+     5376 (0001/352 00) mean L 15 thk. (m):  167.39  temp:  7.882 saln: 34.940
+     5376 (0001/352 00) mean L 16 thk. (m):  170.96  temp:  6.286 saln: 34.856
+     5376 (0001/352 00) mean L 17 thk. (m):  156.63  temp:  5.603 saln: 34.915
+     5376 (0001/352 00) mean L 18 thk. (m):  176.48  temp:  5.052 saln: 34.975
+     5376 (0001/352 00) mean L 19 thk. (m):  343.29  temp:  4.305 saln: 34.988
+     5376 (0001/352 00) mean L 20 thk. (m):  626.76  temp:  3.454 saln: 34.975
+     5376 (0001/352 00) mean L 21 thk. (m): 1249.00  temp:  2.488 saln: 34.939
+     5376 (0001/352 00) mean L 22 thk. (m):  195.51  temp:  2.448 saln: 35.013
+     5376 (0001/352 00) region-wide mean Kin. Energy:     2329.1248643357
+     5376 (0001/352 00) region-wide mean Temperature:        5.2032850158
+     5376 (0001/352 00) region-wide mean Salinity:          35.0498953728
+     5376 (0001/352 00) region-wide mean Density Dev:        2.5738013041
+     5392 (0001/353 00) mean      SSH (mm):    4.30  (-8.7E+02 to  5.2E+02)
+     5408 (0001/354 00) mean      SSH (mm):    4.03  (-8.7E+02 to  5.2E+02)
+     5424 (0001/355 00) mean      SSH (mm):    3.75  (-8.7E+02 to  5.2E+02)
+     5440 (0001/356 00) mean      SSH (mm):    3.48  (-8.7E+02 to  5.2E+02)
+     5456 (0001/357 00) mean      SSH (mm):    3.21  (-8.7E+02 to  5.2E+02)
+     5472 (0001/358 00) mean      SSH (mm):    2.94  (-8.7E+02 to  5.2E+02)
+     5472 (0001/358 00) mean BFL (m^2/s^3):   41.25 hfl:   41.45
+     5472 (0001/358 00) mean HFLUX (w/m^2):  -55.53 sst:   -2.35  ml:  -72.50
+     5472 (0001/358 00) mean WFLUX (mm/wk):    0.88 sss:    0.88
+     5472 (0001/358 00) mean mixl thk. (m):   62.02  temp: 18.343 saln: 35.770
+     5472 (0001/358 00) mean surf thk. (m):    3.00   sst: 22.008  sss: 35.745
+     5472 (0001/358 00) mean clim thk. (m):   19.20   sst: 21.648  sss: 35.740
+     5472 (0001/358 00) mean L  1 thk. (m):    3.00  temp: 22.008 saln: 35.745
+     5472 (0001/358 00) mean L  2 thk. (m):    3.38  temp: 22.011 saln: 35.750
+     5472 (0001/358 00) mean L  3 thk. (m):    3.89  temp: 22.170 saln: 35.682
+     5472 (0001/358 00) mean L  4 thk. (m):    4.51  temp: 22.315 saln: 35.746
+     5472 (0001/358 00) mean L  5 thk. (m):    6.82  temp: 23.631 saln: 35.711
+     5472 (0001/358 00) mean L  6 thk. (m):   12.24  temp: 24.753 saln: 35.947
+     5472 (0001/358 00) mean L  7 thk. (m):   13.99  temp: 23.841 saln: 36.139
+     5472 (0001/358 00) mean L  8 thk. (m):   14.92  temp: 22.530 saln: 36.385
+     5472 (0001/358 00) mean L  9 thk. (m):   19.37  temp: 21.268 saln: 36.459
+     5472 (0001/358 00) mean L 10 thk. (m):   25.91  temp: 19.507 saln: 36.324
+     5472 (0001/358 00) mean L 11 thk. (m):   41.62  temp: 17.616 saln: 36.137
+     5472 (0001/358 00) mean L 12 thk. (m):   83.65  temp: 15.512 saln: 35.894
+     5472 (0001/358 00) mean L 13 thk. (m):  104.82  temp: 12.826 saln: 35.505
+     5472 (0001/358 00) mean L 14 thk. (m):  132.48  temp: 10.218 saln: 35.173
+     5472 (0001/358 00) mean L 15 thk. (m):  167.44  temp:  7.879 saln: 34.939
+     5472 (0001/358 00) mean L 16 thk. (m):  170.85  temp:  6.282 saln: 34.855
+     5472 (0001/358 00) mean L 17 thk. (m):  156.70  temp:  5.604 saln: 34.915
+     5472 (0001/358 00) mean L 18 thk. (m):  176.48  temp:  5.051 saln: 34.975
+     5472 (0001/358 00) mean L 19 thk. (m):  343.34  temp:  4.305 saln: 34.988
+     5472 (0001/358 00) mean L 20 thk. (m):  626.80  temp:  3.453 saln: 34.975
+     5472 (0001/358 00) mean L 21 thk. (m): 1249.05  temp:  2.489 saln: 34.939
+     5472 (0001/358 00) mean L 22 thk. (m):  195.37  temp:  2.449 saln: 35.013
+     5472 (0001/358 00) region-wide mean Kin. Energy:     2290.3946001760
+     5472 (0001/358 00) region-wide mean Temperature:        5.2012905169
+     5472 (0001/358 00) region-wide mean Salinity:          35.0498464776
+     5472 (0001/358 00) region-wide mean Density Dev:        2.5742591047
+     5488 (0001/359 00) mean      SSH (mm):    2.68  (-8.7E+02 to  5.2E+02)
+     5504 (0001/360 00) mean      SSH (mm):    2.41  (-8.7E+02 to  5.3E+02)
+     5520 (0002/001 00) mean      SSH (mm):    2.14  (-8.7E+02 to  5.3E+02)
+     5520 (0002/001 00) mean BFL (m^2/s^3):   40.98 hfl:   41.32
+     5520 (0002/001 00) mean HFLUX (w/m^2):  -55.76 sst:   -2.41  ml:  -72.67
+     5520 (0002/001 00) mean WFLUX (mm/wk):    1.21 sss:    1.21
+     5520 (0002/001 00) mean mixl thk. (m):   63.68  temp: 18.161 saln: 35.768
+     5520 (0002/001 00) mean surf thk. (m):    3.00   sst: 21.960  sss: 35.748
+     5520 (0002/001 00) mean clim thk. (m):   19.20   sst: 21.575  sss: 35.739
+     5520 (0002/001 00) mean L  1 thk. (m):    3.00  temp: 21.960 saln: 35.748
+     5520 (0002/001 00) mean L  2 thk. (m):    3.38  temp: 21.964 saln: 35.753
+     5520 (0002/001 00) mean L  3 thk. (m):    3.90  temp: 22.140 saln: 35.675
+     5520 (0002/001 00) mean L  4 thk. (m):    4.44  temp: 22.187 saln: 35.762
+     5520 (0002/001 00) mean L  5 thk. (m):    6.84  temp: 23.591 saln: 35.706
+     5520 (0002/001 00) mean L  6 thk. (m):   12.22  temp: 24.719 saln: 35.944
+     5520 (0002/001 00) mean L  7 thk. (m):   13.99  temp: 23.817 saln: 36.138
+     5520 (0002/001 00) mean L  8 thk. (m):   14.96  temp: 22.503 saln: 36.383
+     5520 (0002/001 00) mean L  9 thk. (m):   19.33  temp: 21.254 saln: 36.460
+     5520 (0002/001 00) mean L 10 thk. (m):   26.00  temp: 19.489 saln: 36.323
+     5520 (0002/001 00) mean L 11 thk. (m):   41.64  temp: 17.611 saln: 36.136
+     5520 (0002/001 00) mean L 12 thk. (m):   83.63  temp: 15.510 saln: 35.894
+     5520 (0002/001 00) mean L 13 thk. (m):  104.78  temp: 12.826 saln: 35.505
+     5520 (0002/001 00) mean L 14 thk. (m):  132.47  temp: 10.217 saln: 35.173
+     5520 (0002/001 00) mean L 15 thk. (m):  167.46  temp:  7.878 saln: 34.939
+     5520 (0002/001 00) mean L 16 thk. (m):  170.82  temp:  6.280 saln: 34.855
+     5520 (0002/001 00) mean L 17 thk. (m):  156.72  temp:  5.605 saln: 34.915
+     5520 (0002/001 00) mean L 18 thk. (m):  176.48  temp:  5.051 saln: 34.975
+     5520 (0002/001 00) mean L 19 thk. (m):  343.38  temp:  4.305 saln: 34.988
+     5520 (0002/001 00) mean L 20 thk. (m):  626.82  temp:  3.453 saln: 34.974
+     5520 (0002/001 00) mean L 21 thk. (m): 1249.07  temp:  2.489 saln: 34.939
+     5520 (0002/001 00) mean L 22 thk. (m):  195.29  temp:  2.449 saln: 35.013
+     5520 (0002/001 00) region-wide mean Kin. Energy:     2283.2563992753
+     5520 (0002/001 00) region-wide mean Temperature:        5.2002858683
+     5520 (0002/001 00) region-wide mean Salinity:          35.0498173906
+     5520 (0002/001 00) region-wide mean Density Dev:        2.5744838569
+normal stop
